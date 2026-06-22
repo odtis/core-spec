@@ -170,7 +170,7 @@ implementations:
     - ODTIS-0333
     - ODTIS-0334
     - ODTIS-0336
-    notes: PortalConfigController; ConsentsController; PrivacyController; CITIZEN-PORTAL.md; di-portal-ciudadano UX
+    notes: PortalConfigController; ConsentsController; PrivacyController; CITIZEN-PORTAL.md; citizen-portal-check.sh; di-portal-ciudadano UX
 
   - id: portal-ciudadano
     module: front/di-portal-ciudadano
@@ -180,8 +180,11 @@ implementations:
     - ODTIS-0322
     - ODTIS-0323
     - ODTIS-0324
+    - ODTIS-0322
+    - ODTIS-0323
+    - ODTIS-0324
     - ODTIS-0332
-    notes: i18n es-VE/en; PerfilPage status+LoA; ConsentsPage revoke; CITIZEN-PORTAL.md
+    notes: i18n es-VE/en; PerfilPage status+LoA; ConsentsPage revoke; CITIZEN-PORTAL.md; citizen-portal-check.sh
 
   - id: admin-api
     module: api/admin-api

@@ -129,3 +129,11 @@ smokes:
       - ODTIS-0334
       - ODTIS-0335
       - ODTIS-0336
+
+  - script: ../core-impl/ven-identity-core/scripts/citizen-portal-check.sh
+    odtis_ids:
+      - ODTIS-0322
+      - ODTIS-0323
+      - ODTIS-0324
+      - ODTIS-0332
+    notes: MeController; ConsentsController revoke; PortalConfig locales; PerfilPage/ConsentsPage i18n es-VE/en

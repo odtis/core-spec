@@ -48,9 +48,9 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 | [`ODTIS-0319 test`](../../tests/core-identity/test_odtis_0319.md) | `ODTIS-0319` | pending |
 | [`ODTIS-0320 test`](../../tests/core-identity/test_odtis_0320.md) | `ODTIS-0320` | pending |
 | [`ODTIS-0321 test`](../../tests/core-identity/test_odtis_0321.md) | `ODTIS-0321` | pending |
-| [`ODTIS-0322 test`](../../tests/core-identity/test_odtis_0322.md) | `ODTIS-0322` | pending |
-| [`ODTIS-0323 test`](../../tests/core-identity/test_odtis_0323.md) | `ODTIS-0323` | pending |
-| [`ODTIS-0324 test`](../../tests/core-identity/test_odtis_0324.md) | `ODTIS-0324` | pending |
+| [`ODTIS-0322 test`](../../tests/core-identity/test_odtis_0322.md) | `ODTIS-0322` | implemented |
+| [`ODTIS-0323 test`](../../tests/core-identity/test_odtis_0323.md) | `ODTIS-0323` | implemented |
+| [`ODTIS-0324 test`](../../tests/core-identity/test_odtis_0324.md) | `ODTIS-0324` | implemented |
 | [`ODTIS-0325 test`](../../tests/core-identity/test_odtis_0325.md) | `ODTIS-0325` | implemented |
 | [`ODTIS-0326 test`](../../tests/core-identity/test_odtis_0326.md) | `ODTIS-0326` | implemented |
 | [`ODTIS-0327 test`](../../tests/core-identity/test_odtis_0327.md) | `ODTIS-0327` | implemented |
@@ -83,7 +83,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 |--------|-------|
 | Registry requirements | 45 |
 | Linked tests | 58 |
-| Implemented (smoke) | 33 |
+| Implemented (smoke) | 36 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`
