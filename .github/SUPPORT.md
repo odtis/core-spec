@@ -6,7 +6,7 @@
 | **Normative clarification** | [ODTIS clarification issue template](https://github.com/odtis/core-spec/issues/new?template=odtis-clarification.yml) |
 | **MUST/SHOULD change** | [ODTIS RFC issue template](https://github.com/odtis/core-spec/issues/new?template=odtis-rfc.yml) |
 | **Sandbox L2 report** | [Sandbox report template](https://github.com/odtis/core-spec/issues/new?template=odtis-sandbox-report.yml) |
-| **Security** | **info@odtis.org** ([SECURITY.md](../SECURITY.md)) |
+| **Security** | **info@odtis.org** ([Security](../SECURITY.md)) |
 | **Adoption / procurement** | [Adoption guide](https://odtis.org/ADOPTION/) |
 | **Email (no GitHub)** | info@odtis.org |
 

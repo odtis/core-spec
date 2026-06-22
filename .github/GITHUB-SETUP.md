@@ -1,6 +1,6 @@
 # GitHub setup guide - ODTIS `core-spec`
 
-Checklist to publish and operate [odtis/core-spec](https://github.com/odtis/core-spec) as a first-class open-source specification repository.
+Checklist to publish and operate [Core Spec](https://github.com/odtis/core-spec) as a first-class open-source specification repository.
 
 **Automate what you can:**
 
@@ -116,7 +116,7 @@ Community space for the **Open Digital Trust Infrastructure Specification (ODTIS
 
 | Topic | Channel |
 |-------|---------|
-| Security vulnerabilities | **info@odtis.org** ([SECURITY.md](https://github.com/odtis/core-spec/blob/main/SECURITY.md)) |
+| Security vulnerabilities | **info@odtis.org** ([Security](https://github.com/odtis/core-spec/blob/main/SECURITY.md)) |
 | Editorial clarification | [Clarification issue](https://github.com/odtis/core-spec/issues/new?template=odtis-clarification.yml) |
 | Normative MUST change | [RFC issue](https://github.com/odtis/core-spec/issues/new?template=odtis-rfc.yml) |
 | L2 sandbox report | [Sandbox issue](https://github.com/odtis/core-spec/issues/new?template=odtis-sandbox-report.yml) |
@@ -228,7 +228,7 @@ If using the `odtis` GitHub organization:
 - [ ] Social preview image uploaded
 - [ ] Community profile **100%**
 - [ ] Announce on odtis.org / newsletter
-- [ ] Link Discussions from [FEEDBACK.md](governance/FEEDBACK.md) (already references issue templates)
+- [ ] Link Discussions from [Feedback channels](governance/FEEDBACK.md) (already references issue templates)
 - [ ] Review cycle 1 close date communicated (2026-06-26)
 
 ---

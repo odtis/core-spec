@@ -26,7 +26,7 @@
 
 ## How to submit
 
-**Community questions:** [GitHub Discussions](https://github.com/odtis/core-spec/discussions) (Q&A). Setup: [.github/GITHUB-SETUP.md](../.github/GITHUB-SETUP.md).
+**Community questions:** [GitHub Discussions](https://github.com/odtis/core-spec/discussions) (Q&A). Maintainer setup: [GitHub setup guide](https://github.com/odtis/core-spec/blob/main/.github/GITHUB-SETUP.md).
 
 ### 1. Clarification (non-normative)
 

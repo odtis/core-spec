@@ -1,6 +1,6 @@
 # GitHub repository settings (quick reference)
 
-Full checklist: **[GITHUB-SETUP.md](GITHUB-SETUP.md)**
+Full checklist: **[Github Setup](GITHUB-SETUP.md)**
 
 ## Automated
 
