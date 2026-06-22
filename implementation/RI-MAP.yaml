@@ -425,7 +425,7 @@ implementations:
     - ODTIS-0528
     - ODTIS-0535
     binding_doc: implementation/component-bindings/exchange-gateway.yaml
-    notes: FAL-CONTROLS.md; mtls-live-check.sh ODTIS-0204; exchange-audit-check.sh ODTIS-0221; fal-controls-check.sh
+    notes: FAL-CONTROLS.md; mtls-live-check.sh ODTIS-0204; exchange-audit-check.sh ODTIS-0221; fail-closed-audit-e2e-check.sh (#26)
 
   - id: exchange-gateway-sender
     module: gateway/exchange-gateway (sender mode)
@@ -504,7 +504,7 @@ implementations:
     - ODTIS-0528
     - ODTIS-0529
     - ODTIS-0530
-    notes: Hash chain sealing; correlation cross-link; regulator-export REST (P3-E06)
+    notes: Hash chain sealing; correlation cross-link; fail-closed-audit-e2e-check.sh (#26); regulator-export REST (P3-E06)
 
   - id: portal-api
     module: api/portal-api

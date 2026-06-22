@@ -1,9 +1,18 @@
 # Conformance test: ODTIS-0535 - operator product requirement
 
-**Status:** implemented (static + unit smoke)
+**Status:** implemented (static + unit + live E2E smoke)
 **Requirement:** ODTIS-0535
 **Profile:** operator
 **Trace:** Book 2 ch.3.7 rule 1, Book 1 D5
+
+## Automation
+
+```bash
+cd core-impl && ./scripts/fail-closed-audit-e2e-check.sh
+cd core-spec && ./conformance/run-fail-closed-audit-e2e-checks.sh
+```
+
+Evidence: `implementation/evidence/fail-closed-e2e/lab-notes.md`
 
 ## Procedure
 

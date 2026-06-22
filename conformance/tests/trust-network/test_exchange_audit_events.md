@@ -1,8 +1,17 @@
 # Conformance test: ODTIS-0528 - exchange audit events
 
-**Status:** implemented (static + unit smoke)
+**Status:** implemented (static + unit + live E2E smoke)
 **Requirement:** ODTIS-0528
 **Profile:** trust-network
+
+## Automation
+
+```bash
+cd core-impl && ./scripts/fail-closed-audit-e2e-check.sh
+cd core-spec && ./conformance/run-fail-closed-audit-e2e-checks.sh
+```
+
+Evidence: `implementation/evidence/fail-closed-e2e/lab-notes.md`
 
 ## Procedure
 
