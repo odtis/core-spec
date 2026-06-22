@@ -528,10 +528,11 @@ implementations:
   - id: exchange-client-sdk
     module: sdk/exchange-client
     backlog_epic: P2-E04
-    status: partial
+    status: done
     odtis_ids:
     - ODTIS-0223
-    note: VenID RI client/discovery surfaces (see exchange-client-sdk in this map)
+    binding_doc: implementation/component-bindings/exchange-client-sdk.yaml
+    notes: EXCHANGE-CLIENT-SDK.md; exchange-client-sdk-check.sh (#19); ven-partner-sdk autodiscovery (#31)
 
   - id: partner-backend-example
     module: samples/partner-backend-example

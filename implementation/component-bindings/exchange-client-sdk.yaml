@@ -1,0 +1,26 @@
+component_id: exchange-client-sdk
+ri_map_surface: exchange-client-sdk
+repository: ven-trust-network
+module_path: sdk/exchange-client
+profile: trust-network
+backlog_epic: P2-E04
+status: done
+
+summary: >
+  Minimal Java 21 HTTP client for local exchange-gateway sender mode.
+  Emits X-Exchange-Service and correlation headers for multi-peer catalog routing (ODTIS-0223).
+
+implementation_notes: >
+  ExchangeGatewayClient adds X-Exchange-* headers; gateway resolves gateway_base_url per service_id.
+  Spring autodiscovery lives in ven-partner-sdk (issue #31). Operator guide: EXCHANGE-CLIENT-SDK.md.
+
+smoke_script: conformance/run-exchange-client-sdk-checks.sh
+
+odtis_ids:
+  - ODTIS-0223
+
+evidence:
+  - ven-trust-network/docs/operator/EXCHANGE-CLIENT-SDK.md
+  - ven-trust-network/sdk/exchange-client/README.md
+  - ven-trust-network/scripts/exchange-client-sdk-check.sh
+  - implementation/evidence/exchange-client-sdk/lab-notes.md

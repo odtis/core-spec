@@ -1,9 +1,19 @@
 # Conformance test: ODTIS-0223 - trust-network product requirement
 
-**Status:** implemented (static + unit smoke)
+**Status:** implemented (static + unit + SDK docs smoke)
 **Requirement:** ODTIS-0223
 **Profile:** trust-network
 **Trace:** platform FASE-4, P05
+
+## Automation
+
+```bash
+cd core-impl/ven-trust-network && ./scripts/exchange-client-sdk-check.sh
+cd core-spec && ./conformance/run-exchange-client-sdk-checks.sh
+cd ven-trust-network && ./scripts/sender-routing-check.sh   # live gateway optional
+```
+
+Evidence: `implementation/evidence/exchange-client-sdk/lab-notes.md`
 
 ## Procedure
 

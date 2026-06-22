@@ -87,6 +87,11 @@ smokes:
       - ODTIS-0204
     notes: mtls-live-check.sh; staging overlay 9443; PartnerCertThumbprintTest (#10)
 
+  - script: conformance/run-exchange-client-sdk-checks.sh
+    odtis_ids:
+      - ODTIS-0223
+    notes: EXCHANGE-CLIENT-SDK.md; ExchangeGatewayClient; exchange-client-sdk-check.sh (#19)
+
   - script: conformance/run-fail-closed-audit-e2e-checks.sh
     odtis_ids:
       - ODTIS-0535
