@@ -12,7 +12,7 @@ summary: >
 
 implementation_notes: >
   ExchangeGatewayClient adds X-Exchange-* headers; gateway resolves gateway_base_url per service_id.
-  Spring autodiscovery lives in ven-partner-sdk (issue #31). Operator guide: EXCHANGE-CLIENT-SDK.md.
+  Spring autodiscovery lives in ven-partner-sdk (TRUST-NETWORK-SDKS.md #31). Operator guide: EXCHANGE-CLIENT-SDK.md.
 
 smoke_script: conformance/run-exchange-client-sdk-checks.sh
 

@@ -1,8 +1,17 @@
 # Conformance test: ODTIS-0214 - autodiscovery (@VenPartnerService)
 
-**Status:** implemented (static + unit smoke)
+**Status:** implemented (static + unit + SDK docs smoke)
 **Requirement:** ODTIS-0214 
 **Profile:** trust-network
+
+## Automation
+
+```bash
+cd core-impl/ven-trust-network && ./scripts/ven-partner-sdk-check.sh
+cd core-spec && ./conformance/run-ven-partner-sdk-checks.sh
+```
+
+Evidence: `implementation/evidence/ven-partner-sdk/lab-notes.md`
 
 ## Scope @ 0.9.0-draft (FB-004)
 

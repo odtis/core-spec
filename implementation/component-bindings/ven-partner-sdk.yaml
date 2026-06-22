@@ -1,0 +1,27 @@
+component_id: ven-partner-sdk
+ri_map_surface: ven-partner-sdk
+repository: ven-trust-network
+module_path: sdk/ven-partner-sdk
+profile: trust-network
+backlog_epic: P2-E04
+status: done
+
+summary: >
+  Spring Boot autodiscovery SDK: @VenPartnerService registers exposed REST endpoints
+  via trust.nodes.exposed-services.register on the local exchange-gateway (ODTIS-0214).
+
+implementation_notes: >
+  Paired with exchange-client-sdk for consume vs publish roles — see TRUST-NETWORK-SDKS.md (#31).
+  VTPSC ServiceDescriptorProvider optional for portal-services bulk registration.
+
+smoke_script: conformance/run-ven-partner-sdk-checks.sh
+
+odtis_ids:
+  - ODTIS-0214
+
+evidence:
+  - ven-trust-network/docs/operator/VEN-PARTNER-SDK.md
+  - ven-trust-network/docs/operator/TRUST-NETWORK-SDKS.md
+  - ven-trust-network/sdk/ven-partner-sdk/README.md
+  - ven-trust-network/scripts/ven-partner-sdk-check.sh
+  - implementation/evidence/ven-partner-sdk/lab-notes.md

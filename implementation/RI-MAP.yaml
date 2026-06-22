@@ -532,7 +532,16 @@ implementations:
     odtis_ids:
     - ODTIS-0223
     binding_doc: implementation/component-bindings/exchange-client-sdk.yaml
-    notes: EXCHANGE-CLIENT-SDK.md; exchange-client-sdk-check.sh (#19); ven-partner-sdk autodiscovery (#31)
+    notes: EXCHANGE-CLIENT-SDK.md; exchange-client-sdk-check.sh (#19); see TRUST-NETWORK-SDKS.md (#31)
+
+  - id: ven-partner-sdk
+    module: sdk/ven-partner-sdk
+    backlog_epic: P2-E04
+    status: done
+    odtis_ids:
+    - ODTIS-0214
+    binding_doc: implementation/component-bindings/ven-partner-sdk.yaml
+    notes: VEN-PARTNER-SDK.md; ven-partner-sdk-check.sh (#31); partner-backend-example sample
 
   - id: partner-backend-example
     module: samples/partner-backend-example
