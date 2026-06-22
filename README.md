@@ -1,4 +1,4 @@
-# ODTIS — Open Digital Trust Infrastructure Specification
+# ODTIS - Open Digital Trust Infrastructure Specification
 
 Vendor-neutral open specification for digital identity, institutional trust exchange, operator governance, and optional extended modules.
 
@@ -28,8 +28,8 @@ Authoritative specification text is **English only** ([Language policy](governan
 
 | Item | State |
 |------|--------|
-| **Lifecycle** | Review draft ([Spec stages](governance/SPEC-STAGES.md)) — not ODTIS `1.0.0` |
-| **Normative sections 1–10** | Review draft complete |
+| **Lifecycle** | Review draft ([Spec stages](governance/SPEC-STAGES.md)) - not ODTIS `1.0.0` |
+| **Normative sections 1-10** | Review draft complete |
 | **Annex A OpenAPI** | Frozen @ `0.9.0-draft` |
 | **Registry** | 149 ODTIS requirement IDs |
 | **Conformance suite** | 159 test procedures (81 with smoke evidence) |
@@ -47,7 +47,7 @@ Full metrics: [Project status](https://odtis.org/site/STATUS/) · Roadmap: [Buil
 | [odtis.org](https://odtis.org) | Specification website (built from this repo) |
 | **This repository** | Normative source: `spec/`, `registry/`, `annexes/`, `conformance/` |
 | [github.com/odtis/core-impl](https://github.com/odtis/core-impl) | VenID reference implementation (private during Phase 3.2) |
-| [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) | Research organization — informative books and papers (not vendored here) |
+| [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) | Research organization - informative books and papers (not vendored here) |
 
 **Sibling layout** (optional, for RI smokes and local site build):
 
@@ -65,9 +65,9 @@ workspace/
 See [Repository map](STRUCTURE.md).
 
 ```
-├── spec/            # Sections 1–10 + adoptable profiles
+├── spec/            # Sections 1-10 + adoptable profiles
 ├── registry/        # Requirement IDs, terminology, events, profiles
-├── annexes/         # A (OpenAPI, frozen) – D
+├── annexes/         # A (OpenAPI, frozen) - D
 ├── conformance/     # L1/L2/L3 tests and certification guides
 ├── governance/      # IPR, stages, review, maintainers
 ├── publication/     # Citation, Zenodo packaging
@@ -87,7 +87,7 @@ See [Repository map](STRUCTURE.md).
 | Core Identity | 2, 3, 5 | 58 | 9 | 45 |
 | Trust Network | 4 | 30 | 18 | 27 |
 | Federation | 6 | 8 | 8 | 8 |
-| Operator | 7–10 | 30 | 25 | 36 |
+| Operator | 7-10 | 30 | 25 | 36 |
 | Extended | Annex D | 23 | 20 | 25 |
 | **Total** | | **159** | **81** | **149** |
 
@@ -143,7 +143,7 @@ Normative contributions are published under [CC BY 4.0](LICENSE). Copyright hold
 Specification text in this repository is licensed under **[Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE)**.
 
 - **Copyright:** FinnectOS, Inc. (interim; intended transfer to ODTIS Foundation upon incorporation)
-- **Trademarks** (ODTIS, ODTIS Certified, VenID, FinnectOS) are **not** granted by CC BY — see [Trademark policy](governance/TRADEMARK-POLICY.md)
+- **Trademarks** (ODTIS, ODTIS Certified, VenID, FinnectOS) are **not** granted by CC BY - see [Trademark policy](governance/TRADEMARK-POLICY.md)
 - **Referenced papers/books** may use separate licenses (often on [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org))
 
 ---
