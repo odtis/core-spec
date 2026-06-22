@@ -144,7 +144,7 @@ implementations:
     - ODTIS-0352
     - ODTIS-0353
     binding_doc: implementation/component-bindings/eregistry-adapter.yaml
-    notes: SandboxRegistryAuthority; hash-only identifiers; eregistry.verification audit; phase 3 gates (P3-E07)
+    notes: SandboxRegistryAuthority; hash-only identifiers; Dockerfile + eregistry-adapter.yml; extended-build-check.sh (#38)
 
   - id: verification-api
     module: api/verification-api
@@ -190,7 +190,7 @@ implementations:
     - ODTIS-0323
     - ODTIS-0324
     - ODTIS-0332
-    notes: i18n es-VE/en; PerfilPage status+LoA; ConsentsPage revoke; CITIZEN-PORTAL.md; citizen-portal-check.sh
+    notes: i18n es-VE/en; PerfilPage status+LoA; ConsentsPage revoke; CITIZEN-PORTAL.md; citizen-portal-check.sh; GitLab ven-identity-portal-ciudadano (#35)
 
   - id: admin-api
     module: api/admin-api
@@ -271,7 +271,7 @@ implementations:
     odtis_ids:
     - ODTIS-0501
     - ODTIS-0504
-    notes: Verification queue; governance scope links on HomePage; subject admin via admin-api
+    notes: Verification queue; governance scope links on HomePage; subject admin via admin-api; GitLab ven-identity-portal-operador (#35)
 
   - id: conformance-publication
     module: odtis/implementation/statements
@@ -295,7 +295,7 @@ implementations:
     - ODTIS-0343
     - ODTIS-0524
     binding_doc: implementation/component-bindings/wallet-service.yaml
-    notes: OID4VP verify; WalletLoaPolicy; wallet-service-check.sh
+    notes: OID4VP verify; WalletLoaPolicy; wallet-service-check.sh; Dockerfile + config YAML (#38)
 
   - id: inclusion-service
     module: services/inclusion-service
@@ -307,7 +307,7 @@ implementations:
     - ODTIS-0356
     - ODTIS-0357
     binding_doc: implementation/component-bindings/inclusion-service.yaml
-    notes: Assisted flows; InclusionLoaPolicy; inclusion-service-check.sh
+    notes: Assisted flows; InclusionLoaPolicy; inclusion-service-check.sh; Dockerfile + config YAML (#38)
 
   - id: signature-service
     module: services/signature-service
@@ -318,7 +318,7 @@ implementations:
     - ODTIS-0362
     - ODTIS-0363
     binding_doc: implementation/component-bindings/signature-service.yaml
-    notes: LoA-bound sign/verify; esignature-check.sh
+    notes: LoA-bound sign/verify; esignature-check.sh; Dockerfile + config YAML (#38)
 
   - id: kyb-service
     module: services/kyb-service
@@ -328,7 +328,7 @@ implementations:
     - ODTIS-0364
     - ODTIS-0365
     binding_doc: implementation/component-bindings/kyb-service.yaml
-    notes: Legal entity channel; representative linkage; kyb-service-check.sh
+    notes: Legal entity channel; representative linkage; kyb-service-check.sh; Dockerfile + config YAML (#38)
 
   - id: ewebhook-delivery
     module: services/verification-engine (webhook)
@@ -378,7 +378,16 @@ implementations:
     status: partial
     informative: true
     odtis_ids: []
-    notes: Base images; realm-identidad-digital.json; built by start.sh / staging-up.sh
+    notes: Base images; realm-identidad-digital.json; built by start.sh / staging-up.sh; GitLab di-jvm-image + di-node-image
+
+  - id: ci-docker-images
+    module: .gitlab-ci.yml (identity + trust + cloud-stack)
+    backlog_epic: P2-E08
+    status: partial
+    informative: true
+    odtis_ids: []
+    binding_doc: implementation/component-bindings/ci-docker-images.yaml
+    notes: build-images publishes Keycloak, portales, portal-trust; ci-docker-images-check.sh (#35)
 
   conformance:
     level_target: L2
@@ -513,7 +522,7 @@ implementations:
     - ODTIS-0209
     - ODTIS-0226
     binding_doc: implementation/component-bindings/portal-trust.yaml
-    notes: AccessRequestsPage; GrantsPage; AuditPage; service-grants-check.sh
+    notes: AccessRequestsPage; GrantsPage; AuditPage; service-grants-check.sh; GitLab ven-trust-portal-trust (#35)
 
   - id: exchange-client-sdk
     module: sdk/exchange-client

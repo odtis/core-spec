@@ -1,0 +1,34 @@
+# Normative binding: Extended profile build prep (VenID reference implementation)
+# Informative — conformance claims require conformance-statement.yaml
+
+component_id: extended-build
+ri_map_surface: wallet-service
+repository: ven-identity-core
+module_path: services/* + config/*.yml
+profile: extended
+backlog_epic: P4-E02
+status: partial
+
+summary: >
+  Extended services (wallet, inclusion, signature, kyb, eregistry-adapter) have
+  Dockerfiles and Config Server YAML with active:false; not in default compose.
+
+implementation_notes: >
+  GitLab build-images publishes ven-identity-{service} for extended modules (#38);
+  docker-compose.extended.yml is Phase 4 (#12). Individual smokes per service
+  (wallet-service-check.sh, etc.) remain separate.
+
+smoke_script: core-impl/scripts/extended-build-check.sh
+
+odtis_ids:
+  - ODTIS-0340
+  - ODTIS-0341
+  - ODTIS-0342
+  - ODTIS-0343
+
+evidence:
+  - ven-identity-core/config/wallet-service.yml
+  - ven-identity-core/config/inclusion-service.yml
+  - ven-identity-core/config/signature-service.yml
+  - ven-identity-core/config/kyb-service.yml
+  - ven-identity-core/config/eregistry-adapter.yml

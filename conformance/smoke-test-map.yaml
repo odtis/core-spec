@@ -88,6 +88,18 @@ smokes:
       - ODTIS-0226
     notes: portal-trust-check.sh; service-grants-check.sh; AdminGrantsControllerTest (#11)
 
+  - script: conformance/run-docker-images-checks.sh
+    odtis_ids: []
+    notes: ci-docker-images-check.sh; GitLab build-images keycloak + portales + portal-trust + extended (#35, #38)
+
+  - script: conformance/run-extended-build-checks.sh
+    odtis_ids:
+      - ODTIS-0340
+      - ODTIS-0341
+      - ODTIS-0342
+      - ODTIS-0343
+    notes: extended-build-check.sh; five Dockerfiles + config YAML inactive (#38)
+
   - script: conformance/run-phase4-package.sh
     tests:
       - conformance/tests/operator/test_phase_declaration.md

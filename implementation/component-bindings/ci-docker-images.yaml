@@ -1,0 +1,30 @@
+# Normative binding: CI Docker image registry (VenID reference implementation)
+# Informative — conformance claims require conformance-statement.yaml
+
+component_id: ci-docker-images
+ri_map_surface: ven-cloud-stack
+repository: core-impl (ven-identity-core + ven-trust-network + ven-cloud-stack)
+module_path: .gitlab-ci.yml + scripts/ci-docker-images-check.sh
+profile: operator
+backlog_epic: P2-E08
+status: partial
+
+summary: >
+  GitLab build-images stage publishes JVM services, Keycloak, citizen/operator
+  portals, portal-trust, and cloud-stack base images to the container registry.
+
+implementation_notes: >
+  ven-identity-core CI adds keycloak + di-portal-* images (#35); ven-trust-network
+  CI adds portal-trust; ven-cloud-stack publishes di-* base images. Extended
+  profile images remain #38 scope.
+
+smoke_script: core-impl/scripts/ci-docker-images-check.sh
+
+odtis_ids: []
+
+evidence:
+  - core-impl/docs/DEPLOYMENT.md
+  - core-impl/CONVENCIONES-VEN-PLATFORM.md
+  - ven-identity-core/.gitlab-ci.yml
+  - ven-trust-network/.gitlab-ci.yml
+  - ven-cloud-stack/.gitlab-ci.yml
