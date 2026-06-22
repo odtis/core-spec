@@ -33,6 +33,11 @@ conformance_references:
   - implementation/statements/venid-phase2-trust/conformance-statement.yaml
   - ven-identity-core/docs/operator/PUBLISHED-SERVICE-SCOPE.md
   - ven-identity-core/docs/operator/OPERATOR-MATURITY.md
+  - implementation/evidence/published-service-scope/staging-overlays-2026.yaml
 
-date: "2026-06-15"
+staging_overlays:
+  production_phase: 2
+  note: Federation/Extended/E-Webhook/E-Registry overlays are staging-validated only until PUBLISHED-SERVICE-SCOPE production claims are updated (#15).
+
+date: "2026-06-22"
 contact: conformance@odtis.org

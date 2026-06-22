@@ -1,0 +1,71 @@
+# Published service scope — staging overlay map (#15 / ODTIS-0501).
+# Overlays validate runtime in L2 sandbox; they are NOT production claims.
+
+published_baseline:
+  deployment_phase: 2
+  production_claim: true
+  conformance_statement: implementation/statements/venid-phase2-trust/conformance-statement.yaml
+  operator_maturity: implementation/statements/venid-operator-maturity/operator-maturity.yaml
+  scope_doc: ven-identity-core/docs/operator/PUBLISHED-SERVICE-SCOPE.md
+
+staging_overlays:
+  - id: federation
+    production_claimed: false
+    deployment_phase: 3
+    compose: compose/staging/docker-compose.federation.yml
+    orchestrator: scripts/federation-staging-up.sh
+    smoke_script: scripts/federation-overlay-check.sh
+    github_issue: 25
+
+  - id: mtls-lab
+    production_claimed: false
+    deployment_phase: 3
+    compose: compose/staging/docker-compose.mtls.yml
+    orchestrator: scripts/mtls-staging-up.sh
+    smoke_script: ven-trust-network/scripts/mtls-live-check.sh
+    github_issue: 10
+
+  - id: eregistry
+    production_claimed: false
+    deployment_phase: 3
+    compose: compose/staging/docker-compose.eregistry.yml
+    orchestrator: scripts/eregistry-staging-up.sh
+    smoke_script: scripts/eregistry-overlay-check.sh
+    github_issue: 8
+
+  - id: extended
+    production_claimed: false
+    deployment_phase: 4
+    compose: compose/staging/docker-compose.extended.yml
+    compose_profile: extended
+    orchestrator: scripts/extended-staging-up.sh
+    smoke_script: scripts/extended-overlay-check.sh
+    github_issue: 12
+
+  - id: extended-gateway
+    production_claimed: false
+    deployment_phase: 4
+    patches: api-gateway routes in extended overlay
+    smoke_script: scripts/gateway-extended-check.sh
+    github_issue: 13
+
+  - id: ewebhook
+    production_claimed: false
+    deployment_phase: 4
+    compose: compose/staging/docker-compose.ewebhook.yml
+    orchestrator: scripts/ewebhook-staging-up.sh
+    smoke_script: scripts/ewebhook-overlay-check.sh
+    live_smoke_script: scripts/ewebhook-live-check.sh
+    github_issue: 14
+
+production_claims_prohibited_until_scope_update:
+  - federation
+  - E-Wallet
+  - E-Inclusion
+  - E-Signature
+  - E-KYB
+  - E-Webhook
+  - E-Registry
+
+date: "2026-06-22"
+contact: conformance@odtis.org

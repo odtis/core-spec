@@ -33,9 +33,11 @@ This Phase 3 statement declares **Core Identity + Trust Network + Operator** (`c
 
 **Active Extended sub-modules:** (none active in production).
 
-**Prep (not activated in production):** E-Registry adapter (`eregistry-adapter`, `venid.eregistry.active=false`); federation agreements store (P3-E08, `app.exchange.federation.enabled=false`).
+**Staging overlays (not production claims):** Federation lab, E-Registry sandbox, Extended profile, E-Webhook lab — see `implementation/evidence/published-service-scope/staging-overlays-2026.yaml` and `PUBLISHED-SERVICE-SCOPE.md`.
 
-National LoA and federated routing MUST NOT be claimed while prep modules remain inactive.
+**Prep (not activated in production):** E-Registry adapter (`eregistry-adapter`, `venid.eregistry.active=false` by default); federation runtime via optional compose overlay (`docker-compose.federation.yml`).
+
+National LoA, federated routing, and Extended modules MUST NOT be claimed in production until `PUBLISHED-SERVICE-SCOPE.md` and this statement are updated under change control.
 
 
 ## Notes

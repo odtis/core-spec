@@ -30,6 +30,12 @@ Normative fields per ODTIS section 1.9.1 (`ODTIS-0008`, `ODTIS-0534`).
 
 This Phase 2 statement declares **Core Identity + Trust Network** (`core-identity`, `trust-network`). Federation and Extended sub-modules are not declared unless explicitly listed in `extended_modules`.
 
+## Published scope vs staging overlays (#15)
+
+Production operator scope is documented in `ven-identity-core/docs/operator/PUBLISHED-SERVICE-SCOPE.md`. Optional staging overlays (Federation lab, Extended profile, E-Webhook lab, E-Registry sandbox) validate runtime in L2 sandbox but **do not** extend this statement's `profiles` or `extended_modules` until change control publishes an updated statement.
+
+Overlay map: `implementation/evidence/published-service-scope/staging-overlays-2026.yaml`
+
 
 ## Notes
 
