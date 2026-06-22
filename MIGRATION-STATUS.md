@@ -1,8 +1,8 @@
-# ODTIS open-source migration — status & checklist
+# ODTIS open-source migration - status & checklist
 
 **Last updated:** 2026-06-22  
 **Workspace:** `/path/to/odtis`  
-**Model:** two repos (`core-spec` + `core-impl`); **no** separate `site` repo — odtis.org is generated and deployed from `core-spec`.
+**Model:** two repos (`core-spec` + `core-impl`); **no** separate `site` repo - odtis.org is generated and deployed from `core-spec`.
 
 ---
 
@@ -10,10 +10,10 @@
 
 | Piece | Location | GitHub | Public |
 |-------|----------|--------|--------|
-| ODTIS specification | `core-spec/` | [odtis/core-spec](https://github.com/odtis/core-spec) | Yes |
-| VenID reference impl | `core-impl/` | [odtis/core-impl](https://github.com/odtis/core-impl) | No (planned) |
-| odtis.org HTML | `../build/odtis-spec-site/` | — (artifact, not a repo) | Via EC2 deploy |
-| Legacy `odtis/site` repo | — | [odtis/site](https://github.com/odtis/site) | Archived / unused |
+| ODTIS specification | `core-spec/` | [Core Spec](https://github.com/odtis/core-spec) | Yes |
+| VenID reference impl | `core-impl/` | [Core Impl](https://github.com/odtis/core-impl) | No (planned) |
+| odtis.org HTML | `../build/odtis-spec-site/` | - (artifact, not a repo) | Via EC2 deploy |
+| Legacy `odtis/site` repo | - | [Site](https://github.com/odtis/site) | Archived / unused |
 | Editorial (books, papers) | `../venezuela/docs/` | Private monorepo | Zenodo / DTI.org later |
 
 **Sibling layout** (required for smoke / L2 scripts):
@@ -26,7 +26,7 @@ odtis/
     └── odtis-spec-site/
 ```
 
-**Source monorepo (unchanged):** `../venezuela/` — copy only, not deleted yet.
+**Source monorepo (unchanged):** `../venezuela/` - copy only, not deleted yet.
 
 ---
 
@@ -82,25 +82,25 @@ odtis/
 
 ---
 
-## Checklist — resume here
+## Checklist - resume here
 
-### P1 — Operate & unblock CI (this week)
+### P1 - Operate & unblock CI (this week)
 
-- [ ] **Fix conformance L1** — `./conformance/run.sh` currently **FAIL (6/10)**
+- [ ] **Fix conformance L1** - `./conformance/run.sh` currently **FAIL (6/10)**
   - Errors: ODTIS-0517…0536 missing in annex B threat mappings / `odtis_8_coverage`
   - Files: `registry/requirements.json`, `annexes/B-threat-mitigations/`, validators in `scripts/`
   - **Blocks:** GitHub Actions green on `core-spec`
 - [ ] **Deploy odtis.org**
-  - [ ] `cp core-spec/scripts/odtis-deploy.env.example core-spec/scripts/odtis-deploy.env` + edit
-  - [ ] `./scripts/deploy-ec2.sh` from `core-spec/`
-  - [ ] Verify Cloudflare DNS + Nginx (`scripts/DEPLOY-EC2-ODTIS-ORG.md`)
-  - [ ] Uncomment **deploy** job in `.github/workflows/odtis.yml` + add GitHub secrets
-- [ ] **Review cycle 1** — comment period closes **2026-06-26**
+  - [x] `scripts/odtis-deploy.env` configured (copied from monorepo; gitignored)
+  - [x] `./scripts/deploy-ec2.sh` — deployed 2026-06-22
+  - [x] https://odtis.org returns HTTP 200 (Cloudflare)
+  - [ ] Uncomment **deploy** job in `.github/workflows/odtis.yml` + add GitHub secrets (CI auto-deploy)
+- [ ] **Review cycle 1** - comment period closes **2026-06-26**
   - [ ] Triage issues on `github.com/odtis/core-spec`
   - [ ] Update `governance/REVIEW-LOG.yaml`, `CHANGELOG.md`
   - [ ] Run `governance/REVIEW-CYCLE-1-CLOSE.md` checklist or extend cycle with record
 
-### P2 — Consolidate migration
+### P2 - Consolidate migration
 
 - [ ] **Choose canonical edit path** (pick one):
   - [ ] **A)** GitHub `core-spec` = source of truth; `venezuela/odtis` → stub README redirect
@@ -113,7 +113,7 @@ odtis/
   - [ ] `venezuela/ven-*` moved to `core-impl` only
   - [ ] Update `dti-core` / monorepo README
 
-### P3 — Ecosystem & links
+### P3 - Ecosystem & links
 
 - [ ] Update [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) → `core-spec`, odtis.org, `core-impl` (when public)
 - [ ] Update [manuelmerida.io](https://manuelmerida.io) Vol. III → odtis.org
@@ -124,7 +124,7 @@ odtis/
 - [ ] Fix stale path in `scripts/DEPLOY-EC2-ODTIS-ORG.md` (`odtis/site/mkdocs.yml` → `core-spec/site/mkdocs.yml`)
 - [ ] GitHub org `odtis`: profile README, topics, branch protection on `main`, CODEOWNERS for `spec/`, `registry/`, `annexes/A-*`
 
-### P4 — Publication & spec maturity (Phase 3.2 → 4)
+### P4 - Publication & spec maturity (Phase 3.2 → 4)
 
 - [ ] **Zenodo snapshot** @ `v0.9.0-draft`
   - [ ] `./scripts/package-release.sh`
@@ -135,7 +135,7 @@ odtis/
 - [ ] IETF drafts: markdown in `ietf/` → xml2rfc → submission (`governance/IETF-ROADMAP.md`)
 - [ ] **ODTIS v1.0** per `PLAN-PHASES.md` Phase 4 (freeze, certification program, 100% RF traceability)
 
-### P5 — `core-impl` (when opening publicly)
+### P5 - `core-impl` (when opening publicly)
 
 - [ ] Confirm `mvn clean install -DskipTests` locally and on GitHub Actions
 - [ ] Add `CITATION.cff` (link to P12 / Zenodo)
@@ -144,7 +144,7 @@ odtis/
 - [ ] L2 sandbox smoke documented in `conformance/sandbox/README.md` against live `--target`
 - [ ] Consider Git LFS if large assets reappear (embedded `node/` must stay gitignored)
 
-### P6 — Foundation & governance (medium term)
+### P6 - Foundation & governance (medium term)
 
 - [ ] ODTIS Foundation incorporation (`governance/FOUNDATION-CHARTER.md`)
 - [ ] Trademark + formal L3 auditor program (`governance/CERTIFICATION.md`)
@@ -220,4 +220,4 @@ cd ../core-impl && git status && git log -1 --oneline
 
 ---
 
-*Retomar desde **Checklist — resume here → P1**.*
+*Retomar desde **Checklist - resume here → P1**.*
