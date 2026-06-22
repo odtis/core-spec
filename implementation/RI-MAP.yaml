@@ -94,7 +94,13 @@ implementations:
     - ODTIS-0313
     - ODTIS-0314
     - ODTIS-0306
-    notes: SubjectIdPolicy; dedup; recovery events; REGISTRATION-PROOFING.md; VenidEvent envelope ODTIS-0529
+    - ODTIS-0319
+    - ODTIS-0320
+    - ODTIS-0321
+    - ODTIS-0337
+    - ODTIS-0338
+    - ODTIS-0339
+    notes: SubjectIdPolicy; dedup; recovery events; RpClientService; RpAdmissionPolicy; rp-client-lifecycle-check.sh; VenidEvent envelope ODTIS-0529
 
   - id: consent-service
     module: services/consent-service
@@ -201,7 +207,7 @@ implementations:
     - ODTIS-0504
     - ODTIS-0513
     - ODTIS-0525
-    notes: SubjectsController; MetricsController /metrics/ecosystem and /metrics/fraud
+    notes: ClientsController RP lifecycle; SubjectsController; MetricsController; RP-CLIENT-LIFECYCLE.md; rp-client-lifecycle-check.sh
 
   - id: api-gateway
     module: api/api-gateway

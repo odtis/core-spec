@@ -137,3 +137,13 @@ smokes:
       - ODTIS-0324
       - ODTIS-0332
     notes: MeController; ConsentsController revoke; PortalConfig locales; PerfilPage/ConsentsPage i18n es-VE/en
+
+  - script: ../core-impl/ven-identity-core/scripts/rp-client-lifecycle-check.sh
+    odtis_ids:
+      - ODTIS-0319
+      - ODTIS-0320
+      - ODTIS-0321
+      - ODTIS-0337
+      - ODTIS-0338
+      - ODTIS-0339
+    notes: RpClientService; ClientsController; RpAdmissionPolicy; MachineClientAuthorizationManager; RP-ADMISSION.md
