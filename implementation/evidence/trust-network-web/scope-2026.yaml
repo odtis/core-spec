@@ -1,0 +1,31 @@
+# ven-trust-network-web scope (#32 / informative — not ODTIS RI).
+
+scope_id: ven-trust-network-web-2026
+as_of: 2026-06-22
+issue: 32
+repository: ven-trust-network-web
+path: core-impl/ven-trust-network-web
+
+classification: informative_marketing_demo
+odtis_profile: none
+production_claim: false
+conformance_surface: false
+
+operational_equivalent:
+  component_id: portal-trust
+  repository: ven-trust-network
+  module_path: front/portal-trust
+  api: api/portal-api
+  odtis_ids:
+    - ODTIS-0209
+    - ODTIS-0226
+  binding: implementation/component-bindings/portal-trust.yaml
+  smoke: ven-trust-network/scripts/portal-trust-check.sh
+
+not_in_default_compose: true
+not_in_gitlab_conformance_ci: true
+
+scope_doc: core-impl/ven-trust-network-web/SCOPE.md
+smoke:
+  - core-impl/scripts/trust-network-web-scope-check.sh
+  - conformance/run-trust-network-web-scope-checks.sh

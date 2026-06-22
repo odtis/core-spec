@@ -1,0 +1,29 @@
+# Informative binding: ven-trust-network-web (marketing/demo — NOT ODTIS RI)
+
+component_id: trust-network-web
+ri_map_surface: null
+repository: ven-trust-network-web
+module_path: .
+profile: none
+backlog_epic: null
+status: informative
+
+summary: >
+  Marketing and demo SPA. Not deployed in default Trust Network stack and not
+  part of ODTIS conformance claims. Operator UI is portal-trust in ven-trust-network.
+
+implementation_notes: >
+  Do not map ODTIS-0209 or ODTIS-0226 to this folder. Use portal-trust + portal-api.
+
+operational_portal:
+  component_id: portal-trust
+  repository: ven-trust-network
+  binding: implementation/component-bindings/portal-trust.yaml
+
+odtis_ids: []
+
+evidence:
+  - implementation/evidence/trust-network-web/scope-2026.yaml
+  - ven-trust-network-web/SCOPE.md
+
+smoke_script: core-impl/scripts/trust-network-web-scope-check.sh

@@ -49,6 +49,12 @@ smokes:
     odtis_ids: []
     notes: doc-hygiene-check.sh; TAREAS-IMPLEMENTACION archived; DEPLOYMENT + GitHub issues onboarding (#39)
 
+  - script: conformance/run-trust-network-web-scope-checks.sh
+    odtis_ids:
+      - ODTIS-0209
+      - ODTIS-0226
+    notes: trust-network-web-scope-check.sh; marketing web vs portal-trust (#32)
+
   - script: conformance/run-operator-pki-checks.sh
     odtis_ids:
       - ODTIS-0507

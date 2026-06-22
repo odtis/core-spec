@@ -579,6 +579,26 @@ implementations:
     last_report: null
     gaps_doc: implementation/gaps/KNOWN-GAPS.md
 
+- id: ven-trust-network-web
+  path: "../core-impl/ven-trust-network-web"
+  organization: FinnectOS
+  profiles_claimed: []
+  informative: true
+  odtis_sections: []
+  surfaces:
+  - id: trust-network-web
+    module: .
+    status: informative
+    informative: true
+    odtis_ids: []
+    binding_doc: implementation/component-bindings/trust-network-web.yaml
+    notes: Marketing/demo SPA only (#32); NOT portal-trust (ODTIS-0209/0226); trust-network-web-scope-check.sh
+
+  conformance:
+    level_target: null
+    last_report: null
+    gaps_doc: null
+
 - id: odtis-spec
   path: "."
   organization: FinnectOS
