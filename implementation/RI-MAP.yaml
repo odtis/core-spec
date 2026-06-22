@@ -361,6 +361,7 @@ implementations:
     status: partial
     openapi: annexes/A-openapi-registry/exchange-gateway.openapi.yaml
     odtis_ids:
+    - ODTIS-0106
     - ODTIS-0201
     - ODTIS-0202
     - ODTIS-0203
@@ -377,7 +378,7 @@ implementations:
     - ODTIS-0535
     gaps: [GAP-TN-0204]
     binding_doc: implementation/component-bindings/exchange-gateway.yaml
-    notes: FederationRouteValidationFilter when federation.enabled (P3-E08/P4-E01)
+    notes: FAL-CONTROLS.md; fal-controls-check.sh; FederationRouteValidationFilter when federation.enabled (P3-E08/P4-E01)
 
   - id: exchange-gateway-sender
     module: gateway/exchange-gateway (sender mode)

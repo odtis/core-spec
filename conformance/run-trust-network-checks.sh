@@ -79,5 +79,11 @@ elif [[ -x "$AUDIT_SCRIPT" ]]; then
   echo "WARN: exchange-gateway or audit-service unreachable  -  skip audit smoke"
 fi
 
+FAL_SCRIPT="../core-impl/ven-trust-network/scripts/fal-controls-check.sh"
+if [[ -x "$FAL_SCRIPT" ]]; then
+  echo "== FAL controls smoke (ODTIS-0106) =="
+  bash "$FAL_SCRIPT"
+fi
+
 echo ""
 echo "Trust Network checks: PASS"

@@ -48,7 +48,7 @@ Requirement prefixes: `ODTIS-02*` (+ `ODTIS-0106`)
 | [`Sender Multi Peer Routing test`](../../tests/trust-network/test_sender_multi_peer_routing.md) | `ODTIS-0223` | implemented |
 | [`Service Grant Required test`](../../tests/trust-network/test_service_grant_required.md) | `ODTIS-0209` | pending |
 | [`Trust Registry Validation test`](../../tests/trust-network/test_trust_registry_validation.md) | `ODTIS-0205` | implemented |
-| [`ODTIS-0106 test`](../../tests/core-identity/test_odtis_0106.md) | `ODTIS-0106` | pending |
+| [`ODTIS-0106 test`](../../tests/core-identity/test_odtis_0106.md) | `ODTIS-0106` | implemented |
 
 ## Coverage summary
 
@@ -56,7 +56,7 @@ Requirement prefixes: `ODTIS-02*` (+ `ODTIS-0106`)
 |--------|-------|
 | Registry requirements | 27 |
 | Linked tests | 30 |
-| Implemented (smoke) | 18 |
+| Implemented (smoke) | 19 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`

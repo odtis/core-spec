@@ -98,6 +98,11 @@ smokes:
       - ODTIS-0306
     notes: AssuranceLevelPolicy; InternalClaimsController; VerificationService LoA denials; LOA-NIST-MAPPING.md
 
+  - script: conformance/run-fal-controls-checks.sh
+    odtis_ids:
+      - ODTIS-0106
+    notes: FAL-CONTROLS.md; PartnerValidation; SignatureVerification; TimestampValidation; grant mode; fal-controls-check.sh
+
   - script: ../core-impl/ven-identity-core/scripts/verification-api-unit-check.sh
     odtis_ids:
       - ODTIS-0315

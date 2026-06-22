@@ -32,7 +32,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 | [`ODTIS-0101 test`](../../tests/core-identity/test_odtis_0101.md) | `ODTIS-0101` | implemented |
 | [`ODTIS-0104 test`](../../tests/core-identity/test_odtis_0104.md) | `ODTIS-0344` | implemented |
 | [`ODTIS-0105 test`](../../tests/core-identity/test_odtis_0105.md) | `ODTIS-0105` | implemented |
-| [`ODTIS-0106 test`](../../tests/core-identity/test_odtis_0106.md) | `ODTIS-0106` | pending |
+| [`ODTIS-0106 test`](../../tests/core-identity/test_odtis_0106.md) | `ODTIS-0106` | implemented |
 | [`ODTIS-0107 test`](../../tests/core-identity/test_odtis_0107.md) | `ODTIS-0107` | implemented |
 | [`ODTIS-0301 test`](../../tests/core-identity/test_odtis_0301.md) | `ODTIS-0301` | implemented |
 | [`ODTIS-0303 test`](../../tests/core-identity/test_odtis_0303.md) | `ODTIS-0303` | implemented |
@@ -83,7 +83,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 |--------|-------|
 | Registry requirements | 45 |
 | Linked tests | 58 |
-| Implemented (smoke) | 55 |
+| Implemented (smoke) | 56 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`
