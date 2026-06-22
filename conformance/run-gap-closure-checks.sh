@@ -33,6 +33,7 @@ run "GAP-TN-0225 metadata-only" bash "$ROOT/../core-impl/ven-trust-network/scrip
 run "GAP-TN-0215/0216/0218 PKI" bash "$ROOT/../core-impl/ven-trust-network/scripts/trust-pki-check.sh"
 run "GAP-TN-0219/0220/0528 exchange audit" bash "$ROOT/../core-impl/ven-trust-network/scripts/exchange-audit-check.sh"
 run "GAP-TN-0204 mTLS live interop" bash "$ROOT/../core-impl/ven-trust-network/scripts/mtls-live-check.sh"
+run "P4-E01 federation runtime 0407/0408" bash "$ROOT/../core-impl/ven-trust-network/scripts/federation-runtime-check.sh"
 run "GAP-TN-0535 trust fail-closed" bash "$ROOT/../core-impl/ven-trust-network/scripts/fail-closed-denial-check.sh"
 run "GAP-OP-PH4 statement" bash "$ROOT/conformance/run-phase4-package.sh"
 

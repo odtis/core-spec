@@ -458,8 +458,10 @@ implementations:
     - ODTIS-0404
     - ODTIS-0405
     - ODTIS-0406
+    - ODTIS-0407
+    - ODTIS-0408
     binding_doc: implementation/component-bindings/federation-runtime.yaml
-    notes: Federation agreements V16; route policy; regulator export (P3-E08/P4-E01)
+    notes: Federation agreements V16; federation-runtime-check.sh; federation staging overlay (#25)
 
   - id: central-server
     module: services/central-server
@@ -604,7 +606,7 @@ unmapped_product_backlog:
     backlog_epics: [P4-E01, P3-E08]
     odtis_range: ODTIS-0401..0408
     target_repo: ven-trust-network
-    status: partial
+    status: done
 
   operator_cross_cutting:
     phase: P3

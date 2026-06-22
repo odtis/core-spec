@@ -1,9 +1,18 @@
 # Conformance test: ODTIS-0407 - federation product requirement
 
-**Status:** implemented (static + unit smoke)
+**Status:** implemented (static + unit + live staging smoke)
 **Requirement:** ODTIS-0407
 **Profile:** federation
 **Trace:** P09, Book 1 D9
+
+## Automation
+
+```bash
+cd core-impl/ven-trust-network && ./scripts/federation-runtime-check.sh
+cd core-spec && ./conformance/run-federation-runtime-checks.sh
+```
+
+Evidence: `implementation/evidence/federation-staging/lab-notes.md`
 
 ## Procedure
 

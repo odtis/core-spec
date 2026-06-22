@@ -1,9 +1,18 @@
 # Conformance test: ODTIS-0408 - federation product requirement
 
-**Status:** implemented (static + unit smoke)
+**Status:** implemented (static + unit + live staging smoke)
 **Requirement:** ODTIS-0408
 **Profile:** federation
 **Trace:** Book 2 ch.6.8, P09
+
+## Automation
+
+```bash
+cd core-impl/ven-trust-network && ./scripts/federation-runtime-check.sh
+# ExchangeAuditEventsTest covers federated metadata fields
+```
+
+Evidence: `implementation/evidence/federation-staging/lab-notes.md`
 
 ## Procedure
 

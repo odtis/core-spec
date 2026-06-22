@@ -87,6 +87,12 @@ smokes:
       - ODTIS-0204
     notes: mtls-live-check.sh; staging overlay 9443; PartnerCertThumbprintTest (#10)
 
+  - script: conformance/run-federation-runtime-checks.sh
+    odtis_ids:
+      - ODTIS-0407
+      - ODTIS-0408
+    notes: federation-runtime-check.sh; staging overlay; trust-service validate-route proxy (#25)
+
   - script: conformance/run-portal-trust-checks.sh
     odtis_ids:
       - ODTIS-0209

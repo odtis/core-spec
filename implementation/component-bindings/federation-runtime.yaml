@@ -6,7 +6,7 @@ repository: ven-trust-network
 module_path: services/trust-registry + gateway/exchange-gateway
 profile: federation
 backlog_epic: P4-E01
-status: partial
+status: done
 
 summary: >
   Bilateral federation agreements (prep) and production runtime routing policy:

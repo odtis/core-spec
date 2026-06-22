@@ -836,7 +836,7 @@
         {
           "id": "P4-E01",
           "title": "Federation runtime",
-          "status": "partial",
+          "status": "done",
           "component": "exchange-gateway federation router",
           "repo": "ven-trust-network",
           "odtis_ids": [
