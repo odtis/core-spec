@@ -17,7 +17,7 @@ body:
     id: summary
     attributes:
       label: Summary
-      description: One paragraph — what changes and why
+      description: One paragraph - what changes and why
     validations:
       required: true
   - type: textarea

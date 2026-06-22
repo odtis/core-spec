@@ -1,37 +1,21 @@
-# GitHub repository settings (manual)
+# GitHub repository settings (quick reference)
 
-If `scripts/set-github-repo-metadata.sh` cannot run (no `gh auth`), set these in GitHub: **Settings → General**.
+Full checklist: **[GITHUB-SETUP.md](GITHUB-SETUP.md)**
 
-## Description
-
-```
-Open Digital Trust Infrastructure Specification (ODTIS) - vendor-neutral digital identity, trust networks, and conformance (0.9.0-draft).
-```
-
-## Topics
-
-```
-odtis
-open-specification
-digital-identity
-trust-network
-digital-trust
-conformance
-oidc
-openapi
-identity-management
-zero-trust
-```
-
-## Website
-
-```
-https://odtis.org
-```
-
-## Automated setup
+## Automated
 
 ```bash
 gh auth login
-cd core-spec && ./scripts/set-github-repo-metadata.sh
+./scripts/set-github-repo-metadata.sh
 ```
+
+Sets description, homepage (`https://odtis.org`), topics, and enables Discussions.
+
+## Manual (UI)
+
+| Setting | Value |
+|---------|--------|
+| **Website** | `https://odtis.org` |
+| **Visibility** | Public |
+| **Wiki** | Off |
+| **Discussions** | On + categories per GITHUB-SETUP.md |

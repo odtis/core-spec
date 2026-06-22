@@ -1,0 +1,18 @@
+title: "Introduction"
+body:
+  - type: markdown
+    value: |
+      ## Welcome to ODTIS Discussions
+
+      Introduce yourself to the community:
+
+      - Who you are (vendor, operator, integrator, researcher, student, ...)
+      - What you are building or evaluating
+      - Which **ODTIS profile(s)** matter to you
+      - What you would like help with
+
+      **Spec site:** https://odtis.org | **Version:** `0.9.0-draft` | **License:** CC BY 4.0
+
+      Please use **Q&A** for questions, **Ideas** for proposals, and **Issues** for tracked clarifications/RFCs.
+labels:
+  - General

@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security disclosure
+    url: https://github.com/odtis/core-spec/blob/main/SECURITY.md
+    about: Report specification or site vulnerabilities privately (info@odtis.org). Do not open public issues.
+  - name: GitHub Discussions
+    url: https://github.com/odtis/core-spec/discussions
+    about: Ask questions, share ideas, and connect with the community.
+  - name: Adoption guide
+    url: https://odtis.org/ADOPTION/
+    about: Profiles, conformance levels, and implementation paths.
+  - name: Review cycle 1
+    url: https://odtis.org/governance/REVIEW-CYCLE-1/
+    about: External feedback on ODTIS 0.9.0-draft (open until 2026-06-26).

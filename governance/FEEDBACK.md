@@ -26,6 +26,8 @@
 
 ## How to submit
 
+**Community questions:** [GitHub Discussions](https://github.com/odtis/core-spec/discussions) (Q&A). Setup: [.github/GITHUB-SETUP.md](../.github/GITHUB-SETUP.md).
+
 ### 1. Clarification (non-normative)
 
 Use the **ODTIS clarification** GitHub issue template (`.github/ISSUE_TEMPLATE/odtis-clarification.yml`) or email stewards with:

@@ -141,6 +141,8 @@ We welcome clarifications, editorial fixes, sandbox L2 reports, and RFC-track no
 
 Normative contributions are published under [CC BY 4.0](LICENSE). Copyright holder: **FinnectOS, Inc.** See [IPR policy](governance/IPR-POLICY.md).
 
+**Maintainers:** [GitHub setup guide](.github/GITHUB-SETUP.md) (public repo, Discussions, labels, branch protection).
+
 ---
 
 ## License and attribution
@@ -168,3 +170,4 @@ Report specification or site security concerns to **info@odtis.org**. Do not ope
 | [Certification](governance/CERTIFICATION.md) | L1 / L2 / L3 levels |
 | [How to cite](publication/HOW-TO-CITE.md) | Academic and procurement citation |
 | [Changelog](CHANGELOG.md) | Release history |
+| [GitHub setup](.github/GITHUB-SETUP.md) | Publish checklist, Discussions, branch protection |

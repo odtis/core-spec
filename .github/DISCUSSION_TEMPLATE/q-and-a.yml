@@ -1,0 +1,31 @@
+title: "Question about "
+body:
+  - type: markdown
+    value: |
+      Ask about ODTIS profiles, Annex A, conformance (L1/L2/L3), or adoption.
+
+      Before posting: check https://odtis.org/site/FAQ/ and search existing Discussions.
+
+      For normative MUST changes, use the **ODTIS RFC** issue template instead.
+  - type: input
+    id: version
+    attributes:
+      label: ODTIS version
+      value: "0.9.0-draft"
+    validations:
+      required: true
+  - type: input
+    id: profiles
+    attributes:
+      label: Profile(s)
+      placeholder: "core-identity, trust-network, ..."
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+labels:
+  - Q&A

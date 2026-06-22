@@ -1,0 +1,43 @@
+title: "Show and tell: "
+body:
+  - type: markdown
+    value: |
+      Share sandbox results, integration approaches, or pilot experience.
+
+      For formal L2 evidence, also consider the **ODTIS sandbox conformance report** issue template.
+  - type: input
+    id: operator
+    attributes:
+      label: Organization / project
+    validations:
+      required: true
+  - type: input
+    id: profiles
+    attributes:
+      label: ODTIS profile(s)
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Conformance level
+      options:
+        - L1
+        - L2
+        - L3
+        - Not tested yet
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What you built or tested
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Links (repo, report, statement)
+      description: Optional URLs or pasted conformance output
+labels:
+  - Show and tell

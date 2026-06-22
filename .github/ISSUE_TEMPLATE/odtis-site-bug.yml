@@ -1,0 +1,39 @@
+name: Site or docs bug
+description: Broken link, rendering, or error on odtis.org or repo docs
+title: "[site] "
+labels: ["documentation", "site"]
+body:
+  - type: markdown
+    value: |
+      For normative spec changes use **ODTIS clarification** or **ODTIS RFC** templates.
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: "https://odtis.org/site/FAQ/"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser (if UI issue)
+      options:
+        - N/A
+        - Chrome / Chromium
+        - Firefox
+        - Safari
+        - Other
+    validations:
+      required: true

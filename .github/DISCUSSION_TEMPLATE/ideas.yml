@@ -1,0 +1,26 @@
+title: "Idea: "
+body:
+  - type: markdown
+    value: |
+      Share a non-normative idea: examples, tooling, documentation, or ecosystem interoperability.
+
+      If your idea requires a new or changed **MUST**, open an **ODTIS RFC** issue instead.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed idea
+    validations:
+      required: true
+  - type: input
+    id: profiles
+    attributes:
+      label: Related profile(s)
+      placeholder: "operator, federation, ..."
+labels:
+  - Ideas

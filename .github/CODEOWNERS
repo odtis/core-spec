@@ -1,0 +1,10 @@
+# CODEOWNERS - optional; enable after adding real GitHub handles or team
+#
+# Uncomment and replace handles, then in GitHub:
+# Settings -> Code security -> Code owners -> enable review requirement (optional)
+#
+# * @YOUR_GITHUB_HANDLE
+# /spec/ @YOUR_GITHUB_HANDLE
+# /registry/ @YOUR_GITHUB_HANDLE
+# /annexes/ @YOUR_GITHUB_HANDLE
+# /conformance/ @YOUR_GITHUB_HANDLE
