@@ -5,6 +5,8 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 OUT="$(cd "$ROOT/.." && pwd)/build/odtis-spec-site"
 
+export ODTIS_BUILD_SHA="${ODTIS_BUILD_SHA:-$(git -C "$ROOT" rev-parse --short HEAD 2>/dev/null || echo local)}"
+
 VENV="$ROOT/.venv-site"
 if [[ ! -d "$VENV" ]]; then
   python3 -m venv "$VENV"

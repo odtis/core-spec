@@ -33,8 +33,26 @@ def read_version() -> str:
     return VERSION_FILE.read_text(encoding="utf-8").strip()
 
 
+def resolve_build_sha() -> str:
+    env_sha = os.environ.get("ODTIS_BUILD_SHA") or os.environ.get("GITHUB_SHA")
+    if env_sha:
+        return env_sha
+    try:
+        import subprocess
+
+        sha = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"],
+            cwd=ROOT,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).strip()
+        return sha or "local"
+    except (OSError, subprocess.CalledProcessError):
+        return "local"
+
+
 def build_meta(version: str) -> dict[str, str]:
-    sha = os.environ.get("ODTIS_BUILD_SHA", os.environ.get("GITHUB_SHA", "local"))
+    sha = resolve_build_sha()
     when = os.environ.get("ODTIS_BUILD_TIME", "")
     if not when:
         when = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
