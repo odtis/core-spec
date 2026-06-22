@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0328 - explicit consent before first release
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0328
 **Profile:** core-identity
 

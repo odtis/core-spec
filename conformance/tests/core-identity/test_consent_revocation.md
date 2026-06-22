@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0330 - consent revocation
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0330
 **Profile:** core-identity
 

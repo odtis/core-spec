@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0331 - Scope enforcement
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0331
 **Profile:** core-identity
 

@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0527 - consent audit events
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0527
 **Profile:** core-identity
 
