@@ -144,7 +144,7 @@ implementations:
     - ODTIS-0352
     - ODTIS-0353
     binding_doc: implementation/component-bindings/eregistry-adapter.yaml
-    notes: SandboxRegistryAuthority; staging overlay docker-compose.eregistry.yml; eregistry-overlay-check.sh (#8)
+    notes: SandboxRegistryAuthority; staging overlays docker-compose.eregistry.yml (#8) and docker-compose.extended.yml (#12)
 
   - id: verification-api
     module: api/verification-api
@@ -295,7 +295,7 @@ implementations:
     - ODTIS-0343
     - ODTIS-0524
     binding_doc: implementation/component-bindings/wallet-service.yaml
-    notes: OID4VP verify; WalletLoaPolicy; wallet-service-check.sh; Dockerfile + config YAML (#38)
+    notes: OID4VP verify; WalletLoaPolicy; wallet-service-check.sh; Dockerfile + config YAML (#38); compose/staging/docker-compose.extended.yml (#12)
 
   - id: inclusion-service
     module: services/inclusion-service
@@ -307,7 +307,7 @@ implementations:
     - ODTIS-0356
     - ODTIS-0357
     binding_doc: implementation/component-bindings/inclusion-service.yaml
-    notes: Assisted flows; InclusionLoaPolicy; inclusion-service-check.sh; Dockerfile + config YAML (#38)
+    notes: Assisted flows; InclusionLoaPolicy; inclusion-service-check.sh; Dockerfile + config YAML (#38); extended staging overlay (#12)
 
   - id: signature-service
     module: services/signature-service
@@ -318,7 +318,7 @@ implementations:
     - ODTIS-0362
     - ODTIS-0363
     binding_doc: implementation/component-bindings/signature-service.yaml
-    notes: LoA-bound sign/verify; esignature-check.sh; Dockerfile + config YAML (#38)
+    notes: LoA-bound sign/verify; esignature-check.sh; Dockerfile + config YAML (#38); extended staging overlay (#12)
 
   - id: kyb-service
     module: services/kyb-service
@@ -328,7 +328,7 @@ implementations:
     - ODTIS-0364
     - ODTIS-0365
     binding_doc: implementation/component-bindings/kyb-service.yaml
-    notes: Legal entity channel; representative linkage; kyb-service-check.sh; Dockerfile + config YAML (#38)
+    notes: Legal entity channel; representative linkage; kyb-service-check.sh; Dockerfile + config YAML (#38); extended staging overlay (#12)
 
   - id: ewebhook-delivery
     module: services/verification-engine (webhook)

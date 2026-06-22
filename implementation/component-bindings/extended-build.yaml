@@ -11,14 +11,20 @@ status: partial
 
 summary: >
   Extended services (wallet, inclusion, signature, kyb, eregistry-adapter) have
-  Dockerfiles and Config Server YAML with active:false; not in default compose.
+  Dockerfiles, Config Server YAML with active:false, and a staging compose overlay
+  with profile extended; not in default compose.
 
 implementation_notes: >
   GitLab build-images publishes ven-identity-{service} for extended modules (#38);
-  docker-compose.extended.yml is Phase 4 (#12). Individual smokes per service
-  (wallet-service-check.sh, etc.) remain separate.
+  docker-compose.extended.yml activates all five services for Phase 4 staging (#12).
+  Individual smokes per service (wallet-service-check.sh, etc.) remain separate.
 
 smoke_script: core-impl/scripts/extended-build-check.sh
+
+staging_overlay:
+  compose: compose/staging/docker-compose.extended.yml
+  orchestrator: scripts/extended-staging-up.sh
+  smoke_script: scripts/extended-overlay-check.sh
 
 odtis_ids:
   - ODTIS-0340
@@ -32,3 +38,4 @@ evidence:
   - ven-identity-core/config/signature-service.yml
   - ven-identity-core/config/kyb-service.yml
   - ven-identity-core/config/eregistry-adapter.yml
+  - implementation/evidence/extended-staging/lab-notes.md
