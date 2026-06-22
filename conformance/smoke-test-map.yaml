@@ -34,6 +34,11 @@ smokes:
       - ODTIS-0532
     notes: l3-auditor-evidence-check.sh; l3-auditor-evidence-pack-2026.yaml; engagement tracking (#17)
 
+  - script: conformance/run-legacy-exchange-gateway-checks.sh
+    odtis_ids:
+      - ODTIS-0201
+    notes: legacy-exchange-gateway-check.sh; archive/exchange-gateway-legacy; single canonical gateway in ven-trust-network (#30)
+
   - script: conformance/run-operator-pki-checks.sh
     odtis_ids:
       - ODTIS-0507

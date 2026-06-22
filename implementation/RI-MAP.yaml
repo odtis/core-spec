@@ -428,7 +428,7 @@ implementations:
     - ODTIS-0528
     - ODTIS-0535
     binding_doc: implementation/component-bindings/exchange-gateway.yaml
-    notes: FAL-CONTROLS.md; mtls-live-check.sh ODTIS-0204; exchange-audit-check.sh ODTIS-0221; fail-closed-audit-e2e-check.sh (#26)
+    notes: FAL-CONTROLS.md; mtls-live-check.sh ODTIS-0204; exchange-audit-check.sh ODTIS-0221; fail-closed-audit-e2e-check.sh (#26); legacy IC module archived (#30)
 
   - id: exchange-gateway-sender
     module: gateway/exchange-gateway (sender mode)

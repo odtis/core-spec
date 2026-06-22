@@ -40,3 +40,9 @@ evidence:
   - ven-trust-network/docs/EXCHANGE-GATEWAY.md
   - ven-trust-network/docs/operator/EXCHANGE-AUDIT-SLA.md
   - ven-trust-network/scripts/exchange-audit-check.sh
+  - ven-identity-core/archive/exchange-gateway-legacy/README.md
+
+retired_modules:
+  - path: ven-identity-core/archive/exchange-gateway-legacy
+    retired_issue: 30
+    note: Legacy duplicate removed; canonical gateway only in ven-trust-network
