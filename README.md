@@ -46,7 +46,7 @@ Full metrics: [Project status](https://odtis.org/site/STATUS/) · Roadmap: [Buil
 |----------|------|
 | [odtis.org](https://odtis.org) | Specification website (built from this repo) |
 | **This repository** | Normative source: `spec/`, `registry/`, `annexes/`, `conformance/` |
-| [github.com/odtis/core-impl](https://github.com/odtis/core-impl) | VenID reference implementation (private during Phase 3.2) |
+| [Core Impl](https://github.com/odtis/core-impl) | VenID reference implementation (private during Phase 3.2) |
 | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) | Research organization - informative books and papers (not vendored here) |
 
 **Sibling layout** (optional, for RI smokes and local site build):
@@ -91,7 +91,7 @@ See [Repository map](STRUCTURE.md).
 | Extended | Annex D | 23 | 20 | 25 |
 | **Total** | | **159** | **81** | **149** |
 
-Details: [profiles.yaml](registry/profiles.yaml) · [Profile comparison](https://odtis.org/site/PROFILES/)
+Details: [Profile definitions](registry/profiles.yaml) · [Profile comparison](https://odtis.org/site/PROFILES/)
 
 ---
 
@@ -150,7 +150,7 @@ Specification text in this repository is licensed under **[Creative Commons Attr
 
 ## Security
 
-Report specification or site security concerns to **info@odtis.org**. Do not open public issues for undisclosed vulnerabilities. See [SECURITY.md](SECURITY.md).
+Report specification or site security concerns to **info@odtis.org**. Do not open public issues for undisclosed vulnerabilities. See [Security](SECURITY.md).
 
 ---
 
