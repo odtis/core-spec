@@ -285,7 +285,7 @@ implementations:
     - ODTIS-0532
     - ODTIS-0533
     - ODTIS-0534
-    notes: venid-phase4-full target packaging (not production); CLAIM-VS-RUNTIME.md; run-phase4-claims-reconcile-checks.sh (#16); run-phase4-package.sh; GAP-CERT-L3-ATT deferred
+    notes: venid-phase4-full target packaging (not production); l3-auditor-evidence-pack-2026.yaml; run-l3-auditor-evidence-checks.sh (#17); GAP-CERT-L3-ATT in_progress
 
   - id: wallet-service
     module: services/wallet-service

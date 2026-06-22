@@ -93,9 +93,12 @@ These four items are **intentionally deferred**. They do not weaken ODTIS MUST r
 
 **Current evidence:**
 
-- Phase 4 statement: [Venid Phase4 Full](/implementation/statements/venid-phase4-full/)
+- Phase 4 statement: [Venid Phase4 Full](/implementation/statements/venid-phase4-full/) (target packaging — not production claim)
 - Internal dry-run: [L3 Audit Dry Run 2026 Q2 (YAML)](../evidence/phase4-conformance/l3-audit-dry-run-2026-Q2.yaml)
+- Auditor evidence pack: [L3 Auditor Evidence Pack 2026 (YAML)](../evidence/phase4-conformance/l3-auditor-evidence-pack-2026.yaml)
+- Engagement tracking: [L3 Auditor Engagement 2026 (YAML)](../evidence/phase4-conformance/l3-auditor-engagement-2026.yaml)
 - Package script: `conformance/run-phase4-package.sh`
+- Evidence smoke: `conformance/run-l3-auditor-evidence-checks.sh`
 
 **Resolution criteria:**
 

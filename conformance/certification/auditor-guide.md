@@ -131,6 +131,8 @@ For the FinnectOS VenID reference implementation:
 | [L3 audit checklist](L3-AUDIT-CHECKLIST.md) | Step-by-step checklist (sections A-F) |
 | [Phase 4 conformance statement](/implementation/statements/venid-phase4-full/conformance-statement/) | Declared Phase 4 L3-target statement |
 | [L3 Audit Dry Run 2026 Q2 (YAML)](/implementation/evidence/phase4-conformance/l3-audit-dry-run-2026-Q2.yaml) | Internal tabletop (not third-party) |
+| [L3 Auditor Evidence Pack 2026 (YAML)](/implementation/evidence/phase4-conformance/l3-auditor-evidence-pack-2026.yaml) | Index of artefacts for this engagement |
+| [L3 Auditor Engagement 2026 (YAML)](/implementation/evidence/phase4-conformance/l3-auditor-engagement-2026.yaml) | Engagement timeline (update when auditor named) |
 | [Deferred production track](/implementation/gaps/DEFERRED-TRACK/) | Production gaps to disclose |
 
 **Reproduce automated package:**

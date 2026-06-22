@@ -1,8 +1,9 @@
 audit_id: venid-phase4-l3-audit-dry-run-2026-Q2
-as_of: 2026-06-12
+as_of: 2026-06-22
 type: internal_tabletop
 deployment_phase: 4
-conformance_level: L3
+conformance_level: L3-target
+production_claim: false
 scope:
   profiles:
     - reference-architecture
@@ -18,8 +19,11 @@ scope:
     - E-Webhook
     - E-Signature
     - E-KYB
-  activation_note: All Extended modules implemented as sandbox partial (venid.*.active=false by default)
-statement_path: odtis/implementation/statements/venid-phase4-full/conformance-statement.yaml
+  activation_note: All Extended modules implemented as sandbox partial (venid.*.active=false by default); not production claims until published scope change
+statement_path: implementation/statements/venid-phase4-full/conformance-statement.yaml
+published_operational_statement: implementation/statements/venid-phase2-trust/conformance-statement.yaml
+claims_matrix: implementation/evidence/published-service-scope/claims-vs-runtime-2026.yaml
+auditor_evidence_pack: implementation/evidence/phase4-conformance/l3-auditor-evidence-pack-2026.yaml
 participants:
   - role: operator_security
     name: VenID platform team
@@ -36,9 +40,12 @@ findings:
     summary: Federation runtime implemented with route cache and suspended/expired agreement policies (P4-E01)
   - id: F-03
     severity: low
-    summary: Third-party Operator L3 attestation not yet executed; L3 target with internal dry-run only
+    summary: Third-party Operator L3 attestation not yet executed; L3-target packaging with internal dry-run only (GAP-CERT-L3-ATT)
   - id: F-04
     severity: informational
     summary: ODTIS-0006 anti-weakening checks pass via activation gates and LoA binding policies
+  - id: F-05
+    severity: informational
+    summary: L3 auditor evidence pack prepared for external engagement (#17); engagement tracking scheduled
 outcome: conditional_pass
-notes: Internal L3 dry-run for P4-E07; not a third-party audit. Re-run before production ODTIS Certified claim.
+notes: Internal L3 dry-run for P4-E07; not a third-party audit. External auditor uses l3-auditor-evidence-pack-2026.yaml.

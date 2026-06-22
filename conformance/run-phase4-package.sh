@@ -69,6 +69,7 @@ run_smoke "E-KYB (P4-E06)" bash conformance/run-ekyb-checks.sh
 run_smoke "E-Registry (P3-E07)" bash conformance/run-extended-eregistry-checks.sh
 run_smoke "Operator governance (P3-E01)" bash conformance/run-operator-governance-checks.sh
 run_smoke "Phase 4 claims reconcile (#16)" bash conformance/run-phase4-claims-reconcile-checks.sh
+run_smoke "L3 auditor evidence pack (#17)" bash conformance/run-l3-auditor-evidence-checks.sh
 
 EVIDENCE="$ROOT/implementation/evidence/phase4-conformance/l3-audit-dry-run-2026-Q2.yaml"
 if [[ -f "$EVIDENCE" ]]; then

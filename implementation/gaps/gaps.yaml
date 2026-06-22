@@ -32,9 +32,11 @@ gaps:
   odtis_id: ODTIS-0532
   summary: Third-party Operator L3 attestation for production ODTIS Certified claim
   priority: certification
-  status: deferred
+  status: in_progress
   backlog_epic: P4-E07
-  note: Phase 4 package and internal L3 dry-run complete; external auditor engagement pending
+  evidence_pack: implementation/evidence/phase4-conformance/l3-auditor-evidence-pack-2026.yaml
+  engagement: implementation/evidence/phase4-conformance/l3-auditor-engagement-2026.yaml
+  note: Evidence pack ready (#17); external auditor engagement scheduled; gap closes on attestation letter only
 
 # --- Closed (L2 sandbox evidence) ---
 - id: GAP-TN-0204

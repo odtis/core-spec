@@ -22,7 +22,7 @@ Resolution playbook: [Deferred production track](DEFERRED-TRACK.md)
 |--------|----------|---------|--------|---------|
 | GAP-TN-0217 | ODTIS-0217 | exchange-gateway | National TSA integration not in sandbox scope | P2-E06 |
 | GAP-TN-TEP | - | exchange-gateway | IETF informative track | - |
-| GAP-CERT-L3-ATT | ODTIS-0532 | conformance-publication | Third-party Operator L3 attestation pending | [P4-E07](../PHASED-BACKLOG.md#p4-e07-operator-l3-and-phase-4-statement-partial) |
+| GAP-CERT-L3-ATT | ODTIS-0532 | conformance-publication | Third-party L3 attestation — evidence pack ready, engagement scheduled (#17) | [P4-E07](../PHASED-BACKLOG.md#p4-e07-operator-l3-and-phase-4-statement-partial) |
 
 ---
 

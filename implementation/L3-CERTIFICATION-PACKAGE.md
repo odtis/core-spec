@@ -36,6 +36,8 @@ Honest claim today: **Phase 4 staging L3-target self-assessment** with internal 
 | Human-readable statement | [Phase 4 conformance statement](/implementation/statements/venid-phase4-full/conformance-statement/) |
 | L2 automated report | [L2 Report](/implementation/statements/venid-phase4-full/l2-report/) |
 | L3 internal dry-run | [L3 Audit Dry Run 2026 Q2 (YAML)](evidence/phase4-conformance/l3-audit-dry-run-2026-Q2.yaml) |
+| L3 auditor evidence pack | [L3 Auditor Evidence Pack 2026 (YAML)](evidence/phase4-conformance/l3-auditor-evidence-pack-2026.yaml) |
+| L3 engagement tracking | [L3 Auditor Engagement 2026 (YAML)](evidence/phase4-conformance/l3-auditor-engagement-2026.yaml) |
 | Extended anti-weakening | [Extended No Weakening 2026 (YAML)](evidence/phase4-conformance/extended-no-weakening-2026.yaml) |
 | Gap closure (L2 sandbox) | [Closure Report 2026 Q2 (YAML)](evidence/gap-closure/closure-report-2026-Q2.yaml) |
 | RI traceability | [RI surface map](RI-MAP.yaml) |
@@ -57,6 +59,9 @@ ODTIS_TARGET=https://YOUR_REALM ./conformance/run-phase4-package.sh
 
 # Gap closure regression (L2 sandbox evidence)
 ./conformance/run-gap-closure-checks.sh
+
+# L3 external auditor evidence pack readiness (#17)
+./conformance/run-l3-auditor-evidence-checks.sh
 
 # Documentation gates
 python3 scripts/validate-section-completeness.py

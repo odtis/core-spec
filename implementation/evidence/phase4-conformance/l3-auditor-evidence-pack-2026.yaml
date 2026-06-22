@@ -1,0 +1,63 @@
+# L3 external auditor evidence pack (#17 / GAP-CERT-L3-ATT / ODTIS-0532).
+# Machine-readable index for independent L3 attestation engagement.
+# Does NOT substitute third-party attestation.
+
+pack_id: venid-l3-auditor-evidence-pack-2026
+as_of: 2026-06-22
+gap_id: GAP-CERT-L3-ATT
+odtis_id: ODTIS-0532
+engagement_status: evidence_pack_ready
+external_auditor: pending
+production_claim: false
+
+scope_note: >
+  Operational published scope remains Phase 2 pilot. venid-phase4-full is L3-target
+  packaging for audit dry-runs — see claims-vs-runtime-2026.yaml.
+
+auditor_guides:
+  - conformance/certification/auditor-guide.md
+  - conformance/certification/L3-AUDIT-CHECKLIST.md
+  - implementation/L3-CERTIFICATION-PACKAGE.md
+
+conformance_statements:
+  operational:
+    - implementation/statements/venid-phase2-trust/conformance-statement.yaml
+    - implementation/statements/venid-phase3-operator/conformance-statement.yaml
+  target_packaging:
+    - implementation/statements/venid-phase4-full/conformance-statement.yaml
+
+l2_reports:
+  - implementation/statements/venid-phase2-trust/l2-report.md
+  - implementation/statements/venid-phase3-operator/l2-report.md
+  - implementation/statements/venid-phase4-full/l2-report.md
+
+traceability:
+  - implementation/RI-MAP.yaml
+  - implementation/evidence/published-service-scope/claims-vs-runtime-2026.yaml
+  - implementation/evidence/published-service-scope/staging-overlays-2026.yaml
+  - conformance/smoke-test-map.yaml
+
+phase4_evidence:
+  - implementation/evidence/phase4-conformance/l3-audit-dry-run-2026-Q2.yaml
+  - implementation/evidence/phase4-conformance/extended-no-weakening-2026.yaml
+  - implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+  - implementation/statements/venid-phase4-full/phase4-package.yaml
+
+operator_docs:
+  - ../core-impl/ven-identity-core/docs/operator/PUBLISHED-SERVICE-SCOPE.md
+  - ../core-impl/ven-identity-core/docs/operator/CLAIM-VS-RUNTIME.md
+  - ../core-impl/ven-identity-core/docs/operator/OPERATOR-MATURITY.md
+  - ../core-impl/ven-identity-core/docs/operator/REGULATOR-EXPORT.md
+
+reproduce_commands:
+  - conformance/run-phase4-package.sh
+  - conformance/run-phase4-claims-reconcile-checks.sh
+  - conformance/run-gap-closure-checks.sh
+  - conformance/run-l3-auditor-evidence-checks.sh
+
+deferred_for_attestation:
+  - GAP-CERT-L3-ATT
+  - GAP-TN-0217
+  - GAP-TN-0204
+
+engagement_tracking: implementation/evidence/phase4-conformance/l3-auditor-engagement-2026.yaml

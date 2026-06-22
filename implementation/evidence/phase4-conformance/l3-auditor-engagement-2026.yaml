@@ -1,0 +1,53 @@
+# L3 external auditor engagement tracking (#17 / GAP-CERT-L3-ATT).
+# Update when auditor is engaged; close gap in gaps.yaml only after attestation letter.
+
+engagement_id: venid-l3-external-audit-2026
+gap_id: GAP-CERT-L3-ATT
+odtis_id: ODTIS-0532
+status: scheduled
+as_of: 2026-06-22
+
+auditor:
+  name: null
+  accreditation: null
+  contact: null
+
+timeline:
+  evidence_pack_ready: 2026-06-22
+  engagement_requested: null
+  fieldwork_start: null
+  attestation_letter: null
+
+scope:
+  conformance_level: L3-target
+  deployment_phase: 4
+  environment: staging
+  production_claim: false
+  profiles:
+    - reference-architecture
+    - core-identity
+    - trust-network
+    - federation
+    - operator
+    - extended
+  published_operational_phase: 2
+  claims_matrix: implementation/evidence/published-service-scope/claims-vs-runtime-2026.yaml
+
+evidence_pack: implementation/evidence/phase4-conformance/l3-auditor-evidence-pack-2026.yaml
+
+checklist: conformance/certification/L3-AUDIT-CHECKLIST.md
+
+deliverables_expected:
+  - attestation_letter
+  - findings_register
+  - residual_risk_summary
+
+next_steps:
+  - Select accredited auditor or national conformity body
+  - Share l3-auditor-evidence-pack-2026.yaml and L3-CERTIFICATION-PACKAGE.md
+  - Auditor runs run-l3-auditor-evidence-checks.sh from clean checkout
+  - Publish attestation letter; update gaps.yaml status to closed
+
+notes: >
+  External engagement is process/certification work outside repository scope.
+  Evidence pack and smokes prepare the operator bundle; they do not claim ODTIS Certified.

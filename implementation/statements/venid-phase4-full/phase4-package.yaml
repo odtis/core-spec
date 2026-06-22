@@ -30,10 +30,14 @@ evidence:
   - implementation/statements/venid-phase4-full/conformance-statement.md
   - implementation/statements/venid-phase4-full/l2-report.md
   - implementation/evidence/phase4-conformance/l3-audit-dry-run-2026-Q2.yaml
+  - implementation/evidence/phase4-conformance/l3-auditor-evidence-pack-2026.yaml
+  - implementation/evidence/phase4-conformance/l3-auditor-engagement-2026.yaml
   - implementation/evidence/phase4-conformance/extended-no-weakening-2026.yaml
+  - implementation/evidence/published-service-scope/claims-vs-runtime-2026.yaml
 smoke:
-  - odtis/conformance/run-phase4-package.sh
-  - odtis/conformance/run-extended-no-weakening-checks.sh
+  - conformance/run-phase4-package.sh
+  - conformance/run-l3-auditor-evidence-checks.sh
+  - conformance/run-extended-no-weakening-checks.sh
 gaps:
   - GAP-TN-0204
   - GAP-TN-0217
