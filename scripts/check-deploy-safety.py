@@ -10,10 +10,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-BLOCKED_IPS = frozenset({"YOUR_EC2_PUBLIC_IP"})
+BLOCKED_IPS = frozenset({"34.227.196.69"})
 BLOCKED_PATH_FRAGMENTS = (
     "/Users/",
-    "your-deploy-key.pem",
+    "MvpKeyPair.pem",
     "manuelmerida/development",
 )
 
