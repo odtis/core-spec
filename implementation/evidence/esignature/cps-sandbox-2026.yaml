@@ -1,0 +1,11 @@
+id: venid-esignature-cps-sandbox-2026
+module: E-Signature
+document_type: Certification Practice Statement (sandbox)
+operator: VenID Sandbox
+status: partial
+tsp: VENID-OPERATOR-PKI
+key_ids:
+  - venid:operator:signing:001
+notes: >
+  Sandbox CPS for operator PKI signing keys used by signature-service.
+  Production deployments require formal CP/CPS under national TSP policy.

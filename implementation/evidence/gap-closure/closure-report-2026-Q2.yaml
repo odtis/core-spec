@@ -1,0 +1,33 @@
+closure_id: venid-gap-closure-2026-Q2
+as_of: 2026-06-15
+status: partial
+script: odtis/conformance/run-gap-closure-checks.sh
+closed_gaps:
+  - GAP-IC-0308
+  - GAP-IC-0315
+  - GAP-IC-0316
+  - GAP-IC-0317
+  - GAP-IC-0535
+  - GAP-TN-0223
+  - GAP-TN-0224
+  - GAP-TN-0225
+  - GAP-TN-0215
+  - GAP-TN-0216
+  - GAP-TN-0218
+  - GAP-TN-0219
+  - GAP-TN-0220
+  - GAP-TN-0528
+  - GAP-TN-0535
+  - GAP-IC-STMT
+  - GAP-OP-PH2-STMT
+  - GAP-OP-PH3-STMT
+  - GAP-OP-PH4-STMT
+  - GAP-OP-RI
+deferred_gaps:
+  - GAP-TN-0204
+  - GAP-TN-0217
+  - GAP-TN-TEP
+  - GAP-CERT-L3-ATT
+notes: >
+  Implementation gaps closed on static/unit L2 sandbox evidence.
+  Live mTLS, national TSA, IETF TEP, and third-party L3 attestation remain deferred.

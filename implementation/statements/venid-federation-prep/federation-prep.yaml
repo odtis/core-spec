@@ -1,0 +1,22 @@
+statement_id: venid-federation-prep
+title: VenID federation agreements prep (P3-E08)
+as_of: 2026-06-12
+deployment_phase: 3
+status: partial
+requirements:
+  - ODTIS-0401
+  - ODTIS-0402
+  - ODTIS-0403
+  - ODTIS-0404
+  - ODTIS-0405
+  - ODTIS-0406
+evidence:
+  - ven-trust-network/docs/operator/FEDERATION-AGREEMENTS.md
+  - ven-trust-network/services/trust-registry/src/main/resources/db/migration/V16__federation_agreements.sql
+  - ven-identity-core/api/regulator-api/src/main/java/ve/venid/identity/regulator/web/RegulatorController.java
+smoke:
+  - ven-trust-network/scripts/federation-agreements-check.sh
+  - odtis/conformance/run-federation-prep-checks.sh
+gaps:
+  - Live federated routing in production (Phase 4)
+  - Portal UI for agreement management

@@ -1,0 +1,20 @@
+<div class="md-copyright odtis-site-footer">
+  {% if config.extra.odtis_footer_links %}
+  <nav class="odtis-footer-nav" aria-label="Site links">
+    {% for link in config.extra.odtis_footer_links %}
+      {% if not loop.first %}<span class="odtis-footer-nav__sep" aria-hidden="true">|</span>{% endif %}
+      {% if link.url.startswith('http') %}
+      <a href="{{ link.url }}"{% if link.url.startswith('http') %} target="_blank" rel="noopener"{% endif %}>{{ link.name }}</a>
+      {% else %}
+      <a href="{{ base_url }}/{{ link.url }}">{{ link.name }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+  {% endif %}
+  {% set odtis_copyright = config.copyright or config.theme.get('copyright') %}
+  {% if odtis_copyright %}
+  <div class="md-copyright__highlight odtis-footer-legal">
+    {{ odtis_copyright }}
+  </div>
+  {% endif %}
+</div>

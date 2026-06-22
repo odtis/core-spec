@@ -1,0 +1,30 @@
+# Profile manifest: reference-architecture
+# Generated - do not edit by hand; run build-conformance-manifest.py
+
+profile_id: reference-architecture
+requirement_count: 10
+test_count: 10
+coverage_pct: 100.0
+missing_total: 0
+
+tests:
+  - path: conformance/tests/reference-architecture/test_applicable_tests_required.md
+    requirements: [ODTIS-0010]
+  - path: conformance/tests/reference-architecture/test_extended_no_weakening.md
+    requirements: [ODTIS-0006]
+  - path: conformance/tests/reference-architecture/test_federation_requires_trust_network.md
+    requirements: [ODTIS-0002]
+  - path: conformance/tests/reference-architecture/test_layer2_requires_layer1.md
+    requirements: [ODTIS-0001]
+  - path: conformance/tests/reference-architecture/test_minimal_claim_no_implied_profiles.md
+    requirements: [ODTIS-0009]
+  - path: conformance/tests/reference-architecture/test_profile_declaration_complete.md
+    requirements: [ODTIS-0003]
+  - path: conformance/tests/reference-architecture/test_profile_dependency_chain.md
+    requirements: [ODTIS-0004]
+  - path: conformance/tests/reference-architecture/test_prohibited_claims.md
+    requirements: [ODTIS-0007]
+  - path: conformance/tests/reference-architecture/test_statement_minimum_fields.md
+    requirements: [ODTIS-0008]
+  - path: conformance/tests/reference-architecture/test_version_binding.md
+    requirements: [ODTIS-0005]

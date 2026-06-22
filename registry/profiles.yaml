@@ -1,0 +1,151 @@
+# ODTIS conformance profiles (draft)
+#
+# conformance_tests: generated manifest index under conformance/profiles/{id}/
+# Executable procedure stubs: conformance/tests/{id}/ (linked from registry requirements)
+
+spec_version: "0.9.0-draft"
+
+profiles:
+  - id: reference-architecture
+    title: Reference Architecture
+    status: draft
+    mandatory_sections:
+      - "01-scope-conformance"
+    requirement_prefixes:
+      - "ODTIS-00"
+    domains:
+      - ODTIS-0000
+    conformance_tests: conformance/profiles/reference-architecture/
+    description: >
+      Two-layer VenID model, profile composition rules, version binding, and conformance claim structure.
+
+  - id: core-identity
+    title: Core Identity
+    status: draft
+    depends_on:
+      - reference-architecture
+    mandatory_sections:
+      - "02-terminology-loa"
+      - "03-identity-services"
+      - "05-consent-privacy"
+    optional_sections:
+      - "03-identity-services#3.6"
+    requirement_prefixes:
+      - "ODTIS-01"
+      - "ODTIS-03"
+    exclude_requirement_ids:
+      - "ODTIS-0104"
+      - "ODTIS-0106"
+      - "ODTIS-0340"
+      - "ODTIS-0341"
+      - "ODTIS-0342"
+      - "ODTIS-0343"
+      - "ODTIS-0344"
+      - "ODTIS-0349"
+      - "ODTIS-0350"
+      - "ODTIS-0351"
+      - "ODTIS-0352"
+      - "ODTIS-0353"
+      - "ODTIS-0354"
+      - "ODTIS-0355"
+      - "ODTIS-0356"
+      - "ODTIS-0357"
+      - "ODTIS-0358"
+      - "ODTIS-0359"
+      - "ODTIS-0360"
+      - "ODTIS-0361"
+      - "ODTIS-0362"
+      - "ODTIS-0363"
+      - "ODTIS-0364"
+      - "ODTIS-0365"
+    domains:
+      - ODTIS-0001
+      - ODTIS-0003
+    conformance_tests: conformance/profiles/core-identity/
+    description: >
+      IdP, subject registry, verification and consent services for a single operator.
+
+  - id: trust-network
+    title: Trust Network
+    status: draft
+    depends_on:
+      - core-identity
+    mandatory_sections:
+      - "04-trust-network"
+    requirement_prefixes:
+      - "ODTIS-02"
+    include_requirement_ids:
+      - "ODTIS-0106"
+    domains:
+      - ODTIS-0002
+    conformance_tests: conformance/profiles/trust-network/
+    description: >
+      Exchange gateway, partner discovery, and service catalog between operators.
+
+  - id: federation
+    title: Federation
+    status: draft
+    depends_on:
+      - trust-network
+    mandatory_sections:
+      - "06-federation"
+    requirement_prefixes:
+      - "ODTIS-04"
+    domains:
+      - ODTIS-0004
+    conformance_tests: conformance/profiles/federation/
+    description: >
+      Bilateral cross-network trust and verification.
+
+  - id: operator
+    title: Operator
+    status: draft
+    depends_on:
+      - reference-architecture
+      - core-identity
+    mandatory_sections:
+      - "07-operator-governance"
+      - "08-security"
+      - "09-audit-events"
+      - "10-deployment-profiles"
+    requirement_prefixes:
+      - "ODTIS-05"
+    domains:
+      - ODTIS-0005
+    conformance_tests: conformance/profiles/operator/
+    description: >
+      Platform operator: PKI, security baseline, audit, and deployment obligations.
+
+  - id: extended
+    title: Extended
+    status: draft
+    depends_on:
+      - reference-architecture
+      - core-identity
+    domains:
+      - ODTIS-0003
+    requirement_prefixes: []
+    include_requirement_ids:
+      - "ODTIS-0104"
+    annex: "D-extended-profiles"
+    sub_modules:
+      - E-Wallet
+      - E-Registry
+      - E-Inclusion
+      - E-Webhook
+      - E-Signature
+      - E-KYB
+    conformance_tests: conformance/profiles/extended/
+    description: >
+      Optional modules: wallet, webhooks, assisted onboarding, KYB, national registry.
+
+levels:
+  - id: L1
+    label: Laboratory
+    description: Self-declared; automated tests in CI sandbox only.
+  - id: L2
+    label: Staging
+    description: Full profile tests + documented operator policy.
+  - id: L3
+    label: Production
+    description: L2 + third-party audit or regulator attestation (Phase 4).

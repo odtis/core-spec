@@ -1,0 +1,73 @@
+# ODTIS Annex D - Extended profile index
+
+spec_version: "0.9.0-draft"
+profile: extended
+source: "P18 3.3.3, 7.4-7.5, ODTIS 1.6.5, 10"
+
+files:
+sub_modules: sub-modules.yaml
+activation: activation.yaml
+requirements: extended-requirements.yaml
+
+summary:
+sub_module_count: 6
+registry_requirements: 11
+draft_requirements: 17
+preview_requirements: 2
+
+modules:
+- id: E-Wallet
+registry_ids: [ODTIS-0340, ODTIS-0341, ODTIS-0342, ODTIS-0343, ODTIS-0524]
+draft_ids: []
+min_phase: 2
+conformance_tests:
+- conformance/tests/extended/test_ewallet_holder_vp.md
+
+- id: E-Registry
+registry_ids: [ODTIS-0344]
+draft_ids: [ODTIS-0349, ODTIS-0350, ODTIS-0351, ODTIS-0352, ODTIS-0353]
+min_phase: 3
+conformance_tests:
+- conformance/tests/extended/test_eregistry_national_loa.md
+
+- id: E-Inclusion
+registry_ids: []
+draft_ids: [ODTIS-0354, ODTIS-0355, ODTIS-0356, ODTIS-0357]
+min_phase: 2
+conformance_tests:
+- conformance/tests/extended/test_einclusion_assisted_consent.md
+
+- id: E-Webhook
+registry_ids: [ODTIS-0531]
+draft_ids: [ODTIS-0358, ODTIS-0359, ODTIS-0360]
+min_phase: 2
+openapi_pending: "Annex A verification-api /v1/rp/webhooks"
+conformance_tests:
+- conformance/tests/extended/test_ewebhook_hmac_delivery.md
+
+- id: E-Signature
+registry_ids: []
+draft_ids: [ODTIS-0361, ODTIS-0362, ODTIS-0363]
+min_phase: 3
+conformance_tests:
+- conformance/tests/extended/test_esignature_loa_binding.md
+
+- id: E-KYB
+registry_ids: []
+draft_ids: [ODTIS-0364, ODTIS-0365]
+min_phase: 3
+status: preview
+conformance_tests: []
+
+declaration_fields:
+conformance_statement:
+- profiles
+- extended_modules
+- deployment_phase
+extended_modules_enum:
+- E-Wallet
+- E-Registry
+- E-Inclusion
+- E-Webhook
+- E-Signature
+- E-KYB

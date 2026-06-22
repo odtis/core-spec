@@ -1,0 +1,143 @@
+# ODTIS Annex C - External standards catalog
+# Informative reference list; ODTIS does not claim certification under these frameworks.
+
+spec_version: "0.9.0-draft"
+source: "P18 2, normativa-estandares-referencia.md"
+
+standards:
+- id: STD-RFC2119
+title: "Key words for use in RFCs to Indicate Requirement Levels"
+reference: "RFC 2119 / RFC 8174"
+uri: "https://www.rfc-editor.org/rfc/rfc2119"
+domain: meta
+
+- id: STD-OAUTH2
+title: "OAuth 2.0 Authorization Framework"
+reference: "RFC 6749"
+uri: "https://www.rfc-editor.org/rfc/rfc6749"
+domain: federation
+
+- id: STD-OIDC-CORE
+title: "OpenID Connect Core 1.0"
+reference: "OIDC Core"
+uri: "https://openid.net/specs/openid-connect-core-1_0.html"
+domain: federation
+
+- id: STD-OIDC-DISC
+title: "OpenID Connect Discovery 1.0"
+reference: "OIDC Discovery"
+uri: "https://openid.net/specs/openid-connect-discovery-1_0.html"
+domain: federation
+
+- id: STD-PKCE
+title: "Proof Key for Code Exchange"
+reference: "RFC 7636"
+uri: "https://www.rfc-editor.org/rfc/rfc7636"
+domain: federation
+
+- id: STD-JWT
+title: "JSON Web Token"
+reference: "RFC 7519"
+uri: "https://www.rfc-editor.org/rfc/rfc7519"
+domain: federation
+
+- id: STD-TLS
+title: "Transport Layer Security"
+reference: "TLS 1.2+ (RFC 5246 / 8446)"
+uri: "https://datatracker.ietf.org/doc/html/rfc8446"
+domain: transport
+
+- id: STD-WEBAUTHN
+title: "Web Authentication (WebAuthn)"
+reference: "W3C WebAuthn Level 2"
+uri: "https://www.w3.org/TR/webauthn-2/"
+domain: authentication
+
+- id: STD-NIST-800-63-3
+title: "Digital Identity Guidelines"
+reference: "NIST SP 800-63-3"
+uri: "https://pages.nist.gov/800-63-3/"
+domain: assurance
+
+- id: STD-NIST-800-207
+title: "Zero Trust Architecture"
+reference: "NIST SP 800-207"
+uri: "https://csrc.nist.gov/publications/detail/sp/800-207/final"
+domain: security
+
+- id: STD-XROAD
+title: "X-Road Security Architecture"
+reference: "X-Road SS / central components"
+uri: "https://docs.x-road.global/"
+domain: exchange
+
+- id: STD-EIDAS
+title: "eIDAS Regulation (informative)"
+reference: "EU 910/2014; eIDAS 2.0"
+uri: "https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation"
+domain: assurance
+note: "Design alignment only; no EU conformity claim"
+
+- id: STD-EUDI-ARF
+title: "EUDI Wallet Architecture Reference Framework"
+reference: "European Commission ARF"
+uri: "https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework"
+domain: wallet
+note: "Informative role mapping for Extended E-Wallet"
+
+- id: STD-OID4VP
+title: "OpenID for Verifiable Presentations"
+reference: "OID4VP"
+uri: "https://openid.net/specs/openid-4-verifiable-presentations-1_0.html"
+domain: wallet
+
+- id: STD-OID4VCI
+title: "OpenID for Verifiable Credential Issuance"
+reference: "OID4VCI"
+uri: "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html"
+domain: wallet
+
+- id: STD-SD-JWT
+title: "Selective Disclosure for JWTs"
+reference: "SD-JWT VC"
+uri: "https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/"
+domain: wallet
+
+- id: STD-PKI-RFC5280
+title: "X.509 Public Key Infrastructure"
+reference: "RFC 5280; CRL/OCSP practice"
+uri: "https://www.rfc-editor.org/rfc/rfc5280"
+domain: pki
+
+- id: STD-OWASP
+title: "OWASP Application Security"
+reference: "OWASP Top 10 / ASVS (informative baseline)"
+uri: "https://owasp.org/www-project-top-ten/"
+domain: security
+
+- id: STD-ISO27001
+title: "Information security management"
+reference: "ISO/IEC 27001 (operator target)"
+uri: "https://www.iso.org/standard/27001"
+domain: operator
+note: "Phase 3-4 operator maturity target; not ODTIS conformance by itself"
+
+- id: STD-GDPR
+title: "General Data Protection Regulation (informative)"
+reference: "EU GDPR principles"
+uri: "https://gdpr-info.eu/"
+domain: privacy
+note: "Adopter legal layer; ODTIS encodes technical privacy controls"
+
+- id: STD-ODTIS-PLATFORM
+title: "VenID platform and operator model"
+reference: "P01, P10, DS-07, Book 2"
+uri: null
+domain: platform
+note: "Internal reference architecture; no external standard equivalent"
+
+coverage_levels:
+full: "ODTIS requirement implements the cited standard construct without material gaps"
+partial: "ODTIS subset or operator policy completes the standard requirement"
+informative: "Design alignment or disclosure aid; not a conformity claim"
+platform: "Operator or deployment rule without direct external standard clause"

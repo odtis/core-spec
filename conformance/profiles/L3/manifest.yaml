@@ -1,0 +1,10 @@
+# Profile manifest: L3
+# Generated - do not edit by hand; run build-conformance-manifest.py
+
+profile_id: L3
+requirement_count: 0
+test_count: 0
+coverage_pct: 0
+missing_total: 0
+
+tests:

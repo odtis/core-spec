@@ -1,0 +1,46 @@
+# ODTIS certification program (machine-readable)
+# See governance/CERTIFICATION.md
+
+program_version: "0.9.0-draft"
+mark: "ODTIS Certified"
+self_cert_allowed: true
+third_party_l3_required_for_mark: true
+
+levels:
+  L1:
+    label: Laboratory
+    automated: true
+    script: conformance/run.sh
+  L2:
+    label: Staging
+    requires:
+      - L1 PASS
+      - l2/run_l2.py with --target
+      - conformance-statement.yaml
+  L3:
+    label: Production
+    requires:
+      - L2 PASS
+      - third_party_attestation
+
+profiles:
+  - core-identity
+  - trust-network
+  - federation
+  - operator
+  - extended
+
+extended_sub_modules:
+  - E-Wallet
+  - E-Registry
+  - E-Inclusion
+  - E-Webhook
+  - E-Signature
+  - E-KYB
+
+suite_artifacts:
+  manifest: conformance/manifest.yaml
+  l2_runner: conformance/l2/run_l2.py
+  statement_template: conformance/templates/conformance-statement.yaml
+
+public_list: conformance/certification/certified-products.yaml

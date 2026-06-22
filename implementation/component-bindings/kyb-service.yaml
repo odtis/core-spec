@@ -1,0 +1,27 @@
+# Normative binding: E-KYB service (VenID reference implementation)
+
+component_id: kyb-service
+ri_map_surface: kyb-service
+repository: ven-identity-core
+module_path: services/kyb-service
+profile: extended
+backlog_epic: P4-E06
+status: partial
+
+summary: >
+  Legal-entity verification channel separate from natural-person identity,
+  with optional representative linkage to verified subjects before B2B release.
+
+implementation_notes: >
+  KybController; LegalEntityRegistry; KybVerificationService;
+  KybRepresentativeLinkPolicy; entity verification distinct from subject_id LoA path.
+
+smoke_script: conformance/run-ekyb-checks.sh
+
+odtis_ids:
+  - ODTIS-0364
+  - ODTIS-0365
+
+evidence:
+  - implementation/statements/venid-phase4-full/l2-report.md
+  - ven-identity-core/docs/operator/E-KYB.md

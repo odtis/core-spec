@@ -1,0 +1,287 @@
+# Machine-readable implementation gaps (reference stack)
+# Sync with KNOWN-GAPS.md - do not weaken ODTIS MUSTs here
+
+spec_version: "0.9.0-draft"
+updated: "2026-06-12"
+
+gaps:
+# --- Deferred (production / external track) ---
+- id: GAP-TN-0204
+  implementation: ven-trust-network
+  surface: exchange-gateway
+  odtis_id: ODTIS-0204
+  summary: Live mTLS gateway-to-gateway interop test pending
+  priority: L2
+  status: deferred
+  backlog_epic: P2-E01
+  conformance_test: conformance/tests/trust-network/test_gateway_mtls.md
+  note: Static gateway checks pass; live bilateral mTLS handshake requires staging stack
+
+- id: GAP-TN-0217
+  implementation: ven-trust-network
+  surface: exchange-gateway
+  odtis_id: ODTIS-0217
+  summary: Trusted timestamping (TSA) not implemented
+  priority: L2
+  status: deferred
+  backlog_epic: P2-E06
+  note: Message timestamp window exists; national TSA integration deferred to production track
+
+- id: GAP-TN-TEP
+  implementation: ven-trust-network
+  surface: exchange-gateway
+  odtis_id: null
+  summary: TEP protocol not yet extracted to standalone IETF draft
+  priority: ietf-track
+  status: deferred
+  backlog_epic: null
+  note: Informative track; not an ODTIS MUST waiver
+
+- id: GAP-CERT-L3-ATT
+  implementation: odtis
+  surface: conformance-publication
+  odtis_id: ODTIS-0532
+  summary: Third-party Operator L3 attestation for production ODTIS Certified claim
+  priority: certification
+  status: deferred
+  backlog_epic: P4-E07
+  note: Phase 4 package and internal L3 dry-run complete; external auditor engagement pending
+
+# --- Closed (L2 sandbox evidence) ---
+- id: GAP-IC-0308
+  implementation: ven-identity-core
+  surface: keycloak-oidc-idp
+  odtis_id: ODTIS-0308
+  summary: RP-initiated logout configured in realm export
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P1-E02
+  conformance_test: conformance/tests/core-identity/test_rp_initiated_logout.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+  note: scripts/oidc-static-check.sh + oidc-sandbox-check.sh when stack up
+
+- id: GAP-IC-0315
+  implementation: ven-identity-core
+  surface: verification-api
+  odtis_id: ODTIS-0315
+  summary: Machine-client auth enforced on /verify
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P1-E04
+  conformance_test: conformance/tests/core-identity/test_verification_client_auth.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+  note: MachineClientPolicyTest + VerificationServiceTest
+
+- id: GAP-IC-0316
+  implementation: ven-identity-core
+  surface: verification-api
+  odtis_id: ODTIS-0316
+  summary: Verify response includes verified, status, assurance_level
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P1-E04
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-IC-0317
+  implementation: ven-identity-core
+  surface: verification-api
+  odtis_id: ODTIS-0317
+  summary: Consent-scope enforcement returns 403 without attributes
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P1-E04
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-IC-0535
+  implementation: ven-identity-core
+  surface: verification-api
+  odtis_id: ODTIS-0535
+  summary: Fail-closed consent/LoA denial without attribute leakage
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E08
+  conformance_test: conformance/tests/operator/test_fail_closed_denial_paths.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-IC-STMT
+  implementation: ven-identity-core
+  surface: conformance-publication
+  odtis_id: ODTIS-0534
+  summary: Conformance statements published through Phase 4 package
+  priority: certification
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P4-E07
+  evidence: implementation/statements/venid-phase4-full/conformance-statement.yaml
+
+- id: GAP-OP-PH2-STMT
+  implementation: odtis
+  surface: conformance-publication
+  odtis_id: ODTIS-0532
+  summary: Phase 2 staging statement package published
+  priority: certification
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E09
+  evidence: implementation/statements/venid-phase2-trust/conformance-statement.yaml
+
+- id: GAP-OP-PH3-STMT
+  implementation: odtis
+  surface: conformance-publication
+  odtis_id: ODTIS-0532
+  summary: Phase 3 operator statement package published
+  priority: certification
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P3-E09
+  evidence: implementation/statements/venid-phase3-operator/conformance-statement.yaml
+
+- id: GAP-OP-PH4-STMT
+  implementation: odtis
+  surface: conformance-publication
+  odtis_id: ODTIS-0532
+  summary: Phase 4 full-mandate L3-target statement published
+  priority: certification
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P4-E07
+  evidence: implementation/statements/venid-phase4-full/conformance-statement.yaml
+  note: Third-party attestation tracked separately as GAP-CERT-L3-ATT
+
+- id: GAP-TN-0223
+  implementation: ven-trust-network
+  surface: exchange-gateway-sender
+  odtis_id: ODTIS-0223
+  summary: Multi-peer sender routing with X-Exchange-Service
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E04
+  conformance_test: conformance/tests/trust-network/test_sender_multi_peer_routing.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-TN-0224
+  implementation: ven-trust-network
+  surface: exchange-gateway
+  odtis_id: ODTIS-0224
+  summary: Fail-closed grant denial without implicit zone trust
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E03
+  conformance_test: conformance/tests/trust-network/test_grant_fail_closed.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-TN-0225
+  implementation: ven-trust-network
+  surface: trust-registry
+  odtis_id: ODTIS-0225
+  summary: Audit metadata store must not persist authoritative payloads
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E05
+  conformance_test: conformance/tests/trust-network/test_no_payload_centralization.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-TN-0215
+  implementation: ven-trust-network
+  surface: trust-authority
+  odtis_id: ODTIS-0215
+  summary: Documented PKI hierarchy for partner certificates
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E06
+  conformance_test: conformance/tests/trust-network/test_odtis_0215.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-TN-0216
+  implementation: ven-trust-network
+  surface: trust-service
+  odtis_id: ODTIS-0216
+  summary: CRL validation before exchange; revoked certs rejected
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E06
+  conformance_test: conformance/tests/trust-network/test_cert_revocation.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+  note: CrlCheckService + TrustValidationServiceTest; enable CRL in production
+
+- id: GAP-TN-0218
+  implementation: ven-trust-network
+  surface: trust-authority
+  odtis_id: ODTIS-0218
+  summary: PKI ceremony documentation maintained by DTI operator
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E06
+  conformance_test: conformance/tests/trust-network/test_odtis_0218.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-TN-0219
+  implementation: ven-trust-network
+  surface: exchange-gateway
+  odtis_id: ODTIS-0219
+  summary: Exchange audit events with correlation IDs for regulator export
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E07
+  conformance_test: conformance/tests/trust-network/test_odtis_0219.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-TN-0220
+  implementation: ven-trust-network
+  surface: exchange-gateway
+  odtis_id: ODTIS-0220
+  summary: Published gateway availability SLA aligned with RNF-07
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E07
+  conformance_test: conformance/tests/trust-network/test_odtis_0220.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-TN-0528
+  implementation: ven-trust-network
+  surface: exchange-gateway
+  odtis_id: ODTIS-0528
+  summary: Auditable exchange events linking gateway grant evaluation via trace_id
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E07
+  conformance_test: conformance/tests/trust-network/test_exchange_audit_events.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-TN-0535
+  implementation: ven-trust-network
+  surface: exchange-gateway
+  odtis_id: ODTIS-0535
+  summary: Exchange grant/auth denial fail-closed without implicit zone trust
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P2-E08
+  conformance_test: conformance/tests/operator/test_fail_closed_denial_paths.md
+  evidence: implementation/evidence/gap-closure/closure-report-2026-Q2.yaml
+
+- id: GAP-OP-RI
+  implementation: odtis
+  surface: ri-map
+  odtis_id: ODTIS-0536
+  summary: Extended module surfaces mapped in RI-MAP for Phase 4
+  priority: L2
+  status: closed
+  closed_at: "2026-06-12"
+  backlog_epic: P4-E07
+  evidence: implementation/RI-MAP.yaml
+  note: Fraud dashboard remains informative/deferred outside ODTIS MUST scope

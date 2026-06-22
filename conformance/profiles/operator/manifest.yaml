@@ -1,0 +1,82 @@
+# Profile manifest: operator
+# Generated - do not edit by hand; run build-conformance-manifest.py
+
+profile_id: operator
+requirement_count: 36
+test_count: 36
+coverage_pct: 100.0
+missing_total: 0
+
+tests:
+  - path: conformance/tests/operator/test_audit_export_pii_minimized.md
+    requirements: [ODTIS-0530]
+  - path: conformance/tests/operator/test_conformance_statement_dual_format.md
+    requirements: [ODTIS-0534]
+  - path: conformance/tests/operator/test_event_envelope.md
+    requirements: [ODTIS-0529]
+  - path: conformance/tests/operator/test_fail_closed_denial_paths.md
+    requirements: [ODTIS-0535]
+  - path: conformance/tests/operator/test_fraud_metrics.md
+    requirements: [ODTIS-0525]
+  - path: conformance/tests/operator/test_implementation_traceability_map.md
+    requirements: [ODTIS-0536]
+  - path: conformance/tests/operator/test_internal_services_not_public.md
+    requirements: [ODTIS-0518]
+  - path: conformance/tests/operator/test_liability_documentation.md
+    requirements: [ODTIS-0516]
+  - path: conformance/tests/operator/test_no_false_phase4_claims.md
+    requirements: [ODTIS-0506]
+  - path: conformance/tests/operator/test_odtis_0502.md
+    requirements: [ODTIS-0502]
+  - path: conformance/tests/operator/test_odtis_0503.md
+    requirements: [ODTIS-0503]
+  - path: conformance/tests/operator/test_odtis_0505.md
+    requirements: [ODTIS-0505]
+  - path: conformance/tests/operator/test_odtis_0508.md
+    requirements: [ODTIS-0508]
+  - path: conformance/tests/operator/test_odtis_0509.md
+    requirements: [ODTIS-0509]
+  - path: conformance/tests/operator/test_odtis_0510.md
+    requirements: [ODTIS-0510]
+  - path: conformance/tests/operator/test_odtis_0511.md
+    requirements: [ODTIS-0511]
+  - path: conformance/tests/operator/test_odtis_0512.md
+    requirements: [ODTIS-0512]
+  - path: conformance/tests/operator/test_odtis_0513.md
+    requirements: [ODTIS-0513]
+  - path: conformance/tests/operator/test_odtis_0515.md
+    requirements: [ODTIS-0515]
+  - path: conformance/tests/operator/test_odtis_0520.md
+    requirements: [ODTIS-0520]
+  - path: conformance/tests/operator/test_odtis_0522.md
+    requirements: [ODTIS-0522]
+  - path: conformance/tests/operator/test_odtis_0524.md
+    requirements: [ODTIS-0524]
+  - path: conformance/tests/operator/test_odtis_0531.md
+    requirements: [ODTIS-0531]
+  - path: conformance/tests/operator/test_operator_subject_admin.md
+    requirements: [ODTIS-0504]
+  - path: conformance/tests/operator/test_phase1_no_extended_claims.md
+    requirements: [ODTIS-0533]
+  - path: conformance/tests/operator/test_phase_declaration.md
+    requirements: [ODTIS-0532]
+  - path: conformance/tests/operator/test_published_service_scope.md
+    requirements: [ODTIS-0501]
+  - path: conformance/tests/operator/test_regulator_export.md
+    requirements: [ODTIS-0514]
+  - path: conformance/tests/operator/test_secrets_manager.md
+    requirements: [ODTIS-0519]
+  - path: conformance/tests/operator/test_cp_cps_published.md
+    requirements: [ODTIS-0507]
+  - path: conformance/tests/trust-network/test_per_request_partner_verify.md
+    requirements: [ODTIS-0517]
+  - path: conformance/tests/core-identity/test_owasp_baseline.md
+    requirements: [ODTIS-0521]
+  - path: conformance/tests/core-identity/test_liveness_high_loa.md
+    requirements: [ODTIS-0523]
+  - path: conformance/tests/core-identity/test_identity_audit_events.md
+    requirements: [ODTIS-0526]
+  - path: conformance/tests/core-identity/test_consent_audit_events.md
+    requirements: [ODTIS-0527]
+  - path: conformance/tests/trust-network/test_exchange_audit_events.md
+    requirements: [ODTIS-0528]

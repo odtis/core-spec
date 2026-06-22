@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="ODTIS - Open Digital Trust Infrastructure Specification">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a237e"/>
+      <stop offset="100%" stop-color="#3949ab"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="56" y="56" width="88" height="88" rx="16" fill="#ffffff" opacity="0.12"/>
+  <text x="72" y="118" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">OD</text>
+  <text x="180" y="108" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="700">ODTIS</text>
+  <text x="72" y="210" fill="#e8eaf6" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="400">Open Digital Trust Infrastructure Specification</text>
+  <text x="72" y="280" fill="#c5cae9" font-family="Inter, Arial, sans-serif" font-size="24">Vendor-neutral identity, trust networks, and conformance (L1 / L2 / L3)</text>
+  <text x="72" y="560" fill="#9fa8da" font-family="Inter, Arial, sans-serif" font-size="22">odtis.org</text>
+</svg>

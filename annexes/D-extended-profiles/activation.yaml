@@ -1,0 +1,40 @@
+# ODTIS Annex D - Deployment phase activation matrix
+# Aligns with spec/10-deployment-profiles/SPEC.md Table 10-1, 10-3
+
+spec_version: "0.9.0-draft"
+
+phases:
+- phase: 1
+name: Pilot / sandbox
+extended_in_production: forbidden
+reference: ODTIS-0533
+allowed_lab_modules: [E-Wallet, E-Webhook]
+
+- phase: 2
+name: Production scale-up
+extended_in_production: optional
+typical_modules: [E-Wallet, E-Webhook, E-Inclusion]
+notes: "Pilot Extended only with explicit conformance scope"
+
+- phase: 3
+name: National / multi-region
+extended_in_production: optional
+typical_modules: [E-Registry, E-Wallet, E-Inclusion, E-Webhook, E-Signature]
+
+- phase: 4
+name: Full operator mandate
+extended_in_production: optional
+typical_modules: [E-Wallet, E-Registry, E-Inclusion, E-Webhook, E-Signature, E-KYB]
+
+module_phase_minimum:
+E-Wallet: 2
+E-Webhook: 2
+E-Inclusion: 2
+E-Registry: 3
+E-Signature: 3
+E-KYB: 3
+
+trust_network_dependency:
+E-Signature: optional
+E-Registry: optional
+default: core-identity-only

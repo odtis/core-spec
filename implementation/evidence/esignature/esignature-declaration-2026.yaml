@@ -1,0 +1,13 @@
+id: venid-esignature-declaration-2026
+module: E-Signature
+phase: 4
+declared_at: 2026-06-12
+operator: VenID Sandbox
+status: partial
+odtis_requirements:
+  - ODTIS-0361
+  - ODTIS-0362
+  - ODTIS-0363
+notes: >
+  Operator PKI signing via signature-service. LoA-bound signatures,
+  trusted key registry, auditable sign/verify events.

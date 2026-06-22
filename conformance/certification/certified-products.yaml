@@ -1,0 +1,14 @@
+# Public list of ODTIS conformant products
+# Submit via PR with conformance-statement.yaml evidence
+
+spec_version: "0.9.0-draft"
+products: []
+
+# Example entry:
+#  - name: Example IdP
+#    vendor: Example Org
+#    odtis_version: "0.9.0-draft"
+#    profiles: [core-identity]
+#    level: L2
+#    statement_url: https://example.com/odtis-conformance.yaml
+#    verified_date: 2026-06-12

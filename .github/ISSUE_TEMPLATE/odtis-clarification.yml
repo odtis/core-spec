@@ -1,0 +1,29 @@
+name: ODTIS clarification
+description: Non-normative clarification or editorial fix for ODTIS 0.9.0-draft
+title: "[ODTIS clarify] "
+labels: ["odtis", "clarification"]
+body:
+  - type: markdown
+    value: |
+      For normative MUST changes use **ODTIS RFC** template instead.
+      See `governance/FEEDBACK.md`.
+  - type: input
+    id: odtis-id
+    attributes:
+      label: ODTIS ID or section
+      placeholder: "e.g. ODTIS-3.1.8 or spec/03-identity-services §3.3"
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Current text / behavior
+      description: What is unclear or ambiguous?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed clarification
+    validations:
+      required: true

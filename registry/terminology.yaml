@@ -1,0 +1,152 @@
+# ODTIS normative terminology
+
+spec_version: "0.9.0-draft"
+section: "02-terminology-loa"
+
+terms:
+  - id: dti
+    term: Digital Trust Infrastructure (DTI)
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Combined Layer 1 identity services and Layer 2 trust network operated under operator governance.
+
+  - id: layer-1
+    term: Layer 1 (Identity Product)
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Citizen- and RP-facing identity lifecycle: registration, proofing, LoA, IdP, consent, verification API.
+
+  - id: layer-2
+    term: Layer 2 (Trust Network)
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Institutional exchange: partners, catalog, gateway, PKI, grants, audit.
+
+  - id: subject
+    term: Subject
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Natural or legal person with stable platform identifier (subject_id) registered and managed by Core Identity.
+
+  - id: relying-party
+    term: Relying Party (RP)
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Registered application or organization consuming identity assertions or verification results.
+
+  - id: operator
+    term: DTI Operator (Operator)
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Entity operating declared ODTIS profiles, publishing operator policy, PKI, and audit obligations.
+
+  - id: loa
+    term: Level of Assurance (LoA)
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Ordinal proof strength: low, medium, high, or national (national requires E-Registry).
+
+  - id: active-loa
+    term: Active LoA
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Single LoA currently assigned to a subject; exposed via assurance_level claim.
+
+  - id: proofing
+    term: Proofing
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Collection and validation of identity evidence before LoA assignment or upgrade.
+
+  - id: operator-policy
+    term: Operator policy
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Published criteria for proofing, LoA, authentication, mappings, and retention; must not weaken ODTIS MUST.
+
+  - id: exchange-gateway
+    term: Exchange Gateway
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Sole mTLS entry for partner exchange traffic on a trust network node.
+
+  - id: service-grant
+    term: Service grant
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Authorization binding caller partner, provider partner, and catalogued service.
+
+  - id: partner
+    term: Partner
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      Institution registered on trust network with identity distinct from subject identity.
+
+  - id: ial
+    term: Identity Assurance Level (IAL)
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      NIST SP 800-63-3 identity proofing category; mapped from VenID LoA in operator policy.
+
+  - id: aal
+    term: Authentication Assurance Level (AAL)
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      NIST SP 800-63-3 authentication category; mapped from VenID LoA in operator policy.
+
+  - id: fal
+    term: Federation Assurance Level (FAL)
+    status: normative
+    section: "02-terminology-loa"
+    definition: >
+      NIST SP 800-63-3 federation category; documented for gateway exchange controls.
+
+  - id: trust-network
+    term: Trust Network
+    status: normative
+    section: "04-trust-network"
+    definition: >
+      Operators and partners exchanging artifacts via gateway and catalog semantics.
+
+  - id: federation
+    term: Federation
+    status: normative
+    section: "06-federation"
+    definition: >
+      Bilateral, non-transitive trust between two operators or networks.
+
+loa_levels:
+  - id: low
+    canonical_claim: low
+    name: Contact verified
+    core_identity_required: true
+  - id: medium
+    canonical_claim: medium
+    name: Document verified
+    core_identity_required: true
+  - id: high
+    canonical_claim: high
+    name: Document and biometrics
+    core_identity_required: true
+    biometric_required: true
+  - id: national
+    canonical_claim: national
+    name: Registry verified
+    core_identity_required: false
+    extended_module: E-Registry
+    biometric_required: true

@@ -1,0 +1,29 @@
+# Normative binding: E-Webhook delivery (VenID reference implementation)
+
+component_id: ewebhook-delivery
+ri_map_surface: ewebhook-delivery
+repository: ven-identity-core
+module_path: services/verification-engine/src/main/java/ve/venid/identity/verification/webhook
+profile: extended
+backlog_epic: P4-E04
+status: partial
+
+summary: >
+  RP webhook registration and asynchronous delivery of verification lifecycle events
+  with retry backoff, HMAC signing, and PII minimization.
+
+implementation_notes: >
+  WebhookDeliveryService; WebhookRegistrationRepository; retry policy and delivery log;
+  WebhookActivationPolicy; integrates with verification orchestrator post-verify.
+
+smoke_script: conformance/run-ewebhook-checks.sh
+
+odtis_ids:
+  - ODTIS-0358
+  - ODTIS-0359
+  - ODTIS-0360
+  - ODTIS-0531
+
+evidence:
+  - implementation/statements/venid-phase4-full/l2-report.md
+  - ven-identity-core/docs/operator/E-WEBHOOK.md

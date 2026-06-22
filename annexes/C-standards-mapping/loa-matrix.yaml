@@ -1,0 +1,75 @@
+# ODTIS Annex C - Level of Assurance crosswalk
+# Source: P18 4.3-4.4, P01 3.4.1
+# Informative; operator MUST document mappings per ODTIS-0105
+
+spec_version: "0.9.0-draft"
+
+nist_sp_800_63_3:
+source: "NIST SP 800-63-3"
+venid_loa:
+- loa: Low
+ial: IAL1
+aal: AAL1
+notes: Contact verification only
+odtis_requirements: [ODTIS-0101]
+- loa: Medium
+ial: IAL2
+aal: AAL2
+notes: Document verification; MFA-capable login
+odtis_requirements: [ODTIS-0101, ODTIS-0311]
+- loa: High
+ial: "IAL2 / IAL3"
+aal: "AAL2 / AAL3"
+notes: Document + biometric proofing; strong authentication
+odtis_requirements: [ODTIS-0103, ODTIS-0312, ODTIS-0523]
+- loa: National
+ial: IAL3
+aal: AAL3
+notes: High LoA + civil-registry 1:1 match (E-Registry Extended)
+odtis_requirements: [ODTIS-0344]
+fal:
+description: "Federation assurance on Layer 2 via mTLS, grants, PKI - not citizen LoA alone"
+odtis_requirements: [ODTIS-0106, ODTIS-0204, ODTIS-0216]
+
+eidas_inspired:
+disclaimer: "ODTIS does NOT assert EU qualified status or eIDAS conformity assessment"
+source: "eIDAS / EUDI ARF (informative)"
+concepts:
+- eidas_concept: "LoA Substantial / High (national eID schemes)"
+odtis_construct: "VenID Medium / High LoA"
+profile: core-identity
+odtis_requirements: [ODTIS-0101, ODTIS-0102]
+- eidas_concept: Person Identification Data (PID)
+odtis_construct: "Verified subject attributes via OIDC / VC"
+profile: "core-identity / extended"
+odtis_requirements: [ODTIS-0306, ODTIS-0317, ODTIS-0345]
+- eidas_concept: Wallet Provider / PID Provider
+odtis_construct: "Layer 1 IdP + optional wallet issuer"
+profile: "core-identity / extended"
+odtis_requirements: [ODTIS-0345, ODTIS-0346]
+- eidas_concept: Relying Party
+odtis_construct: "Registered OAuth client + verification API consumer"
+profile: core-identity
+odtis_requirements: [ODTIS-0319, ODTIS-0315]
+- eidas_concept: Trust service provider duties
+odtis_construct: "DTI Operator + PKI ceremonies"
+profile: trust-network
+odtis_requirements: [ODTIS-0215, ODTIS-0507]
+- eidas_concept: Qualified trust service (QTS)
+odtis_construct: "Operator PKI and timestamping; national QTS is adopter legal layer"
+profile: trust-network
+odtis_requirements: [ODTIS-0217, ODTIS-0507]
+
+enforcement_points:
+- point: Proofing pipeline
+checks: Evidence sufficiency for LoA assignment
+layer: 1
+odtis_sections: ["02-terminology-loa", "03-identity-services"]
+- point: OIDC / verification API
+checks: "RP receives assurance_level; RP policy allow/deny"
+layer: 1
+odtis_requirements: [ODTIS-0107, ODTIS-0108, ODTIS-0316]
+- point: Exchange gateway
+checks: "Partner certificate + service grant; no citizen LoA on wire by default"
+layer: 2
+odtis_requirements: [ODTIS-0204, ODTIS-0205, ODTIS-0209]

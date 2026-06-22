@@ -1,0 +1,25 @@
+# Component normative binding template
+# Copy to <component-id>.yaml and run: python3 scripts/generate-component-bindings-docs.py
+
+component_id: example-service
+ri_map_surface: example-service
+repository: ven-identity-core
+module_path: services/example-service
+profile: core-identity
+backlog_epic: P0-EX00
+status: partial
+
+summary: >
+  One paragraph: what this component does and which ODTIS surfaces it implements.
+
+implementation_notes: >
+  Key classes, policies, or integration points that satisfy the listed ODTIS IDs.
+
+smoke_script: conformance/run-example-checks.sh
+
+odtis_ids:
+  - ODTIS-0301
+  - ODTIS-0315
+
+evidence:
+  - implementation/evidence/example/README.md

@@ -1,0 +1,72 @@
+# Manual RF → ODTIS mappings not captured in registry trace_informative.
+# Used by scripts/build-traceability-index.py alongside requirements.json.
+#
+# status: mapped | partial | gap
+# partial = covered indirectly; dedicated ID planned
+# gap = no normative ID yet
+
+spec_version: "0.9.0-draft"
+
+entries:
+- rf: RF-01
+odtis_ids:
+- ODTIS-0310
+- ODTIS-0311
+odtis_section: "03-identity-services#3.4"
+status: mapped
+note: "Registration + document proofing path"
+
+- rf: RF-04
+odtis_ids:
+- ODTIS-0311
+odtis_section: "03-identity-services#3.4"
+status: mapped
+note: "Contact verification for Medium LoA (email/phone OTP)"
+
+- rf: RF-07
+odtis_ids:
+- ODTIS-0311
+- ODTIS-0312
+- ODTIS-0313
+odtis_section: "03-identity-services#3.4"
+status: partial
+note: "Re-verification via proofing paths; dedicated ID planned (ODTIS-3.4.x)"
+
+- rf: RF-09
+odtis_ids:
+- ODTIS-0302
+- ODTIS-0304
+odtis_section: "03-identity-services#3.3"
+status: partial
+note: "Credential login via IdP; password policy cross-ref section 8 / ODTIS-0321"
+
+- rf: RF-11
+odtis_ids:
+- ODTIS-0301
+- ODTIS-0302
+- ODTIS-0303
+odtis_section: "03-identity-services#3.3"
+status: mapped
+note: "OAuth 2.0 / OIDC Authorization Code + PKCE"
+
+- rf: RF-13
+odtis_ids:
+- ODTIS-0308
+odtis_section: "03-identity-services#3.3"
+status: mapped
+note: "RP-initiated logout and session termination"
+
+- rf: RF-14
+odtis_ids:
+- ODTIS-0309
+- ODTIS-0326
+odtis_section: "03-identity-services#3.3"
+status: mapped
+note: "Account recovery with verification and rate limiting"
+
+- rf: RF-27
+odtis_ids:
+- ODTIS-0504
+odtis_section: "07-operator-governance#7.2"
+status: mapped
+note: "Operator subject suspend and force re-verification"

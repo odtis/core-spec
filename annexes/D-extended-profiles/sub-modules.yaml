@@ -1,0 +1,63 @@
+# ODTIS Annex D - Extended profile sub-modules
+# Source: P18 3.3.3, ODTIS 1.6.5, 10
+
+spec_version: "0.9.0-draft"
+profile_id: extended
+depends_on: [core-identity]
+normative_annex: true
+status: draft-v0.5
+
+sub_modules:
+- id: E-Wallet
+title: Verifiable credentials wallet
+description: OID4VCI issuance and OID4VP holder-signed presentations
+informative_sources: [P03, P07]
+min_deployment_phase: 2
+status: partial
+note: "Core normative reqs in registry ODTIS-5.4.x; Annex D catalogs activation"
+
+- id: E-Registry
+title: National civil registry adapter
+description: Registry-verified National LoA via bilateral adapter
+informative_sources: [P11, RF-EXT5]
+min_deployment_phase: 3
+status: draft
+note: "Draft ODTIS-5.5.x in extended-requirements.yaml"
+
+- id: E-Inclusion
+title: Inclusion and assisted onboarding
+description: Assisted registration, representatives, low-connectivity channels
+informative_sources: [P13, Book-1, doc-14]
+min_deployment_phase: 2
+status: draft
+note: "Draft ODTIS-5.6.x"
+
+- id: E-Webhook
+title: RP asynchronous notifications
+description: Webhook subscriptions and signed outbound delivery
+informative_sources: [P14, DS-07]
+min_deployment_phase: 2
+status: partial
+note: "ODTIS-0531 normative; draft ODTIS-5.7.x for API surface"
+
+- id: E-Signature
+title: Advanced electronic signature
+description: Identity-bound signing integrated with operator PKI or TSP
+informative_sources: [P08, RF-EXT1]
+min_deployment_phase: 3
+status: draft
+note: "Draft ODTIS-5.8.x; national legal value is adopter jurisdiction"
+
+- id: E-KYB
+title: Business verification (KYB)
+description: Legal-entity verification extensions for RPs
+informative_sources: [doc-03, Book-2]
+min_deployment_phase: 3
+status: preview
+note: "Preview ODTIS-5.9.x; full normative text Phase 4"
+
+composition_rules:
+- Extended sub-modules MUST NOT weaken Core, Trust Network, or Federation requirements
+- National LoA MUST NOT be claimed without E-Registry (ODTIS-0344)
+- Conformance statements MUST list active sub-modules (ODTIS-0532)
+- Phase 1 production MUST NOT claim inactive Extended modules (ODTIS-0533)

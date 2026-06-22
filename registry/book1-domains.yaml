@@ -1,0 +1,83 @@
+# Book 1 decision domains (informative mapping to ODTIS profiles)
+# Source: docs/sources/books/01-narrative-policy-book; ODTIS spec cross-refs
+
+spec_version: "0.9.0-draft"
+
+domains:
+  - id: D1
+    title: Institutional mandate and sponsor accountability
+    description: Operator mandate, conformance claim structure, version binding, RI traceability
+    profiles: [reference-architecture, operator]
+    odtis_sections: [01-scope-conformance, 07-operator-governance]
+    key_ids: [ODTIS-0001, ODTIS-0008, ODTIS-0532, ODTIS-0534, ODTIS-0536]
+
+  - id: D2
+    title: Subject-centric assurance and LoA lifecycle
+    description: LoA taxonomy, proofing gates, RP minimum LoA, verification API LoA on denial
+    profiles: [core-identity]
+    odtis_sections: [02-terminology-loa, 03-identity-services]
+    key_ids: [ODTIS-0101, ODTIS-0102, ODTIS-0103, ODTIS-0107, ODTIS-0108, ODTIS-0306]
+
+  - id: D3
+    title: Trust hub and exchange gateway routing
+    description: All partner traffic via local gateway; catalog discovery; sender routing
+    profiles: [trust-network]
+    odtis_sections: [04-trust-network]
+    key_ids: [ODTIS-0201, ODTIS-0202, ODTIS-0212, ODTIS-0223]
+
+  - id: D4
+    title: Metadata-only exchange (no payload centralization)
+    description: Routing metadata and audit envelopes without authoritative business payload copies
+    profiles: [trust-network]
+    odtis_sections: [04-trust-network]
+    key_ids: [ODTIS-0224, ODTIS-0225, ODTIS-0226]
+
+  - id: D5
+    title: Fail-closed security and denial paths
+    description: Zero-trust boundaries; no attribute leakage on deny; cross-layer fail-closed
+    profiles: [core-identity, trust-network, operator]
+    odtis_sections: [03-identity-services, 04-trust-network, 08-security]
+    key_ids: [ODTIS-0317, ODTIS-0535, ODTIS-0517]
+
+  - id: D6
+    title: Extended module composition (no weakening)
+    description: Optional Annex D modules; inactive defaults; must not weaken base profiles
+    profiles: [extended, reference-architecture]
+    odtis_sections: [01-scope-conformance, 05-consent-privacy, 10-deployment-profiles]
+    key_ids: [ODTIS-0006, ODTIS-0532, ODTIS-0533]
+
+  - id: D7
+    title: E-Registry and National LoA
+    description: Civil registry adapter; National LoA only when E-Registry declared and active
+    profiles: [extended, core-identity]
+    odtis_sections: [02-terminology-loa, 05-consent-privacy]
+    key_ids: [ODTIS-0104, ODTIS-0344, ODTIS-0350, ODTIS-0352]
+
+  - id: D8
+    title: E-Inclusion and assisted onboarding
+    description: Representative consent, accessibility, no LoA proofing bypass
+    profiles: [extended]
+    odtis_sections: [05-consent-privacy]
+    key_ids: [ODTIS-0354, ODTIS-0355, ODTIS-0356, ODTIS-0357]
+
+  - id: D9
+    title: Federation bilateral agreements
+    description: Non-transitive federation; explicit activation; runtime suspension policy
+    profiles: [federation]
+    odtis_sections: [06-federation]
+    key_ids: [ODTIS-0401, ODTIS-0403, ODTIS-0405, ODTIS-0407, ODTIS-0408]
+
+  - id: D10
+    title: Operator maturity and phase-appropriate claims
+    description: PKI stewardship, audit/regulator export, deployment phase declaration
+    profiles: [operator]
+    odtis_sections: [07-operator-governance, 08-security, 09-audit-events, 10-deployment-profiles]
+    key_ids: [ODTIS-0505, ODTIS-0506, ODTIS-0530, ODTIS-0532]
+
+profile_phase_applicability:
+  reference-architecture: [0, 1, 2, 3, 4]
+  core-identity: [1, 2, 3, 4]
+  trust-network: [2, 3, 4]
+  federation: [3, 4]
+  operator: [1, 2, 3, 4]
+  extended: [2, 3, 4]

@@ -1,0 +1,14 @@
+id: venid-ewebhook-declaration-2026
+module: E-Webhook
+phase: 4
+declared_at: 2026-06-12
+operator: VenID Sandbox
+status: partial
+odtis_requirements:
+  - ODTIS-0358
+  - ODTIS-0359
+  - ODTIS-0360
+  - ODTIS-0531
+notes: >
+  RP webhook registration via verification-api /v1/rp/webhooks. Signed HMAC delivery,
+  retry backoff, PII-minimized payloads, and delivery logging in verification-engine.

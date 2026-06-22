@@ -1,0 +1,16 @@
+id: venid-ewallet-declaration-2026
+module: E-Wallet
+phase: 4
+declared_at: 2026-06-12
+operator: VenID Sandbox
+status: partial
+odtis_requirements:
+  - ODTIS-0340
+  - ODTIS-0341
+  - ODTIS-0342
+  - ODTIS-0343
+  - ODTIS-0524
+notes: >
+  OID4VP presentation verification via wallet-service. Issuer trust from
+  wallet-issuers-snapshot.json. Holder binding signature required in sandbox.
+  Path A OIDC consent preserved; shared LoA enforced against identity-core.

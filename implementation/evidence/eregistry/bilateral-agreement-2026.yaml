@@ -1,0 +1,17 @@
+agreement_id: venid-saime-eregistry-2026
+status: draft
+signed_at: 2026-06-01
+parties:
+  - role: operator
+    name: VenID Operator (DTI)
+  - role: registry_authority
+    name: SAIME (sandbox reference)
+scope:
+  - civil_registry_identity_verification
+  - national_loa_upgrade_path
+technical_controls:
+  - identifier_hashing_only
+  - no_raw_biometric_persistence_in_core_identity
+  - auditable_verification_events_with_correlation_id
+deployment_phase_minimum: 3
+notes: Sandbox bilateral record for P3-E07 conformance; production requires executed legal agreement.

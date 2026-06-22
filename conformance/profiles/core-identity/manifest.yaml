@@ -1,0 +1,126 @@
+# Profile manifest: core-identity
+# Generated - do not edit by hand; run build-conformance-manifest.py
+
+profile_id: core-identity
+requirement_count: 45
+test_count: 58
+coverage_pct: 100.0
+missing_total: 0
+
+tests:
+  - path: conformance/tests/core-identity/test_account_recovery.md
+    requirements: [ODTIS-0309, ODTIS-0326]
+  - path: conformance/tests/core-identity/test_annex_b_liveness_mapping.md
+    requirements: [ODTIS-0312, ODTIS-0523]
+  - path: conformance/tests/core-identity/test_annex_c_nist_loa_mapping.md
+    requirements: [ODTIS-0103, ODTIS-0105]
+  - path: conformance/tests/core-identity/test_consent_audit_events.md
+    requirements: [ODTIS-0527]
+  - path: conformance/tests/core-identity/test_consent_gated_claims.md
+    requirements: [ODTIS-0307, ODTIS-0331]
+  - path: conformance/tests/core-identity/test_consent_revocation.md
+    requirements: [ODTIS-0330]
+  - path: conformance/tests/core-identity/test_explicit_consent_first_release.md
+    requirements: [ODTIS-0328]
+  - path: conformance/tests/core-identity/test_high_biometric_gate.md
+    requirements: [ODTIS-0103]
+  - path: conformance/tests/core-identity/test_identity_audit_events.md
+    requirements: [ODTIS-0526]
+  - path: conformance/tests/core-identity/test_liveness_high_loa.md
+    requirements: [ODTIS-0523]
+  - path: conformance/tests/core-identity/test_loa_claim.md
+    requirements: [ODTIS-0102]
+  - path: conformance/tests/core-identity/test_odtis_0101.md
+    requirements: [ODTIS-0101]
+  - path: conformance/tests/core-identity/test_odtis_0104.md
+    requirements: [ODTIS-0344]
+  - path: conformance/tests/core-identity/test_odtis_0105.md
+    requirements: [ODTIS-0105]
+  - path: conformance/tests/core-identity/test_odtis_0106.md
+    requirements: [ODTIS-0106]
+  - path: conformance/tests/core-identity/test_odtis_0107.md
+    requirements: [ODTIS-0107]
+  - path: conformance/tests/core-identity/test_odtis_0301.md
+    requirements: [ODTIS-0301]
+  - path: conformance/tests/core-identity/test_odtis_0303.md
+    requirements: [ODTIS-0303]
+  - path: conformance/tests/core-identity/test_odtis_0304.md
+    requirements: [ODTIS-0304]
+  - path: conformance/tests/core-identity/test_odtis_0306.md
+    requirements: [ODTIS-0306]
+  - path: conformance/tests/core-identity/test_odtis_0310.md
+    requirements: [ODTIS-0310]
+  - path: conformance/tests/core-identity/test_odtis_0311.md
+    requirements: [ODTIS-0311]
+  - path: conformance/tests/core-identity/test_odtis_0312.md
+    requirements: [ODTIS-0312]
+  - path: conformance/tests/core-identity/test_odtis_0313.md
+    requirements: [ODTIS-0313]
+  - path: conformance/tests/core-identity/test_odtis_0314.md
+    requirements: [ODTIS-0314]
+  - path: conformance/tests/core-identity/test_odtis_0316.md
+    requirements: [ODTIS-0316]
+  - path: conformance/tests/core-identity/test_odtis_0318.md
+    requirements: [ODTIS-0318]
+  - path: conformance/tests/core-identity/test_odtis_0319.md
+    requirements: [ODTIS-0319]
+  - path: conformance/tests/core-identity/test_odtis_0320.md
+    requirements: [ODTIS-0320]
+  - path: conformance/tests/core-identity/test_odtis_0321.md
+    requirements: [ODTIS-0321]
+  - path: conformance/tests/core-identity/test_odtis_0322.md
+    requirements: [ODTIS-0322]
+  - path: conformance/tests/core-identity/test_odtis_0323.md
+    requirements: [ODTIS-0323]
+  - path: conformance/tests/core-identity/test_odtis_0324.md
+    requirements: [ODTIS-0324]
+  - path: conformance/tests/core-identity/test_odtis_0325.md
+    requirements: [ODTIS-0325]
+  - path: conformance/tests/core-identity/test_odtis_0326.md
+    requirements: [ODTIS-0326]
+  - path: conformance/tests/core-identity/test_odtis_0327.md
+    requirements: [ODTIS-0327]
+  - path: conformance/tests/core-identity/test_odtis_0329.md
+    requirements: [ODTIS-0329]
+  - path: conformance/tests/core-identity/test_odtis_0331.md
+    requirements: [ODTIS-0307, ODTIS-0317, ODTIS-0331]
+  - path: conformance/tests/core-identity/test_odtis_0332.md
+    requirements: [ODTIS-0332]
+  - path: conformance/tests/core-identity/test_odtis_0333.md
+    requirements: [ODTIS-0333]
+  - path: conformance/tests/core-identity/test_odtis_0334.md
+    requirements: [ODTIS-0334]
+  - path: conformance/tests/core-identity/test_odtis_0335.md
+    requirements: [ODTIS-0335]
+  - path: conformance/tests/core-identity/test_odtis_0336.md
+    requirements: [ODTIS-0336]
+  - path: conformance/tests/core-identity/test_odtis_0337.md
+    requirements: [ODTIS-0337]
+  - path: conformance/tests/core-identity/test_odtis_0338.md
+    requirements: [ODTIS-0338]
+  - path: conformance/tests/core-identity/test_odtis_0340.md
+    requirements: [ODTIS-0340]
+  - path: conformance/tests/core-identity/test_odtis_0341.md
+    requirements: [ODTIS-0341]
+  - path: conformance/tests/core-identity/test_odtis_0342.md
+    requirements: [ODTIS-0342]
+  - path: conformance/tests/core-identity/test_odtis_0343.md
+    requirements: [ODTIS-0343]
+  - path: conformance/tests/core-identity/test_openapi_verify_response.md
+    requirements: [ODTIS-0108, ODTIS-0316, ODTIS-0317]
+  - path: conformance/tests/core-identity/test_owasp_baseline.md
+    requirements: [ODTIS-0521]
+  - path: conformance/tests/core-identity/test_pkce_required.md
+    requirements: [ODTIS-0302]
+  - path: conformance/tests/core-identity/test_redirect_uri_validation.md
+    requirements: [ODTIS-0305]
+  - path: conformance/tests/core-identity/test_rp_initiated_logout.md
+    requirements: [ODTIS-0308]
+  - path: conformance/tests/core-identity/test_rp_suspension.md
+    requirements: [ODTIS-0339]
+  - path: conformance/tests/core-identity/test_verification_client_auth.md
+    requirements: [ODTIS-0315]
+  - path: conformance/tests/core-identity/test_verification_consent_scope.md
+    requirements: [ODTIS-0317, ODTIS-0331]
+  - path: conformance/tests/core-identity/test_verification_loa_on_denial.md
+    requirements: [ODTIS-0108]

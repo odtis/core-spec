@@ -1,0 +1,106 @@
+# ODTIS event catalog
+
+spec_version: "0.9.0-draft"
+source: "ODTIS 9, DS-07, Book 2 Appendix F"
+
+envelope:
+  required_fields:
+    - trace_id
+    - timestamp
+    - event_id
+    - event_type
+    - source
+  odtis_requirement: ODTIS-0529
+
+events:
+  - id: identity.created
+    status: normative
+    profile: core-identity
+    odtis_requirements: [ODTIS-0526]
+    description: Subject record created at registration.
+
+  - id: identity.verified
+    status: normative
+    profile: core-identity
+    odtis_requirements: [ODTIS-0526]
+    description: Subject verification or LoA assignment completed.
+
+  - id: verification.completed
+    status: normative
+    profile: core-identity
+    odtis_requirements: [ODTIS-0526]
+    description: Proofing flow completed successfully.
+
+  - id: verification.escalated
+    status: normative
+    profile: core-identity
+    odtis_requirements: [ODTIS-0526]
+    description: Proofing escalated to manual review.
+
+  - id: consent.granted
+    status: normative
+    profile: core-identity
+    odtis_requirements: [ODTIS-0527]
+    description: Subject granted consent for RP scopes and purpose.
+
+  - id: consent.revoked
+    status: normative
+    profile: core-identity
+    odtis_requirements: [ODTIS-0527]
+    description: Consent revoked by subject or operator.
+
+  - id: exchange.request.received
+    status: normative
+    profile: trust-network
+    odtis_requirements: [ODTIS-0528]
+    description: Exchange gateway accepted inbound partner request.
+
+  - id: exchange.request.denied
+    status: normative
+    profile: trust-network
+    odtis_requirements: [ODTIS-0528]
+    description: Exchange denied by grant, policy, or certificate check.
+
+  - id: grant.created
+    status: normative
+    profile: trust-network
+    odtis_requirements: [ODTIS-0528, ODTIS-0211]
+    description: Service access grant created.
+
+  - id: grant.revoked
+    status: normative
+    profile: trust-network
+    odtis_requirements: [ODTIS-0528, ODTIS-0211]
+    description: Service access grant revoked.
+
+  - id: identity.recovery.initiated
+    status: normative
+    profile: core-identity
+    odtis_requirements: [ODTIS-0309, ODTIS-0526]
+    description: Account recovery flow started.
+
+  - id: identity.recovery.completed
+    status: normative
+    profile: core-identity
+    odtis_requirements: [ODTIS-0309, ODTIS-0526]
+    description: Account recovery completed successfully.
+
+  - id: federation.trust.established
+    status: draft
+    profile: federation
+    odtis_requirements: []
+    description: Bilateral federation agreement activated.
+
+  - id: operator.pki.ceremony
+    status: draft
+    profile: operator
+    odtis_requirements: []
+    description: PKI ceremony performed.
+
+  - id: security.incident.reported
+    status: draft
+    profile: operator
+    odtis_requirements: []
+    description: Security incident logged.
+
+# JSON Schema paths: registry/events/schemas/ (regenerate with scripts/generate-event-schemas.py)

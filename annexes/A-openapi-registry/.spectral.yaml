@@ -1,0 +1,19 @@
+extends:
+  - spectral:oas
+
+rules:
+  operation-operationId:
+    severity: error
+  info-contact:
+    severity: warn
+  oas3-api-servers:
+    severity: warn
+
+  odtis-error-response:
+    description: Error responses should reference venid-common ErrorResponse
+    given: $.paths[*][*].responses[?(@property.match(/^(4|5)/))]
+    then:
+      field: content.application/json.schema.$ref
+      function: pattern
+      functionOptions:
+        match: ErrorResponse

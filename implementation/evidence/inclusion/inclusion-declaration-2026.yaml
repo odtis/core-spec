@@ -1,0 +1,15 @@
+id: venid-inclusion-declaration-2026
+module: E-Inclusion
+phase: 4
+declared_at: 2026-06-12
+operator: VenID Sandbox
+status: partial
+odtis_requirements:
+  - ODTIS-0354
+  - ODTIS-0355
+  - ODTIS-0356
+  - ODTIS-0357
+notes: >
+  Assisted onboarding via inclusion-service. Explicit consent with audit trail;
+  representative relationship verification; LoA proofing parity with online
+  registration; operator-configured locales and offline deferred sync.

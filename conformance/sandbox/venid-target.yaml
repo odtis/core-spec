@@ -1,0 +1,30 @@
+# VenID sandbox L2 target hints (informative)
+# Used when running L2 against local ven-identity-core docker-compose.
+
+spec_version: "0.9.0-draft"
+
+local_defaults:
+  keycloak_http_port: 8180
+  realm: identidad-digital
+  odtis_target_example: "http://localhost:8180/realms/identidad-digital"
+
+commands:
+  l1_lab_only: "./conformance/sandbox/run-sandbox-check.sh --l1-only"
+  l2_with_sandbox: |
+    export ODTIS_TARGET=http://localhost:8180/realms/identidad-digital
+    ./conformance/sandbox/run-sandbox-check.sh
+  oidc_smoke: |
+    export ODTIS_TARGET=http://localhost:8180/realms/identidad-digital
+    ../core-impl/ven-identity-core/scripts/oidc-sandbox-check.sh
+
+prerequisites:
+  - ven-identity-core docker-compose up (Keycloak + api-gateway)
+  - Realm `identidad-digital` imported from ven-cloud-stack/di-keycloak/realm-identidad-digital.json
+
+ri_map_surfaces:
+  - ven-identity-core/keycloak-oidc-idp
+  - ven-identity-core/verification-api
+
+related_gaps:
+  - GAP-IC-0308
+  - GAP-IC-0315

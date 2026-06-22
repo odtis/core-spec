@@ -1,0 +1,25 @@
+# Requirement count per spec section (generated)
+spec_version: "0.9.0-draft"
+generated: true
+sections:
+- section: 01-scope-conformance
+  count: 10
+- section: 02-terminology-loa
+  count: 8
+- section: 03-identity-services
+  count: 27
+- section: 04-trust-network
+  count: 26
+- section: 05-consent-privacy
+  count: 34
+- section: 06-federation
+  count: 8
+- section: 07-operator-governance
+  count: 17
+- section: 08-security
+  count: 10
+- section: 09-audit-events
+  count: 6
+- section: 10-deployment-profiles
+  count: 3
+total: 149

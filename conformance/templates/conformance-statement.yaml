@@ -1,0 +1,25 @@
+# ODTIS conformance statement (template)
+# Generate a filled statement: python3 scripts/generate-conformance-statement.py
+# Validate: python3 scripts/validate-conformance-statement.py
+#
+# Reference implementation (VenID lab): implementation/statements/venid-sandbox/
+# See spec/01-scope-conformance/SPEC.md section 1.9.1
+
+odtis_version: "0.9.0-draft"
+profiles:
+  - reference-architecture
+extended_modules: []
+level: L1
+operator: "Example Operator S.A."
+scope:
+  environment: laboratory
+  jurisdiction: "VE"
+  deployment_phase: 1
+requirements: []
+tests:
+  suite_version: "0.9.0-draft"
+  status: partial
+  summary: "Generate with scripts/generate-conformance-statement.py"
+  pending_test_ids: []
+date: "2026-06-12"
+contact: "conformance@example.com"

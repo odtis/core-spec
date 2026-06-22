@@ -1,0 +1,76 @@
+# ODTIS structural domains (ODTIS-0000 .. ODTIS-0006)
+# Normative requirements use ODTIS-MNNN where M matches domain hundreds (00..05).
+
+spec_version: "0.9.0-draft"
+id_format: "ODTIS-XXXX"
+
+domains:
+  - id: ODTIS-0000
+    title: Reference Architecture
+    status: normative
+    requirement_range: ODTIS-0001..0010
+    sections:
+      - 01-scope-conformance
+    spec:
+      - spec/01-scope-conformance/SPEC.md
+    informative:
+      - docs/sources/books/02-platform-specification-monograph/chapters/03-reference-architecture/CHAPTER.md
+
+  - id: ODTIS-0001
+    title: Core Concepts
+    status: normative
+    requirement_range: ODTIS-0101..0108
+    sections:
+      - 02-terminology-loa
+    spec:
+      - spec/02-terminology-loa/SPEC.md
+
+  - id: ODTIS-0002
+    title: Trust Registry
+    status: normative
+    requirement_range: ODTIS-0201..0226
+    sections:
+      - 04-trust-network
+    spec:
+      - spec/04-trust-network/SPEC.md
+
+  - id: ODTIS-0003
+    title: Identity Assurance
+    status: normative
+    requirement_range: ODTIS-0301..0365
+    sections:
+      - 03-identity-services
+      - 05-consent-privacy
+    spec:
+      - spec/03-identity-services/SPEC.md
+      - spec/05-consent-privacy/SPEC.md
+
+  - id: ODTIS-0004
+    title: Federation
+    status: normative
+    requirement_range: ODTIS-0401..0408
+    sections:
+      - 06-federation
+    spec:
+      - spec/06-federation/SPEC.md
+
+  - id: ODTIS-0005
+    title: Governance
+    status: normative
+    requirement_range: ODTIS-0501..0536
+    sections:
+      - 07-operator-governance
+      - 08-security
+      - 09-audit-events
+      - 10-deployment-profiles
+    spec:
+      - spec/07-operator-governance/SPEC.md
+      - spec/08-security/SPEC.md
+      - spec/09-audit-events/SPEC.md
+      - spec/10-deployment-profiles/SPEC.md
+
+  - id: ODTIS-0006
+    title: Payment Trust Layer
+    status: reserved
+    requirement_range: none
+    note: Out of ODTIS 0.9 scope; GovStack payments BB is adopter-specific integration.

@@ -1,0 +1,30 @@
+# Normative binding: E-Wallet service (VenID reference implementation)
+
+component_id: wallet-service
+ri_map_surface: wallet-service
+repository: ven-identity-core
+module_path: services/wallet-service
+profile: extended
+backlog_epic: P4-E02
+status: partial
+
+summary: >
+  Extended E-Wallet: OID4VP holder-signed presentations, issuer trust validation,
+  selective disclosure (SD-JWT), and shared LoA with OIDC Path A.
+
+implementation_notes: >
+  WalletController / WalletPresentationService; WalletPresentationPolicy,
+  WalletIssuerTrustPolicy, WalletLoaPolicy in shared-lib; wallet.presentation audit events.
+
+smoke_script: conformance/run-ewallet-checks.sh
+
+odtis_ids:
+  - ODTIS-0340
+  - ODTIS-0341
+  - ODTIS-0342
+  - ODTIS-0343
+  - ODTIS-0524
+
+evidence:
+  - implementation/evidence/ewallet/wallet-declaration-2026.yaml
+  - ven-identity-core/docs/operator/E-WALLET.md

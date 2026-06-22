@@ -1,0 +1,43 @@
+{
+  "odtis_version": "0.9.0-draft",
+  "operator": "FinnectOS VenID Phase 2",
+  "as_of": "2026-06-15",
+  "period": "month",
+  "deployment_phase": 2,
+  "environment": "staging",
+  "registrations": {
+    "total": 1280,
+    "last_30d": 142
+  },
+  "verifications": {
+    "total": 3420,
+    "completed": 3100,
+    "failed": 120,
+    "manual_review_backlog": 15,
+    "last_30d": 890
+  },
+  "errors": {
+    "error_rate_percent": 0.8,
+    "consent_denials_30d": 45
+  },
+  "availability": {
+    "idp_percent": 99.7,
+    "verification_api_percent": 99.6,
+    "measurement_window": "calendar_month"
+  },
+  "trust_network": {
+    "active_partners": 4,
+    "exchange_requests_30d": 12500
+  },
+  "by_assurance_level": {
+    "low": 180,
+    "medium": 920,
+    "high": 180
+  },
+  "pii_policy": "aggregated_counts_only_no_subject_identifiers",
+  "api_surfaces": [
+    "GET /v1/rp/reports/ecosystem",
+    "GET /v1/admin/metrics/ecosystem",
+    "GET /v1/regulator/aggregate-metrics"
+  ]
+}

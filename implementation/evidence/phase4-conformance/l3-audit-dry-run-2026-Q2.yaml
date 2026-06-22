@@ -1,0 +1,44 @@
+audit_id: venid-phase4-l3-audit-dry-run-2026-Q2
+as_of: 2026-06-12
+type: internal_tabletop
+deployment_phase: 4
+conformance_level: L3
+scope:
+  profiles:
+    - reference-architecture
+    - core-identity
+    - trust-network
+    - federation
+    - operator
+    - extended
+  extended_modules_declared:
+    - E-Wallet
+    - E-Registry
+    - E-Inclusion
+    - E-Webhook
+    - E-Signature
+    - E-KYB
+  activation_note: All Extended modules implemented as sandbox partial (venid.*.active=false by default)
+statement_path: odtis/implementation/statements/venid-phase4-full/conformance-statement.yaml
+participants:
+  - role: operator_security
+    name: VenID platform team
+  - role: conformance_lead
+    name: ODTIS implementation lead
+  - role: external_auditor_observer
+    name: Internal audit dry-run (not third-party)
+findings:
+  - id: F-01
+    severity: informational
+    summary: Phase 4 statement lists all Extended sub-modules; services default inactive pending production activation
+  - id: F-02
+    severity: informational
+    summary: Federation runtime implemented with route cache and suspended/expired agreement policies (P4-E01)
+  - id: F-03
+    severity: low
+    summary: Third-party Operator L3 attestation not yet executed; L3 target with internal dry-run only
+  - id: F-04
+    severity: informational
+    summary: ODTIS-0006 anti-weakening checks pass via activation gates and LoA binding policies
+outcome: conditional_pass
+notes: Internal L3 dry-run for P4-E07; not a third-party audit. Re-run before production ODTIS Certified claim.

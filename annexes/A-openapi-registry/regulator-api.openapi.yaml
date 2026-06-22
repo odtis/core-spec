@@ -1,0 +1,123 @@
+openapi: 3.1.0
+info:
+title: VenID Regulator API
+version: 0.9.0-draft
+description: >
+Surface S8 - Supervision and aggregated audit export.
+ODTIS-0514, ODTIS-0530. Source: P14 8.6.
+license:
+name: CC BY 4.0
+url: https://creativecommons.org/licenses/by/4.0/
+
+servers:
+- url: https://api.example.venid.org/v1/regulator
+description: Illustrative regulator API base
+
+tags:
+- name: Metrics
+- name: Audit
+
+paths:
+/aggregate-metrics:
+get:
+operationId: regulator.metrics.aggregate
+tags: [Metrics]
+summary: Aggregated identity metrics without PII
+security:
+- bearerAuth: []
+parameters:
+- name: period
+in: query
+schema:
+type: string
+enum: [day, week, month]
+- name: from
+in: query
+schema:
+type: string
+format: date
+- name: to
+in: query
+schema:
+type: string
+format: date
+responses:
+'200':
+description: Aggregated metrics (ODTIS-0513)
+content:
+application/json:
+schema:
+type: object
+properties:
+registrations:
+type: integer
+verifications:
+type: integer
+by_assurance_level:
+type: object
+additionalProperties:
+type: integer
+
+/audit-logs:
+get:
+operationId: regulator.audit.export
+tags: [Audit]
+summary: Audit event export with PII minimization (ODTIS-0530)
+security:
+- bearerAuth: []
+parameters:
+- name: from
+in: query
+required: true
+schema:
+type: string
+format: date-time
+- name: to
+in: query
+required: true
+schema:
+type: string
+format: date-time
+- name: event_type
+in: query
+schema:
+type: string
+responses:
+'200':
+description: Audit log export
+content:
+application/json:
+schema:
+type: object
+properties:
+items:
+type: array
+items:
+type: object
+required: [event_type, timestamp, trace_id]
+properties:
+event_type:
+type: string
+timestamp:
+type: string
+format: date-time
+trace_id:
+type: string
+outcome:
+type: string
+
+/compliance-report:
+get:
+operationId: regulator.compliance.report
+tags: [Audit]
+summary: Compliance and certification summary
+security:
+- bearerAuth: []
+responses:
+'200':
+description: Compliance report metadata
+
+components:
+securitySchemes:
+bearerAuth:
+$ref: './venid-common.openapi.yaml#/components/securitySchemes/bearerAuth'

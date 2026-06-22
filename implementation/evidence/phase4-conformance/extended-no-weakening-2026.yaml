@@ -1,0 +1,21 @@
+evidence_id: venid-extended-no-weakening-2026
+requirement: ODTIS-0006
+as_of: 2026-06-12
+status: partial
+checks:
+  - id: activation-gates
+    summary: Extended modules require declared+active+phase gates (Wallet, ERegistry, Inclusion, Webhook, ESignature, Kyb)
+    script: odtis/conformance/run-extended-no-weakening-checks.sh
+  - id: loa-binding
+    summary: Wallet, signature, inclusion, and KYB flows bind to AssuranceLevelPolicy / representative verification
+    policies:
+      - ve.venid.shared.wallet.WalletLoaPolicy
+      - ve.venid.shared.esignature.SignatureLoaPolicy
+      - ve.venid.shared.inclusion.InclusionLoaPolicy
+      - ve.venid.shared.kyb.LegalEntityVerificationPolicy
+      - ve.venid.shared.kyb.KybRepresentativeLinkPolicy
+  - id: inactive-defaults
+    summary: Extended service application.yml defaults keep venid.*.active=false until operator activates
+notes: >
+  Extended capabilities add declared behavior only. Core Identity consent/LoA,
+  Trust Network grant enforcement, and Federation route policies remain enforced.

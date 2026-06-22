@@ -1,0 +1,91 @@
+# Smoke script to conformance test linkage (informative)
+# Supplemental to auto-discovery in scripts/sync-test-status-from-smokes.py
+
+spec_version: "0.9.0-draft"
+
+smokes:
+  - script: conformance/run-extended-no-weakening-checks.sh
+    tests:
+      - conformance/tests/reference-architecture/test_extended_no_weakening.md
+
+  - script: conformance/run-operator-governance-checks.sh
+    odtis_ids:
+      - ODTIS-0501
+      - ODTIS-0502
+      - ODTIS-0503
+      - ODTIS-0504
+      - ODTIS-0505
+      - ODTIS-0506
+
+  - script: conformance/run-operator-pki-checks.sh
+    odtis_ids:
+      - ODTIS-0507
+      - ODTIS-0508
+      - ODTIS-0509
+      - ODTIS-0510
+
+  - script: conformance/run-operator-sla-metrics-checks.sh
+    odtis_ids:
+      - ODTIS-0511
+      - ODTIS-0512
+      - ODTIS-0513
+
+  - script: conformance/run-operator-regulator-checks.sh
+    odtis_ids:
+      - ODTIS-0514
+      - ODTIS-0515
+      - ODTIS-0516
+
+  - script: conformance/run-operator-security-checks.sh
+    odtis_ids:
+      - ODTIS-0518
+      - ODTIS-0519
+      - ODTIS-0520
+      - ODTIS-0525
+
+  - script: conformance/run-fail-closed-checks.sh
+    odtis_ids:
+      - ODTIS-0535
+
+  - script: conformance/run-trust-network-checks.sh
+    odtis_ids:
+      - ODTIS-0201
+      - ODTIS-0202
+      - ODTIS-0204
+      - ODTIS-0205
+      - ODTIS-0208
+      - ODTIS-0212
+      - ODTIS-0213
+      - ODTIS-0214
+      - ODTIS-0215
+      - ODTIS-0216
+      - ODTIS-0218
+      - ODTIS-0219
+      - ODTIS-0220
+      - ODTIS-0223
+      - ODTIS-0224
+      - ODTIS-0225
+      - ODTIS-0517
+      - ODTIS-0528
+
+  - script: conformance/run-phase4-package.sh
+    tests:
+      - conformance/tests/operator/test_phase_declaration.md
+
+  - script: ../core-impl/ven-identity-core/scripts/oidc-static-check.sh
+    odtis_ids:
+      - ODTIS-0308
+
+  - script: ../core-impl/ven-identity-core/scripts/verification-api-unit-check.sh
+    odtis_ids:
+      - ODTIS-0315
+      - ODTIS-0316
+      - ODTIS-0317
+      - ODTIS-0535
+
+  - script: ../core-impl/ven-identity-core/scripts/gateway-security-check.sh
+    odtis_ids:
+      - ODTIS-0325
+      - ODTIS-0326
+      - ODTIS-0327
+      - ODTIS-0521

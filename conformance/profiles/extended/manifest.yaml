@@ -1,0 +1,70 @@
+# Profile manifest: extended
+# Generated - do not edit by hand; run build-conformance-manifest.py
+
+profile_id: extended
+requirement_count: 25
+test_count: 30
+coverage_pct: 100.0
+missing_total: 0
+
+tests:
+  - path: conformance/tests/extended/test_einclusion_assisted_consent.md
+    requirements: [ODTIS-0354, ODTIS-0355]
+  - path: conformance/tests/extended/test_ekyb_entity_separate.md
+    requirements: [ODTIS-0364]
+  - path: conformance/tests/extended/test_ekyb_representative_link.md
+    requirements: [ODTIS-0365]
+  - path: conformance/tests/extended/test_eregistry_declaration_required.md
+    requirements: [ODTIS-0104, ODTIS-0344]
+  - path: conformance/tests/extended/test_eregistry_national_loa.md
+    requirements: [ODTIS-0344, ODTIS-0350]
+  - path: conformance/tests/extended/test_eregistry_no_civil_authority.md
+    requirements: [ODTIS-0349]
+  - path: conformance/tests/extended/test_eregistry_phase3_activation.md
+    requirements: [ODTIS-0352]
+  - path: conformance/tests/extended/test_esignature_audit_events.md
+    requirements: [ODTIS-0363, ODTIS-0526]
+  - path: conformance/tests/extended/test_esignature_loa_binding.md
+    requirements: [ODTIS-0361]
+  - path: conformance/tests/extended/test_esignature_pki_keys.md
+    requirements: [ODTIS-0362, ODTIS-0507]
+  - path: conformance/tests/extended/test_ewallet_holder_vp.md
+    requirements: [ODTIS-0340, ODTIS-0346, ODTIS-0524]
+  - path: conformance/tests/extended/test_ewebhook_hmac_delivery.md
+    requirements: [ODTIS-0358, ODTIS-0531]
+  - path: conformance/tests/extended/test_ewebhook_pii_minimize.md
+    requirements: [ODTIS-0360, ODTIS-0530]
+  - path: conformance/tests/extended/test_ewebhook_retry_backoff.md
+    requirements: [ODTIS-0359]
+  - path: conformance/tests/extended/test_ewebhook_rp_registration.md
+    requirements: [ODTIS-0358]
+  - path: conformance/tests/extended/test_inclusion_accessibility_offline.md
+    requirements: [ODTIS-0357]
+  - path: conformance/tests/extended/test_inclusion_assisted_consent.md
+    requirements: [ODTIS-0354]
+  - path: conformance/tests/extended/test_inclusion_no_loa_bypass.md
+    requirements: [ODTIS-0356]
+  - path: conformance/tests/extended/test_inclusion_representative_verify.md
+    requirements: [ODTIS-0355]
+  - path: conformance/tests/extended/test_national_loa_after_adapter.md
+    requirements: [ODTIS-0344, ODTIS-0350]
+  - path: conformance/tests/extended/test_national_loa_gate.md
+    requirements: [ODTIS-0104]
+  - path: conformance/tests/extended/test_registry_hash_no_biometric_store.md
+    requirements: [ODTIS-0351]
+  - path: conformance/tests/extended/test_registry_verification_audit.md
+    requirements: [ODTIS-0353, ODTIS-0526]
+  - path: conformance/tests/core-identity/test_odtis_0104.md
+    requirements: [ODTIS-0104]
+  - path: conformance/tests/core-identity/test_odtis_0340.md
+    requirements: [ODTIS-0340]
+  - path: conformance/tests/core-identity/test_odtis_0341.md
+    requirements: [ODTIS-0341]
+  - path: conformance/tests/core-identity/test_odtis_0342.md
+    requirements: [ODTIS-0342]
+  - path: conformance/tests/core-identity/test_odtis_0343.md
+    requirements: [ODTIS-0343]
+  - path: conformance/tests/operator/test_odtis_0524.md
+    requirements: [ODTIS-0524]
+  - path: conformance/tests/operator/test_odtis_0531.md
+    requirements: [ODTIS-0531]

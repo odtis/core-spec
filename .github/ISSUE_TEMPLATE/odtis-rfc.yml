@@ -1,0 +1,35 @@
+name: ODTIS RFC (normative change)
+description: Propose a normative MUST/SHOULD change for ODTIS
+title: "[ODTIS RFC] "
+labels: ["odtis", "rfc"]
+body:
+  - type: markdown
+    value: |
+      Copy `governance/RFC-TEMPLATE.md` into `governance/rfc/` and link it here.
+  - type: input
+    id: profiles
+    attributes:
+      label: Profiles affected
+      placeholder: "core-identity, trust-network, …"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One paragraph — what changes and why
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Normative proposal
+      description: New/changed ODTIS IDs and spec sections
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Backward compatibility
+    validations:
+      required: true

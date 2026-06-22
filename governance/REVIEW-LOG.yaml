@@ -1,0 +1,55 @@
+# ODTIS 0.9.0-draft review log
+
+Tracks external feedback and RFC decisions (Phase 3.2.4).
+
+spec_version: "0.9.0-draft"
+review_cycle: 1
+review_period_open: true
+opened: "2026-06-12"
+closes: "2026-06-26"
+
+entries:
+- id: FB-001
+date: 2026-06-12
+source: steward-seed
+type: clarification
+odtis_ids: [ODTIS-0331]
+status: accepted
+summary: "Link ODTIS-0331 to existing consent scope test stubs"
+resolution: "Updated test headers; added test_odtis-5_1_4.md; spec 5.1.4 note distinguishes 3.1.7 / 3.5.3"
+
+- id: FB-002
+date: 2026-06-12
+source: steward-seed
+type: rfc
+odtis_ids: [ODTIS-0404, ODTIS-0405, ODTIS-0406]
+status: accepted
+summary: "Federation interoperability depth (IG-02)"
+resolution: "Accepted 2026-06-12: ODTIS-0404, ODTIS-0405, ODTIS-0406 added; spec 6 + registry + tests updated"
+
+- id: FB-003
+date: 2026-06-12
+source: steward-seed
+type: clarification
+odtis_ids: [ODTIS-0532, ODTIS-0533]
+status: accepted
+summary: "HA/SLA numeric targets informative vs normative boundary"
+resolution: "Accepted 2026-06-12: informative note in spec 10.4; numeric HA remains operator policy / Book 2 ch. 14"
+
+- id: FB-004
+date: 2026-06-12
+source: steward-seed
+type: clarification
+odtis_ids: [ODTIS-4.6.1]
+status: accepted
+summary: "Autodiscovery SHOULD scope for 0.9.x"
+resolution: "Accepted 2026-06-12: SHOULD-only; out of Annex A; manual stub until Book 2 ch.9 discovery URI"
+
+- id: FB-005
+date: 2026-06-12
+source: steward-seed
+type: sandbox
+odtis_ids: []
+status: accepted
+summary: "L2 structural baseline; request live sandbox reports"
+resolution: "Accepted 2026-06-12: conformance/sandbox/L2-REPORT-TEMPLATE.md + README workflow; live reports still open for external operators"

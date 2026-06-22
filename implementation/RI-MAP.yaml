@@ -1,0 +1,552 @@
+# ODTIS reference implementation map
+# Informative - authoritative for VenID L2 auditors (ODTIS-0536)
+# Validate: python3 scripts/validate-ri-map.py
+
+spec_version: "0.9.0-draft"
+updated: "2026-06-12"
+generator_note: P0-E03 reference implementation traceability
+
+conformance_statements:
+  lab:
+    path: implementation/statements/venid-sandbox/conformance-statement.yaml
+    profiles: [reference-architecture]
+    level: L1
+  phase1_pilot:
+    path: implementation/statements/venid-phase1-core/conformance-statement.yaml
+    profiles: [reference-architecture, core-identity]
+    level: L2
+    l2_report: implementation/statements/venid-phase1-core/l2-report.md
+  phase2_pilot:
+    path: implementation/statements/venid-phase2-trust/conformance-statement.yaml
+    profiles: [reference-architecture, core-identity, trust-network]
+    level: L2
+    l2_report: implementation/statements/venid-phase2-trust/l2-report.md
+  phase3_operator:
+    path: implementation/statements/venid-phase3-operator/conformance-statement.yaml
+    profiles: [reference-architecture, core-identity, trust-network, operator]
+    level: L2
+    l2_report: implementation/statements/venid-phase3-operator/l2-report.md
+  phase4_full:
+    path: implementation/statements/venid-phase4-full/conformance-statement.yaml
+    profiles: [reference-architecture, core-identity, trust-network, federation, operator, extended]
+    level: L3
+    l2_report: implementation/statements/venid-phase4-full/l2-report.md
+  staging: null
+  production: null
+
+phased_backlog: implementation/phased-backlog.yaml
+gaps_registry: implementation/gaps/gaps.yaml
+
+implementations:
+- id: ven-identity-core
+  path: "../core-impl/ven-identity-core"
+  organization: FinnectOS
+  profiles_claimed:
+  - reference-architecture
+  - core-identity
+  odtis_sections:
+  - "01-scope-conformance"
+  - "02-terminology-loa"
+  - "03-identity-services"
+  - "05-consent-privacy"
+  surfaces:
+  - id: loa-policy
+    module: shared/shared-lib + services/identity-core + services/verification-engine + api/verification-api
+    backlog_epic: P1-E01
+    status: partial
+    odtis_ids:
+    - ODTIS-0101
+    - ODTIS-0102
+    - ODTIS-0103
+    - ODTIS-0105
+    - ODTIS-0107
+    - ODTIS-0108
+    - ODTIS-0306
+    l2_check: l2-loa-claims
+    notes: AssuranceLevelPolicy; UpdateAssuranceLevel gRPC; verification-engine sync; VerifyController 0108/0107
+
+  - id: keycloak-oidc-idp
+    module: shared/keycloak-extension + Keycloak realm
+    backlog_epic: P1-E02
+    status: partial
+    odtis_ids:
+    - ODTIS-0102
+    - ODTIS-0301
+    - ODTIS-0302
+    - ODTIS-0303
+    - ODTIS-0304
+    - ODTIS-0305
+    - ODTIS-0306
+    - ODTIS-0307
+    - ODTIS-0308
+    l2_check: l2-oidc-discovery
+    notes: Realm identidad-digital; PKCE S256; refresh rotation; OIDC-SANDBOX.md; oidc-sandbox-check.sh
+
+  - id: identity-core
+    module: services/identity-core
+    backlog_epic: P1-E03
+    status: partial
+    odtis_ids:
+    - ODTIS-0309
+    - ODTIS-0310
+    - ODTIS-0311
+    - ODTIS-0312
+    - ODTIS-0313
+    - ODTIS-0314
+    - ODTIS-0306
+    notes: SubjectIdPolicy; dedup; recovery events; REGISTRATION-PROOFING.md; VenidEvent envelope ODTIS-0529
+
+  - id: consent-service
+    module: services/consent-service
+    backlog_epic: P1-E06
+    status: partial
+    odtis_ids:
+    - ODTIS-0328
+    - ODTIS-0329
+    - ODTIS-0330
+    - ODTIS-0331
+    - ODTIS-0332
+    - ODTIS-0527
+    notes: ListByIdentity; explicit grant validation; dsar_request; CONSENT-LIFECYCLE.md; consent audit ODTIS-0527
+
+  - id: verification-engine
+    module: services/verification-engine
+    backlog_epic: P1-E03
+    status: partial
+    odtis_ids:
+    - ODTIS-0311
+    - ODTIS-0312
+    - ODTIS-0313
+    - ODTIS-0314
+    - ODTIS-0523
+    notes: Mock adapters; manual review; BiometricMinimizationService; NationalLoaUpgradeService (P3-E07)
+
+  - id: eregistry-adapter
+    module: services/eregistry-adapter
+    backlog_epic: P3-E07
+    status: partial
+    odtis_ids:
+    - ODTIS-0104
+    - ODTIS-0344
+    - ODTIS-0349
+    - ODTIS-0350
+    - ODTIS-0351
+    - ODTIS-0352
+    - ODTIS-0353
+    binding_doc: implementation/component-bindings/eregistry-adapter.yaml
+    notes: SandboxRegistryAuthority; hash-only identifiers; eregistry.verification audit; phase 3 gates (P3-E07)
+
+  - id: verification-api
+    module: api/verification-api
+    backlog_epic: P1-E04
+    status: partial
+    openapi: annexes/A-openapi-registry/verification-api.openapi.yaml
+    odtis_ids:
+    - ODTIS-0102
+    - ODTIS-0107
+    - ODTIS-0108
+    - ODTIS-0315
+    - ODTIS-0316
+    - ODTIS-0317
+    - ODTIS-0318
+    - ODTIS-0535
+    l2_check: l2-verification-api
+    binding_doc: implementation/component-bindings/verification-api.yaml
+    notes: MachineClientPolicy; VerificationService; VERIFICATION-API-SANDBOX.md
+
+  - id: citizen-api
+    module: api/citizen-api
+    backlog_epic: P1-E07
+    status: partial
+    openapi: annexes/A-openapi-registry/citizen-api.openapi.yaml
+    odtis_ids:
+    - ODTIS-0322
+    - ODTIS-0323
+    - ODTIS-0324
+    notes: PortalConfigController; ConsentsController; CITIZEN-PORTAL.md; di-portal-ciudadano UX
+
+  - id: portal-ciudadano
+    module: front/di-portal-ciudadano
+    backlog_epic: P1-E07
+    status: partial
+    odtis_ids:
+    - ODTIS-0322
+    - ODTIS-0323
+    - ODTIS-0324
+    - ODTIS-0332
+    notes: i18n es-VE/en; PerfilPage status+LoA; ConsentsPage revoke; CITIZEN-PORTAL.md
+
+  - id: admin-api
+    module: api/admin-api
+    backlog_epic: P3-E01
+    status: partial
+    openapi: annexes/A-openapi-registry/admin-api.openapi.yaml
+    odtis_ids:
+    - ODTIS-0319
+    - ODTIS-0320
+    - ODTIS-0321
+    - ODTIS-0337
+    - ODTIS-0338
+    - ODTIS-0339
+    - ODTIS-0504
+    - ODTIS-0513
+    - ODTIS-0525
+    notes: SubjectsController; MetricsController /metrics/ecosystem and /metrics/fraud
+
+  - id: api-gateway
+    module: api/api-gateway
+    backlog_epic: P1-E08
+    status: partial
+    odtis_ids:
+    - ODTIS-0325
+    - ODTIS-0326
+    - ODTIS-0327
+    - ODTIS-0521
+    - ODTIS-0522
+    - ODTIS-0523
+    notes: CorrelationId; rate limits; security headers; TLS enforcement; TRANSPORT-SECURITY.md; gateway-security-check.sh
+
+  - id: reports-api
+    module: api/reports-api
+    backlog_epic: P3-E03
+    status: partial
+    openapi: annexes/A-openapi-registry/reports-api.openapi.yaml
+    odtis_ids:
+    - ODTIS-0513
+    notes: GET /ecosystem; EcosystemMetricsCatalog snapshot (ECOSYSTEM-METRICS.md)
+
+  - id: regulator-api
+    module: api/regulator-api
+    backlog_epic: P3-E04
+    status: partial
+    openapi: annexes/A-openapi-registry/regulator-api.openapi.yaml
+    odtis_ids:
+    - ODTIS-0514
+    - ODTIS-0515
+    - ODTIS-0516
+    - ODTIS-0530
+    notes: audit-logs export + correlation cross-link; RegulatorAuditExportPolicy (P3-E04/E06)
+
+  - id: ven-infra-core
+    module: ven-infra-core
+    backlog_epic: P3-E05
+    status: partial
+    odtis_ids:
+    - ODTIS-0518
+    - ODTIS-0519
+    - ODTIS-0520
+    - ODTIS-0525
+    notes: NETWORK-BOUNDARY; SECRETS-MANAGEMENT; ZERO-TRUST-ROADMAP; FRAUD-MONITORING; security-platform-check.sh
+
+  - id: notification-service
+    module: services/notification-service
+    backlog_epic: P1-E07
+    status: partial
+    informative: true
+    odtis_ids: []
+    note: Informative delivery channel; no standalone ODTIS MUST
+
+  - id: portal-operador
+    module: front/di-portal-operador
+    backlog_epic: P3-E01
+    status: partial
+    odtis_ids:
+    - ODTIS-0501
+    - ODTIS-0504
+    notes: Verification queue; governance scope links on HomePage; subject admin via admin-api
+
+  - id: conformance-publication
+    module: odtis/implementation/statements
+    backlog_epic: P4-E07
+    status: partial
+    odtis_ids:
+    - ODTIS-0008
+    - ODTIS-0532
+    - ODTIS-0533
+    - ODTIS-0534
+    notes: venid-phase4-full statement; run-phase4-package.sh; GAP-CERT-L3-ATT deferred
+
+  - id: wallet-service
+    module: services/wallet-service
+    backlog_epic: P4-E02
+    status: partial
+    odtis_ids:
+    - ODTIS-0340
+    - ODTIS-0341
+    - ODTIS-0342
+    - ODTIS-0343
+    - ODTIS-0524
+    binding_doc: implementation/component-bindings/wallet-service.yaml
+    notes: OID4VP verify; WalletLoaPolicy; wallet-service-check.sh
+
+  - id: inclusion-service
+    module: services/inclusion-service
+    backlog_epic: P4-E03
+    status: partial
+    odtis_ids:
+    - ODTIS-0354
+    - ODTIS-0355
+    - ODTIS-0356
+    - ODTIS-0357
+    binding_doc: implementation/component-bindings/inclusion-service.yaml
+    notes: Assisted flows; InclusionLoaPolicy; inclusion-service-check.sh
+
+  - id: signature-service
+    module: services/signature-service
+    backlog_epic: P4-E05
+    status: partial
+    odtis_ids:
+    - ODTIS-0361
+    - ODTIS-0362
+    - ODTIS-0363
+    binding_doc: implementation/component-bindings/signature-service.yaml
+    notes: LoA-bound sign/verify; esignature-check.sh
+
+  - id: kyb-service
+    module: services/kyb-service
+    backlog_epic: P4-E06
+    status: partial
+    odtis_ids:
+    - ODTIS-0364
+    - ODTIS-0365
+    binding_doc: implementation/component-bindings/kyb-service.yaml
+    notes: Legal entity channel; representative linkage; kyb-service-check.sh
+
+  - id: ewebhook-delivery
+    module: services/verification-engine (webhook)
+    backlog_epic: P4-E04
+    status: partial
+    odtis_ids:
+    - ODTIS-0358
+    - ODTIS-0359
+    - ODTIS-0360
+    - ODTIS-0531
+    binding_doc: implementation/component-bindings/ewebhook-delivery.yaml
+    notes: WebhookDeliveryService; ewebhook-check.sh; retry + HMAC + PII minimize
+
+  conformance:
+    level_target: L3
+    last_report: implementation/statements/venid-phase4-full/l2-report.md
+    gaps_doc: implementation/gaps/KNOWN-GAPS.md
+
+- id: ven-trust-network
+  path: "../core-impl/ven-trust-network"
+  organization: FinnectOS
+  profiles_claimed:
+  - reference-architecture
+  - trust-network
+  odtis_sections:
+  - "04-trust-network"
+  surfaces:
+  - id: exchange-gateway
+    module: gateway/exchange-gateway
+    backlog_epic: P2-E01
+    status: partial
+    openapi: annexes/A-openapi-registry/exchange-gateway.openapi.yaml
+    odtis_ids:
+    - ODTIS-0201
+    - ODTIS-0202
+    - ODTIS-0203
+    - ODTIS-0204
+    - ODTIS-0205
+    - ODTIS-0206
+    - ODTIS-0207
+    - ODTIS-0219
+    - ODTIS-0220
+    - ODTIS-0221
+    - ODTIS-0224
+    - ODTIS-0517
+    - ODTIS-0528
+    - ODTIS-0535
+    gaps: [GAP-TN-0204]
+    binding_doc: implementation/component-bindings/exchange-gateway.yaml
+    notes: FederationRouteValidationFilter when federation.enabled (P3-E08/P4-E01)
+
+  - id: exchange-gateway-sender
+    module: gateway/exchange-gateway (sender mode)
+    backlog_epic: P2-E04
+    status: done
+    odtis_ids:
+    - ODTIS-0212
+    - ODTIS-0222
+    - ODTIS-0223
+    notes: sender-routing-check.sh; APP_EXCHANGE_SENDER_REQUIRE_SERVICE_ID in prod
+
+  - id: trust-registry
+    module: services/trust-registry
+    backlog_epic: P3-E08
+    status: partial
+    odtis_ids:
+    - ODTIS-0208
+    - ODTIS-0209
+    - ODTIS-0210
+    - ODTIS-0211
+    - ODTIS-0212
+    - ODTIS-0213
+    - ODTIS-0214
+    - ODTIS-0222
+    - ODTIS-0225
+    - ODTIS-0226
+    - ODTIS-0401
+    - ODTIS-0402
+    - ODTIS-0403
+    - ODTIS-0404
+    - ODTIS-0405
+    - ODTIS-0406
+    binding_doc: implementation/component-bindings/federation-runtime.yaml
+    notes: Federation agreements V16; route policy; regulator export (P3-E08/P4-E01)
+
+  - id: central-server
+    module: services/central-server
+    backlog_epic: P2-E02
+    status: partial
+    odtis_ids:
+    - ODTIS-0212
+    - ODTIS-0213
+    - ODTIS-0214
+
+  - id: trust-service
+    module: services/trust-service
+    backlog_epic: P2-E06
+    status: partial
+    odtis_ids:
+    - ODTIS-0205
+    - ODTIS-0216
+
+  - id: trust-authority
+    module: services/trust-authority
+    backlog_epic: P3-E02
+    status: partial
+    odtis_ids:
+    - ODTIS-0215
+    - ODTIS-0216
+    - ODTIS-0218
+    - ODTIS-0507
+    - ODTIS-0508
+    - ODTIS-0509
+    - ODTIS-0510
+    notes: CP/CPS docs; CaAuditService ceremony; CRL ops + DR schedule (P3-E02)
+
+  - id: audit-service
+    module: services/audit-service
+    backlog_epic: P3-E06
+    status: partial
+    odtis_ids:
+    - ODTIS-0219
+    - ODTIS-0225
+    - ODTIS-0528
+    - ODTIS-0529
+    - ODTIS-0530
+    notes: Hash chain sealing; correlation cross-link; regulator-export REST (P3-E06)
+
+  - id: portal-api
+    module: api/portal-api
+    backlog_epic: P2-E03
+    status: partial
+    odtis_ids:
+    - ODTIS-0226
+
+  - id: portal-trust
+    module: front/portal-trust
+    backlog_epic: P2-E03
+    status: partial
+    odtis_ids:
+    - ODTIS-0209
+    - ODTIS-0226
+
+  - id: exchange-client-sdk
+    module: sdk/exchange-client
+    backlog_epic: P2-E04
+    status: partial
+    odtis_ids:
+    - ODTIS-0223
+    note: docs/platform/FASE-4-CLIENTE-Y-DESCUBRIMIENTO.md
+
+  - id: partner-backend-example
+    module: samples/partner-backend-example
+    backlog_epic: P2-E04
+    status: partial
+    informative: true
+    odtis_ids: []
+    note: Informative integration sample
+
+  conformance:
+    level_target: L2
+    last_report: null
+    gaps_doc: implementation/gaps/KNOWN-GAPS.md
+
+- id: odtis-spec
+  path: "."
+  organization: FinnectOS
+  profiles_claimed:
+  - reference-architecture
+  - operator
+  odtis_sections:
+  - "01-scope-conformance"
+  - "07-operator-governance"
+  - "10-deployment-profiles"
+  surfaces:
+  - id: ri-map
+    module: implementation/RI-MAP.yaml
+    backlog_epic: P4-E07
+    status: done
+    odtis_ids:
+    - ODTIS-0536
+
+  - id: conformance-pipeline
+    module: scripts/validate-conformance-statement.py
+    backlog_epic: P0-E01
+    status: done
+    odtis_ids:
+    - ODTIS-0008
+    - ODTIS-0532
+    - ODTIS-0534
+    - ODTIS-0010
+
+  - id: profile-guardrails
+    module: scripts/validate-conformance-statement.py
+    backlog_epic: P0-E02
+    status: done
+    odtis_ids:
+    - ODTIS-0001
+    - ODTIS-0002
+    - ODTIS-0004
+    - ODTIS-0007
+    - ODTIS-0009
+
+  conformance:
+    level_target: L1
+    last_report: null
+    gaps_doc: implementation/gaps/KNOWN-GAPS.md
+
+unmapped_product_backlog:
+  federation:
+    phase: P3
+    backlog_epics: [P4-E01, P3-E08]
+    odtis_range: ODTIS-0401..0408
+    target_repo: ven-trust-network
+    status: partial
+
+  operator_cross_cutting:
+    phase: P3
+    backlog_epics: [P3-E01, P3-E02, P3-E03, P3-E04, P3-E05, P3-E06, P3-E07, P3-E08, P3-E09]
+    odtis_range: ODTIS-0501..0535
+    target_repos: [ven-identity-core, ven-trust-network, ven-infra-core]
+    status: partial
+
+  extended_modules:
+    phase: P4
+    backlog_epics: [P4-E02, P4-E03, P4-E04, P4-E05, P4-E06, P3-E07]
+    odtis_range: ODTIS-0340..0365
+    target_repo: ven-identity-core
+    status: partial
+
+second_implementation:
+  status: pending
+  notes: Keycloak-as-ODTIS-Core or external operator pilot
+
+coverage_summary:
+  ven_identity_core_surfaces: 19
+  ven_trust_network_surfaces: 11
+  odtis_spec_surfaces: 3
+  tracked_gaps: 4

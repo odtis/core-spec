@@ -1,0 +1,145 @@
+openapi: 3.1.0
+info:
+title: VenID Exchange Gateway API
+version: 0.9.0-draft
+description: >
+Trust Network exchange gateway - sole external entry for partner traffic.
+ODTIS 4.1-4.4, ODTIS-0204. Source: P04, P18 6.
+license:
+name: CC BY 4.0
+url: https://creativecommons.org/licenses/by/4.0/
+
+servers:
+- url: https://gateway.example.venid.org/v1/exchange
+description: Illustrative local exchange gateway base
+
+tags:
+- name: Exchange
+description: Partner message exchange
+- name: Health
+description: Gateway health
+
+paths:
+/messages:
+post:
+operationId: exchange.message.post
+tags: [Exchange]
+summary: Submit partner exchange message (sender or receiver)
+description: >
+Unified protocol for inbound and outbound partner messages.
+Receiver mode validates partner cert and service grant before routing.
+security:
+- partnerMutualTLS: []
+parameters:
+- name: X-Message-Id
+in: header
+required: true
+schema:
+type: string
+- name: X-Timestamp
+in: header
+required: true
+schema:
+type: string
+format: date-time
+requestBody:
+required: true
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ExchangeMessage'
+responses:
+'200':
+description: Message accepted and routed
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ExchangeResponse'
+'401':
+$ref: './venid-common.openapi.yaml#/components/responses/Unauthorized'
+'403':
+$ref: './venid-common.openapi.yaml#/components/responses/Forbidden'
+'409':
+description: Replay detected
+content:
+application/json:
+schema:
+$ref: './venid-common.openapi.yaml#/components/schemas/ErrorResponse'
+
+/messages/{message_id}:
+get:
+operationId: exchange.message.status.get
+tags: [Exchange]
+summary: Query exchange message status
+security:
+- partnerMutualTLS: []
+parameters:
+- name: message_id
+in: path
+required: true
+schema:
+type: string
+responses:
+'200':
+description: Message status
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ExchangeResponse'
+'404':
+$ref: './venid-common.openapi.yaml#/components/responses/NotFound'
+
+/health:
+get:
+operationId: exchange.health.get
+tags: [Health]
+summary: Gateway health check
+responses:
+'200':
+description: Gateway operational
+content:
+application/json:
+schema:
+type: object
+required: [status]
+properties:
+status:
+type: string
+enum: [ok, degraded]
+
+components:
+securitySchemes:
+partnerMutualTLS:
+type: mutualTLS
+description: Partner client certificate issued under operator PKI (ODTIS-0204)
+
+schemas:
+ExchangeMessage:
+type: object
+required: [partner_id, service_id, payload]
+properties:
+partner_id:
+type: string
+description: Calling partner identifier from trust registry
+service_id:
+type: string
+description: Target catalogued service
+payload:
+type: object
+additionalProperties: true
+description: Opaque service payload; schema defined per service contract
+
+ExchangeResponse:
+type: object
+required: [message_id, status]
+properties:
+message_id:
+type: string
+status:
+type: string
+enum: [accepted, routed, denied, failed]
+denial_code:
+$ref: './venid-common.openapi.yaml#/components/schemas/ErrorCode'
+trace_id:
+type: string
+description: Audit correlation ID (ODTIS-0529)

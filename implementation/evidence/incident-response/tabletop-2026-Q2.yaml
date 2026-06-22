@@ -1,0 +1,29 @@
+# Incident response tabletop — 2026 Q2 (ODTIS-0515)
+exercise_id: IR-TTX-2026-Q2
+operator: FinnectOS VenID DTI
+date: "2026-06-08"
+scenario: exchange_gateway_degraded_crl_unavailable
+
+participants:
+  - role: SOC on-call
+    id: soc-1
+  - role: PKI steward
+    id: pki-officer-1
+  - role: Platform architect
+    id: arch-1
+
+severity_assigned: S2
+response_time_minutes: 25
+escalation_path_followed: true
+regulator_notification_required: false
+
+outcomes:
+  containment: fail_closed_crl_policy_verified
+  recovery: trust_authority_crl_restored
+  post_mortem_scheduled: "2026-06-13"
+
+notes: >
+  Simulated CRL fetch failure. exchange-gateway denied partner validation (fail-closed).
+  PKI steward restored CRL endpoint; smoke checks passed within 45 minutes.
+
+next_scheduled: "2026-09-10"

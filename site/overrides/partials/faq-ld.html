@@ -1,0 +1,592 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is ODTIS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open Digital Trust Infrastructure Specification (ODTIS) is a vendor-neutral, CC BY 4.0 open specification for digital trust infrastructure: reusable Core Identity (OIDC-based IdP, verification API, consent), Trust Network (institutional exchange gateway, catalog, grants), Operator governance, Federation between operators, security and audit events, and optional Extended modules (E-Wallet, E-KYB, E-Signature, and others)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What problem does ODTIS solve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ODTIS addresses two systemic gaps that many countries face in parallel:"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ODTIS the same as VenID?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. VenID is a product family and informative reference implementation (ven-identity-core, ven-trust-network). ODTIS is the normative specification anyone can implement without VenID code. A second independent implementation is expected before ODTIS 1.0.0 production claims. See Reference implementations overview."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ODTIS open source?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The specification text and machine-readable artifacts are open under CC BY 4.0. ODTIS defines interfaces and behaviour, not a single open-source product. Implementations may be open or proprietary; conformance is proven by tests and published statements, not by repo license."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this ODTIS 1.0?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The current release is 0.9.0-draft (external review draft). See Project status and Spec lifecycle stages. Annex A OpenAPI is frozen at this version; prose may still change via the RFC process until 1.0.0."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What language is authoritative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "English only for normative MUST/SHOULD/MAY text. End-user consent screens must be citizen-readable in the local locale, but the spec prose stays English. Language policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who maintains ODTIS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interim stewards under VenID / FinnectOS governance (Maintainers, Foundation charter). Long-term intent is an ODTIS Foundation after incorporation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ODTIS only for Venezuela?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ODTIS is jurisdiction-neutral. VenID and FinnectOS originated the work; the spec is written for any country or operator that adopts the profiles and conformance model."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is ODTIS different from OpenID Connect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenID Connect (OIDC) is an authentication protocol. ODTIS Core Identity binds OIDC Core, Discovery, and PKCE and adds normative deltas: LoA claims, verification API semantics, consent scope rules, RP admission, audit events, and conformance profiles. Implement OIDC first; use ODTIS for what OIDC does not standardize in a national/operator context. Details: OIDF positioning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ODTIS Federation the same as OpenID Federation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ODTIS Federation (section 6) is bilateral, non-transitive trust between DTI operators with explicit federation agreements and regulator export. OpenID Federation is a multilateral OIDC/OAuth trust framework (entities, trust anchors, federation metadata). Do not assume interoperability between them without a written mapping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ODTIS relate to eIDAS 2.0 / EUDI Wallet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "eIDAS regulates European digital identity and trust services; EUDI Wallet builds on that framework. ODTIS is a technical interoperability specification that can align with eIDAS concepts (LoA, qualified signatures) via Annex C standards mapping but is not an eIDAS compliance checklist. Operators map ODTIS LoA and modules to local law."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ODTIS relate to NIST SP 800-63?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ODTIS section 2 maps LoA levels to NIST 800-63-style proofing and authenticator concepts. ODTIS adds operator, gateway, federation, and audit requirements beyond identity proofing alone. See NIST and X-Road liaison index."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ODTIS compare to X-Road?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "X-Road is a mature national data exchange layer (members, security servers, central components). ODTIS Trust Network profile covers similar institutional exchange goals (catalog, grants, mTLS gateway, signed audit) with a REST/OpenAPI-first model and explicit ODTIS requirement IDs. X-Road deployments are informative comparators, not drop-in equivalents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ODTIS a replacement for OAuth 2.0?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Core Identity requires OAuth 2.0 and OIDC where applicable. ODTIS specifies additional MUST/SHOULD for operators, verification, consent, trust network, and audit that RFC 6749/OIDC do not cover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ODTIS require verifiable credentials (VCs)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for Core Identity. Extended E-Wallet sub-module (Annex D) addresses holder-bound presentations where operators choose OID4VP-style flows. VC-heavy architectures may implement Extended modules; base Core Identity remains OIDC-centric."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is ODTIS different from W3C DID / decentralized identity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ODTIS allows centralized operator-led identity (typical government IdP) and optional wallet modules. It does not mandate DIDs. Problem framing is institutional trust infrastructure, not a specific ledger or DID method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which ODTIS profile should I implement first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Core Identity for citizen IdP, verification API, consent, and citizen portal. Add Trust Network when you operate an exchange gateway between institutions. Add Operator for platform duties (SLA, PKI stewardship, regulator API). Add Federation only for cross-operator bilateral trust. Extended sub-modules are Phase 4 scope. Compare: Profile comparison | path: Getting started."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need all ten specification sections?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only sections mandatory for your declared profile(s) in Profile definitions. Section 1 (scope and conformance) applies to everyone. Section 8 (security) and section 9 (audit events) apply broadly when your profile includes those surfaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I declare multiple profiles at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, when your deployment actually implements them. Your conformance statement must list every profile your public claim implies, plus reference-architecture. Do not declare Federation or Extended without meeting phase rules (Section 10)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is deployment phase 1-4?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Phases gate which profiles and Extended modules you may claim in a conformance statement (ODTIS-0532):"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim \"ODTIS compatible\" without tests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No meaningful public claim. Publish a conformance statement backed by L1 at minimum and L2 for behaviour claims. The \"ODTIS Certified\" mark requires L3 third-party attestation per Trademark policy. Spec section 1.9."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does ODTIS adoption typically take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depends on starting point. A team with OIDC experience often reaches L2 Core Identity staging in weeks to months; Trust Network + Operator adds gateway, PKI, and governance work; L3 production attestation is operator-specific. Use Phased backlog as an informative RI planning reference, not a normative timeline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the normative ODTIS text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sections 1-10 under Index with RFC 2119 keywords (MUST/SHOULD/MAY). Start at Section 1 - Scope and conformance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are ODTIS requirement IDs (ODTIS-MNNN)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "149 registry IDs (e.g. ODTIS-0301) in Requirements registry, each linked to a spec section and conformance test stub. Browse: Requirements index."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Book 2 normative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Book 2 (Reference Architecture monograph) is informative. It must not contradict ODTIS MUST requirements. Cross-review: Book 2 cross-review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the ODTIS Verification API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A normative REST surface (Annex A S3) for relying parties to request identity verification with consent scope, LoA, and audit. Core Identity profile. Spec: Section 3 | OpenAPI: Annex A registry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the ODTIS exchange gateway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Trust Network ingress/egress for institutional exchange: mTLS, partner validation, grant checks, metadata routing without centralizing business payloads (Book 1 D4). Spec: Section 4 | surface S4 in Annex A."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Levels of Assurance (LoA) in ODTIS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Canonical values low, medium, high, national bound to proofing and RP minimum requirements (section 2). National LoA may require E-Registry adapter activation (Extended). Matrix: Annex C LoA mapping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What ODTIS audit events must I emit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Section 9 defines a catalog with JSON schemas under Schemas. Events include identity lifecycle, verification, consent, grants, exchange, federation, and operator PKI ceremonies. Envelope: envelope.schema.json."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ODTIS mandate a specific IdP product?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Core Identity requires OIDC/OAuth behaviour per profile deltas. Keycloak, custom Java, or commercial IdPs may conform if they pass declared tests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ODTIS require mTLS everywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trust Network exchange between partners: yes for gateway mutual TLS where profile is claimed. Citizen-facing OIDC may use standard TLS; mTLS applies to institutional exchange paths per section 4."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is metadata-only exchange (D4)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trust network stores routing metadata and audit envelopes, not authoritative copies of business payloads. Requirement ODTIS-0225. Prevents central data lake anti-patterns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the ODTIS Extended profile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Optional sub-modules beyond Core Identity: E-Wallet, E-KYB, E-Signature, E-Registry, E-Inclusion, E-Webhook, and others catalogued in Annex D. Declared only at deployment phase 4 unless spec errata says otherwise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is E-Registry in ODTIS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An adapter pattern for national registry verification (hash/query, no civil-authority bypass) with phased activation. Extended module; not a replacement for Core Identity proofing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is E-Wallet vs Core Identity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Core Identity uses OIDC-centric flows. E-Wallet (Extended) adds holder-bound presentation semantics where operators adopt wallet modules. IDs ODTIS-0340..0343 are Extended, not Core Identity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I implement Extended modules before Phase 4?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You may build code early, but your conformance claim must match Section 10 phase rules. False phase claims fail statement validation and L3 audit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I download ODTIS OpenAPI (Annex A)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Browse Annex A OpenAPI registry on this site or download bundles from Downloads. Verify checksums: CHECKSUMS.sha256 | Freeze record."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are YAML and JSON files not in every HTML page?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MkDocs excludes large machine-readable files from HTML rendering. They are copied into the static site root on build and listed in Downloads. Clone the GitHub repository for full tree development."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Annex A frozen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes at 0.9.0-draft. Normative API bundle versions and checksums are fixed until the next major release process. Editorial OpenAPI fixes follow Errata policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the ODTIS requirements registry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Requirements registry (149 IDs), Profile definitions, Audit event catalog. Human index: Requirements index | Glossary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cite ODTIS in a paper or procurement document?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "How to cite and Citation metadata (CFF). Always cite exact ODTIS version and declared profile(s). Zenodo DOI for ODTIS snapshot: pending (Release checklist)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I verify a vendor's ODTIS claim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Request their published conformance-statement.yaml, ODTIS version, profiles, level (L2/L3), environment, and evidence (L2 JSON, audit reports). Validate structure with python3 scripts/validate-conformance-statement.py. L3 claims require third-party attestation per Certification program."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ODTIS L1 conformance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Repository / lab integrity: registry links, annex checksums, manifest completeness, validators pass in CI. Run: cd odtis && ./conformance/run.sh. Does not prove live deployment behaviour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ODTIS L2 conformance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Staging behaviour: automated checks and smoke scripts against your deployment (ODTIS_TARGET), plus honest conformance statement. Self-certified; suitable for pilots and procurement pre-qualification when disclosed as staging."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ODTIS L3 conformance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Third-party production attestation by an independent auditor. Required for the ODTIS Certified trademark. Guides: Auditor guide | L3 checklist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I self-certify Core Identity (L2)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1. Read Self-certification guide. 2. Run L1: ./conformance/run.sh 3. Set ODTIS_TARGET to your OIDC realm root URL. 4. Run sandbox checks: ./conformance/sandbox/run-sandbox-check.sh 5. Publish conformance statement with level: L2 and evidence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an ODTIS conformance statement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "YAML + human-readable markdown declaring odtis_version, profiles, level, deployment_phase, environment, tests, and contact. Template: Conformance statement template. Required for honest public claims (ODTIS-0008)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many ODTIS test procedures exist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "159 procedures linked to registry MUSTs; 81 have smoke/L2 evidence in the reference lab (Status). Pending stubs still obligate implementers to execute against their system before claiming tests.status: pass."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are conformance test procedures documented?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Index: Tests. Individual test_*.md files live in the Git repository (browse via GitHub). Not all are rendered as HTML pages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ODTIS suitable for a national digital identity program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, when you adopt Core Identity + Operator (and optionally Trust Network for cross-agency exchange). ODTIS is designed for DTI operators running IdP, verification, consent, and institutional trust layers. Map local law (eIDAS, national PKI, data protection) via operator policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we need a single national operator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not mandated. ODTIS supports one operator per country or federated multiple operators (section 6). Architecture choice is deployment-specific; spec requires clear published scope and conformance statements per operator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ODTIS support regulator oversight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Operator profile includes Regulator API export (Annex A S8), SLA metrics, federation agreement export, and audit event access. Federation profile adds bilateral agreement metadata export (ODTIS-0406)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we procure \"ODTIS-compliant\" software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if RFP language references specific ODTIS version, profiles, level (L2/L3), and required requirement IDs. Ask vendors for published conformance statements and L2/L3 evidence. Avoid vague \"compatible\" without tests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ODTIS define citizen UX for consent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Section 5 requires citizen-readable consent, scope description, and RP admission rules. Exact UI is operator-specific; conformance tests check behaviour and audit, not pixel-perfect design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I ship a product without VenID code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ODTIS is intentionally vendor-neutral. Implement from Index, Annex A OpenAPI, and conformance tests. VenID repos are informative binding examples: Component bindings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which APIs should my identity product expose first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Annex A surfaces S2 (OIDC/OAuth IdP), S3 (Verification API), and citizen portal endpoints per Core Identity. Trust Network vendors add S4 gateway and catalog APIs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I map ODTIS to my existing OIDC server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with OIDF positioning gap list: LoA claims, verification API, consent scope enforcement, RP admission, audit events. Run OIDC static checks against your realm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can SaaS multi-tenant operators conform?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if each tenant's published service scope, grants, and audit isolation meet profile MUSTs. Statement should describe tenancy model and which profiles apply per tenant tier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are known gaps in the VenID reference stack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Known gaps and Deferred production track document RI limits (live mTLS, national TSA, third-party L3). They do not waive spec MUSTs for independent vendors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ODTIS an IETF RFC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. Scoped pieces (TEP, Verify API, Events, Federation protocol) have Markdown Internet-Drafts under Drafts. Roadmap: IETF roadmap | scoping: IETF scoping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will ODTIS become an OpenID Foundation specification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Core Identity uses OIDC; ODTIS maintains profile deltas and operator/trust-network layers OIDF does not cover. Liaison positioning: OIDF positioning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ODTIS relate to GovStack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Informative alignment for digital government building blocks: GovStack positioning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Book 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Reference Architecture monograph (informative architecture chapters). Feeds ODTIS but does not override MUST text. Cross-review: Book 2 cross-review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Book 3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Implementation Guide (informative deployment patterns). Useful for engineering; not conformance authority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is P18?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paper 18 (Standards alignment with ODTIS) is an informative academic bridge. Normative text remains ODTIS + registry. Alignment tables: Annex C."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I implement from Book 3 alone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No for conformance claims. Authority: ODTIS sections 1-10, annexes, declared profile, and tests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I propose a normative RFC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copy RFC template, open a discussion issue, and follow Governance process. Normative changes require comment period and steward review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I join a working group?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "See Working groups and Maintainers. Collaborate for institutions, hackathons, and research partnerships."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What license applies to contributions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Specification text: CC BY 4.0. IPR policy | Contributor terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the official ODTIS website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "https://odtis.org - this site. Source: Site. Operators with repo access: ./scripts/deploy-ec2.sh (see scripts/DEPLOY-EC2-ODTIS-ORG.md in the repository)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I contact the ODTIS team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Email: info@odtis.org | Contact page: Contact | GitHub: Issues"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is analytics used on odtis.org?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by default. If enabled later, Privacy policy will be updated. Theme preference uses browser local storage only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I mirror or translate ODTIS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mirrors are welcome with attribution (CC BY 4.0). Translations are not normative until a steward-approved process exists. Language policy."
+      }
+    }
+  ]
+}
+</script>

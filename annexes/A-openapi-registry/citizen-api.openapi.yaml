@@ -1,0 +1,146 @@
+openapi: 3.1.0
+info:
+title: VenID Citizen API
+version: 0.9.0-draft
+description: >
+Surface S3 - Citizen portal and registration.
+ODTIS 3.7, 3.8. Source: P14 5.
+license:
+name: CC BY 4.0
+url: https://creativecommons.org/licenses/by/4.0/
+
+servers:
+- url: https://api.example.venid.org/v1/citizen
+description: Illustrative production base path
+
+tags:
+- name: Registration
+- name: Profile
+- name: Consent
+
+paths:
+/register/start:
+post:
+operationId: citizen.register.start
+tags: [Registration]
+summary: Start registration session
+responses:
+'201':
+description: Registration started
+content:
+application/json:
+schema:
+type: object
+required: [registration_id, expires_at]
+properties:
+registration_id:
+type: string
+format: uuid
+expires_at:
+type: string
+format: date-time
+
+/register/status:
+get:
+operationId: citizen.register.status
+tags: [Registration]
+summary: Registration workflow status
+parameters:
+- name: X-Registration-Id
+in: header
+required: true
+schema:
+type: string
+format: uuid
+responses:
+'200':
+description: Current registration status
+
+/me:
+get:
+operationId: citizen.profile.me.get
+tags: [Profile]
+summary: Citizen profile summary (ODTIS-0322)
+security:
+- bearerAuth: []
+responses:
+'200':
+description: Profile
+content:
+application/json:
+schema:
+type: object
+properties:
+subject_id:
+type: string
+format: uuid
+assurance_level:
+$ref: './venid-common.openapi.yaml#/components/schemas/AssuranceLevel'
+
+/me/verification-status:
+get:
+operationId: citizen.profile.verification_status.get
+tags: [Profile]
+summary: Verification status and LoA (ODTIS-0322)
+security:
+- bearerAuth: []
+responses:
+'200':
+description: Verification status
+content:
+application/json:
+schema:
+type: object
+required: [verified, assurance_level]
+properties:
+verified:
+type: boolean
+assurance_level:
+$ref: './venid-common.openapi.yaml#/components/schemas/AssuranceLevel'
+verified_at:
+type: string
+format: date-time
+
+/consents:
+get:
+operationId: citizen.consents.list
+tags: [Consent]
+summary: List active consents (ODTIS-0323)
+security:
+- bearerAuth: []
+responses:
+'200':
+description: Consent list
+content:
+application/json:
+schema:
+type: object
+properties:
+items:
+type: array
+items:
+$ref: './venid-common.openapi.yaml#/components/schemas/ConsentSummary'
+
+/consents/{client_id}/revoke:
+post:
+operationId: citizen.consents.revoke
+tags: [Consent]
+summary: Revoke RP consent (ODTIS-0330)
+security:
+- bearerAuth: []
+parameters:
+- name: client_id
+in: path
+required: true
+schema:
+type: string
+responses:
+'200':
+description: Consent revoked
+'404':
+$ref: './venid-common.openapi.yaml#/components/responses/NotFound'
+
+components:
+securitySchemes:
+bearerAuth:
+$ref: './venid-common.openapi.yaml#/components/securitySchemes/bearerAuth'

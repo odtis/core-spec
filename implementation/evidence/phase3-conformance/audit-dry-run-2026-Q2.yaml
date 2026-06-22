@@ -1,0 +1,33 @@
+audit_id: venid-phase3-audit-dry-run-2026-Q2
+as_of: 2026-06-12
+type: internal_tabletop
+deployment_phase: 3
+conformance_level: L2
+scope:
+  profiles:
+    - reference-architecture
+    - core-identity
+    - trust-network
+    - operator
+  extended_modules_active: []
+  prep_modules:
+    - E-Registry
+    - federation-agreements
+statement_path: odtis/implementation/statements/venid-phase3-operator/conformance-statement.yaml
+participants:
+  - role: operator_security
+    name: VenID platform team
+  - role: conformance_lead
+    name: ODTIS implementation lead
+findings:
+  - id: F-01
+    severity: informational
+    summary: E-Registry adapter implemented but inactive by default (venid.eregistry.active=false)
+  - id: F-02
+    severity: informational
+    summary: Federation agreements prep complete; production routing disabled (federation.enabled=false)
+  - id: F-03
+    severity: low
+    summary: Live production attestations pending for Operator L3 and national registry bilateral agreement
+outcome: conditional_pass
+notes: Internal dry-run for P3-E09; not a third-party audit. Re-run before production phase declaration.

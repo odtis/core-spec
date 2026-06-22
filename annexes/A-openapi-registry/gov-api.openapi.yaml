@@ -1,0 +1,95 @@
+openapi: 3.1.0
+info:
+title: VenID Government Integration API
+version: 0.9.0-draft
+description: >
+Surface S7 - Government agency integration (sector-specific verification).
+ODTIS 3.5, 4. Cross-ref E-Registry (Annex D).
+license:
+name: CC BY 4.0
+url: https://creativecommons.org/licenses/by/4.0/
+
+servers:
+- url: https://api.example.venid.org/v1/gov
+description: Illustrative government API base
+
+tags:
+- name: Verification
+- name: Registry
+
+paths:
+/verify:
+post:
+operationId: gov.verify.post
+tags: [Verification]
+summary: Government agency subject verification
+security:
+- bearerAuth: []
+- clientCredentials: [gov]
+requestBody:
+required: true
+content:
+application/json:
+schema:
+type: object
+required: [subject_id]
+properties:
+subject_id:
+type: string
+format: uuid
+required_loa:
+$ref: './venid-common.openapi.yaml#/components/schemas/AssuranceLevel'
+scopes:
+type: array
+items:
+type: string
+responses:
+'200':
+description: Verification result
+content:
+application/json:
+schema:
+$ref: './venid-common.openapi.yaml#/components/schemas/VerifyResponse'
+'403':
+$ref: './venid-common.openapi.yaml#/components/responses/Forbidden'
+
+/registry/assertions:
+post:
+operationId: gov.registry.assertion.post
+tags: [Registry]
+summary: Submit civil registry assertion (E-Registry integration)
+security:
+- bearerAuth: [gov]
+requestBody:
+required: true
+content:
+application/json:
+schema:
+type: object
+required: [subject_id, assertion_type]
+properties:
+subject_id:
+type: string
+format: uuid
+assertion_type:
+type: string
+payload:
+type: object
+additionalProperties: true
+responses:
+'202':
+description: Assertion accepted for processing
+'403':
+$ref: './venid-common.openapi.yaml#/components/responses/Forbidden'
+
+components:
+securitySchemes:
+bearerAuth:
+$ref: './venid-common.openapi.yaml#/components/securitySchemes/bearerAuth'
+clientCredentials:
+type: oauth2
+flows:
+clientCredentials:
+tokenUrl: https://{host}/realms/{realm}/protocol/openid-connect/token
+scopes:
+gov: Government agency API access

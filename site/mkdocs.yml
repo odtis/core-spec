@@ -1,0 +1,288 @@
+site_name: ODTIS
+site_url: https://odtis.org
+site_description: Open Digital Trust Infrastructure Specification (ODTIS) - vendor-neutral standard for digital identity, trust networks, conformance, and institutional exchange.
+repo_url: https://github.com/odtis/core-spec
+edit_uri: edit/main/
+
+docs_dir: ..
+site_dir: ../../build/odtis-spec-site
+
+exclude_docs: |
+  .venv-site/
+  build/
+  /README.md
+  /CONTRIBUTING.md
+  /CODE_OF_CONDUCT.md
+  /SECURITY.md
+  PLAN-FASES.md
+  site/requirements.txt
+  scripts/
+  **/*.json
+  **/*.yaml
+  **/*.openapi.yaml
+  annexes/**/threats.yaml
+  annexes/**/mapping.yaml
+  annexes/**/standards.yaml
+  annexes/**/loa-matrix.yaml
+  annexes/**/INDEX.yaml
+  annexes/**/extended-requirements.yaml
+  annexes/**/sub-modules.yaml
+  annexes/**/activation.yaml
+  conformance/manifest.yaml
+  conformance/profiles/**/manifest.yaml
+  conformance/tests/**/test_*.md
+  conformance/profiles/**/README.md
+  traceability/
+  site/README.md
+  publication/README.md
+  token_dat.md
+
+validation:
+  nav:
+    omitted_files: info
+  links:
+    not_found: info
+    absolute_links: ignore
+    unrecognized_links: info
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  favicon: site/assets/favicon.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+      primary: white
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Dark mode
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.progress
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+    - content.tabs.link
+  copyright: Copyright &copy; 2026 <a href="https://venid.org">VenID</a> / FinnectOS &middot; ODTIS 0.9.0-draft &middot; <a href="/site/LICENSE/">CC BY 4.0</a>
+
+extra_css:
+  - site/stylesheets/extra.css
+  - site/stylesheets/gitbook-theme.css
+  - site/stylesheets/mobile.css
+
+extra_javascript:
+  - site/javascripts/extra.js
+
+nav:
+  - Home: index.md
+  - Project:
+      - Overview: project/README.md
+      - About the project:
+          - About: site/ABOUT.md
+          - The team: site/TEAM.md
+          - Contact: site/CONTACT.md
+      - Adoption:
+          - Adoption guide: ADOPTION.md
+          - Downloads & artifacts: site/DOWNLOADS.md
+          - Requirements registry: registry/README.md
+          - Status: site/STATUS.md
+          - FAQ: site/FAQ.md
+      - Legal:
+          - Privacy: site/PRIVACY.md
+          - Code of conduct: site/CODE-OF-CONDUCT.md
+          - License: site/LICENSE.md
+          - Terms of use: site/TERMS.md
+      - Citation & releases:
+          - How to cite: publication/HOW-TO-CITE.md
+          - Changelog: CHANGELOG.md
+          - Zenodo release checklist: publication/zenodo/RELEASE-CHECKLIST.md
+      - Reference implementations:
+          - Overview: implementation/README.md
+          - Component bindings: site/COMPONENT-BINDINGS.md
+          - Known gaps: implementation/gaps/KNOWN-GAPS.md
+          - Deferred production track: implementation/gaps/DEFERRED-TRACK.md
+      - IETF working drafts:
+          - Overview: ietf/README.md
+          - TEP: ietf/drafts/draft-odtis-tep-00.md
+          - Verify API: ietf/drafts/draft-odtis-verify-api-00.md
+          - Events: ietf/drafts/draft-odtis-events-00.md
+          - Federation protocol: ietf/drafts/draft-odtis-federation-00.md
+          - Implementation report template: ietf/implementation-report/TEMPLATE.md
+      - Governance:
+          - Overview: governance/README.md
+          - Contributing: governance/CONTRIBUTING.md
+          - External review cycle 1: governance/REVIEW-CYCLE-1.md
+          - Feedback channels: governance/FEEDBACK.md
+          - Review close checklist: governance/REVIEW-CYCLE-1-CLOSE.md
+          - Spec lifecycle: governance/SPEC-STAGES.md
+          - Section review: governance/SECTION-REVIEW.md
+          - Annex review: governance/ANNEX-REVIEW.md
+          - Book 2 cross-review: governance/BOOK2-CROSS-REVIEW.md
+          - Review templates: governance/review/README.md
+          - Clarifications (cycle 1):
+              - FB-001 test linkage: governance/review/clarify-001-5.1.4-test-linkage.md
+              - FB-003 HA boundary: governance/review/clarify-002-ha-informative-boundary.md
+              - FB-004 autodiscovery: governance/review/clarify-003-autodiscovery-should.md
+              - FB-005 sandbox template: governance/review/sandbox-001-l2-report-template.md
+          - Policies:
+              - Governance process: governance/GOVERNANCE.md
+              - Versioning: governance/VERSIONING.md
+              - Language policy: governance/LANGUAGE.md
+              - IPR policy: governance/IPR-POLICY.md
+              - Trademark policy: governance/TRADEMARK-POLICY.md
+              - Errata: governance/ERRATA.md
+              - Maintainers: governance/MAINTAINERS.md
+              - Foundation charter: governance/FOUNDATION-CHARTER.md
+              - IETF roadmap: governance/IETF-ROADMAP.md
+              - RFC template: governance/RFC-TEMPLATE.md
+          - Liaison:
+              - OIDF positioning: governance/liaison/OIDF-POSITIONING.md
+              - GovStack positioning: governance/liaison/GOVSTACK-POSITIONING.md
+              - IETF scoping: governance/liaison/IETF-SCOPING.md
+              - NIST and X-Road: governance/liaison/NIST-XROAD-INDEX.md
+          - RFC drafts:
+              - Index: governance/rfc/README.md
+              - Federation interop: governance/rfc/2026-06-12-federation-interoperability.md
+          - Working groups: governance/working-groups/README.md
+      - Repository map: STRUCTURE.md
+      - Build plan: PLAN-PHASES.md
+  - Visual guide: site/VISUAL-GUIDE.md
+  - Specification:
+      - spec/INDEX.md
+      - Profiles:
+          - Profile comparison: site/PROFILES.md
+          - Reference Architecture: spec/profiles/reference-architecture-profile.md
+          - Core Identity: spec/profiles/core-identity-profile.md
+          - Trust Network: spec/profiles/trust-network-profile.md
+          - Federation: spec/profiles/federation-profile.md
+          - Operator: spec/profiles/operator-profile.md
+          - Extended: spec/profiles/extended-profile.md
+      - Normative sections:
+          - "1 Scope and conformance": spec/01-scope-conformance/SPEC.md
+          - "2 Terminology and LoA": spec/02-terminology-loa/SPEC.md
+          - "3 Identity services": spec/03-identity-services/SPEC.md
+          - "4 Trust network": spec/04-trust-network/SPEC.md
+          - "5 Consent and privacy": spec/05-consent-privacy/SPEC.md
+          - "6 Federation": spec/06-federation/SPEC.md
+          - "7 Operator governance": spec/07-operator-governance/SPEC.md
+          - "8 Security": spec/08-security/SPEC.md
+          - "9 Audit and events": spec/09-audit-events/SPEC.md
+          - "10 Deployment": spec/10-deployment-profiles/SPEC.md
+      - Reference indexes:
+          - Requirements index: site/REQUIREMENTS-INDEX.md
+          - Domain map: site/DOMAINS.md
+          - Glossary: site/GLOSSARY.md
+  - Conformance:
+      - Overview: conformance/README.md
+      - Test procedures: conformance/tests/README.md
+      - Getting started: site/GETTING-STARTED.md
+      - FAQ: conformance/FAQ.md
+      - L1 and L2 self-assessment:
+          - Self-certification guide: conformance/certification/self-cert-guide.md
+          - Sandbox overview: conformance/sandbox/README.md
+          - L2 report template: conformance/sandbox/L2-REPORT-TEMPLATE.md
+      - L3 certification:
+          - Certification program: governance/CERTIFICATION.md
+          - Auditor guide: conformance/certification/auditor-guide.md
+          - L3 audit checklist: conformance/certification/L3-AUDIT-CHECKLIST.md
+          - L3 certification package: implementation/L3-CERTIFICATION-PACKAGE.md
+          - Example Phase 4 statement: implementation/statements/venid-phase4-full/conformance-statement.md
+  - Community:
+      - Collaborate: site/COLLABORATE.md
+      - Newsletter: site/NEWSLETTER.md
+      - "News - June 2026": site/news/2026-06.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  generator: false
+  seo:
+    og_image: https://odtis.org/site/assets/og-card.svg
+  meta:
+    - name: keywords
+      value: ODTIS, digital identity, trust network, conformance, OpenAPI, OIDC, LoA, digital trust infrastructure, interoperability, certification
+    - name: author
+      value: ODTIS / FinnectOS
+    - name: robots
+      value: index, follow
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/odtis/core-spec
+  odtis_footer_links:
+    - name: About
+      url: site/ABOUT/
+    - name: Status
+      url: site/STATUS/
+    - name: Adoption
+      url: ADOPTION/
+    - name: Downloads
+      url: site/DOWNLOADS/
+    - name: FAQ
+      url: site/FAQ/
+    - name: Visual guide
+      url: site/VISUAL-GUIDE/
+    - name: Collaborate
+      url: site/COLLABORATE/
+    - name: Newsletter
+      url: site/NEWSLETTER/
+    - name: Annexes
+      url: annexes/
+    - name: Changelog
+      url: CHANGELOG/
+    - name: Cite
+      url: publication/HOW-TO-CITE/
+    - name: Team
+      url: site/TEAM/
+    - name: Contact
+      url: site/CONTACT/
+    - name: Privacy
+      url: site/PRIVACY/
+    - name: Code of conduct
+      url: site/CODE-OF-CONDUCT/
+    - name: License
+      url: site/LICENSE/
+    - name: Terms
+      url: site/TERMS/
+    - name: Feedback
+      url: https://github.com/odtis/core-spec/issues
+
+# Build: ./scripts/build-site.sh  OR  mkdocs serve -f site/mkdocs.yml

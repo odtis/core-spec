@@ -1,0 +1,28 @@
+# Normative binding: E-Signature service (VenID reference implementation)
+
+component_id: signature-service
+ri_map_surface: signature-service
+repository: ven-identity-core
+module_path: services/signature-service
+profile: extended
+backlog_epic: P4-E05
+status: partial
+
+summary: >
+  Identity-bound advanced electronic signatures under operator PKI/TSP policy,
+  with auditable sign and verify events correlated to subject LoA.
+
+implementation_notes: >
+  SignatureController; SignatureLoaPolicy; SignatureService binds operations to
+  active assurance level; keys referenced via operator PKI docs (national TSA deferred).
+
+smoke_script: conformance/run-esignature-checks.sh
+
+odtis_ids:
+  - ODTIS-0361
+  - ODTIS-0362
+  - ODTIS-0363
+
+evidence:
+  - implementation/statements/venid-phase4-full/l2-report.md
+  - ven-identity-core/docs/operator/E-SIGNATURE.md

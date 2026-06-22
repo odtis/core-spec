@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% set page_title = page.meta.title if page.meta and page.meta.title else page.title %}
+  {% set page_desc = page.meta.description if page.meta and page.meta.description else config.site_description %}
+  {% set canonical = page.canonical_url %}
+  {% set site_root = config.site_url.rstrip('/') %}
+  {% set og_image = config.extra.seo.og_image | d(site_root ~ '/site/assets/og-card.svg') %}
+  {% set full_title = page_title ~ " - " ~ config.site_name %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name | e }}">
+  <meta property="og:title" content="{{ full_title | striptags | e }}">
+  <meta property="og:description" content="{{ page_desc | striptags | e }}">
+  <meta property="og:url" content="{{ canonical | e }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="{{ og_image | e }}">
+  <meta property="og:image:alt" content="ODTIS - Open Digital Trust Infrastructure Specification">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ full_title | striptags | e }}">
+  <meta name="twitter:description" content="{{ page_desc | striptags | e }}">
+  <meta name="twitter:image" content="{{ og_image | e }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "{{ site_root }}/#website",
+        "url": "{{ site_root }}/",
+        "name": "ODTIS",
+        "description": {{ config.site_description | tojson }},
+        "inLanguage": "en",
+        "publisher": { "@id": "{{ site_root }}/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "{{ site_root }}/#organization",
+        "name": "ODTIS",
+        "url": "{{ site_root }}/",
+        "email": "info@odtis.org",
+        "sameAs": [
+          "https://github.com/odtis/core-spec",
+          "https://venid.org"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "{{ canonical | e }}#webpage",
+        "url": "{{ canonical | e }}",
+        "name": {{ full_title | striptags | tojson }},
+        "description": {{ page_desc | striptags | tojson }},
+        "isPartOf": { "@id": "{{ site_root }}/#website" },
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+  {% if page.canonical_url and '/site/FAQ/' in page.canonical_url %}
+  {% include "partials/faq-ld.html" %}
+  {% endif %}
+{% endblock %}

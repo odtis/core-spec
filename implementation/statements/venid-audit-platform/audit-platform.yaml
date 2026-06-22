@@ -1,0 +1,20 @@
+statement_id: venid-audit-platform
+title: VenID audit platform (P3-E06)
+as_of: 2026-06-12
+deployment_phase: 3
+status: partial
+requirements:
+  - ODTIS-0530
+  - ODTIS-0528
+  - ODTIS-0529
+evidence:
+  - ven-trust-network/docs/operator/AUDIT-PLATFORM.md
+  - ven-trust-network/services/audit-service/src/main/java/ve/venid/trust/audit/integrity/AuditIntegrityService.java
+  - ven-trust-network/services/audit-service/src/main/java/ve/venid/trust/audit/service/AuditCorrelationService.java
+  - ven-identity-core/api/regulator-api/src/main/java/ve/venid/identity/regulator/web/RegulatorController.java
+smoke:
+  - ven-trust-network/scripts/audit-platform-check.sh
+  - odtis/conformance/run-operator-audit-checks.sh
+gaps:
+  - Distributed hash-chain head for multi-writer production
+  - Live regulator export at production volume

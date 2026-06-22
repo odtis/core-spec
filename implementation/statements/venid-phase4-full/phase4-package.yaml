@@ -1,0 +1,38 @@
+statement_id: venid-phase4-full
+title: VenID Phase 4 full mandate conformance package
+as_of: 2026-06-12
+deployment_phase: 4
+conformance_level: L3
+status: partial
+requirements:
+  - ODTIS-0532
+  - ODTIS-0534
+  - ODTIS-0006
+profiles:
+  - reference-architecture
+  - core-identity
+  - trust-network
+  - federation
+  - operator
+  - extended
+extended_modules_declared:
+  - E-Wallet
+  - E-Registry
+  - E-Inclusion
+  - E-Webhook
+  - E-Signature
+  - E-KYB
+evidence:
+  - implementation/statements/venid-phase4-full/conformance-statement.yaml
+  - implementation/statements/venid-phase4-full/conformance-statement.md
+  - implementation/statements/venid-phase4-full/l2-report.md
+  - implementation/evidence/phase4-conformance/l3-audit-dry-run-2026-Q2.yaml
+  - implementation/evidence/phase4-conformance/extended-no-weakening-2026.yaml
+smoke:
+  - odtis/conformance/run-phase4-package.sh
+  - odtis/conformance/run-extended-no-weakening-checks.sh
+gaps:
+  - GAP-TN-0204
+  - GAP-TN-0217
+  - GAP-TN-TEP
+  - GAP-CERT-L3-ATT

@@ -1,0 +1,26 @@
+# Profile manifest: federation
+# Generated - do not edit by hand; run build-conformance-manifest.py
+
+profile_id: federation
+requirement_count: 8
+test_count: 8
+coverage_pct: 100.0
+missing_total: 0
+
+tests:
+  - path: conformance/tests/federation/test_agreement_required_fields.md
+    requirements: [ODTIS-0404]
+  - path: conformance/tests/federation/test_agreement_suspension_routing.md
+    requirements: [ODTIS-0407]
+  - path: conformance/tests/federation/test_explicit_activation.md
+    requirements: [ODTIS-0403]
+  - path: conformance/tests/federation/test_federated_audit_instance_ids.md
+    requirements: [ODTIS-0408]
+  - path: conformance/tests/federation/test_federation_cert_policy.md
+    requirements: [ODTIS-0402]
+  - path: conformance/tests/federation/test_federation_regulator_export.md
+    requirements: [ODTIS-0406]
+  - path: conformance/tests/federation/test_non_transitivity.md
+    requirements: [ODTIS-0401]
+  - path: conformance/tests/federation/test_transitive_route_reject.md
+    requirements: [ODTIS-0405]

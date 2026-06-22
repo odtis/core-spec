@@ -1,0 +1,112 @@
+openapi: 3.1.0
+info:
+title: VenID RP Reports API
+version: 0.9.0-draft
+description: >
+Surface S6 - Relying Party operational and usage reports.
+ODTIS 3.5, 5. Source: P14 6 (RP-facing analytics).
+license:
+name: CC BY 4.0
+url: https://creativecommons.org/licenses/by/4.0/
+
+servers:
+- url: https://api.example.venid.org/v1/rp/reports
+description: Illustrative RP reports base
+
+tags:
+- name: Reports
+
+paths:
+/usage:
+get:
+operationId: reports.usage.get
+tags: [Reports]
+summary: RP verification and login usage summary
+security:
+- clientCredentials: [verify]
+parameters:
+- name: from
+in: query
+schema:
+type: string
+format: date
+- name: to
+in: query
+schema:
+type: string
+format: date
+responses:
+'200':
+description: Usage aggregates without subject PII
+content:
+application/json:
+schema:
+type: object
+properties:
+verifications:
+type: integer
+logins:
+type: integer
+consent_denials:
+type: integer
+'401':
+$ref: './venid-common.openapi.yaml#/components/responses/Unauthorized'
+
+/consent-audit:
+get:
+operationId: reports.consent_audit.get
+tags: [Reports]
+summary: Consent audit export for authenticated RP client
+security:
+- clientCredentials: [verify]
+parameters:
+- name: from
+in: query
+required: true
+schema:
+type: string
+format: date-time
+- name: to
+in: query
+required: true
+schema:
+type: string
+format: date-time
+responses:
+'200':
+description: Consent audit rows (ODTIS-0527)
+content:
+application/json:
+schema:
+$ref: './venid-common.openapi.yaml#/components/schemas/PaginatedList'
+'403':
+$ref: './venid-common.openapi.yaml#/components/responses/Forbidden'
+
+/ecosystem:
+get:
+operationId: reports.ecosystem.get
+tags: [Reports]
+summary: Aggregated ecosystem metrics without PII (ODTIS-0513)
+security:
+- clientCredentials: [verify]
+parameters:
+- name: period
+in: query
+schema:
+type: string
+enum: [day, week, month]
+responses:
+'200':
+description: Ecosystem health aggregates
+content:
+application/json:
+schema:
+type: object
+additionalProperties: true
+'401':
+$ref: './venid-common.openapi.yaml#/components/responses/Unauthorized'
+
+components:
+securitySchemes:
+clientCredentials:
+$ref: './venid-common.openapi.yaml#/components/securitySchemes/clientCredentials'

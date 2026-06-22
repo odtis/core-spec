@@ -1,0 +1,117 @@
+# ODTIS Annex D - Extended sub-module requirements
+# Draft IDs merged into registry/requirements.json @ 0.9.0-draft (product backlog)
+# E-Wallet uses existing registry ODTIS-5.4.x (listed under registry_refs)
+
+spec_version: "0.9.0-draft"
+status: draft
+merge_target: registry/requirements.json
+planned_at: ODTIS-v1.0
+
+registry_refs:
+E-Wallet:
+- ODTIS-0340
+- ODTIS-0341
+- ODTIS-0342
+- ODTIS-0343
+- ODTIS-0524
+E-Registry:
+- ODTIS-0344
+E-Webhook:
+- ODTIS-0531
+
+draft_requirements:
+E-Registry:
+- id: ODTIS-0349
+keyword: MUST NOT
+text: "E-Registry MUST NOT replace civil registry legal authority or issue national ID documents"
+trace_informative: "P11 1.1, RF-EXT5"
+status: draft
+- id: ODTIS-0350
+keyword: MUST
+text: "National LoA MUST be assigned only after successful registry adapter verification per operator policy"
+trace_informative: "P11 4.2, ODTIS-0344"
+status: draft
+- id: ODTIS-0351
+keyword: MUST
+text: "Registry adapter MUST use agreed identifier hashing; raw registry biometrics MUST NOT be persisted in Core Identity"
+trace_informative: "P11 5.1"
+status: draft
+- id: ODTIS-0352
+keyword: MUST
+text: "Registry adapter activation MUST require deployment Phase 3+ and documented bilateral agreement with registry authority"
+trace_informative: "P11 4.2, P10"
+status: draft
+- id: ODTIS-0353
+keyword: MUST
+text: "Every registry verification call MUST emit auditable events with correlation ID and match outcome metadata"
+trace_informative: "P11 5.1, ODTIS-0526"
+status: draft
+
+E-Inclusion:
+- id: ODTIS-0354
+keyword: MUST
+text: "Assisted registration flows MUST obtain explicit subject or legal-representative consent with full audit trail"
+trace_informative: "P13 representative model, RF-15"
+status: draft
+- id: ODTIS-0355
+keyword: MUST
+text: "Representative or tutor flows MUST verify legal relationship before attribute release on behalf of another subject"
+trace_informative: "P13 5.3, UC-C07"
+status: draft
+- id: ODTIS-0356
+keyword: MUST NOT
+text: "Inclusion channels MUST NOT bypass LoA proofing rules defined for online registration"
+trace_informative: "P18 4.2, RF-06"
+status: draft
+- id: ODTIS-0357
+keyword: SHOULD
+text: "Inclusion flows SHOULD support operator-configured locales, accessibility, and offline capture with deferred sync where policy allows"
+trace_informative: "RNF-22, doc-14"
+status: draft
+
+E-Webhook:
+- id: ODTIS-0358
+keyword: MUST
+text: "E-Webhook MUST allow RPs to register callback URLs, subscribed event types, and shared signing secret via authenticated API"
+trace_informative: "P14 6.4, RF-22"
+status: draft
+openapi_ref: "verification-api.openapi.yaml (pending /v1/rp/webhooks)"
+- id: ODTIS-0359
+keyword: MUST
+text: "Webhook delivery MUST retry with backoff on failure and log delivery outcomes for operator review"
+trace_informative: "P14 6.4, DS-07"
+status: draft
+- id: ODTIS-0360
+keyword: MUST
+text: "Webhook payloads MUST minimize PII; use opaque subject references where operator policy requires"
+trace_informative: "P14 6.4, ODTIS-0530"
+status: draft
+
+E-Signature:
+- id: ODTIS-0361
+keyword: MUST
+text: "E-Signature MUST bind each signature operation to a verified subject identity and active LoA meeting RP policy"
+trace_informative: "RF-EXT1, P08"
+status: draft
+- id: ODTIS-0362
+keyword: MUST
+text: "Signature keys MUST be issued under operator PKI or recognized TSP integration documented in CP/CPS"
+trace_informative: "P08, ODTIS-0507"
+status: draft
+- id: ODTIS-0363
+keyword: MUST
+text: "Signature creation and verification events MUST be auditable with correlation to subject_id and RP client_id"
+trace_informative: "RF-EXT1, ODTIS-0526"
+status: draft
+
+E-KYB:
+- id: ODTIS-0364
+keyword: MUST
+text: "E-KYB MUST verify legal entity identity separately from natural-person Core Identity proofing"
+trace_informative: "doc-03 sector KYB"
+status: preview
+- id: ODTIS-0365
+keyword: SHOULD
+text: "E-KYB SHOULD link authorized representatives to verified natural-person subjects before B2B attribute release"
+trace_informative: "UC-E07, RF-EXT5"
+status: preview

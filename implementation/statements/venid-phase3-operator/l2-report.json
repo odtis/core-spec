@@ -1,0 +1,28 @@
+{
+  "level": "L2",
+  "odtis_version": "0.9.0-draft",
+  "target": null,
+  "results": [
+    {
+      "id": "l2-target-skipped",
+      "requirement": "-",
+      "ok": true,
+      "detail": "Pass --target for live OIDC/PKCE/JWKS checks"
+    },
+    {
+      "id": "l2-loa-schema",
+      "requirement": "ODTIS-0316",
+      "ok": true,
+      "detail": "Annex A VerifyResponse includes verified, assurance_level (live API: verification-api-check.sh)"
+    },
+    {
+      "id": "l2-gateway-mtls-spec",
+      "requirement": "ODTIS-0204",
+      "ok": true,
+      "detail": "Exchange gateway OpenAPI declares partnerMutualTLS (live mTLS handshake requires certs)"
+    }
+  ],
+  "status": "PASS",
+  "passed": 3,
+  "total": 3
+}

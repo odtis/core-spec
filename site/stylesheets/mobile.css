@@ -1,0 +1,141 @@
+/* Mobile layout overrides — loaded last; wins over Material + theme + cached sheets */
+
+@media screen and (max-width: 59.9375em) {
+  :root {
+    --odtis-mobile-edge: max(0.5rem, env(safe-area-inset-left, 0px));
+    --odtis-mobile-edge-right: max(0.5rem, env(safe-area-inset-right, 0px));
+    --odtis-layout-gutter: 0;
+    --odtis-content-gutter: var(--odtis-mobile-edge);
+  }
+
+  .md-grid,
+  .odtis-chrome-inner,
+  .md-header__inner.md-grid,
+  nav.md-tabs > .md-grid,
+  .md-main__inner.md-grid,
+  .md-footer__inner.md-grid,
+  .md-footer-meta__inner.md-grid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+  }
+
+  .md-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  /* Material adds 0.8rem side margins on .md-content__inner by default */
+  .md-content__inner {
+    margin: 0 !important;
+    padding-left: var(--odtis-mobile-edge) !important;
+    padding-right: var(--odtis-mobile-edge-right) !important;
+    max-width: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .md-content__inner:has(.odtis-landing) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  [dir=ltr] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner,
+  [dir=ltr] .md-sidebar--secondary:not([hidden]) ~ .md-content > .md-content__inner {
+    margin: 0 !important;
+  }
+
+  .md-header__inner.md-grid {
+    padding-left: var(--odtis-mobile-edge) !important;
+    padding-right: var(--odtis-mobile-edge-right) !important;
+  }
+
+  nav.md-tabs > .md-grid {
+    padding-left: var(--odtis-mobile-edge) !important;
+    padding-right: 0 !important;
+  }
+
+  .md-footer__inner.md-grid,
+  .md-footer-meta__inner.md-grid {
+    padding-left: var(--odtis-mobile-edge) !important;
+    padding-right: var(--odtis-mobile-edge-right) !important;
+  }
+
+  .md-content__inner > * {
+    max-width: none !important;
+  }
+
+  .md-content__inner > .odtis-hub-hero,
+  .md-content__inner > .odtis-hub-footer,
+  .md-content__inner > .odtis-spec-meta,
+  .md-content__inner > .odtis-table-scroll {
+    margin-left: calc(-1 * var(--odtis-mobile-edge)) !important;
+    margin-right: calc(-1 * var(--odtis-mobile-edge-right)) !important;
+    width: calc(100% + var(--odtis-mobile-edge) + var(--odtis-mobile-edge-right)) !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .md-content__inner > .odtis-hub-hero,
+  .md-content__inner > .odtis-hub-footer {
+    padding-left: var(--odtis-mobile-edge) !important;
+    padding-right: var(--odtis-mobile-edge-right) !important;
+  }
+
+  .odtis-landing-hero,
+  .odtis-landing-trust,
+  .odtis-landing-section--panel,
+  .odtis-landing-cta,
+  .odtis-landing-pillar {
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+
+  .odtis-landing-hero,
+  .odtis-landing-section--panel,
+  .odtis-landing-cta {
+    padding-left: var(--odtis-mobile-edge) !important;
+    padding-right: var(--odtis-mobile-edge-right) !important;
+  }
+
+  .odtis-landing-hero {
+    grid-template-columns: 1fr !important;
+  }
+
+  .odtis-landing-hero h1,
+  .odtis-landing-hero__lead {
+    max-width: none !important;
+  }
+
+  .odtis-table-scroll {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .odtis-table-scroll table {
+    width: max-content !important;
+    min-width: 100% !important;
+    font-size: 0.75rem;
+  }
+
+  .odtis-table-scroll table thead th,
+  .odtis-table-scroll table td {
+    padding: 0.4rem 0.55rem !important;
+  }
+
+  .md-typeset pre,
+  .md-typeset .highlight,
+  .mermaid {
+    max-width: none !important;
+    margin-left: calc(-1 * var(--odtis-mobile-edge)) !important;
+    margin-right: calc(-1 * var(--odtis-mobile-edge-right)) !important;
+    width: calc(100% + var(--odtis-mobile-edge) + var(--odtis-mobile-edge-right)) !important;
+    border-radius: 0 !important;
+    overflow-x: auto !important;
+  }
+}

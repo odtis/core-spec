@@ -1,0 +1,26 @@
+# PKI DR test report — 2026 Q2 (ODTIS-0510)
+report_id: PKI-DR-2026-Q2
+operator: FinnectOS VenID DTI
+deployment_phase: 2
+environment: staging
+exercise_date: "2026-06-10"
+exercise_type: quarterly_restore_tabletop
+
+participants:
+  primary_pki_officer: pki-officer-1
+  secondary_pki_officer: pki-officer-2
+  ticket_ref: CHG-2026-0142
+
+results:
+  ca_keystore_backup_integrity: pass
+  crl_continuity: pass
+  test_certificate_reissue: pass
+  dual_control_attested: true
+
+notes: >
+  Restore performed on isolated DR host from encrypted backup dated 2026-06-01.
+  Production trust-authority unchanged. CRL endpoint returned valid PEM after restore.
+  Test partner CSR issued and revoked; serial appeared on CRL within cache TTL.
+
+next_scheduled: "2026-09-15"
+retention_until: "2029-06-10"

@@ -1,0 +1,498 @@
+# ODTIS Annex B - Threat mitigation matrix
+# Source: P07 Table 1 (5), threat categories (4), STRIDE methodology (2)
+# Informative annex; normative controls remain in ODTIS 5, 8, and related sections.
+
+spec_version: "0.9.0-draft"
+source: "P07 4-7, P18 9.2"
+methodology: STRIDE
+p07_table_rows: 18
+
+threat_classes:
+- id: TC-REG
+name: Registration and proofing
+p07_sections: ["4.1", "4.3"]
+- id: TC-ATO
+name: Account takeover and session abuse
+p07_sections: ["4.2", "4.4"]
+- id: TC-RP
+name: Malicious or compromised RPs
+p07_sections: ["4.5"]
+- id: TC-TRUST
+name: Unauthorized issuers and trust partners
+p07_sections: ["4.6"]
+- id: TC-WALLET
+name: Wallet and verifiable credential abuse
+p07_sections: ["7"]
+- id: TC-PRIV
+name: Privacy and data abuse
+p07_sections: ["4.7"]
+- id: TC-INFRA
+name: Platform intrusion and data breach
+p07_sections: ["5 row 12-13", "P06"]
+
+threats:
+- id: T-P07-001
+p07_row: 1
+threat_class: TC-REG
+risk: Registration impersonation
+scenario: Stolen ID used to enroll as victim
+control: Document and biometric proofing; uniqueness; manual review
+components:
+- verification-engine
+- identity-core
+- audit
+stride:
+- Spoofing
+- Elevation of privilege
+priority: critical
+profiles: [core-identity, operator]
+odtis_requirements:
+- ODTIS-0311
+- ODTIS-0312
+- ODTIS-0313
+- ODTIS-0103
+- ODTIS-0523
+- ODTIS-0525
+- ODTIS-0526
+odtis_sections:
+- 03-identity-services
+- 08-security
+- 09-audit-events
+
+- id: T-P07-002
+p07_row: 2
+threat_class: TC-ATO
+risk: Account takeover
+scenario: Password theft enables victim account use
+control: MFA/Passkeys; step-up; anomaly alerts; recovery re-proofing
+components:
+- IdP
+- risk-engine
+- consent-service
+stride:
+- Spoofing
+- Elevation of privilege
+priority: critical
+profiles: [core-identity, operator]
+odtis_requirements:
+- ODTIS-0304
+- ODTIS-0522
+- ODTIS-0521
+- ODTIS-0312
+- ODTIS-0330
+- ODTIS-0326
+odtis_sections:
+- 03-identity-services
+- 05-consent-privacy
+- 08-security
+
+- id: T-P07-003
+p07_row: 3
+threat_class: TC-ATO
+risk: Token theft/reuse
+scenario: Intercepted OAuth tokens reused
+control: Short TTL; refresh rotation; client binding; revocation
+components:
+- IdP
+- verification-api
+stride:
+- Spoofing
+- Tampering
+- Repudiation
+priority: high
+profiles: [core-identity]
+odtis_requirements:
+- ODTIS-0303
+- ODTIS-0302
+- ODTIS-0305
+- ODTIS-0315
+- ODTIS-0325
+- ODTIS-0327
+odtis_sections:
+- 03-identity-services
+
+- id: T-P07-004
+p07_row: 4
+threat_class: TC-REG
+risk: Document fraud
+scenario: Forged or tampered ID document
+control: Document provider; tampering detection; review queue
+components:
+- verification-engine
+- audit
+stride:
+- Spoofing
+- Tampering
+priority: critical
+profiles: [core-identity, operator]
+odtis_requirements:
+- ODTIS-0311
+- ODTIS-0313
+- ODTIS-0525
+- ODTIS-0526
+odtis_sections:
+- 03-identity-services
+- 08-security
+- 09-audit-events
+
+- id: T-P07-005
+p07_row: 5
+threat_class: TC-REG
+risk: Presentation attack
+scenario: Photo or mask bypasses liveness
+control: Anti-spoofing liveness; facial threshold
+components:
+- verification-engine
+- biometric-provider
+stride:
+- Spoofing
+priority: high
+profiles: [core-identity]
+odtis_requirements:
+- ODTIS-0312
+- ODTIS-0523
+- ODTIS-0103
+odtis_sections:
+- 02-terminology-loa
+- 03-identity-services
+- 08-security
+
+- id: T-P07-006
+p07_row: 6
+threat_class: TC-REG
+risk: Mass fake accounts
+scenario: Bot farms create verified accounts
+control: Velocity limits; device fingerprint; risk scoring; re-verification
+components:
+- risk-engine
+- identity-core
+- audit
+stride:
+- Spoofing
+- Denial of service
+priority: high
+profiles: [core-identity, operator]
+odtis_requirements:
+- ODTIS-0326
+- ODTIS-0525
+- ODTIS-0310
+- ODTIS-0526
+odtis_sections:
+- 03-identity-services
+- 08-security
+- 09-audit-events
+
+- id: T-P07-007
+p07_row: 7
+threat_class: TC-ATO
+risk: Phishing / fake VenID
+scenario: Spoofed login site steals credentials
+control: Passkeys; MFA; redirect_uri validation; user education
+components:
+- IdP
+- client-policies
+stride:
+- Spoofing
+- Information disclosure
+priority: high
+profiles: [core-identity, operator]
+odtis_requirements:
+- ODTIS-0302
+- ODTIS-0304
+- ODTIS-0305
+- ODTIS-0521
+- ODTIS-0522
+odtis_sections:
+- 03-identity-services
+- 08-security
+
+- id: T-P07-008
+p07_row: 8
+threat_class: TC-TRUST
+risk: Unauthorized issuer
+scenario: Non-Trust Partner emits accepted VC
+control: Trust Registry authorization check
+components:
+- Trust-Registry
+- Verification-Gateway
+stride:
+- Spoofing
+- Elevation of privilege
+priority: critical
+profiles: [trust-network, extended]
+odtis_requirements:
+- ODTIS-0346
+- ODTIS-0205
+- ODTIS-0212
+- ODTIS-0517
+odtis_sections:
+- 04-trust-network
+- 05-consent-privacy
+- 08-security
+
+- id: T-P07-009
+p07_row: 9
+threat_class: TC-RP
+risk: Fake / spoofed RP
+scenario: Unregistered OAuth client steals tokens
+control: Registered client_id; strict redirect_uri; consent UI
+components:
+- IdP
+- consent-service
+- audit
+stride:
+- Spoofing
+- Information disclosure
+priority: critical
+profiles: [core-identity, operator]
+odtis_requirements:
+- ODTIS-0319
+- ODTIS-0305
+- ODTIS-0328
+- ODTIS-0331
+- ODTIS-0302
+- ODTIS-0527
+odtis_sections:
+- 03-identity-services
+- 05-consent-privacy
+- 09-audit-events
+
+- id: T-P07-010
+p07_row: 10
+threat_class: TC-WALLET
+risk: Device theft (wallet)
+scenario: Stolen phone with wallet app
+control: Device PIN/biometric; session revocation; VC re-issuance policy
+components:
+- VenID-Wallet
+- IdP
+- Credential-Issuer
+stride:
+- Information disclosure
+- Elevation of privilege
+priority: high
+profiles: [extended]
+odtis_requirements:
+- ODTIS-0330
+- ODTIS-0522
+- ODTIS-0323
+- ODTIS-0345
+odtis_sections:
+- 03-identity-services
+- 05-consent-privacy
+- 08-security
+
+- id: T-P07-011
+p07_row: 11
+threat_class: TC-WALLET
+risk: VC copy attack
+scenario: Attacker copies VC without holder key
+control: Require holder-signed VP; reject VC-only presentation
+components:
+- VenID-Wallet
+- Verification-Gateway
+- OID4VP
+stride:
+- Spoofing
+- Repudiation
+priority: critical
+profiles: [extended, trust-network]
+odtis_requirements:
+- ODTIS-0524
+- ODTIS-0345
+- ODTIS-0346
+odtis_sections:
+- 05-consent-privacy
+- 08-security
+
+- id: T-P07-012
+p07_row: 12
+threat_class: TC-INFRA
+risk: Platform intrusion
+scenario: Attacker accesses internal APIs or database
+control: Segmentation; encryption; operator MFA
+components:
+- infrastructure
+- IdP
+- P06-controls
+stride:
+- Elevation of privilege
+- Tampering
+- Information disclosure
+priority: critical
+profiles: [operator, trust-network]
+odtis_requirements:
+- ODTIS-0517
+- ODTIS-0518
+- ODTIS-0519
+- ODTIS-0520
+- ODTIS-0521
+- ODTIS-0522
+odtis_sections:
+- 08-security
+
+- id: T-P07-013
+p07_row: 13
+threat_class: TC-INFRA
+risk: Personal data breach
+scenario: Leak of documents, biometrics, or PII
+control: TLS; encryption at rest; biometric minimization; access control
+components:
+- identity-core
+- verification-engine
+- audit
+stride:
+- Information disclosure
+priority: critical
+profiles: [core-identity, operator]
+odtis_requirements:
+- ODTIS-0335
+- ODTIS-0325
+- ODTIS-0518
+- ODTIS-0314
+- ODTIS-0321
+odtis_sections:
+- 03-identity-services
+- 05-consent-privacy
+- 08-security
+
+- id: T-P07-014
+p07_row: 14
+threat_class: TC-ATO
+risk: Digital identity abuse
+scenario: Attacker operates full victim identity
+control: Combined proofing, MFA, wallet, revocation, re-verification
+components:
+- IdP
+- consent-service
+- Wallet
+- Gateway
+stride:
+- Spoofing
+- Elevation of privilege
+priority: critical
+profiles: [core-identity, extended, operator]
+odtis_requirements:
+- ODTIS-0312
+- ODTIS-0522
+- ODTIS-0330
+- ODTIS-0524
+- ODTIS-0303
+- ODTIS-0525
+odtis_sections:
+- 03-identity-services
+- 05-consent-privacy
+- 08-security
+
+- id: T-P07-015
+p07_row: 15
+threat_class: TC-RP
+risk: Consent violation
+scenario: RP exceeds authorized attributes
+control: Explicit consent per scope; verification-api enforcement
+components:
+- consent-service
+- IdP
+- verification-api
+stride:
+- Information disclosure
+- Elevation of privilege
+priority: critical
+profiles: [core-identity]
+odtis_requirements:
+- ODTIS-0331
+- ODTIS-0317
+- ODTIS-0307
+- ODTIS-0328
+- ODTIS-0527
+odtis_sections:
+- 03-identity-services
+- 05-consent-privacy
+- 09-audit-events
+
+- id: T-P07-016
+p07_row: 16
+threat_class: TC-TRUST
+risk: Unauthorized Trust Partner
+scenario: Credentials from non-registry issuer
+control: Gateway rejects unknown issuers
+components:
+- Trust-Registry
+- Verification-Gateway
+stride:
+- Spoofing
+- Elevation of privilege
+priority: critical
+profiles: [trust-network]
+odtis_requirements:
+- ODTIS-0205
+- ODTIS-0212
+- ODTIS-0517
+- ODTIS-0346
+odtis_sections:
+- 04-trust-network
+- 05-consent-privacy
+- 08-security
+
+- id: T-P07-017
+p07_row: 17
+threat_class: TC-PRIV
+risk: Over-collection / profiling
+scenario: RP correlates excessive attributes
+control: Minimum scopes; SD-JWT selective disclosure
+components:
+- consent-service
+- Wallet
+- verification-api
+stride:
+- Information disclosure
+priority: high
+profiles: [core-identity, extended]
+odtis_requirements:
+- ODTIS-0336
+- ODTIS-0347
+- ODTIS-0331
+- ODTIS-0317
+- ODTIS-0107
+odtis_sections:
+- 02-terminology-loa
+- 03-identity-services
+- 05-consent-privacy
+
+- id: T-P07-018
+p07_row: 18
+threat_class: TC-PRIV
+risk: RP retention / leak
+scenario: RP stores or leaks shared data
+control: Consent revocation; RP contracts; audit for subject rights
+components:
+- consent-service
+- audit
+- RP-governance
+stride:
+- Information disclosure
+- Repudiation
+priority: high
+profiles: [core-identity, operator]
+odtis_requirements:
+- ODTIS-0330
+- ODTIS-0338
+- ODTIS-0334
+- ODTIS-0529
+- ODTIS-0516
+odtis_sections:
+- 05-consent-privacy
+- 07-operator-governance
+- 09-audit-events
+
+# Reverse index: each ODTIS-8.x MUST appear in ≥1 threat row (8 checklist)
+odtis_8_coverage:
+ODTIS-0517: [T-P07-008, T-P07-012, T-P07-016]
+ODTIS-0518: [T-P07-012, T-P07-013]
+ODTIS-0519: [T-P07-012]
+ODTIS-0520: [T-P07-012]
+ODTIS-0521: [T-P07-002, T-P07-007, T-P07-012]
+ODTIS-0522: [T-P07-002, T-P07-007, T-P07-010, T-P07-012, T-P07-014]
+ODTIS-0523: [T-P07-001, T-P07-005]
+ODTIS-0524: [T-P07-011, T-P07-014]
+ODTIS-0525: [T-P07-001, T-P07-004, T-P07-006, T-P07-014]

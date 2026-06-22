@@ -1,0 +1,166 @@
+openapi: 3.1.0
+info:
+  title: VenID Common OpenAPI Components
+  version: 0.9.0-draft
+  description: >
+    Shared schemas and security schemes for ODTIS Annex A bundles.
+    Source: P14 10.3, ODTIS 3.11.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    clientCredentials:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://{host}/realms/{realm}/protocol/openid-connect/token
+          scopes:
+            verify: Verification API access
+            admin: Operator administration
+
+  schemas:
+    ErrorCode:
+      type: string
+      enum:
+        - invalid_request
+        - unauthorized
+        - forbidden
+        - consent_denied
+        - scope_insufficient
+        - client_suspended
+        - grant_missing
+        - cert_revoked
+        - cert_unknown
+        - rate_limited
+        - replay_detected
+        - partner_denied
+        - service_unavailable
+        - internal_error
+      description: Normative ODTIS error codes (ODTIS 3.11, Annex A)
+
+    AssuranceLevel:
+      type: string
+      enum: [low, medium, high, national]
+      description: Canonical LoA token (ODTIS-0102)
+
+    ErrorResponse:
+      type: object
+      required: [error, request_id]
+      properties:
+        error:
+          $ref: '#/components/schemas/ErrorCode'
+        error_description:
+          type: string
+        request_id:
+          type: string
+          description: Correlation ID for audit (ODTIS-0529)
+        details:
+          type: object
+          additionalProperties: true
+
+    VerifyResponse:
+      type: object
+      required: [verified]
+      properties:
+        verified:
+          type: boolean
+        assurance_level:
+          $ref: '#/components/schemas/AssuranceLevel'
+        verified_at:
+          type: string
+          format: date-time
+        subject_id:
+          type: string
+          format: uuid
+        identity_id:
+          type: string
+          format: uuid
+        attributes:
+          type: object
+          additionalProperties: true
+      description: ODTIS-0316, ODTIS-0317
+
+    PrecheckResponse:
+      type: object
+      required: [has_identity]
+      properties:
+        has_identity:
+          type: boolean
+        assurance_level:
+          $ref: '#/components/schemas/AssuranceLevel'
+
+    ConsentSummary:
+      type: object
+      required: [client_id, scopes, granted_at]
+      properties:
+        client_id:
+          type: string
+        client_name:
+          type: string
+        scopes:
+          type: array
+          items:
+            type: string
+        purpose:
+          type: string
+        granted_at:
+          type: string
+          format: date-time
+        expires_at:
+          type: string
+          format: date-time
+
+    PaginatedList:
+      type: object
+      properties:
+        items:
+          type: array
+          items: {}
+        total:
+          type: integer
+        page:
+          type: integer
+        limit:
+          type: integer
+
+  responses:
+    BadRequest:
+      description: Validation failure
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Unauthorized:
+      description: Missing or invalid authentication
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Forbidden:
+      description: Consent, scope, or role denial
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    RateLimited:
+      description: Rate limit exceeded (ODTIS-0326)
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'

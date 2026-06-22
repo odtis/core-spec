@@ -1,0 +1,40 @@
+# Normative binding: Exchange Gateway (VenID reference implementation)
+# Informative — conformance claims require conformance-statement.yaml
+
+component_id: exchange-gateway
+ri_map_surface: exchange-gateway
+repository: ven-trust-network
+module_path: gateway/exchange-gateway
+profile: trust-network
+backlog_epic: P2-E01
+status: partial
+
+summary: >
+  Layer 2 exchange gateway: routes partner traffic, enforces partner validation,
+  service grants, path policy, audit correlation, and TLS/mTLS boundaries.
+
+implementation_notes: >
+  PartnerValidationGlobalFilter; ExchangePathPolicy; ServiceAccessGrantService integration;
+  ExchangeAuditService for federated instance IDs; sender/receiver routing modes.
+
+smoke_script: ven-trust-network/scripts/exchange-gateway-check.sh
+
+odtis_ids:
+  - ODTIS-0201
+  - ODTIS-0202
+  - ODTIS-0203
+  - ODTIS-0204
+  - ODTIS-0205
+  - ODTIS-0206
+  - ODTIS-0207
+  - ODTIS-0219
+  - ODTIS-0220
+  - ODTIS-0221
+  - ODTIS-0224
+  - ODTIS-0517
+  - ODTIS-0528
+  - ODTIS-0535
+
+evidence:
+  - implementation/statements/venid-phase2-trust/l2-report.md
+  - ven-trust-network/docs/EXCHANGE-GATEWAY.md

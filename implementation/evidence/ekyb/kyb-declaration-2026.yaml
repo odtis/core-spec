@@ -1,0 +1,12 @@
+id: venid-ekyb-declaration-2026
+module: E-KYB
+phase: 4
+declared_at: 2026-06-12
+operator: VenID Sandbox
+status: partial
+odtis_requirements:
+  - ODTIS-0364
+  - ODTIS-0365
+notes: >
+  Legal entity verification via kyb-service. Entity channel separate from
+  natural-person proofing; representative linkage required before B2B release.

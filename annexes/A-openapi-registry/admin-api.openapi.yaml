@@ -1,0 +1,306 @@
+openapi: 3.1.0
+info:
+title: VenID Admin API
+version: 0.9.0-draft
+description: >
+Surfaces S4/S5 - RP client management and operator administration.
+ODTIS 3.6, 7. Source: P14 7-8.
+license:
+name: CC BY 4.0
+url: https://creativecommons.org/licenses/by/4.0/
+
+servers:
+- url: https://api.example.venid.org/v1/admin
+description: Illustrative operator API base
+
+tags:
+- name: AdminClients
+- name: AdminUsers
+
+paths:
+/clients:
+get:
+operationId: admin.clients.list
+tags: [AdminClients]
+summary: List RP OAuth clients
+security:
+- bearerAuth: [admin]
+responses:
+'200':
+description: Client list
+post:
+operationId: admin.clients.create
+tags: [AdminClients]
+summary: Register RP client (ODTIS-0319)
+security:
+- bearerAuth: [admin]
+requestBody:
+required: true
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ClientCreateRequest'
+responses:
+'201':
+description: Client created
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ClientResponse'
+
+/clients/{client_id}:
+get:
+operationId: admin.clients.get
+tags: [AdminClients]
+summary: Get RP client configuration
+security:
+- bearerAuth: [admin]
+parameters:
+- $ref: '#/components/parameters/ClientId'
+responses:
+'200':
+description: Client details
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ClientResponse'
+patch:
+operationId: admin.clients.update
+tags: [AdminClients]
+summary: Update RP client scopes and policies
+security:
+- bearerAuth: [admin]
+parameters:
+- $ref: '#/components/parameters/ClientId'
+requestBody:
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ClientUpdateRequest'
+responses:
+'200':
+description: Updated
+
+/clients/{client_id}/activate:
+post:
+operationId: admin.clients.activate
+tags: [AdminClients]
+summary: Activate RP client (ODTIS-0320)
+security:
+- bearerAuth: [admin]
+parameters:
+- $ref: '#/components/parameters/ClientId'
+responses:
+'200':
+description: Activated
+
+/clients/{client_id}/deactivate:
+post:
+operationId: admin.clients.deactivate
+tags: [AdminClients]
+summary: Deactivate RP client (ODTIS-0320, ODTIS-0339)
+security:
+- bearerAuth: [admin]
+parameters:
+- $ref: '#/components/parameters/ClientId'
+responses:
+'200':
+description: Deactivated
+
+/clients/{client_id}/credentials/rotate:
+post:
+operationId: admin.clients.credentials.rotate
+tags: [AdminClients]
+summary: Rotate client secret (ODTIS-0320, ODTIS-0321)
+security:
+- bearerAuth: [admin]
+parameters:
+- $ref: '#/components/parameters/ClientId'
+responses:
+'200':
+description: Secret rotated (returned once)
+
+/subjects/{subject_id}/suspend:
+post:
+operationId: admin.subjects.suspend
+tags: [AdminUsers]
+summary: Suspend subject identity (ODTIS-0504, RF-27)
+security:
+- bearerAuth: [admin]
+parameters:
+- name: subject_id
+in: path
+required: true
+schema:
+type: string
+format: uuid
+requestBody:
+required: true
+content:
+application/json:
+schema:
+type: object
+required: [reason]
+properties:
+reason:
+type: string
+ticket_id:
+type: string
+responses:
+'200':
+description: Subject suspended
+'403':
+$ref: './venid-common.openapi.yaml#/components/responses/Forbidden'
+
+/subjects/{subject_id}/reverify:
+post:
+operationId: admin.subjects.reverify
+tags: [AdminUsers]
+summary: Force subject re-verification (ODTIS-0504, RF-27)
+security:
+- bearerAuth: [admin]
+parameters:
+- name: subject_id
+in: path
+required: true
+schema:
+type: string
+format: uuid
+requestBody:
+content:
+application/json:
+schema:
+type: object
+properties:
+reason:
+type: string
+responses:
+'202':
+description: Re-verification initiated
+
+/subjects/{subject_id}/unsuspend:
+post:
+operationId: admin.subjects.unsuspend
+tags: [AdminUsers]
+summary: Unsuspend subject identity (ODTIS-0504, RF-27)
+security:
+- bearerAuth: [admin]
+parameters:
+- name: subject_id
+in: path
+required: true
+schema:
+type: string
+format: uuid
+requestBody:
+content:
+application/json:
+schema:
+type: object
+properties:
+reason:
+type: string
+ticket_id:
+type: string
+responses:
+'200':
+description: Subject unsuspended
+
+/metrics/ecosystem:
+get:
+operationId: admin.metrics.ecosystem
+tags: [AdminMetrics]
+summary: Aggregated ecosystem metrics (ODTIS-0513)
+security:
+- bearerAuth: [admin]
+parameters:
+- name: period
+in: query
+schema:
+type: string
+enum: [day, week, month]
+responses:
+'200':
+description: Ecosystem health aggregates without PII
+
+/metrics/fraud:
+get:
+operationId: admin.metrics.fraud
+tags: [AdminMetrics]
+summary: Fraud monitoring metrics (ODTIS-0525)
+security:
+- bearerAuth: [admin]
+responses:
+'200':
+description: Aggregated fraud metrics without PII
+
+components:
+securitySchemes:
+bearerAuth:
+$ref: './venid-common.openapi.yaml#/components/securitySchemes/bearerAuth'
+
+parameters:
+ClientId:
+name: client_id
+in: path
+required: true
+schema:
+type: string
+
+schemas:
+ClientCreateRequest:
+type: object
+required: [client_id, redirect_uris, scopes]
+properties:
+client_id:
+type: string
+name:
+type: string
+redirect_uris:
+type: array
+items:
+type: string
+format: uri
+scopes:
+type: array
+items:
+type: string
+minimum_loa:
+$ref: './venid-common.openapi.yaml#/components/schemas/AssuranceLevel'
+
+ClientUpdateRequest:
+type: object
+properties:
+redirect_uris:
+type: array
+items:
+type: string
+format: uri
+scopes:
+type: array
+items:
+type: string
+minimum_loa:
+$ref: './venid-common.openapi.yaml#/components/schemas/AssuranceLevel'
+
+ClientResponse:
+type: object
+required: [client_id, status]
+properties:
+client_id:
+type: string
+name:
+type: string
+status:
+type: string
+enum: [active, inactive, suspended, revoked]
+redirect_uris:
+type: array
+items:
+type: string
+scopes:
+type: array
+items:
+type: string
+minimum_loa:
+$ref: './venid-common.openapi.yaml#/components/schemas/AssuranceLevel'

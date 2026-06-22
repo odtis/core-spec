@@ -1,0 +1,35 @@
+# Normative binding: Federation runtime (VenID reference implementation)
+
+component_id: federation-runtime
+ri_map_surface: trust-registry
+repository: ven-trust-network
+module_path: services/trust-registry + gateway/exchange-gateway
+profile: federation
+backlog_epic: P4-E01
+status: partial
+
+summary: >
+  Bilateral federation agreements (prep) and production runtime routing policy:
+  suspended/expired agreements disable routes; federated audit carries local and remote instance IDs.
+
+implementation_notes: >
+  trust-registry: FederationRoutePolicy, federation_agreements migration, InternalFederationController.
+  exchange-gateway: FederationRouteCache, FederationRouteValidationFilter, agreement suspension policy.
+  Prep IDs ODTIS-0401-0406 validated via run-federation-prep-checks.sh; runtime 0407-0408 via P4-E01.
+
+smoke_script: conformance/run-federation-runtime-checks.sh
+
+odtis_ids:
+  - ODTIS-0401
+  - ODTIS-0402
+  - ODTIS-0403
+  - ODTIS-0404
+  - ODTIS-0405
+  - ODTIS-0406
+  - ODTIS-0407
+  - ODTIS-0408
+
+evidence:
+  - implementation/statements/venid-phase4-full/l2-report.md
+  - ven-trust-network/docs/operator/FEDERATION-AGREEMENTS.md
+  - ven-trust-network/scripts/federation-runtime-check.sh

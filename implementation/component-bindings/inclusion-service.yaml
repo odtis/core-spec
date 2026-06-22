@@ -1,0 +1,29 @@
+# Normative binding: E-Inclusion service (VenID reference implementation)
+
+component_id: inclusion-service
+ri_map_surface: inclusion-service
+repository: ven-identity-core
+module_path: services/inclusion-service
+profile: extended
+backlog_epic: P4-E03
+status: partial
+
+summary: >
+  Assisted onboarding and representative flows with explicit consent, verified
+  representative relationships, and LoA proofing gates preserved.
+
+implementation_notes: >
+  InclusionController; InclusionLoaPolicy; assisted consent audit trail;
+  locale/accessibility hooks per operator policy.
+
+smoke_script: conformance/run-inclusion-checks.sh
+
+odtis_ids:
+  - ODTIS-0354
+  - ODTIS-0355
+  - ODTIS-0356
+  - ODTIS-0357
+
+evidence:
+  - implementation/statements/venid-phase4-full/l2-report.md
+  - ven-identity-core/docs/operator/E-INCLUSION.md

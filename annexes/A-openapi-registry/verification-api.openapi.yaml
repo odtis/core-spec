@@ -1,0 +1,216 @@
+openapi: 3.1.0
+info:
+title: VenID Verification API
+version: 0.9.0-draft
+description: >
+Surface S2 - Relying Party server-to-server verification.
+ODTIS 3.5, ODTIS-0315-3.5.4. Source: P14 6.
+license:
+name: CC BY 4.0
+url: https://creativecommons.org/licenses/by/4.0/
+
+servers:
+- url: https://api.example.venid.org/v1
+description: Production API gateway (illustrative)
+
+tags:
+- name: Verify
+description: Core verification operations
+- name: Precheck
+description: Pre-login checks
+- name: Webhooks
+description: RP webhook registration (Extended)
+
+paths:
+/verify:
+post:
+operationId: verification.verify.post
+tags: [Verify]
+summary: Verify subject with token or body
+security:
+- bearerAuth: []
+- clientCredentials: [verify]
+requestBody:
+required: false
+content:
+application/json:
+schema:
+type: object
+properties:
+subject_id:
+type: string
+format: uuid
+scopes:
+type: array
+items:
+type: string
+responses:
+'200':
+description: Verification result
+content:
+application/json:
+schema:
+$ref: './venid-common.openapi.yaml#/components/schemas/VerifyResponse'
+'401':
+$ref: './venid-common.openapi.yaml#/components/responses/Unauthorized'
+'403':
+$ref: './venid-common.openapi.yaml#/components/responses/Forbidden'
+'429':
+$ref: './venid-common.openapi.yaml#/components/responses/RateLimited'
+get:
+operationId: verification.verify.get
+tags: [Verify]
+summary: Verify by subject_id
+security:
+- clientCredentials: [verify]
+parameters:
+- name: subject_id
+in: query
+required: true
+schema:
+type: string
+format: uuid
+responses:
+'200':
+description: Verification result
+content:
+application/json:
+schema:
+$ref: './venid-common.openapi.yaml#/components/schemas/VerifyResponse'
+'401':
+$ref: './venid-common.openapi.yaml#/components/responses/Unauthorized'
+'403':
+$ref: './venid-common.openapi.yaml#/components/responses/Forbidden'
+'404':
+$ref: './venid-common.openapi.yaml#/components/responses/NotFound'
+
+/verify/status:
+get:
+operationId: verification.status.get
+tags: [Verify]
+summary: Lightweight verified flag and LoA only
+security:
+- bearerAuth: []
+responses:
+'200':
+description: Status and LoA (ODTIS-0108 on denial)
+content:
+application/json:
+schema:
+type: object
+required: [verified, assurance_level]
+properties:
+verified:
+type: boolean
+assurance_level:
+$ref: './venid-common.openapi.yaml#/components/schemas/AssuranceLevel'
+'403':
+$ref: './venid-common.openapi.yaml#/components/responses/Forbidden'
+
+/users/{user_id}/verification:
+get:
+operationId: verification.users.verification.get
+tags: [Verify]
+summary: Verification status by user or subject id
+security:
+- clientCredentials: [verify]
+parameters:
+- name: user_id
+in: path
+required: true
+schema:
+type: string
+responses:
+'200':
+description: Verification result
+content:
+application/json:
+schema:
+$ref: './venid-common.openapi.yaml#/components/schemas/VerifyResponse'
+'404':
+$ref: './venid-common.openapi.yaml#/components/responses/NotFound'
+
+/precheck:
+get:
+operationId: verification.precheck.get
+tags: [Precheck]
+summary: Check if subject has identity without PII release
+security:
+- clientCredentials: [verify]
+parameters:
+- name: subject_id
+in: query
+required: true
+schema:
+type: string
+format: uuid
+responses:
+'200':
+description: Precheck result
+content:
+application/json:
+schema:
+$ref: './venid-common.openapi.yaml#/components/schemas/PrecheckResponse'
+
+/rp/webhooks:
+post:
+operationId: verification.webhooks.post
+tags: [Webhooks]
+summary: Register RP webhook (E-Webhook)
+security:
+- clientCredentials: [verify]
+requestBody:
+required: true
+content:
+application/json:
+schema:
+type: object
+required: [url, events]
+properties:
+url:
+type: string
+format: uri
+events:
+type: array
+items:
+type: string
+secret:
+type: string
+writeOnly: true
+responses:
+'201':
+description: Webhook registered
+get:
+operationId: verification.webhooks.list
+tags: [Webhooks]
+summary: List registered webhooks
+security:
+- clientCredentials: [verify]
+responses:
+'200':
+description: Webhook list
+
+/rp/webhooks/{webhook_id}:
+delete:
+operationId: verification.webhooks.delete
+tags: [Webhooks]
+summary: Remove webhook
+security:
+- clientCredentials: [verify]
+parameters:
+- name: webhook_id
+in: path
+required: true
+schema:
+type: string
+format: uuid
+responses:
+'204':
+description: Deleted
+
+components:
+securitySchemes:
+bearerAuth:
+$ref: './venid-common.openapi.yaml#/components/securitySchemes/bearerAuth'
+clientCredentials:
+$ref: './venid-common.openapi.yaml#/components/securitySchemes/clientCredentials'

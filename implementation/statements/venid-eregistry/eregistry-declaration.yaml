@@ -1,0 +1,24 @@
+statement_id: venid-eregistry
+title: VenID E-Registry Extended sub-module (P3-E07)
+as_of: 2026-06-12
+deployment_phase: 3
+status: partial
+extended_submodule: E-Registry
+requirements:
+  - ODTIS-0104
+  - ODTIS-0344
+  - ODTIS-0349
+  - ODTIS-0350
+  - ODTIS-0351
+  - ODTIS-0352
+  - ODTIS-0353
+evidence:
+  - ven-identity-core/docs/operator/E-REGISTRY.md
+  - ven-identity-core/services/eregistry-adapter
+  - odtis/implementation/evidence/eregistry/bilateral-agreement-2026.yaml
+smoke:
+  - ven-identity-core/scripts/eregistry-adapter-check.sh
+  - odtis/conformance/run-extended-eregistry-checks.sh
+gaps:
+  - Live SAIME production integration
+  - Executed bilateral agreement in production

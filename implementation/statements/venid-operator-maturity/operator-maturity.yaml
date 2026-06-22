@@ -1,0 +1,38 @@
+odtis_version: "0.9.0-draft"
+operator: FinnectOS VenID Phase 2
+deployment_phase: 2
+level: L2
+environment: staging
+jurisdiction: VE
+
+pki:
+  tier: software_ca
+  crl: true
+  ocsp: false
+  tsa: false
+  hsm: false
+  cp_cps_published: true
+  cp_cps_version: VenID-TN-CP-1.0 / VenID-TN-CPS-1.0
+  note: Draft hierarchy and ceremony docs; HSM deferred to Phase 4
+
+soc:
+  coverage_hours: business_hours
+  monitoring: staging_stack
+  dr_site: false
+  iso_27001: planned
+  iso_22301: planned
+  note: 24/7 SOC not claimed for Phase 2 pilot
+
+phase4_claims_prohibited:
+  - iso_27001_certified
+  - iso_22301_certified
+  - qualified_trust_service
+  - national_tsa_operational
+
+conformance_references:
+  - implementation/statements/venid-phase2-trust/conformance-statement.yaml
+  - ven-identity-core/docs/operator/PUBLISHED-SERVICE-SCOPE.md
+  - ven-identity-core/docs/operator/OPERATOR-MATURITY.md
+
+date: "2026-06-15"
+contact: conformance@finnectos.com

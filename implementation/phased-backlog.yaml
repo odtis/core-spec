@@ -1,0 +1,1002 @@
+# VenID phased backlog - generated
+{
+  "spec_version": "0.9.0-draft",
+  "generated": "2026-06-22",
+  "generator": "scripts/generate-phased-backlog.py",
+  "summary": {
+    "epics": 39,
+    "odtis_ids": 154,
+    "done": 10,
+    "partial": 29,
+    "todo": 0
+  },
+  "phases": [
+    {
+      "id": "P0",
+      "odtis_phase": 0,
+      "name": "Spec and conformance foundation",
+      "goal": "Publishable conformance claims, RI traceability, L1 lab ready.",
+      "profiles": [
+        "reference-architecture"
+      ],
+      "book1_gate": "Mandato operador + baseline medible antes de produccion.",
+      "epics": [
+        {
+          "id": "P0-E01",
+          "title": "Conformance statement pipeline",
+          "status": "done",
+          "component": "odtis/conformance + operator docs",
+          "repo": "venezuela/odtis",
+          "odtis_ids": [
+            "ODTIS-0008",
+            "ODTIS-0532",
+            "ODTIS-0534",
+            "ODTIS-0010"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_conformance_statement_dual_format.md",
+            "conformance/tests/operator/test_phase_declaration.md",
+            "conformance/tests/reference-architecture/test_applicable_tests_required.md",
+            "conformance/tests/reference-architecture/test_statement_minimum_fields.md"
+          ],
+          "work_items": [
+            "Template YAML/MD dual-format statement from registry",
+            "CI job: validate statement fields vs ODTIS-0008",
+            "Publish human + machine statements per environment"
+          ]
+        },
+        {
+          "id": "P0-E02",
+          "title": "Profile claim guardrails",
+          "status": "done",
+          "component": "conformance lab",
+          "repo": "venezuela/odtis",
+          "odtis_ids": [
+            "ODTIS-0001",
+            "ODTIS-0002",
+            "ODTIS-0003",
+            "ODTIS-0004",
+            "ODTIS-0005",
+            "ODTIS-0006",
+            "ODTIS-0007",
+            "ODTIS-0009"
+          ],
+          "conformance_tests": [
+            "conformance/tests/reference-architecture/test_extended_no_weakening.md",
+            "conformance/tests/reference-architecture/test_federation_requires_trust_network.md",
+            "conformance/tests/reference-architecture/test_layer2_requires_layer1.md",
+            "conformance/tests/reference-architecture/test_minimal_claim_no_implied_profiles.md",
+            "conformance/tests/reference-architecture/test_profile_declaration_complete.md",
+            "conformance/tests/reference-architecture/test_profile_dependency_chain.md",
+            "conformance/tests/reference-architecture/test_prohibited_claims.md",
+            "conformance/tests/reference-architecture/test_version_binding.md"
+          ],
+          "work_items": [
+            "Automated check: declared profiles match depends_on chain",
+            "Reject prohibited marketing claims in statement linter"
+          ]
+        },
+        {
+          "id": "P0-E03",
+          "title": "Reference implementation map",
+          "status": "done",
+          "component": "implementation/RI-MAP.yaml",
+          "repo": "venezuela/odtis",
+          "odtis_ids": [
+            "ODTIS-0536"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_implementation_traceability_map.md"
+          ],
+          "work_items": [
+            "Map every ven-* surface to ODTIS IDs and OpenAPI",
+            "Link gaps/KNOWN-GAPS.md to backlog item status"
+          ]
+        },
+        {
+          "id": "P0-E04",
+          "title": "L1 lab validators",
+          "status": "done",
+          "component": "conformance/sandbox",
+          "repo": "venezuela/odtis",
+          "odtis_ids": [
+            "ODTIS-0010"
+          ],
+          "conformance_tests": [
+            "conformance/tests/reference-architecture/test_applicable_tests_required.md"
+          ],
+          "work_items": [
+            "run-sandbox-check.sh against ven-identity-core sandbox",
+            "Registry link check + manifest 100% coverage gate in CI"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P1",
+      "odtis_phase": 1,
+      "name": "Pilot / sandbox - Core Identity",
+      "goal": "Layer 1 IdP, consent, verification API; L1-L2 sandbox.",
+      "profiles": [
+        "reference-architecture",
+        "core-identity"
+      ],
+      "book1_gate": "5-10 RPs piloto; sin Extended en produccion (ODTIS-0533).",
+      "epics": [
+        {
+          "id": "P1-E01",
+          "title": "LoA model and claims",
+          "status": "partial",
+          "component": "ven-identity-core / Keycloak extension",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0101",
+            "ODTIS-0102",
+            "ODTIS-0103",
+            "ODTIS-0105",
+            "ODTIS-0107",
+            "ODTIS-0108",
+            "ODTIS-0306"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_high_biometric_gate.md",
+            "conformance/tests/core-identity/test_loa_claim.md",
+            "conformance/tests/core-identity/test_odtis_0101.md",
+            "conformance/tests/core-identity/test_odtis_0105.md",
+            "conformance/tests/core-identity/test_odtis_0107.md",
+            "conformance/tests/core-identity/test_odtis_0306.md",
+            "conformance/tests/core-identity/test_verification_loa_on_denial.md"
+          ],
+          "work_items": [
+            "LoA Low/Medium/High assignment rules in identity-core",
+            "Expose loa claim in id_token and verification API",
+            "RP min LoA per client_id configuration"
+          ]
+        },
+        {
+          "id": "P1-E02",
+          "title": "OIDC IdP hardening",
+          "status": "partial",
+          "component": "Keycloak + api-gateway",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0301",
+            "ODTIS-0302",
+            "ODTIS-0303",
+            "ODTIS-0304",
+            "ODTIS-0305",
+            "ODTIS-0307",
+            "ODTIS-0308"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_consent_gated_claims.md",
+            "conformance/tests/core-identity/test_odtis_0301.md",
+            "conformance/tests/core-identity/test_odtis_0303.md",
+            "conformance/tests/core-identity/test_odtis_0304.md",
+            "conformance/tests/core-identity/test_pkce_required.md",
+            "conformance/tests/core-identity/test_redirect_uri_validation.md",
+            "conformance/tests/core-identity/test_rp_initiated_logout.md"
+          ],
+          "work_items": [
+            "Discovery + JWKS documented for sandbox",
+            "Authorization Code + PKCE; JWT expiry/refresh",
+            "redirect_uri validation; logout / end_session_endpoint (gap 0308)"
+          ]
+        },
+        {
+          "id": "P1-E03",
+          "title": "Registration and proofing",
+          "status": "partial",
+          "component": "identity-core + verification-engine",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0309",
+            "ODTIS-0310",
+            "ODTIS-0311",
+            "ODTIS-0312",
+            "ODTIS-0313",
+            "ODTIS-0314"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_account_recovery.md",
+            "conformance/tests/core-identity/test_odtis_0310.md",
+            "conformance/tests/core-identity/test_odtis_0311.md",
+            "conformance/tests/core-identity/test_odtis_0312.md",
+            "conformance/tests/core-identity/test_odtis_0313.md",
+            "conformance/tests/core-identity/test_odtis_0314.md"
+          ],
+          "work_items": [
+            "Stable subject_id on first registration",
+            "Document + biometric proofing pipelines with liveness",
+            "Manual review queue for inconclusive cases"
+          ]
+        },
+        {
+          "id": "P1-E04",
+          "title": "Verification API",
+          "status": "partial",
+          "component": "verification-api + verification-engine",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0315",
+            "ODTIS-0316",
+            "ODTIS-0317",
+            "ODTIS-0318"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_odtis_0316.md",
+            "conformance/tests/core-identity/test_odtis_0318.md",
+            "conformance/tests/core-identity/test_verification_client_auth.md",
+            "conformance/tests/core-identity/test_verification_consent_scope.md"
+          ],
+          "work_items": [
+            "Client credentials auth for RPs",
+            "Response: status + LoA + consented attributes only",
+            "Run L2 tests from conformance/tests/core-identity/"
+          ]
+        },
+        {
+          "id": "P1-E05",
+          "title": "RP client lifecycle",
+          "status": "partial",
+          "component": "admin-api + identity-core",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0319",
+            "ODTIS-0320",
+            "ODTIS-0321",
+            "ODTIS-0337",
+            "ODTIS-0338",
+            "ODTIS-0339"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_odtis_0319.md",
+            "conformance/tests/core-identity/test_odtis_0320.md",
+            "conformance/tests/core-identity/test_odtis_0321.md",
+            "conformance/tests/core-identity/test_odtis_0337.md",
+            "conformance/tests/core-identity/test_odtis_0338.md",
+            "conformance/tests/core-identity/test_rp_suspension.md"
+          ],
+          "work_items": [
+            "RP registration, rotation, suspension",
+            "Admission criteria documented; secrets hashed"
+          ]
+        },
+        {
+          "id": "P1-E06",
+          "title": "Consent and privacy",
+          "status": "partial",
+          "component": "consent-service + citizen-api",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0328",
+            "ODTIS-0329",
+            "ODTIS-0330",
+            "ODTIS-0331",
+            "ODTIS-0332",
+            "ODTIS-0333",
+            "ODTIS-0334",
+            "ODTIS-0335",
+            "ODTIS-0336"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_consent_revocation.md",
+            "conformance/tests/core-identity/test_explicit_consent_first_release.md",
+            "conformance/tests/core-identity/test_odtis_0329.md",
+            "conformance/tests/core-identity/test_odtis_0331.md",
+            "conformance/tests/core-identity/test_odtis_0332.md",
+            "conformance/tests/core-identity/test_odtis_0333.md",
+            "conformance/tests/core-identity/test_odtis_0334.md",
+            "conformance/tests/core-identity/test_odtis_0335.md",
+            "conformance/tests/core-identity/test_odtis_0336.md"
+          ],
+          "work_items": [
+            "Explicit consent before first release; revocation effective next request",
+            "Consent UI fields; privacy policy + DSAR process",
+            "TLS + encryption at rest; no sale/profiling"
+          ]
+        },
+        {
+          "id": "P1-E07",
+          "title": "Citizen portal",
+          "status": "partial",
+          "component": "portal-ciudadano + citizen-api",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0322",
+            "ODTIS-0323",
+            "ODTIS-0324"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_odtis_0322.md",
+            "conformance/tests/core-identity/test_odtis_0323.md",
+            "conformance/tests/core-identity/test_odtis_0324.md"
+          ],
+          "work_items": [
+            "Status, connected RPs, consent revoke UX",
+            "Operator-configured locales; responsive web"
+          ]
+        },
+        {
+          "id": "P1-E08",
+          "title": "Identity transport and rate limits",
+          "status": "partial",
+          "component": "api-gateway + services",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0325",
+            "ODTIS-0326",
+            "ODTIS-0327",
+            "ODTIS-0521",
+            "ODTIS-0522",
+            "ODTIS-0523"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_liveness_high_loa.md",
+            "conformance/tests/core-identity/test_odtis_0325.md",
+            "conformance/tests/core-identity/test_odtis_0326.md",
+            "conformance/tests/core-identity/test_odtis_0327.md",
+            "conformance/tests/core-identity/test_owasp_baseline.md",
+            "conformance/tests/operator/test_odtis_0522.md"
+          ],
+          "work_items": [
+            "TLS 1.2+ on all public endpoints",
+            "Rate limiting auth/verify; OWASP baseline",
+            "MFA for sensitive actions; liveness in High LoA path"
+          ]
+        },
+        {
+          "id": "P1-E09",
+          "title": "Identity audit events",
+          "status": "partial",
+          "component": "identity-core events + audit export",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0526",
+            "ODTIS-0527",
+            "ODTIS-0529"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_consent_audit_events.md",
+            "conformance/tests/core-identity/test_identity_audit_events.md",
+            "conformance/tests/operator/test_event_envelope.md"
+          ],
+          "work_items": [
+            "Emit registration, verification, LoA, consent events",
+            "Standard envelope with trace_id + timestamp"
+          ]
+        },
+        {
+          "id": "P1-E10",
+          "title": "Phase 1 conformance package",
+          "status": "done",
+          "component": "operator publication",
+          "repo": "venezuela/odtis",
+          "odtis_ids": [
+            "ODTIS-0533"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_phase1_no_extended_claims.md"
+          ],
+          "work_items": [
+            "Production statement: Core Identity only, phase=1, no Extended",
+            "L2 test report for declared Core Identity IDs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "odtis_phase": 2,
+      "name": "Production Layer 2 - Trust Network",
+      "goal": "Exchange gateway, catalog, grants, multi-peer routing; TN L2.",
+      "profiles": [
+        "core-identity",
+        "trust-network"
+      ],
+      "book1_gate": "Nodos institucionales + grants + catalogo consumido (D3/D4).",
+      "epics": [
+        {
+          "id": "P2-E01",
+          "title": "Exchange gateway receiver/sender",
+          "status": "partial",
+          "component": "ven-trust-exchange-gateway",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0201",
+            "ODTIS-0202",
+            "ODTIS-0203",
+            "ODTIS-0204",
+            "ODTIS-0205",
+            "ODTIS-0206",
+            "ODTIS-0207"
+          ],
+          "conformance_tests": [
+            "conformance/tests/trust-network/test_gateway_mtls.md",
+            "conformance/tests/trust-network/test_gateway_only_routing.md",
+            "conformance/tests/trust-network/test_odtis_0202.md",
+            "conformance/tests/trust-network/test_odtis_0203.md",
+            "conformance/tests/trust-network/test_odtis_0206.md",
+            "conformance/tests/trust-network/test_odtis_0207.md",
+            "conformance/tests/trust-network/test_trust_registry_validation.md"
+          ],
+          "work_items": [
+            "All partner traffic via local gateway",
+            "Receiver validates partner against trust registry",
+            "mTLS gateway-to-gateway live interop test (KNOWN-GAP 0204)"
+          ]
+        },
+        {
+          "id": "P2-E02",
+          "title": "Service catalog",
+          "status": "done",
+          "component": "ven-trust-registry",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0208",
+            "ODTIS-0222",
+            "ODTIS-0212",
+            "ODTIS-0213",
+            "ODTIS-0214"
+          ],
+          "conformance_tests": [
+            "conformance/tests/trust-network/test_catalog_gateway_base_url.md",
+            "conformance/tests/trust-network/test_odtis_0208.md",
+            "conformance/tests/trust-network/test_odtis_0212.md",
+            "conformance/tests/trust-network/test_odtis_0213.md",
+            "conformance/tests/trust-network/test_odtis_0214.md"
+          ],
+          "work_items": [
+            "Stable service_id + gateway_base_url per remote peer (FASE-4)",
+            "GET /registry/services?serviceId= and caller_partner_id filters",
+            "Configurable cache refresh; optional @VenPartnerService autodiscovery"
+          ]
+        },
+        {
+          "id": "P2-E03",
+          "title": "Service access grants",
+          "status": "done",
+          "component": "trust-registry + portal-api",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0209",
+            "ODTIS-0210",
+            "ODTIS-0211",
+            "ODTIS-0224",
+            "ODTIS-0226"
+          ],
+          "conformance_tests": [
+            "conformance/tests/trust-network/test_grant_fail_closed.md",
+            "conformance/tests/trust-network/test_grant_workflow_audit.md",
+            "conformance/tests/trust-network/test_odtis_0210.md",
+            "conformance/tests/trust-network/test_odtis_0211.md",
+            "conformance/tests/trust-network/test_service_grant_required.md"
+          ],
+          "work_items": [
+            "Grants bind caller, provider, service_id",
+            "Fail closed on grant denial (no implicit zone trust)",
+            "Auditable grant request/approve/revoke workflows"
+          ]
+        },
+        {
+          "id": "P2-E04",
+          "title": "Multi-peer sender routing",
+          "status": "done",
+          "component": "exchange-gateway sender + sdk",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0223"
+          ],
+          "conformance_tests": [
+            "conformance/tests/trust-network/test_sender_multi_peer_routing.md"
+          ],
+          "work_items": [
+            "Resolve route by X-Exchange-Service / service_id",
+            "ExchangeGatewayClient SDK documented in FASE-4",
+            "Remove single hard-coded remote-gateway-url for prod"
+          ]
+        },
+        {
+          "id": "P2-E05",
+          "title": "Metadata-only exchange (D4)",
+          "status": "done",
+          "component": "trust-registry + audit",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0225"
+          ],
+          "conformance_tests": [
+            "conformance/tests/trust-network/test_no_payload_centralization.md"
+          ],
+          "work_items": [
+            "Catalog/audit stores: routing metadata only, not authoritative payloads",
+            "Review persistence layer for payload centralization"
+          ]
+        },
+        {
+          "id": "P2-E06",
+          "title": "Trust Network PKI",
+          "status": "partial",
+          "component": "trust-authority + central-server",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0215",
+            "ODTIS-0216",
+            "ODTIS-0217",
+            "ODTIS-0218",
+            "ODTIS-0106"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_odtis_0106.md",
+            "conformance/tests/trust-network/test_cert_revocation.md",
+            "conformance/tests/trust-network/test_odtis_0215.md",
+            "conformance/tests/trust-network/test_odtis_0217.md",
+            "conformance/tests/trust-network/test_odtis_0218.md"
+          ],
+          "work_items": [
+            "Partner/service cert hierarchy; CRL/OCSP validation",
+            "Document FAL controls and ceremony docs"
+          ]
+        },
+        {
+          "id": "P2-E07",
+          "title": "Exchange audit and SLA",
+          "status": "partial",
+          "component": "audit-service + operator policy",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0219",
+            "ODTIS-0220",
+            "ODTIS-0221",
+            "ODTIS-0528",
+            "ODTIS-0517"
+          ],
+          "conformance_tests": [
+            "conformance/tests/trust-network/test_exchange_audit_events.md",
+            "conformance/tests/trust-network/test_odtis_0219.md",
+            "conformance/tests/trust-network/test_odtis_0220.md",
+            "conformance/tests/trust-network/test_odtis_0221.md",
+            "conformance/tests/trust-network/test_per_request_partner_verify.md"
+          ],
+          "work_items": [
+            "Exchange events with correlation IDs",
+            "Published gateway SLA; verify partner every request"
+          ]
+        },
+        {
+          "id": "P2-E08",
+          "title": "Fail-closed cross-layer",
+          "status": "partial",
+          "component": "identity + trust integration",
+          "repo": "ven-identity-core + ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0535"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_fail_closed_denial_paths.md"
+          ],
+          "work_items": [
+            "Unified denial behavior: OIDC, Verification API, exchange grants",
+            "Integration tests: zero attribute leakage on deny"
+          ]
+        },
+        {
+          "id": "P2-E09",
+          "title": "Phase 2 conformance package",
+          "status": "done",
+          "component": "operator publication",
+          "repo": "venezuela/odtis",
+          "odtis_ids": [
+            "ODTIS-0532"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_phase_declaration.md"
+          ],
+          "work_items": [
+            "Statement: phase=2, Core Identity + Trust Network L2",
+            "Full trust-network test suite green in staging"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "odtis_phase": 3,
+      "name": "National operator",
+      "goal": "Operator PKI/governance, audit/regulator, E-Registry, federation prep.",
+      "profiles": [
+        "operator",
+        "extended/E-Registry",
+        "federation/prep"
+      ],
+      "book1_gate": "Registro civil adapter Phase 3+; SOC/PKI maduro.",
+      "epics": [
+        {
+          "id": "P3-E01",
+          "title": "Operator governance",
+          "status": "partial",
+          "component": "portal-operador + policy docs",
+          "repo": "ven-identity-core + docs",
+          "odtis_ids": [
+            "ODTIS-0501",
+            "ODTIS-0502",
+            "ODTIS-0503",
+            "ODTIS-0504",
+            "ODTIS-0505",
+            "ODTIS-0506"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_no_false_phase4_claims.md",
+            "conformance/tests/operator/test_odtis_0502.md",
+            "conformance/tests/operator/test_odtis_0503.md",
+            "conformance/tests/operator/test_odtis_0505.md",
+            "conformance/tests/operator/test_operator_subject_admin.md",
+            "conformance/tests/operator/test_published_service_scope.md"
+          ],
+          "work_items": [
+            "Publish scope, governance units, subject admin procedures",
+            "Phase-appropriate PKI/SOC in conformance statement"
+          ]
+        },
+        {
+          "id": "P3-E02",
+          "title": "Operator PKI stewardship",
+          "status": "partial",
+          "component": "trust-authority + HSM runbooks",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0507",
+            "ODTIS-0508",
+            "ODTIS-0509",
+            "ODTIS-0510"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_cp_cps_published.md",
+            "conformance/tests/operator/test_odtis_0508.md",
+            "conformance/tests/operator/test_odtis_0509.md",
+            "conformance/tests/operator/test_odtis_0510.md"
+          ],
+          "work_items": [
+            "CP/CPS publication; dual-control ceremonies",
+            "CRL/OCSP; tested PKI DR on schedule"
+          ]
+        },
+        {
+          "id": "P3-E03",
+          "title": "SLA, partners, metrics",
+          "status": "partial",
+          "component": "operator policy + reports-api",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0511",
+            "ODTIS-0512",
+            "ODTIS-0513"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_odtis_0511.md",
+            "conformance/tests/operator/test_odtis_0512.md",
+            "conformance/tests/operator/test_odtis_0513.md"
+          ],
+          "work_items": [
+            "IdP/Verification availability targets",
+            "Partner onboarding rules; ecosystem metrics export"
+          ]
+        },
+        {
+          "id": "P3-E04",
+          "title": "Regulator, incidents, liability",
+          "status": "partial",
+          "component": "regulator-api + legal docs",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0514",
+            "ODTIS-0515",
+            "ODTIS-0516"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_liability_documentation.md",
+            "conformance/tests/operator/test_odtis_0515.md",
+            "conformance/tests/operator/test_regulator_export.md"
+          ],
+          "work_items": [
+            "Aggregated audit export without bulk PII",
+            "Incident runbook; liability in ToS and RP contracts"
+          ]
+        },
+        {
+          "id": "P3-E05",
+          "title": "Security and secrets platform",
+          "status": "partial",
+          "component": "infra + all services",
+          "repo": "ven-infra-core",
+          "odtis_ids": [
+            "ODTIS-0518",
+            "ODTIS-0519",
+            "ODTIS-0520",
+            "ODTIS-0525"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_fraud_metrics.md",
+            "conformance/tests/operator/test_internal_services_not_public.md",
+            "conformance/tests/operator/test_odtis_0520.md",
+            "conformance/tests/operator/test_secrets_manager.md"
+          ],
+          "work_items": [
+            "No sensitive microservices on public internet",
+            "Secrets manager for RP secrets and PKI keys",
+            "Fraud monitoring dashboard + manual review SLA"
+          ]
+        },
+        {
+          "id": "P3-E06",
+          "title": "Audit platform and regulator export",
+          "status": "partial",
+          "component": "audit-service + reports-api",
+          "repo": "ven-trust-network + ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0530"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_audit_export_pii_minimized.md"
+          ],
+          "work_items": [
+            "Tamper-evident storage; PII-minimized regulator export",
+            "Cross-link identity + exchange audit by correlation_id"
+          ]
+        },
+        {
+          "id": "P3-E07",
+          "title": "E-Registry adapter",
+          "status": "partial",
+          "component": "new eregistry-adapter service",
+          "repo": "ven-identity-core (TBD)",
+          "odtis_ids": [
+            "ODTIS-0104",
+            "ODTIS-0344",
+            "ODTIS-0349",
+            "ODTIS-0350",
+            "ODTIS-0351",
+            "ODTIS-0352",
+            "ODTIS-0353"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_odtis_0104.md",
+            "conformance/tests/extended/test_eregistry_declaration_required.md",
+            "conformance/tests/extended/test_eregistry_no_civil_authority.md",
+            "conformance/tests/extended/test_eregistry_phase3_activation.md",
+            "conformance/tests/extended/test_national_loa_after_adapter.md",
+            "conformance/tests/extended/test_registry_hash_no_biometric_store.md",
+            "conformance/tests/extended/test_registry_verification_audit.md"
+          ],
+          "work_items": [
+            "National LoA only with E-Registry declared + adapter active",
+            "Phase 3+ activation; bilateral agreement with registry authority",
+            "Hashing only; no raw biometric persistence; audit every verification"
+          ]
+        },
+        {
+          "id": "P3-E08",
+          "title": "Federation agreements (prep)",
+          "status": "partial",
+          "component": "trust-registry federation module",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0401",
+            "ODTIS-0402",
+            "ODTIS-0403",
+            "ODTIS-0404",
+            "ODTIS-0405",
+            "ODTIS-0406"
+          ],
+          "conformance_tests": [
+            "conformance/tests/federation/test_agreement_required_fields.md",
+            "conformance/tests/federation/test_explicit_activation.md",
+            "conformance/tests/federation/test_federation_cert_policy.md",
+            "conformance/tests/federation/test_federation_regulator_export.md",
+            "conformance/tests/federation/test_non_transitivity.md",
+            "conformance/tests/federation/test_transitive_route_reject.md"
+          ],
+          "work_items": [
+            "Bilateral agreement store: instance IDs, validity, pinned roots",
+            "Reject federated routes without direct agreement",
+            "Regulator export of agreement metadata (SHOULD)"
+          ]
+        },
+        {
+          "id": "P3-E09",
+          "title": "Phase 3 conformance package",
+          "status": "partial",
+          "component": "operator publication",
+          "repo": "venezuela/odtis",
+          "odtis_ids": [
+            "ODTIS-0532"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_phase_declaration.md"
+          ],
+          "work_items": [
+            "Statement: phase=3, Operator L2-L3, E-Registry if active",
+            "Third-party or internal audit dry-run"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "odtis_phase": 4,
+      "name": "Full mandate",
+      "goal": "Federation production, Extended modules, Operator L3.",
+      "profiles": [
+        "federation",
+        "extended",
+        "operator/L3"
+      ],
+      "book1_gate": "Acuerdos bilaterales activos; modulos Extended declarados.",
+      "epics": [
+        {
+          "id": "P4-E01",
+          "title": "Federation runtime",
+          "status": "partial",
+          "component": "exchange-gateway federation router",
+          "repo": "ven-trust-network",
+          "odtis_ids": [
+            "ODTIS-0407",
+            "ODTIS-0408"
+          ],
+          "conformance_tests": [
+            "conformance/tests/federation/test_agreement_suspension_routing.md",
+            "conformance/tests/federation/test_federated_audit_instance_ids.md"
+          ],
+          "work_items": [
+            "Suspend/expired agreements disable routing within cache bounds",
+            "Federated audit: local + remote trust instance IDs"
+          ]
+        },
+        {
+          "id": "P4-E02",
+          "title": "E-Wallet (OID4VP)",
+          "status": "partial",
+          "component": "wallet issuer + wallet app",
+          "repo": "ven-identity-core (TBD)",
+          "odtis_ids": [
+            "ODTIS-0340",
+            "ODTIS-0341",
+            "ODTIS-0342",
+            "ODTIS-0343",
+            "ODTIS-0524"
+          ],
+          "conformance_tests": [
+            "conformance/tests/core-identity/test_odtis_0340.md",
+            "conformance/tests/core-identity/test_odtis_0341.md",
+            "conformance/tests/core-identity/test_odtis_0342.md",
+            "conformance/tests/core-identity/test_odtis_0343.md",
+            "conformance/tests/operator/test_odtis_0524.md"
+          ],
+          "work_items": [
+            "OID4VP presentations; issuer trust via trust registry",
+            "Selective disclosure; shared LoA with Path A OIDC"
+          ]
+        },
+        {
+          "id": "P4-E03",
+          "title": "E-Inclusion",
+          "status": "partial",
+          "component": "inclusion onboarding flows",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0354",
+            "ODTIS-0355",
+            "ODTIS-0356",
+            "ODTIS-0357"
+          ],
+          "conformance_tests": [
+            "conformance/tests/extended/test_inclusion_accessibility_offline.md",
+            "conformance/tests/extended/test_inclusion_assisted_consent.md",
+            "conformance/tests/extended/test_inclusion_no_loa_bypass.md",
+            "conformance/tests/extended/test_inclusion_representative_verify.md"
+          ],
+          "work_items": [
+            "Assisted consent; representative verification",
+            "No LoA bypass; accessibility/offline where policy allows"
+          ]
+        },
+        {
+          "id": "P4-E04",
+          "title": "E-Webhook",
+          "status": "partial",
+          "component": "verification-api webhooks",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0358",
+            "ODTIS-0359",
+            "ODTIS-0360",
+            "ODTIS-0531"
+          ],
+          "conformance_tests": [
+            "conformance/tests/extended/test_ewebhook_pii_minimize.md",
+            "conformance/tests/extended/test_ewebhook_retry_backoff.md",
+            "conformance/tests/extended/test_ewebhook_rp_registration.md",
+            "conformance/tests/operator/test_odtis_0531.md"
+          ],
+          "work_items": [
+            "RP webhook registration API (OpenAPI pending)",
+            "Signed payloads, retry/backoff, PII minimization"
+          ]
+        },
+        {
+          "id": "P4-E05",
+          "title": "E-Signature",
+          "status": "partial",
+          "component": "signature service",
+          "repo": "ven-identity-core (TBD)",
+          "odtis_ids": [
+            "ODTIS-0361",
+            "ODTIS-0362",
+            "ODTIS-0363"
+          ],
+          "conformance_tests": [
+            "conformance/tests/extended/test_esignature_audit_events.md",
+            "conformance/tests/extended/test_esignature_loa_binding.md",
+            "conformance/tests/extended/test_esignature_pki_keys.md"
+          ],
+          "work_items": [
+            "Sign bound to LoA; keys under operator PKI/TSP",
+            "Auditable sign/verify events"
+          ]
+        },
+        {
+          "id": "P4-E06",
+          "title": "E-KYB (preview)",
+          "status": "partial",
+          "component": "kyb module",
+          "repo": "ven-identity-core (TBD)",
+          "odtis_ids": [
+            "ODTIS-0364",
+            "ODTIS-0365"
+          ],
+          "conformance_tests": [
+            "conformance/tests/extended/test_ekyb_entity_separate.md",
+            "conformance/tests/extended/test_ekyb_representative_link.md"
+          ],
+          "work_items": [
+            "Legal entity verification separate from natural person",
+            "Link representatives to verified subjects before B2B release"
+          ]
+        },
+        {
+          "id": "P4-E07",
+          "title": "Operator L3 and Phase 4 statement",
+          "status": "partial",
+          "component": "governance + external audit",
+          "repo": "venezuela/odtis",
+          "odtis_ids": [
+            "ODTIS-0532",
+            "ODTIS-0006"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_phase_declaration.md",
+            "conformance/tests/reference-architecture/test_extended_no_weakening.md"
+          ],
+          "work_items": [
+            "L3 attestation; all claimed profiles + Extended modules listed",
+            "Extended must not weaken base profile controls"
+          ]
+        }
+      ]
+    }
+  ],
+  "execution_order": [
+    "Complete P0 before public ODTIS claim",
+    "P1 Core Identity L2 before P2 Trust Network production",
+    "P2 before declaring Trust Network in production (ODTIS-0532)",
+    "P3 Operator + E-Registry before National LoA in production",
+    "P4 Federation + Extended only when agreements/modules active"
+  ],
+  "references": {
+    "ri_map": "implementation/RI-MAP.yaml",
+    "known_gaps": "implementation/gaps/KNOWN-GAPS.md",
+    "odtis_phases": "spec/10-deployment-profiles/SPEC.md",
+    "platform_fase4": "docs/platform/FASE-4-CLIENTE-Y-DESCUBRIMIENTO.md",
+    "book1_gates": "docs/sources/books/01-narrative-policy-book/chapters/14-camino-del-sponsor/CHAPTER.md"
+  }
+}

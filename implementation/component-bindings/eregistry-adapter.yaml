@@ -1,0 +1,32 @@
+# Normative binding: E-Registry adapter (VenID reference implementation)
+
+component_id: eregistry-adapter
+ri_map_surface: eregistry-adapter
+repository: ven-identity-core
+module_path: services/eregistry-adapter
+profile: extended
+backlog_epic: P3-E07
+status: partial
+
+summary: >
+  Civil registry adapter for National LoA: phase-gated activation, bilateral agreement,
+  hashed identifiers only, and auditable verification outcomes.
+
+implementation_notes: >
+  ERegistryActivationPolicy; SandboxRegistryAuthority; NationalLoaUpgradeService;
+  no raw biometric persistence; registry.verification audit events.
+
+smoke_script: conformance/run-extended-eregistry-checks.sh
+
+odtis_ids:
+  - ODTIS-0104
+  - ODTIS-0344
+  - ODTIS-0349
+  - ODTIS-0350
+  - ODTIS-0351
+  - ODTIS-0352
+  - ODTIS-0353
+
+evidence:
+  - implementation/statements/venid-phase3-operator/l2-report.md
+  - ven-identity-core/docs/operator/E-REGISTRY.md

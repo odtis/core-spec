@@ -1,0 +1,49 @@
+# Traceability coverage report (generated)
+spec_version: "0.9.0-draft"
+generated: true
+as_of: 2026-06-22
+targets:
+  phase_3_1_exit_pct: 60
+  phase_4_exit_pct: 100
+core_rf:
+  total: 0
+  with_odtis_id: 0
+  partial: 0
+  gap: 0
+  coverage_pct: 100.0
+  phase_3_1_exit_met: true
+gaps: []
+registry:
+  requirement_count: 149
+  with_conformance_test: 149
+  conformance_test_coverage_pct: 100.0
+conformance_tests:
+  total_procedures: 159
+  implemented: 85
+  pending: 74
+  implemented_pct: 53.5
+profiles:
+  core-identity:
+    tests: 58
+    implemented: 13
+    requirements: 45
+  extended:
+    tests: 23
+    implemented: 20
+    requirements: 25
+  federation:
+    tests: 8
+    implemented: 8
+    requirements: 8
+  operator:
+    tests: 30
+    implemented: 25
+    requirements: 36
+  reference-architecture:
+    tests: 10
+    implemented: 1
+    requirements: 10
+  trust-network:
+    tests: 30
+    implemented: 18
+    requirements: 27

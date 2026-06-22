@@ -1,0 +1,70 @@
+# Profile manifest: trust-network
+# Generated - do not edit by hand; run build-conformance-manifest.py
+
+profile_id: trust-network
+requirement_count: 27
+test_count: 30
+coverage_pct: 100.0
+missing_total: 0
+
+tests:
+  - path: conformance/tests/trust-network/test_catalog_gateway_base_url.md
+    requirements: [ODTIS-0222]
+  - path: conformance/tests/trust-network/test_cert_revocation.md
+    requirements: [ODTIS-0216]
+  - path: conformance/tests/trust-network/test_exchange_audit_events.md
+    requirements: [ODTIS-0528]
+  - path: conformance/tests/trust-network/test_gateway_mtls.md
+    requirements: [ODTIS-0204]
+  - path: conformance/tests/trust-network/test_gateway_only_routing.md
+    requirements: [ODTIS-0201]
+  - path: conformance/tests/trust-network/test_grant_fail_closed.md
+    requirements: [ODTIS-0224]
+  - path: conformance/tests/trust-network/test_grant_workflow_audit.md
+    requirements: [ODTIS-0226]
+  - path: conformance/tests/trust-network/test_no_payload_centralization.md
+    requirements: [ODTIS-0225]
+  - path: conformance/tests/trust-network/test_odtis-4_8_1.md
+    requirements: [ODTIS-0205]
+  - path: conformance/tests/trust-network/test_odtis_0202.md
+    requirements: [ODTIS-0202]
+  - path: conformance/tests/trust-network/test_odtis_0203.md
+    requirements: [ODTIS-0203]
+  - path: conformance/tests/trust-network/test_odtis_0206.md
+    requirements: [ODTIS-0206]
+  - path: conformance/tests/trust-network/test_odtis_0207.md
+    requirements: [ODTIS-0207]
+  - path: conformance/tests/trust-network/test_odtis_0208.md
+    requirements: [ODTIS-0208]
+  - path: conformance/tests/trust-network/test_odtis_0210.md
+    requirements: [ODTIS-0210]
+  - path: conformance/tests/trust-network/test_odtis_0211.md
+    requirements: [ODTIS-0211]
+  - path: conformance/tests/trust-network/test_odtis_0212.md
+    requirements: [ODTIS-0212]
+  - path: conformance/tests/trust-network/test_odtis_0213.md
+    requirements: [ODTIS-0213]
+  - path: conformance/tests/trust-network/test_odtis_0214.md
+    requirements: [ODTIS-0214]
+  - path: conformance/tests/trust-network/test_odtis_0215.md
+    requirements: [ODTIS-0215]
+  - path: conformance/tests/trust-network/test_odtis_0217.md
+    requirements: [ODTIS-0217]
+  - path: conformance/tests/trust-network/test_odtis_0218.md
+    requirements: [ODTIS-0218]
+  - path: conformance/tests/trust-network/test_odtis_0219.md
+    requirements: [ODTIS-0219]
+  - path: conformance/tests/trust-network/test_odtis_0220.md
+    requirements: [ODTIS-0220]
+  - path: conformance/tests/trust-network/test_odtis_0221.md
+    requirements: [ODTIS-0221]
+  - path: conformance/tests/trust-network/test_per_request_partner_verify.md
+    requirements: [ODTIS-0517]
+  - path: conformance/tests/trust-network/test_sender_multi_peer_routing.md
+    requirements: [ODTIS-0223]
+  - path: conformance/tests/trust-network/test_service_grant_required.md
+    requirements: [ODTIS-0209]
+  - path: conformance/tests/trust-network/test_trust_registry_validation.md
+    requirements: [ODTIS-0205]
+  - path: conformance/tests/core-identity/test_odtis_0106.md
+    requirements: [ODTIS-0106]
