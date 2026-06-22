@@ -41,6 +41,7 @@ jobs:
         run: |
           python3 scripts/sync-spec-version.py
           python3 scripts/sync-site-release-meta.py
+          python3 scripts/validate-section-completeness.py
         env:
           ODTIS_BUILD_SHA: ${{ github.sha }}
           ODTIS_BUILD_TIME: ${{ github.event.head_commit.timestamp }}
@@ -55,10 +56,14 @@ jobs:
         run: ./scripts/build-site.sh
 
       - name: Configure SSH for EC2 deploy
+        env:
+          ODTIS_SSH_KEY: ${{ secrets.ODTIS_SSH_KEY }}
         run: |
           mkdir -p ~/.ssh
-          printf '%s\n' "${{ secrets.ODTIS_SSH_KEY }}" > ~/.ssh/odtis_deploy.pem
+          printf '%s' "$ODTIS_SSH_KEY" > ~/.ssh/odtis_deploy.pem
+          echo >> ~/.ssh/odtis_deploy.pem
           chmod 600 ~/.ssh/odtis_deploy.pem
+          ssh-keygen -y -f ~/.ssh/odtis_deploy.pem > /dev/null
 
       - name: Deploy to EC2
         env:

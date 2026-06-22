@@ -27,18 +27,36 @@ def read_version() -> str:
     return VERSION_FILE.read_text(encoding="utf-8").strip()
 
 
+def canonical_spec_version_line(version: str) -> str:
+    return f"| **Spec version** | {version} |"
+
+
+def format_version_line(line: str, version: str, m: re.Match[str], kind: str) -> str:
+    if kind == "md_spec_table" and "**Spec version**" in line:
+        return canonical_spec_version_line(version)
+    if len(m.groups()) == 3:
+        return f"{m.group(1)}{version}{m.group(3)}"
+    return f"{m.group(1)}{version}"
+
+
+def line_needs_version_update(line: str, version: str, pat: re.Pattern[str], kind: str) -> bool:
+    m = pat.match(line)
+    if not m or len(m.groups()) < 2:
+        return False
+    if kind == "md_spec_table" and "**Spec version**" in line:
+        return line != canonical_spec_version_line(version)
+    return m.group(2).strip() != version
+
+
 def file_needs_update(path: Path, version: str) -> bool:
     if path.suffix == ".json":
         data = json.loads(path.read_text(encoding="utf-8"))
         return data.get("spec_version") != version
     text = path.read_text(encoding="utf-8")
     for line in text.splitlines():
-        for pat, _ in PATTERNS:
-            m = pat.match(line)
-            if m and len(m.groups()) >= 2:
-                current = m.group(2).strip()
-                if current != version:
-                    return True
+        for pat, kind in PATTERNS:
+            if line_needs_version_update(line, version, pat, kind):
+                return True
     return False
 
 
@@ -57,13 +75,10 @@ def update_file(path: Path, version: str) -> bool:
     new_lines: list[str] = []
     for line in lines:
         updated = line
-        for pat, _ in PATTERNS:
+        for pat, kind in PATTERNS:
             m = pat.match(line)
             if m:
-                if len(m.groups()) == 3:
-                    updated = f"{m.group(1)}{version}{m.group(3)}"
-                else:
-                    updated = f"{m.group(1)}{version}"
+                updated = format_version_line(line, version, m, kind)
                 break
         if updated != line:
             changed = True
