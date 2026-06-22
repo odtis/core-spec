@@ -11,7 +11,7 @@ description: Citation formats for the ODTIS working draft, Zenodo DOI, and profi
 **Project hub:** [Project hub](../project/README.md) | **Downloads:** [Downloads](../site/DOWNLOADS.md)
 
 !!! tip "Cite version + profile"
-    ODTIS is published from [github.com/odtis/core-spec](https://github.com/odtis/core-spec). For implementation conformance, cite the **exact ODTIS version and declared profile(s)**.
+    ODTIS is published from [Core Spec](https://github.com/odtis/core-spec). For implementation conformance, cite the **exact ODTIS version and declared profile(s)**.
 
 ---
 

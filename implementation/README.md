@@ -50,7 +50,7 @@ Maps VenID product codebases to ODTIS profiles and conformance tests. **Informat
 | Trust network | `../core-impl/ven-trust-network/` | trust-network | 4 |
 | Trust network UI | `../core-impl/ven-trust-network-web/` | *(informative)* | - |
 
-Clone [odtis/core-impl](https://github.com/odtis/core-impl) as a sibling when running RI smokes (private during Phase 3.2).
+Clone [Core Impl](https://github.com/odtis/core-impl) as a sibling when running RI smokes (private during Phase 3.2).
 
 Extended Phase 4 services (wallet, inclusion, webhook, signature, KYB, eregistry) map to Annex D sub-modules in [RI surface map](RI-MAP.yaml).
 

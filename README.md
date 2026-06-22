@@ -5,7 +5,7 @@
 **Citation:** [How to cite](publication/HOW-TO-CITE.md)  
 **Site:** [https://odtis.org](https://odtis.org)  
 **License:** [CC BY 4.0](LICENSE)  
-**Reference implementation:** [odtis/core-impl](https://github.com/odtis/core-impl) (private during Phase 3.2)
+**Reference implementation:** [Core Impl](https://github.com/odtis/core-impl) (private during Phase 3.2)
 
 ODTIS is the open normative specification for VenID / FinnectOS. It defines conformance profiles, MUST/SHOULD/MAY requirements, machine-readable annexes, and a test suite for digital trust infrastructure implementations.
 
@@ -19,8 +19,8 @@ ODTIS is the open normative specification for VenID / FinnectOS. It defines conf
 
 | Repository | Role |
 |------------|------|
-| [odtis/core-spec](https://github.com/odtis/core-spec) | This repo - normative spec, registry, conformance, MkDocs sources |
-| [odtis/core-impl](https://github.com/odtis/core-impl) | VenID reference implementation (`ven-*` modules); clone as sibling for smokes |
+| [Core Spec](https://github.com/odtis/core-spec) | This repo - normative spec, registry, conformance, MkDocs sources |
+| [Core Impl](https://github.com/odtis/core-impl) | VenID reference implementation (`ven-*` modules); clone as sibling for smokes |
 
 Local layout for RI smokes and site build:
 
@@ -101,7 +101,7 @@ python3 scripts/sync-spec-version.py
 python3 scripts/sync-site-release-meta.py
 ```
 
-See [Site overview](site/README.md) and [DEPLOY-EC2-ODTIS-ORG.md](scripts/DEPLOY-EC2-ODTIS-ORG.md).
+See [Site overview](site/README.md) and [Deploy Ec2 Odtis Org](scripts/DEPLOY-EC2-ODTIS-ORG.md).
 
 ---
 
@@ -109,12 +109,12 @@ See [Site overview](site/README.md) and [DEPLOY-EC2-ODTIS-ORG.md](scripts/DEPLOY
 
 | Doc | Path |
 |-----|------|
-| Adoption guide | [ADOPTION.md](ADOPTION.md) |
-| Repository map | [STRUCTURE.md](STRUCTURE.md) |
-| How to cite | [publication/HOW-TO-CITE.md](publication/HOW-TO-CITE.md) |
-| Governance | [governance/README.md](governance/README.md) |
-| Certification | [governance/CERTIFICATION.md](governance/CERTIFICATION.md) |
-| Build plan | [PLAN-PHASES.md](PLAN-PHASES.md) |
+| Adoption guide | [Adoption guide](ADOPTION.md) |
+| Repository map | [Repository map](STRUCTURE.md) |
+| How to cite | [How to cite](publication/HOW-TO-CITE.md) |
+| Governance | [Governance overview](governance/README.md) |
+| Certification | [Certification program](governance/CERTIFICATION.md) |
+| Build plan | [Build plan](PLAN-PHASES.md) |
 
 ```bash
 python3 scripts/sync-spec-version.py

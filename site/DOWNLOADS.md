@@ -75,7 +75,7 @@ cd core-spec
 mkdocs serve -f site/mkdocs.yml
 ```
 
-Production deploy: [deploy-ec2.sh](../scripts/deploy-ec2.sh) with local `scripts/odtis-deploy.env` (gitignored).
+Production deploy: [Deploy Ec2 script](../scripts/deploy-ec2.sh) with local `scripts/odtis-deploy.env` (gitignored).
 
 ---
 
