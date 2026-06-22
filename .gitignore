@@ -1,8 +1,58 @@
+# =============================================================================
+# ODTIS core-spec — local tooling, secrets, generated runtime output
+# Site HTML build: ../build/odtis-spec-site/ (workspace level, see ../.gitignore)
+# =============================================================================
+
+# --- Python / MkDocs local ---
 .venv-site/
+venv/
+.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+
+# --- Spec repo local build (prefer workspace ../build/) ---
 build/
 site/_site/
-__pycache__/
-*.pyc
-.DS_Store
-conformance/reports/
+
+# --- Secrets / deploy ---
+.env
+.env.*
+!.env.example
+!.env*.example
 scripts/odtis-deploy.env
+*.pem
+*.key
+*.p12
+credentials.json
+secrets/
+
+# --- Conformance / CI output ---
+conformance/reports/
+
+# --- Zenodo packaging (keep .gitkeep; not release tarballs) ---
+publication/zenodo/snapshots/*.tar.gz
+publication/zenodo/snapshots/SHA256SUMS
+
+# --- OS / IDE ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+
+# --- Logs ---
+*.log
+logs/
