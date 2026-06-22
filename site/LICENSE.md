@@ -27,12 +27,12 @@ Content in this repository (`core-spec`: sections 1-10, registry, annexes, confo
 
 You are free to:
 
-- **Share** — copy and redistribute in any medium or format
-- **Adapt** — remix, transform, and build upon the material for any purpose, **including commercially**
+- **Share** - copy and redistribute in any medium or format
+- **Adapt** - remix, transform, and build upon the material for any purpose, **including commercially**
 
 Under these terms:
 
-- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. Use [How to cite](../publication/HOW-TO-CITE.md) for ODTIS version and profile.
+- **Attribution** - You must give appropriate credit, provide a link to the license, and indicate if changes were made. Use [How to cite](../publication/HOW-TO-CITE.md) for ODTIS version and profile.
 
 ### Clarifications
 

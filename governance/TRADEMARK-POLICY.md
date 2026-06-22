@@ -8,10 +8,10 @@
 
 ## Marks
 
-- **ODTIS** — specification name
-- **ODTIS Certified** — conformance certification mark (planned)
-- **VenID** — reference implementation branding ([core-impl](https://github.com/odtis/core-impl)); not the specification name
-- **FinnectOS**, **Digital Trust Infrastructure** — steward / research organization branding
+- **ODTIS** - specification name
+- **ODTIS Certified** - conformance certification mark (planned)
+- **VenID** - reference implementation branding ([core-impl](https://github.com/odtis/core-impl)); not the specification name
+- **FinnectOS**, **Digital Trust Infrastructure** - steward / research organization branding
 
 Spec text is CC BY 4.0; **trademarks and logos are not**.
 
