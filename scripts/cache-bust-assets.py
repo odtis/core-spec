@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 import re
 import sys
 from datetime import datetime, timezone
@@ -23,7 +24,10 @@ def main() -> int:
         print(f"Missing build output: {out}", file=sys.stderr)
         return 1
 
-    version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M")
+    version_file = root / "VERSION"
+    version = version_file.read_text(encoding="utf-8").strip() if version_file.is_file() else "dev"
+    sha = os.environ.get("ODTIS_BUILD_SHA", os.environ.get("GITHUB_SHA", "local"))[:12]
+    version = f"{version}-{sha}"
     assets_alt = "|".join(re.escape(asset) for asset in ASSETS)
     pattern = re.compile(
         rf'((?:href|src)="(?:\.\./)*(?:site/)?(?:stylesheets|javascripts)/({assets_alt}))(?:\?[^"]*)?"'

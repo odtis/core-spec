@@ -13,6 +13,7 @@ fi
 
 python3 "$ROOT/scripts/validate-site-language.py"
 python3 "$ROOT/scripts/normalize-ascii-punctuation.py" --check
+python3 "$ROOT/scripts/sync-site-release-meta.py"
 python3 "$ROOT/scripts/expand-product-requirements.py"
 python3 "$ROOT/scripts/generate-phased-backlog.py"
 python3 "$ROOT/scripts/generate-site-indexes.py"

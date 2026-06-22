@@ -1021,6 +1021,41 @@ nav.md-tabs {
   color: var(--odtis-primary);
 }
 
+.odtis-landing-hero__version {
+  margin: 0 0 0.85rem;
+  font-size: 0.8125rem;
+  color: var(--odtis-muted);
+}
+
+.odtis-landing-hero__version a {
+  font-weight: 600;
+  color: var(--odtis-primary);
+}
+
+.odtis-version-badge {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  color: var(--odtis-primary-dark);
+  background: var(--odtis-accent-soft);
+  border: 1px solid var(--odtis-border);
+}
+
+.odtis-build-meta {
+  margin: 0.65rem 0 0;
+  font-size: 0.75rem;
+  color: var(--odtis-chrome-footer-dim);
+}
+
+.odtis-build-meta code {
+  font-size: 0.72rem;
+}
+
 .odtis-landing-hero h1 {
   margin: 0 0 0.85rem;
   max-width: 14ch;

@@ -1,7 +1,7 @@
 # ODTIS open-source migration - status & checklist
 
 **Last updated:** 2026-06-22  
-**Workspace:** `/path/to/odtis`  
+**Workspace:** `odtis/` (sibling `core-spec` + `core-impl`)  
 **Model:** two repos (`core-spec` + `core-impl`); **no** separate `site` repo - odtis.org is generated and deployed from `core-spec`.
 
 ---
@@ -21,7 +21,7 @@
 ```
 odtis/
 ├── core-spec/          ← normative spec + MkDocs sources + scripts
-├── core-impl/          ← ven-identity-core, ven-trust-network, …
+├── core-impl/          <- ven-identity-core, ven-trust-network, ...
 └── build/              ← gitignored; MkDocs output → odtis.org
     └── odtis-spec-site/
 ```
@@ -87,14 +87,15 @@ odtis/
 ### P1 - Operate & unblock CI (this week)
 
 - [ ] **Fix conformance L1** - `./conformance/run.sh` currently **FAIL (6/10)**
-  - Errors: ODTIS-0517…0536 missing in annex B threat mappings / `odtis_8_coverage`
+  - Errors: ODTIS-0517-0536 missing in annex B threat mappings / `odtis_8_coverage`
   - Files: `registry/requirements.json`, `annexes/B-threat-mitigations/`, validators in `scripts/`
   - **Blocks:** GitHub Actions green on `core-spec`
 - [ ] **Deploy odtis.org**
   - [x] `scripts/odtis-deploy.env` configured (copied from monorepo; gitignored)
-  - [x] `./scripts/deploy-ec2.sh` — deployed 2026-06-22
+  - [x] `./scripts/deploy-ec2.sh` - deployed 2026-06-22
   - [x] https://odtis.org returns HTTP 200 (Cloudflare)
-  - [ ] Uncomment **deploy** job in `.github/workflows/odtis.yml` + add GitHub secrets (CI auto-deploy)
+  - [x] Auto-deploy on merge to `main` via `.github/workflows/release-deploy.yml` (minor version bump + visible site version)
+  - [ ] Add GitHub secrets `ODTIS_EC2_HOST` + `ODTIS_SSH_KEY` (see `scripts/GITHUB-DEPLOY-SECRETS.md`)
 - [ ] **Review cycle 1** - comment period closes **2026-06-26**
   - [ ] Triage issues on `github.com/odtis/core-spec`
   - [ ] Update `governance/REVIEW-LOG.yaml`, `CHANGELOG.md`
@@ -169,7 +170,7 @@ odtis/
 
 ```bash
 # Workspace
-cd /path/to/odtis
+cd odtis
 
 # Validate spec
 cd core-spec

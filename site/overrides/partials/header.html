@@ -19,6 +19,9 @@
         <div class="md-header__topic">
           <span class="md-ellipsis">
             {{ config.site_name }}
+            {% if config.extra.odtis_version %}
+            <span class="odtis-version-badge" title="Published ODTIS release">{{ config.extra.odtis_version }}</span>
+            {% endif %}
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">

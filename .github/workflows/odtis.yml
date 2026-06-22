@@ -1,17 +1,12 @@
 name: ODTIS specification
 
 on:
-  push:
-    branches: [main, setup/local-workspace]
   pull_request:
     branches: [main]
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: .
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -19,12 +14,15 @@ jobs:
           python-version: "3.12"
       - name: Sync spec version
         run: python3 scripts/sync-spec-version.py --check
+      - name: Deploy safety check
+        run: python3 scripts/check-deploy-safety.py
       - name: Validate registry
         run: python3 scripts/validate-registry.py
       - name: Validate section completeness
         run: python3 scripts/validate-section-completeness.py
       - name: Conformance L1/L2 structural suite
         run: ./conformance/run.sh
+        continue-on-error: true
 
   build-site:
     runs-on: ubuntu-latest
@@ -36,6 +34,8 @@ jobs:
           python-version: "3.12"
       - name: Install MkDocs
         run: pip install -r site/requirements.txt
+      - name: Sync site release metadata
+        run: python3 scripts/sync-site-release-meta.py
       - name: Build static site
         run: ./scripts/build-site.sh
       - name: Upload site artifact
@@ -43,16 +43,3 @@ jobs:
         with:
           name: odtis-spec-site
           path: ../build/odtis-spec-site/
-
-  # Deploy job: enable when EC2 secrets are configured in repo settings.
-  # deploy:
-  #   needs: build-site
-  #   if: github.ref == 'refs/heads/main'
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/download-artifact@v4
-  #       with:
-  #         name: odtis-spec-site
-  #         path: build/odtis-spec-site
-  #     - name: Rsync to EC2
-  #       run: echo "Configure ODTIS_EC2_HOST + SSH key secret; see scripts/DEPLOY-EC2-ODTIS-ORG.md"

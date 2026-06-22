@@ -14,6 +14,7 @@ SKIP_DIRS = {".venv-site", ".git", "__pycache__", "build", "conformance/reports"
 SKIP_FILES = {"site/mkdocs.yml", "site/requirements.txt"}
 SUFFIXES = {".yaml", ".yml", ".json", ".openapi.yaml"}
 EXTRA_ROOT_FILES = ("VERSION", "LICENSE")
+SITE_META_FILES = ("site/BUILD-META.json",)
 SCRIPT_SUFFIXES = {".py", ".sh"}
 CONFORMANCE_SHELLS = True
 
@@ -28,6 +29,14 @@ def main() -> int:
         src = ROOT / name
         if src.is_file():
             dest = OUT / name
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dest)
+            copied += 1
+
+    for rel in SITE_META_FILES:
+        src = ROOT / rel
+        if src.is_file():
+            dest = OUT / rel
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dest)
             copied += 1

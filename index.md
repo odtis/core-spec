@@ -14,6 +14,10 @@ description: "ODTIS: vendor-neutral open standard for digital identity, trust ne
 
 <p class="odtis-landing-hero__kicker">ODTIS</p>
 
+<!-- GENERATED:site-release-version:START -->
+<p class="odtis-landing-hero__version">Published release <a href="/VERSION">0.9.0-draft</a> · <a href="/site/BUILD-META.json">build info</a></p>
+<!-- GENERATED:site-release-version:END -->
+
 # Open specification for digital trust infrastructure
 
 <p class="odtis-landing-hero__lead">

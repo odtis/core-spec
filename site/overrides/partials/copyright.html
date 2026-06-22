@@ -17,4 +17,16 @@
     {{ odtis_copyright }}
   </div>
   {% endif %}
+  {% if config.extra.odtis_version %}
+  <p class="odtis-build-meta">
+    Site release <strong>{{ config.extra.odtis_version }}</strong>
+    {% if config.extra.odtis_build_sha and config.extra.odtis_build_sha != 'local' %}
+      · build <code>{{ config.extra.odtis_build_sha[:7] }}</code>
+    {% endif %}
+    {% if config.extra.odtis_build_time %}
+      · {{ config.extra.odtis_build_time }}
+    {% endif %}
+    · <a href="{{ base_url }}/site/BUILD-META.json">metadata</a>
+  </p>
+  {% endif %}
 </div>
