@@ -1,6 +1,6 @@
 ---
 title: ODTIS project status
-description: Current maturity, review draft stage, coverage metrics, and honest readiness assessment for ODTIS 0.9.0-draft.9.0-draft.
+description: Current maturity, review draft stage, coverage metrics, and honest readiness assessment for ODTIS 0.9.0-draft.
 ---
 
 # ODTIS project status

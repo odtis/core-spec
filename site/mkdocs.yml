@@ -234,8 +234,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
-  odtis_build_time: "2026-06-22T12:05:12Z"
-  odtis_build_sha: "8840f8b"
+  odtis_build_time: "2026-06-22T12:05:30Z"
+  odtis_build_sha: "f135649"
   odtis_version: "0.9.0-draft"
   generator: false
   seo:
