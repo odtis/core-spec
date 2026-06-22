@@ -23,6 +23,8 @@ Channels for specification feedback, collaboration proposals, press, and general
 
 **Email (if GitHub unavailable):** [info@odtis.org](mailto:info@odtis.org?subject=ODTIS%20feedback)
 
+**Conformance statements:** conformance@odtis.org
+
 ---
 
 ## Collaboration & hackathons

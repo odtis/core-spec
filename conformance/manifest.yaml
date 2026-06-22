@@ -359,6 +359,10 @@ profiles:
         requirements: [ODTIS-0205]
         status: pending
         type: manual
+      - path: conformance/tests/trust-network/test_odtis-4_8_3.md
+        requirements: []
+        status: pending
+        type: manual
       - path: conformance/tests/trust-network/test_odtis_0202.md
         requirements: [ODTIS-0202]
         status: implemented
@@ -484,7 +488,7 @@ profiles:
         type: manual
   operator:
     requirement_count: 36
-    test_count: 36
+    test_count: 30
     covered_requirements: 36
     coverage_pct: 100.0
     missing_total: 0
@@ -496,6 +500,10 @@ profiles:
       - path: conformance/tests/operator/test_conformance_statement_dual_format.md
         requirements: [ODTIS-0534]
         status: pending
+        type: manual
+      - path: conformance/tests/operator/test_cp_cps_published.md
+        requirements: [ODTIS-0507]
+        status: implemented
         type: manual
       - path: conformance/tests/operator/test_event_envelope.md
         requirements: [ODTIS-0529]
@@ -605,10 +613,6 @@ profiles:
         requirements: [ODTIS-0519]
         status: implemented
         type: manual
-      - path: conformance/tests/operator/test_cp_cps_published.md
-        requirements: [ODTIS-0507]
-        status: pending
-        type: manual
       - path: conformance/tests/trust-network/test_per_request_partner_verify.md
         requirements: [ODTIS-0517]
         status: pending
@@ -635,7 +639,7 @@ profiles:
         type: manual
   extended:
     requirement_count: 25
-    test_count: 30
+    test_count: 23
     covered_requirements: 25
     coverage_pct: 100.0
     missing_total: 0

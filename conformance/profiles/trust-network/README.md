@@ -27,6 +27,7 @@ Requirement prefixes: `ODTIS-02*` (+ `ODTIS-0106`)
 | [`Grant Workflow Audit test`](../../tests/trust-network/test_grant_workflow_audit.md) | `ODTIS-0226` | pending |
 | [`No Payload Centralization test`](../../tests/trust-network/test_no_payload_centralization.md) | `ODTIS-0225` | implemented |
 | [`Odtis-4 8 1 test`](../../tests/trust-network/test_odtis-4_8_1.md) | `ODTIS-0205` | pending |
+| [`Odtis-4 8 3 test`](../../tests/trust-network/test_odtis-4_8_3.md) |  | pending |
 | [`ODTIS-0202 test`](../../tests/trust-network/test_odtis_0202.md) | `ODTIS-0202` | implemented |
 | [`ODTIS-0203 test`](../../tests/trust-network/test_odtis_0203.md) | `ODTIS-0203` | pending |
 | [`ODTIS-0206 test`](../../tests/trust-network/test_odtis_0206.md) | `ODTIS-0206` | pending |

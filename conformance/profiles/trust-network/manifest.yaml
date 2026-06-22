@@ -26,6 +26,8 @@ tests:
     requirements: [ODTIS-0225]
   - path: conformance/tests/trust-network/test_odtis-4_8_1.md
     requirements: [ODTIS-0205]
+  - path: conformance/tests/trust-network/test_odtis-4_8_3.md
+    requirements: []
   - path: conformance/tests/trust-network/test_odtis_0202.md
     requirements: [ODTIS-0202]
   - path: conformance/tests/trust-network/test_odtis_0203.md

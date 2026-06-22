@@ -18,7 +18,7 @@ Aligned with [PLAN-PHASES](PLAN-PHASES.md) (Phase 3-4) and the [traceability cov
 | 3.1.12 | Annex B Threats | ✅ |
 | 3.1.13 | Annex C Standards | ✅ |
 | 3.1.14 | Annex D Extended | ✅ draft |
-| 3.1.15 | Conformance suite | ✅ L1+L2; 159 procedures (81 implemented) |
+| 3.1.15 | Conformance suite | ✅ L1+L2; 159 procedures (85 implemented) |
 | 3.1.16 | odtis.org site | ✅ build + local deploy to EC2 |
 | 3.1.17 | TRACEABILITY-MATRIX sync | ✅ 30/30 RF |
 | 3.2.1 | Book 2 ↔ ODTIS cross-review | ✅ |

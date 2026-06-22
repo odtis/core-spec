@@ -4,7 +4,7 @@ Standalone profile documents for implementers and auditors. Each profile compose
 
 **Start here for adoption:** [Adoption guide](/ADOPTION/) | **Compare profiles:** [Profile comparison](/site/PROFILES/) | **Conformance:** [Conformance overview](/conformance/)
 
-**Registry:** 149 requirement IDs | **Test procedures:** 159 (81 with smoke evidence)
+**Registry:** 149 requirement IDs | **Test procedures:** 159 (85 with smoke evidence)
 
 **Registry authority:** [Profile definitions](/registry/profiles.yaml)
 

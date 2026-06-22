@@ -80,9 +80,14 @@ See [OIDF positioning](../governance/liaison/OIDF-POSITIONING.md).
 | Reference Architecture | 10 | 10 | 1 | 100.0% |
 | Trust Network | 27 | 30 | 18 | 100.0% |
 
-Totals (unique test files): **159** procedures, **81** with smoke `implemented` status.
+Totals (unique test files): **159** procedures, **85** with smoke `implemented` status.
 
 <!-- GENERATED:profile-coverage:END -->
+
+
+
+
+
 
 
 

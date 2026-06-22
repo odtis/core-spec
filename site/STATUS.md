@@ -61,15 +61,25 @@ Profile comparison: [Profile comparison](PROFILES.md).
 
 ## Conformance suite
 
+<!-- GENERATED:conformance-suite:START -->
+
 | Profile | Tests | Implemented | Registry reqs |
 |---------|-------|-------------|---------------|
 | Reference Architecture | 10 | 1 | 10 |
-| Core Identity | 58 | 9 | 45 |
+| Core Identity | 58 | 13 | 45 |
 | Trust Network | 30 | 18 | 27 |
 | Federation | 8 | 8 | 8 |
 | Operator | 30 | 25 | 36 |
 | Extended | 23 | 20 | 25 |
-| **Total** | **159** | **81** | **149** |
+| **Total** | **159** | **85** | **149** |
+
+<!-- GENERATED:conformance-suite:END -->
+
+
+
+
+
+
 
 Run locally:
 

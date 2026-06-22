@@ -19,11 +19,12 @@ Format based on [Keep a Changelog](https://keepachangelog.com/). Versioning: [VE
 
 ### Changed
 
+- **Coherence pass** - aligned conformance metrics (85/159 implemented); manifest `test_count` matches on-disk test files (159 total); auto-sync hero and STATUS tables; fixed KNOWN-GAPS backlog anchors; root `SUPPORT.md` for GitHub community profile; documented `conformance@odtis.org`
 - **Copyright** - FinnectOS, Inc. as specification copyright holder; aligned LICENSE, IPR, citations, and site pages
 - **Domain and contact alignment** - `odtis.org` spec site; `digitaltrustinfrastructure.org` research org; VenID links to `core-impl`; `info@odtis.org` / `conformance@odtis.org`
 - **Open-source publication prep** - removed stale `docs/sources/` paths; local deploy docs; audit script; README and adoption alignment
 - **Registry** - 149 requirement IDs; section index sync; ID alignment (0104, 0340-0343)
-- **Conformance suite** - 159 test procedures; 81 with smoke evidence; 6 profiles including reference-architecture
+- **Conformance suite** - 159 test procedures; 85 with smoke evidence; 6 profiles including reference-architecture
 - **Section review FB-004** - autodiscovery SHOULD scope in section 4.4.3 + Annex A README
 - **Section review FB-002 / FB-003** - Federation depth; HA boundary note in section 10.4
 - **Spec site** - STATUS, DOWNLOADS, FAQ, GETTING-STARTED, PROFILES, governance and RI hub pages

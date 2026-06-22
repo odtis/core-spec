@@ -54,7 +54,7 @@ Requirement prefixes: Annex D (`ODTIS-0340`-`0365`, `0531`)
 | Metric | Value |
 |--------|-------|
 | Registry requirements | 25 |
-| Linked tests | 30 |
+| Linked tests | 23 |
 | Implemented (smoke) | 27 |
 | Req stub coverage | 100.0% |
 

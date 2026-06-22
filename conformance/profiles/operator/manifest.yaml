@@ -3,7 +3,7 @@
 
 profile_id: operator
 requirement_count: 36
-test_count: 36
+test_count: 30
 coverage_pct: 100.0
 missing_total: 0
 
@@ -12,6 +12,8 @@ tests:
     requirements: [ODTIS-0530]
   - path: conformance/tests/operator/test_conformance_statement_dual_format.md
     requirements: [ODTIS-0534]
+  - path: conformance/tests/operator/test_cp_cps_published.md
+    requirements: [ODTIS-0507]
   - path: conformance/tests/operator/test_event_envelope.md
     requirements: [ODTIS-0529]
   - path: conformance/tests/operator/test_fail_closed_denial_paths.md
@@ -66,8 +68,6 @@ tests:
     requirements: [ODTIS-0514]
   - path: conformance/tests/operator/test_secrets_manager.md
     requirements: [ODTIS-0519]
-  - path: conformance/tests/operator/test_cp_cps_published.md
-    requirements: [ODTIS-0507]
   - path: conformance/tests/trust-network/test_per_request_partner_verify.md
     requirements: [ODTIS-0517]
   - path: conformance/tests/core-identity/test_owasp_baseline.md

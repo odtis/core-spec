@@ -140,7 +140,7 @@ Extended composes **Annex D** sub-modules. Draft IDs below merge into [Requireme
 | Metric | Value |
 |--------|-------|
 | Requirements in profile | 25 |
-| Linked tests | 30 |
+| Linked tests | 23 |
 | Implemented (smoke) | 27 |
 | Manifest | [Conformance manifest](/conformance/profiles/extended/manifest.yaml) |
 

@@ -34,7 +34,7 @@ Vendor-neutral normative specification for digital trust infrastructure: profile
 | **Normative sections** | 10 (sections 1-10) |
 | **Registry requirements** | 149 ODTIS IDs |
 | **Conformance profiles** | 6 (Reference Architecture + 5 functional) |
-| **Test procedures** | 159 stubs | 81 with smoke evidence |
+| **Test procedures** | 159 stubs | 85 with smoke evidence |
 | **Annex A OpenAPI** | Frozen @ `0.9.0-draft` |
 
 ---

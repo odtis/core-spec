@@ -29,7 +29,7 @@ Prove that your deployment meets ODTIS **MUST** requirements at the level your c
 | **Conformance levels** | L1 (lab) | L2 (staging) | L3 (production audit) |
 | **Profiles** | 6 adoptable profiles + Extended sub-modules |
 | **Registry requirements** | 149 ODTIS IDs with linked test stubs |
-| **Test procedures** | 159 procedures | **81 implemented** (smoke/L2 evidence) |
+| **Test procedures** | 159 procedures | **85 implemented** (smoke/L2 evidence) |
 | **L1 structural gate** | PASS ([Run script](run.sh)) |
 | **L2 runner** | Integrated; live `--target` optional |
 | **L3 program** | Draft; VenID Phase 4 package available |
@@ -131,7 +131,7 @@ Regenerate: `python3 scripts/build-conformance-manifest.py` | sync status: `pyth
 | Federation | 8 | 8 | 8 | [Profile](/spec/profiles/federation-profile/) |
 | Operator | 30 | 25 | 36 | [Profile](/spec/profiles/operator-profile/) |
 | Extended | 23 | 20 | 25 | [Profile](/spec/profiles/extended-profile/) |
-| **Total** | **159** | **81** | **149** | [Compare profiles](../site/PROFILES.md) |
+| **Total** | **159** | **85** | **149** | [Compare profiles](../site/PROFILES.md) |
 
 !!! tip "Stub coverage vs execution"
     Every registry MUST has a linked test **procedure**. `implemented` means smoke or L2 evidence exists in this repo. Pending procedures do **not** waive MUST requirements - mark `tests.status: partial` in your statement until you execute and record them.

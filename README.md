@@ -37,7 +37,7 @@ Authoritative specification text is **English only** ([Language policy](governan
 | **Normative sections 1-10** | Review draft complete |
 | **Annex A OpenAPI** | Frozen @ `0.9.0-draft` |
 | **Registry** | 149 ODTIS requirement IDs |
-| **Conformance suite** | 159 test procedures (81 with smoke evidence) |
+| **Conformance suite** | 159 test procedures (85 with smoke evidence) |
 | **Public site** | [odtis.org](https://odtis.org) |
 | **Steward** | FinnectOS, Inc. (interim; [Foundation charter](governance/FOUNDATION-CHARTER.md) draft) |
 
@@ -94,7 +94,7 @@ See [Repository map](STRUCTURE.md).
 | Federation | 6 | 8 | 8 | 8 |
 | Operator | 7-10 | 30 | 25 | 36 |
 | Extended | Annex D | 23 | 20 | 25 |
-| **Total** | | **159** | **81** | **149** |
+| **Total** | | **159** | **85** | **149** |
 
 Details: [Profile definitions](registry/profiles.yaml) · [Profile comparison](https://odtis.org/site/PROFILES/)
 

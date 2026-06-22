@@ -84,7 +84,9 @@ def main() -> None:
 
         for t in tests:
             prof = assign_profile(t, profiles)
-            if prof != pid:
+            path_parts = Path(t["path"]).parts
+            path_prof = path_parts[2] if len(path_parts) >= 3 else None
+            if prof != pid and path_prof != pid:
                 continue
             profile_tests.append(t)
             covered.update(rid for rid in t["requirements"] if rid in profile_req_set)
@@ -104,10 +106,13 @@ def main() -> None:
 
         missing = sorted(profile_req_set - covered)
         req_count = len(profile_reqs)
+        on_disk_prefix = f"conformance/tests/{pid}/"
+        on_disk_tests = [t for t in profile_tests if t["path"].startswith(on_disk_prefix)]
         profile_data[pid] = {
             "title": pid,
             "requirement_count": req_count,
-            "test_count": len(profile_tests),
+            "test_count": len(on_disk_tests),
+            "linked_test_entries": len(profile_tests),
             "covered_requirements": len(covered),
             "coverage_pct": round(100 * len(covered) / req_count, 1) if req_count else 0,
             "missing_requirements": missing[:20],

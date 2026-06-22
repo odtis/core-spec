@@ -166,7 +166,7 @@ Full index: [Requirements index](/site/REQUIREMENTS-INDEX.md).
 | Metric | Value |
 |--------|-------|
 | Requirements in profile | 36 |
-| Linked tests | 36 |
+| Linked tests | 30 |
 | Implemented (smoke) | 28 |
 | Manifest | [Conformance manifest](/conformance/profiles/operator/manifest.yaml) |
 

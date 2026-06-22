@@ -17,7 +17,7 @@ The main gap is **evidence depth**, not specification completeness:
 |-------|--------|------:|
 | Registry ↔ tests linkage | Complete | 100% |
 | Spec prose ↔ requirement indexes | **Broken** | ~0% (validator fails) |
-| Conformance test `implemented` status | Partial | **51%** (81/159 procedures) |
+| Conformance test `implemented` status | Partial | **53.5%** (85/159 procedures) |
 | VenID RI surfaces | Partial | **89%** partial (31/35) |
 | Backlog epics | In progress | **74%** partial (29/39) |
 | Implementation gaps | Closed (sandbox) | 20 closed / 4 deferred |
@@ -268,7 +268,7 @@ The main gap is **evidence depth**, not specification completeness:
 | Level | Definition | ODTIS status |
 |-------|------------|--------------|
 | **L1** | Registry + annex validators in CI | **Ready** - 6 automated lab tests |
-| **L2** | L1 + manual tests vs staging | **Partial** - 81/159 procedures evidenced |
+| **L2** | L1 + manual tests vs staging | **Partial** - 85/159 procedures evidenced |
 | **L3** | L2 + third-party audit | **Deferred** - GAP-CERT-L3-ATT |
 
 **Statements published:**
@@ -435,7 +435,7 @@ python3 scripts/validate-ri-map.py
 
 ## 10. Conclusion
 
-ODTIS `0.9.0-draft` is a **complete normative package** with full test linkage. VenID implementation has **substantial sandbox coverage** across all profiles, but **conformance documentation lags code** (81/159 implemented markers vs ~74% partial epics).
+ODTIS `0.9.0-draft` is a **complete normative package** with full test linkage. VenID implementation has **substantial sandbox coverage** across all profiles, but **conformance documentation lags code** (85/159 implemented markers vs ~74% partial epics).
 
 **Recommended priority:**
 

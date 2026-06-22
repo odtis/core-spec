@@ -154,7 +154,7 @@ Minimum per [`ODTIS-0008`](../spec/01-scope-conformance/SPEC.md): `odtis_version
 
 ## Tests and coverage
 
-### Why are there 159 procedures but only 81 "implemented"?
+### Why are there 159 procedures but only 85 "implemented"?
 
 The suite links **every registry MUST** to a test procedure stub. `implemented` means this repository has smoke or L2 evidence for that procedure. **Pending** means you must still execute it against your system before claiming `tests.status: pass`.
 

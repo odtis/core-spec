@@ -299,7 +299,7 @@ YAML + human-readable markdown declaring `odtis_version`, `profiles`, `level`, `
 
 ### How many ODTIS test procedures exist?
 
-**159** procedures linked to registry MUSTs; **81** have smoke/L2 evidence in the reference lab ([Status](/site/STATUS/)). Pending stubs still obligate implementers to execute against their system before claiming `tests.status: pass`.
+**159** procedures linked to registry MUSTs; **85** have smoke/L2 evidence in the reference lab ([Status](/site/STATUS/)). Pending stubs still obligate implementers to execute against their system before claiming `tests.status: pass`.
 
 ### Where are conformance test procedures documented?
 

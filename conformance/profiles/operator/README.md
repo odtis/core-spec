@@ -20,6 +20,7 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 |------|-------------|--------|
 | [`Audit Export Pii Minimized test`](../../tests/operator/test_audit_export_pii_minimized.md) | `ODTIS-0530` | implemented |
 | [`Conformance Statement Dual Format test`](../../tests/operator/test_conformance_statement_dual_format.md) | `ODTIS-0534` | pending |
+| [`Cp Cps Published test`](../../tests/operator/test_cp_cps_published.md) | `ODTIS-0507` | implemented |
 | [`Event Envelope test`](../../tests/operator/test_event_envelope.md) | `ODTIS-0529` | pending |
 | [`Fail Closed Denial Paths test`](../../tests/operator/test_fail_closed_denial_paths.md) | `ODTIS-0535` | implemented |
 | [`Fraud Metrics test`](../../tests/operator/test_fraud_metrics.md) | `ODTIS-0525` | implemented |
@@ -47,7 +48,6 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 | [`Published Service Scope test`](../../tests/operator/test_published_service_scope.md) | `ODTIS-0501` | implemented |
 | [`Regulator Export test`](../../tests/operator/test_regulator_export.md) | `ODTIS-0514` | implemented |
 | [`Secrets Manager test`](../../tests/operator/test_secrets_manager.md) | `ODTIS-0519` | implemented |
-| [`Cp Cps Published test`](../../tests/operator/test_cp_cps_published.md) | `ODTIS-0507` | implemented |
 | [`Per Request Partner Verify test`](../../tests/trust-network/test_per_request_partner_verify.md) | `ODTIS-0517` | implemented |
 | [`Owasp Baseline test`](../../tests/core-identity/test_owasp_baseline.md) | `ODTIS-0521` | implemented |
 | [`Liveness High Loa test`](../../tests/core-identity/test_liveness_high_loa.md) | `ODTIS-0523` | pending |
@@ -60,7 +60,7 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 | Metric | Value |
 |--------|-------|
 | Registry requirements | 36 |
-| Linked tests | 36 |
+| Linked tests | 30 |
 | Implemented (smoke) | 28 |
 | Req stub coverage | 100.0% |
 

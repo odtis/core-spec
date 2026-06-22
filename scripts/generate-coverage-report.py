@@ -15,10 +15,38 @@ REGISTRY = ROOT / "registry/requirements.json"
 TESTS_DIR = ROOT / "conformance/tests"
 COVERAGE_OUT = ROOT / "traceability/coverage-report.yaml"
 STATUS_MD = ROOT / "site/STATUS.md"
+INDEX_MD = ROOT / "index.md"
 RF_MATRIX = ROOT / "traceability/rf-matrix.yaml"
 
 GENERATED_START = "<!-- GENERATED:coverage-metrics:START -->"
 GENERATED_END = "<!-- GENERATED:coverage-metrics:END -->"
+CONFORMANCE_SUITE_START = "<!-- GENERATED:conformance-suite:START -->"
+CONFORMANCE_SUITE_END = "<!-- GENERATED:conformance-suite:END -->"
+HERO_START = "<!-- GENERATED:coverage-hero:START -->"
+HERO_END = "<!-- GENERATED:coverage-hero:END -->"
+
+PROFILE_LABELS = {
+    "reference-architecture": "Reference Architecture",
+    "core-identity": "Core Identity",
+    "trust-network": "Trust Network",
+    "federation": "Federation",
+    "operator": "Operator",
+    "extended": "Extended",
+}
+PROFILE_ORDER = list(PROFILE_LABELS.keys())
+
+METRIC_DOC_PATHS = [
+    ROOT / "README.md",
+    ROOT / "conformance/README.md",
+    ROOT / "spec/profiles/README.md",
+    ROOT / "spec/INDEX.md",
+    ROOT / "site/FAQ.md",
+    ROOT / "site/news/2026-06.md",
+    ROOT / "conformance/FAQ.md",
+    ROOT / "PLAN-PHASES.md",
+    ROOT / "governance/review/sandbox-001-l2-report-template.md",
+    ROOT / "implementation/reports/ODTIS-CONSISTENCY-AUDIT-2026.md",
+]
 
 STATUS_LINE = re.compile(r"^\*\*Status:\*\*\s*(.+)\s*$", re.M)
 IMPLEMENTED = re.compile(r"^implemented\b", re.I)
@@ -63,6 +91,86 @@ def scan_tests() -> list[dict]:
             }
         )
     return tests
+
+
+def replace_generated_block(text: str, start: str, end: str, block: str) -> str:
+    if start in text and end in text:
+        before = text.split(start, 1)[0]
+        after = text.split(end, 1)[1]
+        return before + block + after
+    return text
+
+
+def sync_public_metric_strings(total: int, implemented: int, impl_pct: float) -> int:
+    """Keep human-authored docs aligned with generated conformance counts."""
+    updated = 0
+    patterns = [
+        (re.compile(r"\*\*81\*\* have smoke"), f"**{implemented}** have smoke"),
+        (re.compile(r"\*\*81 implemented\*\*"), f"**{implemented} implemented**"),
+        (re.compile(r"\(81 with smoke evidence\)"), f"({implemented} with smoke evidence)"),
+        (re.compile(r"\(81 implemented\)"), f"({implemented} implemented)"),
+        (re.compile(r"\*\*81\*\* with smoke evidence"), f"**{implemented}** with smoke evidence"),
+        (re.compile(r"\*\*81\*\* \|"), f"**{implemented}** |"),
+        (re.compile(r"width:51%"), f"width:{round(impl_pct)}%"),
+        (re.compile(r"51% of 159 procedures"), f"{impl_pct:g}% of {total} procedures"),
+        (re.compile(r"<strong>81</strong>"), f"<strong>{implemented}</strong>"),
+        (re.compile(r"only 81 \"implemented\""), f'only {implemented} "implemented"'),
+        (re.compile(r"\*\*51%\*\* \(81/159"), f"**{impl_pct:g}%** ({implemented}/{total}"),
+        (re.compile(r"\| 81 with smoke evidence \|"), f"| {implemented} with smoke evidence |"),
+        (re.compile(r"; 81 with smoke evidence"), f"; {implemented} with smoke evidence"),
+        (re.compile(r"\(81/159 implemented markers"), f"({implemented}/{total} implemented markers"),
+    ]
+    for path in METRIC_DOC_PATHS:
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        new_text = text
+        for pattern, repl in patterns:
+            new_text = pattern.sub(repl, new_text)
+        if new_text != text:
+            path.write_text(new_text, encoding="utf-8")
+            updated += 1
+            print(f"Updated metrics in {path.relative_to(ROOT)}")
+    return updated
+
+
+def build_conformance_suite_block(by_profile: dict[str, dict], total: int, implemented: int) -> str:
+    lines = [
+        CONFORMANCE_SUITE_START,
+        "",
+        "| Profile | Tests | Implemented | Registry reqs |",
+        "|---------|-------|-------------|---------------|",
+    ]
+    for pid in PROFILE_ORDER:
+        row = by_profile.get(pid, {})
+        label = PROFILE_LABELS.get(pid, pid)
+        lines.append(
+            f"| {label} | {row.get('tests', '-')} | {row.get('implemented', '-')} | "
+            f"{row.get('requirements', '-')} |"
+        )
+    lines.extend(
+        [
+            f"| **Total** | **{total}** | **{implemented}** | **149** |",
+            "",
+            CONFORMANCE_SUITE_END,
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def build_hero_block(implemented: int, impl_pct: float, total: int) -> str:
+    return "\n".join(
+        [
+            HERO_START,
+            f"<strong>{implemented}</strong>",
+            "<span>Smoke-evidenced</span>",
+            '<div class="odtis-meter" role="presentation">'
+            f'<div class="odtis-meter__fill" style="width:{round(impl_pct)}%"></div></div>',
+            f'<small class="odtis-stat__hint">{impl_pct:g}% of {total} procedures</small>',
+            HERO_END,
+        ]
+    )
 
 
 def main() -> int:
@@ -223,7 +331,30 @@ def main() -> int:
             f"All {req_count} requirement IDs",
             text,
         )
+        suite_block = build_conformance_suite_block(by_profile, len(tests), len(implemented))
+        text = replace_generated_block(text, CONFORMANCE_SUITE_START, CONFORMANCE_SUITE_END, suite_block)
         STATUS_MD.write_text(text, encoding="utf-8")
+
+    if INDEX_MD.is_file():
+        text = INDEX_MD.read_text(encoding="utf-8")
+        hero_block = build_hero_block(len(implemented), impl_pct, len(tests))
+        if HERO_START in text and HERO_END in text:
+            text = replace_generated_block(text, HERO_START, HERO_END, hero_block)
+        else:
+            text = text.replace(
+                "<div class=\"odtis-stat odtis-stat--meter\" markdown=\"1\">\n<strong>81</strong>\n"
+                "<span>Smoke-evidenced</span>\n"
+                "<div class=\"odtis-meter\" role=\"presentation\"><div class=\"odtis-meter__fill\" "
+                "style=\"width:51%\"></div></div>\n"
+                "<small class=\"odtis-stat__hint\">51% of 159 procedures</small>\n</div>",
+                "<div class=\"odtis-stat odtis-stat--meter\" markdown=\"1\">\n"
+                + hero_block
+                + "\n</div>",
+                1,
+            )
+        INDEX_MD.write_text(text, encoding="utf-8")
+
+    sync_public_metric_strings(len(tests), len(implemented), impl_pct)
 
     print(f"Wrote {COVERAGE_OUT.relative_to(ROOT)}")
     print(f"Updated {STATUS_MD.relative_to(ROOT)}")

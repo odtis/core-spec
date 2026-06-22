@@ -187,10 +187,13 @@ def update_profiles_md(rows: list[tuple[str, dict, int, int]]) -> None:
             f"{test_count} | {dir_impl} | "
             f"{manifest.get('coverage_pct', '-')}% |"
         )
+    total_tests = sum(profile_dir_counts(pid)[0] for pid, _, _, _ in rows)
+    total_impl = sum(dir_impl for _, _, _, dir_impl in rows)
     table.extend(
         [
             "",
-            "Totals (unique test files): **159** procedures, **81** with smoke `implemented` status.",
+            f"Totals (unique test files): **{total_tests}** procedures, "
+            f"**{total_impl}** with smoke `implemented` status.",
             "",
             GENERATED_END,
             "",
