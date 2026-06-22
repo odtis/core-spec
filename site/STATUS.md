@@ -66,14 +66,15 @@ Profile comparison: [Profile comparison](PROFILES.md).
 | Profile | Tests | Implemented | Registry reqs |
 |---------|-------|-------------|---------------|
 | Reference Architecture | 10 | 1 | 10 |
-| Core Identity | 58 | 19 | 45 |
+| Core Identity | 58 | 26 | 45 |
 | Trust Network | 30 | 18 | 27 |
 | Federation | 8 | 8 | 8 |
 | Operator | 30 | 25 | 36 |
 | Extended | 23 | 20 | 25 |
-| **Total** | **159** | **91** | **149** |
+| **Total** | **159** | **98** | **149** |
 
 <!-- GENERATED:conformance-suite:END -->
+
 
 
 
@@ -121,14 +122,14 @@ Participate via [Feedback channels](../governance/FEEDBACK.md) or GitHub issue t
 |--------|-------|
 | Registry requirements | 149 |
 | Conformance procedures | 159 |
-| Marked **implemented** | 91 (57.2%) |
-| Pending procedures | 68 |
+| Marked **implemented** | 98 (61.6%) |
+| Pending procedures | 61 |
 
 ### By profile
 
 | Profile | Tests | Implemented | Registry reqs |
 |---------|-------|-------------|---------------|
-| core-identity | 58 | 19 | 45 |
+| core-identity | 58 | 26 | 45 |
 | extended | 23 | 20 | 25 |
 | federation | 8 | 8 | 8 |
 | operator | 30 | 25 | 36 |

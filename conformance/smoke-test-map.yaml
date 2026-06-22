@@ -98,3 +98,13 @@ smokes:
       - ODTIS-0331
       - ODTIS-0332
       - ODTIS-0527
+
+  - script: ../core-impl/ven-identity-core/scripts/identity-core-check.sh
+    odtis_ids:
+      - ODTIS-0306
+      - ODTIS-0309
+      - ODTIS-0310
+      - ODTIS-0311
+      - ODTIS-0312
+      - ODTIS-0313
+      - ODTIS-0314

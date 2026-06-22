@@ -73,16 +73,17 @@ See [OIDF positioning](../governance/liaison/OIDF-POSITIONING.md).
 
 | Profile | Reqs | Tests | Implemented | Req coverage |
 |---------|------|-------|-------------|--------------|
-| Core Identity | 45 | 58 | 19 | 100.0% |
+| Core Identity | 45 | 58 | 26 | 100.0% |
 | Extended | 25 | 23 | 20 | 100.0% |
 | Federation | 8 | 8 | 8 | 100.0% |
 | Operator | 36 | 30 | 25 | 100.0% |
 | Reference Architecture | 10 | 10 | 1 | 100.0% |
 | Trust Network | 27 | 30 | 18 | 100.0% |
 
-Totals (unique test files): **159** procedures, **91** with smoke `implemented` status.
+Totals (unique test files): **159** procedures, **98** with smoke `implemented` status.
 
 <!-- GENERATED:profile-coverage:END -->
+
 
 
 

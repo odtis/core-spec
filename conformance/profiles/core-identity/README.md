@@ -18,7 +18,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 
 | Test | Requirement | Status |
 |------|-------------|--------|
-| [`Account Recovery test`](../../tests/core-identity/test_account_recovery.md) | `ODTIS-0309`, `ODTIS-0326` | pending |
+| [`Account Recovery test`](../../tests/core-identity/test_account_recovery.md) | `ODTIS-0309`, `ODTIS-0326` | implemented |
 | [`Annex B Liveness Mapping test`](../../tests/core-identity/test_annex_b_liveness_mapping.md) | `ODTIS-0312`, `ODTIS-0523` | pending |
 | [`Annex C Nist Loa Mapping test`](../../tests/core-identity/test_annex_c_nist_loa_mapping.md) | `ODTIS-0103`, `ODTIS-0105` | pending |
 | [`Consent Audit Events test`](../../tests/core-identity/test_consent_audit_events.md) | `ODTIS-0527` | implemented |
@@ -37,12 +37,12 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 | [`ODTIS-0301 test`](../../tests/core-identity/test_odtis_0301.md) | `ODTIS-0301` | pending |
 | [`ODTIS-0303 test`](../../tests/core-identity/test_odtis_0303.md) | `ODTIS-0303` | pending |
 | [`ODTIS-0304 test`](../../tests/core-identity/test_odtis_0304.md) | `ODTIS-0304` | pending |
-| [`ODTIS-0306 test`](../../tests/core-identity/test_odtis_0306.md) | `ODTIS-0306` | pending |
-| [`ODTIS-0310 test`](../../tests/core-identity/test_odtis_0310.md) | `ODTIS-0310` | pending |
-| [`ODTIS-0311 test`](../../tests/core-identity/test_odtis_0311.md) | `ODTIS-0311` | pending |
-| [`ODTIS-0312 test`](../../tests/core-identity/test_odtis_0312.md) | `ODTIS-0312` | pending |
-| [`ODTIS-0313 test`](../../tests/core-identity/test_odtis_0313.md) | `ODTIS-0313` | pending |
-| [`ODTIS-0314 test`](../../tests/core-identity/test_odtis_0314.md) | `ODTIS-0314` | pending |
+| [`ODTIS-0306 test`](../../tests/core-identity/test_odtis_0306.md) | `ODTIS-0306` | implemented |
+| [`ODTIS-0310 test`](../../tests/core-identity/test_odtis_0310.md) | `ODTIS-0310` | implemented |
+| [`ODTIS-0311 test`](../../tests/core-identity/test_odtis_0311.md) | `ODTIS-0311` | implemented |
+| [`ODTIS-0312 test`](../../tests/core-identity/test_odtis_0312.md) | `ODTIS-0312` | implemented |
+| [`ODTIS-0313 test`](../../tests/core-identity/test_odtis_0313.md) | `ODTIS-0313` | implemented |
+| [`ODTIS-0314 test`](../../tests/core-identity/test_odtis_0314.md) | `ODTIS-0314` | implemented |
 | [`ODTIS-0316 test`](../../tests/core-identity/test_odtis_0316.md) | `ODTIS-0316` | implemented |
 | [`ODTIS-0318 test`](../../tests/core-identity/test_odtis_0318.md) | `ODTIS-0318` | pending |
 | [`ODTIS-0319 test`](../../tests/core-identity/test_odtis_0319.md) | `ODTIS-0319` | pending |
@@ -83,7 +83,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 |--------|-------|
 | Registry requirements | 45 |
 | Linked tests | 58 |
-| Implemented (smoke) | 19 |
+| Implemented (smoke) | 26 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`

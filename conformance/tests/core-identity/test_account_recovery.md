@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0309 - Account recovery
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0309
 **Profile:** core-identity
 
