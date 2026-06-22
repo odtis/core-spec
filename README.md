@@ -1,8 +1,13 @@
 # ODTIS - Open Digital Trust Infrastructure Specification
 
+[![Specification site](https://img.shields.io/badge/site-odtis.org-2563eb?style=flat-square)](https://odtis.org)
+[![Version](https://img.shields.io/badge/version-0.9.0--draft-f59e0b?style=flat-square)](VERSION)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-16a34a?style=flat-square)](LICENSE)
+[![Conformance](https://img.shields.io/badge/conformance-L1%20%7C%20L2%20%7C%20L3-7c3aed?style=flat-square)](conformance/README.md)
+
 Vendor-neutral open specification for digital identity, institutional trust exchange, operator governance, and optional extended modules.
 
-**Live site:** [odtis.org](https://odtis.org) · **Version:** `0.9.0-draft` · **License:** [CC BY 4.0](LICENSE) · **Copyright:** FinnectOS, Inc.
+**Live site:** [odtis.org](https://odtis.org) · **Version:** [`0.9.0-draft`](VERSION) · **License:** [CC BY 4.0](LICENSE) · **Copyright:** FinnectOS, Inc.
 
 ODTIS defines normative MUST/SHOULD/MAY requirements, six adoptable conformance profiles, machine-readable annexes (OpenAPI, events, registry), and an L1/L2/L3 verification model. Implementations may be open source or proprietary; conformance is proven by tests and published statements, not by using any single vendor stack.
 
