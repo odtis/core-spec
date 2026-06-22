@@ -82,6 +82,11 @@ smokes:
       - ODTIS-0517
     notes: exchange-audit-check.sh; gateway-sla.yaml; zero-trust mapping (#23)
 
+  - script: conformance/run-mtls-live-checks.sh
+    odtis_ids:
+      - ODTIS-0204
+    notes: mtls-live-check.sh; staging overlay 9443; PartnerCertThumbprintTest (#10)
+
   - script: conformance/run-portal-trust-checks.sh
     odtis_ids:
       - ODTIS-0209

@@ -2,21 +2,10 @@
 # Sync with KNOWN-GAPS.md - do not weaken ODTIS MUSTs here
 
 spec_version: "0.9.0-draft"
-updated: "2026-06-12"
+updated: "2026-06-22"
 
 gaps:
 # --- Deferred (production / external track) ---
-- id: GAP-TN-0204
-  implementation: ven-trust-network
-  surface: exchange-gateway
-  odtis_id: ODTIS-0204
-  summary: Live mTLS gateway-to-gateway interop test pending
-  priority: L2
-  status: deferred
-  backlog_epic: P2-E01
-  conformance_test: conformance/tests/trust-network/test_gateway_mtls.md
-  note: Static gateway checks pass; live bilateral mTLS handshake requires staging stack
-
 - id: GAP-TN-0217
   implementation: ven-trust-network
   surface: exchange-gateway
@@ -48,6 +37,19 @@ gaps:
   note: Phase 4 package and internal L3 dry-run complete; external auditor engagement pending
 
 # --- Closed (L2 sandbox evidence) ---
+- id: GAP-TN-0204
+  implementation: ven-trust-network
+  surface: exchange-gateway
+  odtis_id: ODTIS-0204
+  summary: Live mTLS gateway-to-gateway interop on staging overlay
+  priority: L2
+  status: closed
+  closed_at: "2026-06-22"
+  backlog_epic: P2-E01
+  conformance_test: conformance/tests/trust-network/test_gateway_mtls.md
+  evidence: implementation/evidence/mtls-lab/lab-notes.md
+  note: mtls-live-check.sh + staging overlay port 9443; PartnerCertThumbprintTest
+
 - id: GAP-IC-0308
   implementation: ven-identity-core
   surface: keycloak-oidc-idp

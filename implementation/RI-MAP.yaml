@@ -406,7 +406,7 @@ implementations:
   - id: exchange-gateway
     module: gateway/exchange-gateway
     backlog_epic: P2-E01
-    status: partial
+    status: done
     openapi: annexes/A-openapi-registry/exchange-gateway.openapi.yaml
     odtis_ids:
     - ODTIS-0106
@@ -424,9 +424,8 @@ implementations:
     - ODTIS-0517
     - ODTIS-0528
     - ODTIS-0535
-    gaps: [GAP-TN-0204]
     binding_doc: implementation/component-bindings/exchange-gateway.yaml
-    notes: FAL-CONTROLS.md; exchange-audit-check.sh ODTIS-0221; fal-controls-check.sh; FederationRouteValidationFilter
+    notes: FAL-CONTROLS.md; mtls-live-check.sh ODTIS-0204; exchange-audit-check.sh ODTIS-0221; fal-controls-check.sh
 
   - id: exchange-gateway-sender
     module: gateway/exchange-gateway (sender mode)
