@@ -4,7 +4,7 @@
 **Generated:** 2026-06-22  
 **Purpose:** Product backlog to implement VenID against ODTIS normative IDs and conformance tests, ordered by deployment phase.
 
-Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with `python3 scripts/generate-phased-backlog.py`).
+Machine-readable: [`phased-backlog.yaml`](phased-backlog.yaml) (regenerate with `python3 scripts/generate-phased-backlog.py`).
 
 ---
 
@@ -49,7 +49,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 | Field | Value |
 |-------|-------|
 | Component | `odtis/conformance + operator docs` |
-| Repo | `venezuela/odtis` |
+| Repo | `odtis/core-spec` |
 | ODTIS IDs | `ODTIS-0008`, `ODTIS-0532`, `ODTIS-0534`, `ODTIS-0010` |
 | Conformance | 4 test(s) |
 
@@ -61,10 +61,10 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Conformance Statement Dual Format](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_conformance_statement_dual_format.md)
-- [Test Phase Declaration](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
-- [Test Applicable Tests Required](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_applicable_tests_required.md)
-- [Test Statement Minimum Fields](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_statement_minimum_fields.md)
+- [`conformance/tests/operator/test_conformance_statement_dual_format.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_conformance_statement_dual_format.md)
+- [`conformance/tests/operator/test_phase_declaration.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
+- [`conformance/tests/reference-architecture/test_applicable_tests_required.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_applicable_tests_required.md)
+- [`conformance/tests/reference-architecture/test_statement_minimum_fields.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_statement_minimum_fields.md)
 
 ---
 
@@ -73,7 +73,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 | Field | Value |
 |-------|-------|
 | Component | `conformance lab` |
-| Repo | `venezuela/odtis` |
+| Repo | `odtis/core-spec` |
 | ODTIS IDs | `ODTIS-0001`, `ODTIS-0002`, `ODTIS-0003`, `ODTIS-0004`, `ODTIS-0005`, `ODTIS-0006`, `ODTIS-0007`, `ODTIS-0009` |
 | Conformance | 8 test(s) |
 
@@ -84,11 +84,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Extended No Weakening](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_extended_no_weakening.md)
-- [Test Federation Requires Trust Network](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_federation_requires_trust_network.md)
-- [Test Layer2 Requires Layer1](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_layer2_requires_layer1.md)
-- [Test Minimal Claim No Implied Profiles](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_minimal_claim_no_implied_profiles.md)
-- [Test Profile Declaration Complete](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_profile_declaration_complete.md)
+- [`conformance/tests/reference-architecture/test_extended_no_weakening.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_extended_no_weakening.md)
+- [`conformance/tests/reference-architecture/test_federation_requires_trust_network.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_federation_requires_trust_network.md)
+- [`conformance/tests/reference-architecture/test_layer2_requires_layer1.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_layer2_requires_layer1.md)
+- [`conformance/tests/reference-architecture/test_minimal_claim_no_implied_profiles.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_minimal_claim_no_implied_profiles.md)
+- [`conformance/tests/reference-architecture/test_profile_declaration_complete.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_profile_declaration_complete.md)
 - ... +3 more
 
 ---
@@ -98,7 +98,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 | Field | Value |
 |-------|-------|
 | Component | `implementation/RI-MAP.yaml` |
-| Repo | `venezuela/odtis` |
+| Repo | `odtis/core-spec` |
 | ODTIS IDs | `ODTIS-0536` |
 | Conformance | 1 test(s) |
 
@@ -109,7 +109,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Implementation Traceability Map](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_implementation_traceability_map.md)
+- [`conformance/tests/operator/test_implementation_traceability_map.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_implementation_traceability_map.md)
 
 ---
 
@@ -118,7 +118,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 | Field | Value |
 |-------|-------|
 | Component | `conformance/sandbox` |
-| Repo | `venezuela/odtis` |
+| Repo | `odtis/core-spec` |
 | ODTIS IDs | `ODTIS-0010` |
 | Conformance | 1 test(s) |
 
@@ -129,7 +129,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Applicable Tests Required](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_applicable_tests_required.md)
+- [`conformance/tests/reference-architecture/test_applicable_tests_required.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_applicable_tests_required.md)
 
 ---
 
@@ -156,11 +156,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test High Biometric Gate](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_high_biometric_gate.md)
-- [Test Loa Claim](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_loa_claim.md)
-- [Test Odtis 0101](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0101.md)
-- [Test Odtis 0105](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0105.md)
-- [Test Odtis 0107](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0107.md)
+- [`conformance/tests/core-identity/test_high_biometric_gate.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_high_biometric_gate.md)
+- [`conformance/tests/core-identity/test_loa_claim.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_loa_claim.md)
+- [`conformance/tests/core-identity/test_odtis_0101.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0101.md)
+- [`conformance/tests/core-identity/test_odtis_0105.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0105.md)
+- [`conformance/tests/core-identity/test_odtis_0107.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0107.md)
 - ... +2 more
 
 ---
@@ -182,11 +182,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Consent Gated Claims](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_consent_gated_claims.md)
-- [Test Odtis 0301](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0301.md)
-- [Test Odtis 0303](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0303.md)
-- [Test Odtis 0304](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0304.md)
-- [Test Pkce Required](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_pkce_required.md)
+- [`conformance/tests/core-identity/test_consent_gated_claims.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_consent_gated_claims.md)
+- [`conformance/tests/core-identity/test_odtis_0301.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0301.md)
+- [`conformance/tests/core-identity/test_odtis_0303.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0303.md)
+- [`conformance/tests/core-identity/test_odtis_0304.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0304.md)
+- [`conformance/tests/core-identity/test_pkce_required.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_pkce_required.md)
 - ... +2 more
 
 ---
@@ -208,11 +208,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Account Recovery](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_account_recovery.md)
-- [Test Odtis 0310](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0310.md)
-- [Test Odtis 0311](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0311.md)
-- [Test Odtis 0312](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0312.md)
-- [Test Odtis 0313](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0313.md)
+- [`conformance/tests/core-identity/test_account_recovery.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_account_recovery.md)
+- [`conformance/tests/core-identity/test_odtis_0310.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0310.md)
+- [`conformance/tests/core-identity/test_odtis_0311.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0311.md)
+- [`conformance/tests/core-identity/test_odtis_0312.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0312.md)
+- [`conformance/tests/core-identity/test_odtis_0313.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0313.md)
 - ... +1 more
 
 ---
@@ -234,10 +234,10 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Odtis 0316](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0316.md)
-- [Test Odtis 0318](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0318.md)
-- [Test Verification Client Auth](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_verification_client_auth.md)
-- [Test Verification Consent Scope](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_verification_consent_scope.md)
+- [`conformance/tests/core-identity/test_odtis_0316.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0316.md)
+- [`conformance/tests/core-identity/test_odtis_0318.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0318.md)
+- [`conformance/tests/core-identity/test_verification_client_auth.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_verification_client_auth.md)
+- [`conformance/tests/core-identity/test_verification_consent_scope.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_verification_consent_scope.md)
 
 ---
 
@@ -257,11 +257,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Odtis 0319](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0319.md)
-- [Test Odtis 0320](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0320.md)
-- [Test Odtis 0321](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0321.md)
-- [Test Odtis 0337](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0337.md)
-- [Test Odtis 0338](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0338.md)
+- [`conformance/tests/core-identity/test_odtis_0319.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0319.md)
+- [`conformance/tests/core-identity/test_odtis_0320.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0320.md)
+- [`conformance/tests/core-identity/test_odtis_0321.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0321.md)
+- [`conformance/tests/core-identity/test_odtis_0337.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0337.md)
+- [`conformance/tests/core-identity/test_odtis_0338.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0338.md)
 - ... +1 more
 
 ---
@@ -283,11 +283,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Consent Revocation](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_consent_revocation.md)
-- [Test Explicit Consent First Release](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_explicit_consent_first_release.md)
-- [Test Odtis 0329](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0329.md)
-- [Test Odtis 0331](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0331.md)
-- [Test Odtis 0332](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0332.md)
+- [`conformance/tests/core-identity/test_consent_revocation.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_consent_revocation.md)
+- [`conformance/tests/core-identity/test_explicit_consent_first_release.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_explicit_consent_first_release.md)
+- [`conformance/tests/core-identity/test_odtis_0329.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0329.md)
+- [`conformance/tests/core-identity/test_odtis_0331.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0331.md)
+- [`conformance/tests/core-identity/test_odtis_0332.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0332.md)
 - ... +4 more
 
 ---
@@ -308,9 +308,9 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Odtis 0322](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0322.md)
-- [Test Odtis 0323](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0323.md)
-- [Test Odtis 0324](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0324.md)
+- [`conformance/tests/core-identity/test_odtis_0322.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0322.md)
+- [`conformance/tests/core-identity/test_odtis_0323.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0323.md)
+- [`conformance/tests/core-identity/test_odtis_0324.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0324.md)
 
 ---
 
@@ -331,11 +331,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Liveness High Loa](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_liveness_high_loa.md)
-- [Test Odtis 0325](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0325.md)
-- [Test Odtis 0326](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0326.md)
-- [Test Odtis 0327](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0327.md)
-- [Test Owasp Baseline](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_owasp_baseline.md)
+- [`conformance/tests/core-identity/test_liveness_high_loa.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_liveness_high_loa.md)
+- [`conformance/tests/core-identity/test_odtis_0325.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0325.md)
+- [`conformance/tests/core-identity/test_odtis_0326.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0326.md)
+- [`conformance/tests/core-identity/test_odtis_0327.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0327.md)
+- [`conformance/tests/core-identity/test_owasp_baseline.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_owasp_baseline.md)
 - ... +1 more
 
 ---
@@ -356,9 +356,9 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Consent Audit Events](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_consent_audit_events.md)
-- [Test Identity Audit Events](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_identity_audit_events.md)
-- [Test Event Envelope](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_event_envelope.md)
+- [`conformance/tests/core-identity/test_consent_audit_events.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_consent_audit_events.md)
+- [`conformance/tests/core-identity/test_identity_audit_events.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_identity_audit_events.md)
+- [`conformance/tests/operator/test_event_envelope.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_event_envelope.md)
 
 ---
 
@@ -367,7 +367,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 | Field | Value |
 |-------|-------|
 | Component | `operator publication` |
-| Repo | `venezuela/odtis` |
+| Repo | `odtis/core-spec` |
 | ODTIS IDs | `ODTIS-0533` |
 | Conformance | 1 test(s) |
 
@@ -378,7 +378,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Phase1 No Extended Claims](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase1_no_extended_claims.md)
+- [`conformance/tests/operator/test_phase1_no_extended_claims.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase1_no_extended_claims.md)
 
 ---
 
@@ -405,11 +405,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Gateway Mtls](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_gateway_mtls.md)
-- [Test Gateway Only Routing](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_gateway_only_routing.md)
-- [Test Odtis 0202](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0202.md)
-- [Test Odtis 0203](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0203.md)
-- [Test Odtis 0206](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0206.md)
+- [`conformance/tests/trust-network/test_gateway_mtls.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_gateway_mtls.md)
+- [`conformance/tests/trust-network/test_gateway_only_routing.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_gateway_only_routing.md)
+- [`conformance/tests/trust-network/test_odtis_0202.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0202.md)
+- [`conformance/tests/trust-network/test_odtis_0203.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0203.md)
+- [`conformance/tests/trust-network/test_odtis_0206.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0206.md)
 - ... +2 more
 
 ---
@@ -431,11 +431,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Catalog Gateway Base Url](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_catalog_gateway_base_url.md)
-- [Test Odtis 0208](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0208.md)
-- [Test Odtis 0212](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0212.md)
-- [Test Odtis 0213](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0213.md)
-- [Test Odtis 0214](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0214.md)
+- [`conformance/tests/trust-network/test_catalog_gateway_base_url.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_catalog_gateway_base_url.md)
+- [`conformance/tests/trust-network/test_odtis_0208.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0208.md)
+- [`conformance/tests/trust-network/test_odtis_0212.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0212.md)
+- [`conformance/tests/trust-network/test_odtis_0213.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0213.md)
+- [`conformance/tests/trust-network/test_odtis_0214.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0214.md)
 
 ---
 
@@ -456,11 +456,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Grant Fail Closed](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_grant_fail_closed.md)
-- [Test Grant Workflow Audit](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_grant_workflow_audit.md)
-- [Test Odtis 0210](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0210.md)
-- [Test Odtis 0211](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0211.md)
-- [Test Service Grant Required](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_service_grant_required.md)
+- [`conformance/tests/trust-network/test_grant_fail_closed.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_grant_fail_closed.md)
+- [`conformance/tests/trust-network/test_grant_workflow_audit.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_grant_workflow_audit.md)
+- [`conformance/tests/trust-network/test_odtis_0210.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0210.md)
+- [`conformance/tests/trust-network/test_odtis_0211.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0211.md)
+- [`conformance/tests/trust-network/test_service_grant_required.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_service_grant_required.md)
 
 ---
 
@@ -481,7 +481,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Sender Multi Peer Routing](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_sender_multi_peer_routing.md)
+- [`conformance/tests/trust-network/test_sender_multi_peer_routing.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_sender_multi_peer_routing.md)
 
 ---
 
@@ -501,7 +501,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test No Payload Centralization](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_no_payload_centralization.md)
+- [`conformance/tests/trust-network/test_no_payload_centralization.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_no_payload_centralization.md)
 
 ---
 
@@ -521,11 +521,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Odtis 0106](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0106.md)
-- [Test Cert Revocation](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_cert_revocation.md)
-- [Test Odtis 0215](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0215.md)
-- [Test Odtis 0217](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0217.md)
-- [Test Odtis 0218](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0218.md)
+- [`conformance/tests/core-identity/test_odtis_0106.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0106.md)
+- [`conformance/tests/trust-network/test_cert_revocation.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_cert_revocation.md)
+- [`conformance/tests/trust-network/test_odtis_0215.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0215.md)
+- [`conformance/tests/trust-network/test_odtis_0217.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0217.md)
+- [`conformance/tests/trust-network/test_odtis_0218.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0218.md)
 
 ---
 
@@ -545,11 +545,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Exchange Audit Events](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_exchange_audit_events.md)
-- [Test Odtis 0219](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0219.md)
-- [Test Odtis 0220](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0220.md)
-- [Test Odtis 0221](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0221.md)
-- [Test Per Request Partner Verify](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_per_request_partner_verify.md)
+- [`conformance/tests/trust-network/test_exchange_audit_events.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_exchange_audit_events.md)
+- [`conformance/tests/trust-network/test_odtis_0219.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0219.md)
+- [`conformance/tests/trust-network/test_odtis_0220.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0220.md)
+- [`conformance/tests/trust-network/test_odtis_0221.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0221.md)
+- [`conformance/tests/trust-network/test_per_request_partner_verify.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_per_request_partner_verify.md)
 
 ---
 
@@ -569,7 +569,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Fail Closed Denial Paths](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_fail_closed_denial_paths.md)
+- [`conformance/tests/operator/test_fail_closed_denial_paths.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_fail_closed_denial_paths.md)
 
 ---
 
@@ -578,7 +578,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 | Field | Value |
 |-------|-------|
 | Component | `operator publication` |
-| Repo | `venezuela/odtis` |
+| Repo | `odtis/core-spec` |
 | ODTIS IDs | `ODTIS-0532` |
 | Conformance | 1 test(s) |
 
@@ -589,7 +589,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Phase Declaration](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
+- [`conformance/tests/operator/test_phase_declaration.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
 
 ---
 
@@ -615,11 +615,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test No False Phase4 Claims](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_no_false_phase4_claims.md)
-- [Test Odtis 0502](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0502.md)
-- [Test Odtis 0503](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0503.md)
-- [Test Odtis 0505](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0505.md)
-- [Test Operator Subject Admin](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_operator_subject_admin.md)
+- [`conformance/tests/operator/test_no_false_phase4_claims.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_no_false_phase4_claims.md)
+- [`conformance/tests/operator/test_odtis_0502.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0502.md)
+- [`conformance/tests/operator/test_odtis_0503.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0503.md)
+- [`conformance/tests/operator/test_odtis_0505.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0505.md)
+- [`conformance/tests/operator/test_operator_subject_admin.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_operator_subject_admin.md)
 - ... +1 more
 
 ---
@@ -640,10 +640,10 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Cp Cps Published](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_cp_cps_published.md)
-- [Test Odtis 0508](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0508.md)
-- [Test Odtis 0509](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0509.md)
-- [Test Odtis 0510](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0510.md)
+- [`conformance/tests/operator/test_cp_cps_published.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_cp_cps_published.md)
+- [`conformance/tests/operator/test_odtis_0508.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0508.md)
+- [`conformance/tests/operator/test_odtis_0509.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0509.md)
+- [`conformance/tests/operator/test_odtis_0510.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0510.md)
 
 ---
 
@@ -663,9 +663,9 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Odtis 0511](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0511.md)
-- [Test Odtis 0512](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0512.md)
-- [Test Odtis 0513](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0513.md)
+- [`conformance/tests/operator/test_odtis_0511.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0511.md)
+- [`conformance/tests/operator/test_odtis_0512.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0512.md)
+- [`conformance/tests/operator/test_odtis_0513.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0513.md)
 
 ---
 
@@ -685,9 +685,9 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Liability Documentation](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_liability_documentation.md)
-- [Test Odtis 0515](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0515.md)
-- [Test Regulator Export](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_regulator_export.md)
+- [`conformance/tests/operator/test_liability_documentation.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_liability_documentation.md)
+- [`conformance/tests/operator/test_odtis_0515.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0515.md)
+- [`conformance/tests/operator/test_regulator_export.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_regulator_export.md)
 
 ---
 
@@ -708,10 +708,10 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Fraud Metrics](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_fraud_metrics.md)
-- [Test Internal Services Not Public](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_internal_services_not_public.md)
-- [Test Odtis 0520](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0520.md)
-- [Test Secrets Manager](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_secrets_manager.md)
+- [`conformance/tests/operator/test_fraud_metrics.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_fraud_metrics.md)
+- [`conformance/tests/operator/test_internal_services_not_public.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_internal_services_not_public.md)
+- [`conformance/tests/operator/test_odtis_0520.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0520.md)
+- [`conformance/tests/operator/test_secrets_manager.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_secrets_manager.md)
 
 ---
 
@@ -731,7 +731,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Audit Export Pii Minimized](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_audit_export_pii_minimized.md)
+- [`conformance/tests/operator/test_audit_export_pii_minimized.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_audit_export_pii_minimized.md)
 
 ---
 
@@ -752,11 +752,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Odtis 0104](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0104.md)
-- [Test Eregistry Declaration Required](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_eregistry_declaration_required.md)
-- [Test Eregistry No Civil Authority](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_eregistry_no_civil_authority.md)
-- [Test Eregistry Phase3 Activation](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_eregistry_phase3_activation.md)
-- [Test National Loa After Adapter](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_national_loa_after_adapter.md)
+- [`conformance/tests/core-identity/test_odtis_0104.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0104.md)
+- [`conformance/tests/extended/test_eregistry_declaration_required.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_eregistry_declaration_required.md)
+- [`conformance/tests/extended/test_eregistry_no_civil_authority.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_eregistry_no_civil_authority.md)
+- [`conformance/tests/extended/test_eregistry_phase3_activation.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_eregistry_phase3_activation.md)
+- [`conformance/tests/extended/test_national_loa_after_adapter.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_national_loa_after_adapter.md)
 - ... +2 more
 
 ---
@@ -778,11 +778,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Agreement Required Fields](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_agreement_required_fields.md)
-- [Test Explicit Activation](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_explicit_activation.md)
-- [Test Federation Cert Policy](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_federation_cert_policy.md)
-- [Test Federation Regulator Export](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_federation_regulator_export.md)
-- [Test Non Transitivity](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_non_transitivity.md)
+- [`conformance/tests/federation/test_agreement_required_fields.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_agreement_required_fields.md)
+- [`conformance/tests/federation/test_explicit_activation.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_explicit_activation.md)
+- [`conformance/tests/federation/test_federation_cert_policy.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_federation_cert_policy.md)
+- [`conformance/tests/federation/test_federation_regulator_export.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_federation_regulator_export.md)
+- [`conformance/tests/federation/test_non_transitivity.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_non_transitivity.md)
 - ... +1 more
 
 ---
@@ -792,7 +792,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 | Field | Value |
 |-------|-------|
 | Component | `operator publication` |
-| Repo | `venezuela/odtis` |
+| Repo | `odtis/core-spec` |
 | ODTIS IDs | `ODTIS-0532` |
 | Conformance | 1 test(s) |
 
@@ -803,7 +803,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Phase Declaration](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
+- [`conformance/tests/operator/test_phase_declaration.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
 
 ---
 
@@ -829,8 +829,8 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Agreement Suspension Routing](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_agreement_suspension_routing.md)
-- [Test Federated Audit Instance Ids](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_federated_audit_instance_ids.md)
+- [`conformance/tests/federation/test_agreement_suspension_routing.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_agreement_suspension_routing.md)
+- [`conformance/tests/federation/test_federated_audit_instance_ids.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/federation/test_federated_audit_instance_ids.md)
 
 ---
 
@@ -850,11 +850,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Odtis 0340](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0340.md)
-- [Test Odtis 0341](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0341.md)
-- [Test Odtis 0342](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0342.md)
-- [Test Odtis 0343](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0343.md)
-- [Test Odtis 0524](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0524.md)
+- [`conformance/tests/core-identity/test_odtis_0340.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0340.md)
+- [`conformance/tests/core-identity/test_odtis_0341.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0341.md)
+- [`conformance/tests/core-identity/test_odtis_0342.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0342.md)
+- [`conformance/tests/core-identity/test_odtis_0343.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0343.md)
+- [`conformance/tests/operator/test_odtis_0524.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0524.md)
 
 ---
 
@@ -874,10 +874,10 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Inclusion Accessibility Offline](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_inclusion_accessibility_offline.md)
-- [Test Inclusion Assisted Consent](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_inclusion_assisted_consent.md)
-- [Test Inclusion No Loa Bypass](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_inclusion_no_loa_bypass.md)
-- [Test Inclusion Representative Verify](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_inclusion_representative_verify.md)
+- [`conformance/tests/extended/test_inclusion_accessibility_offline.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_inclusion_accessibility_offline.md)
+- [`conformance/tests/extended/test_inclusion_assisted_consent.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_inclusion_assisted_consent.md)
+- [`conformance/tests/extended/test_inclusion_no_loa_bypass.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_inclusion_no_loa_bypass.md)
+- [`conformance/tests/extended/test_inclusion_representative_verify.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_inclusion_representative_verify.md)
 
 ---
 
@@ -897,10 +897,10 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Ewebhook Pii Minimize](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ewebhook_pii_minimize.md)
-- [Test Ewebhook Retry Backoff](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ewebhook_retry_backoff.md)
-- [Test Ewebhook Rp Registration](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ewebhook_rp_registration.md)
-- [Test Odtis 0531](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0531.md)
+- [`conformance/tests/extended/test_ewebhook_pii_minimize.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ewebhook_pii_minimize.md)
+- [`conformance/tests/extended/test_ewebhook_retry_backoff.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ewebhook_retry_backoff.md)
+- [`conformance/tests/extended/test_ewebhook_rp_registration.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ewebhook_rp_registration.md)
+- [`conformance/tests/operator/test_odtis_0531.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0531.md)
 
 ---
 
@@ -920,9 +920,9 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Esignature Audit Events](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_esignature_audit_events.md)
-- [Test Esignature Loa Binding](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_esignature_loa_binding.md)
-- [Test Esignature Pki Keys](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_esignature_pki_keys.md)
+- [`conformance/tests/extended/test_esignature_audit_events.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_esignature_audit_events.md)
+- [`conformance/tests/extended/test_esignature_loa_binding.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_esignature_loa_binding.md)
+- [`conformance/tests/extended/test_esignature_pki_keys.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_esignature_pki_keys.md)
 
 ---
 
@@ -942,8 +942,8 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Ekyb Entity Separate](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ekyb_entity_separate.md)
-- [Test Ekyb Representative Link](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ekyb_representative_link.md)
+- [`conformance/tests/extended/test_ekyb_entity_separate.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ekyb_entity_separate.md)
+- [`conformance/tests/extended/test_ekyb_representative_link.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_ekyb_representative_link.md)
 
 ---
 
@@ -952,7 +952,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 | Field | Value |
 |-------|-------|
 | Component | `governance + external audit` |
-| Repo | `venezuela/odtis` |
+| Repo | `odtis/core-spec` |
 | ODTIS IDs | `ODTIS-0532`, `ODTIS-0006` |
 | Conformance | 2 test(s) |
 
@@ -963,8 +963,8 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 **Tests (sample):**
 
-- [Test Phase Declaration](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
-- [Test Extended No Weakening](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_extended_no_weakening.md)
+- [`conformance/tests/operator/test_phase_declaration.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
+- [`conformance/tests/reference-architecture/test_extended_no_weakening.md`](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_extended_no_weakening.md)
 
 ---
 
@@ -978,8 +978,8 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 ## Related
 
-- [RI surface map](RI-MAP.yaml)
-- [Known gaps](gaps/KNOWN-GAPS.md)
-- [Conformance manifest](../conformance/manifest.yaml)
-- [Section 10 - Deployment](../spec/10-deployment-profiles/SPEC.md)
-- [FASE-4 client discovery](https://github.com/finnectos/venezuela/blob/main/docs/platform/FASE-4-CLIENTE-Y-DESCUBRIMIENTO.md)
+- [`RI-MAP.yaml`](RI-MAP.yaml)
+- [`gaps/KNOWN-GAPS.md`](gaps/KNOWN-GAPS.md)
+- [`../conformance/manifest.yaml`](../conformance/manifest.yaml)
+- [`../spec/10-deployment-profiles/SPEC.md`](../spec/10-deployment-profiles/SPEC.md)
+- [Adoption guide](https://github.com/odtis/core-spec/blob/main/ADOPTION.md)

@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ODTIS_GITHUB = "https://github.com/odtis/core-spec/blob/main"
-PUBLICATIONS_GITHUB = "https://github.com/finnectos/venezuela/blob/main"
+PUBLICATIONS_GITHUB = ODTIS_GITHUB
 
 LINK_RE = re.compile(r"\[([^\]]*)\]\(([^)]+)\)")
 

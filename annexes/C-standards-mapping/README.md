@@ -147,4 +147,4 @@ Checks: all registry IDs mapped, valid `standard_id`, valid coverage enum.
 - P18 - *Standards Alignment and ODTIS*
 - P02 - Comparative international models
 - P03 - eIDAS 2.0 / SSI alignment
-- [Normativa Estandares Referencia](https://github.com/finnectos/venezuela/blob/main/docs/sources/product/analisis/normativa-estandares-referencia.md)
+- Standards reference notes (informative; see annex C mappings)

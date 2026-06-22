@@ -2,7 +2,7 @@
 
 **Date:** 2026-06-15 
 **Spec version:** `0.9.0-draft` 
-**Repository:** `venezuela/odtis` 
+**Repository:** `odtis/core-spec` 
 **Scope:** Profiles, normative sections, registry, conformance tests, RI implementation, phased backlog
 
 ---

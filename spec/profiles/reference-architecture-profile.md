@@ -27,7 +27,7 @@ This profile is **not** Book 2 C4 diagrams (informative). It normatively binds h
 
 Layer 1 MAY deploy without Layer 2. Layer 2 MUST NOT be claimed without Layer 1 for the same operator scope (`ODTIS-0001`).
 
-Informative C4 and container views: [Book 2 chapter 3](https://github.com/finnectos/venezuela/blob/main/docs/sources/books/02-platform-specification-monograph/chapters/03-reference-architecture/CHAPTER.md).
+Informative C4 and container views: Book 2 chapter 3 (Vol. II reference architecture; publication via [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org)).
 
 ---
 

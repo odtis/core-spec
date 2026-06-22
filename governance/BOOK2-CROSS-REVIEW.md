@@ -10,7 +10,7 @@
 
 ## Method
 
-1. Map each Book 2 chapter to ODTIS sections via [Traceability Matrix](https://github.com/finnectos/venezuela/blob/main/docs/sources/papers/TRACEABILITY-MATRIX.md).
+1. Map each Book 2 chapter to ODTIS sections via [RF traceability index](../traceability/rf-index.yaml).
 2. Flag MUST conflicts (Book 2 normative language vs ODTIS MUST).
 3. Resolve by updating Book 2 (informative) or ODTIS (normative source of truth).
 

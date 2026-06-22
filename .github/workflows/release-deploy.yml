@@ -20,6 +20,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Deploy safety check
+        run: python3 scripts/check-deploy-safety.py
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh conformance/run.sh
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

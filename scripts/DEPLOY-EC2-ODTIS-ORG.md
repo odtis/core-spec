@@ -1,8 +1,8 @@
 # Despliegue de ODTIS en [odtis.org](http://odtis.org)
 
-Guía para publicar el sitio estático MkDocs en **tu EC2 existente** (donde ya corre `finnectos.com` con **Nginx + Cloudflare**).
+Guía para publicar el sitio estático MkDocs en **tu EC2 existente** (donde ya corre `your-other-domain.example` con **Nginx + Cloudflare**).
 
-**Tu configuración Cloudflare:** modo SSL **Flexible** (igual que `finnectos.com`).
+**Tu configuración Cloudflare:** modo SSL **Flexible** (igual que `your-other-domain.example`).
 
 Con **Flexible**, Cloudflare sirve HTTPS al visitante y se conecta al EC2 por **HTTP en puerto 80**. No hace falta certificado TLS en el origen ni `listen 443` en Nginx.
 
@@ -20,7 +20,7 @@ Visitante ──HTTPS──► Cloudflare (SSL edge, modo Flexible)
 | Capa            | Rol                                                             |
 | --------------- | --------------------------------------------------------------- |
 | **Cloudflare**  | DNS, certificado público (edge), proxy - **SSL/TLS = Flexible** |
-| **EC2 + Nginx** | `listen 80` por dominio (`finnectos.com` + `odtis.org`)         |
+| **EC2 + Nginx** | `listen 80` por dominio (`your-other-domain.example` + `odtis.org`)         |
 | **Tu Mac**      | `./scripts/build-site.sh` → `rsync`                             |
 
 
@@ -33,12 +33,12 @@ Visitante ──HTTPS──► Cloudflare (SSL edge, modo Flexible)
 ## Checklist - primera vez
 
 - [ ] **Cloudflare DNS:** `@` y `www` → IP del EC2, proxy **on** (nube naranja)
-- [ ] **Cloudflare SSL/TLS:** modo **Flexible** en la zona `odtis.org` (igual que finnectos)
+- [ ] **Cloudflare SSL/TLS:** modo **Flexible** en la zona `odtis.org` (igual que tu otro sitio en el mismo EC2)
 - [ ] **EC2:** `/var/www/odtis.org` creado
 - [ ] **Nginx:** vhost `odtis.org` con **solo** `listen 80` (sin bloque SSL)
 - [ ] `sudo nginx -t && sudo systemctl reload nginx`
 - [ ] **Build + rsync**
-- [ ] [https://odtis.org](https://odtis.org) OK; finnectos.com sigue OK
+- [ ] [https://odtis.org](https://odtis.org) OK; your-other-domain.example sigue OK
 
 ---
 
@@ -49,7 +49,7 @@ Dashboard → **DNS → Records** (zona `odtis.org`):
 
 | Type      | Name  | Content                              | Proxy   |
 | --------- | ----- | ------------------------------------ | ------- |
-| **A**     | `@`   | IP pública del EC2 (la de finnectos) | Proxied |
+| **A**     | `@`   | IP pública del EC2 (misma que tu otro vhost) | Proxied |
 | **CNAME** | `www` | `odtis.org`                          | Proxied |
 
 
@@ -59,7 +59,7 @@ Dashboard → **DNS → Records** (zona `odtis.org`):
 
 ## 2. Cloudflare - SSL modo Flexible
 
-**SSL/TLS → Overview → Flexible** (misma opción que `finnectos.com`).
+**SSL/TLS → Overview → Flexible** (misma opción que `your-other-domain.example`).
 
 
 | Tramo                     | Protocolo            |
@@ -74,13 +74,13 @@ Dashboard → **DNS → Records** (zona `odtis.org`):
 - `listen 443 ssl;` - **no** (no lo necesitas con Flexible)
 - Certificado en el EC2 - **no**
 
-Replica el patrón de finnectos:
+Replica el patrón de tu otro vhost en el mismo servidor:
 
 ```bash
 sudo grep -E 'server_name|listen' /etc/nginx/sites-enabled/*
 ```
 
-El vhost de `finnectos.com` debería tener solo `listen 80`. Haz lo mismo para `odtis.org`.
+El vhost de `your-other-domain.example` debería tener solo `listen 80`. Haz lo mismo para `odtis.org`.
 
 ### Redirect www → apex (opcional)
 
@@ -154,7 +154,7 @@ Si no existe, el `scp` falló (clave, IP, usuario `ubuntu` vs `ec2-user`).
 
 **Amazon Linux / RHEL** no usan `sites-available/` - suelen usar `**/etc/nginx/conf.d/`**.
 
-Mira dónde está la config de finnectos:
+Mira dónde está la config de tu otro sitio:
 
 ```bash
 sudo nginx -T 2>/dev/null | grep -E 'server_name|include' | head -20
@@ -200,7 +200,7 @@ sudo systemctl reload nginx
 
 **Importante:**
 
-- No toques el vhost de `finnectos.com`.
+- No toques el vhost de `your-other-domain.example`.
 - `server_name odtis.org www.odtis.org;` y `root /var/www/odtis.org;` exclusivos de ODTIS.
 - MkDocs requiere `try_files $uri $uri/ $uri/index.html =404;` (incluido en la plantilla).
 
@@ -208,7 +208,7 @@ Prueba en el servidor:
 
 ```bash
 curl -sI -H "Host: odtis.org" http://127.0.0.1/ | head -3
-curl -sI -H "Host: finnectos.com" http://127.0.0.1/ | head -3
+curl -sI -H "Host: your-other-domain.example" http://127.0.0.1/ | head -3
 ```
 
 ---
@@ -280,7 +280,7 @@ Preview local: `mkdocs serve -f site/mkdocs.yml` → [http://127.0.0.1:8000](htt
 | Origen HTTP                    | `curl -sI -H "Host: odtis.org" http://127.0.0.1/`  |
 | Público (HTTPS vía Cloudflare) | [https://odtis.org](https://odtis.org)             |
 | Rutas MkDocs                   | `/spec/`, `/conformance/`                          |
-| finnectos                      | [https://finnectos.com](https://finnectos.com)     |
+| Otro vhost en el EC2          | `https://your-other-domain.example` (smoke test)   |
 | Caché                          | Cloudflare → **Caching → Purge** si no ves cambios |
 
 
@@ -297,7 +297,7 @@ Preview local: `mkdocs serve -f site/mkdocs.yml` → [http://127.0.0.1:8000](htt
 | **403 Forbidden**                                 | Carpeta vacía (rsync falló) o nginx/SELinux sin lectura | Ver sección 7 abajo                                                 |
 | `**Permission denied` en rsync**                  | `/var/www/odtis.org` es de `root`                       | `sudo chown -R ec2-user:ec2-user /var/www/odtis.org`                |
 | `**mv: No such file or directory`**               | No existe `sites-available/` (Amazon Linux)             | Usar `/etc/nginx/conf.d/odtis.org.conf` (sección 4.2)               |
-| finnectos roto                                    | Vhost sobrescrito                                       | Un archivo por dominio; restaurar backup                            |
+| Otro vhost roto                                   | Vhost sobrescrito                                       | Un archivo por dominio; restaurar backup                            |
 | Página vieja                                      | Caché Cloudflare                                        | Purge cache                                                         |
 | Enlaces mal dominio                               | Build sin `site_url`                                    | `https://odtis.org` en `mkdocs.yml` + rebuild                       |
 | **curl 200 en EC2, navegador no carga**           | DNS / Cloudflare / NS del registrar                     | Sección 8                                                           |
@@ -400,14 +400,14 @@ curl -sI --max-time 10 -H "Host: odtis.org" http://YOUR_EC2_PUBLIC_IP/ | head -5
 
 ### Checklist Cloudflare (zona `odtis.org`)
 
-1. **Websites** → `odtis.org` aparece como **Active** (no solo `finnectos.com`).
+1. **Websites** → `odtis.org` aparece como **Active** (no solo `your-other-domain.example`).
 2. En el **registrar** (Namecheap): nameservers = los de Cloudflare (`*.ns.cloudflare.com`).
 3. **DNS → Records:**
 
 - `A` `@` → `YOUR_EC2_PUBLIC_IP` (tu IP EC2) - **Proxied** (nube naranja)
 - `CNAME` `www` → `odtis.org` - Proxied
 
-1. **SSL/TLS → Overview → Flexible** (igual que finnectos).
+1. **SSL/TLS → Overview → Flexible** (igual que tu otro sitio en Cloudflare).
 2. Sin registro `AAAA` roto apuntando a otra IP.
 3. **SSL/TLS → Edge Certificates:** certificado activo para `odtis.org` (suele generarse en minutos).
 
@@ -541,4 +541,4 @@ La propagación de NS puede tardar **minutos a 48 h**. Mientras tanto `dig odtis
 
 ---
 
-*Junio 2026 - EC2 + Cloudflare SSL **Flexible** · finnectos.com + odtis.org*
+*Junio 2026 - EC2 + Cloudflare SSL **Flexible** · your-other-domain.example + odtis.org*

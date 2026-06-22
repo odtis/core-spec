@@ -9,7 +9,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 GITHUB_ODTIS = "https://github.com/odtis/core-spec/blob/main"
-GITHUB_MONOREPO = "https://github.com/finnectos/venezuela/blob/main"
 
 REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\]\(\.\./\.\./conformance/profiles/[^)]+/\)"), "](/conformance/tests/)"),
@@ -49,7 +48,7 @@ def abs_md_target(path: str) -> str:
 
 def fix_content(text: str) -> str:
     text = TEST_MD.sub(lambda m: f"]({GITHUB_ODTIS}/{m.group(1)})", text)
-    text = MONOREPO_DOC.sub(lambda m: f"]({GITHUB_MONOREPO}/docs/sources/{m.group(1)})", text)
+    text = MONOREPO_DOC.sub(lambda m: f"]({GITHUB_ODTIS}/traceability/README.md)", text)
     text = ABS_MD.sub(lambda m: f"]({abs_md_target(m.group(1))}){m.group(2) or ''}", text)
     for pattern, repl in REPLACEMENTS:
         if callable(repl):

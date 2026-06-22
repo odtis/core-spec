@@ -15,6 +15,8 @@ BLOCKED_PATH_FRAGMENTS = (
     "/Users/",
     "MvpKeyPair.pem",
     "manuelmerida/development",
+    "finnectos/venezuela",
+    "venezuela/odtis",
 )
 
 PATTERNS: list[tuple[str, re.Pattern[str]]] = [

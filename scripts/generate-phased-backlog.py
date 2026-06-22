@@ -14,7 +14,6 @@ REGISTRY = ROOT / "registry/requirements.json"
 OUT_YAML = ROOT / "implementation/phased-backlog.yaml"
 OUT_MD = ROOT / "implementation/PHASED-BACKLOG.md"
 GITHUB_ODTIS = "https://github.com/odtis/core-spec/blob/main"
-GITHUB_MONOREPO = "https://github.com/finnectos/venezuela/blob/main"
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from profile_registry import load_requirements, parse_profiles_yaml, profile_requirement_ids  # noqa: E402
@@ -69,7 +68,7 @@ EPICS: dict[str, list[dict]] = {
             "id": "P0-E01",
             "title": "Conformance statement pipeline",
             "component": "odtis/conformance + operator docs",
-            "repo": "venezuela/odtis",
+            "repo": "odtis/core-spec",
             "status": "done",
             "odtis_ids": ["ODTIS-0008", "ODTIS-0532", "ODTIS-0534", "ODTIS-0010"],
             "work": [
@@ -88,7 +87,7 @@ EPICS: dict[str, list[dict]] = {
             "id": "P0-E02",
             "title": "Profile claim guardrails",
             "component": "conformance lab",
-            "repo": "venezuela/odtis",
+            "repo": "odtis/core-spec",
             "status": "done",
             "odtis_ids": ["ODTIS-0001", "ODTIS-0002", "ODTIS-0003", "ODTIS-0004", "ODTIS-0005", "ODTIS-0006", "ODTIS-0007", "ODTIS-0009"],
             "work": [
@@ -100,7 +99,7 @@ EPICS: dict[str, list[dict]] = {
             "id": "P0-E03",
             "title": "Reference implementation map",
             "component": "implementation/RI-MAP.yaml",
-            "repo": "venezuela/odtis",
+            "repo": "odtis/core-spec",
             "status": "done",
             "odtis_ids": ["ODTIS-0536"],
             "work": [
@@ -112,7 +111,7 @@ EPICS: dict[str, list[dict]] = {
             "id": "P0-E04",
             "title": "L1 lab validators",
             "component": "conformance/sandbox",
-            "repo": "venezuela/odtis",
+            "repo": "odtis/core-spec",
             "status": "done",
             "odtis_ids": ["ODTIS-0010"],
             "work": [
@@ -240,7 +239,7 @@ EPICS: dict[str, list[dict]] = {
             "id": "P1-E10",
             "title": "Phase 1 conformance package",
             "component": "operator publication",
-            "repo": "venezuela/odtis",
+            "repo": "odtis/core-spec",
             "status": "done",
             "odtis_ids": ["ODTIS-0533"],
             "work": [
@@ -358,7 +357,7 @@ EPICS: dict[str, list[dict]] = {
             "id": "P2-E09",
             "title": "Phase 2 conformance package",
             "component": "operator publication",
-            "repo": "venezuela/odtis",
+            "repo": "odtis/core-spec",
             "status": "done",
             "odtis_ids": ["ODTIS-0532"],
             "work": [
@@ -471,7 +470,7 @@ EPICS: dict[str, list[dict]] = {
             "id": "P3-E09",
             "title": "Phase 3 conformance package",
             "component": "operator publication",
-            "repo": "venezuela/odtis",
+            "repo": "odtis/core-spec",
             "status": "partial",
             "odtis_ids": ["ODTIS-0532"],
             "work": [
@@ -557,7 +556,7 @@ EPICS: dict[str, list[dict]] = {
             "id": "P4-E07",
             "title": "Operator L3 and Phase 4 statement",
             "component": "governance + external audit",
-            "repo": "venezuela/odtis",
+            "repo": "odtis/core-spec",
             "status": "partial",
             "odtis_ids": ["ODTIS-0532", "ODTIS-0006"],
             "work": [
@@ -731,7 +730,7 @@ def build_markdown(payload: dict) -> str:
             "- [`gaps/KNOWN-GAPS.md`](gaps/KNOWN-GAPS.md)",
             "- [`../conformance/manifest.yaml`](../conformance/manifest.yaml)",
             "- [`../spec/10-deployment-profiles/SPEC.md`](../spec/10-deployment-profiles/SPEC.md)",
-            f"- [FASE-4 client discovery]({GITHUB_MONOREPO}/docs/platform/FASE-4-CLIENTE-Y-DESCUBRIMIENTO.md)",
+            f"- [Adoption guide]({GITHUB_ODTIS}/ADOPTION.md)",
             "",
         ]
     )

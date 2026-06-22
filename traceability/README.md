@@ -6,9 +6,9 @@ Links functional requirements (RF) to ODTIS requirement IDs and spec sections.
 
 ## Authoritative matrix (workspace)
 
-The master traceability matrix lives at:
+The master traceability matrix is maintained in this repository:
 
-**[Traceability Matrix](https://github.com/finnectos/venezuela/blob/main/docs/sources/papers/TRACEABILITY-MATRIX.md)**
+**[RF traceability index](rf-index.yaml)** and [traceability README](README.md)
 
 Columns: RF/RNF -> Paper -> Book 2 chapter -> ODTIS ID -> Status
 

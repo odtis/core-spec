@@ -440,7 +440,7 @@ Conformance test
 |----------|----------|
 | Requirement registry | [Requirements registry](/registry/requirements.json) |
 | RF index | [RF traceability index](../../traceability/rf-index.yaml) |
-| Master matrix | [Traceability Matrix](https://github.com/finnectos/venezuela/blob/main/docs/sources/papers/TRACEABILITY-MATRIX.md) |
+| Master matrix | [Traceability index](../../traceability/rf-index.yaml) |
 
 Implementations are not required to publish internal traceability matrices. Conformance statements MUST reference ODTIS IDs, not paper sections alone.
 

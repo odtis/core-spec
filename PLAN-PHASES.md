@@ -1,6 +1,6 @@
 # ODTIS - Phased build plan
 
-Aligned with [Plan Ejecucion Fases](https://github.com/finnectos/venezuela/blob/main/docs/sources/papers/PLAN-EJECUCION-FASES.md) (Phase 3-4) and [Reporte Cobertura Papers Spec Odtis](https://github.com/finnectos/venezuela/blob/main/docs/sources/papers/REPORTE-COBERTURA-PAPERS-SPEC-ODTIS.md) section 8.4.
+Aligned with [PLAN-PHASES](PLAN-PHASES.md) (Phase 3-4) and the [traceability coverage report](traceability/coverage-report.yaml) section 8.4.
 
 **Project hub:** [Project hub](project/README.md) | **Live status:** [Project status](site/STATUS.md)
 

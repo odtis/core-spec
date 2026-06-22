@@ -26,7 +26,7 @@
           "title": "Conformance statement pipeline",
           "status": "done",
           "component": "odtis/conformance + operator docs",
-          "repo": "venezuela/odtis",
+          "repo": "odtis/core-spec",
           "odtis_ids": [
             "ODTIS-0008",
             "ODTIS-0532",
@@ -50,7 +50,7 @@
           "title": "Profile claim guardrails",
           "status": "done",
           "component": "conformance lab",
-          "repo": "venezuela/odtis",
+          "repo": "odtis/core-spec",
           "odtis_ids": [
             "ODTIS-0001",
             "ODTIS-0002",
@@ -81,7 +81,7 @@
           "title": "Reference implementation map",
           "status": "done",
           "component": "implementation/RI-MAP.yaml",
-          "repo": "venezuela/odtis",
+          "repo": "odtis/core-spec",
           "odtis_ids": [
             "ODTIS-0536"
           ],
@@ -98,7 +98,7 @@
           "title": "L1 lab validators",
           "status": "done",
           "component": "conformance/sandbox",
-          "repo": "venezuela/odtis",
+          "repo": "odtis/core-spec",
           "odtis_ids": [
             "ODTIS-0010"
           ],
@@ -371,7 +371,7 @@
           "title": "Phase 1 conformance package",
           "status": "done",
           "component": "operator publication",
-          "repo": "venezuela/odtis",
+          "repo": "odtis/core-spec",
           "odtis_ids": [
             "ODTIS-0533"
           ],
@@ -585,7 +585,7 @@
           "title": "Phase 2 conformance package",
           "status": "done",
           "component": "operator publication",
-          "repo": "venezuela/odtis",
+          "repo": "odtis/core-spec",
           "odtis_ids": [
             "ODTIS-0532"
           ],
@@ -807,7 +807,7 @@
           "title": "Phase 3 conformance package",
           "status": "partial",
           "component": "operator publication",
-          "repo": "venezuela/odtis",
+          "repo": "odtis/core-spec",
           "odtis_ids": [
             "ODTIS-0532"
           ],
@@ -968,7 +968,7 @@
           "title": "Operator L3 and Phase 4 statement",
           "status": "partial",
           "component": "governance + external audit",
-          "repo": "venezuela/odtis",
+          "repo": "odtis/core-spec",
           "odtis_ids": [
             "ODTIS-0532",
             "ODTIS-0006"
