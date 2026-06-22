@@ -1,14 +1,33 @@
 Open Digital Trust Infrastructure Specification (ODTIS)
-Copyright (c) 2026 VenID / FinnectOS contributors
 
-This work is licensed under the Creative Commons Attribution 4.0 International License.
+Copyright (c) 2026 ODTIS contributors
 
-You are free to share and adapt the normative specification text for any purpose,
-including commercial use, provided you give appropriate credit.
+Licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
-Full license: https://creativecommons.org/licenses/by/4.0/legalcode
+You are free to:
+
+* Share — copy and redistribute the material in any medium or format.
+* Adapt — remix, transform, and build upon the material for any purpose, including commercial use.
+
+Under the following terms:
+
+* Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+
+License text:
+https://creativecommons.org/licenses/by/4.0/
 
 SPDX-License-Identifier: CC-BY-4.0
 
-Note: Academic papers cited by ODTIS (e.g. P18) may remain under CC BY-NC-ND 4.0 when published separately.
-This LICENSE applies only to content under the odtis/ directory.
+Additional clarification:
+
+1. ODTIS is an open specification intended for public, private, academic, and commercial implementation.
+2. Conformance with ODTIS does not require use of any specific software, vendor, product, or commercial service.
+3. Implementations of ODTIS may be released under any software license chosen by their respective authors.
+4. Trademarks, logos, and branding associated with ODTIS, VenID (reference implementation), FinnectOS, and Digital Trust Infrastructure are not granted under this license.
+5. Academic papers, books, and other publications referenced by ODTIS may be distributed under separate licenses.
+
+This license applies only to the normative and informative content contained in the ODTIS specification repository (https://github.com/odtis/core-spec).
+
+Interim steward: FinnectOS, Inc. (pending ODTIS Foundation incorporation). See governance/MAINTAINERS.md.
+
+Note: Academic papers cited by ODTIS (e.g. P18) may remain under CC BY-NC-ND 4.0 when published separately on digitaltrustinfrastructure.org.

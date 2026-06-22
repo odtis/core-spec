@@ -20,21 +20,29 @@ How ODTIS normative text, annexes, and conformance materials may be used, cited,
 
 ## Normative specification (this repository)
 
-Open Digital Trust Infrastructure Specification (ODTIS) 
-Copyright (c) 2026 VenID / FinnectOS contributors
+Open Digital Trust Infrastructure Specification (ODTIS)  
+Copyright (c) 2026 ODTIS contributors
 
-Content under the `odtis/` directory (sections 1-10, registry, annexes, conformance tests, governance docs for the spec) is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+Content in this repository (`core-spec`: sections 1-10, registry, annexes, conformance tests, governance docs for the spec) is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
 You are free to:
 
-- **Share** - copy and redistribute in any medium or format
-- **Adapt** - remix, transform, and build upon the material for any purpose, **including commercially**
+- **Share** — copy and redistribute in any medium or format
+- **Adapt** — remix, transform, and build upon the material for any purpose, **including commercially**
 
 Under these terms:
 
-- **Attribution** - You must give appropriate credit, provide a link to the license, and indicate if changes were made. Use [How to cite](../publication/HOW-TO-CITE.md) for ODTIS version and profile.
+- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. Use [How to cite](../publication/HOW-TO-CITE.md) for ODTIS version and profile.
 
-Implementations **do not** need to open-source code to claim ODTIS conformance.
+### Clarifications
+
+1. ODTIS is an open specification for public, private, academic, and commercial implementation.
+2. Conformance does **not** require any specific software, vendor, product, or commercial service.
+3. Implementations may use **any software license** chosen by their authors.
+4. **Trademarks and logos** (ODTIS, ODTIS Certified, VenID, FinnectOS, Digital Trust Infrastructure) are **not** granted under CC BY 4.0. See [Trademark policy](../governance/TRADEMARK-POLICY.md).
+5. Academic papers and books **referenced** by ODTIS may use separate licenses (often CC BY-NC-ND for papers on [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org)).
+
+Interim steward: FinnectOS, Inc. (pending ODTIS Foundation). See [Maintainers](../governance/MAINTAINERS.md).
 
 ---
 

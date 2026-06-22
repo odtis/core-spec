@@ -1,6 +1,6 @@
 # ODTIS intellectual property policy
 
-**Applies to:** all contributions to `odtis/` normative text 
+**Applies to:** all contributions to this repository (`core-spec`) normative text 
 **License:** [CC BY 4.0](../LICENSE)
 
 **Project hub:** [Project hub](../project/README.md) | **Trademark:** [Trademark policy](TRADEMARK-POLICY.md)
@@ -45,7 +45,7 @@ Patent holders SHOULD notify editors before a MUST that implicates their patents
 
 | Corpus | License | Normative? |
 |--------|---------|------------|
-| `odtis/` | CC BY 4.0 | **Yes** |
+| `core-spec` (this repository) | CC BY 4.0 | **Yes** |
 | P01-P18 papers | CC BY-NC-ND 4.0 (per paper) | Informative |
 | Book 1-3 | Per edition | Informative / implementation |
 
