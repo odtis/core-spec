@@ -253,7 +253,7 @@ implementations:
     - ODTIS-0519
     - ODTIS-0520
     - ODTIS-0525
-    notes: NETWORK-BOUNDARY; SECRETS-MANAGEMENT; ZERO-TRUST-ROADMAP; FRAUD-MONITORING; security-platform-check.sh
+    notes: NETWORK-BOUNDARY; staging_compose matrix; security-platform-check.sh; compose/staging overlay (#7)
 
   - id: notification-service
     module: services/notification-service
@@ -344,6 +344,44 @@ implementations:
   conformance:
     level_target: L3
     last_report: implementation/statements/venid-phase4-full/l2-report.md
+    gaps_doc: implementation/gaps/KNOWN-GAPS.md
+
+- id: ven-cloud-stack
+  path: "../core-impl/ven-cloud-stack"
+  organization: FinnectOS
+  profiles_claimed:
+  - reference-architecture
+  - operator
+  odtis_sections:
+  - "07-operator-governance"
+  surfaces:
+  - id: di-config-server
+    module: di-config-server
+    backlog_epic: P2-E08
+    status: partial
+    informative: true
+    odtis_ids: []
+    notes: Spring Cloud Config; staging overlay mounts IC+TN config; cloud-stack-check.sh
+
+  - id: di-discovery
+    module: di-discovery
+    backlog_epic: P2-E08
+    status: partial
+    informative: true
+    odtis_ids: []
+    notes: Eureka service registry; optional in Phase 2 pilot
+
+  - id: di-platform-images
+    module: di-jvm-image + di-node-image + di-keycloak
+    backlog_epic: P2-E08
+    status: partial
+    informative: true
+    odtis_ids: []
+    notes: Base images; realm-identidad-digital.json; built by start.sh / staging-up.sh
+
+  conformance:
+    level_target: L2
+    last_report: null
     gaps_doc: implementation/gaps/KNOWN-GAPS.md
 
 - id: ven-trust-network

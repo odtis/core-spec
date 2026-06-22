@@ -43,6 +43,10 @@ smokes:
       - ODTIS-0520
       - ODTIS-0525
 
+  - script: conformance/run-cloud-stack-checks.sh
+    odtis_ids: []
+    notes: ven-cloud-stack health; staging overlay; network-exposure-matrix staging_compose (#7, #28)
+
   - script: conformance/run-fail-closed-checks.sh
     odtis_ids:
       - ODTIS-0535
