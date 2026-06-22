@@ -417,7 +417,7 @@ implementations:
     - ODTIS-0535
     gaps: [GAP-TN-0204]
     binding_doc: implementation/component-bindings/exchange-gateway.yaml
-    notes: FAL-CONTROLS.md; fal-controls-check.sh; FederationRouteValidationFilter when federation.enabled (P3-E08/P4-E01)
+    notes: FAL-CONTROLS.md; exchange-audit-check.sh ODTIS-0221; fal-controls-check.sh; FederationRouteValidationFilter
 
   - id: exchange-gateway-sender
     module: gateway/exchange-gateway (sender mode)
@@ -502,6 +502,8 @@ implementations:
     status: partial
     odtis_ids:
     - ODTIS-0226
+    binding_doc: implementation/component-bindings/portal-trust.yaml
+    notes: AdminAccessRequestsController; AdminGrantsController; AuditController; portal-trust-check.sh
 
   - id: portal-trust
     module: front/portal-trust
@@ -510,6 +512,8 @@ implementations:
     odtis_ids:
     - ODTIS-0209
     - ODTIS-0226
+    binding_doc: implementation/component-bindings/portal-trust.yaml
+    notes: AccessRequestsPage; GrantsPage; AuditPage; service-grants-check.sh
 
   - id: exchange-client-sdk
     module: sdk/exchange-client

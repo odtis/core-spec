@@ -67,11 +67,26 @@ smokes:
       - ODTIS-0218
       - ODTIS-0219
       - ODTIS-0220
+      - ODTIS-0221
       - ODTIS-0223
       - ODTIS-0224
       - ODTIS-0225
+      - ODTIS-0226
       - ODTIS-0517
       - ODTIS-0528
+
+  - script: conformance/run-exchange-sla-checks.sh
+    odtis_ids:
+      - ODTIS-0220
+      - ODTIS-0221
+      - ODTIS-0517
+    notes: exchange-audit-check.sh; gateway-sla.yaml; zero-trust mapping (#23)
+
+  - script: conformance/run-portal-trust-checks.sh
+    odtis_ids:
+      - ODTIS-0209
+      - ODTIS-0226
+    notes: portal-trust-check.sh; service-grants-check.sh; AdminGrantsControllerTest (#11)
 
   - script: conformance/run-phase4-package.sh
     tests:

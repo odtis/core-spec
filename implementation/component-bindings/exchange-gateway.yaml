@@ -38,3 +38,5 @@ odtis_ids:
 evidence:
   - implementation/statements/venid-phase2-trust/l2-report.md
   - ven-trust-network/docs/EXCHANGE-GATEWAY.md
+  - ven-trust-network/docs/operator/EXCHANGE-AUDIT-SLA.md
+  - ven-trust-network/scripts/exchange-audit-check.sh

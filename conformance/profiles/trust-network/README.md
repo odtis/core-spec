@@ -24,7 +24,7 @@ Requirement prefixes: `ODTIS-02*` (+ `ODTIS-0106`)
 | [`Gateway Mtls test`](../../tests/trust-network/test_gateway_mtls.md) | `ODTIS-0204` | implemented |
 | [`Gateway Only Routing test`](../../tests/trust-network/test_gateway_only_routing.md) | `ODTIS-0201` | implemented |
 | [`Grant Fail Closed test`](../../tests/trust-network/test_grant_fail_closed.md) | `ODTIS-0224` | implemented |
-| [`Grant Workflow Audit test`](../../tests/trust-network/test_grant_workflow_audit.md) | `ODTIS-0226` | pending |
+| [`Grant Workflow Audit test`](../../tests/trust-network/test_grant_workflow_audit.md) | `ODTIS-0226` | implemented |
 | [`No Payload Centralization test`](../../tests/trust-network/test_no_payload_centralization.md) | `ODTIS-0225` | implemented |
 | [`Odtis-4 8 1 test`](../../tests/trust-network/test_odtis-4_8_1.md) | `ODTIS-0205` | pending |
 | [`Odtis-4 8 3 test`](../../tests/trust-network/test_odtis-4_8_3.md) |  | pending |
@@ -43,7 +43,7 @@ Requirement prefixes: `ODTIS-02*` (+ `ODTIS-0106`)
 | [`ODTIS-0218 test`](../../tests/trust-network/test_odtis_0218.md) | `ODTIS-0218` | implemented |
 | [`ODTIS-0219 test`](../../tests/trust-network/test_odtis_0219.md) | `ODTIS-0219` | implemented |
 | [`ODTIS-0220 test`](../../tests/trust-network/test_odtis_0220.md) | `ODTIS-0220` | implemented |
-| [`ODTIS-0221 test`](../../tests/trust-network/test_odtis_0221.md) | `ODTIS-0221` | pending |
+| [`ODTIS-0221 test`](../../tests/trust-network/test_odtis_0221.md) | `ODTIS-0221` | implemented |
 | [`Per Request Partner Verify test`](../../tests/trust-network/test_per_request_partner_verify.md) | `ODTIS-0517` | implemented |
 | [`Sender Multi Peer Routing test`](../../tests/trust-network/test_sender_multi_peer_routing.md) | `ODTIS-0223` | implemented |
 | [`Service Grant Required test`](../../tests/trust-network/test_service_grant_required.md) | `ODTIS-0209` | pending |
