@@ -20,23 +20,23 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 |------|-------------|--------|
 | [`Account Recovery test`](../../tests/core-identity/test_account_recovery.md) | `ODTIS-0309`, `ODTIS-0326` | implemented |
 | [`Annex B Liveness Mapping test`](../../tests/core-identity/test_annex_b_liveness_mapping.md) | `ODTIS-0312`, `ODTIS-0523` | implemented |
-| [`Annex C Nist Loa Mapping test`](../../tests/core-identity/test_annex_c_nist_loa_mapping.md) | `ODTIS-0103`, `ODTIS-0105` | pending |
+| [`Annex C Nist Loa Mapping test`](../../tests/core-identity/test_annex_c_nist_loa_mapping.md) | `ODTIS-0103`, `ODTIS-0105` | implemented |
 | [`Consent Audit Events test`](../../tests/core-identity/test_consent_audit_events.md) | `ODTIS-0527` | implemented |
-| [`Consent Gated Claims test`](../../tests/core-identity/test_consent_gated_claims.md) | `ODTIS-0307`, `ODTIS-0331` | pending |
+| [`Consent Gated Claims test`](../../tests/core-identity/test_consent_gated_claims.md) | `ODTIS-0307`, `ODTIS-0331` | implemented |
 | [`Consent Revocation test`](../../tests/core-identity/test_consent_revocation.md) | `ODTIS-0330` | implemented |
 | [`Explicit Consent First Release test`](../../tests/core-identity/test_explicit_consent_first_release.md) | `ODTIS-0328` | implemented |
-| [`High Biometric Gate test`](../../tests/core-identity/test_high_biometric_gate.md) | `ODTIS-0103` | pending |
+| [`High Biometric Gate test`](../../tests/core-identity/test_high_biometric_gate.md) | `ODTIS-0103` | implemented |
 | [`Identity Audit Events test`](../../tests/core-identity/test_identity_audit_events.md) | `ODTIS-0526` | implemented |
 | [`Liveness High Loa test`](../../tests/core-identity/test_liveness_high_loa.md) | `ODTIS-0523` | implemented |
-| [`Loa Claim test`](../../tests/core-identity/test_loa_claim.md) | `ODTIS-0102` | pending |
-| [`ODTIS-0101 test`](../../tests/core-identity/test_odtis_0101.md) | `ODTIS-0101` | pending |
+| [`Loa Claim test`](../../tests/core-identity/test_loa_claim.md) | `ODTIS-0102` | implemented |
+| [`ODTIS-0101 test`](../../tests/core-identity/test_odtis_0101.md) | `ODTIS-0101` | implemented |
 | [`ODTIS-0104 test`](../../tests/core-identity/test_odtis_0104.md) | `ODTIS-0344` | implemented |
-| [`ODTIS-0105 test`](../../tests/core-identity/test_odtis_0105.md) | `ODTIS-0105` | pending |
+| [`ODTIS-0105 test`](../../tests/core-identity/test_odtis_0105.md) | `ODTIS-0105` | implemented |
 | [`ODTIS-0106 test`](../../tests/core-identity/test_odtis_0106.md) | `ODTIS-0106` | pending |
-| [`ODTIS-0107 test`](../../tests/core-identity/test_odtis_0107.md) | `ODTIS-0107` | pending |
-| [`ODTIS-0301 test`](../../tests/core-identity/test_odtis_0301.md) | `ODTIS-0301` | pending |
-| [`ODTIS-0303 test`](../../tests/core-identity/test_odtis_0303.md) | `ODTIS-0303` | pending |
-| [`ODTIS-0304 test`](../../tests/core-identity/test_odtis_0304.md) | `ODTIS-0304` | pending |
+| [`ODTIS-0107 test`](../../tests/core-identity/test_odtis_0107.md) | `ODTIS-0107` | implemented |
+| [`ODTIS-0301 test`](../../tests/core-identity/test_odtis_0301.md) | `ODTIS-0301` | implemented |
+| [`ODTIS-0303 test`](../../tests/core-identity/test_odtis_0303.md) | `ODTIS-0303` | implemented |
+| [`ODTIS-0304 test`](../../tests/core-identity/test_odtis_0304.md) | `ODTIS-0304` | implemented |
 | [`ODTIS-0306 test`](../../tests/core-identity/test_odtis_0306.md) | `ODTIS-0306` | implemented |
 | [`ODTIS-0310 test`](../../tests/core-identity/test_odtis_0310.md) | `ODTIS-0310` | implemented |
 | [`ODTIS-0311 test`](../../tests/core-identity/test_odtis_0311.md) | `ODTIS-0311` | implemented |
@@ -69,13 +69,13 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 | [`ODTIS-0343 test`](../../tests/core-identity/test_odtis_0343.md) | `ODTIS-0343` | implemented |
 | [`Openapi Verify Response test`](../../tests/core-identity/test_openapi_verify_response.md) | `ODTIS-0108`, `ODTIS-0316`, `ODTIS-0317` | pending |
 | [`Owasp Baseline test`](../../tests/core-identity/test_owasp_baseline.md) | `ODTIS-0521` | implemented |
-| [`Pkce Required test`](../../tests/core-identity/test_pkce_required.md) | `ODTIS-0302` | pending |
-| [`Redirect Uri Validation test`](../../tests/core-identity/test_redirect_uri_validation.md) | `ODTIS-0305` | pending |
+| [`Pkce Required test`](../../tests/core-identity/test_pkce_required.md) | `ODTIS-0302` | implemented |
+| [`Redirect Uri Validation test`](../../tests/core-identity/test_redirect_uri_validation.md) | `ODTIS-0305` | implemented |
 | [`Rp Initiated Logout test`](../../tests/core-identity/test_rp_initiated_logout.md) | `ODTIS-0308` | implemented |
 | [`Rp Suspension test`](../../tests/core-identity/test_rp_suspension.md) | `ODTIS-0339` | implemented |
 | [`Verification Client Auth test`](../../tests/core-identity/test_verification_client_auth.md) | `ODTIS-0315` | implemented |
 | [`Verification Consent Scope test`](../../tests/core-identity/test_verification_consent_scope.md) | `ODTIS-0317`, `ODTIS-0331` | implemented |
-| [`Verification Loa On Denial test`](../../tests/core-identity/test_verification_loa_on_denial.md) | `ODTIS-0108` | pending |
+| [`Verification Loa On Denial test`](../../tests/core-identity/test_verification_loa_on_denial.md) | `ODTIS-0108` | implemented |
 
 ## Coverage summary
 
@@ -83,7 +83,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 |--------|-------|
 | Registry requirements | 45 |
 | Linked tests | 58 |
-| Implemented (smoke) | 42 |
+| Implemented (smoke) | 55 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`

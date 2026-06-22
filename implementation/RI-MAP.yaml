@@ -63,7 +63,7 @@ implementations:
     - ODTIS-0108
     - ODTIS-0306
     l2_check: l2-loa-claims
-    notes: AssuranceLevelPolicy; UpdateAssuranceLevel gRPC; verification-engine sync; VerifyController 0108/0107
+    notes: AssuranceLevelPolicy; UpdateAssuranceLevel gRPC; verification-engine sync; loa-policy-check.sh; VerifyController 0108/0107
 
   - id: keycloak-oidc-idp
     module: shared/keycloak-extension + Keycloak realm
@@ -80,7 +80,7 @@ implementations:
     - ODTIS-0307
     - ODTIS-0308
     l2_check: l2-oidc-discovery
-    notes: Realm identidad-digital; PKCE S256; refresh rotation; OIDC-SANDBOX.md; oidc-sandbox-check.sh
+    notes: Realm identidad-digital; PKCE S256; refresh rotation; OIDC-SANDBOX.md; oidc-conformance-check.sh; oidc-sandbox-check.sh
 
   - id: identity-core
     module: services/identity-core

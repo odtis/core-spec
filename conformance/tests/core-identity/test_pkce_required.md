@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0302 - PKCE for public clients
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0302
 **Profile:** core-identity
 

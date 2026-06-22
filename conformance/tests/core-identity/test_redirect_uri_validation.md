@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0305 - redirect URI validation
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0305
 **Profile:** core-identity
 

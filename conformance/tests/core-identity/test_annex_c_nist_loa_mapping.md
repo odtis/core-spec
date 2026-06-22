@@ -1,6 +1,6 @@
 # Conformance test: Annex C - NIST LoA mapping disclosure
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0105
 **Profile:** core-identity, operator
 **Annex C:** `loa-matrix.yaml`, `mapping.yaml`

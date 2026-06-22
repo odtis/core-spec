@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0105
 
-**Status:** pending implementation 
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0105 
 **Profile:** core-identity
 

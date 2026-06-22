@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0103 - High LoA biometric gate
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0103
 **Profile:** core-identity
 

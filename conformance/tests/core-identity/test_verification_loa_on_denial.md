@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0108 - Verification API LoA on denial
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0108
 **Profile:** core-identity
 

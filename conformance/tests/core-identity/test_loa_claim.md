@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0102 - expose active LoA
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0102
 **Profile:** core-identity
 

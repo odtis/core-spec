@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0307 - consent-gated custom claims
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0307, ODTIS-0331
 **Profile:** core-identity
 
