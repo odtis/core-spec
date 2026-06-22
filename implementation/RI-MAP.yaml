@@ -527,6 +527,16 @@ implementations:
     odtis_ids: []
     note: Informative integration sample
 
+  - id: partner-node-kit
+    module: deploy/partner-node
+    backlog_epic: P3-E03
+    status: partial
+    informative: true
+    odtis_ids:
+    - ODTIS-0512
+    binding_doc: implementation/component-bindings/operator-sla-partner.yaml
+    notes: verify-kit.sh; package-kit.sh; partner-node-kit-check.sh; DISTRIBUCION-SEGURA-KIT-PARTNER.md
+
   conformance:
     level_target: L2
     last_report: null

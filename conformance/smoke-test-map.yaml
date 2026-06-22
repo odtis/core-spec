@@ -29,6 +29,7 @@ smokes:
       - ODTIS-0511
       - ODTIS-0512
       - ODTIS-0513
+    notes: operator-sla-metrics-check; partner-node-kit-check; MetricsControllerTest; GitLab operator-smoke (#24)
 
   - script: conformance/run-operator-regulator-checks.sh
     odtis_ids:

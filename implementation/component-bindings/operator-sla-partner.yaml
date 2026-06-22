@@ -1,0 +1,32 @@
+# Normative binding: Operator SLA and partner program (VenID reference implementation)
+# Informative — conformance claims require conformance-statement.yaml
+
+component_id: operator-sla-partner
+ri_map_surface: admin-api
+repository: ven-identity-core + ven-trust-network
+module_path: docs/operator + deploy/partner-node
+profile: operator
+backlog_epic: P3-E03
+status: partial
+
+summary: >
+  Published Core Identity SLA, ecosystem metrics, Trust Network partner onboarding
+  policy, gateway SLA cross-reference, and partner node kit distribution.
+
+implementation_notes: >
+  CORE-IDENTITY-SLA.md + core-identity-sla.yaml (ODTIS-0511); ECOSYSTEM-METRICS.md
+  and MetricsController (ODTIS-0513); PARTNER-ONBOARDING.md + partner-node kit
+  (ODTIS-0512); GitLab operator-smoke stage runs static checks in CI (#24).
+
+smoke_script: core-impl/scripts/ci-operator-checks.sh
+
+odtis_ids:
+  - ODTIS-0511
+  - ODTIS-0512
+  - ODTIS-0513
+
+evidence:
+  - ven-identity-core/docs/operator/CORE-IDENTITY-SLA.md
+  - ven-identity-core/docs/operator/ECOSYSTEM-METRICS.md
+  - ven-trust-network/docs/operator/PARTNER-ONBOARDING.md
+  - ven-trust-network/deploy/partner-node/README.md
