@@ -144,7 +144,7 @@ implementations:
     - ODTIS-0352
     - ODTIS-0353
     binding_doc: implementation/component-bindings/eregistry-adapter.yaml
-    notes: SandboxRegistryAuthority; hash-only identifiers; Dockerfile + eregistry-adapter.yml; extended-build-check.sh (#38)
+    notes: SandboxRegistryAuthority; staging overlay docker-compose.eregistry.yml; eregistry-overlay-check.sh (#8)
 
   - id: verification-api
     module: api/verification-api

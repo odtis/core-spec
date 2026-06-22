@@ -16,7 +16,12 @@ implementation_notes: >
   ERegistryActivationPolicy; SandboxRegistryAuthority; NationalLoaUpgradeService;
   no raw biometric persistence; registry.verification audit events.
 
-smoke_script: conformance/run-extended-eregistry-checks.sh
+smoke_script: ven-identity-core/scripts/eregistry-adapter-check.sh
+
+staging_overlay:
+  compose: compose/staging/docker-compose.eregistry.yml
+  orchestrator: scripts/eregistry-staging-up.sh
+  smoke_script: scripts/eregistry-overlay-check.sh
 
 odtis_ids:
   - ODTIS-0104

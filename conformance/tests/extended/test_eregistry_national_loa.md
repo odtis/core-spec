@@ -1,6 +1,6 @@
 # Extended: E-Registry - National LoA
 
-**Status:** pending
+**Status:** implemented (unit + staging overlay smoke)
 **Sub-module:** E-Registry
 **Requirements:** ODTIS-0344, ODTIS-0350 (draft)
 **Profile:** extended
@@ -8,10 +8,10 @@
 
 ## Procedure
 
-1. Enable registry adapter in test environment with mock registry.
-2. Complete High LoA proofing without registry match - National LoA MUST NOT be assigned.
-3. Successful adapter 1:1 match - National LoA MAY be assigned.
+1. Run `eregistry-adapter-check.sh` (NationalLoaUpgradeServiceTest + ERegistryVerificationServiceTest).
+2. Optional staging: `./scripts/eregistry-staging-up.sh` with sandbox bilateral agreement mounted.
+3. High LoA without registry match MUST NOT yield National LoA; sandbox match MAY upgrade.
 
 ## Pass criteria
 
-National LoA gated on E-Registry declaration and adapter success.
+National LoA gated on E-Registry declaration, adapter activation, and successful verification.

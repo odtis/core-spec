@@ -100,6 +100,15 @@ smokes:
       - ODTIS-0343
     notes: extended-build-check.sh; five Dockerfiles + config YAML inactive (#38)
 
+  - script: conformance/run-eregistry-staging-checks.sh
+    odtis_ids:
+      - ODTIS-0104
+      - ODTIS-0344
+      - ODTIS-0349
+      - ODTIS-0350
+      - ODTIS-0352
+    notes: eregistry-overlay-check.sh; compose/staging/docker-compose.eregistry.yml (#8)
+
   - script: conformance/run-phase4-package.sh
     tests:
       - conformance/tests/operator/test_phase_declaration.md

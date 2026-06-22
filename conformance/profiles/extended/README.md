@@ -22,7 +22,7 @@ Requirement prefixes: Annex D (`ODTIS-0340`-`0365`, `0531`)
 | [`Ekyb Entity Separate test`](../../tests/extended/test_ekyb_entity_separate.md) | `ODTIS-0364` | implemented |
 | [`Ekyb Representative Link test`](../../tests/extended/test_ekyb_representative_link.md) | `ODTIS-0365` | implemented |
 | [`Eregistry Declaration Required test`](../../tests/extended/test_eregistry_declaration_required.md) | `ODTIS-0104`, `ODTIS-0344` | implemented |
-| [`Eregistry National Loa test`](../../tests/extended/test_eregistry_national_loa.md) | `ODTIS-0344`, `ODTIS-0350` | pending |
+| [`Eregistry National Loa test`](../../tests/extended/test_eregistry_national_loa.md) | `ODTIS-0344`, `ODTIS-0350` | implemented |
 | [`Eregistry No Civil Authority test`](../../tests/extended/test_eregistry_no_civil_authority.md) | `ODTIS-0349` | implemented |
 | [`Eregistry Phase3 Activation test`](../../tests/extended/test_eregistry_phase3_activation.md) | `ODTIS-0352` | implemented |
 | [`Esignature Audit Events test`](../../tests/extended/test_esignature_audit_events.md) | `ODTIS-0363`, `ODTIS-0526` | implemented |
