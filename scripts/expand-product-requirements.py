@@ -61,7 +61,7 @@ NEW_REQUIREMENTS: list[dict] = [
         "profile": "reference-architecture",
         "slug": "applicable_tests_required",
     },
-    # --- Trust Network (Book 1 D3/D4, docs/platform Fase 4) ---
+    # --- Trust Network (Book 1 D3/D4; RI client/discovery surfaces) ---
     {
         "id": "ODTIS-0222",
         "section": "04-trust-network",

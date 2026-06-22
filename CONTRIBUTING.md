@@ -30,7 +30,7 @@ Thank you for helping build the Open Digital Trust Infrastructure Specification.
 
 | Change | Edit | Do not edit |
 |--------|------|-------------|
-| Normative MUST/SHOULD text | `spec/*/SPEC.md` | P18 (after migration complete) |
+| Normative MUST/SHOULD text | `spec/*/SPEC.md` | P18 paper (informative; see [How to cite](../publication/HOW-TO-CITE.md)) |
 | Requirement ID metadata | `registry/requirements.json` | Auto-only without PR review |
 | OpenAPI contracts | `annexes/A-openapi-registry/` | Informal docs in Book 3 |
 | RF traceability | `traceability/` + upstream matrix | - |

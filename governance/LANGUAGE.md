@@ -30,7 +30,7 @@ Translations (Spanish or other languages) MAY exist **outside** `odtis/` for nar
 |------|-----------|
 | **Proper nouns** | Keep original spelling (e.g., *Aadhaar*, *eIDAS*, agency names) |
 | **Citizen-facing UI** | ODTIS requires *citizen-readable* consent text in the **end-user locale**; the spec prose describing that obligation stays in English |
-| **External workspace docs** | Spanish filenames under `docs/sources/` (e.g. `PLAN-EJECUCION-FASES.md`) are out of scope; link only, do not copy normative text |
+| **External informative docs** | Book 1/2/3 and P18 on [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) are not vendored in this repo; link only, do not copy normative text |
 | **Legacy redirect** | `PLAN-FASES.md` stub points to `PLAN-PHASES.md` |
 
 ---

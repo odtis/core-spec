@@ -460,7 +460,7 @@ implementations:
     status: partial
     odtis_ids:
     - ODTIS-0223
-    note: docs/platform/FASE-4-CLIENTE-Y-DESCUBRIMIENTO.md
+    note: VenID RI client/discovery surfaces (see exchange-client-sdk in this map)
 
   - id: partner-backend-example
     module: samples/partner-backend-example

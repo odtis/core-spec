@@ -11,7 +11,7 @@ description: Citation formats for the ODTIS working draft, Zenodo DOI, and profi
 **Project hub:** [Project hub](../project/README.md) | **Downloads:** [Downloads](../site/DOWNLOADS.md)
 
 !!! tip "Cite version + profile"
-    ODTIS lives in the VenID monorepo under `odtis/`. For implementation conformance, cite the **exact ODTIS version and declared profile(s)**, not the whole monorepo.
+    ODTIS is published from [github.com/odtis/core-spec](https://github.com/odtis/core-spec). For implementation conformance, cite the **exact ODTIS version and declared profile(s)**.
 
 ---
 

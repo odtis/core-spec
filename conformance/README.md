@@ -192,7 +192,7 @@ Sidebar order matches the **Conformance** tab.
 conformance/
 ├── README.md <- you are here
 ├── run.sh <- L1 + L2 wrapper
-├── run-l1-lab.sh <- CI gate
+├── run-l1-lab.sh <- local L1 gate
 ├── run-phase4-package.sh <- VenID Phase 4 full package
 ├── manifest.yaml <- generated profile index
 ├── l2/ <- staging runner (PKCE, JWKS, discovery)

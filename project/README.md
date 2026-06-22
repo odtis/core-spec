@@ -114,7 +114,7 @@ Community programs: [Collaborate](../site/COLLABORATE.md) | [Newsletter](../site
 
 | Page | Purpose |
 |------|---------|
-| [RI overview](../implementation/README.md) | VenID monorepo map |
+| [RI overview](../implementation/README.md) | VenID reference implementation map |
 | [Component bindings](../site/COMPONENT-BINDINGS.md) | VenID RI surface map |
 | [Known gaps](../implementation/gaps/KNOWN-GAPS.md) | RI gap register |
 | [Deferred production track](../implementation/gaps/DEFERRED-TRACK.md) | mTLS, TSA, L3 attestation |

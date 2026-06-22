@@ -14,7 +14,7 @@ domains:
     spec:
       - spec/01-scope-conformance/SPEC.md
     informative:
-      - docs/sources/books/02-platform-specification-monograph/chapters/03-reference-architecture/CHAPTER.md
+      - governance/BOOK2-CROSS-REVIEW.md
 
   - id: ODTIS-0001
     title: Core Concepts

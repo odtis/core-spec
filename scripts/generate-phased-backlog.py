@@ -617,8 +617,8 @@ def build_yaml_payload(version: str, reqs: dict) -> dict:
             "ri_map": "implementation/RI-MAP.yaml",
             "known_gaps": "implementation/gaps/KNOWN-GAPS.md",
             "odtis_phases": "spec/10-deployment-profiles/SPEC.md",
-            "platform_fase4": "docs/platform/FASE-4-CLIENTE-Y-DESCUBRIMIENTO.md",
-            "book1_gates": "docs/sources/books/01-narrative-policy-book/chapters/14-camino-del-sponsor/CHAPTER.md",
+            "platform_fase4": "implementation/RI-MAP.yaml",
+            "book1_gates": "spec/10-deployment-profiles/SPEC.md",
         },
     }
 

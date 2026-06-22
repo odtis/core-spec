@@ -174,7 +174,7 @@ Roadmap: [IETF roadmap](/governance/IETF-ROADMAP/). Scoping (what **not** to dup
 | Normative change RFC | [RFC template](/governance/RFC-TEMPLATE/) | Active |
 | Conformance levels | spec 1.8, [Conformance](/conformance/) | L1+L2 operational |
 | Machine-readable | [Registry](/registry/), Annex A, event schemas | In repo |
-| Public spec site | [odtis.org](https://odtis.org) | Build ready; host deploy pending |
+| Public spec site | [odtis.org](https://odtis.org) | Live; maintained via local deploy scripts |
 | Foundation governance | [Foundation charter](/governance/FOUNDATION-CHARTER/) | Pre-incorporation |
 
 ---

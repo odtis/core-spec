@@ -42,13 +42,15 @@ Maps VenID product codebases to ODTIS profiles and conformance tests. **Informat
 
 ---
 
-## Repositories (VenID monorepo)
+## Reference implementation repositories
 
-| Component | Path | ODTIS profile | Primary sections |
-|-----------|------|---------------|------------------|
+| Component | Repository path (sibling clone) | ODTIS profile | Primary sections |
+|-----------|--------------------------------|---------------|------------------|
 | Identity core / IdP | `../core-impl/ven-identity-core/` | core-identity | 2, 3, 5 |
 | Trust network | `../core-impl/ven-trust-network/` | trust-network | 4 |
 | Trust network UI | `../core-impl/ven-trust-network-web/` | *(informative)* | - |
+
+Clone [odtis/core-impl](https://github.com/odtis/core-impl) as a sibling when running RI smokes (private during Phase 3.2).
 
 Extended Phase 4 services (wallet, inclusion, webhook, signature, KYB, eregistry) map to Annex D sub-modules in [RI surface map](RI-MAP.yaml).
 
@@ -92,9 +94,9 @@ python3 scripts/validate-ri-map.py
 ## Verify against RI
 
 ```bash
-cd odtis
+# From this repository root (core-spec)
 
-# L1 lab (CI gate)
+# L1 lab (local structural gate)
 ./conformance/run-l1-lab.sh
 
 # L2 live (Keycloak realm example)
