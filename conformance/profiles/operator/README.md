@@ -21,7 +21,7 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 | [`Audit Export Pii Minimized test`](../../tests/operator/test_audit_export_pii_minimized.md) | `ODTIS-0530` | implemented |
 | [`Conformance Statement Dual Format test`](../../tests/operator/test_conformance_statement_dual_format.md) | `ODTIS-0534` | pending |
 | [`Cp Cps Published test`](../../tests/operator/test_cp_cps_published.md) | `ODTIS-0507` | implemented |
-| [`Event Envelope test`](../../tests/operator/test_event_envelope.md) | `ODTIS-0529` | pending |
+| [`Event Envelope test`](../../tests/operator/test_event_envelope.md) | `ODTIS-0529` | implemented |
 | [`Fail Closed Denial Paths test`](../../tests/operator/test_fail_closed_denial_paths.md) | `ODTIS-0535` | implemented |
 | [`Fraud Metrics test`](../../tests/operator/test_fraud_metrics.md) | `ODTIS-0525` | implemented |
 | [`Implementation Traceability Map test`](../../tests/operator/test_implementation_traceability_map.md) | `ODTIS-0536` | pending |
@@ -51,7 +51,7 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 | [`Per Request Partner Verify test`](../../tests/trust-network/test_per_request_partner_verify.md) | `ODTIS-0517` | implemented |
 | [`Owasp Baseline test`](../../tests/core-identity/test_owasp_baseline.md) | `ODTIS-0521` | implemented |
 | [`Liveness High Loa test`](../../tests/core-identity/test_liveness_high_loa.md) | `ODTIS-0523` | implemented |
-| [`Identity Audit Events test`](../../tests/core-identity/test_identity_audit_events.md) | `ODTIS-0526` | pending |
+| [`Identity Audit Events test`](../../tests/core-identity/test_identity_audit_events.md) | `ODTIS-0526` | implemented |
 | [`Consent Audit Events test`](../../tests/core-identity/test_consent_audit_events.md) | `ODTIS-0527` | implemented |
 | [`Exchange Audit Events test`](../../tests/trust-network/test_exchange_audit_events.md) | `ODTIS-0528` | implemented |
 
@@ -61,7 +61,7 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 |--------|-------|
 | Registry requirements | 36 |
 | Linked tests | 30 |
-| Implemented (smoke) | 30 |
+| Implemented (smoke) | 32 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`

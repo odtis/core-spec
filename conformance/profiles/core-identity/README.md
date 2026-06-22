@@ -26,7 +26,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 | [`Consent Revocation test`](../../tests/core-identity/test_consent_revocation.md) | `ODTIS-0330` | implemented |
 | [`Explicit Consent First Release test`](../../tests/core-identity/test_explicit_consent_first_release.md) | `ODTIS-0328` | implemented |
 | [`High Biometric Gate test`](../../tests/core-identity/test_high_biometric_gate.md) | `ODTIS-0103` | pending |
-| [`Identity Audit Events test`](../../tests/core-identity/test_identity_audit_events.md) | `ODTIS-0526` | pending |
+| [`Identity Audit Events test`](../../tests/core-identity/test_identity_audit_events.md) | `ODTIS-0526` | implemented |
 | [`Liveness High Loa test`](../../tests/core-identity/test_liveness_high_loa.md) | `ODTIS-0523` | implemented |
 | [`Loa Claim test`](../../tests/core-identity/test_loa_claim.md) | `ODTIS-0102` | pending |
 | [`ODTIS-0101 test`](../../tests/core-identity/test_odtis_0101.md) | `ODTIS-0101` | pending |
@@ -83,7 +83,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 |--------|-------|
 | Registry requirements | 45 |
 | Linked tests | 58 |
-| Implemented (smoke) | 28 |
+| Implemented (smoke) | 29 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`

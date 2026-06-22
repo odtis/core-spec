@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0529 - event envelope
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0529
 **Profile:** operator
 

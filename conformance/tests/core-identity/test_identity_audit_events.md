@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0526 - identity audit events
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0526
 **Profile:** core-identity
 
