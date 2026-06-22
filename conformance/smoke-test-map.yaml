@@ -200,3 +200,16 @@ smokes:
       - ODTIS-0338
       - ODTIS-0339
     notes: RpClientService; ClientsController; RpAdmissionPolicy; MachineClientAuthorizationManager; RP-ADMISSION.md
+
+  - script: conformance/run-admin-api-checks.sh
+    odtis_ids:
+      - ODTIS-0319
+      - ODTIS-0320
+      - ODTIS-0321
+      - ODTIS-0337
+      - ODTIS-0338
+      - ODTIS-0339
+      - ODTIS-0504
+      - ODTIS-0513
+      - ODTIS-0525
+    notes: admin-api unit tests; verification queue; subject admin; ecosystem/fraud metrics

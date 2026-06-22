@@ -207,7 +207,8 @@ implementations:
     - ODTIS-0504
     - ODTIS-0513
     - ODTIS-0525
-    notes: ClientsController RP lifecycle; SubjectsController; MetricsController; RP-CLIENT-LIFECYCLE.md; rp-client-lifecycle-check.sh
+    binding_doc: implementation/component-bindings/admin-api.yaml
+    notes: ClientsController; SubjectsController; MetricsController; VerificationQueueController; admin-api-check.sh
 
   - id: api-gateway
     module: api/api-gateway
