@@ -112,6 +112,16 @@ smokes:
       - ODTIS-0327
       - ODTIS-0521
 
+  - script: ../core-impl/ven-identity-core/scripts/gateway-transport-check.sh
+    odtis_ids:
+      - ODTIS-0325
+      - ODTIS-0326
+      - ODTIS-0327
+      - ODTIS-0521
+      - ODTIS-0522
+      - ODTIS-0523
+    notes: CorrelationId; TLS enforcement; rate limits; OWASP headers; MFA-POLICY.md; verification-engine liveness
+
   - script: ../core-impl/ven-identity-core/scripts/consent-service-check.sh
     odtis_ids:
       - ODTIS-0328

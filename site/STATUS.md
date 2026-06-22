@@ -69,11 +69,12 @@ Profile comparison: [Profile comparison](PROFILES.md).
 | Core Identity | 58 | 55 | 45 |
 | Trust Network | 30 | 18 | 27 |
 | Federation | 8 | 8 | 8 |
-| Operator | 30 | 26 | 36 |
+| Operator | 30 | 27 | 36 |
 | Extended | 23 | 20 | 25 |
-| **Total** | **159** | **128** | **149** |
+| **Total** | **159** | **129** | **149** |
 
 <!-- GENERATED:conformance-suite:END -->
+
 
 
 
@@ -128,8 +129,8 @@ Participate via [Feedback channels](../governance/FEEDBACK.md) or GitHub issue t
 |--------|-------|
 | Registry requirements | 149 |
 | Conformance procedures | 159 |
-| Marked **implemented** | 128 (80.5%) |
-| Pending procedures | 31 |
+| Marked **implemented** | 129 (81.1%) |
+| Pending procedures | 30 |
 
 ### By profile
 
@@ -138,7 +139,7 @@ Participate via [Feedback channels](../governance/FEEDBACK.md) or GitHub issue t
 | core-identity | 58 | 55 | 45 |
 | extended | 23 | 20 | 25 |
 | federation | 8 | 8 | 8 |
-| operator | 30 | 26 | 36 |
+| operator | 30 | 27 | 36 |
 | reference-architecture | 10 | 1 | 10 |
 | trust-network | 30 | 18 | 27 |
 

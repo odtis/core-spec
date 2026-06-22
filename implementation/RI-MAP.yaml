@@ -221,7 +221,7 @@ implementations:
     - ODTIS-0522
     - ODTIS-0523
     - ODTIS-0335
-    notes: CorrelationId; rate limits; security headers; TLS enforcement; TRANSPORT-SECURITY.md; gateway-security-check.sh
+    notes: CorrelationId; rate limits; security headers; TLS enforcement; TRANSPORT-SECURITY.md; gateway-transport-check.sh
 
   - id: reports-api
     module: api/reports-api

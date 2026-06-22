@@ -39,7 +39,7 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 | [`ODTIS-0513 test`](../../tests/operator/test_odtis_0513.md) | `ODTIS-0513` | implemented |
 | [`ODTIS-0515 test`](../../tests/operator/test_odtis_0515.md) | `ODTIS-0515` | implemented |
 | [`ODTIS-0520 test`](../../tests/operator/test_odtis_0520.md) | `ODTIS-0520` | implemented |
-| [`ODTIS-0522 test`](../../tests/operator/test_odtis_0522.md) | `ODTIS-0522` | pending |
+| [`ODTIS-0522 test`](../../tests/operator/test_odtis_0522.md) | `ODTIS-0522` | implemented |
 | [`ODTIS-0524 test`](../../tests/operator/test_odtis_0524.md) | `ODTIS-0524` | implemented |
 | [`ODTIS-0531 test`](../../tests/operator/test_odtis_0531.md) | `ODTIS-0531` | implemented |
 | [`Operator Subject Admin test`](../../tests/operator/test_operator_subject_admin.md) | `ODTIS-0504` | implemented |
@@ -61,7 +61,7 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 |--------|-------|
 | Registry requirements | 36 |
 | Linked tests | 30 |
-| Implemented (smoke) | 32 |
+| Implemented (smoke) | 33 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`
