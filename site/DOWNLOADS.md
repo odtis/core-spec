@@ -45,8 +45,6 @@ cd core-spec
 
 VenID reference implementation (private until published): `github.com/odtis/core-impl`.
 
-Legacy monorepo workspace (books, papers, pre-migration): `finnectos/dti-core` under `odtis/` until removed.
-
 ---
 
 ## Release tarball (Zenodo / offline)
