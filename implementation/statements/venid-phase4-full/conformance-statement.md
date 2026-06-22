@@ -1,6 +1,6 @@
 # ODTIS conformance statement
 
-> **Target packaging — not a production deployment claim.** Operational scope: Phase 2 pilot — see `ven-identity-core/docs/operator/PUBLISHED-SERVICE-SCOPE.md` and [CLAIM-VS-RUNTIME.md](../../../core-impl/ven-identity-core/docs/operator/CLAIM-VS-RUNTIME.md).
+> **Target packaging - not a production deployment claim.** Operational scope: Phase 2 pilot - see `ven-identity-core/docs/operator/PUBLISHED-SERVICE-SCOPE.md` and [Claim Vs Runtime](https://github.com/odtis/core-impl/blob/main/ven-identity-core/docs/operator/CLAIM-VS-RUNTIME.md).
 
 **Status:** review draft - machine-readable source: `conformance-statement.yaml`
 
@@ -39,7 +39,7 @@ This Phase 4 statement declares **Core Identity + Trust Network + Federation + O
 
 Extended modules are implemented as **sandbox partial** (`venid.*.active=false` by default). Federation and Extended staging overlays validate runtime in L2 sandbox but are **not production claims** until `PUBLISHED-SERVICE-SCOPE.md` is updated under change control.
 
-**Published operational scope:** Phase 2 — `core-spec/implementation/statements/venid-phase2-trust/conformance-statement.yaml`
+**Published operational scope:** Phase 2 - `core-spec/implementation/statements/venid-phase2-trust/conformance-statement.yaml`
 
 **Claim vs runtime matrix:** `core-spec/implementation/evidence/published-service-scope/claims-vs-runtime-2026.yaml`
 

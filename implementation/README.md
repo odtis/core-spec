@@ -5,15 +5,15 @@
 Maps VenID product codebases to ODTIS profiles and conformance tests. **Informative only** - independent vendors are not required to use VenID code.
 
 <p class="odtis-hub-meta" markdown="1">
-<strong>Normative authority:</strong> ODTIS spec + registry | 
-<strong>Project hub:</strong> [Project hub](../project/README.md) | 
+<strong>Normative authority:</strong> ODTIS spec + registry |
+<strong>Project hub:</strong> [Project hub](../project/README.md) |
 <strong>Conformance:</strong> [Conformance overview](../conformance/README.md)
 </p>
 
 </div>
 
 !!! tip "Independent implementers"
-    Full adoption path without VenID code: [Adoption guide](../ADOPTION.md).
+Full adoption path without VenID code: [Adoption guide](../ADOPTION.md).
 
 ---
 
@@ -48,7 +48,7 @@ Maps VenID product codebases to ODTIS profiles and conformance tests. **Informat
 |-----------|--------------------------------|---------------|------------------|
 | Identity core / IdP | `../core-impl/ven-identity-core/` | core-identity | 2, 3, 5 |
 | Trust network | `../core-impl/ven-trust-network/` | trust-network | 4 |
-| Trust network UI | `../core-impl/ven-trust-network-web/` | *(informative — not ODTIS)* | [SCOPE.md](https://github.com/odtis/core-impl/blob/main/ven-trust-network-web/SCOPE.md) |
+| Trust network UI | `../core-impl/ven-trust-network-web/` | *(informative - not ODTIS)* | [Scope](https://github.com/odtis/core-impl/blob/main/ven-trust-network-web/SCOPE.md) |
 
 Clone [Core Impl](https://github.com/odtis/core-impl) as a sibling when running RI smokes (private during Phase 3.2).
 

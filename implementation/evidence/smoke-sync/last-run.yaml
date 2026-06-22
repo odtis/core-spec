@@ -1,18 +1,69 @@
-as_of: 2026-06-22T13:46:58Z
+as_of: 2026-06-22T22:55:41Z
 generator: scripts/sync-test-status-from-smokes.py
 smokes:
+  - script: ../core-impl/ven-identity-core/scripts/citizen-portal-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0322.md, conformance/tests/core-identity/test_odtis_0323.md, conformance/tests/core-identity/test_odtis_0324.md, conformance/tests/core-identity/test_odtis_0332.md]
+  - script: ../core-impl/ven-identity-core/scripts/consent-service-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_consent_audit_events.md, conformance/tests/core-identity/test_consent_revocation.md, conformance/tests/core-identity/test_explicit_consent_first_release.md, conformance/tests/core-identity/test_odtis_0329.md, conformance/tests/core-identity/test_odtis_0331.md, conformance/tests/core-identity/test_odtis_0332.md]
   - script: ../core-impl/ven-identity-core/scripts/gateway-security-check.sh
     ok: true
     tests: [conformance/tests/core-identity/test_odtis_0325.md, conformance/tests/core-identity/test_odtis_0326.md, conformance/tests/core-identity/test_odtis_0327.md, conformance/tests/core-identity/test_owasp_baseline.md]
+  - script: ../core-impl/ven-identity-core/scripts/gateway-transport-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_liveness_high_loa.md, conformance/tests/core-identity/test_odtis_0325.md, conformance/tests/core-identity/test_odtis_0326.md, conformance/tests/core-identity/test_odtis_0327.md, conformance/tests/core-identity/test_owasp_baseline.md, conformance/tests/operator/test_odtis_0522.md]
+  - script: ../core-impl/ven-identity-core/scripts/identity-audit-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_consent_audit_events.md, conformance/tests/core-identity/test_identity_audit_events.md, conformance/tests/operator/test_event_envelope.md]
+  - script: ../core-impl/ven-identity-core/scripts/identity-core-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_account_recovery.md, conformance/tests/core-identity/test_odtis_0306.md, conformance/tests/core-identity/test_odtis_0310.md, conformance/tests/core-identity/test_odtis_0311.md, conformance/tests/core-identity/test_odtis_0312.md, conformance/tests/core-identity/test_odtis_0313.md, conformance/tests/core-identity/test_odtis_0314.md]
+  - script: ../core-impl/ven-identity-core/scripts/loa-policy-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_annex_c_nist_loa_mapping.md, conformance/tests/core-identity/test_high_biometric_gate.md, conformance/tests/core-identity/test_loa_claim.md, conformance/tests/core-identity/test_odtis_0101.md, conformance/tests/core-identity/test_odtis_0105.md, conformance/tests/core-identity/test_odtis_0107.md, conformance/tests/core-identity/test_odtis_0306.md, conformance/tests/core-identity/test_verification_loa_on_denial.md]
+  - script: ../core-impl/ven-identity-core/scripts/oidc-conformance-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_consent_gated_claims.md, conformance/tests/core-identity/test_odtis_0301.md, conformance/tests/core-identity/test_odtis_0303.md, conformance/tests/core-identity/test_odtis_0304.md, conformance/tests/core-identity/test_pkce_required.md, conformance/tests/core-identity/test_redirect_uri_validation.md, conformance/tests/core-identity/test_rp_initiated_logout.md]
   - script: ../core-impl/ven-identity-core/scripts/oidc-static-check.sh
     ok: true
     tests: [conformance/tests/core-identity/test_rp_initiated_logout.md]
+  - script: ../core-impl/ven-identity-core/scripts/privacy-compliance-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0333.md, conformance/tests/core-identity/test_odtis_0334.md, conformance/tests/core-identity/test_odtis_0335.md, conformance/tests/core-identity/test_odtis_0336.md]
+  - script: ../core-impl/ven-identity-core/scripts/rp-client-lifecycle-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0319.md, conformance/tests/core-identity/test_odtis_0320.md, conformance/tests/core-identity/test_odtis_0321.md, conformance/tests/core-identity/test_odtis_0337.md, conformance/tests/core-identity/test_odtis_0338.md, conformance/tests/core-identity/test_rp_suspension.md]
   - script: ../core-impl/ven-identity-core/scripts/verification-api-unit-check.sh
     ok: true
     tests: [conformance/tests/core-identity/test_odtis_0316.md, conformance/tests/core-identity/test_verification_client_auth.md, conformance/tests/core-identity/test_verification_consent_scope.md, conformance/tests/operator/test_fail_closed_denial_paths.md]
+  - script: ../core-impl/ven-identity-core/scripts/verification-engine-check.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_annex_b_liveness_mapping.md, conformance/tests/core-identity/test_liveness_high_loa.md, conformance/tests/core-identity/test_odtis_0311.md, conformance/tests/core-identity/test_odtis_0312.md, conformance/tests/core-identity/test_odtis_0313.md, conformance/tests/core-identity/test_odtis_0314.md]
+  - script: conformance/run-admin-api-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0319.md, conformance/tests/core-identity/test_odtis_0320.md, conformance/tests/core-identity/test_odtis_0321.md, conformance/tests/core-identity/test_odtis_0337.md, conformance/tests/core-identity/test_odtis_0338.md, conformance/tests/core-identity/test_rp_suspension.md, conformance/tests/operator/test_fraud_metrics.md, conformance/tests/operator/test_odtis_0513.md, conformance/tests/operator/test_operator_subject_admin.md]
+  - script: conformance/run-citizen-portal-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0322.md, conformance/tests/core-identity/test_odtis_0323.md, conformance/tests/core-identity/test_odtis_0324.md, conformance/tests/core-identity/test_odtis_0332.md]
+  - script: conformance/run-cloud-stack-checks.sh
+    ok: true
+    tests: []
+  - script: conformance/run-consent-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_consent_audit_events.md, conformance/tests/core-identity/test_consent_revocation.md, conformance/tests/core-identity/test_explicit_consent_first_release.md, conformance/tests/core-identity/test_odtis_0329.md, conformance/tests/core-identity/test_odtis_0331.md, conformance/tests/core-identity/test_odtis_0332.md]
+  - script: conformance/run-doc-hygiene-checks.sh
+    ok: true
+    tests: []
+  - script: conformance/run-docker-images-checks.sh
+    ok: true
+    tests: []
   - script: conformance/run-ekyb-checks.sh
     ok: true
     tests: [conformance/tests/extended/test_ekyb_entity_separate.md, conformance/tests/extended/test_ekyb_representative_link.md]
+  - script: conformance/run-eregistry-staging-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0104.md, conformance/tests/extended/test_eregistry_declaration_required.md, conformance/tests/extended/test_eregistry_national_loa.md, conformance/tests/extended/test_eregistry_no_civil_authority.md, conformance/tests/extended/test_eregistry_phase3_activation.md, conformance/tests/extended/test_national_loa_after_adapter.md, conformance/tests/extended/test_registry_hash_no_biometric_store.md, conformance/tests/extended/test_registry_verification_audit.md]
   - script: conformance/run-esignature-checks.sh
     ok: true
     tests: [conformance/tests/extended/test_esignature_audit_events.md, conformance/tests/extended/test_esignature_loa_binding.md, conformance/tests/extended/test_esignature_pki_keys.md]
@@ -22,24 +73,78 @@ smokes:
   - script: conformance/run-ewebhook-checks.sh
     ok: true
     tests: [conformance/tests/extended/test_ewebhook_hmac_delivery.md, conformance/tests/extended/test_ewebhook_pii_minimize.md, conformance/tests/extended/test_ewebhook_retry_backoff.md, conformance/tests/extended/test_ewebhook_rp_registration.md, conformance/tests/operator/test_odtis_0531.md]
+  - script: conformance/run-ewebhook-staging-checks.sh
+    ok: true
+    tests: [conformance/tests/extended/test_ewebhook_pii_minimize.md, conformance/tests/extended/test_ewebhook_retry_backoff.md, conformance/tests/extended/test_ewebhook_rp_registration.md, conformance/tests/operator/test_odtis_0531.md]
+  - script: conformance/run-exchange-client-sdk-checks.sh
+    ok: true
+    tests: [conformance/tests/trust-network/test_sender_multi_peer_routing.md]
+  - script: conformance/run-exchange-sla-checks.sh
+    ok: true
+    tests: [conformance/tests/trust-network/test_odtis_0220.md, conformance/tests/trust-network/test_odtis_0221.md, conformance/tests/trust-network/test_per_request_partner_verify.md]
+  - script: conformance/run-extended-build-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0340.md, conformance/tests/core-identity/test_odtis_0341.md, conformance/tests/core-identity/test_odtis_0342.md, conformance/tests/core-identity/test_odtis_0343.md]
   - script: conformance/run-extended-eregistry-checks.sh
     ok: true
     tests: [conformance/tests/core-identity/test_odtis_0104.md, conformance/tests/extended/test_eregistry_declaration_required.md, conformance/tests/extended/test_eregistry_no_civil_authority.md, conformance/tests/extended/test_eregistry_phase3_activation.md, conformance/tests/extended/test_national_loa_after_adapter.md, conformance/tests/extended/test_registry_hash_no_biometric_store.md, conformance/tests/extended/test_registry_verification_audit.md]
   - script: conformance/run-extended-no-weakening-checks.sh
     ok: true
     tests: [conformance/tests/reference-architecture/test_extended_no_weakening.md]
+  - script: conformance/run-extended-staging-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0340.md, conformance/tests/core-identity/test_odtis_0341.md, conformance/tests/core-identity/test_odtis_0342.md, conformance/tests/core-identity/test_odtis_0343.md]
+  - script: conformance/run-fail-closed-audit-e2e-checks.sh
+    ok: true
+    tests: [conformance/tests/operator/test_fail_closed_denial_paths.md, conformance/tests/trust-network/test_exchange_audit_events.md]
   - script: conformance/run-fail-closed-checks.sh
     ok: true
     tests: [conformance/tests/operator/test_fail_closed_denial_paths.md]
+  - script: conformance/run-fal-controls-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0106.md]
   - script: conformance/run-federation-prep-checks.sh
     ok: true
     tests: [conformance/tests/federation/test_agreement_required_fields.md, conformance/tests/federation/test_explicit_activation.md, conformance/tests/federation/test_federation_cert_policy.md, conformance/tests/federation/test_federation_regulator_export.md, conformance/tests/federation/test_non_transitivity.md, conformance/tests/federation/test_transitive_route_reject.md]
   - script: conformance/run-federation-runtime-checks.sh
     ok: true
     tests: [conformance/tests/federation/test_agreement_suspension_routing.md, conformance/tests/federation/test_federated_audit_instance_ids.md]
+  - script: conformance/run-gateway-extended-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0340.md, conformance/tests/core-identity/test_odtis_0341.md, conformance/tests/core-identity/test_odtis_0342.md, conformance/tests/core-identity/test_odtis_0343.md, conformance/tests/core-identity/test_verification_client_auth.md]
+  - script: conformance/run-gateway-transport-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_liveness_high_loa.md, conformance/tests/core-identity/test_odtis_0325.md, conformance/tests/core-identity/test_odtis_0326.md, conformance/tests/core-identity/test_odtis_0327.md, conformance/tests/core-identity/test_owasp_baseline.md, conformance/tests/operator/test_odtis_0522.md]
+  - script: conformance/run-gov-api-decision-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_verification_client_auth.md, conformance/tests/extended/test_eregistry_declaration_required.md]
+  - script: conformance/run-identity-audit-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_consent_audit_events.md, conformance/tests/core-identity/test_identity_audit_events.md, conformance/tests/operator/test_event_envelope.md]
+  - script: conformance/run-identity-core-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_account_recovery.md, conformance/tests/core-identity/test_odtis_0306.md, conformance/tests/core-identity/test_odtis_0310.md, conformance/tests/core-identity/test_odtis_0311.md, conformance/tests/core-identity/test_odtis_0312.md, conformance/tests/core-identity/test_odtis_0313.md, conformance/tests/core-identity/test_odtis_0314.md]
   - script: conformance/run-inclusion-checks.sh
     ok: true
     tests: [conformance/tests/extended/test_inclusion_accessibility_offline.md, conformance/tests/extended/test_inclusion_assisted_consent.md, conformance/tests/extended/test_inclusion_no_loa_bypass.md, conformance/tests/extended/test_inclusion_representative_verify.md]
+  - script: conformance/run-l3-auditor-evidence-checks.sh
+    ok: true
+    tests: [conformance/tests/operator/test_phase_declaration.md]
+  - script: conformance/run-legacy-exchange-gateway-checks.sh
+    ok: true
+    tests: [conformance/tests/trust-network/test_gateway_only_routing.md]
+  - script: conformance/run-loa-policy-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_annex_c_nist_loa_mapping.md, conformance/tests/core-identity/test_high_biometric_gate.md, conformance/tests/core-identity/test_loa_claim.md, conformance/tests/core-identity/test_odtis_0101.md, conformance/tests/core-identity/test_odtis_0105.md, conformance/tests/core-identity/test_odtis_0107.md, conformance/tests/core-identity/test_odtis_0306.md, conformance/tests/core-identity/test_verification_loa_on_denial.md]
+  - script: conformance/run-mtls-live-checks.sh
+    ok: true
+    tests: [conformance/tests/trust-network/test_gateway_mtls.md]
+  - script: conformance/run-oidc-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_consent_gated_claims.md, conformance/tests/core-identity/test_odtis_0301.md, conformance/tests/core-identity/test_odtis_0303.md, conformance/tests/core-identity/test_odtis_0304.md, conformance/tests/core-identity/test_pkce_required.md, conformance/tests/core-identity/test_redirect_uri_validation.md, conformance/tests/core-identity/test_rp_initiated_logout.md]
+  - script: conformance/run-openapi-verify-response-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0316.md, conformance/tests/core-identity/test_openapi_verify_response.md, conformance/tests/core-identity/test_verification_consent_scope.md, conformance/tests/core-identity/test_verification_loa_on_denial.md]
   - script: conformance/run-operator-audit-checks.sh
     ok: true
     tests: [conformance/tests/operator/test_audit_export_pii_minimized.md]
@@ -58,9 +163,39 @@ smokes:
   - script: conformance/run-operator-sla-metrics-checks.sh
     ok: true
     tests: [conformance/tests/operator/test_odtis_0511.md, conformance/tests/operator/test_odtis_0512.md, conformance/tests/operator/test_odtis_0513.md]
+  - script: conformance/run-partner-node-kit-checks.sh
+    ok: true
+    tests: [conformance/tests/operator/test_odtis_0512.md]
+  - script: conformance/run-phase4-claims-reconcile-checks.sh
+    ok: true
+    tests: [conformance/tests/operator/test_no_false_phase4_claims.md, conformance/tests/operator/test_phase_declaration.md]
   - script: conformance/run-phase4-package.sh
     ok: true
     tests: [conformance/tests/operator/test_phase_declaration.md]
+  - script: conformance/run-portal-trust-checks.sh
+    ok: true
+    tests: [conformance/tests/trust-network/test_grant_workflow_audit.md, conformance/tests/trust-network/test_service_grant_required.md]
+  - script: conformance/run-privacy-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0333.md, conformance/tests/core-identity/test_odtis_0334.md, conformance/tests/core-identity/test_odtis_0335.md, conformance/tests/core-identity/test_odtis_0336.md]
+  - script: conformance/run-published-service-scope-checks.sh
+    ok: true
+    tests: [conformance/tests/operator/test_phase_declaration.md, conformance/tests/operator/test_published_service_scope.md]
+  - script: conformance/run-rp-client-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0319.md, conformance/tests/core-identity/test_odtis_0320.md, conformance/tests/core-identity/test_odtis_0321.md, conformance/tests/core-identity/test_odtis_0337.md, conformance/tests/core-identity/test_odtis_0338.md, conformance/tests/core-identity/test_rp_suspension.md]
   - script: conformance/run-trust-network-checks.sh
     ok: true
-    tests: [conformance/tests/trust-network/test_cert_revocation.md, conformance/tests/trust-network/test_exchange_audit_events.md, conformance/tests/trust-network/test_gateway_mtls.md, conformance/tests/trust-network/test_gateway_only_routing.md, conformance/tests/trust-network/test_grant_fail_closed.md, conformance/tests/trust-network/test_no_payload_centralization.md, conformance/tests/trust-network/test_odtis_0202.md, conformance/tests/trust-network/test_odtis_0208.md, conformance/tests/trust-network/test_odtis_0212.md, conformance/tests/trust-network/test_odtis_0213.md, conformance/tests/trust-network/test_odtis_0214.md, conformance/tests/trust-network/test_odtis_0215.md, conformance/tests/trust-network/test_odtis_0218.md, conformance/tests/trust-network/test_odtis_0219.md, conformance/tests/trust-network/test_odtis_0220.md, conformance/tests/trust-network/test_per_request_partner_verify.md, conformance/tests/trust-network/test_sender_multi_peer_routing.md, conformance/tests/trust-network/test_trust_registry_validation.md]
+    tests: [conformance/tests/trust-network/test_cert_revocation.md, conformance/tests/trust-network/test_exchange_audit_events.md, conformance/tests/trust-network/test_gateway_mtls.md, conformance/tests/trust-network/test_gateway_only_routing.md, conformance/tests/trust-network/test_grant_fail_closed.md, conformance/tests/trust-network/test_grant_workflow_audit.md, conformance/tests/trust-network/test_no_payload_centralization.md, conformance/tests/trust-network/test_odtis_0202.md, conformance/tests/trust-network/test_odtis_0208.md, conformance/tests/trust-network/test_odtis_0212.md, conformance/tests/trust-network/test_odtis_0213.md, conformance/tests/trust-network/test_odtis_0214.md, conformance/tests/trust-network/test_odtis_0215.md, conformance/tests/trust-network/test_odtis_0218.md, conformance/tests/trust-network/test_odtis_0219.md, conformance/tests/trust-network/test_odtis_0220.md, conformance/tests/trust-network/test_odtis_0221.md, conformance/tests/trust-network/test_per_request_partner_verify.md, conformance/tests/trust-network/test_sender_multi_peer_routing.md, conformance/tests/trust-network/test_trust_registry_validation.md]
+  - script: conformance/run-trust-network-web-scope-checks.sh
+    ok: true
+    tests: [conformance/tests/trust-network/test_grant_workflow_audit.md, conformance/tests/trust-network/test_service_grant_required.md]
+  - script: conformance/run-ven-partner-sdk-checks.sh
+    ok: true
+    tests: [conformance/tests/trust-network/test_odtis_0214.md]
+  - script: conformance/run-verification-api-latency-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_odtis_0318.md]
+  - script: conformance/run-verification-engine-checks.sh
+    ok: true
+    tests: [conformance/tests/core-identity/test_annex_b_liveness_mapping.md, conformance/tests/core-identity/test_liveness_high_loa.md, conformance/tests/core-identity/test_odtis_0311.md, conformance/tests/core-identity/test_odtis_0312.md, conformance/tests/core-identity/test_odtis_0313.md, conformance/tests/core-identity/test_odtis_0314.md]

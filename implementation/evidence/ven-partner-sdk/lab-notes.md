@@ -1,6 +1,6 @@
 # Ven Partner SDK evidence (#31)
 
-**Status:** L2 sandbox — Spring autodiscovery library documented and mapped alongside exchange-client.
+**Status:** L2 sandbox - Spring autodiscovery library documented and mapped alongside exchange-client.
 
 ## Consolidation
 

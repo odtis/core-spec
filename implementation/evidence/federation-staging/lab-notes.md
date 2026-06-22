@@ -1,6 +1,6 @@
 # Federation staging evidence (#25 / P4-E01)
 
-**Status:** L2 sandbox — staging overlay with bilateral agreements from `V16__federation_agreements.sql`.
+**Status:** L2 sandbox - staging overlay with bilateral agreements from `V16__federation_agreements.sql`.
 
 ## Stack
 

@@ -1,6 +1,6 @@
 # Exchange client SDK evidence (#19)
 
-**Status:** L2 sandbox — library + operator documentation (no standalone compose service).
+**Status:** L2 sandbox - library + operator documentation (no standalone compose service).
 
 ## Artifacts
 

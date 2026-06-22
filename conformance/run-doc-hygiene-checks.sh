@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# #39: Documentation hygiene — TAREAS-IMPLEMENTACION archived, onboarding paths.
+# #39: Documentation hygiene  -  TAREAS-IMPLEMENTACION archived, onboarding paths.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"

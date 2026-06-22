@@ -1,6 +1,6 @@
 # Fail-closed + audit cross-link E2E evidence (#26)
 
-**Status:** L2 sandbox — identity + trust-network audit correlation on shared `request_id`.
+**Status:** L2 sandbox - identity + trust-network audit correlation on shared `request_id`.
 
 ## Flow (ODTIS-0535 + ODTIS-0528)
 

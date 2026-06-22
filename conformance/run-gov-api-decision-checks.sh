@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# #29: gov-api Annex A S7 — defer decision and non-orphan OpenAPI contract.
+# #29: gov-api Annex A S7  -  defer decision and non-orphan OpenAPI contract.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"

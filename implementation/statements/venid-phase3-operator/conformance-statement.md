@@ -33,7 +33,7 @@ This Phase 3 statement declares **Core Identity + Trust Network + Operator** (`c
 
 **Active Extended sub-modules:** (none active in production).
 
-**Staging overlays (not production claims):** Federation lab, E-Registry sandbox, Extended profile, E-Webhook lab — see `implementation/evidence/published-service-scope/staging-overlays-2026.yaml` and `PUBLISHED-SERVICE-SCOPE.md`.
+**Staging overlays (not production claims):** Federation lab, E-Registry sandbox, Extended profile, E-Webhook lab - see `implementation/evidence/published-service-scope/staging-overlays-2026.yaml` and `PUBLISHED-SERVICE-SCOPE.md`.
 
 **Prep (not activated in production):** E-Registry adapter (`eregistry-adapter`, `venid.eregistry.active=false` by default); federation runtime via optional compose overlay (`docker-compose.federation.yml`).
 

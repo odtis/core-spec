@@ -22,8 +22,8 @@ Evidence: `implementation/evidence/mtls-lab/lab-notes.md`
 
 ## Procedure
 
-1. Initiate gateway-to-gateway TLS without client certificate — MUST fail handshake.
-2. Repeat with valid partner client certificate (lab PKCS#12 under `deploy/mtls-lab/certs/`) — MUST succeed; `GET /exchange/health` returns 200.
+1. Initiate gateway-to-gateway TLS without client certificate - MUST fail handshake.
+2. Repeat with valid partner client certificate (lab PKCS#12 under `deploy/mtls-lab/certs/`) - MUST succeed; `GET /exchange/health` returns 200.
 3. Verify TLS version ≥ 1.2 (openssl `s_client` probe).
 
 ## Pass criteria

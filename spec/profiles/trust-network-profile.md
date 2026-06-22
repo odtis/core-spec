@@ -145,7 +145,7 @@ Full index: [Requirements index](/site/REQUIREMENTS-INDEX.md).
 |--------|-------|
 | Requirements in profile | 27 |
 | Linked tests | 30 |
-| Implemented (smoke) | 18 |
+| Implemented (smoke) | 22 |
 | Manifest | [Conformance manifest](/conformance/profiles/trust-network/manifest.yaml) |
 
 Regenerate manifests: `python3 scripts/build-conformance-manifest.py`

@@ -141,7 +141,7 @@ Extended composes **Annex D** sub-modules. Draft IDs below merge into [Requireme
 |--------|-------|
 | Requirements in profile | 25 |
 | Linked tests | 23 |
-| Implemented (smoke) | 27 |
+| Implemented (smoke) | 28 |
 | Manifest | [Conformance manifest](/conformance/profiles/extended/manifest.yaml) |
 
 Regenerate manifests: `python3 scripts/build-conformance-manifest.py`

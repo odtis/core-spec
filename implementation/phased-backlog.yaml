@@ -1,7 +1,7 @@
 # VenID phased backlog - generated
 {
   "spec_version": "0.9.0-draft",
-  "generated": "2026-06-22",
+  "generated": "2026-06-23",
   "generator": "scripts/generate-phased-backlog.py",
   "summary": {
     "epics": 39,
@@ -399,7 +399,7 @@
         {
           "id": "P2-E01",
           "title": "Exchange gateway receiver/sender",
-          "status": "done",
+          "status": "partial",
           "component": "ven-trust-exchange-gateway",
           "repo": "ven-trust-network",
           "odtis_ids": [
@@ -423,7 +423,7 @@
           "work_items": [
             "All partner traffic via local gateway",
             "Receiver validates partner against trust registry",
-            "mTLS gateway-to-gateway live interop test (mtls-live-check.sh, staging overlay 9443)"
+            "mTLS gateway-to-gateway live interop test (KNOWN-GAP 0204)"
           ]
         },
         {
@@ -836,7 +836,7 @@
         {
           "id": "P4-E01",
           "title": "Federation runtime",
-          "status": "done",
+          "status": "partial",
           "component": "exchange-gateway federation router",
           "repo": "ven-trust-network",
           "odtis_ids": [

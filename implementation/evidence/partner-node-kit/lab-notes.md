@@ -1,6 +1,6 @@
 # Partner node kit evidence (#37)
 
-**Status:** L2 sandbox — static kit verification; live docker optional.
+**Status:** L2 sandbox - static kit verification; live docker optional.
 
 ## Smoke
 
@@ -12,4 +12,4 @@ cd core-impl && ./scripts/ci-operator-checks.sh
 
 ## ODTIS-0512 pass criteria
 
-Operator documents onboarding, certification, pricing transparency ([PARTNER-ONBOARDING.md](../../../core-impl/ven-trust-network/docs/operator/PARTNER-ONBOARDING.md)) and ships verifiable partner node kit with `verify-kit.sh`.
+Operator documents onboarding, certification, pricing transparency ([Partner Onboarding](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/operator/PARTNER-ONBOARDING.md)) and ships verifiable partner node kit with `verify-kit.sh`.

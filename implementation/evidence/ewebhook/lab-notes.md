@@ -1,6 +1,6 @@
 # E-Webhook staging evidence (#14)
 
-**Status:** L2 sandbox — static + optional live delivery validation.
+**Status:** L2 sandbox - static + optional live delivery validation.
 
 ## Artifacts
 

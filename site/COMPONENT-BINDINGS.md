@@ -26,19 +26,63 @@ RI map: [RI surface map](/implementation/RI-MAP.yaml).
 
 | Component | Profile | Epic | ODTIS IDs | Binding |
 |-----------|---------|------|-----------|---------|
+| `gov-api` | core-identity | `null` | 2 | [Binding YAML](/implementation/component-bindings/gov-api.yaml) |
 | `verification-api` | core-identity | `P1-E04` | 8 | [Binding YAML](/implementation/component-bindings/verification-api.yaml) |
 | `eregistry-adapter` | extended | `P3-E07` | 7 | [Binding YAML](/implementation/component-bindings/eregistry-adapter.yaml) |
 | `ewebhook-delivery` | extended | `P4-E04` | 4 | [Binding YAML](/implementation/component-bindings/ewebhook-delivery.yaml) |
+| `extended-build` | extended | `P4-E02` | 4 | [Binding YAML](/implementation/component-bindings/extended-build.yaml) |
 | `inclusion-service` | extended | `P4-E03` | 4 | [Binding YAML](/implementation/component-bindings/inclusion-service.yaml) |
 | `kyb-service` | extended | `P4-E06` | 2 | [Binding YAML](/implementation/component-bindings/kyb-service.yaml) |
 | `signature-service` | extended | `P4-E05` | 3 | [Binding YAML](/implementation/component-bindings/signature-service.yaml) |
 | `wallet-service` | extended | `P4-E02` | 5 | [Binding YAML](/implementation/component-bindings/wallet-service.yaml) |
 | `federation-runtime` | federation | `P4-E01` | 8 | [Binding YAML](/implementation/component-bindings/federation-runtime.yaml) |
+| `trust-network-web` | none | `null` | 0 | [Binding YAML](/implementation/component-bindings/trust-network-web.yaml) |
+| `admin-api` | operator | `P3-E01` | 9 | [Binding YAML](/implementation/component-bindings/admin-api.yaml) |
+| `ci-docker-images` | operator | `P2-E08` | 0 | [Binding YAML](/implementation/component-bindings/ci-docker-images.yaml) |
+| `operator-sla-partner` | operator | `P3-E03` | 3 | [Binding YAML](/implementation/component-bindings/operator-sla-partner.yaml) |
+| `partner-node-kit` | operator | `P3-E03` | 1 | [Binding YAML](/implementation/component-bindings/partner-node-kit.yaml) |
+| `exchange-client-sdk` | trust-network | `P2-E04` | 1 | [Binding YAML](/implementation/component-bindings/exchange-client-sdk.yaml) |
 | `exchange-gateway` | trust-network | `P2-E01` | 14 | [Binding YAML](/implementation/component-bindings/exchange-gateway.yaml) |
+| `portal-trust` | trust-network | `P2-E03` | 2 | [Binding YAML](/implementation/component-bindings/portal-trust.yaml) |
+| `ven-partner-sdk` | trust-network | `P2-E04` | 1 | [Binding YAML](/implementation/component-bindings/ven-partner-sdk.yaml) |
 
 ---
 
 ## Profile: core-identity
+
+## `gov-api`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-identity-core` |
+| Module path | `api/gov-api` |
+| RI-MAP surface | `gov-api` |
+| ODTIS profile | `core-identity` |
+| Backlog epic | `null` |
+| Status | deferred |
+| Binding file | [Component binding YAML](/implementation/component-bindings/gov-api.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+| `ODTIS-0315` | MUST | 03 identity services | [Verification Client Auth test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_verification_client_auth.md) |
+| `ODTIS-0344` | MUST | 05 consent privacy | [Eregistry Declaration Required test](https://github.com/odtis/core-spec/blob/main/conformance/tests/extended/test_eregistry_declaration_required.md) |
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Gov Api Decision 2026 (YAML)](/implementation/evidence/gov-api/gov-api-decision-2026.yaml)
+- [Government API (OpenAPI)](/annexes/A-openapi-registry/gov-api.openapi.yaml)
+
+**Smoke:** `core-impl/scripts/gov-api-decision-check.sh`
+
+---
 
 ## `verification-api`
 
@@ -117,7 +161,7 @@ RI map: [RI surface map](/implementation/RI-MAP.yaml).
 - [L2 Report](https://github.com/odtis/core-spec/blob/main/implementation/statements/venid-phase3-operator/l2-report.md)
 - [E Registry](https://github.com/odtis/core-impl/blob/main/ven-identity-core/docs/operator/E-REGISTRY.md)
 
-**Smoke:** `conformance/run-extended-eregistry-checks.sh`
+**Smoke:** `ven-identity-core/scripts/eregistry-adapter-check.sh`
 
 ---
 
@@ -152,8 +196,49 @@ RI map: [RI surface map](/implementation/RI-MAP.yaml).
 
 - [L2 Report](https://github.com/odtis/core-spec/blob/main/implementation/statements/venid-phase4-full/l2-report.md)
 - [E Webhook](https://github.com/odtis/core-impl/blob/main/ven-identity-core/docs/operator/E-WEBHOOK.md)
+- [Lab Notes](https://github.com/odtis/core-spec/blob/main/implementation/evidence/ewebhook/lab-notes.md)
 
 **Smoke:** `conformance/run-ewebhook-checks.sh`
+
+---
+
+## `extended-build`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-identity-core` |
+| Module path | `services/* + config/*.yml` |
+| RI-MAP surface | `extended-build` |
+| ODTIS profile | `extended` |
+| Backlog epic | `P4-E02` |
+| Status | partial |
+| Binding file | [Component binding YAML](/implementation/component-bindings/extended-build.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+| `ODTIS-0340` | MUST | 05 consent privacy | [ODTIS-0340 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0340.md) |
+| `ODTIS-0341` | MUST | 05 consent privacy | [ODTIS-0341 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0341.md) |
+| `ODTIS-0342` | SHOULD | 05 consent privacy | [ODTIS-0342 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0342.md) |
+| `ODTIS-0343` | MUST NOT | 05 consent privacy | [ODTIS-0343 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0343.md) |
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Wallet Service.Yml](https://github.com/odtis/core-impl/blob/main/ven-identity-core/config/wallet-service.yml)
+- [Inclusion Service.Yml](https://github.com/odtis/core-impl/blob/main/ven-identity-core/config/inclusion-service.yml)
+- [Signature Service.Yml](https://github.com/odtis/core-impl/blob/main/ven-identity-core/config/signature-service.yml)
+- [Kyb Service.Yml](https://github.com/odtis/core-impl/blob/main/ven-identity-core/config/kyb-service.yml)
+- [Eregistry Adapter.Yml](https://github.com/odtis/core-impl/blob/main/ven-identity-core/config/eregistry-adapter.yml)
+- [Lab Notes](https://github.com/odtis/core-spec/blob/main/implementation/evidence/extended-staging/lab-notes.md)
+
+**Smoke:** `core-impl/scripts/extended-build-check.sh`
 
 ---
 
@@ -310,7 +395,7 @@ RI map: [RI surface map](/implementation/RI-MAP.yaml).
 | RI-MAP surface | `trust-registry` |
 | ODTIS profile | `federation` |
 | Backlog epic | `P4-E01` |
-| Status | partial |
+| Status | done |
 | Binding file | [Component binding YAML](/implementation/component-bindings/federation-runtime.yaml) |
 
 >
@@ -342,7 +427,228 @@ RI map: [RI surface map](/implementation/RI-MAP.yaml).
 
 ---
 
+## Profile: none
+
+## `trust-network-web`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-trust-network-web` |
+| Module path | `.` |
+| RI-MAP surface | `trust-network-web` |
+| ODTIS profile | `none` |
+| Backlog epic | `null` |
+| Status | informative |
+| Binding file | [Component binding YAML](/implementation/component-bindings/trust-network-web.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Scope 2026 (YAML)](/implementation/evidence/trust-network-web/scope-2026.yaml)
+- [Scope](https://github.com/odtis/core-impl/blob/main/ven-trust-network-web/SCOPE.md)
+
+**Smoke:** `core-impl/scripts/trust-network-web-scope-check.sh`
+
+---
+
+## Profile: operator
+
+## `admin-api`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-identity-core` |
+| Module path | `api/admin-api` |
+| RI-MAP surface | `admin-api` |
+| ODTIS profile | `operator` |
+| Backlog epic | `P3-E01` |
+| Status | partial |
+| Binding file | [Component binding YAML](/implementation/component-bindings/admin-api.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+| `ODTIS-0319` | MUST | 03 identity services | [ODTIS-0319 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0319.md) |
+| `ODTIS-0320` | MUST | 03 identity services | [ODTIS-0320 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0320.md) |
+| `ODTIS-0321` | MUST NOT | 03 identity services | [ODTIS-0321 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0321.md) |
+| `ODTIS-0337` | MUST | 05 consent privacy | [ODTIS-0337 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0337.md) |
+| `ODTIS-0338` | SHOULD | 05 consent privacy | [ODTIS-0338 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_odtis_0338.md) |
+| `ODTIS-0339` | MUST | 05 consent privacy | [Rp Suspension test](https://github.com/odtis/core-spec/blob/main/conformance/tests/core-identity/test_rp_suspension.md) |
+| `ODTIS-0504` | MUST | 07 operator governance | [Operator Subject Admin test](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_operator_subject_admin.md) |
+| `ODTIS-0513` | SHOULD | 07 operator governance | [ODTIS-0513 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0513.md) |
+| `ODTIS-0525` | MUST | 08 security | [Fraud Metrics test](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_fraud_metrics.md) |
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Subject Administration](https://github.com/odtis/core-impl/blob/main/ven-identity-core/docs/operator/SUBJECT-ADMINISTRATION.md)
+- [Rp Client Lifecycle](https://github.com/odtis/core-impl/blob/main/ven-identity-core/docs/operator/RP-CLIENT-LIFECYCLE.md)
+- [Ecosystem Metrics](https://github.com/odtis/core-impl/blob/main/ven-identity-core/docs/operator/ECOSYSTEM-METRICS.md)
+
+**Smoke:** `ven-identity-core/scripts/admin-api-check.sh`
+
+---
+
+## `ci-docker-images`
+
+| Field | Value |
+|-------|-------|
+| Repository | `core-impl (ven-identity-core + ven-trust-network + ven-cloud-stack)` |
+| Module path | `.gitlab-ci.yml + scripts/ci-docker-images-check.sh` |
+| RI-MAP surface | `ci-docker-images` |
+| ODTIS profile | `operator` |
+| Backlog epic | `P2-E08` |
+| Status | partial |
+| Binding file | [Component binding YAML](/implementation/component-bindings/ci-docker-images.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Deployment](https://github.com/odtis/core-spec/blob/main/core-impl/docs/DEPLOYMENT.md)
+- [Convenciones Ven Platform](https://github.com/odtis/core-spec/blob/main/core-impl/CONVENCIONES-VEN-PLATFORM.md)
+- [.Gitlab Ci.Yml](https://github.com/odtis/core-impl/blob/main/ven-identity-core/.gitlab-ci.yml)
+- [.Gitlab Ci.Yml](https://github.com/odtis/core-impl/blob/main/ven-trust-network/.gitlab-ci.yml)
+- [.Gitlab Ci.Yml](https://github.com/odtis/core-impl/blob/main/ven-cloud-stack/.gitlab-ci.yml)
+
+**Smoke:** `core-impl/scripts/ci-docker-images-check.sh`
+
+---
+
+## `operator-sla-partner`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-identity-core + ven-trust-network` |
+| Module path | `docs/operator + deploy/partner-node` |
+| RI-MAP surface | `operator-sla-partner` |
+| ODTIS profile | `operator` |
+| Backlog epic | `P3-E03` |
+| Status | partial |
+| Binding file | [Component binding YAML](/implementation/component-bindings/operator-sla-partner.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+| `ODTIS-0511` | MUST | 07 operator governance | [ODTIS-0511 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0511.md) |
+| `ODTIS-0512` | MUST | 07 operator governance | [ODTIS-0512 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0512.md) |
+| `ODTIS-0513` | SHOULD | 07 operator governance | [ODTIS-0513 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0513.md) |
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Core Identity Sla](https://github.com/odtis/core-impl/blob/main/ven-identity-core/docs/operator/CORE-IDENTITY-SLA.md)
+- [Ecosystem Metrics](https://github.com/odtis/core-impl/blob/main/ven-identity-core/docs/operator/ECOSYSTEM-METRICS.md)
+- [Partner Onboarding](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/operator/PARTNER-ONBOARDING.md)
+- [Readme](https://github.com/odtis/core-impl/blob/main/ven-trust-network/deploy/partner-node/README.md)
+
+**Smoke:** `core-impl/scripts/ci-operator-checks.sh`
+
+---
+
+## `partner-node-kit`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-trust-network` |
+| Module path | `deploy/partner-node` |
+| RI-MAP surface | `partner-node-kit` |
+| ODTIS profile | `operator` |
+| Backlog epic | `P3-E03` |
+| Status | done |
+| Binding file | [Component binding YAML](/implementation/component-bindings/partner-node-kit.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+| `ODTIS-0512` | MUST | 07 operator governance | [ODTIS-0512 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_odtis_0512.md) |
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Partner Node Kit](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/operator/PARTNER-NODE-KIT.md)
+- [Partner Onboarding](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/operator/PARTNER-ONBOARDING.md)
+- [Readme](https://github.com/odtis/core-impl/blob/main/ven-trust-network/deploy/partner-node/README.md)
+- [Distribucion Segura Kit Partner](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/DISTRIBUCION-SEGURA-KIT-PARTNER.md)
+- [Lab Notes](https://github.com/odtis/core-spec/blob/main/implementation/evidence/partner-node-kit/lab-notes.md)
+
+**Smoke:** `conformance/run-partner-node-kit-checks.sh`
+
+---
+
 ## Profile: trust-network
+
+## `exchange-client-sdk`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-trust-network` |
+| Module path | `sdk/exchange-client` |
+| RI-MAP surface | `exchange-client-sdk` |
+| ODTIS profile | `trust-network` |
+| Backlog epic | `P2-E04` |
+| Status | done |
+| Binding file | [Component binding YAML](/implementation/component-bindings/exchange-client-sdk.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+| `ODTIS-0223` | MUST | 04 trust network | [Sender Multi Peer Routing test](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_sender_multi_peer_routing.md) |
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Exchange Client Sdk](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/operator/EXCHANGE-CLIENT-SDK.md)
+- [Readme](https://github.com/odtis/core-impl/blob/main/ven-trust-network/sdk/exchange-client/README.md)
+- [Exchange Client Sdk Check script](https://github.com/odtis/core-impl/blob/main/ven-trust-network/scripts/exchange-client-sdk-check.sh)
+- [Lab Notes](https://github.com/odtis/core-spec/blob/main/implementation/evidence/exchange-client-sdk/lab-notes.md)
+
+**Smoke:** `conformance/run-exchange-client-sdk-checks.sh`
+
+---
 
 ## `exchange-gateway`
 
@@ -385,8 +691,81 @@ RI map: [RI surface map](/implementation/RI-MAP.yaml).
 
 - [L2 Report](https://github.com/odtis/core-spec/blob/main/implementation/statements/venid-phase2-trust/l2-report.md)
 - [Exchange Gateway](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/EXCHANGE-GATEWAY.md)
+- [Exchange Audit Sla](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/operator/EXCHANGE-AUDIT-SLA.md)
+- [Exchange Audit Check script](https://github.com/odtis/core-impl/blob/main/ven-trust-network/scripts/exchange-audit-check.sh)
+- [Readme](https://github.com/odtis/core-impl/blob/main/ven-identity-core/archive/exchange-gateway-legacy/README.md)
 
 **Smoke:** `ven-trust-network/scripts/exchange-gateway-check.sh`
+
+---
+
+## `portal-trust`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-trust-network` |
+| Module path | `api/portal-api + front/portal-trust` |
+| RI-MAP surface | `portal-trust` |
+| ODTIS profile | `trust-network` |
+| Backlog epic | `P2-E03` |
+| Status | partial |
+| Binding file | [Component binding YAML](/implementation/component-bindings/portal-trust.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+| `ODTIS-0209` | MUST | 04 trust network | [Service Grant Required test](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_service_grant_required.md) |
+| `ODTIS-0226` | MUST | 04 trust network | [Grant Workflow Audit test](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_grant_workflow_audit.md) |
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Service Grants](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/operator/SERVICE-GRANTS.md)
+- [Service Grants Check script](https://github.com/odtis/core-impl/blob/main/ven-trust-network/scripts/service-grants-check.sh)
+
+**Smoke:** `ven-trust-network/scripts/portal-trust-check.sh`
+
+---
+
+## `ven-partner-sdk`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-trust-network` |
+| Module path | `sdk/ven-partner-sdk` |
+| RI-MAP surface | `ven-partner-sdk` |
+| ODTIS profile | `trust-network` |
+| Backlog epic | `P2-E04` |
+| Status | done |
+| Binding file | [Component binding YAML](/implementation/component-bindings/ven-partner-sdk.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+| `ODTIS-0214` | SHOULD | 04 trust network | [ODTIS-0214 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/trust-network/test_odtis_0214.md) |
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Ven Partner Sdk](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/operator/VEN-PARTNER-SDK.md)
+- [Trust Network Sdks](https://github.com/odtis/core-impl/blob/main/ven-trust-network/docs/operator/TRUST-NETWORK-SDKS.md)
+- [Readme](https://github.com/odtis/core-impl/blob/main/ven-trust-network/sdk/ven-partner-sdk/README.md)
+- [Ven Partner Sdk Check script](https://github.com/odtis/core-impl/blob/main/ven-trust-network/scripts/ven-partner-sdk-check.sh)
+- [Lab Notes](https://github.com/odtis/core-spec/blob/main/implementation/evidence/ven-partner-sdk/lab-notes.md)
+
+**Smoke:** `conformance/run-ven-partner-sdk-checks.sh`
 
 ---
 

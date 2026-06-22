@@ -1,6 +1,6 @@
 # mTLS lab evidence (GAP-TN-0204 / #10)
 
-**Status:** L2 sandbox — staging overlay only (not production PKI).
+**Status:** L2 sandbox - staging overlay only (not production PKI).
 
 ## Assets
 

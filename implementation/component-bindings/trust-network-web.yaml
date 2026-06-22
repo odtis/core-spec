@@ -1,7 +1,7 @@
 # Informative binding: ven-trust-network-web (marketing/demo — NOT ODTIS RI)
 
 component_id: trust-network-web
-ri_map_surface: null
+ri_map_surface: trust-network-web
 repository: ven-trust-network-web
 module_path: .
 profile: none
@@ -20,7 +20,7 @@ operational_portal:
   repository: ven-trust-network
   binding: implementation/component-bindings/portal-trust.yaml
 
-odtis_ids: []
+odtis_ids:
 
 evidence:
   - implementation/evidence/trust-network-web/scope-2026.yaml

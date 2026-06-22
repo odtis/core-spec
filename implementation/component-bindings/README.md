@@ -24,7 +24,7 @@ Per-component **informative** bindings between VenID code, ODTIS requirement IDs
 | `inclusion-service.yaml` | extended | P4-E03 |
 | `ewebhook-delivery.yaml` | extended | P4-E04 |
 | `signature-service.yaml` | extended | P4-E05 |
-| `trust-network-web.yaml` | *(informative)* | #32 marketing/demo — not ODTIS |
+| `trust-network-web.yaml` | *(informative)* | #32 marketing/demo - not ODTIS |
 | `kyb-service.yaml` | extended | P4-E06 |
 
 ## Workflow

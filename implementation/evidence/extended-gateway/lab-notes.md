@@ -1,6 +1,6 @@
 # Extended gateway routes evidence (#13)
 
-**Status:** L2 sandbox — static route/auth verification; live docker optional.
+**Status:** L2 sandbox - static route/auth verification; live docker optional.
 
 ## Artifacts
 

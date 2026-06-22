@@ -1,6 +1,6 @@
 # Extended profile staging evidence (#12)
 
-**Status:** L2 sandbox — static overlay verification; live docker optional.
+**Status:** L2 sandbox - static overlay verification; live docker optional.
 
 ## Artifacts
 
@@ -23,7 +23,7 @@ cd core-spec && ./conformance/run-extended-staging-checks.sh
 # Base Phase 2 stack running first
 cd core-impl && ./scripts/extended-staging-up.sh
 docker compose -f ven-identity-core/docker-compose.yml \
-  -f compose/staging/docker-compose.extended.yml --profile extended ps
+-f compose/staging/docker-compose.extended.yml --profile extended ps
 ```
 
 ## Pass criteria (#12)

@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0209 - service grant required
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0209
 **Profile:** trust-network
 

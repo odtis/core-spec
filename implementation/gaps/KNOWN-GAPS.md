@@ -1,16 +1,16 @@
 # Known implementation gaps (reference stack)
 
-**Updated:** 2026-06-22 
+**Updated:** 2026-06-22
 **Spec:** ODTIS `0.9.0-draft`
 
-**Project hub:** [Project hub](/project/) | **RI overview:** [Project hub](../README.md) 
+**Project hub:** [Project hub](/project/) | **RI overview:** [Project hub](../README.md)
 **Machine-readable:** [Gap register (YAML)](gaps.yaml) | **RI map:** [RI surface map](../RI-MAP.yaml) | **Backlog:** [Phased Backlog](../PHASED-BACKLOG.md)
 
-**Closure evidence:** [Closure Report 2026 Q2 (YAML)](../evidence/gap-closure/closure-report-2026-Q2.yaml) 
+**Closure evidence:** [Closure Report 2026 Q2 (YAML)](../evidence/gap-closure/closure-report-2026-Q2.yaml)
 **Smoke:** `./conformance/run-gap-closure-checks.sh`
 
 !!! info "Informative only"
-    Gaps describe the **VenID reference stack**, not independent vendor obligations. Closing a gap here does not waive ODTIS MUST requirements in the spec.
+Gaps describe the **VenID reference stack**, not independent vendor obligations. Closing a gap here does not waive ODTIS MUST requirements in the spec.
 
 ---
 
@@ -22,7 +22,7 @@ Resolution playbook: [Deferred production track](DEFERRED-TRACK.md)
 |--------|----------|---------|--------|---------|
 | GAP-TN-0217 | ODTIS-0217 | exchange-gateway | National TSA integration not in sandbox scope | P2-E06 |
 | GAP-TN-TEP | - | exchange-gateway | IETF informative track | - |
-| GAP-CERT-L3-ATT | ODTIS-0532 | conformance-publication | Third-party L3 attestation — evidence pack ready, engagement scheduled (#17) | [P4-E07](../PHASED-BACKLOG.md#p4-e07-operator-l3-and-phase-4-statement-partial) |
+| GAP-CERT-L3-ATT | ODTIS-0532 | conformance-publication | Third-party L3 attestation - evidence pack ready, engagement scheduled (#17) | [P4-E07](../PHASED-BACKLOG.md#p4-e07-operator-l3-and-phase-4-statement-partial) |
 | GAP-IC-GOV-API | ODTIS-0315 | gov-api (Annex A S7) | OpenAPI contract draft; Maven module deferred (#29) | Phase 3+ national operator |
 
 ---
@@ -63,5 +63,5 @@ Most closed on **2026-06-12** with static/unit L2 sandbox evidence via `run-gap-
 2. Update surface `status` in [RI surface map](../RI-MAP.yaml) when implementation progresses.
 3. Close gap when L2 conformance test passes; do **not** weaken ODTIS MUSTs - fix code or file RFC.
 
-Regenerate gap cross-check: `python3 scripts/validate-ri-map.py` 
+Regenerate gap cross-check: `python3 scripts/validate-ri-map.py`
 Close remaining implementation gaps: `./conformance/run-gap-closure-checks.sh`

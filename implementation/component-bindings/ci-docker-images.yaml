@@ -2,7 +2,7 @@
 # Informative — conformance claims require conformance-statement.yaml
 
 component_id: ci-docker-images
-ri_map_surface: ven-cloud-stack
+ri_map_surface: ci-docker-images
 repository: core-impl (ven-identity-core + ven-trust-network + ven-cloud-stack)
 module_path: .gitlab-ci.yml + scripts/ci-docker-images-check.sh
 profile: operator
@@ -20,7 +20,7 @@ implementation_notes: >
 
 smoke_script: core-impl/scripts/ci-docker-images-check.sh
 
-odtis_ids: []
+odtis_ids:
 
 evidence:
   - core-impl/docs/DEPLOYMENT.md

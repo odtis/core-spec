@@ -1,7 +1,7 @@
 # VenID phased implementation backlog
 
 **ODTIS version:** `0.9.0-draft`  
-**Generated:** 2026-06-22  
+**Generated:** 2026-06-23  
 **Purpose:** Product backlog to implement VenID against ODTIS normative IDs and conformance tests, ordered by deployment phase.
 
 Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with `python3 scripts/generate-phased-backlog.py`).

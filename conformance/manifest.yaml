@@ -86,51 +86,51 @@ profiles:
     tests:
       - path: conformance/tests/core-identity/test_account_recovery.md
         requirements: [ODTIS-0309, ODTIS-0326]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_annex_b_liveness_mapping.md
         requirements: [ODTIS-0312, ODTIS-0523]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_annex_c_nist_loa_mapping.md
         requirements: [ODTIS-0103, ODTIS-0105]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_consent_audit_events.md
         requirements: [ODTIS-0527]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_consent_gated_claims.md
         requirements: [ODTIS-0307, ODTIS-0331]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_consent_revocation.md
         requirements: [ODTIS-0330]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_explicit_consent_first_release.md
         requirements: [ODTIS-0328]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_high_biometric_gate.md
         requirements: [ODTIS-0103]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_identity_audit_events.md
         requirements: [ODTIS-0526]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_liveness_high_loa.md
         requirements: [ODTIS-0523]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_loa_claim.md
         requirements: [ODTIS-0102]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0101.md
         requirements: [ODTIS-0101]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0104.md
         requirements: [ODTIS-0344]
@@ -138,51 +138,51 @@ profiles:
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0105.md
         requirements: [ODTIS-0105]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0106.md
         requirements: [ODTIS-0106]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0107.md
         requirements: [ODTIS-0107]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0301.md
         requirements: [ODTIS-0301]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0303.md
         requirements: [ODTIS-0303]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0304.md
         requirements: [ODTIS-0304]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0306.md
         requirements: [ODTIS-0306]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0310.md
         requirements: [ODTIS-0310]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0311.md
         requirements: [ODTIS-0311]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0312.md
         requirements: [ODTIS-0312]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0313.md
         requirements: [ODTIS-0313]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0314.md
         requirements: [ODTIS-0314]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0316.md
         requirements: [ODTIS-0316]
@@ -190,31 +190,31 @@ profiles:
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0318.md
         requirements: [ODTIS-0318]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0319.md
         requirements: [ODTIS-0319]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0320.md
         requirements: [ODTIS-0320]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0321.md
         requirements: [ODTIS-0321]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0322.md
         requirements: [ODTIS-0322]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0323.md
         requirements: [ODTIS-0323]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0324.md
         requirements: [ODTIS-0324]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0325.md
         requirements: [ODTIS-0325]
@@ -230,39 +230,39 @@ profiles:
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0329.md
         requirements: [ODTIS-0329]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0331.md
         requirements: [ODTIS-0307, ODTIS-0317, ODTIS-0331]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0332.md
         requirements: [ODTIS-0332]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0333.md
         requirements: [ODTIS-0333]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0334.md
         requirements: [ODTIS-0334]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0335.md
         requirements: [ODTIS-0335]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0336.md
         requirements: [ODTIS-0336]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0337.md
         requirements: [ODTIS-0337]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0338.md
         requirements: [ODTIS-0338]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_odtis_0340.md
         requirements: [ODTIS-0340]
@@ -282,7 +282,7 @@ profiles:
         type: manual
       - path: conformance/tests/core-identity/test_openapi_verify_response.md
         requirements: [ODTIS-0108, ODTIS-0316, ODTIS-0317]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_owasp_baseline.md
         requirements: [ODTIS-0521]
@@ -290,11 +290,11 @@ profiles:
         type: manual
       - path: conformance/tests/core-identity/test_pkce_required.md
         requirements: [ODTIS-0302]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_redirect_uri_validation.md
         requirements: [ODTIS-0305]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_rp_initiated_logout.md
         requirements: [ODTIS-0308]
@@ -302,7 +302,7 @@ profiles:
         type: manual
       - path: conformance/tests/core-identity/test_rp_suspension.md
         requirements: [ODTIS-0339]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/core-identity/test_verification_client_auth.md
         requirements: [ODTIS-0315]
@@ -314,7 +314,7 @@ profiles:
         type: manual
       - path: conformance/tests/core-identity/test_verification_loa_on_denial.md
         requirements: [ODTIS-0108]
-        status: pending
+        status: implemented
         type: manual
   trust-network:
     requirement_count: 27
@@ -349,7 +349,7 @@ profiles:
         type: manual
       - path: conformance/tests/trust-network/test_grant_workflow_audit.md
         requirements: [ODTIS-0226]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/trust-network/test_no_payload_centralization.md
         requirements: [ODTIS-0225]
@@ -425,7 +425,7 @@ profiles:
         type: manual
       - path: conformance/tests/trust-network/test_odtis_0221.md
         requirements: [ODTIS-0221]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/trust-network/test_per_request_partner_verify.md
         requirements: [ODTIS-0517]
@@ -437,7 +437,7 @@ profiles:
         type: manual
       - path: conformance/tests/trust-network/test_service_grant_required.md
         requirements: [ODTIS-0209]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/trust-network/test_trust_registry_validation.md
         requirements: [ODTIS-0205]
@@ -507,7 +507,7 @@ profiles:
         type: manual
       - path: conformance/tests/operator/test_event_envelope.md
         requirements: [ODTIS-0529]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/operator/test_fail_closed_denial_paths.md
         requirements: [ODTIS-0535]
@@ -579,7 +579,7 @@ profiles:
         type: manual
       - path: conformance/tests/operator/test_odtis_0522.md
         requirements: [ODTIS-0522]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/operator/test_odtis_0524.md
         requirements: [ODTIS-0524]
@@ -662,7 +662,7 @@ profiles:
         type: manual
       - path: conformance/tests/extended/test_eregistry_national_loa.md
         requirements: [ODTIS-0344, ODTIS-0350]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/extended/test_eregistry_no_civil_authority.md
         requirements: [ODTIS-0349]

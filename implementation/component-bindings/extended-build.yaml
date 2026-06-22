@@ -2,7 +2,7 @@
 # Informative — conformance claims require conformance-statement.yaml
 
 component_id: extended-build
-ri_map_surface: wallet-service
+ri_map_surface: extended-build
 repository: ven-identity-core
 module_path: services/* + config/*.yml
 profile: extended

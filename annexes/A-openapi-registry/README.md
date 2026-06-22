@@ -51,7 +51,7 @@ A-openapi-registry/
 | S5 Operator admin | `admin-api.openapi.yaml` | `/v1/admin` | 7 | partial |
 | S8 Regulator | `regulator-api.openapi.yaml` | `/v1/regulator` | 7.5, 9.4 | ✅ draft |
 | S6 Reports | `reports-api.openapi.yaml` | `/v1/rp/reports` | 3.5, 9.2 | ✅ draft |
-| S7 Government | `gov-api.openapi.yaml` | `/v1/gov` | 3.4, 3.5 | ⏸ deferred (#29) — contract draft; no RI module |
+| S7 Government | `gov-api.openapi.yaml` | `/v1/gov` | 3.4, 3.5 | ⏸ deferred (#29) - contract draft; no RI module |
 | Exchange GW | `exchange-gateway.openapi.yaml` | `/v1/exchange` | 4 | ✅ draft |
 
 Full index: [Surface index (YAML)](INDEX.yaml).

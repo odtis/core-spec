@@ -224,6 +224,18 @@ implementations:
     binding_doc: implementation/component-bindings/admin-api.yaml
     notes: ClientsController; SubjectsController; MetricsController; VerificationQueueController; admin-api-check.sh
 
+  - id: operator-sla-partner
+    module: docs/operator + deploy/partner-node
+    backlog_epic: P3-E03
+    status: partial
+    informative: true
+    odtis_ids:
+    - ODTIS-0511
+    - ODTIS-0512
+    - ODTIS-0513
+    binding_doc: implementation/component-bindings/operator-sla-partner.yaml
+    notes: CORE-IDENTITY-SLA; PARTNER-ONBOARDING; ECOSYSTEM-METRICS; ci-operator-checks (#24)
+
   - id: api-gateway
     module: api/api-gateway
     backlog_epic: P1-E08
@@ -297,6 +309,19 @@ implementations:
     - ODTIS-0533
     - ODTIS-0534
     notes: venid-phase4-full target packaging (not production); l3-auditor-evidence-pack-2026.yaml; run-l3-auditor-evidence-checks.sh (#17); GAP-CERT-L3-ATT in_progress
+
+  - id: extended-build
+    module: services/* (extended build prep)
+    backlog_epic: P4-E02
+    status: partial
+    informative: true
+    odtis_ids:
+    - ODTIS-0340
+    - ODTIS-0341
+    - ODTIS-0342
+    - ODTIS-0343
+    binding_doc: implementation/component-bindings/extended-build.yaml
+    notes: Dockerfiles + config YAML inactive; compose/staging extended overlay; extended-build-check.sh (#38)
 
   - id: wallet-service
     module: services/wallet-service

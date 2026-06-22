@@ -1,9 +1,9 @@
 # Deferred production track (reference stack)
 
-**Updated:** 2026-06-12 
+**Updated:** 2026-06-12
 **Spec:** ODTIS `0.9.0-draft`
 
-**Project hub:** [Project hub](/project/) | **All gaps:** [Known gaps](KNOWN-GAPS.md) 
+**Project hub:** [Project hub](/project/) | **All gaps:** [Known gaps](KNOWN-GAPS.md)
 **Machine-readable:** [Gap register (YAML)](gaps.yaml)
 
 These items are **intentionally deferred**. They do not weaken ODTIS MUST requirements in the spec; they document what the VenID reference stack has **not** yet proven in production or external review.
@@ -27,16 +27,16 @@ These items are **intentionally deferred**. They do not weaken ODTIS MUST requir
 | Field | Value |
 |-------|-------|
 | ODTIS ID | `ODTIS-0315`, `ODTIS-0344` (registry assertions) |
-| Surface | Annex A **S7** — `gov-api.openapi.yaml` |
+| Surface | Annex A **S7** - `gov-api.openapi.yaml` |
 | Issue | [#29](https://github.com/odtis/core-impl/issues/29) |
 
-**Decision (Option B — defer):** Keep `gov-api.openapi.yaml` as **normative contract draft**. Do **not** ship `api/gov-api` in Phase 2 pilot.
+**Decision (Option B - defer):** Keep `gov-api.openapi.yaml` as **normative contract draft**. Do **not** ship `api/gov-api` in Phase 2 pilot.
 
 **Current evidence:**
 
 - Decision record: [gov-api Decision 2026 (YAML)](../evidence/gov-api/gov-api-decision-2026.yaml)
-- Annex A index: [INDEX.yaml S7](../../annexes/A-openapi-registry/INDEX.yaml) (`status: deferred`)
-- Component binding: [gov-api.yaml](../component-bindings/gov-api.yaml)
+- Annex A index: [Surface index (YAML)](/annexes/A-openapi-registry/INDEX.yaml) (`status: deferred`)
+- Component binding: [Gov Api (YAML)](../component-bindings/gov-api.yaml)
 
 **Interim (reference stack):**
 
@@ -128,7 +128,7 @@ These items are **intentionally deferred**. They do not weaken ODTIS MUST requir
 
 **Current evidence:**
 
-- Phase 4 statement: [Venid Phase4 Full](/implementation/statements/venid-phase4-full/) (target packaging — not production claim)
+- Phase 4 statement: [Venid Phase4 Full](/implementation/statements/venid-phase4-full/) (target packaging - not production claim)
 - Internal dry-run: [L3 Audit Dry Run 2026 Q2 (YAML)](../evidence/phase4-conformance/l3-audit-dry-run-2026-Q2.yaml)
 - Auditor evidence pack: [L3 Auditor Evidence Pack 2026 (YAML)](../evidence/phase4-conformance/l3-auditor-evidence-pack-2026.yaml)
 - Engagement tracking: [L3 Auditor Engagement 2026 (YAML)](../evidence/phase4-conformance/l3-auditor-engagement-2026.yaml)

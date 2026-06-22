@@ -60,7 +60,7 @@ def test_href(test_path: str) -> str:
 
 def evidence_href(path: str) -> str | None:
     rel = repo_relative(path)
-    if rel.startswith("ven-identity-core") or rel.startswith("ven-trust-network"):
+    if rel.startswith(("ven-identity-core", "ven-trust-network", "ven-cloud-stack")):
         return f"{GITHUB_IMPL}/{rel}"
     if rel.endswith((".yaml", ".yml", ".json", ".openapi.yaml")):
         return f"/{rel}"

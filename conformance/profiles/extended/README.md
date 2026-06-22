@@ -55,7 +55,7 @@ Requirement prefixes: Annex D (`ODTIS-0340`-`0365`, `0531`)
 |--------|-------|
 | Registry requirements | 25 |
 | Linked tests | 23 |
-| Implemented (smoke) | 27 |
+| Implemented (smoke) | 28 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`

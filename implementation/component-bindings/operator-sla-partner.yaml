@@ -2,7 +2,7 @@
 # Informative — conformance claims require conformance-statement.yaml
 
 component_id: operator-sla-partner
-ri_map_surface: admin-api
+ri_map_surface: operator-sla-partner
 repository: ven-identity-core + ven-trust-network
 module_path: docs/operator + deploy/partner-node
 profile: operator
