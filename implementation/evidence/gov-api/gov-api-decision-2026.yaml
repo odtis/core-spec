@@ -35,7 +35,7 @@ future_implementation:
   repository: ven-identity-core
   module_path: api/gov-api
   target_phase: 3
-  backlog_ref: ven-identity-core/TAREAS-IMPLEMENTACION.md section 8.1
+  backlog_ref: GitHub issues #1-39 / analisis/per_module_spec/12-PLAN-ACCION-POR-FASES.md
   operations:
     - gov.verify.post
     - gov.registry.assertion.post

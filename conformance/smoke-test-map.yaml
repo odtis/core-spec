@@ -45,6 +45,10 @@ smokes:
       - ODTIS-0344
     notes: gov-api-decision-check.sh; Annex A S7 deferred; GAP-IC-GOV-API (#29)
 
+  - script: conformance/run-doc-hygiene-checks.sh
+    odtis_ids: []
+    notes: doc-hygiene-check.sh; TAREAS-IMPLEMENTACION archived; DEPLOYMENT + GitHub issues onboarding (#39)
+
   - script: conformance/run-operator-pki-checks.sh
     odtis_ids:
       - ODTIS-0507
