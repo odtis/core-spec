@@ -122,3 +122,10 @@ smokes:
       - ODTIS-0526
       - ODTIS-0527
       - ODTIS-0529
+
+  - script: ../core-impl/ven-identity-core/scripts/privacy-compliance-check.sh
+    odtis_ids:
+      - ODTIS-0333
+      - ODTIS-0334
+      - ODTIS-0335
+      - ODTIS-0336

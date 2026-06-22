@@ -106,8 +106,12 @@ implementations:
     - ODTIS-0330
     - ODTIS-0331
     - ODTIS-0332
+    - ODTIS-0333
+    - ODTIS-0334
+    - ODTIS-0335
+    - ODTIS-0336
     - ODTIS-0527
-    notes: ListByIdentity; explicit grant validation; dsar_request; CONSENT-LIFECYCLE.md; consent audit ODTIS-0527
+    notes: ListByIdentity; explicit grant validation; dsar_request; PRIVACY-POLICY.md; privacy-compliance-check.sh; consent audit ODTIS-0527
 
   - id: verification-engine
     module: services/verification-engine
@@ -163,7 +167,10 @@ implementations:
     - ODTIS-0322
     - ODTIS-0323
     - ODTIS-0324
-    notes: PortalConfigController; ConsentsController; CITIZEN-PORTAL.md; di-portal-ciudadano UX
+    - ODTIS-0333
+    - ODTIS-0334
+    - ODTIS-0336
+    notes: PortalConfigController; ConsentsController; PrivacyController; CITIZEN-PORTAL.md; di-portal-ciudadano UX
 
   - id: portal-ciudadano
     module: front/di-portal-ciudadano
@@ -204,6 +211,7 @@ implementations:
     - ODTIS-0521
     - ODTIS-0522
     - ODTIS-0523
+    - ODTIS-0335
     notes: CorrelationId; rate limits; security headers; TLS enforcement; TRANSPORT-SECURITY.md; gateway-security-check.sh
 
   - id: reports-api
