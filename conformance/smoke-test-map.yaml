@@ -23,6 +23,12 @@ smokes:
       - ODTIS-0532
     notes: published-service-scope-check.sh; staging-overlays-2026.yaml; validate-conformance-statement (#15)
 
+  - script: conformance/run-phase4-claims-reconcile-checks.sh
+    odtis_ids:
+      - ODTIS-0506
+      - ODTIS-0532
+    notes: phase4-claims-reconcile-check.sh; CLAIM-VS-RUNTIME.md; claims-vs-runtime-2026.yaml; RegulatorController guardrails (#16)
+
   - script: conformance/run-operator-pki-checks.sh
     odtis_ids:
       - ODTIS-0507

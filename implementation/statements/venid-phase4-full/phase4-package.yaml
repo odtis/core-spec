@@ -1,8 +1,11 @@
 statement_id: venid-phase4-full
-title: VenID Phase 4 full mandate conformance package
-as_of: 2026-06-12
+title: VenID Phase 4 full mandate conformance package (target packaging — not production claim)
+as_of: 2026-06-22
 deployment_phase: 4
-conformance_level: L3
+conformance_level: L3-target
+production_claim: false
+published_scope_ref: ven-identity-core/docs/operator/PUBLISHED-SERVICE-SCOPE.md
+claims_matrix: implementation/evidence/published-service-scope/claims-vs-runtime-2026.yaml
 status: partial
 requirements:
   - ODTIS-0532

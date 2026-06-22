@@ -3,7 +3,7 @@
 # Validate: python3 scripts/validate-ri-map.py
 
 spec_version: "0.9.0-draft"
-updated: "2026-06-12"
+updated: "2026-06-22"
 generator_note: P0-E03 reference implementation traceability
 
 conformance_statements:
@@ -29,7 +29,10 @@ conformance_statements:
   phase4_full:
     path: implementation/statements/venid-phase4-full/conformance-statement.yaml
     profiles: [reference-architecture, core-identity, trust-network, federation, operator, extended]
-    level: L3
+    level: L3-target
+    production_claim: false
+    role: target_packaging_not_production
+    claims_matrix: implementation/evidence/published-service-scope/claims-vs-runtime-2026.yaml
     l2_report: implementation/statements/venid-phase4-full/l2-report.md
   staging: null
   production: null
@@ -282,7 +285,7 @@ implementations:
     - ODTIS-0532
     - ODTIS-0533
     - ODTIS-0534
-    notes: venid-phase4-full statement; run-phase4-package.sh; GAP-CERT-L3-ATT deferred
+    notes: venid-phase4-full target packaging (not production); CLAIM-VS-RUNTIME.md; run-phase4-claims-reconcile-checks.sh (#16); run-phase4-package.sh; GAP-CERT-L3-ATT deferred
 
   - id: wallet-service
     module: services/wallet-service

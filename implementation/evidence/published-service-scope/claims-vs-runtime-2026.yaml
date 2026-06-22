@@ -1,0 +1,80 @@
+# Claim vs runtime reconciliation (#16 / ODTIS-0506, ODTIS-0532).
+# Aligns published Phase 2 scope with venid-phase4-full target packaging.
+
+published_operational:
+  deployment_phase: 2
+  conformance_level: L2
+  production_claim: true
+  scope_doc: ven-identity-core/docs/operator/PUBLISHED-SERVICE-SCOPE.md
+  operational_statements:
+    - implementation/statements/venid-phase2-trust/conformance-statement.yaml
+    - implementation/statements/venid-phase3-operator/conformance-statement.yaml
+  operator_maturity: implementation/statements/venid-operator-maturity/operator-maturity.yaml
+
+target_packaging_not_production:
+  statement_id: venid-phase4-full
+  deployment_phase: 4
+  conformance_level: L3-target
+  production_claim: false
+  role: full_mandate_conformance_packaging
+  statement: implementation/statements/venid-phase4-full/conformance-statement.yaml
+  readme_banner_required: true
+
+capabilities:
+  - id: core-identity
+    production_claimed: true
+    phase4_statement_declares: true
+    default_runtime: active
+  - id: trust-network
+    production_claimed: true
+    phase4_statement_declares: true
+    default_runtime: active
+  - id: operator
+    production_claimed: true
+    phase4_statement_declares: true
+    default_runtime: active
+  - id: federation
+    production_claimed: false
+    phase4_statement_declares: true
+    default_runtime: inactive
+    staging_overlay: compose/staging/docker-compose.federation.yml
+  - id: E-Wallet
+    production_claimed: false
+    phase4_statement_declares: true
+    default_runtime: inactive
+    config_key: venid.wallet.active
+  - id: E-Inclusion
+    production_claimed: false
+    phase4_statement_declares: true
+    default_runtime: inactive
+    config_key: venid.inclusion.active
+  - id: E-Signature
+    production_claimed: false
+    phase4_statement_declares: true
+    default_runtime: inactive
+    config_key: venid.esignature.active
+  - id: E-KYB
+    production_claimed: false
+    phase4_statement_declares: true
+    default_runtime: inactive
+    config_key: venid.kyb.active
+  - id: E-Webhook
+    production_claimed: false
+    phase4_statement_declares: true
+    default_runtime: inactive
+    config_key: venid.webhook.active
+  - id: E-Registry
+    production_claimed: false
+    phase4_statement_declares: true
+    default_runtime: inactive
+    config_key: venid.eregistry.active
+
+api_guardrails:
+  - endpoint: GET /v1/regulator/compliance-report
+    must_reference_operational_statements: true
+    must_not_claim_phase4_production: true
+  - endpoint: "extended */status"
+    must_expose_inactive_in_default_pilot: true
+
+date: "2026-06-22"
+contact: conformance@odtis.org

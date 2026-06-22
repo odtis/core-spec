@@ -176,10 +176,14 @@
   ],
   "tests": {
     "suite_version": "0.9.0-draft",
-    "status": "pass",
-    "summary": "L3 conformance package (reference-architecture, core-identity, trust-network, federation, operator, extended); 172 linked tests; min stub coverage 100.0%; see l2-report.md for automated results",
-    "pending_test_ids": []
+    "status": "partial",
+    "summary": "L3-target conformance packaging (reference-architecture, core-identity, trust-network, federation, operator, extended); not a production deployment claim — see PUBLISHED-SERVICE-SCOPE.md and claims-vs-runtime-2026.yaml; 172 linked tests; see l2-report.md",
+    "pending_test_ids": [
+      "operator/l3_third_party_attestation",
+      "operator/production_federation_activation",
+      "operator/production_extended_activation"
+    ]
   },
-  "date": "2026-06-12",
+  "date": "2026-06-22",
   "contact": "conformance@odtis.org"
 }
