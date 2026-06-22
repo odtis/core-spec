@@ -554,12 +554,11 @@ implementations:
   - id: partner-node-kit
     module: deploy/partner-node
     backlog_epic: P3-E03
-    status: partial
-    informative: true
+    status: done
     odtis_ids:
     - ODTIS-0512
-    binding_doc: implementation/component-bindings/operator-sla-partner.yaml
-    notes: verify-kit.sh; package-kit.sh; partner-node-kit-check.sh; DISTRIBUCION-SEGURA-KIT-PARTNER.md
+    binding_doc: implementation/component-bindings/partner-node-kit.yaml
+    notes: PARTNER-NODE-KIT.md; verify-kit.sh; partner-node-kit-check.sh; ci-operator-checks (#37)
 
   conformance:
     level_target: L2

@@ -24,6 +24,11 @@ smokes:
       - ODTIS-0509
       - ODTIS-0510
 
+  - script: conformance/run-partner-node-kit-checks.sh
+    odtis_ids:
+      - ODTIS-0512
+    notes: PARTNER-NODE-KIT.md; verify-kit; partner-node-kit-check; ci-operator-checks (#37)
+
   - script: conformance/run-operator-sla-metrics-checks.sh
     odtis_ids:
       - ODTIS-0511

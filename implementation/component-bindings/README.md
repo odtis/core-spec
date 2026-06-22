@@ -16,6 +16,7 @@ Per-component **informative** bindings between VenID code, ODTIS requirement IDs
 | `exchange-gateway.yaml` | trust-network | P2-E01 |
 | `exchange-client-sdk.yaml` | trust-network | P2-E04 |
 | `ven-partner-sdk.yaml` | trust-network | P2-E04 |
+| `partner-node-kit.yaml` | operator | P3-E03 |
 | `federation-runtime.yaml` | federation | P4-E01 |
 | `eregistry-adapter.yaml` | extended | P3-E07 |
 | `wallet-service.yaml` | extended | P4-E02 |

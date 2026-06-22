@@ -1,0 +1,27 @@
+component_id: partner-node-kit
+ri_map_surface: partner-node-kit
+repository: ven-trust-network
+module_path: deploy/partner-node
+profile: operator
+backlog_epic: P3-E03
+status: done
+
+summary: >
+  Docker Compose partner node distribution with verify-kit checksums, embedded ven-partner-sdk,
+  and operator onboarding cross-links (ODTIS-0512).
+
+implementation_notes: >
+  PARTNER-NODE-KIT.md operator guide; package-kit.sh builds tarball; partner-node-kit-check.sh
+  in GitLab operator-smoke via ci-operator-checks and TN operator-sla-metrics-check (#37).
+
+smoke_script: conformance/run-partner-node-kit-checks.sh
+
+odtis_ids:
+  - ODTIS-0512
+
+evidence:
+  - ven-trust-network/docs/operator/PARTNER-NODE-KIT.md
+  - ven-trust-network/docs/operator/PARTNER-ONBOARDING.md
+  - ven-trust-network/deploy/partner-node/README.md
+  - ven-trust-network/docs/DISTRIBUCION-SEGURA-KIT-PARTNER.md
+  - implementation/evidence/partner-node-kit/lab-notes.md

@@ -1,8 +1,17 @@
 # Conformance test: ODTIS-0512
 
-**Status:** implemented (static + unit smoke)
+**Status:** implemented (static + kit verification smoke)
 **Requirement:** ODTIS-0512 
 **Profile:** operator
+
+## Automation
+
+```bash
+cd core-impl/ven-trust-network && ./scripts/partner-node-kit-check.sh
+cd core-spec && ./conformance/run-partner-node-kit-checks.sh
+```
+
+Evidence: `implementation/evidence/partner-node-kit/lab-notes.md`
 
 ## Procedure
 
