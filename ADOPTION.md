@@ -114,7 +114,7 @@ VenID reference code (optional): [RI surface map](/implementation/RI-MAP.yaml). 
 ### Step 4 - Verify
 
 ```bash
-cd odtis
+# from repository root
 ./conformance/run.sh # L1 structural PASS
 python3 scripts/run-conformance.py --level L2 # L2 structural (no live target)
 ODTIS_TARGET=https://your-idp/realm ./conformance/sandbox/run-sandbox-check.sh
@@ -174,7 +174,7 @@ Roadmap: [IETF roadmap](/governance/IETF-ROADMAP/). Scoping (what **not** to dup
 | Normative change RFC | [RFC template](/governance/RFC-TEMPLATE/) | Active |
 | Conformance levels | spec 1.8, [Conformance](/conformance/) | L1+L2 operational |
 | Machine-readable | [Registry](/registry/), Annex A, event schemas | In repo |
-| Public spec site | [odtis.org](https://odtis.org) | Live; maintained via local deploy scripts |
+| Public spec site | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) | Live; maintained via local deploy scripts |
 | Foundation governance | [Foundation charter](/governance/FOUNDATION-CHARTER/) | Pre-incorporation |
 
 ---

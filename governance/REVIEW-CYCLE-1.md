@@ -14,7 +14,7 @@
 Collect external feedback on ODTIS `0.9.0-draft` before promoting to stabilized `0.9.x-draft` and Phase 4 (`1.0.0` track).
 
 **In scope:** normative clarity, Annex A completeness, conformance testability, profile claims, sandbox L2 experience.
-**Out of scope:** Book 2 redaction (informative only), production deploy to `odtis.org` (separate track).
+**Out of scope:** Book 2 redaction (informative only), public spec site at [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org).
 
 ---
 

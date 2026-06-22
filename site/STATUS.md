@@ -38,7 +38,7 @@ Live snapshot for adopters and reviewers.
 | **Conformance L3** | Program draft only (Phase 4) |
 | **Test procedures** | 159 procedures across 6 profiles |
 | **Traceability** | 30/30 RF synced |
-| **Public site** | Built and deployed from this repo ([odtis.org](https://odtis.org)) |
+| **Public site** | Built and deployed from this repo ([digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org)) |
 | **Zenodo DOI** | Pending ([Zenodo release checklist](../publication/zenodo/RELEASE-CHECKLIST.md)) |
 | **External review** | Cycle 1 **open** (closes 2026-06-26) |
 
@@ -74,7 +74,7 @@ Profile comparison: [Profile comparison](PROFILES.md).
 Run locally:
 
 ```bash
-cd odtis
+# from repository root
 ./conformance/run.sh
 python3 scripts/run-conformance.py --level L2 --profile core-identity
 ```

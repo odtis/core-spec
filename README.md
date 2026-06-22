@@ -3,7 +3,7 @@
 **Status:** `0.9.0-draft` - Sections 1-10 review draft; Annex A frozen; Phase 3.2 + Foundation track A  
 **Navigation:** [Repository map](STRUCTURE.md)  
 **Citation:** [How to cite](publication/HOW-TO-CITE.md)  
-**Site:** [https://odtis.org](https://odtis.org)  
+**Site:** [https://digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org)  
 **License:** [CC BY 4.0](LICENSE)  
 **Reference implementation:** [Core Impl](https://github.com/odtis/core-impl) (private during Phase 3.2)
 
@@ -31,7 +31,7 @@ odtis/
 └── build/odtis-spec-site/   # gitignored MkDocs output
 ```
 
-Informative books and papers (Book 2, Book 3, P18) are **not** vendored here; see [Adoption guide](ADOPTION.md) and [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) when published.
+Informative books and papers (Book 2, Book 3, P18) are **not** vendored here; see [Adoption guide](ADOPTION.md) and [How to cite](publication/HOW-TO-CITE.md).
 
 ---
 
@@ -101,7 +101,7 @@ python3 scripts/sync-spec-version.py
 python3 scripts/sync-site-release-meta.py
 ```
 
-See [Site overview](site/README.md) and [Deploy Ec2 Odtis Org](scripts/DEPLOY-EC2-ODTIS-ORG.md).
+See [Site overview](site/README.md) and [Deploy to EC2](scripts/DEPLOY-EC2-SITE.md).
 
 ---
 

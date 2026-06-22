@@ -10,7 +10,7 @@ description: Publications, media, spec updates, and community news
 Updates on **spec releases**, **publications**, **media**, **review cycles**, and **community events**.
 
 <p class="odtis-hub-meta" markdown="1">
-<strong>Subscribe:</strong> <a href="mailto:info@odtis.org?subject=Subscribe%20to%20ODTIS%20newsletter">Email list (launching)</a> | 
+<strong>Subscribe:</strong> <a href="mailto:info@digitaltrustinfrastructure.org?subject=Subscribe%20to%20ODTIS%20newsletter">Email list (launching)</a> | 
 <strong>RSS:</strong> coming with site deploy | 
 <strong>Collaborate:</strong> [Hackathons & institutions](COLLABORATE.md)
 </p>
@@ -60,7 +60,7 @@ Updates on **spec releases**, **publications**, **media**, **review cycles**, an
 
 Institutions and collaborators can propose items for the next issue:
 
-- **Email:** info@odtis.org (subject: `ODTIS newsletter tip`)
+- **Email:** info@digitaltrustinfrastructure.org (subject: `ODTIS newsletter tip`)
 - **Include:** title, 1-2 sentence summary, public URL, category (spec / publication / media / event)
 - **Embargo:** optional date if announcement is coordinated
 
@@ -74,7 +74,7 @@ Normative announcements always link to [VERSION](/VERSION) and [Changelog](/CHAN
 |------|-----------|
 | **P01 - VenID reference architecture** | [Zenodo.20632508](https://doi.org/10.5281/zenodo.20632508) |
 | **Book 1 - Policy narrative** | [Zenodo.20647563](https://doi.org/10.5281/zenodo.20647563) |
-| **ODTIS spec (working draft)** | [odtis.org](https://odtis.org) |
+| **ODTIS spec (working draft)** | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) |
 | **ODTIS Zenodo snapshot** | Pending - [release checklist](../publication/zenodo/RELEASE-CHECKLIST.md) |
 
 ---

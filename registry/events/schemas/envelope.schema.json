@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://odtis.org/odtis/events/envelope.schema.json",
+  "$id": "https://digitaltrustinfrastructure.org/odtis/events/envelope.schema.json",
   "title": "ODTIS audit event envelope",
   "description": "Required fields for all ODTIS audit events (ODTIS-0529)",
   "type": "object",

@@ -19,7 +19,7 @@ Publish a **citable offline snapshot** without requiring a public site deploy.
 | 4 | Verify SHA-256 in `publication/zenodo/snapshots/SHA256SUMS` |
 
 ```bash
-cd odtis
+# from repository root
 python3 scripts/sync-spec-version.py --check
 ./conformance/run.sh
 python3 scripts/pin-annex-a-checksums.py

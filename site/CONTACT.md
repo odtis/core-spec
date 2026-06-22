@@ -21,7 +21,7 @@ Channels for specification feedback, collaboration proposals, press, and general
 | [Feedback guide](../governance/FEEDBACK.md) | Templates and review-cycle rules |
 | [External review cycle 1](../governance/REVIEW-CYCLE-1.md) | Open until 2026-06-26 |
 
-**Email (if GitHub unavailable):** [info@odtis.org](mailto:info@odtis.org?subject=ODTIS%20feedback)
+**Email (if GitHub unavailable):** [info@digitaltrustinfrastructure.org](mailto:info@digitaltrustinfrastructure.org?subject=ODTIS%20feedback)
 
 ---
 
@@ -30,7 +30,7 @@ Channels for specification feedback, collaboration proposals, press, and general
 Institutional pilots, university labs, and hackathon organizers:
 
 - [Collaborate](COLLABORATE.md) - tracks and organizer checklist
-- **Email:** [info@odtis.org](mailto:info@odtis.org?subject=ODTIS%20collaboration%20proposal)
+- **Email:** [info@digitaltrustinfrastructure.org](mailto:info@digitaltrustinfrastructure.org?subject=ODTIS%20collaboration%20proposal)
 
 ---
 
@@ -39,7 +39,7 @@ Institutional pilots, university labs, and hackathon organizers:
 | Topic | Contact |
 |-------|---------|
 | **Newsletter tips** | [Newsletter](NEWSLETTER.md) or email subject `ODTIS newsletter tip` |
-| **Press / interviews** | info@odtis.org (see VenID media kit in product docs) |
+| **Press / interviews** | info@digitaltrustinfrastructure.org (see VenID media kit in product docs) |
 | **Citation** | [How to cite](../publication/HOW-TO-CITE.md) |
 
 ---
@@ -55,8 +55,8 @@ Report suspected vulnerabilities in the **reference implementation** through you
 | | |
 |---|---|
 | **Steward** | FinnectOS, Inc. / VenID Platform |
-| **Web** | [venid.org](https://venid.org), [finnectos.com](https://finnectos.com) |
-| **Spec site** | [odtis.org](https://odtis.org) |
+| **Web** | [VenID (reference implementation)](https://github.com/odtis/core-impl), [finnectos.com](https://finnectos.com) |
+| **Spec site** | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) |
 
 ---
 

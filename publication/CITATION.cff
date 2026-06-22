@@ -8,10 +8,10 @@ date-released: 2026-06-12
 authors:
 - family-names: "Merida Oliveros"
 given-names: "Manuel"
-email: "info@odtis.org"
+email: "info@digitaltrustinfrastructure.org"
 affiliation: "FinnectOS, Inc."
 repository-code: "https://github.com/odtis/core-spec"
-url: "https://odtis.org"
+url: "https://digitaltrustinfrastructure.org"
 keywords:
 - digital-trust
 - identity

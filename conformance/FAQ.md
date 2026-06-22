@@ -96,13 +96,13 @@ Not the admin console, not a single endpoint path. Wrong targets cause discovery
 **No.** L1 runs entirely from the repository:
 
 ```bash
-cd odtis && ./conformance/run.sh
+./conformance/run.sh
 ```
 
 ### What is the fastest path to L2?
 
 ```bash
-cd odtis
+# from repository root
 ./conformance/run.sh
 export ODTIS_TARGET=https://your-idp/realms/your-realm
 ./conformance/sandbox/run-sandbox-check.sh

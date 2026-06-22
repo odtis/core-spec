@@ -33,8 +33,7 @@ Profile comparison: [Profile comparison](/site/PROFILES/)
 ## Quick start
 
 ```bash
-cd odtis
-
+# from repository root
 # L1 only (no live stack)
 ./conformance/sandbox/run-sandbox-check.sh --l1-only
 

@@ -88,8 +88,7 @@ flowchart LR
 ## Quick commands
 
 ```bash
-cd odtis
-
+# from repository root
 # Annex validators (part of L1)
 python3 scripts/validate-openapi.py
 python3 scripts/validate-threats.py

@@ -42,8 +42,7 @@ Conformance statement: link to `conformance-statement.yaml` or operator policy U
 ## Commands run
 
 ```bash
-cd odtis
-
+# from repository root
 # L1
 ./conformance/run.sh
 

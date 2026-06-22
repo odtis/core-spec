@@ -25,8 +25,8 @@ How the ODTIS project handles personal data on the **specification website**, **
 | | |
 |---|---|
 | **Interim steward** | FinnectOS, Inc. / VenID Platform |
-| **Contact** | [info@odtis.org](mailto:info@odtis.org?subject=ODTIS%20privacy) |
-| **Spec site** | [odtis.org](https://odtis.org) |
+| **Contact** | [info@digitaltrustinfrastructure.org](mailto:info@digitaltrustinfrastructure.org?subject=ODTIS%20privacy) |
+| **Spec site** | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) |
 
 A formal ODTIS Foundation data controller will be named upon incorporation (Phase C).
 
@@ -67,7 +67,7 @@ Where applicable law grants them, you may request:
 - **Restriction or objection** in permitted cases
 - **Unsubscribe** from newsletter at any time
 
-**How to exercise:** email [info@odtis.org](mailto:info@odtis.org?subject=ODTIS%20privacy%20request) with subject `ODTIS privacy request`.
+**How to exercise:** email [info@digitaltrustinfrastructure.org](mailto:info@digitaltrustinfrastructure.org?subject=ODTIS%20privacy%20request) with subject `ODTIS privacy request`.
 
 ---
 

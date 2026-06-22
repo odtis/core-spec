@@ -83,8 +83,7 @@ Normative rules for claims: [Section 1 - Scope and conformance](../spec/01-scope
 ### L1 - always run first
 
 ```bash
-cd odtis
-
+# from repository root
 # CI lab gate (no live target)
 ./conformance/run-l1-lab.sh
 

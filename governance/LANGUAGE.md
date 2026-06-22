@@ -14,7 +14,7 @@ All **authoritative ODTIS text** MUST be written in English:
 | In scope (English only) | Examples |
 |-------------------------|----------|
 | Normative specification | `spec/*/SPEC.md` |
-| Annexes published on odtis.org | `annexes/**/README.md`, OpenAPI `description` / `summary` fields |
+| Annexes published on digitaltrustinfrastructure.org | `annexes/**/README.md`, OpenAPI `description` / `summary` fields |
 | Registry metadata | `registry/requirements.json`, `terminology.yaml`, `profiles.yaml`, `events.yaml` |
 | Conformance procedures | `conformance/tests/**/*.md`, `conformance/README.md` |
 | Governance and site | `governance/*.md`, `README.md`, `CHANGELOG.md`, `PLAN-PHASES.md` |

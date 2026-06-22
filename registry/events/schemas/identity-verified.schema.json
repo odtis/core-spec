@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://odtis.org/odtis/events/identity-verified.schema.json",
+  "$id": "https://digitaltrustinfrastructure.org/odtis/events/identity-verified.schema.json",
   "title": "identity.verified",
   "description": "Subject verification or LoA assignment completed.",
   "allOf": [

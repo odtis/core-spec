@@ -136,7 +136,7 @@ For the FinnectOS VenID reference implementation:
 **Reproduce automated package:**
 
 ```bash
-cd odtis
+# from repository root
 ./conformance/run-phase4-package.sh
 # Optional live L2:
 ODTIS_TARGET=https://YOUR_REALM ./conformance/run-phase4-package.sh

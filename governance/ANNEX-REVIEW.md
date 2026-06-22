@@ -33,7 +33,7 @@ Normative requirements remain in sections 1-10 and [Requirements registry](../re
 | Shared `venid-common.openapi.yaml` | ✅ |
 | Frozen @ 0.9.0-draft | ✅ [Annex A freeze record](../annexes/A-openapi-registry/FREEZE.md) |
 | FB-004 autodiscovery out of scope | ✅ documented in README |
-| Public deploy (`odtis.org`) | 🟡 separate track |
+| Public deploy (`digitaltrustinfrastructure.org`) | 🟡 separate track |
 
 ---
 
@@ -93,7 +93,7 @@ Normative requirements remain in sections 1-10 and [Requirements registry](../re
 ## Validation commands
 
 ```bash
-cd odtis
+# from repository root
 python3 scripts/validate-openapi.py
 python3 scripts/validate-threats.py
 python3 scripts/validate-standards-mapping.py

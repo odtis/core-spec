@@ -12,7 +12,7 @@ description: Vision, mission, scope, and relationship to VenID
 <p class="odtis-hub-meta" markdown="1">
 <strong>Version:</strong> <a href="/VERSION">0.9.0-draft</a> | 
 <strong>License:</strong> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> | 
-<strong>Steward:</strong> <a href="https://venid.org">VenID</a> / FinnectOS (interim)
+<strong>Steward:</strong> <a href="https://github.com/odtis/core-impl">VenID</a> / FinnectOS (interim)
 </p>
 
 </div>

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://odtis.org/odtis/events/identity-created.schema.json",
+  "$id": "https://digitaltrustinfrastructure.org/odtis/events/identity-created.schema.json",
   "title": "identity.created",
   "description": "Subject record created at registration.",
   "allOf": [

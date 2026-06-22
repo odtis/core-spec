@@ -77,7 +77,7 @@ Section 1 Reference Architecture uses `ODTIS-0001`..`0010` in domain `ODTIS-0000
 ## Regenerate and validate
 
 ```bash
-cd odtis
+# from repository root
 python3 scripts/expand-product-requirements.py # Book 1 / product backlog (idempotent)
 python3 scripts/extract-requirements.py # transitional P18 sync
 python3 scripts/validate-registry.py

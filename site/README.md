@@ -1,11 +1,11 @@
 # ODTIS specification site
 
-Static site for [odtis.org](https://odtis.org) built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
+Static site for [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
 
 ## Local preview
 
 ```bash
-cd odtis
+# from repository root
 python3 -m venv .venv-site
 source .venv-site/bin/activate
 pip install -r site/requirements.txt
@@ -18,13 +18,13 @@ Open http://127.0.0.1:8000
 
 ```bash
 ./scripts/deploy-site.sh
-# output: ../build/odtis-spec-site/ (workspace level, gitignored) + CNAME (odtis.org)
+# output: ../build/odtis-spec-site/ (workspace level, gitignored) + CNAME (digitaltrustinfrastructure.org)
 ```
 
 Sync to a static host:
 
 ```bash
-ODTIS_DEPLOY_DEST=/var/www/odtis.org ./scripts/deploy-site.sh
+ODTIS_DEPLOY_DEST=/var/www/digitaltrustinfrastructure.org ./scripts/deploy-site.sh
 ```
 
 ## Deploy (GitHub Pages example)
@@ -33,7 +33,7 @@ ODTIS_DEPLOY_DEST=/var/www/odtis.org ./scripts/deploy-site.sh
 mkdocs gh-deploy -f site/mkdocs.yml --remote-branch gh-pages
 ```
 
-Or upload `build/odtis-spec-site/` (workspace root) to any static host bound to `odtis.org`.
+Or upload `build/odtis-spec-site/` (workspace root) to any static host bound to `digitaltrustinfrastructure.org`.
 
 ## Site navigation
 

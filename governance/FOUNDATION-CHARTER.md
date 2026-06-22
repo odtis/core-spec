@@ -48,7 +48,7 @@ Membership applies when the **ODTIS Foundation** legal entity is incorporated (P
 | **Neutral stewardship** | Multi-stakeholder board beyond a single vendor |
 | **Conformance program** | L3 auditor roster, trademark enforcement, dispute resolution |
 | **Working groups** | Chairs, meeting infrastructure, liaison travel |
-| **Ecosystem visibility** | Accurate implementer/operator listings on odtis.org |
+| **Ecosystem visibility** | Accurate implementer/operator listings on digitaltrustinfrastructure.org |
 
 ### Membership categories (draft)
 
@@ -72,7 +72,7 @@ All members in good standing MAY:
 
 **Implementer** and **Operator** members MAY additionally (TO-BE policy):
 
-- appear in the **implementer / operator directory** on odtis.org when a valid [conformance statement](/conformance/templates/conformance-statement.yaml) is published at declared level;
+- appear in the **implementer / operator directory** on digitaltrustinfrastructure.org when a valid [conformance statement](/conformance/templates/conformance-statement.yaml) is published at declared level;
 - nominate WG chairs and editors (subject to board confirmation);
 - receive early notification of **release candidates** (public comment period remains open to all).
 
@@ -105,7 +105,7 @@ Non-members do not vote on board matters or appear in member-only auditor/operat
 
 | Step | Action |
 |------|--------|
-| 1 | Submit application to **info@odtis.org** (category, organization, jurisdiction, intended profiles) |
+| 1 | Submit application to **info@digitaltrustinfrastructure.org** (category, organization, jurisdiction, intended profiles) |
 | 2 | Accept Membership Agreement + IPR terms |
 | 3 | For **Auditor / Lab**: competency review against [Auditor guide](/conformance/certification/auditor-guide/) |
 | 4 | For **directory listing**: publish or link conformance statement at honest level |
@@ -113,7 +113,7 @@ Non-members do not vote on board matters or appear in member-only auditor/operat
 
 ### Founding member intake (pre-incorporation)
 
-Until bylaws exist, interested organizations SHOULD contact [info@odtis.org](mailto:info@odtis.org?subject=ODTIS%20founding%20member%20interest) with:
+Until bylaws exist, interested organizations SHOULD contact [info@digitaltrustinfrastructure.org](mailto:info@digitaltrustinfrastructure.org?subject=ODTIS%20founding%20member%20interest) with:
 
 - organization profile and ODTIS profile interest (Core Identity, Trust Network, Operator, ...);
 - intended contribution (implementation, operator pilot, research, audit capability, liaison);

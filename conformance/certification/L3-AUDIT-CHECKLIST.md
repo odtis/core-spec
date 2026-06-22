@@ -33,7 +33,7 @@ Use this checklist for **third-party** L3 attestation. Internal dry-runs MAY ski
 
 | # | Command / artefact | Pass |
 |---|-------------------|------|
-| B1 | `cd odtis && ./conformance/run.sh` | [ ] |
+| B1 | `./conformance/run.sh` | [ ] |
 | B2 | `python3 scripts/validate-section-completeness.py` | [ ] |
 | B3 | `python3 scripts/validate-ri-map.py` | [ ] |
 | B4 | `python3 scripts/validate-component-bindings.py` | [ ] |

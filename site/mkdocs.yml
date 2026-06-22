@@ -1,5 +1,5 @@
 site_name: ODTIS
-site_url: https://odtis.org
+site_url: https://digitaltrustinfrastructure.org
 site_description: Open Digital Trust Infrastructure Specification (ODTIS) - vendor-neutral standard for digital identity, trust networks, conformance, and institutional exchange.
 repo_url: https://github.com/odtis/core-spec
 edit_uri: edit/main/
@@ -82,7 +82,7 @@ theme:
     - toc.follow
     - content.code.copy
     - content.tabs.link
-  copyright: Copyright &copy; 2026 <a href="https://venid.org">VenID</a> / FinnectOS &middot; ODTIS 0.9.0-draft &middot; <a href="/site/LICENSE/">CC BY 4.0</a>
+  copyright: Copyright &copy; 2026 <a href="https://github.com/odtis/core-impl">VenID</a> / FinnectOS &middot; ODTIS 0.9.0-draft &middot; <a href="/site/LICENSE/">CC BY 4.0</a>
 
 extra_css:
   - site/stylesheets/extra.css
@@ -234,12 +234,12 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
-  odtis_build_time: "2026-06-22T11:33:13Z"
-  odtis_build_sha: "dc25989"
+  odtis_build_time: "2026-06-22T11:58:07Z"
+  odtis_build_sha: "e9b9be1"
   odtis_version: "0.9.0-draft"
   generator: false
   seo:
-    og_image: https://odtis.org/site/assets/og-card.svg
+    og_image: https://digitaltrustinfrastructure.org/site/assets/og-card.svg
   meta:
     - name: keywords
       value: ODTIS, digital identity, trust network, conformance, OpenAPI, OIDC, LoA, digital trust infrastructure, interoperability, certification

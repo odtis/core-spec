@@ -416,7 +416,7 @@ Aligned with `phased-backlog.yaml` P0-P4 plus consistency remediation.
 
 ```bash
 # Structural integrity
-cd odtis && python3 scripts/validate-registry.py
+python3 scripts/validate-registry.py
 python3 scripts/validate-manifest-coverage.py
 python3 scripts/run-conformance.py --check-links
 

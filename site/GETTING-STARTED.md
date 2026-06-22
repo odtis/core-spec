@@ -65,7 +65,7 @@ Downloads: [Downloads & artifacts](DOWNLOADS.md)
 ### L1 - repository (no live stack required)
 
 ```bash
-cd odtis
+# from repository root
 ./conformance/run.sh
 ```
 

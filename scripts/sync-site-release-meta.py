@@ -60,7 +60,7 @@ def build_meta(version: str) -> dict[str, str]:
         "odtis_version": version,
         "build_sha": sha,
         "build_time": when,
-        "site_url": "https://odtis.org",
+        "site_url": "https://digitaltrustinfrastructure.org",
         "repository": "https://github.com/odtis/core-spec",
     }
 
@@ -79,7 +79,7 @@ def sync_mkdocs(version: str, meta: dict[str, str]) -> bool:
     year = datetime.now(timezone.utc).year
     new_copyright = (
         f'  copyright: Copyright &copy; {year} '
-        f'<a href="https://venid.org">VenID</a> / FinnectOS &middot; '
+        f'<a href="https://github.com/odtis/core-impl">VenID</a> / FinnectOS &middot; '
         f'ODTIS {version} &middot; '
         f'<a href="/site/LICENSE/">CC BY 4.0</a>'
     )

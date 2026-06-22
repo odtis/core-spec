@@ -45,8 +45,7 @@ Profile selection help: [Profile comparison](/site/PROFILES/) | [Adoption guide]
 ## 2. Run validators
 
 ```bash
-cd odtis
-
+# from repository root
 # L1 - required
 ./conformance/run.sh
 

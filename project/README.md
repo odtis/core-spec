@@ -144,8 +144,7 @@ Browse: [Glossary](../site/GLOSSARY.md) | [Requirements index](../site/REQUIREME
 ## Quick commands
 
 ```bash
-cd odtis
-
+# from repository root
 # Project health
 ./conformance/run.sh
 python3 scripts/validate-registry.py

@@ -37,7 +37,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/). Versioning: [VE
 - **Sandbox RI map (3.2.3)** - `conformance/sandbox/README.md` aligned to Book 3 C1-C4
 - **External feedback (3.2.4)** - Review cycle 1 (`REVIEW-CYCLE-1.md`, `REVIEW-LOG.yaml`, steward items FB-001..005, `open-review-issues.sh`)
 - **FB-001 accepted** - ODTIS-0331 linked in consent scope test stubs (100% core-identity coverage)
-- **Site deploy prep (3.1.16)** - `scripts/deploy-ec2.sh`, `scripts/build-site.sh`, CNAME for `odtis.org`
+- **Site deploy prep (3.1.16)** - `scripts/deploy-ec2.sh`, `scripts/build-site.sh`, CNAME for `digitaltrustinfrastructure.org`
 - **L2 enhancements** - Discovery field checks, JWKS, PKCE S256, `--output` JSON; `conformance/sandbox/run-sandbox-check.sh`
 - **Version bump** - ODTIS `0.9.0-draft` (registry, traceability, Annex A INDEX)
 

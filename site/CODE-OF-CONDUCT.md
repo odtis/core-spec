@@ -76,7 +76,7 @@ Stewards may remove, edit, or reject contributions that violate this code.
 
 If you experience or witness unacceptable behavior:
 
-1. Email **[info@odtis.org](mailto:info@odtis.org?subject=ODTIS%20Code%20of%20Conduct%20report)** with subject `ODTIS CoC report`
+1. Email **[info@digitaltrustinfrastructure.org](mailto:info@digitaltrustinfrastructure.org?subject=ODTIS%20Code%20of%20Conduct%20report)** with subject `ODTIS CoC report`
 2. Or use [GitHub private security advisory](https://github.com/odtis/core-spec/security/advisories/new) if available for sensitive cases
 
 Reports are handled **confidentially**. We will not retaliate against good-faith reporters.

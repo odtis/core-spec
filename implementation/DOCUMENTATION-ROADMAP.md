@@ -1,6 +1,6 @@
 # ODTIS documentation roadmap (project site)
 
-Phased plan to **complete, complement, and finalize** documentation on the ODTIS MkDocs site (`odtis.org`). Normative authority stays in `spec/`; this roadmap adds traceability depth without a third normative layer.
+Phased plan to **complete, complement, and finalize** documentation on the ODTIS MkDocs site (`digitaltrustinfrastructure.org`). Normative authority stays in `spec/`; this roadmap adds traceability depth without a third normative layer.
 
 **Project hub:** [Project hub](../project/README.md) | **Status:** [Project status](../site/STATUS.md)
 
