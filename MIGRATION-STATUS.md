@@ -25,18 +25,30 @@ odtis/
 
 ---
 
-## Build and deploy
+## Build and deploy (local)
 
 ```bash
 cd core-spec
 ./scripts/build-site.sh
-# Manual deploy (local credentials, gitignored):
+
+# One-time: copy and edit deploy config (gitignored)
 cp scripts/odtis-deploy.env.example scripts/odtis-deploy.env
+
+# Build + rsync to EC2
 ./scripts/deploy-ec2.sh
 ```
 
-**CI auto-deploy:** every merge to `main` runs `.github/workflows/release-deploy.yml` (minor version bump, build, EC2 rsync).  
-GitHub Actions secrets: see [GITHUB-DEPLOY-SECRETS.md](scripts/GITHUB-DEPLOY-SECRETS.md).
+Deploy credentials live only in `scripts/odtis-deploy.env` on your machine (never committed).
+
+Optional version bump before release:
+
+```bash
+python3 scripts/bump-spec-version.py --minor --write
+python3 scripts/sync-spec-version.py
+python3 scripts/sync-site-release-meta.py
+./scripts/build-site.sh
+./scripts/deploy-ec2.sh
+```
 
 ---
 
@@ -44,14 +56,13 @@ GitHub Actions secrets: see [GITHUB-DEPLOY-SECRETS.md](scripts/GITHUB-DEPLOY-SEC
 
 - Single source: `VERSION` at repo root
 - Site shows release badge, footer build metadata, and `/site/BUILD-META.json`
-- Release commits use prefix `chore(release):` and do not re-trigger deploy
+- Bump and deploy manually from local when ready
 
 ---
 
 ## Security
 
-- Never commit SSH keys, `odtis-deploy.env`, or host-specific infrastructure values
-- CI runs `scripts/check-deploy-safety.py` on pull requests
+- Never commit SSH keys or `scripts/odtis-deploy.env`
 - Report issues: [SECURITY.md](SECURITY.md)
 
 ---

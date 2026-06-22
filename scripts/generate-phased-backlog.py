@@ -80,7 +80,6 @@ EPICS: dict[str, list[dict]] = {
                 "scripts/generate-conformance-statement.py",
                 "scripts/validate-conformance-statement.py",
                 "implementation/statements/venid-sandbox/",
-                ".github/workflows/odtis-spec.yml validate step",
             ],
         },
         {

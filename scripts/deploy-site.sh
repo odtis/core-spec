@@ -28,7 +28,7 @@ ODTIS_DEPLOY_DEST=/var/www/odtis.org ./scripts/deploy-site.sh
 cd odtis && source .venv-site/bin/activate
 mkdocs gh-deploy -f site/mkdocs.yml --remote-branch gh-pages
 
-3) CI artifact - see .github/workflows/odtis-spec.yml
+3) EC2 rsync - see scripts/deploy-ec2.sh and scripts/odtis-deploy.env.example
 
 Output: $OUT
 CNAME: $CNAME

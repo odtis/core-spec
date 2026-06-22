@@ -99,9 +99,10 @@ See [Build plan](PLAN-PHASES.md). Summary:
 ./scripts/build-site.sh # -> ../build/odtis-spec-site/
 source .venv-site/bin/activate # after first build
 mkdocs serve -f site/mkdocs.yml # http://127.0.0.1:8000
+./scripts/deploy-ec2.sh # local deploy (see scripts/odtis-deploy.env.example)
 ```
 
-See [Site overview](site/README.md). CI artifact: `.github/workflows/odtis-spec.yml`.
+See [Site overview](site/README.md) and [DEPLOY-EC2-ODTIS-ORG.md](scripts/DEPLOY-EC2-ODTIS-ORG.md).
 
 ---
 
