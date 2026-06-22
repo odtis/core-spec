@@ -44,7 +44,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 | [`ODTIS-0313 test`](../../tests/core-identity/test_odtis_0313.md) | `ODTIS-0313` | implemented |
 | [`ODTIS-0314 test`](../../tests/core-identity/test_odtis_0314.md) | `ODTIS-0314` | implemented |
 | [`ODTIS-0316 test`](../../tests/core-identity/test_odtis_0316.md) | `ODTIS-0316` | implemented |
-| [`ODTIS-0318 test`](../../tests/core-identity/test_odtis_0318.md) | `ODTIS-0318` | pending |
+| [`ODTIS-0318 test`](../../tests/core-identity/test_odtis_0318.md) | `ODTIS-0318` | implemented |
 | [`ODTIS-0319 test`](../../tests/core-identity/test_odtis_0319.md) | `ODTIS-0319` | implemented |
 | [`ODTIS-0320 test`](../../tests/core-identity/test_odtis_0320.md) | `ODTIS-0320` | implemented |
 | [`ODTIS-0321 test`](../../tests/core-identity/test_odtis_0321.md) | `ODTIS-0321` | implemented |
@@ -67,7 +67,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 | [`ODTIS-0341 test`](../../tests/core-identity/test_odtis_0341.md) | `ODTIS-0341` | implemented |
 | [`ODTIS-0342 test`](../../tests/core-identity/test_odtis_0342.md) | `ODTIS-0342` | implemented |
 | [`ODTIS-0343 test`](../../tests/core-identity/test_odtis_0343.md) | `ODTIS-0343` | implemented |
-| [`Openapi Verify Response test`](../../tests/core-identity/test_openapi_verify_response.md) | `ODTIS-0108`, `ODTIS-0316`, `ODTIS-0317` | pending |
+| [`Openapi Verify Response test`](../../tests/core-identity/test_openapi_verify_response.md) | `ODTIS-0108`, `ODTIS-0316`, `ODTIS-0317` | implemented |
 | [`Owasp Baseline test`](../../tests/core-identity/test_owasp_baseline.md) | `ODTIS-0521` | implemented |
 | [`Pkce Required test`](../../tests/core-identity/test_pkce_required.md) | `ODTIS-0302` | implemented |
 | [`Redirect Uri Validation test`](../../tests/core-identity/test_redirect_uri_validation.md) | `ODTIS-0305` | implemented |
@@ -83,7 +83,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 |--------|-------|
 | Registry requirements | 45 |
 | Linked tests | 58 |
-| Implemented (smoke) | 56 |
+| Implemented (smoke) | 58 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`

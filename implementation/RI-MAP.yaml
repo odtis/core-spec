@@ -162,7 +162,7 @@ implementations:
     - ODTIS-0535
     l2_check: l2-verification-api
     binding_doc: implementation/component-bindings/verification-api.yaml
-    notes: MachineClientPolicy; VerificationService; VERIFICATION-API-SANDBOX.md
+    notes: MachineClientPolicy; VerificationService; VERIFICATION-API-SANDBOX.md; verification-api-latency-check.sh; openapi-verify-response-check.sh
 
   - id: citizen-api
     module: api/citizen-api

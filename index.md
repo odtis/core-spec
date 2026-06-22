@@ -82,10 +82,10 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 </div>
 <div class="odtis-stat odtis-stat--meter" markdown="1">
 <!-- GENERATED:coverage-hero:START -->
-<strong>130</strong>
+<strong>132</strong>
 <span>Smoke-evidenced</span>
-<div class="odtis-meter" role="presentation"><div class="odtis-meter__fill" style="width:82%"></div></div>
-<small class="odtis-stat__hint">81.8% of 159 procedures</small>
+<div class="odtis-meter" role="presentation"><div class="odtis-meter__fill" style="width:83%"></div></div>
+<small class="odtis-stat__hint">83% of 159 procedures</small>
 <!-- GENERATED:coverage-hero:END -->
 </div>
 <div class="odtis-stat" markdown="1">

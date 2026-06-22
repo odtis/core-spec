@@ -1,6 +1,6 @@
 # Conformance test: Annex A - VerifyResponse schema
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0316, ODTIS-0317
 **Profile:** core-identity
 **OpenAPI:** `verification-api.openapi.yaml` - `verification.verify.post`
