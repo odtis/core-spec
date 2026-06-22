@@ -23,6 +23,21 @@ jobs:
       - name: Deploy safety check
         run: python3 scripts/check-deploy-safety.py
 
+      - name: Verify deploy secrets
+        env:
+          ODTIS_EC2_HOST: ${{ secrets.ODTIS_EC2_HOST }}
+          ODTIS_SSH_KEY: ${{ secrets.ODTIS_SSH_KEY }}
+        run: |
+          if [[ -z "$ODTIS_SSH_KEY" ]]; then
+            echo "::error::ODTIS_SSH_KEY secret is missing or empty. See scripts/GITHUB-DEPLOY-SECRETS.md"
+            exit 1
+          fi
+          if [[ -z "$ODTIS_EC2_HOST" ]]; then
+            echo "::error::ODTIS_EC2_HOST secret is missing or empty. See scripts/GITHUB-DEPLOY-SECRETS.md"
+            exit 1
+          fi
+          echo "Deploy secrets present (values not printed)."
+
       - name: Make scripts executable
         run: chmod +x scripts/*.sh conformance/run.sh
 
@@ -58,12 +73,8 @@ jobs:
       - name: Configure SSH for EC2 deploy
         env:
           ODTIS_SSH_KEY: ${{ secrets.ODTIS_SSH_KEY }}
-        run: |
-          mkdir -p ~/.ssh
-          printf '%s' "$ODTIS_SSH_KEY" > ~/.ssh/odtis_deploy.pem
-          echo >> ~/.ssh/odtis_deploy.pem
-          chmod 600 ~/.ssh/odtis_deploy.pem
-          ssh-keygen -y -f ~/.ssh/odtis_deploy.pem > /dev/null
+          ODTIS_EC2_HOST: ${{ secrets.ODTIS_EC2_HOST }}
+        run: ./scripts/ci-prepare-deploy-ssh.sh ~/.ssh/odtis_deploy.pem
 
       - name: Deploy to EC2
         env:

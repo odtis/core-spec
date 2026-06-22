@@ -1,34 +1,50 @@
 # GitHub Actions secrets for odtis.org deploy
 
-Configure in **GitHub → odtis/core-spec → Settings → Secrets and variables → Actions**.
+Configure in **GitHub → odtis/core-spec → Settings → Secrets and variables → Actions → Repository secrets**.
 
-| Secret | Example value | Notes |
-|--------|---------------|-------|
-| `ODTIS_EC2_HOST` | `ec2-user@YOUR_EC2_PUBLIC_IP` | SSH `user@host` from your cloud console |
-| `ODTIS_SSH_KEY` | *(full PEM private key contents)* | Paste entire `.pem` file including `BEGIN/END` lines |
+| Secret | Value | Notes |
+|--------|-------|-------|
+| `ODTIS_EC2_HOST` | `ec2-user@YOUR_EC2_PUBLIC_IP` | Same value as local `scripts/odtis-deploy.env` |
+| `ODTIS_SSH_KEY` | *full PEM file contents* | **Not** the file path |
 
-Optional: set repository variable `ODTIS_REMOTE_DIR` if docroot differs from `/var/www/odtis.org`.
+## Paste the PEM correctly
+
+On your Mac:
+
+```bash
+pbcopy < ~/.ssh/MvpKeyPair.pem
+```
+
+In GitHub → **New repository secret**:
+
+- **Name:** `ODTIS_SSH_KEY`
+- **Secret:** Cmd+V (must include `-----BEGIN ... PRIVATE KEY-----` through `-----END ... PRIVATE KEY-----`)
+
+Common mistakes:
+
+| Wrong | Right |
+|-------|-------|
+| `~/.ssh/MvpKeyPair.pem` | Full file contents |
+| Only the middle lines | Include BEGIN and END lines |
+| Extra quotes around the key | Paste raw PEM only |
+
+## Verify locally before CI
+
+```bash
+ssh -i ~/.ssh/MvpKeyPair.pem -o BatchMode=yes ec2-user@YOUR_EC2_PUBLIC_IP echo ok
+```
+
+Should print `ok`.
 
 ## Workflow
 
-`.github/workflows/release-deploy.yml` runs on every push to `main` except `chore(release):*` commits:
+`.github/workflows/release-deploy.yml` on every push to `main` (except `chore(release):*`):
 
-1. Bump **semver minor** in `VERSION` (`0.9.0-draft` → `0.10.0-draft`)
-2. Sync version across spec artifacts + MkDocs UX metadata
-3. Build site (`../build/odtis-spec-site/`)
-4. Rsync to EC2
-5. Commit `chore(release): ODTIS <version> site deploy` back to `main`
+1. Verify secrets exist (fail fast if empty)
+2. Bump semver minor in `VERSION`
+3. Build site → rsync EC2
+4. Commit `chore(release): ODTIS <version> site deploy`
 
-## Version visibility on site
+## Re-run after fixing secrets
 
-- Header badge: `config.extra.odtis_version`
-- Footer build line: version + git sha + timestamp
-- Home hero: link to `/VERSION` and `/site/BUILD-META.json`
-- Static files: `/VERSION`, `/site/BUILD-META.json`
-
-## Local manual deploy (unchanged)
-
-```bash
-cp scripts/odtis-deploy.env.example scripts/odtis-deploy.env
-./scripts/deploy-ec2.sh
-```
+Actions → **Release and deploy site** → **Re-run all jobs**
