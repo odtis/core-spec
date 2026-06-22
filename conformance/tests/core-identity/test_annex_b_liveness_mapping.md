@@ -1,6 +1,6 @@
 # Conformance test: Annex B - ODTIS-0523 liveness threat mapping
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0523
 **Profile:** core-identity
 **Annex B:** `T-P07-005` (Presentation attack)

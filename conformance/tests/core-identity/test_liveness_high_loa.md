@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0523 - liveness for High LoA
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0523
 **Profile:** core-identity
 

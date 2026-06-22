@@ -19,7 +19,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 | Test | Requirement | Status |
 |------|-------------|--------|
 | [`Account Recovery test`](../../tests/core-identity/test_account_recovery.md) | `ODTIS-0309`, `ODTIS-0326` | implemented |
-| [`Annex B Liveness Mapping test`](../../tests/core-identity/test_annex_b_liveness_mapping.md) | `ODTIS-0312`, `ODTIS-0523` | pending |
+| [`Annex B Liveness Mapping test`](../../tests/core-identity/test_annex_b_liveness_mapping.md) | `ODTIS-0312`, `ODTIS-0523` | implemented |
 | [`Annex C Nist Loa Mapping test`](../../tests/core-identity/test_annex_c_nist_loa_mapping.md) | `ODTIS-0103`, `ODTIS-0105` | pending |
 | [`Consent Audit Events test`](../../tests/core-identity/test_consent_audit_events.md) | `ODTIS-0527` | implemented |
 | [`Consent Gated Claims test`](../../tests/core-identity/test_consent_gated_claims.md) | `ODTIS-0307`, `ODTIS-0331` | pending |
@@ -27,7 +27,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 | [`Explicit Consent First Release test`](../../tests/core-identity/test_explicit_consent_first_release.md) | `ODTIS-0328` | implemented |
 | [`High Biometric Gate test`](../../tests/core-identity/test_high_biometric_gate.md) | `ODTIS-0103` | pending |
 | [`Identity Audit Events test`](../../tests/core-identity/test_identity_audit_events.md) | `ODTIS-0526` | pending |
-| [`Liveness High Loa test`](../../tests/core-identity/test_liveness_high_loa.md) | `ODTIS-0523` | pending |
+| [`Liveness High Loa test`](../../tests/core-identity/test_liveness_high_loa.md) | `ODTIS-0523` | implemented |
 | [`Loa Claim test`](../../tests/core-identity/test_loa_claim.md) | `ODTIS-0102` | pending |
 | [`ODTIS-0101 test`](../../tests/core-identity/test_odtis_0101.md) | `ODTIS-0101` | pending |
 | [`ODTIS-0104 test`](../../tests/core-identity/test_odtis_0104.md) | `ODTIS-0344` | implemented |
@@ -83,7 +83,7 @@ Requirement prefixes: `ODTIS-01*`, `ODTIS-03*`, `ODTIS-0328`-`0339`
 |--------|-------|
 | Registry requirements | 45 |
 | Linked tests | 58 |
-| Implemented (smoke) | 26 |
+| Implemented (smoke) | 28 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`

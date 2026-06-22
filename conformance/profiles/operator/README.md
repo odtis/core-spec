@@ -50,7 +50,7 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 | [`Secrets Manager test`](../../tests/operator/test_secrets_manager.md) | `ODTIS-0519` | implemented |
 | [`Per Request Partner Verify test`](../../tests/trust-network/test_per_request_partner_verify.md) | `ODTIS-0517` | implemented |
 | [`Owasp Baseline test`](../../tests/core-identity/test_owasp_baseline.md) | `ODTIS-0521` | implemented |
-| [`Liveness High Loa test`](../../tests/core-identity/test_liveness_high_loa.md) | `ODTIS-0523` | pending |
+| [`Liveness High Loa test`](../../tests/core-identity/test_liveness_high_loa.md) | `ODTIS-0523` | implemented |
 | [`Identity Audit Events test`](../../tests/core-identity/test_identity_audit_events.md) | `ODTIS-0526` | pending |
 | [`Consent Audit Events test`](../../tests/core-identity/test_consent_audit_events.md) | `ODTIS-0527` | implemented |
 | [`Exchange Audit Events test`](../../tests/trust-network/test_exchange_audit_events.md) | `ODTIS-0528` | implemented |
@@ -61,7 +61,7 @@ Requirement prefixes: `ODTIS-05*` (sections 7-10)
 |--------|-------|
 | Registry requirements | 36 |
 | Linked tests | 30 |
-| Implemented (smoke) | 29 |
+| Implemented (smoke) | 30 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`
