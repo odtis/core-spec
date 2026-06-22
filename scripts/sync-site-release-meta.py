@@ -82,9 +82,9 @@ def sync_mkdocs(version: str, meta: dict[str, str]) -> bool:
     year = datetime.now(timezone.utc).year
     new_copyright = (
         f'  copyright: Copyright &copy; {year} '
-        f'<a href="https://digitaltrustinfrastructure.org">Digital Trust Infrastructure</a> &middot; '
-        f'<a href="https://github.com/odtis/core-impl">VenID</a> (reference implementation) &middot; '
+        f'<a href="/site/LICENSE/">FinnectOS, Inc.</a> &middot; '
         f'ODTIS {version} &middot; '
+        f'<a href="https://github.com/odtis/core-impl">VenID</a> RI &middot; '
         f'<a href="/site/LICENSE/">CC BY 4.0</a>'
     )
     updated = COPYRIGHT_RE.sub(new_copyright, text, count=1)

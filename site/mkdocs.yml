@@ -82,7 +82,7 @@ theme:
     - toc.follow
     - content.code.copy
     - content.tabs.link
-  copyright: Copyright &copy; 2026 <a href="https://digitaltrustinfrastructure.org">Digital Trust Infrastructure</a> &middot; <a href="https://github.com/odtis/core-impl">VenID</a> (reference implementation) &middot; ODTIS 0.9.0-draft &middot; <a href="/site/LICENSE/">CC BY 4.0</a>
+  copyright: Copyright &copy; 2026 <a href="/site/LICENSE/">FinnectOS, Inc.</a> &middot; ODTIS 0.9.0-draft &middot; <a href="https://github.com/odtis/core-impl">VenID</a> RI &middot; <a href="/site/LICENSE/">CC BY 4.0</a>
 
 extra_css:
   - site/stylesheets/extra.css

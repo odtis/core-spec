@@ -69,9 +69,15 @@ python3 scripts/validate-section-completeness.py
 
 ---
 
+## License and contributions
+
+Normative contributions are published under [CC BY 4.0](../LICENSE). **Copyright holder:** FinnectOS, Inc. By opening a pull request, you agree to the representations in [IPR policy](IPR-POLICY.md).
+
+---
+
 ## Language policy
 
-ODTIS is an international open standard; **English is the canonical language** for specification prose, registry metadata, OpenAPI descriptions, conformance tests, and governance docs. Narrative translations (Book 1 ES, jurisdiction playbooks) live outside `odtis/` and do not override normative MUST text.
+ODTIS is an international open standard; **English is the canonical language** for specification prose, registry metadata, OpenAPI descriptions, conformance tests, and governance docs. Narrative translations (Book 1 ES, jurisdiction playbooks) live outside this repository and on [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org); they do not override normative MUST text.
 
 ---
 

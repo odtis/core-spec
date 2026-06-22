@@ -1,6 +1,6 @@
 Open Digital Trust Infrastructure Specification (ODTIS)
 
-Copyright (c) 2026 ODTIS contributors
+Copyright (c) 2026 FinnectOS, Inc.
 
 Licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
@@ -28,6 +28,8 @@ Additional clarification:
 
 This license applies only to the normative and informative content contained in the ODTIS specification repository (https://github.com/odtis/core-spec).
 
-Interim steward: FinnectOS, Inc. (pending ODTIS Foundation incorporation). See governance/MAINTAINERS.md.
+Stewardship: FinnectOS, Inc. is the copyright holder and interim specification steward until ODTIS Foundation incorporation. Copyright is intended to transfer to the ODTIS Foundation upon incorporation. See governance/FOUNDATION-CHARTER.md and governance/MAINTAINERS.md.
+
+Contributions: By contributing normative content to this repository, you represent that you may submit the work and that it is offered for publication under CC BY 4.0. A formal Contributor License Agreement may be required when the ODTIS Foundation incorporates.
 
 Note: Academic papers cited by ODTIS (e.g. P18) may remain under CC BY-NC-ND 4.0 when published separately on digitaltrustinfrastructure.org.

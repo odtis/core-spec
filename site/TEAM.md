@@ -24,7 +24,7 @@ Editors, interim stewards, and planned working groups behind ODTIS `0.9.0-draft`
 | Role | Name | Scope | Contact |
 |------|------|-------|---------|
 | **Lead editor** | Manuel Mérida Oliveros | Normative coherence, releases, review cycle | [info@odtis.org](mailto:info@odtis.org) |
-| **Interim steward** | FinnectOS, Inc. / [Digital Trust Infrastructure](https://digitaltrustinfrastructure.org) | Steward until ODTIS Foundation incorporates | [VenID (core-impl)](https://github.com/odtis/core-impl) |
+| **Interim steward** | FinnectOS, Inc. (copyright holder) / [Digital Trust Infrastructure](https://digitaltrustinfrastructure.org) (research) | Until ODTIS Foundation incorporates | [VenID (core-impl)](https://github.com/odtis/core-impl) |
 
 Source of truth: [Maintainers](../governance/MAINTAINERS.md)
 

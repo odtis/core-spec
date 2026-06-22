@@ -24,7 +24,7 @@ How the ODTIS project handles personal data on the **specification website**, **
 
 | | |
 |---|---|
-| **Interim steward** | FinnectOS, Inc. / [Digital Trust Infrastructure](https://digitaltrustinfrastructure.org) |
+| **Data controller (interim)** | FinnectOS, Inc. (copyright holder and specification steward) |
 | **Contact** | [info@odtis.org](mailto:info@odtis.org?subject=ODTIS%20privacy) |
 | **Spec site** | [odtis.org](https://odtis.org) |
 

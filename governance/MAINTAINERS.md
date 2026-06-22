@@ -12,7 +12,7 @@
 | Role | Name | Scope | Contact |
 |------|------|-------|---------|
 | **Lead editor** | Manuel Mérida Oliveros | Overall normative coherence, release management | info@odtis.org |
-| **Organization** | FinnectOS, Inc. / [Digital Trust Infrastructure](https://digitaltrustinfrastructure.org) | Steward until ODTIS Foundation is incorporated | - |
+| **Organization** | FinnectOS, Inc. (copyright holder; interim steward) / [Digital Trust Infrastructure](https://digitaltrustinfrastructure.org) (research) | Until ODTIS Foundation is incorporated | - |
 
 Additional area editors will be listed as Working Groups activate (see [Working groups](working-groups/README.md)).
 

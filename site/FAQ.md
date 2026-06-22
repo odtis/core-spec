@@ -70,11 +70,11 @@ The **specification text and machine-readable artifacts** are open under [CC BY 
 
 ### Who maintains ODTIS?
 
-Interim stewards under VenID / FinnectOS governance ([Maintainers](/governance/MAINTAINERS/), [Foundation charter](/governance/FOUNDATION-CHARTER/)). Long-term intent is an ODTIS Foundation after incorporation.
+**FinnectOS, Inc.** holds copyright and acts as interim steward ([Maintainers](/governance/MAINTAINERS/), [Foundation charter](/governance/FOUNDATION-CHARTER/)). Long-term intent is transfer to an ODTIS Foundation after incorporation.
 
 ### Is ODTIS only for Venezuela?
 
-**No.** ODTIS is jurisdiction-neutral. VenID and FinnectOS originated the work; the spec is written for any country or operator that adopts the profiles and conformance model.
+**No.** ODTIS is jurisdiction-neutral. FinnectOS, Inc. originated and stewards the specification; VenID is the reference implementation ([core-impl](https://github.com/odtis/core-impl)). The spec is written for any country or operator that adopts the profiles and conformance model.
 
 ---
 

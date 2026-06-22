@@ -33,6 +33,7 @@ This document is an **ODTIS review draft** (`0.9.0-draft`). It is **not** an IET
 | **Maturity** | Review draft - see [Spec lifecycle stages](/governance/SPEC-STAGES/) |
 | **Canonical language** | English ([Language policy](/governance/LANGUAGE/)) |
 | **License** | [CC BY 4.0](../../LICENSE) |
+| **Copyright** | FinnectOS, Inc. (interim; see [LICENSE](../../LICENSE)) |
 | **Errata** | [Errata policy](/governance/ERRATA/) |
 | **Feedback** | [Feedback channels](/governance/FEEDBACK/) - review cycle 1 open |
 | **Citation** | [How to cite](../../publication/HOW-TO-CITE.md) |

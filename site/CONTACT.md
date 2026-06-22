@@ -54,10 +54,11 @@ Report suspected vulnerabilities in the **reference implementation** through you
 
 | | |
 |---|---|
-| **Steward** | [Digital Trust Infrastructure](https://digitaltrustinfrastructure.org) (research) / FinnectOS, Inc. |
+| **Copyright** | FinnectOS, Inc. ([CC BY 4.0](/site/LICENSE/)) |
+| **Steward** | FinnectOS, Inc. (interim; pending ODTIS Foundation) |
+| **Research** | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) |
 | **Reference implementation** | [VenID (`core-impl`)](https://github.com/odtis/core-impl) |
 | **Spec site** | [odtis.org](https://odtis.org) |
-| **Research hub** | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) |
 
 ---
 

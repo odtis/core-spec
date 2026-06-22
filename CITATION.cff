@@ -27,4 +27,6 @@ preferred-citation:
   version: 0.9.0-draft
   year: 2026
   license: CC-BY-4.0
-  notes: "Working draft - not a frozen standard until ODTIS 1.0.0"
+  publisher:
+    name: "FinnectOS, Inc."
+  notes: "Copyright (c) FinnectOS, Inc. Working draft - not a frozen standard until ODTIS 1.0.0"

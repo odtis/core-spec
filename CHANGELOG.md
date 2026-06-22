@@ -19,6 +19,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/). Versioning: [VE
 
 ### Changed
 
+- **Copyright** - FinnectOS, Inc. as specification copyright holder; aligned LICENSE, IPR, citations, and site pages
 - **Domain and contact alignment** - `odtis.org` spec site; `digitaltrustinfrastructure.org` research org; VenID links to `core-impl`; `info@odtis.org` / `conformance@odtis.org`
 - **Open-source publication prep** - removed stale `docs/sources/` paths; local deploy docs; audit script; README and adoption alignment
 - **Registry** - 149 requirement IDs; section index sync; ID alignment (0104, 0340-0343)

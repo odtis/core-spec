@@ -11,6 +11,8 @@
 
 ODTIS normative prose, registry entries, OpenAPI bundles (Annex A), conformance tests, and governance documents in this repository are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
+**Copyright holder:** FinnectOS, Inc. (see [LICENSE](../LICENSE)).
+
 Implementations **need not** open-source code to claim ODTIS conformance.
 
 ---
@@ -20,8 +22,9 @@ Implementations **need not** open-source code to claim ODTIS conformance.
 By submitting a pull request, patch, or RFC proposal to this repository, contributors represent that:
 
 1. they have the right to submit the work;
-2. the contribution is offered under **CC BY 4.0** for normative content;
-3. they will disclose known patent claims that read on normative MUST requirements (email editors listed in [Maintainers](MAINTAINERS.md)).
+2. the contribution is offered under **CC BY 4.0** for normative content in this repository;
+3. they grant FinnectOS, Inc. the rights needed to publish, sublicense, and steward the contribution under the project license until copyright transfers to the ODTIS Foundation;
+4. they will disclose known patent claims that read on normative MUST requirements (email editors listed in [Maintainers](MAINTAINERS.md)).
 
 A formal Contributor License Agreement (CLA) MAY be required when the ODTIS Foundation is incorporated (Phase C).
 

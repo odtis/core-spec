@@ -12,7 +12,8 @@ description: Vision, mission, scope, and relationship to VenID
 <p class="odtis-hub-meta" markdown="1">
 <strong>Version:</strong> <a href="/VERSION">0.9.0-draft</a> | 
 <strong>License:</strong> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> | 
-<strong>Steward:</strong> <a href="https://digitaltrustinfrastructure.org">Digital Trust Infrastructure</a> / FinnectOS (interim) · <strong>VenID RI:</strong> <a href="https://github.com/odtis/core-impl">core-impl</a>
+<strong>Copyright:</strong> FinnectOS, Inc. (CC BY 4.0) | 
+<strong>Steward:</strong> FinnectOS, Inc. (interim) · <strong>VenID RI:</strong> <a href="https://github.com/odtis/core-impl">core-impl</a> · <strong>Research:</strong> <a href="https://digitaltrustinfrastructure.org">DTI</a>
 </p>
 
 </div>

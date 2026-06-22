@@ -134,7 +134,9 @@ A public **founding member prospectus** MAY be published before incorporation (T
 
 ## Succession
 
-Until incorporation, FinnectOS / VenID stewards act as interim editors per [Maintainers](MAINTAINERS.md).
+Until incorporation, **FinnectOS, Inc.** holds copyright, acts as interim specification steward, and publishes releases per [Maintainers](MAINTAINERS.md). VenID ([core-impl](https://github.com/odtis/core-impl)) is the reference implementation, not the specification copyright holder.
+
+Upon ODTIS Foundation incorporation, FinnectOS, Inc. intends to **assign or license** specification copyright to the Foundation so stewardship and copyright align under a neutral multi-stakeholder body. Until then, contributions remain under [CC BY 4.0](../LICENSE) as described in [IPR policy](IPR-POLICY.md).
 
 ---
 
