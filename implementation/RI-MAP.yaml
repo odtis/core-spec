@@ -340,7 +340,7 @@ implementations:
     - ODTIS-0360
     - ODTIS-0531
     binding_doc: implementation/component-bindings/ewebhook-delivery.yaml
-    notes: WebhookDeliveryService; ewebhook-check.sh; retry + HMAC + PII minimize
+    notes: WebhookDeliveryService; ewebhook-check.sh; staging overlay + live HMAC/retry (#14)
 
   conformance:
     level_target: L3
