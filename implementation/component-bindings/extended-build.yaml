@@ -25,6 +25,7 @@ staging_overlay:
   compose: compose/staging/docker-compose.extended.yml
   orchestrator: scripts/extended-staging-up.sh
   smoke_script: scripts/extended-overlay-check.sh
+  gateway_smoke_script: scripts/gateway-extended-check.sh
 
 odtis_ids:
   - ODTIS-0340

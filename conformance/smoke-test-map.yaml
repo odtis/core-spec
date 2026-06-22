@@ -140,6 +140,15 @@ smokes:
       - ODTIS-0343
     notes: extended-overlay-check.sh; compose/staging/docker-compose.extended.yml profile extended (#12)
 
+  - script: conformance/run-gateway-extended-checks.sh
+    odtis_ids:
+      - ODTIS-0315
+      - ODTIS-0340
+      - ODTIS-0341
+      - ODTIS-0342
+      - ODTIS-0343
+    notes: gateway-extended-check.sh; api-gateway extended routes + machine-client auth (#13)
+
   - script: conformance/run-eregistry-staging-checks.sh
     odtis_ids:
       - ODTIS-0104
