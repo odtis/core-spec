@@ -11,7 +11,7 @@ Engineer-oriented diagrams for the ODTIS two-layer model, request paths, profile
 
 <p class="odtis-hub-meta" markdown="1">
 <strong>Normative text:</strong> [Specification](../spec/INDEX.md) | 
-<strong>Informative figures:</strong> Paper P01 PlantUML in <code>docs/sources/papers/01-venid-hybrid-architecture/figures/public/</code>
+<strong>Informative figures:</strong> Paper P01 PlantUML figures are published with the academic track (see [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org)).
 </p>
 
 </div>

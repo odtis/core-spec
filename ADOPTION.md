@@ -66,8 +66,8 @@ flowchart TB
 | **Registry** | [Registry](/registry/) | 149 requirement IDs, events, terminology |
 | **Annex A** | [Annex A OpenAPI registry](/annexes/A-openapi-registry/) | **Frozen** OpenAPI @ `0.9.0-draft` |
 | **Annexes B-D** | [Annexes](/annexes/) | Threats, standards mapping, extended catalog |
-| **Book 2** | `docs/sources/books/02-platform-specification-monograph/` | Informative architecture (must not contradict ODTIS MUST) |
-| **Book 3** | `docs/sources/books/03-implementation-guide/` | Deployment patterns (non-normative) |
+| **Book 2** | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) (Vol. II, informative) | Informative architecture (must not contradict ODTIS MUST) |
+| **Book 3** | External implementation guide (informative) | Deployment patterns (non-normative) |
 | **Reference impl** | [Reference implementations](/implementation/) | VenID `ven-*` map - **informative only** |
 
 See spec section 1.12 and [Book 2 cross-review](/governance/BOOK2-CROSS-REVIEW/).

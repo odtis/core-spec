@@ -88,11 +88,10 @@ python3 scripts/sync-spec-version.py --check
 
 ## Outside this tree (informative)
 
-| Path | Role |
-|------|------|
-| `docs/sources/papers/` | P01-P18 evidence; P18 bridges to ODTIS |
-| `docs/sources/books/` | Book 2 architecture (informative) |
-| `ven-identity-core/`, `ven-trust-network/` | Reference implementations |
+| Source | Role |
+|--------|------|
+| [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) | Books, papers, traceability (not vendored in this repo) |
+| [odtis/core-impl](https://github.com/odtis/core-impl) | VenID reference implementation (`ven-*`) |
 
 ---
 

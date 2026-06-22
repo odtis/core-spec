@@ -27,4 +27,4 @@ python3 scripts/generate-conformance-statement.py \
  --out-dir implementation/statements/venid-staging
 ```
 
-CI runs `validate-conformance-statement.py` on every ODTIS workflow.
+Run `python3 scripts/validate-conformance-statement.py` before publishing a statement.

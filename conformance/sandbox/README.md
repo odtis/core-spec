@@ -159,4 +159,4 @@ RI map: [RI surface map](/implementation/RI-MAP.yaml) | bindings: [Component bin
 - [Conformance hub](../README.md)
 - [Self-certification guide](../certification/self-cert-guide.md)
 - Cross-review: [Book 2 cross-review](/governance/BOOK2-CROSS-REVIEW/)
-- Book 3 (informative): `docs/sources/books/03-implementation-guide/core/`
+- Book 3 (informative): external implementation guide (not vendored in this repository)

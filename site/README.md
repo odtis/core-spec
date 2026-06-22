@@ -53,7 +53,7 @@ Normative reading path: **Home -> Specification -> Profiles -> section 1**. Gove
 
 **Footer:** Changelog, Cite, Downloads (not in the sidebar). **Annex A** groups OpenAPI registry, freeze record, and OIDC discovery under the Annexes tab.
 
-**Language:** all published pages are English (`theme.language: en`). CI runs `scripts/validate-site-language.py` before each site build.
+**Language:** all published pages are English (`theme.language: en`). `./scripts/build-site.sh` runs `scripts/validate-site-language.py` before each build.
 
 **Generated pages:** `scripts/generate-site-indexes.py` rebuilds [Glossary](GLOSSARY.md) and [Requirements index](REQUIREMENTS-INDEX.md) from `registry/` before each `./scripts/build-site.sh` run.
 

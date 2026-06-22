@@ -30,9 +30,9 @@ PATTERNS=(
   'BEGIN OPENSSH PRIVATE KEY'
 )
 for pat in "${PATTERNS[@]}"; do
-  if git grep -E "$pat" HEAD 2>/dev/null | grep -q .; then
+  if git grep -E "$pat" HEAD -- ':!scripts/audit-before-publish.sh' 2>/dev/null | grep -q .; then
     fail "pattern $pat found in HEAD"
-    git grep -E "$pat" HEAD 2>/dev/null | head -3 >&2
+    git grep -E "$pat" HEAD -- ':!scripts/audit-before-publish.sh' 2>/dev/null | head -3 >&2
   else
     ok "no $pat in HEAD"
   fi

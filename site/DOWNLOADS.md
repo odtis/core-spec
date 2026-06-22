@@ -69,13 +69,13 @@ Upload checklist: [Zenodo release checklist](../publication/zenodo/RELEASE-CHECK
 ## Static HTML site
 
 ```bash
-cd odtis
+cd core-spec
 ./scripts/build-site.sh
-# output: build/odtis-spec-site/
+# output: ../build/odtis-spec-site/
 mkdocs serve -f site/mkdocs.yml
 ```
 
-CI uploads the artifact on push to `odtis/**`. Deploy: [Site deploy script](../scripts/deploy-site.sh) (CNAME: `odtis.org`).
+Production deploy: [deploy-ec2.sh](../scripts/deploy-ec2.sh) with local `scripts/odtis-deploy.env` (gitignored).
 
 ---
 

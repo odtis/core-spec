@@ -1,53 +1,57 @@
 # ODTIS - Open Digital Trust Infrastructure Specification
 
-**Status:** `0.9.0-draft` - Sections 1-10 review draft; Annex A frozen; Phase 3.2 + Foundation track A
-**Navigation:** [Repository map](STRUCTURE.md) - full repository map
-**Citation:** [How to cite](publication/HOW-TO-CITE.md)
-**Target URL:** [https://odtis.org](https://odtis.org)
-**Normative text license:** [CC BY 4.0](LICENSE)
-**Open-source migration:** [Migration status & checklist](MIGRATION-STATUS.md)
+**Status:** `0.9.0-draft` - Sections 1-10 review draft; Annex A frozen; Phase 3.2 + Foundation track A  
+**Navigation:** [Repository map](STRUCTURE.md)  
+**Citation:** [How to cite](publication/HOW-TO-CITE.md)  
+**Site:** [https://odtis.org](https://odtis.org)  
+**License:** [CC BY 4.0](LICENSE)  
+**Reference implementation:** [odtis/core-impl](https://github.com/odtis/core-impl) (private during Phase 3.2)
 
 ODTIS is the open normative specification for VenID / FinnectOS. It defines conformance profiles, MUST/SHOULD/MAY requirements, machine-readable annexes, and a test suite for digital trust infrastructure implementations.
 
-**Adoption:** independent vendors and operators SHOULD read [Adoption guide](ADOPTION.md) first (profiles, certification, Book 2 relationship, IETF track).
+**Adoption:** independent vendors and operators SHOULD read [Adoption guide](ADOPTION.md) first (profiles, certification, IETF track).
 
 **Language:** all authoritative ODTIS text is **English only** ([Language policy](governance/LANGUAGE.md)).
 
 ---
 
-## Relationship to the workspace
+## Related repositories
 
-| Artifact | Role | Path |
-|----------|------|------|
-| **P18** | Academic bridge; draft baseline (~103 IDs) | `docs/sources/papers/18-standards-alignment-odtis/` |
-| **P13 / P14** | Data model and APIs that ODTIS normativizes | `docs/sources/papers/13-...`, `14-...` |
-| **Book 2** | Reference Architecture (Vol. II) - descriptive source before ODTIS freeze | `docs/sources/books/02-platform-specification-monograph/` |
-| **Book 3** | Implementation Guide (Vol. III) - non-normative | `docs/sources/books/03-implementation-guide/` |
-| **RF matrix** | RF -> paper -> Book 2 -> ODTIS traceability | `docs/sources/papers/TRACEABILITY-MATRIX.md` |
-| **Master plan** | Phase 0-4 sequence | `docs/sources/papers/PLAN-EJECUCION-FASES.md` |
+| Repository | Role |
+|------------|------|
+| [odtis/core-spec](https://github.com/odtis/core-spec) | This repo - normative spec, registry, conformance, MkDocs sources |
+| [odtis/core-impl](https://github.com/odtis/core-impl) | VenID reference implementation (`ven-*` modules); clone as sibling for smokes |
 
-P18 does **not** replace ODTIS v1.0: it is the standards-alignment paper. This repository is the **normative source of truth** evolving toward v1.0 in Phase 4.
+Local layout for RI smokes and site build:
+
+```
+odtis/
+├── core-spec/          # this repository
+├── core-impl/          # reference implementation (optional)
+└── build/odtis-spec-site/   # gitignored MkDocs output
+```
+
+Informative books and papers (Book 2, Book 3, P18) are **not** vendored here; see [Adoption guide](ADOPTION.md) and [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) when published.
 
 ---
 
 ## Repository structure
 
-See [Repository map](STRUCTURE.md) for the full map. Top level:
+See [Repository map](STRUCTURE.md). Top level:
 
 ```
-odtis/
-├── VERSION <- single semver source
-├── spec/ <- sections 1-10 + adoptable profiles
-├── registry/ <- 149 requirement IDs, events, terminology
-├── annexes/ <- A (frozen) - D
-├── conformance/ <- L1/L2 tests (159 procedures) + certification
-├── publication/ <- citation, Zenodo releases
-├── governance/ <- stages, IPR, review, liaison
-├── ietf/ <- scoped Internet-Draft working copies
-├── implementation/ <- RI map (ven-*), known gaps
-├── traceability/ <- RF ↔ ODTIS automation
-├── scripts/ <- validate, sync, release
-└── site/ <- MkDocs -> build/odtis-spec-site/
+├── VERSION                 # single semver source
+├── spec/                   # sections 1-10 + adoptable profiles
+├── registry/               # requirement IDs, events, terminology
+├── annexes/                # A (frozen) - D
+├── conformance/            # L1/L2 tests + certification
+├── publication/            # citation, Zenodo releases
+├── governance/             # stages, IPR, review, liaison
+├── ietf/                   # scoped Internet-Draft working copies
+├── implementation/         # RI map, gaps, conformance statements
+├── traceability/           # RF ↔ ODTIS automation
+├── scripts/                # validate, sync, build, deploy (local)
+└── site/                   # MkDocs sources
 ```
 
 ---
@@ -68,64 +72,54 @@ Details: [Profile definitions](registry/profiles.yaml), [Conformance overview](c
 
 ---
 
-## Requirements registry
-
-**149** `ODTIS-x.x.x` IDs in [Requirements registry](registry/requirements.json) (P18 baseline + federation depth FB-002, operator RF-27, and Phase 3.2 additions).
+## Validate and test
 
 ```bash
-python3 scripts/extract-requirements.py # regenerate from P18
-python3 scripts/validate-registry.py # validate integrity
-./conformance/run.sh # L1 + L2 structural suite
+python3 scripts/validate-registry.py
+python3 scripts/sync-spec-version.py --check
+./conformance/run.sh    # L1 + L2 structural suite
 ```
 
 ---
 
-## Phased build
-
-See [Build plan](PLAN-PHASES.md). Summary:
-
-| Workspace phase | ODTIS deliverable |
-|-----------------|-------------------|
-| **Phase 3** (current) | Sections 1-10 @ `0.9.0-draft`; Annex A frozen; L1+L2 conformance; review cycle 1 |
-| **Phase 4** | Frozen ODTIS v1.0 + certification + DOI/Zenodo |
-
-**Dependency:** Book 2 stable (≥90% chapters) before promoting requirements from `draft` to stable `normative`.
-
----
-
-## Site and build
+## Build site and deploy (local)
 
 ```bash
-./scripts/build-site.sh # -> ../build/odtis-spec-site/
-source .venv-site/bin/activate # after first build
-mkdocs serve -f site/mkdocs.yml # http://127.0.0.1:8000
-./scripts/deploy-ec2.sh # local deploy (see scripts/odtis-deploy.env.example)
+./scripts/build-site.sh   # -> ../build/odtis-spec-site/
+source .venv-site/bin/activate   # after first build
+mkdocs serve -f site/mkdocs.yml  # http://127.0.0.1:8000
+
+cp scripts/odtis-deploy.env.example scripts/odtis-deploy.env   # once, gitignored
+./scripts/deploy-ec2.sh
+```
+
+Optional release version bump:
+
+```bash
+python3 scripts/bump-spec-version.py --minor --write
+python3 scripts/sync-spec-version.py
+python3 scripts/sync-site-release-meta.py
 ```
 
 See [Site overview](site/README.md) and [DEPLOY-EC2-ODTIS-ORG.md](scripts/DEPLOY-EC2-ODTIS-ORG.md).
 
 ---
 
-## Foundation & publication
+## Foundation and publication
 
 | Doc | Path |
 |-----|------|
-| **Adoption guide** | [Adoption guide](ADOPTION.md) |
-| Repository map | [Repository map](STRUCTURE.md) |
-| How to cite | [How to cite](publication/HOW-TO-CITE.md) |
-| Governance index | [Governance overview](governance/README.md) |
-| Spec stages | [Spec lifecycle stages](governance/SPEC-STAGES.md) |
-| OIDF positioning | [OIDF positioning](governance/liaison/OIDF-POSITIONING.md) |
-| IETF roadmap | [IETF roadmap](governance/IETF-ROADMAP.md) |
-| Certification | [Certification program](governance/CERTIFICATION.md) |
-
-Version and status hygiene:
+| Adoption guide | [ADOPTION.md](ADOPTION.md) |
+| Repository map | [STRUCTURE.md](STRUCTURE.md) |
+| How to cite | [publication/HOW-TO-CITE.md](publication/HOW-TO-CITE.md) |
+| Governance | [governance/README.md](governance/README.md) |
+| Certification | [governance/CERTIFICATION.md](governance/CERTIFICATION.md) |
+| Build plan | [PLAN-PHASES.md](PLAN-PHASES.md) |
 
 ```bash
 python3 scripts/sync-spec-version.py
-python3 scripts/normalize-coherence.py
-python3 scripts/sync-spec-version.py --check # CI
-./scripts/package-release.sh # Zenodo tarball
+./scripts/package-release.sh   # Zenodo tarball
+./scripts/audit-before-publish.sh   # pre-public repo check
 ```
 
 ## Contributing
