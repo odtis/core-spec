@@ -5,6 +5,7 @@
 **Citation:** [How to cite](publication/HOW-TO-CITE.md)
 **Target URL:** [https://odtis.org](https://odtis.org)
 **Normative text license:** [CC BY 4.0](LICENSE)
+**Open-source migration:** [Migration status & checklist](MIGRATION-STATUS.md)
 
 ODTIS is the open normative specification for VenID / FinnectOS. It defines conformance profiles, MUST/SHOULD/MAY requirements, machine-readable annexes, and a test suite for digital trust infrastructure implementations.
 
