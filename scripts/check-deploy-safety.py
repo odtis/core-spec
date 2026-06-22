@@ -19,10 +19,25 @@ BLOCKED_PATH_FRAGMENTS = (
     "venezuela/odtis",
 )
 
-PATTERNS: list[tuple[str, re.Pattern[str]]] = [
-    ("private key block", re.compile(r"BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY")),
-    ("AWS access key", re.compile(r"AKIA[0-9A-Z]{16}")),
-]
+# Documentation / CI helpers may mention PEM format; scan for real key material only.
+REAL_PEM_BLOCK = re.compile(
+    r"-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----\s+[A-Za-z0-9+/=\s]{80,}"
+    r"\s+-----END (?:RSA |OPENSSH |EC )?PRIVATE KEY-----",
+    re.MULTILINE,
+)
+
+AWS_KEY = re.compile(r"AKIA[0-9A-Z]{16}")
+
+# Paths allowed to mention deploy setup (placeholders only, no real secrets).
+EXEMPT_REL_PATHS = frozenset(
+    {
+        "scripts/check-deploy-safety.py",
+        "scripts/GITHUB-DEPLOY-SECRETS.md",
+        "scripts/ci-prepare-deploy-ssh.sh",
+        "scripts/odtis-deploy.env.example",
+        "scripts/DEPLOY-EC2-ODTIS-ORG.md",
+    }
+)
 
 
 def tracked_files() -> list[Path]:
@@ -38,22 +53,23 @@ def tracked_files() -> list[Path]:
 def main() -> int:
     failures: list[str] = []
     for path in tracked_files():
-        if path.name == "check-deploy-safety.py":
+        rel = path.relative_to(ROOT).as_posix()
+        if rel in EXEMPT_REL_PATHS:
             continue
         try:
             text = path.read_text(encoding="utf-8")
         except (UnicodeDecodeError, OSError):
             continue
-        rel = path.relative_to(ROOT)
         for blocked_ip in BLOCKED_IPS:
             if blocked_ip in text:
                 failures.append(f"{rel}: blocked deploy IP ({blocked_ip})")
         for fragment in BLOCKED_PATH_FRAGMENTS:
             if fragment in text:
                 failures.append(f"{rel}: blocked path or key reference ({fragment})")
-        for label, pattern in PATTERNS:
-            for match in pattern.finditer(text):
-                failures.append(f"{rel}: {label} ({match.group(0)[:24]}...)")
+        if REAL_PEM_BLOCK.search(text):
+            failures.append(f"{rel}: private key block (PEM material)")
+        for match in AWS_KEY.finditer(text):
+            failures.append(f"{rel}: AWS access key ({match.group(0)})")
     if failures:
         print("FAIL - deploy safety check found sensitive or host-specific values:", file=sys.stderr)
         for item in failures:

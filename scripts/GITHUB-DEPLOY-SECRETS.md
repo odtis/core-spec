@@ -12,7 +12,7 @@ Configure in **GitHub → odtis/core-spec → Settings → Secrets and variables
 On your Mac:
 
 ```bash
-pbcopy < ~/.ssh/MvpKeyPair.pem
+pbcopy < ~/.ssh/your-deploy-key.pem
 ```
 
 In GitHub → **New repository secret**:
@@ -24,14 +24,14 @@ Common mistakes:
 
 | Wrong | Right |
 |-------|-------|
-| `~/.ssh/MvpKeyPair.pem` | Full file contents |
+| `~/.ssh/your-deploy-key.pem` | Full file contents |
 | Only the middle lines | Include BEGIN and END lines |
 | Extra quotes around the key | Paste raw PEM only |
 
 ## Verify locally before CI
 
 ```bash
-ssh -i ~/.ssh/MvpKeyPair.pem -o BatchMode=yes ec2-user@YOUR_EC2_PUBLIC_IP echo ok
+ssh -i ~/.ssh/your-deploy-key.pem -o BatchMode=yes ec2-user@YOUR_EC2_PUBLIC_IP echo ok
 ```
 
 Should print `ok`.

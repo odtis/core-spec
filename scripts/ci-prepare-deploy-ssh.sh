@@ -12,12 +12,12 @@ Add repository secret ODTIS_SSH_KEY in GitHub:
   Settings -> Secrets and variables -> Actions -> New repository secret
 
 Value must be the FULL .pem file contents (not the file path), e.g.:
-  -----BEGIN RSA PRIVATE KEY-----
-  MIIE...
-  -----END RSA PRIVATE KEY-----
+  -----BEGIN ... PRIVATE KEY-----
+  (base64 lines)
+  -----END ... PRIVATE KEY-----
 
 Local copy to clipboard:
-  pbcopy < ~/.ssh/MvpKeyPair.pem
+  pbcopy < ~/.ssh/your-deploy-key.pem
 EOF
   exit 1
 fi
@@ -71,7 +71,7 @@ if ! ssh-keygen -y -f "$KEY_PATH" > /dev/null 2>&1; then
 ERROR: ODTIS_SSH_KEY is not a valid PEM private key (ssh-keygen rejected it).
 
 Re-paste the secret from your local .pem file:
-  pbcopy < ~/.ssh/MvpKeyPair.pem
+  pbcopy < ~/.ssh/your-deploy-key.pem
 
 Do not paste the path (~/.ssh/...). Include BEGIN and END lines.
 EOF
