@@ -24,8 +24,11 @@ VERSION_EXTRA_RE = re.compile(r"^  odtis_version:.*$", re.M)
 SHA_EXTRA_RE = re.compile(r"^  odtis_build_sha:.*$", re.M)
 TIME_EXTRA_RE = re.compile(r"^  odtis_build_time:.*$", re.M)
 HERO_VERSION_RE = re.compile(
-    r"(<!-- GENERATED:site-release-version:START -->).*?(<!-- GENERATED:site-release-version:END -->)",
+    r"\n*<!-- GENERATED:site-release-version:START -->.*?<!-- GENERATED:site-release-version:END -->\n*",
     re.S,
+)
+KICKER_RE = re.compile(
+    r'\n*<p class="odtis-landing-hero__kicker">ODTIS</p>\n*',
 )
 
 
@@ -102,22 +105,13 @@ def sync_mkdocs(version: str, meta: dict[str, str]) -> bool:
     return False
 
 
-def sync_index_hero(version: str) -> bool:
+def cleanup_index_hero() -> bool:
+    """Remove legacy kicker/version lines from the home hero (not shown on landing)."""
     if not INDEX_MD.is_file():
         return False
-    block = (
-        "<!-- GENERATED:site-release-version:START -->\n"
-        f'<p class="odtis-landing-hero__version">Published release '
-        f'<a href="/VERSION">{version}</a> · '
-        f'<a href="/site/BUILD-META.json">build info</a></p>\n'
-        "<!-- GENERATED:site-release-version:END -->"
-    )
     text = INDEX_MD.read_text(encoding="utf-8")
-    if HERO_VERSION_RE.search(text):
-        new_text = HERO_VERSION_RE.sub(block, text, count=1)
-    else:
-        marker = '<p class="odtis-landing-hero__kicker">ODTIS</p>'
-        new_text = text.replace(marker, marker + "\n\n" + block, 1)
+    new_text = HERO_VERSION_RE.sub("\n", text, count=1)
+    new_text = KICKER_RE.sub("\n", new_text, count=1)
     if new_text != text:
         INDEX_MD.write_text(new_text, encoding="utf-8")
         return True
@@ -158,7 +152,7 @@ def main() -> int:
     if sync_mkdocs(version, meta):
         print(f"Updated {MKDOCS.relative_to(ROOT)}")
         changed = True
-    if sync_index_hero(version):
+    if cleanup_index_hero():
         print(f"Updated {INDEX_MD.relative_to(ROOT)}")
         changed = True
     if sync_status_page(version):
