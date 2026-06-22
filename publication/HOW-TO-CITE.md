@@ -19,7 +19,7 @@ description: Citation formats for the ODTIS working draft, Zenodo DOI, and profi
 
 Use when citing the evolving specification before ODTIS `1.0.0`:
 
-> Merida Oliveros, M. (2026). *Open Digital Trust Infrastructure Specification (ODTIS)*, version 0.9.0-draft. FinnectOS, Inc. https://digitaltrustinfrastructure.org (working draft).
+> Merida Oliveros, M. (2026). *Open Digital Trust Infrastructure Specification (ODTIS)*, version 0.9.0-draft. FinnectOS, Inc. https://odtis.org (working draft).
 
 After Zenodo upload, **prefer the DOI**:
 

@@ -144,7 +144,8 @@ Browse: [Glossary](../site/GLOSSARY.md) | [Requirements index](../site/REQUIREME
 ## Quick commands
 
 ```bash
-# from repository root
+cd core-spec
+
 # Project health
 ./conformance/run.sh
 python3 scripts/validate-registry.py

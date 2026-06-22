@@ -12,7 +12,7 @@ description: Vision, mission, scope, and relationship to VenID
 <p class="odtis-hub-meta" markdown="1">
 <strong>Version:</strong> <a href="/VERSION">0.9.0-draft</a> | 
 <strong>License:</strong> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> | 
-<strong>Steward:</strong> <a href="https://github.com/odtis/core-impl">VenID</a> / FinnectOS (interim)
+<strong>Steward:</strong> <a href="https://digitaltrustinfrastructure.org">Digital Trust Infrastructure</a> / FinnectOS (interim) · <strong>VenID RI:</strong> <a href="https://github.com/odtis/core-impl">core-impl</a>
 </p>
 
 </div>
@@ -214,8 +214,8 @@ See the full **is / is not** table and problem scope in the [Adoption guide](../
 
 | Artifact | Role |
 |----------|------|
-| **ODTIS** (`odtis/`) | Normative source of truth |
-| **VenID reference implementation** (`ven-identity-core`, `ven-trust-network`) | Informative RI - one conforming stack |
+| **ODTIS** ([core-spec](https://github.com/odtis/core-spec)) | Normative source of truth |
+| **VenID reference implementation** ([core-impl](https://github.com/odtis/core-impl)) | Informative RI - one conforming stack |
 | **Book 2** | Informative architecture monograph |
 | **Papers P01-P18** | Academic evidence and design rationale |
 

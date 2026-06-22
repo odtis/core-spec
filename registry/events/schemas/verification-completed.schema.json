@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitaltrustinfrastructure.org/odtis/events/verification-completed.schema.json",
+  "$id": "https://odtis.org/registry/events/verification-completed.schema.json",
   "title": "verification.completed",
   "description": "Proofing flow completed successfully.",
   "allOf": [

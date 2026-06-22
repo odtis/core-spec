@@ -7,11 +7,11 @@ version: 0.9.0-draft
 date-released: 2026-06-12
 authors:
 - family-names: "Merida Oliveros"
-given-names: "Manuel"
-email: "info@digitaltrustinfrastructure.org"
-affiliation: "FinnectOS, Inc."
+  given-names: "Manuel"
+  email: "info@odtis.org"
+  affiliation: "FinnectOS, Inc."
 repository-code: "https://github.com/odtis/core-spec"
-url: "https://digitaltrustinfrastructure.org"
+url: "https://odtis.org"
 keywords:
 - digital-trust
 - identity
@@ -19,12 +19,12 @@ keywords:
 - conformance
 - trust-network
 preferred-citation:
-type: software
-title: "Open Digital Trust Infrastructure Specification (ODTIS)"
-authors:
-- family-names: "Merida Oliveros"
-given-names: "Manuel"
-version: 0.9.0-draft
-year: 2026
-license: CC-BY-4.0
-notes: "Working draft - not a frozen standard until ODTIS 1.0.0"
+  type: software
+  title: "Open Digital Trust Infrastructure Specification (ODTIS)"
+  authors:
+  - family-names: "Merida Oliveros"
+    given-names: "Manuel"
+  version: 0.9.0-draft
+  year: 2026
+  license: CC-BY-4.0
+  notes: "Working draft - not a frozen standard until ODTIS 1.0.0"

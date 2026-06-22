@@ -18,7 +18,7 @@ Normative fields per ODTIS section 1.9.1 (`ODTIS-0008`, `ODTIS-0534`).
 | `tests.status` | partial |
 | `tests.summary` | L1 structural validators; 10 profile test stubs linked; min req stub coverage 100.0% |
 | `date` | 2026-06-15 |
-| `contact` | conformance@digitaltrustinfrastructure.org |
+| `contact` | conformance@odtis.org |
 
 ## Profiles declared
 

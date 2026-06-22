@@ -3,11 +3,11 @@
 **Status:** `0.9.0-draft` - Sections 1-10 review draft; Annex A frozen; Phase 3.2 + Foundation track A  
 **Navigation:** [Repository map](STRUCTURE.md)  
 **Citation:** [How to cite](publication/HOW-TO-CITE.md)  
-**Site:** [https://digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org)  
+**Site:** [https://odtis.org](https://odtis.org)  
 **License:** [CC BY 4.0](LICENSE)  
 **Reference implementation:** [Core Impl](https://github.com/odtis/core-impl) (private during Phase 3.2)
 
-ODTIS is the open normative specification for VenID / FinnectOS. It defines conformance profiles, MUST/SHOULD/MAY requirements, machine-readable annexes, and a test suite for digital trust infrastructure implementations.
+ODTIS is the open normative specification for digital trust infrastructure. [VenID](https://github.com/odtis/core-impl) is the first reference implementation. It defines conformance profiles, MUST/SHOULD/MAY requirements, machine-readable annexes, and a test suite for implementations.
 
 **Adoption:** independent vendors and operators SHOULD read [Adoption guide](ADOPTION.md) first (profiles, certification, IETF track).
 
@@ -15,12 +15,14 @@ ODTIS is the open normative specification for VenID / FinnectOS. It defines conf
 
 ---
 
-## Related repositories
+## Related repositories and sites
 
-| Repository | Role |
-|------------|------|
-| [Core Spec](https://github.com/odtis/core-spec) | This repo - normative spec, registry, conformance, MkDocs sources |
-| [Core Impl](https://github.com/odtis/core-impl) | VenID reference implementation (`ven-*` modules); clone as sibling for smokes |
+| Resource | Role |
+|----------|------|
+| [odtis.org](https://odtis.org) | ODTIS specification site (this repo) |
+| [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) | Parent research org (informative books and papers) |
+| [core-spec](https://github.com/odtis/core-spec) | Normative spec, registry, conformance, MkDocs sources |
+| [core-impl](https://github.com/odtis/core-impl) | VenID reference implementation; clone as sibling for smokes |
 
 Local layout for RI smokes and site build:
 
@@ -31,7 +33,7 @@ odtis/
 └── build/odtis-spec-site/   # gitignored MkDocs output
 ```
 
-Informative books and papers (Book 2, Book 3, P18) are **not** vendored here; see [Adoption guide](ADOPTION.md) and [How to cite](publication/HOW-TO-CITE.md).
+Informative books and papers (Book 2, Book 3, P18) are **not** vendored here; see [Adoption guide](ADOPTION.md) and [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) when published.
 
 ---
 
@@ -101,7 +103,7 @@ python3 scripts/sync-spec-version.py
 python3 scripts/sync-site-release-meta.py
 ```
 
-See [Site overview](site/README.md) and [Deploy to EC2](scripts/DEPLOY-EC2-SITE.md).
+See [Site overview](site/README.md) and [Deploy Ec2 Odtis Org](scripts/DEPLOY-EC2-ODTIS-ORG.md).
 
 ---
 

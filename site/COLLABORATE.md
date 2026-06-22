@@ -10,7 +10,7 @@ description: Research, implementation, and normative collaboration with ODTIS
 Hackathons, pilot labs, and institutional partnerships across **research**, **reference implementation**, and **normative** work - without vendor lock-in.
 
 <p class="odtis-hub-meta" markdown="1">
-<strong>Contact:</strong> <a href="mailto:info@digitaltrustinfrastructure.org?subject=ODTIS%20collaboration%20proposal">info@digitaltrustinfrastructure.org</a> | 
+<strong>Contact:</strong> <a href="mailto:info@odtis.org?subject=ODTIS%20collaboration%20proposal">info@odtis.org</a> | 
 <strong>Feedback:</strong> [External review](../governance/FEEDBACK.md) | 
 <strong>News:</strong> [Newsletter](NEWSLETTER.md) | 
 <strong>Conduct:</strong> [Code of conduct](CODE-OF-CONDUCT.md)
@@ -135,7 +135,7 @@ ODTIS hackathons focus on **interoperable outcomes**, not throwaway demos.
 
 ## Proposal template
 
-Send a short note to **info@digitaltrustinfrastructure.org** with:
+Send a short note to **info@odtis.org** with:
 
 1. **Institution** and contact
 2. **Track** - research | implementation | normative (or combined)

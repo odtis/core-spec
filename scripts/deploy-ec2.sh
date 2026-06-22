@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build ODTIS MkDocs site and sync to EC2 (see DEPLOY-EC2-SITE.md)
+# Build ODTIS MkDocs site and sync to EC2 (see DEPLOY-EC2-ODTIS-ORG.md)
 #
 # One-time setup:
 #   cp scripts/odtis-deploy.env.example scripts/odtis-deploy.env
@@ -45,7 +45,7 @@ fi
 
 ODTIS_EC2_HOST="${ODTIS_EC2_HOST:-}"
 ODTIS_SSH_KEY="${ODTIS_SSH_KEY:-}"
-ODTIS_REMOTE_DIR="${ODTIS_REMOTE_DIR:-/var/www/digitaltrustinfrastructure.org}"
+ODTIS_REMOTE_DIR="${ODTIS_REMOTE_DIR:-/var/www/odtis.org}"
 
 if [[ -z "$ODTIS_EC2_HOST" || -z "$ODTIS_SSH_KEY" ]]; then
   cat >&2 <<EOF
@@ -96,7 +96,7 @@ EOF
 fi
 
 echo ""
-echo "Deployed: https://digitaltrustinfrastructure.org"
+echo "Deployed: https://odtis.org"
 echo "Host:     $ODTIS_EC2_HOST"
 echo "Remote:   $ODTIS_REMOTE_DIR"
 echo "Tip: purge Cloudflare cache if the browser shows an old version."

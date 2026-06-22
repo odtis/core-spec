@@ -19,7 +19,7 @@ Aligned with [PLAN-PHASES](PLAN-PHASES.md) (Phase 3-4) and the [traceability cov
 | 3.1.13 | Annex C Standards | ✅ |
 | 3.1.14 | Annex D Extended | ✅ draft |
 | 3.1.15 | Conformance suite | ✅ L1+L2; 159 procedures (81 implemented) |
-| 3.1.16 | digitaltrustinfrastructure.org site | ✅ build + local deploy to EC2 |
+| 3.1.16 | odtis.org site | ✅ build + local deploy to EC2 |
 | 3.1.17 | TRACEABILITY-MATRIX sync | ✅ 30/30 RF |
 | 3.2.1 | Book 2 ↔ ODTIS cross-review | ✅ |
 | 3.2.2 | Annex A freeze | ✅ 0.9.0-draft + checksums |
@@ -66,7 +66,7 @@ Phase 3.0 scaffold: ✅ (2026-06-12)
 | 3.1.13 | **Annex C** Standards mapping | P18, P02, P03 | eIDAS, NIST, OIDC |
 | 3.1.14 | **Annex D** Extended profiles | P17, doc 14 | Webhooks, inclusion, KYB (draft) |
 | 3.1.15 | Draft conformance suite | Registry + test stubs | ≥1 test per Core profile |
-| 3.1.16 | `digitaltrustinfrastructure.org` site | `site/mkdocs.yml` | Public draft preview |
+| 3.1.16 | `odtis.org` site | `site/mkdocs.yml` | Public draft preview |
 | 3.1.17 | Sync TRACEABILITY-MATRIX | RF matrix | ≥60% RF with ODTIS ID |
 
 **Target version:** `0.9.0-draft`
@@ -127,10 +127,9 @@ Section 3 and Annex A depend on stable P14. Section 9 depends on Book 2 App. F o
 
 ## Immediate next steps (Phase 3.2 -> 4)
 
-1. **Adoption readiness** - [Adoption guide](ADOPTION.md); Zenodo DOI; [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org)
+1. **Adoption readiness** - [Adoption guide](ADOPTION.md); Zenodo DOI; [odtis.org](https://odtis.org) site maintenance
 2. **External review** - Cycle 1 comment period ([External review cycle 1](governance/REVIEW-CYCLE-1.md))
 3. **Executable Core Identity L2** - replace stub status on priority tests in `conformance/tests/core-identity/`
 4. **Federation depth** - triage FB-002 ([Federation interoperability RFC](governance/rfc/2026-06-12-federation-interoperability.md))
-5. **Public site** - [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) (local deploy via `./scripts/deploy-ec2.sh`)
-6. **Second implementation** - update [RI surface map](implementation/RI-MAP.yaml) interop report
-7. Promote to **`0.9.x-draft`** after cycle 1 triage
+5. **Second implementation** - update [RI surface map](implementation/RI-MAP.yaml) interop report
+6. Promote to **`0.9.x-draft`** after cycle 1 triage

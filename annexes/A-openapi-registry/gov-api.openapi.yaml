@@ -10,7 +10,7 @@ name: CC BY 4.0
 url: https://creativecommons.org/licenses/by/4.0/
 
 servers:
-- url: https://api.api.example.digitaltrustinfrastructure.org/v1/gov
+- url: https://api.example.odtis.org/v1/gov
 description: Illustrative government API base
 
 tags:

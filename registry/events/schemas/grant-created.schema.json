@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitaltrustinfrastructure.org/odtis/events/grant-created.schema.json",
+  "$id": "https://odtis.org/registry/events/grant-created.schema.json",
   "title": "grant.created",
   "description": "Service access grant created.",
   "allOf": [

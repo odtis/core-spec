@@ -33,7 +33,8 @@ Profile comparison: [Profile comparison](/site/PROFILES/)
 ## Quick start
 
 ```bash
-# from repository root
+cd core-spec
+
 # L1 only (no live stack)
 ./conformance/sandbox/run-sandbox-check.sh --l1-only
 

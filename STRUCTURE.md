@@ -90,8 +90,9 @@ python3 scripts/sync-spec-version.py --check
 
 | Source | Role |
 |--------|------|
-| [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) | Books, papers, traceability (not vendored in this repo) |
-| [Core Impl](https://github.com/odtis/core-impl) | VenID reference implementation (`ven-*`) |
+| [odtis.org](https://odtis.org) | ODTIS specification site (built from this repo) |
+| [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) | Parent research org: Books, papers, academic track (not vendored here) |
+| [core-impl](https://github.com/odtis/core-impl) | VenID reference implementation (`ven-*` modules) |
 
 ---
 

@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# path relative to odtis/ -> (title, description)
+# path relative to core-spec/ -> (title, description)
 SEO: dict[str, tuple[str, str]] = {
     "index.md": (
         "Open Digital Trust Infrastructure Specification",

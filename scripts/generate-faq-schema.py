@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 FAQ = ROOT / "site/FAQ.md"
 OUT = ROOT / "site/overrides/partials/faq-ld.html"
-SITE_URL = "https://digitaltrustinfrastructure.org/site/FAQ/"
+SITE_URL = "https://odtis.org/site/FAQ/"
 
 
 def strip_md(text: str) -> str:

@@ -96,7 +96,7 @@ Update [Section review matrix](SECTION-REVIEW.md) section 1 row: External review
 These tracks proceed independently:
 
 - Zenodo DOI ([Zenodo release checklist](../publication/zenodo/RELEASE-CHECKLIST.md))
-- `digitaltrustinfrastructure.org` deploy
+- `odtis.org` site maintenance verified
 - L2 executable automation (stubs remain valid for 0.9.x)
 - Annex D merge into main registry (Phase 4)
 

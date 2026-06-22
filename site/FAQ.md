@@ -13,7 +13,7 @@ Answers for adopters, national operators, vendors, integrators, auditors, and co
 <strong>15-minute path:</strong> [Getting started](/site/GETTING-STARTED/) |
 <strong>Full adoption:</strong> [Adoption guide](/ADOPTION/) |
 <strong>L1/L2/L3 detail:</strong> [Conformance FAQ](/conformance/FAQ/) |
-<strong>Contact:</strong> [info@digitaltrustinfrastructure.org](mailto:info@digitaltrustinfrastructure.org)
+<strong>Contact:</strong> [info@odtis.org](mailto:info@odtis.org)
 </p>
 
 </div>
@@ -421,7 +421,9 @@ Specification text: [CC BY 4.0](/site/LICENSE/). [IPR policy](/governance/IPR-PO
 
 ### Where is the official ODTIS website?
 
-**https://digitaltrustinfrastructure.org** - this site. Source: [Site](https://github.com/odtis/core-spec). Operators with repo access: `./scripts/deploy-ec2.sh` (see `scripts/DEPLOY-EC2-SITE.md` in the repository).
+**https://odtis.org** - this site (ODTIS specification). Source: [core-spec](https://github.com/odtis/core-spec). Operators with repo access: `./scripts/deploy-ec2.sh` (see `scripts/DEPLOY-EC2-ODTIS-ORG.md`).
+
+Research and informative books: [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org). VenID reference implementation: [core-impl](https://github.com/odtis/core-impl).
 
 ### How do I build the site locally?
 
@@ -430,13 +432,13 @@ Specification text: [CC BY 4.0](/site/LICENSE/). [IPR policy](/governance/IPR-PO
 # output: build/odtis-spec-site/
 ```
 
-Preview: `mkdocs serve -f site/mkdocs.yml` (from `odtis/` after venv setup).
+Preview: `mkdocs serve -f site/mkdocs.yml` (from `core-spec/` after venv setup).
 
 ### How do I contact the ODTIS team?
 
-**Email:** [info@digitaltrustinfrastructure.org](mailto:info@digitaltrustinfrastructure.org) | **Contact page:** [Contact](/site/CONTACT/) | **GitHub:** [Issues](https://github.com/odtis/core-spec/issues)
+**Email:** [info@odtis.org](mailto:info@odtis.org) | **Contact page:** [Contact](/site/CONTACT/) | **GitHub:** [Issues](https://github.com/odtis/core-spec/issues)
 
-### Is analytics used on digitaltrustinfrastructure.org?
+### Is analytics used on odtis.org?
 
 Not by default. If enabled later, [Privacy policy](/site/PRIVACY/) will be updated. Theme preference uses browser local storage only.
 

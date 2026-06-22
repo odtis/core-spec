@@ -105,7 +105,7 @@ spectral lint *.openapi.yaml
 | Artifact | Location |
 |----------|----------|
 | Git registry | `odtis/annexes/A-openapi-registry/` |
-| Public site | `https://digitaltrustinfrastructure.org/annex-a/` (Phase 3.2 deploy) |
+| Public site | `https://odtis.org/annexes/A-openapi-registry/` |
 
 ---
 

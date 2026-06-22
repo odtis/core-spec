@@ -7,7 +7,7 @@ description: Terms for using the ODTIS specification website and materials
 
 # Terms of use
 
-Terms for accessing **digitaltrustinfrastructure.org** and related ODTIS project materials.
+Terms for accessing **odtis.org** (ODTIS specification site) and related project materials.
 
 <p class="odtis-hub-meta" markdown="1">
 <strong>Spec license:</strong> [CC BY 4.0](LICENSE.md) | 
@@ -97,7 +97,7 @@ We may update these terms. Material changes will be noted in the [Newsletter](NE
 
 ## Contact
 
-Questions: [Contact](CONTACT.md) | [info@digitaltrustinfrastructure.org](mailto:info@digitaltrustinfrastructure.org?subject=ODTIS%20terms)
+Questions: [Contact](CONTACT.md) | [info@odtis.org](mailto:info@odtis.org?subject=ODTIS%20terms)
 
 ---
 

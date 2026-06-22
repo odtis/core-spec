@@ -33,7 +33,7 @@ Normative requirements remain in sections 1-10 and [Requirements registry](../re
 | Shared `venid-common.openapi.yaml` | ✅ |
 | Frozen @ 0.9.0-draft | ✅ [Annex A freeze record](../annexes/A-openapi-registry/FREEZE.md) |
 | FB-004 autodiscovery out of scope | ✅ documented in README |
-| Public deploy (`digitaltrustinfrastructure.org`) | 🟡 separate track |
+| Public spec site (`odtis.org`) | ✅ live |
 
 ---
 

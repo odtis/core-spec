@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitaltrustinfrastructure.org/odtis/events/exchange-request-denied.schema.json",
+  "$id": "https://odtis.org/registry/events/exchange-request-denied.schema.json",
   "title": "exchange.request.denied",
   "description": "Exchange denied by grant, policy, or certificate check.",
   "allOf": [

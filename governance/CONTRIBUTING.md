@@ -46,7 +46,7 @@ Thank you for helping build the Open Digital Trust Infrastructure Specification.
 4. Run validation:
 
 ```bash
-# from repository root
+cd core-spec
 python3 scripts/validate-registry.py
 python3 scripts/validate-section-completeness.py
 ./conformance/run.sh

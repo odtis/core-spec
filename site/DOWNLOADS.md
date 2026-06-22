@@ -26,7 +26,7 @@ How to obtain ODTIS normative text, machine-readable registries, OpenAPI bundles
 
 | I need... | Get it from |
 |-----------|-------------|
-| Read online (HTML) | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) (when deployed) or local `mkdocs serve` |
+| Read online (HTML) | [odtis.org](https://odtis.org) or local `mkdocs serve` |
 | Full source tree | Git clone (below) |
 | Citable offline snapshot | Zenodo tarball (below) |
 | OpenAPI, registry, conformance YAML | [Machine-readable artifacts](#machine-readable-artifacts) (below) |
@@ -50,7 +50,7 @@ VenID reference implementation (private until published): `github.com/odtis/core
 ## Release tarball (Zenodo / offline)
 
 ```bash
-# from repository root
+cd core-spec
 ./scripts/package-release.sh
 ```
 
@@ -123,7 +123,7 @@ Freeze record: [Annex A freeze record](../annexes/A-openapi-registry/FREEZE.md)
 ### Validate after download
 
 ```bash
-# from repository root
+cd core-spec
 python3 scripts/validate-registry.py
 python3 scripts/validate-openapi.py
 ./conformance/run.sh
@@ -135,7 +135,7 @@ Optional OpenAPI lint: `npx @stoplight/spectral-cli lint annexes/A-openapi-regis
 
 ## Tarball contents
 
-Per [Release packaging script](../scripts/package-release.sh): full `odtis/` tree (spec, annexes, registry, conformance, governance, site source, publication metadata). Excludes `.venv-site/` and local report JSON.
+Per [Release packaging script](../scripts/package-release.sh): full `core-spec` tree (spec, annexes, registry, conformance, governance, site source, publication metadata). Excludes `.venv-site/` and local report JSON.
 
 ---
 

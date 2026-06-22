@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitaltrustinfrastructure.org/odtis/events/grant-revoked.schema.json",
+  "$id": "https://odtis.org/registry/events/grant-revoked.schema.json",
   "title": "grant.revoked",
   "description": "Service access grant revoked.",
   "allOf": [

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitaltrustinfrastructure.org/odtis/events/security-incident-reported.schema.json",
+  "$id": "https://odtis.org/registry/events/security-incident-reported.schema.json",
   "title": "security.incident.reported",
   "description": "Security incident logged.",
   "allOf": [

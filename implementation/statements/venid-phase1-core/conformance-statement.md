@@ -18,7 +18,7 @@ Normative fields per ODTIS section 1.9.1 (`ODTIS-0008`, `ODTIS-0534`).
 | `tests.status` | partial |
 | `tests.summary` | L2 conformance package (reference-architecture, core-identity); 68 linked tests; min stub coverage 100.0%; see l2-report.md for automated results |
 | `date` | 2026-06-15 |
-| `contact` | conformance@digitaltrustinfrastructure.org |
+| `contact` | conformance@odtis.org |
 
 ## Profiles declared
 

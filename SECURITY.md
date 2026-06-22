@@ -1,6 +1,6 @@
 # Security policy
 
-Report suspected security issues in the ODTIS specification, Annex A OpenAPI contracts, or published site content to **info@digitaltrustinfrastructure.org**.
+Report suspected security issues in the ODTIS specification, Annex A OpenAPI contracts, or published site content to **info@odtis.org**.
 
 Please do not open public GitHub issues for undisclosed vulnerabilities.
 

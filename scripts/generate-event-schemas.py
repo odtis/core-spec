@@ -47,7 +47,7 @@ def main() -> int:
         safe = eid.replace(".", "-")
         schema = {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
-            "$id": f"https://digitaltrustinfrastructure.org/odtis/events/{safe}.schema.json",
+            "$id": f"https://odtis.org/registry/events/{safe}.schema.json",
             "title": eid,
             "description": ev.get("description", ""),
             "allOf": [

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitaltrustinfrastructure.org/odtis/events/consent-granted.schema.json",
+  "$id": "https://odtis.org/registry/events/consent-granted.schema.json",
   "title": "consent.granted",
   "description": "Subject granted consent for RP scopes and purpose.",
   "allOf": [

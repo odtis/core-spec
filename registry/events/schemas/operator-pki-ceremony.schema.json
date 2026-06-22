@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitaltrustinfrastructure.org/odtis/events/operator-pki-ceremony.schema.json",
+  "$id": "https://odtis.org/registry/events/operator-pki-ceremony.schema.json",
   "title": "operator.pki.ceremony",
   "description": "PKI ceremony performed.",
   "allOf": [

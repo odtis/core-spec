@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitaltrustinfrastructure.org/odtis/events/consent-revoked.schema.json",
+  "$id": "https://odtis.org/registry/events/consent-revoked.schema.json",
   "title": "consent.revoked",
   "description": "Consent revoked by subject or operator.",
   "allOf": [

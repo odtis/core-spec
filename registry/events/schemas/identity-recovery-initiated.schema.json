@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitaltrustinfrastructure.org/odtis/events/identity-recovery-initiated.schema.json",
+  "$id": "https://odtis.org/registry/events/identity-recovery-initiated.schema.json",
   "title": "identity.recovery.initiated",
   "description": "Account recovery flow started.",
   "allOf": [

@@ -264,7 +264,7 @@ def main() -> int:
     )
     parser.add_argument("--jurisdiction", default="VE")
     parser.add_argument("--deployment-phase", type=int, default=1, choices=[1, 2, 3, 4])
-    parser.add_argument("--contact", default="conformance@digitaltrustinfrastructure.org")
+    parser.add_argument("--contact", default="conformance@odtis.org")
     parser.add_argument("--date", help="YYYY-MM-DD (default: today)")
     args = parser.parse_args()
     if not args.profile:
