@@ -67,6 +67,7 @@ closed_gaps:
   - GAP-OP-PH4-STMT
   - GAP-OP-RI
 deferred_gaps:
+  - GAP-IC-GOV-API
   - GAP-TN-0217
   - GAP-TN-TEP
   - GAP-CERT-L3-ATT

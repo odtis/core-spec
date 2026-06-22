@@ -167,6 +167,17 @@ implementations:
     binding_doc: implementation/component-bindings/verification-api.yaml
     notes: MachineClientPolicy; VerificationService; VERIFICATION-API-SANDBOX.md; verification-api-latency-check.sh; openapi-verify-response-check.sh
 
+  - id: gov-api
+    module: api/gov-api
+    backlog_epic: null
+    status: deferred
+    openapi: annexes/A-openapi-registry/gov-api.openapi.yaml
+    odtis_ids:
+    - ODTIS-0315
+    - ODTIS-0344
+    binding_doc: implementation/component-bindings/gov-api.yaml
+    notes: Annex A S7 deferred (#29); interim verification-api + eregistry-adapter; gov-api-decision-2026.yaml
+
   - id: citizen-api
     module: api/citizen-api
     backlog_epic: P1-E07

@@ -3,8 +3,13 @@ info:
 title: VenID Government Integration API
 version: 0.9.0-draft
 description: >
-Surface S7 - Government agency integration (sector-specific verification).
-ODTIS 3.5, 4. Cross-ref E-Registry (Annex D).
+  Surface S7 - Government agency integration (sector-specific verification).
+  ODTIS 3.5, 4. Cross-ref E-Registry (Annex D).
+
+  **Implementation status (reference stack):** DEFERRED (#29). This file is the
+  normative Annex A contract draft only. No `api/gov-api` module ships in Phase 2
+  pilot. Interim: verification-api (S2) and eregistry-adapter (Extended sandbox).
+  Decision record: implementation/evidence/gov-api/gov-api-decision-2026.yaml
 license:
 name: CC BY 4.0
 url: https://creativecommons.org/licenses/by/4.0/

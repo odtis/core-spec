@@ -1,0 +1,39 @@
+# Normative binding: Government API Annex A S7 (deferred)
+# Decision #29 — contract draft only; no Maven module in reference stack.
+
+component_id: gov-api
+ri_map_surface: gov-api
+repository: ven-identity-core
+module_path: api/gov-api
+profile: core-identity
+backlog_epic: null
+status: deferred
+
+summary: >
+  Government agency integration surface (/v1/gov). OpenAPI defines gov.verify.post and
+  gov.registry.assertion.post; implementation deferred to Phase 3+ national operator gate.
+
+implementation_notes: >
+  Option B (#29): keep gov-api.openapi.yaml as normative contract draft. Interim national
+  LoA and registry assertions use verification-api (S2) and eregistry-adapter (Extended).
+  Do not add api-gateway routes or Docker images until GAP-IC-GOV-API closes.
+
+decision: implementation/evidence/gov-api/gov-api-decision-2026.yaml
+openapi: annexes/A-openapi-registry/gov-api.openapi.yaml
+annex_index: annexes/A-openapi-registry/INDEX.yaml#S7
+
+odtis_ids:
+  - ODTIS-0315
+  - ODTIS-0344
+
+interim_bindings:
+  - component_id: verification-api
+    note: Sector verification for authorized clients (S2)
+  - component_id: eregistry-adapter
+    note: National LoA / registry assertions (Extended sandbox)
+
+evidence:
+  - implementation/evidence/gov-api/gov-api-decision-2026.yaml
+  - annexes/A-openapi-registry/gov-api.openapi.yaml
+
+smoke_script: core-impl/scripts/gov-api-decision-check.sh

@@ -121,6 +121,15 @@ odtis_requirements:
 conformance_operations:
 - gov.verify.post
 - gov.registry.assertion.post
+status: deferred
+implementation: none
+production_claim: false
+gap_id: GAP-IC-GOV-API
+decision: implementation/evidence/gov-api/gov-api-decision-2026.yaml
+note: >
+  Normative OpenAPI contract draft only (#29). No Maven module in reference stack;
+  interim national/registry paths use verification-api (S2) and eregistry-adapter.
+  Implement api/gov-api in ven-identity-core at Phase 3+ national operator gate.
 
 - id: exchange-gateway
 name: Exchange Gateway

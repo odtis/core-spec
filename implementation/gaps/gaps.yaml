@@ -38,6 +38,18 @@ gaps:
   engagement: implementation/evidence/phase4-conformance/l3-auditor-engagement-2026.yaml
   note: Evidence pack ready (#17); external auditor engagement scheduled; gap closes on attestation letter only
 
+- id: GAP-IC-GOV-API
+  implementation: ven-identity-core
+  surface: gov-api
+  odtis_id: ODTIS-0315
+  summary: Annex A S7 Government API — OpenAPI contract without Maven implementation
+  priority: L2
+  status: deferred
+  backlog_epic: null
+  openapi: annexes/A-openapi-registry/gov-api.openapi.yaml
+  decision: implementation/evidence/gov-api/gov-api-decision-2026.yaml
+  note: Defer api/gov-api to Phase 3+ national operator gate (#29); interim via verification-api and eregistry-adapter
+
 # --- Closed (L2 sandbox evidence) ---
 - id: GAP-TN-0204
   implementation: ven-trust-network

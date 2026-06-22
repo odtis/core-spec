@@ -1,0 +1,48 @@
+# gov-api (Annex A S7) implementation decision (#29).
+# Option B selected: defer Maven module; keep normative OpenAPI contract draft.
+
+decision_id: gov-api-implementation-decision-2026
+as_of: 2026-06-22
+issue: 29
+annex_surface: S7
+openapi: annexes/A-openapi-registry/gov-api.openapi.yaml
+base_path: /v1/gov
+
+decision: defer
+option_selected: B
+option_rejected: A
+
+rationale: >
+  Phase 2 published operational scope excludes a standalone Government API module.
+  National LoA and civil registry paths are covered by eregistry-adapter (Extended
+  sandbox) and verification-api for sector RPs. A dedicated gov-api requires Phase 3+
+  national operator gate, agency credential model, and bilateral registry agreements
+  not yet in production scope.
+
+contract_status: normative_draft
+implementation_status: none
+production_claim: false
+
+interim_surfaces:
+  - surface: S2
+    module: api/verification-api
+    note: Sector verification for authorized RPs
+  - surface: extended
+    module: services/eregistry-adapter
+    note: National LoA / registry assertions in E-Registry sandbox overlay
+
+future_implementation:
+  repository: ven-identity-core
+  module_path: api/gov-api
+  target_phase: 3
+  backlog_ref: ven-identity-core/TAREAS-IMPLEMENTACION.md section 8.1
+  operations:
+    - gov.verify.post
+    - gov.registry.assertion.post
+
+gap_id: GAP-IC-GOV-API
+binding: implementation/component-bindings/gov-api.yaml
+
+smoke:
+  - core-impl/scripts/gov-api-decision-check.sh
+  - conformance/run-gov-api-decision-checks.sh

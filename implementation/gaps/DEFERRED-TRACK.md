@@ -6,7 +6,7 @@
 **Project hub:** [Project hub](/project/) | **All gaps:** [Known gaps](KNOWN-GAPS.md) 
 **Machine-readable:** [Gap register (YAML)](gaps.yaml)
 
-These four items are **intentionally deferred**. They do not weaken ODTIS MUST requirements in the spec; they document what the VenID reference stack has **not** yet proven in production or external review.
+These items are **intentionally deferred**. They do not weaken ODTIS MUST requirements in the spec; they document what the VenID reference stack has **not** yet proven in production or external review.
 
 ---
 
@@ -14,10 +14,45 @@ These four items are **intentionally deferred**. They do not weaken ODTIS MUST r
 
 | Gap ID | Track | Blocks ODTIS Certified? | Target phase |
 |--------|-------|-------------------------|--------------|
+| [GAP-IC-GOV-API](#gap-ic-gov-api-annex-a-s7) | Contract-only S7 | No (Phase 2 pilot) | Phase 3+ national operator |
 | [GAP-TN-0204](#gap-tn-0204-live-mtls) | Production interop | Yes (Trust Network L3 live) | P2-E01 production |
 | [GAP-TN-0217](#gap-tn-0217-national-tsa) | Production PKI | Conditional (policy-dependent) | P2-E06 production |
 | [GAP-TN-TEP](#gap-tn-tep-ietf-extraction) | IETF informative | No | Governance IETF track |
 | [GAP-CERT-L3-ATT](#gap-cert-l3-att-third-party-l3) | Certification | Yes (L3 mark claim) | P4-E07 external |
+
+---
+
+## GAP-IC-GOV-API: Annex A S7 (gov-api)
+
+| Field | Value |
+|-------|-------|
+| ODTIS ID | `ODTIS-0315`, `ODTIS-0344` (registry assertions) |
+| Surface | Annex A **S7** — `gov-api.openapi.yaml` |
+| Issue | [#29](https://github.com/odtis/core-impl/issues/29) |
+
+**Decision (Option B — defer):** Keep `gov-api.openapi.yaml` as **normative contract draft**. Do **not** ship `api/gov-api` in Phase 2 pilot.
+
+**Current evidence:**
+
+- Decision record: [gov-api Decision 2026 (YAML)](../evidence/gov-api/gov-api-decision-2026.yaml)
+- Annex A index: [INDEX.yaml S7](../../annexes/A-openapi-registry/INDEX.yaml) (`status: deferred`)
+- Component binding: [gov-api.yaml](../component-bindings/gov-api.yaml)
+
+**Interim (reference stack):**
+
+| Need | Use instead |
+|------|-------------|
+| Sector verification | verification-api (S2) |
+| National LoA / registry assertions | eregistry-adapter (Extended sandbox overlay) |
+
+**Resolution criteria:**
+
+1. National operator gate and agency credential model approved.
+2. Implement `api/gov-api` in `ven-identity-core` matching OpenAPI operationIds.
+3. Add `gov-api.yml`, api-gateway route, CI image, conformance smokes.
+4. Update `PUBLISHED-SERVICE-SCOPE.md` and close gap in `gaps.yaml`.
+
+**Does not block:** Phase 2 pilot, L2 self-cert, Extended sandbox, or honest Phase 4 target packaging.
 
 ---
 

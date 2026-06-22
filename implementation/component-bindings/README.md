@@ -13,6 +13,7 @@ Per-component **informative** bindings between VenID code, ODTIS requirement IDs
 | Binding | Profile | Epic |
 |---------|---------|------|
 | `verification-api.yaml` | core-identity | P1-E04 |
+| `gov-api.yaml` | core-identity | deferred (#29) |
 | `exchange-gateway.yaml` | trust-network | P2-E01 |
 | `exchange-client-sdk.yaml` | trust-network | P2-E04 |
 | `ven-partner-sdk.yaml` | trust-network | P2-E04 |
