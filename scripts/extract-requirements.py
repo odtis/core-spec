@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "registry/requirements.json"
 P18_SOURCE = (
     "P18 standards-alignment paper (informative; "
-    "https://digitaltrustinfrastructure.org — see publication/HOW-TO-CITE.md)"
+    "https://digitaltrustinfrastructure.org - see publication/HOW-TO-CITE.md)"
 )
 
 SECTION_MAP = {
