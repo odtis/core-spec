@@ -39,7 +39,7 @@ profiles:
     tests:
       - path: conformance/tests/reference-architecture/test_applicable_tests_required.md
         requirements: [ODTIS-0010]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/reference-architecture/test_extended_no_weakening.md
         requirements: [ODTIS-0006]
@@ -47,35 +47,35 @@ profiles:
         type: manual
       - path: conformance/tests/reference-architecture/test_federation_requires_trust_network.md
         requirements: [ODTIS-0002]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/reference-architecture/test_layer2_requires_layer1.md
         requirements: [ODTIS-0001]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/reference-architecture/test_minimal_claim_no_implied_profiles.md
         requirements: [ODTIS-0009]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/reference-architecture/test_profile_declaration_complete.md
         requirements: [ODTIS-0003]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/reference-architecture/test_profile_dependency_chain.md
         requirements: [ODTIS-0004]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/reference-architecture/test_prohibited_claims.md
         requirements: [ODTIS-0007]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/reference-architecture/test_statement_minimum_fields.md
         requirements: [ODTIS-0008]
-        status: pending
+        status: implemented
         type: manual
       - path: conformance/tests/reference-architecture/test_version_binding.md
         requirements: [ODTIS-0005]
-        status: pending
+        status: implemented
         type: manual
   core-identity:
     requirement_count: 45

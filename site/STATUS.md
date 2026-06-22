@@ -65,15 +65,16 @@ Profile comparison: [Profile comparison](PROFILES.md).
 
 | Profile | Tests | Implemented | Registry reqs |
 |---------|-------|-------------|---------------|
-| Reference Architecture | 10 | 1 | 10 |
+| Reference Architecture | 10 | 10 | 10 |
 | Core Identity | 58 | 58 | 45 |
 | Trust Network | 30 | 21 | 27 |
 | Federation | 8 | 8 | 8 |
 | Operator | 30 | 27 | 36 |
 | Extended | 23 | 21 | 25 |
-| **Total** | **159** | **136** | **149** |
+| **Total** | **159** | **145** | **149** |
 
 <!-- GENERATED:conformance-suite:END -->
+
 
 
 
@@ -133,8 +134,8 @@ Participate via [Feedback channels](../governance/FEEDBACK.md) or GitHub issue t
 |--------|-------|
 | Registry requirements | 149 |
 | Conformance procedures | 159 |
-| Marked **implemented** | 136 (85.5%) |
-| Pending procedures | 23 |
+| Marked **implemented** | 145 (91.2%) |
+| Pending procedures | 14 |
 
 ### By profile
 
@@ -144,7 +145,7 @@ Participate via [Feedback channels](../governance/FEEDBACK.md) or GitHub issue t
 | extended | 23 | 21 | 25 |
 | federation | 8 | 8 | 8 |
 | operator | 30 | 27 | 36 |
-| reference-architecture | 10 | 1 | 10 |
+| reference-architecture | 10 | 10 | 10 |
 | trust-network | 30 | 21 | 27 |
 
 Regenerate: `python3 scripts/sync-test-status-from-smokes.py --run` then `python3 scripts/generate-coverage-report.py`.

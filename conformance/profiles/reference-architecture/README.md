@@ -18,16 +18,16 @@ Requirement prefixes: `ODTIS-00*`
 
 | Test | Requirement | Status |
 |------|-------------|--------|
-| [`Applicable Tests Required test`](../../tests/reference-architecture/test_applicable_tests_required.md) | `ODTIS-0010` | pending |
+| [`Applicable Tests Required test`](../../tests/reference-architecture/test_applicable_tests_required.md) | `ODTIS-0010` | implemented |
 | [`Extended No Weakening test`](../../tests/reference-architecture/test_extended_no_weakening.md) | `ODTIS-0006` | implemented |
-| [`Federation Requires Trust Network test`](../../tests/reference-architecture/test_federation_requires_trust_network.md) | `ODTIS-0002` | pending |
-| [`Layer2 Requires Layer1 test`](../../tests/reference-architecture/test_layer2_requires_layer1.md) | `ODTIS-0001` | pending |
-| [`Minimal Claim No Implied Profiles test`](../../tests/reference-architecture/test_minimal_claim_no_implied_profiles.md) | `ODTIS-0009` | pending |
-| [`Profile Declaration Complete test`](../../tests/reference-architecture/test_profile_declaration_complete.md) | `ODTIS-0003` | pending |
-| [`Profile Dependency Chain test`](../../tests/reference-architecture/test_profile_dependency_chain.md) | `ODTIS-0004` | pending |
-| [`Prohibited Claims test`](../../tests/reference-architecture/test_prohibited_claims.md) | `ODTIS-0007` | pending |
-| [`Statement Minimum Fields test`](../../tests/reference-architecture/test_statement_minimum_fields.md) | `ODTIS-0008` | pending |
-| [`Version Binding test`](../../tests/reference-architecture/test_version_binding.md) | `ODTIS-0005` | pending |
+| [`Federation Requires Trust Network test`](../../tests/reference-architecture/test_federation_requires_trust_network.md) | `ODTIS-0002` | implemented |
+| [`Layer2 Requires Layer1 test`](../../tests/reference-architecture/test_layer2_requires_layer1.md) | `ODTIS-0001` | implemented |
+| [`Minimal Claim No Implied Profiles test`](../../tests/reference-architecture/test_minimal_claim_no_implied_profiles.md) | `ODTIS-0009` | implemented |
+| [`Profile Declaration Complete test`](../../tests/reference-architecture/test_profile_declaration_complete.md) | `ODTIS-0003` | implemented |
+| [`Profile Dependency Chain test`](../../tests/reference-architecture/test_profile_dependency_chain.md) | `ODTIS-0004` | implemented |
+| [`Prohibited Claims test`](../../tests/reference-architecture/test_prohibited_claims.md) | `ODTIS-0007` | implemented |
+| [`Statement Minimum Fields test`](../../tests/reference-architecture/test_statement_minimum_fields.md) | `ODTIS-0008` | implemented |
+| [`Version Binding test`](../../tests/reference-architecture/test_version_binding.md) | `ODTIS-0005` | implemented |
 
 ## Coverage summary
 
@@ -35,7 +35,7 @@ Requirement prefixes: `ODTIS-00*`
 |--------|-------|
 | Registry requirements | 10 |
 | Linked tests | 10 |
-| Implemented (smoke) | 1 |
+| Implemented (smoke) | 10 |
 | Req stub coverage | 100.0% |
 
 Regenerate: `python3 scripts/generate-profile-readmes.py`

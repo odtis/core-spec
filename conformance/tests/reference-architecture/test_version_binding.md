@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0005 - ODTIS version binding
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0005
 **Profile:** reference-architecture
 

@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0002 - Federation requires Trust Network
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0002
 **Profile:** reference-architecture
 

@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0009 - reference-architecture product requirement
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0009
 **Profile:** reference-architecture
 **Trace:** P18 1.7.4, Book 1 D1

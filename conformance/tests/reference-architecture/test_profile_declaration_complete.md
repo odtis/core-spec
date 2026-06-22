@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0003 - Complete profile declaration
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0003
 **Profile:** reference-architecture
 

@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0001 - Layer 2 requires Layer 1
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0001
 **Profile:** reference-architecture
 

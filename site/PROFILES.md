@@ -77,12 +77,13 @@ See [OIDF positioning](../governance/liaison/OIDF-POSITIONING.md).
 | Extended | 25 | 23 | 21 | 100.0% |
 | Federation | 8 | 8 | 8 | 100.0% |
 | Operator | 36 | 30 | 27 | 100.0% |
-| Reference Architecture | 10 | 10 | 1 | 100.0% |
+| Reference Architecture | 10 | 10 | 10 | 100.0% |
 | Trust Network | 27 | 30 | 21 | 100.0% |
 
-Totals (unique test files): **159** procedures, **136** with smoke `implemented` status.
+Totals (unique test files): **159** procedures, **145** with smoke `implemented` status.
 
 <!-- GENERATED:profile-coverage:END -->
+
 
 
 

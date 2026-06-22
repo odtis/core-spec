@@ -1,4 +1,4 @@
-as_of: 2026-06-22T22:55:41Z
+as_of: 2026-06-22T23:13:56Z
 generator: scripts/sync-test-status-from-smokes.py
 smokes:
   - script: ../core-impl/ven-identity-core/scripts/citizen-portal-check.sh
@@ -90,7 +90,7 @@ smokes:
     tests: [conformance/tests/core-identity/test_odtis_0104.md, conformance/tests/extended/test_eregistry_declaration_required.md, conformance/tests/extended/test_eregistry_no_civil_authority.md, conformance/tests/extended/test_eregistry_phase3_activation.md, conformance/tests/extended/test_national_loa_after_adapter.md, conformance/tests/extended/test_registry_hash_no_biometric_store.md, conformance/tests/extended/test_registry_verification_audit.md]
   - script: conformance/run-extended-no-weakening-checks.sh
     ok: true
-    tests: [conformance/tests/reference-architecture/test_extended_no_weakening.md]
+    tests: []
   - script: conformance/run-extended-staging-checks.sh
     ok: true
     tests: [conformance/tests/core-identity/test_odtis_0340.md, conformance/tests/core-identity/test_odtis_0341.md, conformance/tests/core-identity/test_odtis_0342.md, conformance/tests/core-identity/test_odtis_0343.md]
@@ -181,6 +181,9 @@ smokes:
   - script: conformance/run-published-service-scope-checks.sh
     ok: true
     tests: [conformance/tests/operator/test_phase_declaration.md, conformance/tests/operator/test_published_service_scope.md]
+  - script: conformance/run-reference-architecture-checks.sh
+    ok: true
+    tests: [conformance/tests/reference-architecture/test_applicable_tests_required.md, conformance/tests/reference-architecture/test_extended_no_weakening.md, conformance/tests/reference-architecture/test_federation_requires_trust_network.md, conformance/tests/reference-architecture/test_layer2_requires_layer1.md, conformance/tests/reference-architecture/test_minimal_claim_no_implied_profiles.md, conformance/tests/reference-architecture/test_profile_declaration_complete.md, conformance/tests/reference-architecture/test_profile_dependency_chain.md, conformance/tests/reference-architecture/test_prohibited_claims.md, conformance/tests/reference-architecture/test_statement_minimum_fields.md, conformance/tests/reference-architecture/test_version_binding.md]
   - script: conformance/run-rp-client-checks.sh
     ok: true
     tests: [conformance/tests/core-identity/test_odtis_0319.md, conformance/tests/core-identity/test_odtis_0320.md, conformance/tests/core-identity/test_odtis_0321.md, conformance/tests/core-identity/test_odtis_0337.md, conformance/tests/core-identity/test_odtis_0338.md, conformance/tests/core-identity/test_rp_suspension.md]

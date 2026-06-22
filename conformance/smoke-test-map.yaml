@@ -4,9 +4,19 @@
 spec_version: "0.9.0-draft"
 
 smokes:
-  - script: conformance/run-extended-no-weakening-checks.sh
+  - script: conformance/run-reference-architecture-checks.sh
     tests:
+      - conformance/tests/reference-architecture/test_applicable_tests_required.md
       - conformance/tests/reference-architecture/test_extended_no_weakening.md
+      - conformance/tests/reference-architecture/test_federation_requires_trust_network.md
+      - conformance/tests/reference-architecture/test_layer2_requires_layer1.md
+      - conformance/tests/reference-architecture/test_minimal_claim_no_implied_profiles.md
+      - conformance/tests/reference-architecture/test_profile_declaration_complete.md
+      - conformance/tests/reference-architecture/test_profile_dependency_chain.md
+      - conformance/tests/reference-architecture/test_prohibited_claims.md
+      - conformance/tests/reference-architecture/test_statement_minimum_fields.md
+      - conformance/tests/reference-architecture/test_version_binding.md
+    notes: validate-reference-architecture-smoke.py + extended-no-weakening; ODTIS-0001..0010
 
   - script: conformance/run-operator-governance-checks.sh
     odtis_ids:

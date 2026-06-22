@@ -1,6 +1,6 @@
 # Conformance test: ODTIS-0004 - Profile dependency chain
 
-**Status:** pending implementation
+**Status:** implemented (static + unit smoke)
 **Requirement:** ODTIS-0004
 **Profile:** reference-architecture
 

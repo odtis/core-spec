@@ -19,9 +19,9 @@ registry:
   conformance_test_coverage_pct: 100.0
 conformance_tests:
   total_procedures: 159
-  implemented: 136
-  pending: 23
-  implemented_pct: 85.5
+  implemented: 145
+  pending: 14
+  implemented_pct: 91.2
 profiles:
   core-identity:
     tests: 58
@@ -41,7 +41,7 @@ profiles:
     requirements: 36
   reference-architecture:
     tests: 10
-    implemented: 1
+    implemented: 10
     requirements: 10
   trust-network:
     tests: 30
