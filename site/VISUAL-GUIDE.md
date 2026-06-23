@@ -7,7 +7,7 @@ description: Diagrams for implementers, auditors, and operators
 
 # Visual architecture guide
 
-**One page, engineer-first:** where ODTIS lives in repos, how the two layers talk, which profile to declare, and how to reach L1/L2/L3 — without reading 11 spec sections first.
+**One page, engineer-first:** where ODTIS lives in repos, how the two layers talk, which profile to declare, and how to reach L1/L2/L3  - without reading 11 spec sections first.
 
 <p class="odtis-hub-meta" markdown="1">
 <strong>15-minute path:</strong> [Getting started](GETTING-STARTED.md) |
@@ -19,11 +19,11 @@ description: Diagrams for implementers, auditors, and operators
 </div>
 
 !!! tip "How to read these diagrams"
-    Boxes name **logical ODTIS surfaces** (Annex A OpenAPI bundles). Ports and repo names in grey callouts are **informative** VenID bindings — you can implement ODTIS without VenID. For mission and ecosystem narrative see [About ODTIS](ABOUT.md).
+    Boxes name **logical ODTIS surfaces** (Annex A OpenAPI bundles). Ports and repo names in grey callouts are **informative** VenID bindings  - you can implement ODTIS without VenID. For mission and ecosystem narrative see [About ODTIS](ABOUT.md).
 
 ---
 
-## Developer compass — start here
+## Developer compass  - start here
 
 Pick your lane. Each path links to the doc that answers the next question.
 
@@ -61,19 +61,19 @@ flowchart TB
 |---------------|------------|----------|
 | **Vendor / greenfield** | [Getting started](GETTING-STARTED.md) → [Profile comparison](PROFILES.md) | `./conformance/run.sh` (L1) |
 | **RP / app team** | [OIDF positioning](../governance/liaison/OIDF-POSITIONING.md) + [verification-api OpenAPI](../annexes/A-openapi-registry/verification-api.openapi.yaml) | Sandbox OIDC against your IdP |
-| **Partner backend** | [Trust Network spec](../spec/04-trust-network/SPEC.md) §4.4 | mTLS smoke via `exchange-client` (RI) |
+| **Partner backend** | [Trust Network spec](../spec/04-trust-network/SPEC.md) section 4.4 | mTLS smoke via `exchange-client` (RI) |
 | **Operator / regulator** | [Operator profile](../spec/profiles/operator-profile.md) + [Section 10](../spec/10-deployment-profiles/SPEC.md) | L2 statement + [self-cert guide](../conformance/certification/self-cert-guide.md) |
 | **Contributor** | [Component bindings](COMPONENT-BINDINGS.md) | Pick a component YAML + linked test |
 
 ---
 
-## Ecosystem map — spec, RI, and product layer
+## Ecosystem map  - spec, RI, and product layer
 
 ODTIS is **normative in `core-spec`**; everything else is optional acceleration. You never need VenID to claim conformance.
 
 ```mermaid
 flowchart TB
-  subgraph normative [Normative — odtis/core-spec]
+  subgraph normative [Normative  - odtis/core-spec]
     SPEC[11 spec sections + 7 profiles]
     REG[registry/ 204 requirement IDs]
     ANN[Annexes A-E OpenAPI events threats]
@@ -81,14 +81,14 @@ flowchart TB
     SITE[odtis.org site]
   end
 
-  subgraph ri [Reference implementation — informative]
+  subgraph ri [Reference implementation  - informative]
   IMPL[core-impl VenID]
   IC[ven-identity-core Layer 1]
   TN[ven-trust-network Layer 2]
   CS[ven-cloud-stack operator base]
   end
 
-  subgraph accel [Adoption accelerators — product layer]
+  subgraph accel [Adoption accelerators  - product layer]
     DK[odtis-devkit sandbox compose]
     TOOLS[odtis-tools CLI validators]
     KC[odtis-keycloak overlay]
@@ -130,7 +130,7 @@ flowchart TB
 
 ---
 
-## Two-layer stack — trust boundaries
+## Two-layer stack  - trust boundaries
 
 Two public edges, two threat models. Layer 1 = HTTPS + OIDC/JWT. Layer 2 = mTLS + partner grants only.
 
@@ -147,7 +147,7 @@ flowchart TB
  GW["API Gateway / TLS<br/><i>RI :8080 api-gateway</i>"]
  end
 
- subgraph L1 [Layer 1 — Core Identity profile]
+ subgraph L1 [Layer 1  - Core Identity profile]
  KC["OIDC IdP<br/><i>RI Keycloak :8180</i>"]
  CA[citizen-api]
  VA["verification-api<br/><i>RI :8092</i>"]
@@ -157,7 +157,7 @@ flowchart TB
  VE[verification-engine]
  end
 
- subgraph L2 [Layer 2 — Trust Network profile]
+ subgraph L2 [Layer 2  - Trust Network profile]
  XGW["exchange-gateway / mTLS<br/><i>RI :9080</i>"]
  TR[(trust-registry / catalog)]
  TS[trust-service / grants]
@@ -194,11 +194,11 @@ flowchart TB
 | **L1 edge** | HTTPS, OIDC, JWT | Citizens, RPs, operators | Consent + LoA before attribute release ([ODTIS-0331](../spec/05-consent-privacy/SPEC.md)) |
 | **L2 edge** | mTLS + `service_id` + purpose | Partner backends only | Grant + cert validation ([ODTIS-0224](../spec/04-trust-network/SPEC.md), [ODTIS-0535](../spec/08-security/SPEC.md)) |
 
-Partners **never** call `citizen-api` or microservices directly — only `exchange-gateway`.
+Partners **never** call `citizen-api` or microservices directly  - only `exchange-gateway`.
 
 ---
 
-## Request paths — three flows that matter
+## Request paths  - three flows that matter
 
 === "Citizen login (OIDC)"
 
@@ -322,21 +322,21 @@ Profiles are **what you claim**. Deployment phases ([Section 10](../spec/10-depl
 flowchart TB
   RA[Reference Architecture<br/>always required ODTIS-0001-0010]
 
-  subgraph phase1 [Phase 1 — citizen identity]
+  subgraph phase1 [Phase 1  - citizen identity]
     CI[Core Identity<br/>OIDC verify consent]
   end
 
-  subgraph phase2 [Phase 2 — institutional exchange]
+  subgraph phase2 [Phase 2  - institutional exchange]
     TN[Trust Network<br/>mTLS catalog grants]
     REL[Reliance Extensions<br/>Capa B optional]
     FED[Federation<br/>bilateral operators]
   end
 
-  subgraph phase3 [Phase 3 — operator duties]
+  subgraph phase3 [Phase 3  - operator duties]
     OP[Operator<br/>PKI audit regulator export]
   end
 
-  subgraph phase4 [Phase 4 — sector modules]
+  subgraph phase4 [Phase 4  - sector modules]
     EXT[Extended Annex D<br/>wallet webhooks KYB]
   end
 
@@ -363,7 +363,7 @@ Details: [Profile comparison](PROFILES.md) · Declare in [conformance-statement.
 
 ---
 
-## Conformance ladder — L1 → L2 → L3
+## Conformance ladder  - L1 → L2 → L3
 
 Each level answers a different question. Do not skip L1 in CI even if you only care about production.
 
@@ -413,9 +413,9 @@ flowchart LR
 
 ---
 
-## Adoption workflow — independent vendor
+## Adoption workflow  - independent vendor
 
-End-to-end path from zero to publishable claim (typically days–weeks, not months of spec archaeology).
+End-to-end path from zero to publishable claim (typically days to weeks, not months of spec archaeology).
 
 ```mermaid
 flowchart LR
@@ -441,7 +441,7 @@ Expanded narrative: [Adoption guide](../ADOPTION.md) · [Getting started](GETTIN
 
 ## Normative domains (requirement counts)
 
-Where complexity lives in the registry — useful when scoping a team or a sprint.
+Where complexity lives in the registry  - useful when scoping a team or a sprint.
 
 ```mermaid
 %%{init: {'themeVariables': { 'pie1': '#3949ab', 'pie2': '#5c6bc0', 'pie3': '#7986cb', 'pie4': '#9fa8da', 'pie5': '#283593', 'pie6': '#c5cae9', 'pie7': '#1a237e'}}}%%
