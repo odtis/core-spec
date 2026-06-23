@@ -14,15 +14,17 @@ Work completed before external comment period ends. Does **not** close the cycle
 
 | Item | Status | Evidence |
 |------|--------|----------|
-| Sections 2-10 structural review (C1-C7) | Done | [Section review matrix](SECTION-REVIEW.md); `validate-section-completeness.py` PASS |
+| Sections 2-11 structural review (C1-C7) | Done | [Section review matrix](SECTION-REVIEW.md); `validate-section-completeness.py` PASS |
+| Section 11 Reliance Extensions | Done | [Section 11](../spec/11-reliance-profiles/SPEC.md); `validate-reliance-annex.py` PASS |
 | Section 1 meta review | Done | Phase 3.2 checklist in [Section 1 - Scope and conformance](../spec/01-scope-conformance/SPEC.md) |
 | FB-001 scope enforcement (5.1.4) | Accepted | [FB-001 test linkage](review/clarify-001-5.1.4-test-linkage.md) |
 | FB-002 federation depth | Accepted | 6 IDs; registry + tests updated |
 | FB-003 HA boundary (section 10) | Accepted | Informative note in section 10.4 |
 | FB-004 autodiscovery SHOULD (section 4) | Accepted | section 4.4.3 + Annex A note |
 | FB-005 L2 report template | Accepted | [L2 report template](../conformance/sandbox/L2-REPORT-TEMPLATE.md) |
-| L1 conformance | PASS | `./conformance/run.sh` (8/8) |
-| Registry / Annex C | 149/149 | `validate-standards-mapping.py` |
+| L1 conformance | PASS | `./conformance/run.sh` (11/11 validators) |
+| Registry / Annex C | 204/204 | `validate-standards-mapping.py` |
+| Annex E Reliance | Done | 17 sub-modules; 55 normative IDs |
 | Annex A OpenAPI | Frozen | [Annex A freeze record](../annexes/A-openapi-registry/FREEZE.md) |
 
 **Still open for external input:** live sandbox L2 reports, Book 2 MUST conflicts, new RFCs from adopters.
@@ -74,7 +76,7 @@ In each `spec/*/SPEC.md` Phase 3.2 checklist, check:
 - [x] External review cycle 1 ([Section review matrix](/governance/SECTION-REVIEW/))
 ```
 
-Sections: 1, 2, 3, 4, 5, 7, 8, 9, 10 (and 6 if not already checked).
+Sections: 1, 2, 3, 4, 5, 7, 8, 9, 10, **11** (and 6 if not already checked).
 
 Update [Section review matrix](SECTION-REVIEW.md) section 1 row: External review cycle 1 -> Done.
 

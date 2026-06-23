@@ -22,5 +22,6 @@ python3 scripts/generate-profile-docs.py
 | Federation | [Federation profile](federation-profile.md) | trust-network |
 | Operator | [Operator profile](operator-profile.md) | reference-architecture, core-identity |
 | Extended | [Extended profile](extended-profile.md) | reference-architecture, core-identity (+ sub-modules) |
+| Reliance Extensions | [Reliance Extensions profile](reliance-extensions-profile.md) | reference-architecture, core-identity (+ Capa B sub-modules) |
 
 **Conformance:** [Self-certification guide](../../conformance/certification/self-cert-guide.md)

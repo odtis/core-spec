@@ -4,11 +4,11 @@
   "generated": "2026-06-23",
   "generator": "scripts/generate-phased-backlog.py",
   "summary": {
-    "epics": 39,
-    "odtis_ids": 154,
+    "epics": 43,
+    "odtis_ids": 170,
     "done": 10,
-    "partial": 29,
-    "todo": 0
+    "partial": 30,
+    "todo": 3
   },
   "phases": [
     {
@@ -983,6 +983,110 @@
           ]
         }
       ]
+    },
+    {
+      "id": "P5",
+      "odtis_phase": 2,
+      "name": "Reliance Extensions (Capa B)",
+      "goal": "Claimable Reliance pilot with RI-MAP, Annex B crosswalk, and L2 smoke.",
+      "profiles": [
+        "reliance-extensions"
+      ],
+      "book1_gate": "Core Identity + Trust Network L2; reliance_extensions declared with R-Base.",
+      "epics": [
+        {
+          "id": "P5-E01",
+          "title": "Reliance pilot overlay and statement",
+          "status": "partial",
+          "component": "reliance-overlay + conformance package",
+          "repo": "odtis/core-spec + ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0701",
+            "ODTIS-0707",
+            "ODTIS-0708",
+            "ODTIS-0532",
+            "ODTIS-0536"
+          ],
+          "conformance_tests": [
+            "conformance/tests/operator/test_implementation_traceability_map.md",
+            "conformance/tests/operator/test_phase_declaration.md",
+            "conformance/tests/reliance-extensions/test_odtis_0701.md",
+            "conformance/tests/reliance-extensions/test_odtis_0707.md",
+            "conformance/tests/reliance-extensions/test_odtis_0708.md"
+          ],
+          "work_items": [
+            "RI-MAP reliance-overlay surface and component binding",
+            "venid-reliance-pilot statement + l2-report via run-reliance-package.sh"
+          ]
+        },
+        {
+          "id": "P5-E02",
+          "title": "Agent authority runtime",
+          "status": "todo",
+          "component": "agent-mandate gateway",
+          "repo": "ven-identity-core (TBD)",
+          "odtis_ids": [
+            "ODTIS-0710",
+            "ODTIS-0711",
+            "ODTIS-0712",
+            "ODTIS-0713"
+          ],
+          "conformance_tests": [
+            "conformance/tests/reliance-extensions/test_odtis_0710.md",
+            "conformance/tests/reliance-extensions/test_odtis_0711.md",
+            "conformance/tests/reliance-extensions/test_odtis_0712.md",
+            "conformance/tests/reliance-extensions/test_odtis_0713.md"
+          ],
+          "work_items": [
+            "Signed mandate verification and revocation freshness window",
+            "Human-anchor step-up for high-risk agent actions"
+          ]
+        },
+        {
+          "id": "P5-E03",
+          "title": "Document capture PAD overlay",
+          "status": "todo",
+          "component": "verification-engine capture adapter",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0723",
+            "ODTIS-0724",
+            "ODTIS-0725"
+          ],
+          "conformance_tests": [
+            "conformance/tests/reliance-extensions/test_odtis_0723.md",
+            "conformance/tests/reliance-extensions/test_odtis_0724.md",
+            "conformance/tests/reliance-extensions/test_odtis_0725.md"
+          ],
+          "work_items": [
+            "PAD/IAD provider disclosure on capture reliance decisions",
+            "Fail-closed on unknown injection class"
+          ]
+        },
+        {
+          "id": "P5-E04",
+          "title": "Remaining Reliance sub-modules",
+          "status": "todo",
+          "component": "Capa B module overlays",
+          "repo": "ven-identity-core",
+          "odtis_ids": [
+            "ODTIS-0719",
+            "ODTIS-0727",
+            "ODTIS-0731",
+            "ODTIS-0747"
+          ],
+          "conformance_tests": [
+            "conformance/tests/reliance-extensions/test_odtis_0719.md",
+            "conformance/tests/reliance-extensions/test_odtis_0727.md",
+            "conformance/tests/reliance-extensions/test_odtis_0731.md",
+            "conformance/tests/reliance-extensions/test_odtis_0747.md"
+          ],
+          "work_items": [
+            "Tier 1 modules beyond pilot (Lifecycle, Liveness, Disclosure, VC-Gate, Public-eID, Portability)",
+            "Tier 2/3 modules per Annex E phase gates"
+          ]
+        }
+      ]
     }
   ],
   "execution_order": [
@@ -990,7 +1094,8 @@
     "P1 Core Identity L2 before P2 Trust Network production",
     "P2 before declaring Trust Network in production (ODTIS-0532)",
     "P3 Operator + E-Registry before National LoA in production",
-    "P4 Federation + Extended only when agreements/modules active"
+    "P4 Federation + Extended only when agreements/modules active",
+    "P5 Reliance Extensions pilot before Capa B production claims beyond declared modules"
   ],
   "references": {
     "ri_map": "implementation/RI-MAP.yaml",

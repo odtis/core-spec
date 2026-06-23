@@ -306,6 +306,60 @@ def test_gateway_mtls_required() -> dict:
     }
 
 
+def test_reliance_base_schema() -> dict:
+    catalog = ROOT / "registry/reliance-profiles.yaml"
+    text = catalog.read_text(encoding="utf-8")
+    ok = (
+        "R-Base" in text
+        and "relying_party" in text
+        and "purpose_binding" in text
+        and "ODTIS-0707" in text
+        and "reliance_extensions" in text
+    )
+    return {
+        "id": "l2-reliance-schema",
+        "requirement": "ODTIS-0701",
+        "ok": ok,
+        "detail": "registry/reliance-profiles.yaml defines R-Base field catalog and declaration field",
+    }
+
+
+def test_reliance_pilot_statement() -> dict:
+    stmt = ROOT / "implementation/statements/venid-reliance-pilot/conformance-statement.yaml"
+    if not stmt.is_file():
+        return {
+            "id": "l2-reliance-pilot",
+            "requirement": "ODTIS-0708",
+            "ok": False,
+            "detail": "venid-reliance-pilot conformance statement missing",
+        }
+    text = stmt.read_text(encoding="utf-8")
+    ok = (
+        "reliance-extensions" in text
+        and "R-Base" in text
+        and "R-Agent-Authority" in text
+        and "ODTIS-0707" in text
+    )
+    return {
+        "id": "l2-reliance-pilot",
+        "requirement": "ODTIS-0708",
+        "ok": ok,
+        "detail": "Pilot statement lists reliance-extensions profile and declared sub-modules",
+    }
+
+
+def test_reliance_overlay_binding() -> dict:
+    binding = ROOT / "implementation/component-bindings/reliance-overlay.yaml"
+    ri = ROOT / "implementation/RI-MAP.yaml"
+    ok = binding.is_file() and ri.is_file() and "reliance-overlay" in ri.read_text(encoding="utf-8")
+    return {
+        "id": "l2-reliance-ri-map",
+        "requirement": "ODTIS-0536",
+        "ok": ok,
+        "detail": "RI-MAP maps reliance-overlay surface with component binding",
+    }
+
+
 def _human_summary(report: dict) -> str:
     lines = [f"ODTIS L2 automated: {report['status']} ({report['passed']}/{report['total']})"]
     for result in report["results"]:
@@ -326,7 +380,13 @@ def main() -> int:
     parser.add_argument("--output", help="Write report JSON to file")
     args = parser.parse_args()
 
-    results: list[dict] = [test_loa_in_verify_schema(args.target or ""), test_gateway_mtls_required()]
+    results: list[dict] = [
+        test_loa_in_verify_schema(args.target or ""),
+        test_gateway_mtls_required(),
+        test_reliance_base_schema(),
+        test_reliance_pilot_statement(),
+        test_reliance_overlay_binding(),
+    ]
     if args.target:
         results = [
             test_oidc_discovery_reachable(args.target),

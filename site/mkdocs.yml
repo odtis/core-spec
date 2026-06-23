@@ -177,6 +177,7 @@ nav:
           - Federation: spec/profiles/federation-profile.md
           - Operator: spec/profiles/operator-profile.md
           - Extended: spec/profiles/extended-profile.md
+          - Reliance Extensions: spec/profiles/reliance-extensions-profile.md
       - Normative sections:
           - "1 Scope and conformance": spec/01-scope-conformance/SPEC.md
           - "2 Terminology and LoA": spec/02-terminology-loa/SPEC.md
@@ -188,6 +189,9 @@ nav:
           - "8 Security": spec/08-security/SPEC.md
           - "9 Audit and events": spec/09-audit-events/SPEC.md
           - "10 Deployment": spec/10-deployment-profiles/SPEC.md
+          - "11 Reliance Extensions (Capa B)": spec/11-reliance-profiles/SPEC.md
+      - Annexes:
+          - "Annex E - Reliance Extensions": annexes/E-reliance-profiles/README.md
       - Reference indexes:
           - Requirements index: site/REQUIREMENTS-INDEX.md
           - Domain map: site/DOMAINS.md
@@ -235,8 +239,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
-  odtis_build_time: "2026-06-22T22:55:40Z"
-  odtis_build_sha: "f05c375"
+  odtis_build_time: "2026-06-23T09:00:54Z"
+  odtis_build_sha: "899f29c"
   odtis_version: "0.9.0-draft"
   generator: false
   seo:

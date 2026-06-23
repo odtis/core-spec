@@ -18,6 +18,7 @@ from profile_registry import (  # noqa: E402
     load_requirements,
     parse_profiles_yaml,
     profile_requirement_ids,
+    reliance_requirement_ids,
 )
 
 
@@ -25,13 +26,23 @@ def spec_version() -> str:
     return VERSION_FILE.read_text(encoding="utf-8").strip() if VERSION_FILE.is_file() else "0.9.0-draft"
 
 
-def requirement_ids_for_profiles(profile_ids: list[str]) -> list[str]:
+def requirement_ids_for_profiles(
+    profile_ids: list[str],
+    extended_modules: list[str] | None = None,
+    reliance_modules: list[str] | None = None,
+) -> list[str]:
     reqs = load_requirements()
     profiles = {p["id"]: p for p in parse_profiles_yaml()}
     ids: set[str] = set()
     for pid in profile_ids:
         if pid not in profiles:
             raise ValueError(f"unknown profile: {pid}")
+        if pid == "reliance-extensions":
+            declared = list(reliance_modules or [])
+            if "R-Base" not in declared:
+                declared = ["R-Base"] + declared
+            ids.update(reliance_requirement_ids(declared))
+            continue
         ids.update(profile_requirement_ids(profiles[pid], reqs))
     return sorted(ids)
 
@@ -81,11 +92,16 @@ def build_statement(args: argparse.Namespace) -> dict:
     if "reference-architecture" not in profiles:
         profiles.insert(0, "reference-architecture")
 
-    req_ids = requirement_ids_for_profiles(profiles)
+    req_ids = requirement_ids_for_profiles(
+        profiles,
+        extended_modules=list(args.extended_module or []),
+        reliance_modules=list(args.reliance_module or []),
+    )
     return {
         "odtis_version": spec_version(),
         "profiles": profiles,
         "extended_modules": list(args.extended_module or []),
+        "reliance_extensions": list(args.reliance_module or []),
         "level": args.level,
         "operator": args.operator,
         "scope": {
@@ -105,6 +121,7 @@ def render_markdown(data: dict) -> str:
     tests = data.get("tests") or {}
     profiles = ", ".join(data.get("profiles") or [])
     extended = ", ".join(data.get("extended_modules") or []) or "(none)"
+    reliance = ", ".join(data.get("reliance_extensions") or []) or "(none)"
     req_count = len(data.get("requirements") or [])
 
     lines = [
@@ -119,6 +136,7 @@ def render_markdown(data: dict) -> str:
         f"| `odtis_version` | {data.get('odtis_version', '')} |",
         f"| `profiles` | {profiles} |",
         f"| `extended_modules` | {extended} |",
+        f"| `reliance_extensions` | {reliance} |",
         f"| `level` | {data.get('level', '')} |",
         f"| `operator` | {data.get('operator', '')} |",
         f"| `environment` | {scope.get('environment', '')} |",
@@ -144,6 +162,21 @@ def render_markdown(data: dict) -> str:
                 "",
                 "This Phase 1 statement declares **Core Identity only** (`core-identity` profile). "
                 "No Annex D optional sub-modules are declared in this statement.",
+                "",
+            ]
+        )
+    reliance = data.get("reliance_extensions") or []
+    if reliance:
+        rel_label = ", ".join(reliance)
+        lines.extend(
+            [
+                "",
+                "## ODTIS-0708  -  Reliance Extensions scope",
+                "",
+                f"**Active Reliance Extension sub-modules:** {rel_label}.",
+                "",
+                "Capa B reliance overlays MUST NOT weaken Core Identity, Trust Network, Federation, "
+                "or Operator requirements (`ODTIS-0707`).",
                 "",
             ]
         )
@@ -255,6 +288,7 @@ def main() -> int:
         help="Profile id (repeatable)",
     )
     parser.add_argument("--extended-module", action="append", dest="extended_module")
+    parser.add_argument("--reliance-module", action="append", dest="reliance_module")
     parser.add_argument("--level", default="L1", choices=["L1", "L2", "L3"])
     parser.add_argument("--operator", default="FinnectOS VenID Lab")
     parser.add_argument(

@@ -1,0 +1,173 @@
+# ODTIS Annex E - Reliance Extension index
+spec_version: "0.9.0-draft"
+profile: reliance-extensions
+
+summary:
+  sub_module_count: 17
+  requirement_count: 55
+
+modules:
+- id: R-Base
+  registry_ids: [ODTIS-0701, ODTIS-0702, ODTIS-0703, ODTIS-0704, ODTIS-0705, ODTIS-0706, ODTIS-0707, ODTIS-0708]
+  min_phase: 1
+  tier: 0
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0701.md
+  - conformance/tests/reliance-extensions/test_odtis_0702.md
+  - conformance/tests/reliance-extensions/test_odtis_0703.md
+  - conformance/tests/reliance-extensions/test_odtis_0704.md
+  - conformance/tests/reliance-extensions/test_odtis_0705.md
+  - conformance/tests/reliance-extensions/test_odtis_0706.md
+  - conformance/tests/reliance-extensions/test_odtis_0707.md
+  - conformance/tests/reliance-extensions/test_odtis_0708.md
+- id: R-Agent-Authority
+  registry_ids: [ODTIS-0710, ODTIS-0711, ODTIS-0712, ODTIS-0713]
+  min_phase: 2
+  tier: 1
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0710.md
+  - conformance/tests/reliance-extensions/test_odtis_0711.md
+  - conformance/tests/reliance-extensions/test_odtis_0712.md
+  - conformance/tests/reliance-extensions/test_odtis_0713.md
+- id: R-Crypto-Agility
+  registry_ids: [ODTIS-0715, ODTIS-0716, ODTIS-0717]
+  min_phase: 2
+  tier: 1
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0715.md
+  - conformance/tests/reliance-extensions/test_odtis_0716.md
+  - conformance/tests/reliance-extensions/test_odtis_0717.md
+- id: R-Lifecycle-Revocation
+  registry_ids: [ODTIS-0719, ODTIS-0720, ODTIS-0721]
+  min_phase: 2
+  tier: 1
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0719.md
+  - conformance/tests/reliance-extensions/test_odtis_0720.md
+  - conformance/tests/reliance-extensions/test_odtis_0721.md
+- id: R-Document-Capture
+  registry_ids: [ODTIS-0723, ODTIS-0724, ODTIS-0725]
+  min_phase: 2
+  tier: 1
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0723.md
+  - conformance/tests/reliance-extensions/test_odtis_0724.md
+  - conformance/tests/reliance-extensions/test_odtis_0725.md
+- id: R-Liveness
+  registry_ids: [ODTIS-0727, ODTIS-0728, ODTIS-0729]
+  min_phase: 2
+  tier: 1
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0727.md
+  - conformance/tests/reliance-extensions/test_odtis_0728.md
+  - conformance/tests/reliance-extensions/test_odtis_0729.md
+- id: R-Disclosure-Assurance
+  registry_ids: [ODTIS-0731, ODTIS-0732, ODTIS-0733]
+  min_phase: 2
+  tier: 1
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0731.md
+  - conformance/tests/reliance-extensions/test_odtis_0732.md
+  - conformance/tests/reliance-extensions/test_odtis_0733.md
+- id: R-Assurance-Portability
+  registry_ids: [ODTIS-0743, ODTIS-0744, ODTIS-0745]
+  min_phase: 2
+  tier: 1
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0743.md
+  - conformance/tests/reliance-extensions/test_odtis_0744.md
+  - conformance/tests/reliance-extensions/test_odtis_0745.md
+- id: R-VC-Maturity-Gate
+  registry_ids: [ODTIS-0735, ODTIS-0736, ODTIS-0737]
+  min_phase: 1
+  tier: 1
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0735.md
+  - conformance/tests/reliance-extensions/test_odtis_0736.md
+  - conformance/tests/reliance-extensions/test_odtis_0737.md
+- id: R-Public-eID
+  registry_ids: [ODTIS-0739, ODTIS-0740, ODTIS-0741]
+  min_phase: 2
+  tier: 1
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0739.md
+  - conformance/tests/reliance-extensions/test_odtis_0740.md
+  - conformance/tests/reliance-extensions/test_odtis_0741.md
+- id: R-Fraud-Orchestration
+  registry_ids: [ODTIS-0747, ODTIS-0748, ODTIS-0749]
+  min_phase: 3
+  tier: 2
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0747.md
+  - conformance/tests/reliance-extensions/test_odtis_0748.md
+  - conformance/tests/reliance-extensions/test_odtis_0749.md
+- id: R-Stablecoin-CIP
+  registry_ids: [ODTIS-0751, ODTIS-0752, ODTIS-0753]
+  min_phase: 3
+  tier: 2
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0751.md
+  - conformance/tests/reliance-extensions/test_odtis_0752.md
+  - conformance/tests/reliance-extensions/test_odtis_0753.md
+- id: R-Travel
+  registry_ids: [ODTIS-0755, ODTIS-0756, ODTIS-0757]
+  min_phase: 3
+  tier: 2
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0755.md
+  - conformance/tests/reliance-extensions/test_odtis_0756.md
+  - conformance/tests/reliance-extensions/test_odtis_0757.md
+- id: R-CRA-Resilience
+  registry_ids: [ODTIS-0759, ODTIS-0760, ODTIS-0761]
+  min_phase: 3
+  tier: 2
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0759.md
+  - conformance/tests/reliance-extensions/test_odtis_0760.md
+  - conformance/tests/reliance-extensions/test_odtis_0761.md
+- id: R-DPI-Resilience
+  registry_ids: [ODTIS-0763, ODTIS-0764, ODTIS-0765]
+  min_phase: 3
+  tier: 2
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0763.md
+  - conformance/tests/reliance-extensions/test_odtis_0764.md
+  - conformance/tests/reliance-extensions/test_odtis_0765.md
+- id: R-Sovereign-Chain-Interop
+  registry_ids: [ODTIS-0767, ODTIS-0768]
+  min_phase: 4
+  tier: 3
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0767.md
+  - conformance/tests/reliance-extensions/test_odtis_0768.md
+- id: R-LE-Biometric
+  registry_ids: [ODTIS-0771, ODTIS-0772]
+  min_phase: 4
+  tier: 3
+  conformance_tests:
+  - conformance/tests/reliance-extensions/test_odtis_0771.md
+  - conformance/tests/reliance-extensions/test_odtis_0772.md
+
+declaration_fields:
+  conformance_statement:
+  - profiles
+  - reliance_extensions
+  - deployment_phase
+  reliance_extensions_enum:
+  - R-Base
+  - R-Agent-Authority
+  - R-Crypto-Agility
+  - R-Lifecycle-Revocation
+  - R-Document-Capture
+  - R-Liveness
+  - R-Disclosure-Assurance
+  - R-Assurance-Portability
+  - R-VC-Maturity-Gate
+  - R-Public-eID
+  - R-Fraud-Orchestration
+  - R-Stablecoin-CIP
+  - R-Travel
+  - R-CRA-Resilience
+  - R-DPI-Resilience
+  - R-Sovereign-Chain-Interop
+  - R-LE-Biometric

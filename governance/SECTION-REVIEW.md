@@ -8,7 +8,7 @@
 
 ---
 
-## Completeness criteria (sections 2-10)
+## Completeness criteria (sections 2-11)
 
 | # | Criterion | Meaning |
 |---|-----------|---------|
@@ -37,11 +37,12 @@ Section **1** is meta (profiles, levels, claims) and is reviewed separately belo
 | 7 | Operator governance | 16 | ✅ | ✅ | ✅ | ✅ | ID numbering note; RF-27 / Book 2 cross-ref |
 | 8 | Security | 9 | ✅ | ✅ | ✅ | ✅ | Annex B linked; 8.1.x / 8.2.x numbering note |
 | 9 | Audit & events | 6 | ✅ | ✅ | ✅ | ✅ | Event catalog + schemas; ID order note |
-| 10 | Deployment | 2 | ✅ | ✅ | ✅ | ✅ | FB-003 HA boundary; Annex D activation.yaml |
+| 10 | Deployment | 2 | ✅ | ✅ | ✅ | ✅ | FB-003 HA boundary; Annex D/E activation.yaml |
+| 11 | Reliance profiles | 55 | ✅ | ✅ | ✅ | ✅ | Capa B overlays; Annex E; 55 static smoke tests |
 
 ---
 
-## Annexes A-D
+## Annexes A-E
 
 See [Annex review matrix](ANNEX-REVIEW.md). All annex validators PASS at `0.9.0-draft` (run via `./conformance/run.sh`).
 
@@ -49,8 +50,9 @@ See [Annex review matrix](ANNEX-REVIEW.md). All annex validators PASS at `0.9.0-
 |-------|-----------|-----------|
 | A OpenAPI | ✅ frozen | `validate-openapi.py` |
 | B Threats | ✅ | `validate-threats.py` |
-| C Standards | ✅ 149/149 | `validate-standards-mapping.py` |
+| C Standards | ✅ 204/204 | `validate-standards-mapping.py` |
 | D Extended | ✅ draft catalog | `validate-extended-annex.py` |
+| E Reliance | ✅ normative Capa B | `validate-reliance-annex.py` |
 
 **Legend:** ✅ = criterion met for review draft | 🟡 = structurally complete but known depth gap
 
@@ -61,7 +63,7 @@ See [Annex review matrix](ANNEX-REVIEW.md). All annex validators PASS at `0.9.0-
 | Item | Status |
 |------|--------|
 | 1.1-1.18 prose | ✅ |
-| Five profiles defined (1.6) | ✅ |
+| Five profiles defined (1.6) incl. reliance-extensions | ✅ |
 | L1/L2/L3 levels (1.8) | ✅ |
 | Conformance claims rules (1.9) | ✅ |
 | Book 2 hierarchy (1.12) | ✅ |
@@ -83,6 +85,7 @@ These are **content expansion** targets for review cycle 1 or post-1.0 RFCs, not
 | Autodiscovery SHOULD scope | 4 | ✅ FB-004 clarification in section 4.4.3 + Annex A |
 | Scope enforcement test traceability | 5 | ✅ FB-001 dedicated stub + spec note |
 | L2 sandbox report workflow | sandbox | ✅ FB-005 template + README (live reports welcome) |
+| Reliance Extensions Capa B (section 11) | Annex E | ✅ normative v0.9 |
 | Extended module IDs in main registry | Annex D | Annex D merge (Phase 4) |
 | Notification service dedicated IDs | 3.9 | Optional - covered by 3.9.1-3.9.3 |
 | Wallet/OID4VC | 3.10 + Annex D | Extended profile only |

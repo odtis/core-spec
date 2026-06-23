@@ -13,12 +13,17 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION_FILE = ROOT / "VERSION"
 
 sys.path.insert(0, str(ROOT / "scripts"))
-from profile_registry import parse_profiles_yaml  # noqa: E402
+from profile_registry import (  # noqa: E402
+    parse_profiles_yaml,
+    parse_reliance_phase_minimum,
+    parse_reliance_submodule_ids,
+)
 
 REQUIRED_TOP = (
     "odtis_version",
     "profiles",
     "extended_modules",
+    "reliance_extensions",
     "level",
     "operator",
     "scope",
@@ -49,6 +54,9 @@ IMPLIED_PROFILE_HINTS = [
     ("extended module", "extended"),
     ("e-wallet", "extended"),
     ("e-registry", "extended"),
+    ("reliance extension", "reliance-extensions"),
+    ("r-agent", "reliance-extensions"),
+    ("capa b", "reliance-extensions"),
 ]
 
 
@@ -72,6 +80,10 @@ def load_statement(path: Path) -> dict:
 
 def valid_profile_ids() -> set[str]:
     return {p["id"] for p in parse_profiles_yaml()}
+
+
+def valid_reliance_module_ids() -> set[str]:
+    return parse_reliance_submodule_ids()
 
 
 def valid_extended_module_ids() -> set[str]:
@@ -141,6 +153,18 @@ def validate_statement(data: dict, *, spec_version: str) -> list[str]:
             for mod in extended:
                 if mod not in extended_known:
                     errors.append(f"unknown extended module: {mod}")
+
+    reliance_known = valid_reliance_module_ids()
+    reliance = data.get("reliance_extensions")
+    if reliance is not None:
+        if not isinstance(reliance, list):
+            errors.append("reliance_extensions must be a list")
+        else:
+            for mod in reliance:
+                if mod not in reliance_known:
+                    errors.append(f"unknown reliance extension module: {mod}")
+    else:
+        errors.append("missing required field: reliance_extensions (ODTIS-0008)")
 
     level = data.get("level")
     if level and level not in VALID_LEVELS:
@@ -215,7 +239,34 @@ def validate_profile_chain(profiles: list[str]) -> list[str]:
         errors.append("ODTIS-0002: federation requires trust-network")
     if "extended" in declared and "core-identity" not in declared:
         errors.append("extended profile requires core-identity")
+    if "reliance-extensions" in declared and "core-identity" not in declared:
+        errors.append("reliance-extensions profile requires core-identity")
 
+    return errors
+
+
+def validate_phase_reliance_rules(data: dict) -> list[str]:
+    errors: list[str] = []
+    scope = data.get("scope") or {}
+    phase = scope.get("deployment_phase")
+    reliance = data.get("reliance_extensions") or []
+    profiles = data.get("profiles") or []
+    if not reliance:
+        return errors
+    if "reliance-extensions" not in profiles:
+        errors.append(
+            "ODTIS-0708: active reliance_extensions require reliance-extensions profile"
+        )
+    if "R-Base" not in reliance:
+        errors.append("ODTIS-0708: reliance_extensions MUST include R-Base when any module is declared")
+    min_phase = parse_reliance_phase_minimum()
+    if phase is not None:
+        for mod in reliance:
+            required = min_phase.get(mod)
+            if required is not None and phase < required:
+                errors.append(
+                    f"ODTIS-0532: {mod} requires deployment phase {required}+ (statement phase {phase})"
+                )
     return errors
 
 
@@ -360,6 +411,12 @@ def validate_dual_format(yaml_data: dict, md_path: Path) -> list[str]:
             f"dual-format mismatch for profiles: yaml={yaml_profiles!r} md={md_fields['profiles']!r}"
         )
 
+    yaml_reliance = ", ".join(yaml_data.get("reliance_extensions") or []) or "(none)"
+    if md_fields.get("reliance_extensions") and md_fields["reliance_extensions"] != yaml_reliance:
+        errors.append(
+            f"dual-format mismatch for reliance_extensions: yaml={yaml_reliance!r} md={md_fields['reliance_extensions']!r}"
+        )
+
     scope = yaml_data.get("scope") or {}
     if md_fields.get("deployment_phase"):
         expected = str(scope.get("deployment_phase", ""))
@@ -413,6 +470,7 @@ def main() -> int:
     if isinstance(profiles, list):
         errors.extend(validate_profile_chain(profiles))
         errors.extend(validate_phase_extended_rules(data))
+        errors.extend(validate_phase_reliance_rules(data))
 
     md_path = args.human
     if md_path is None:

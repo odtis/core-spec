@@ -1,0 +1,46 @@
+{
+  "level": "L2",
+  "odtis_version": "0.9.0-draft",
+  "target": null,
+  "results": [
+    {
+      "id": "l2-target-skipped",
+      "requirement": "-",
+      "ok": true,
+      "detail": "Pass --target for live OIDC/PKCE/JWKS checks"
+    },
+    {
+      "id": "l2-loa-schema",
+      "requirement": "ODTIS-0316",
+      "ok": true,
+      "detail": "Annex A VerifyResponse includes verified, assurance_level (live API: verification-api-check.sh)"
+    },
+    {
+      "id": "l2-gateway-mtls-spec",
+      "requirement": "ODTIS-0204",
+      "ok": true,
+      "detail": "Exchange gateway OpenAPI declares partnerMutualTLS (live mTLS handshake requires certs)"
+    },
+    {
+      "id": "l2-reliance-schema",
+      "requirement": "ODTIS-0701",
+      "ok": true,
+      "detail": "registry/reliance-profiles.yaml defines R-Base field catalog and declaration field"
+    },
+    {
+      "id": "l2-reliance-pilot",
+      "requirement": "ODTIS-0708",
+      "ok": true,
+      "detail": "Pilot statement lists reliance-extensions profile and declared sub-modules"
+    },
+    {
+      "id": "l2-reliance-ri-map",
+      "requirement": "ODTIS-0536",
+      "ok": true,
+      "detail": "RI-MAP maps reliance-overlay surface with component binding"
+    }
+  ],
+  "status": "PASS",
+  "passed": 6,
+  "total": 6
+}

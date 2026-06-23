@@ -5,152 +5,152 @@ openapi_version: "3.1.0"
 source: "P14 10, ODTIS 3.11"
 
 versioning:
-url_prefix: "/v1/"
-document_version_field: "info.version"
-breaking_change_rule: "New URL /v2/ plus major OpenAPI version bump"
+  url_prefix: "/v1/"
+  document_version_field: "info.version"
+  breaking_change_rule: "New URL /v2/ plus major OpenAPI version bump"
 
 surfaces:
-- id: S1
-name: OAuth2 / OIDC IdP
-contract: "OIDC discovery (not VenID OpenAPI)"
-discovery_path: "/.well-known/openid-configuration"
-odtis_section: "03-identity-services#3.3"
-odtis_requirements:
-- ODTIS-0301
-- ODTIS-0302
-- ODTIS-0303
-- ODTIS-0305
-- ODTIS-0306
-- ODTIS-0307
-- ODTIS-0308
-note: "See oidc-discovery.md"
+  - id: S1
+    name: OAuth2 / OIDC IdP
+    contract: "OIDC discovery (not VenID OpenAPI)"
+    discovery_path: "/.well-known/openid-configuration"
+    odtis_section: "03-identity-services#3.3"
+    odtis_requirements:
+      - ODTIS-0301
+      - ODTIS-0302
+      - ODTIS-0303
+      - ODTIS-0305
+      - ODTIS-0306
+      - ODTIS-0307
+      - ODTIS-0308
+    note: "See oidc-discovery.md"
 
-- id: S2
-name: Verification API
-openapi: verification-api.openapi.yaml
-base_path: "/v1"
-odtis_section: "03-identity-services#3.5"
-odtis_requirements:
-- ODTIS-0315
-- ODTIS-0316
-- ODTIS-0317
-- ODTIS-0318
-- ODTIS-0108
-conformance_operations:
-- verification.verify.post
-- verification.verify.get
-- verification.status.get
-- verification.precheck.get
-- verification.webhooks.post
-- verification.webhooks.list
-- verification.webhooks.delete
+  - id: S2
+    name: Verification API
+    openapi: verification-api.openapi.yaml
+    base_path: "/v1"
+    odtis_section: "03-identity-services#3.5"
+    odtis_requirements:
+      - ODTIS-0315
+      - ODTIS-0316
+      - ODTIS-0317
+      - ODTIS-0318
+      - ODTIS-0108
+    conformance_operations:
+      - verification.verify.post
+      - verification.verify.get
+      - verification.status.get
+      - verification.precheck.get
+      - verification.webhooks.post
+      - verification.webhooks.list
+      - verification.webhooks.delete
 
-- id: S3
-name: Citizen API
-openapi: citizen-api.openapi.yaml
-base_path: "/v1/citizen"
-odtis_section: "03-identity-services#3.7"
-odtis_requirements:
-- ODTIS-0310
-- ODTIS-0322
-- ODTIS-0323
-- ODTIS-0324
-- ODTIS-0330
-conformance_operations:
-- citizen.profile.verification_status.get
-- citizen.consents.revoke
+  - id: S3
+    name: Citizen API
+    openapi: citizen-api.openapi.yaml
+    base_path: "/v1/citizen"
+    odtis_section: "03-identity-services#3.7"
+    odtis_requirements:
+      - ODTIS-0310
+      - ODTIS-0322
+      - ODTIS-0323
+      - ODTIS-0324
+      - ODTIS-0330
+    conformance_operations:
+      - citizen.profile.verification_status.get
+      - citizen.consents.revoke
 
-- id: S4
-name: RP management (Admin clients)
-openapi: admin-api.openapi.yaml
-base_path: "/v1/admin"
-odtis_section: "03-identity-services#3.6"
-odtis_requirements:
-- ODTIS-0319
-- ODTIS-0320
-- ODTIS-0321
-- ODTIS-0339
-conformance_operations:
-- admin.clients.create
-- admin.clients.deactivate
-- admin.clients.credentials.rotate
+  - id: S4
+    name: RP management (Admin clients)
+    openapi: admin-api.openapi.yaml
+    base_path: "/v1/admin"
+    odtis_section: "03-identity-services#3.6"
+    odtis_requirements:
+      - ODTIS-0319
+      - ODTIS-0320
+      - ODTIS-0321
+      - ODTIS-0339
+    conformance_operations:
+      - admin.clients.create
+      - admin.clients.deactivate
+      - admin.clients.credentials.rotate
 
-- id: S5
-name: Operator administration
-openapi: admin-api.openapi.yaml
-base_path: "/v1/admin"
-odtis_section: "07-operator-governance"
-status: partial
-note: "Core operator paths; subject admin in admin-api v1.0-draft"
-conformance_operations:
-- admin.subjects.suspend
-- admin.subjects.reverify
+  - id: S5
+    name: Operator administration
+    openapi: admin-api.openapi.yaml
+    base_path: "/v1/admin"
+    odtis_section: "07-operator-governance"
+    status: partial
+    note: "Core operator paths; subject admin in admin-api v1.0-draft"
+    conformance_operations:
+      - admin.subjects.suspend
+      - admin.subjects.reverify
 
-- id: S8
-name: Regulator API
-openapi: regulator-api.openapi.yaml
-base_path: "/v1/regulator"
-odtis_section: "07-operator-governance#7.6"
-odtis_requirements:
-- ODTIS-0514
-- ODTIS-0530
-conformance_operations:
-- regulator.audit.export
-- regulator.metrics.aggregate
+  - id: S8
+    name: Regulator API
+    openapi: regulator-api.openapi.yaml
+    base_path: "/v1/regulator"
+    odtis_section: "07-operator-governance#7.6"
+    odtis_requirements:
+      - ODTIS-0514
+      - ODTIS-0530
+    conformance_operations:
+      - regulator.audit.export
+      - regulator.metrics.aggregate
 
-- id: S6
-name: RP reports
-openapi: reports-api.openapi.yaml
-base_path: "/v1/rp/reports"
-odtis_section: "03-identity-services#3.5"
-odtis_requirements:
-- ODTIS-0315
-- ODTIS-0527
-conformance_operations:
-- reports.usage.get
-- reports.consent_audit.get
+  - id: S6
+    name: RP reports
+    openapi: reports-api.openapi.yaml
+    base_path: "/v1/rp/reports"
+    odtis_section: "03-identity-services#3.5"
+    odtis_requirements:
+      - ODTIS-0315
+      - ODTIS-0527
+    conformance_operations:
+      - reports.usage.get
+      - reports.consent_audit.get
 
-- id: S7
-name: Government API
-openapi: gov-api.openapi.yaml
-base_path: "/v1/gov"
-odtis_section: "03-identity-services#3.4"
-odtis_requirements:
-- ODTIS-0315
-- ODTIS-0344
-conformance_operations:
-- gov.verify.post
-- gov.registry.assertion.post
-status: deferred
-implementation: none
-production_claim: false
-gap_id: GAP-IC-GOV-API
-decision: implementation/evidence/gov-api/gov-api-decision-2026.yaml
-note: >
-  Normative OpenAPI contract draft only (#29). No Maven module in reference stack;
-  interim national/registry paths use verification-api (S2) and eregistry-adapter.
-  Implement api/gov-api in ven-identity-core at Phase 3+ national operator gate.
+  - id: S7
+    name: Government API
+    openapi: gov-api.openapi.yaml
+    base_path: "/v1/gov"
+    odtis_section: "03-identity-services#3.4"
+    odtis_requirements:
+      - ODTIS-0315
+      - ODTIS-0344
+    conformance_operations:
+      - gov.verify.post
+      - gov.registry.assertion.post
+    status: deferred
+    implementation: none
+    production_claim: false
+    gap_id: GAP-IC-GOV-API
+    decision: implementation/evidence/gov-api/gov-api-decision-2026.yaml
+    note: >
+      Normative OpenAPI contract draft only (#29). No Maven module in reference stack;
+      interim national/registry paths use verification-api (S2) and eregistry-adapter.
+      Implement api/gov-api in ven-identity-core at Phase 3+ national operator gate.
 
-- id: exchange-gateway
-name: Exchange Gateway
-openapi: exchange-gateway.openapi.yaml
-base_path: "/v1/exchange"
-odtis_section: "04-trust-network#4.3"
-odtis_requirements:
-- ODTIS-0201
-- ODTIS-0202
-- ODTIS-0204
-- ODTIS-0205
-conformance_operations:
-- exchange.message.post
-- exchange.message.status.get
-- exchange.health.get
+  - id: exchange-gateway
+    name: Exchange Gateway
+    openapi: exchange-gateway.openapi.yaml
+    base_path: "/v1/exchange"
+    odtis_section: "04-trust-network#4.3"
+    odtis_requirements:
+      - ODTIS-0201
+      - ODTIS-0202
+      - ODTIS-0204
+      - ODTIS-0205
+    conformance_operations:
+      - exchange.message.post
+      - exchange.message.status.get
+      - exchange.health.get
 
 shared_components:
-file: venid-common.openapi.yaml
-schemas:
-- ErrorCode
-- ErrorResponse
-- AssuranceLevel
-- VerifyResponse
-- ConsentSummary
+  file: venid-common.openapi.yaml
+  schemas:
+    - ErrorCode
+    - ErrorResponse
+    - AssuranceLevel
+    - VerifyResponse
+    - ConsentSummary

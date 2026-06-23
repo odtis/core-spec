@@ -27,9 +27,9 @@ Prove that your deployment meets ODTIS **MUST** requirements at the level your c
 | Item | Status |
 |------|--------|
 | **Conformance levels** | L1 (lab) | L2 (staging) | L3 (production audit) |
-| **Profiles** | 6 adoptable profiles + Extended sub-modules |
-| **Registry requirements** | 149 ODTIS IDs with linked test stubs |
-| **Test procedures** | 159 procedures | **85 implemented** (smoke/L2 evidence) |
+| **Profiles** | 7 adoptable profiles + Extended / Reliance sub-modules |
+| **Registry requirements** | 204 ODTIS IDs with linked test stubs |
+| **Test procedures** | 214 procedures (see [Project status](../site/STATUS.md) for implemented count) |
 | **L1 structural gate** | PASS ([Run script](run.sh)) |
 | **L2 runner** | Integrated; live `--target` optional |
 | **L3 program** | Draft; VenID Phase 4 package available |

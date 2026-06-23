@@ -4,11 +4,15 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "registry/requirements.json"
 OUT = ROOT / "annexes/C-standards-mapping/mapping.yaml"
+
+sys.path.insert(0, str(ROOT / "scripts"))
+from standards_mapping_supplemental import supplemental_mappings  # noqa: E402
 
 # standard_id, clause, reference, coverage - per requirement
 MAPPING: dict[str, list[tuple[str, str, str, str]]] = {
@@ -248,22 +252,6 @@ MAPPING: dict[str, list[tuple[str, str, str, str]]] = {
 "ODTIS-0339": [
 ("STD-OAUTH2", "Client deactivation", "RFC 6749 client lifecycle", "partial"),
 ],
-"ODTIS-0345": [
-("STD-OID4VP", "Holder-signed presentations", "OID4VP", "partial"),
-("STD-EUDI-ARF", "Wallet presentation flow", "EUDI ARF", "informative"),
-],
-"ODTIS-0346": [
-("STD-OID4VCI", "Issuer trust validation", "OID4VCI / trust lists", "partial"),
-("STD-EUDI-ARF", "Trust list / PID Provider", "EUDI ARF", "informative"),
-],
-"ODTIS-0347": [
-("STD-SD-JWT", "Selective disclosure credentials", "SD-JWT VC", "partial"),
-("STD-EUDI-ARF", "Data minimization in wallet", "EUDI ARF", "informative"),
-],
-"ODTIS-0348": [
-("STD-EUDI-ARF", "Dual path OIDC + wallet", "EUDI ARF roles", "informative"),
-("STD-ODTIS-PLATFORM", "Shared LoA state", "P03 5", "platform"),
-],
 "ODTIS-0401": [
 ("STD-XROAD", "Federation without transitivity", "X-Road federation model", "partial"),
 ],
@@ -412,8 +400,10 @@ def render_entry(req_id: str, rows: list[tuple[str, str, str, str]]) -> str:
 def main() -> None:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     req_ids = [r["id"] for r in registry["requirements"]]
-    missing = [rid for rid in req_ids if rid not in MAPPING]
-    extra = [rid for rid in MAPPING if rid not in req_ids]
+    full_mapping = dict(MAPPING)
+    full_mapping.update(supplemental_mappings())
+    missing = [rid for rid in req_ids if rid not in full_mapping]
+    extra = [rid for rid in full_mapping if rid not in req_ids]
     if missing:
         raise SystemExit(f"missing mappings for: {', '.join(missing)}")
     if extra:
@@ -431,7 +421,7 @@ loa_matrix: loa-matrix.yaml
 
 requirement_coverage:
 """
-    body = "\n".join(render_entry(rid, MAPPING[rid]) for rid in req_ids)
+    body = "\n".join(render_entry(rid, full_mapping[rid]) for rid in req_ids)
     OUT.write_text(header + body + "\n", encoding="utf-8")
     print(f"Wrote {OUT} ({len(req_ids)} requirements)")
 

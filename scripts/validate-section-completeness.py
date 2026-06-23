@@ -22,6 +22,7 @@ SECTION_SPECS: dict[str, str] = {
     "08-security": "spec/08-security/SPEC.md",
     "09-audit-events": "spec/09-audit-events/SPEC.md",
     "10-deployment-profiles": "spec/10-deployment-profiles/SPEC.md",
+    "11-reliance-profiles": "spec/11-reliance-profiles/SPEC.md",
 }
 
 DEPTH_WARNINGS: dict[str, str] = {
@@ -134,7 +135,7 @@ def main() -> int:
         return 1
 
     total = sum(1 for r in reqs if r["section"] in SECTION_SPECS)
-    print(f"OK: sections 2-10 complete - {total} requirements, prose + index + tests aligned @ {VERSION}")
+    print(f"OK: sections 2-11 complete - {total} requirements, prose + index + tests aligned @ {VERSION}")
     return 0
 
 

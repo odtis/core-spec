@@ -14,7 +14,7 @@ Complements [Annex C - Standards mapping](/annexes/C-standards-mapping/) with ad
 | Institutional exchange | X-Road architecture | section 4, section 6 | mapping.yaml X-Road rows |
 | Verifiable credentials | OID4VCI / OID4VP | Annex D E-Wallet | STD-OID4VCI, STD-OID4VP |
 
-Full requirement-level mapping: [Standards mapping](/annexes/C-standards-mapping/mapping.yaml) (149/149 IDs).
+Full requirement-level mapping: [Standards mapping](/annexes/C-standards-mapping/mapping.yaml) (204/204 IDs).
 
 **Project hub:** [Project hub](/project/) | **Annex C:** [Annex C - Standards mapping](/annexes/C-standards-mapping/)
 

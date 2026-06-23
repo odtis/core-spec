@@ -9,6 +9,7 @@ odtis_version: "0.9.0-draft"
 profiles:
   - reference-architecture
 extended_modules: []
+reliance_extensions: []
 level: L1
 operator: "Example Operator S.A."
 scope:

@@ -1,4 +1,4 @@
-# ODTIS structural domains (ODTIS-0000 .. ODTIS-0006)
+# ODTIS structural domains (ODTIS-0000 .. ODTIS-0007)
 # Normative requirements use ODTIS-MNNN where M matches domain hundreds (00..05).
 
 spec_version: "0.9.0-draft"
@@ -74,3 +74,16 @@ domains:
     status: reserved
     requirement_range: none
     note: Out of ODTIS 0.9 scope; GovStack payments BB is adopter-specific integration.
+
+  - id: ODTIS-0007
+    title: Reliance Extensions
+    status: normative
+    requirement_range: ODTIS-0701..0799
+    sections:
+      - 11-reliance-profiles
+    spec:
+      - spec/11-reliance-profiles/SPEC.md
+    note: >
+      Optional Capa B governance overlays (reliance/assurance/resilience profiles).
+      MUST NOT weaken Core Identity, Trust Network, Federation, or Operator requirements.
+      Catalogued in Annex E; depends on Core Identity.

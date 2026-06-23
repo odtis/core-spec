@@ -18,10 +18,10 @@ Machine-readable source for requirements, profiles, events, and terminology. **N
 
 | Item | Count |
 |------|-------|
-| Requirement IDs | **149** |
-| Conformance profiles | 6 + Extended sub-modules |
+| Requirement IDs | **204** |
+| Conformance profiles | 7 (+ Extended / Reliance sub-modules) |
 | Audit event schemas | 16 + envelope |
-| Structural domains | 7 (`ODTIS-0000`..`0006`) |
+| Structural domains | 8 (`ODTIS-0000`..`0007`) |
 
 ---
 
@@ -29,9 +29,9 @@ Machine-readable source for requirements, profiles, events, and terminology. **N
 
 | File | Format | Description |
 |------|--------|-------------|
-| [Requirements registry](requirements.json) | JSON | 149 normative IDs with keywords, sections, `conformance_test` links |
+| [Requirements registry](requirements.json) | JSON | 204 normative IDs with keywords, sections, `conformance_test` links |
 | [Profile definitions](profiles.yaml) | YAML | Profile definitions and dependency graph |
-| [Structural domains](domains.yaml) | YAML | Seven structural domains |
+| [Structural domains](domains.yaml) | YAML | Eight structural domains |
 | [Legacy ID map](id-map.yaml) | YAML | Legacy -> canonical ID map |
 | [Audit event catalog](events.yaml) | YAML | Audit event catalog |
 | [Schemas](events/schemas/) | JSON Schema | Event payloads + envelope |
@@ -48,7 +48,7 @@ Machine-readable source for requirements, profiles, events, and terminology. **N
 
 | Layer | Pattern | Example |
 |-------|---------|---------|
-| **Domain** | `ODTIS-0000` .. `ODTIS-0006` | ODTIS-0000 Reference Architecture |
+| **Domain** | `ODTIS-0000` .. `ODTIS-0007` | ODTIS-0007 Reliance Extensions |
 | **Requirement** | `ODTIS-MNNN` (4 digits) | ODTIS-0301 (Identity Assurance) |
 | **Legacy (traceability)** | `ODTIS-N.N.N` in `legacy_id` | ODTIS-3.1.1 -> ODTIS-0301 |
 
@@ -70,7 +70,8 @@ Section 1 Reference Architecture uses `ODTIS-0001`..`0010` in domain `ODTIS-0000
 | 08-security | 10 |
 | 09-audit-events | 6 |
 | 10-deployment-profiles | 3 |
-| **Total** | **149** |
+| 11-reliance-profiles | 55 |
+| **Total** | **204** |
 
 ---
 
@@ -96,7 +97,7 @@ python3 scripts/validate-section-completeness.py
 | Document | Purpose |
 |----------|---------|
 | [Domain map](../site/DOMAINS.md) | Structural domain map |
-| [Specification index](../spec/INDEX.md) | Normative sections 1-10 |
+| [Specification index](../spec/INDEX.md) | Normative sections 1-11 |
 | [Profile comparison](../site/PROFILES.md) | Profile comparison |
 | [Conformance overview](../conformance/README.md) | L1/L2/L3 verification |
 

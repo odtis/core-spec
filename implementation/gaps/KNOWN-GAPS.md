@@ -1,6 +1,6 @@
 # Known implementation gaps (reference stack)
 
-**Updated:** 2026-06-22
+**Updated:** 2026-06-23
 **Spec:** ODTIS `0.9.0-draft`
 
 **Project hub:** [Project hub](/project/) | **RI overview:** [Project hub](../README.md)
@@ -14,7 +14,7 @@ Gaps describe the **VenID reference stack**, not independent vendor obligations.
 
 ---
 
-## Deferred (3)
+## Deferred (8)
 
 Resolution playbook: [Deferred production track](DEFERRED-TRACK.md)
 
@@ -24,12 +24,22 @@ Resolution playbook: [Deferred production track](DEFERRED-TRACK.md)
 | GAP-TN-TEP | - | exchange-gateway | IETF informative track | - |
 | GAP-CERT-L3-ATT | ODTIS-0532 | conformance-publication | Third-party L3 attestation - evidence pack ready, engagement scheduled (#17) | [P4-E07](../PHASED-BACKLOG.md#p4-e07-operator-l3-and-phase-4-statement-partial) |
 | GAP-IC-GOV-API | ODTIS-0315 | gov-api (Annex A S7) | OpenAPI contract draft; Maven module deferred (#29) | Phase 3+ national operator |
+| GAP-REL-0710 | ODTIS-0710 | reliance-overlay | Agent mandate chain not in live auth path | [P5-E02](../PHASED-BACKLOG.md) |
+| GAP-REL-0723 | ODTIS-0723 | reliance-overlay | PAD/IAD not wired to verification-engine | [P5-E03](../PHASED-BACKLOG.md) |
+| GAP-REL-TIER1-REST | - | reliance-overlay | Tier 1 modules outside pilot not started | P5-E04 |
+| GAP-REL-TIER2 | - | reliance-overlay | Tier 2/3 modules (phase 3-4 gates) | P5-E04 |
+
+### Reliance in progress (1)
+
+| Gap ID | ODTIS ID | Surface | Summary |
+|--------|----------|---------|---------|
+| GAP-REL-RUNTIME | ODTIS-0704 | reliance-overlay | Audit evidence reference on every verification response (partial) |
 
 ---
 
-## Closed (21)
+## Closed (22)
 
-Most closed on **2026-06-12** with static/unit L2 sandbox evidence via `run-gap-closure-checks.sh`. **GAP-TN-0204** closed **2026-06-22** with staging mTLS overlay smoke.
+Most closed on **2026-06-12** with static/unit L2 sandbox evidence via `run-gap-closure-checks.sh`. **GAP-TN-0204** closed **2026-06-22** with staging mTLS overlay smoke. **GAP-OP-RELIANCE-STMT** closed **2026-06-23** with `run-reliance-package.sh`.
 
 | Gap ID | ODTIS ID | Surface | Summary |
 |--------|----------|---------|---------|
@@ -54,6 +64,7 @@ Most closed on **2026-06-12** with static/unit L2 sandbox evidence via `run-gap-
 | GAP-TN-0528 | ODTIS-0528 | exchange-gateway | Exchange audit events |
 | GAP-TN-0535 | ODTIS-0535 | exchange-gateway | Grant denial fail-closed |
 | GAP-OP-RI | ODTIS-0536 | ri-map | Phase 4 Extended surfaces mapped |
+| GAP-OP-RELIANCE-STMT | ODTIS-0532 | reliance-conformance | Reliance pilot L2 package |
 
 ---
 

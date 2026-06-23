@@ -59,6 +59,14 @@ PHASES = [
         "profiles": ["federation", "extended", "operator/L3"],
         "book1_gate": "Acuerdos bilaterales activos; modulos Extended declarados.",
     },
+    {
+        "id": "P5",
+        "odtis_phase": 2,
+        "name": "Reliance Extensions (Capa B)",
+        "goal": "Claimable Reliance pilot with RI-MAP, Annex B crosswalk, and L2 smoke.",
+        "profiles": ["reliance-extensions"],
+        "book1_gate": "Core Identity + Trust Network L2; reliance_extensions declared with R-Base.",
+    },
 ]
 
 # Epic definitions: phase -> list of epics
@@ -564,6 +572,56 @@ EPICS: dict[str, list[dict]] = {
             ],
         },
     ],
+    "P5": [
+        {
+            "id": "P5-E01",
+            "title": "Reliance pilot overlay and statement",
+            "component": "reliance-overlay + conformance package",
+            "repo": "odtis/core-spec + ven-identity-core",
+            "status": "partial",
+            "odtis_ids": ["ODTIS-0701", "ODTIS-0707", "ODTIS-0708", "ODTIS-0532", "ODTIS-0536"],
+            "work": [
+                "RI-MAP reliance-overlay surface and component binding",
+                "venid-reliance-pilot statement + l2-report via run-reliance-package.sh",
+            ],
+        },
+        {
+            "id": "P5-E02",
+            "title": "Agent authority runtime",
+            "component": "agent-mandate gateway",
+            "repo": "ven-identity-core (TBD)",
+            "status": "todo",
+            "odtis_ids": ["ODTIS-0710", "ODTIS-0711", "ODTIS-0712", "ODTIS-0713"],
+            "work": [
+                "Signed mandate verification and revocation freshness window",
+                "Human-anchor step-up for high-risk agent actions",
+            ],
+        },
+        {
+            "id": "P5-E03",
+            "title": "Document capture PAD overlay",
+            "component": "verification-engine capture adapter",
+            "repo": "ven-identity-core",
+            "status": "todo",
+            "odtis_ids": ["ODTIS-0723", "ODTIS-0724", "ODTIS-0725"],
+            "work": [
+                "PAD/IAD provider disclosure on capture reliance decisions",
+                "Fail-closed on unknown injection class",
+            ],
+        },
+        {
+            "id": "P5-E04",
+            "title": "Remaining Reliance sub-modules",
+            "component": "Capa B module overlays",
+            "repo": "ven-identity-core",
+            "status": "todo",
+            "odtis_ids": ["ODTIS-0719", "ODTIS-0727", "ODTIS-0731", "ODTIS-0747"],
+            "work": [
+                "Tier 1 modules beyond pilot (Lifecycle, Liveness, Disclosure, VC-Gate, Public-eID, Portability)",
+                "Tier 2/3 modules per Annex E phase gates",
+            ],
+        },
+    ],
 }
 
 
@@ -612,6 +670,7 @@ def build_yaml_payload(version: str, reqs: dict) -> dict:
             "P2 before declaring Trust Network in production (ODTIS-0532)",
             "P3 Operator + E-Registry before National LoA in production",
             "P4 Federation + Extended only when agreements/modules active",
+            "P5 Reliance Extensions pilot before Capa B production claims beyond declared modules",
         ],
         "references": {
             "ri_map": "implementation/RI-MAP.yaml",

@@ -133,7 +133,7 @@ Full index: [Requirements index](/site/REQUIREMENTS-INDEX.md).
 |----|--------|---------|-------------|------|------|
 | `ODTIS-0001` | `ODTIS-1.2.3` | <span class="odtis-kw odtis-kw--must-not">MUST NOT</span> | Trust Network profile MUST NOT be claimed without Core Identity profile for the same operator scope | [section 1](../../spec/01-scope-conformance/SPEC.md) | `test_layer2_requires_layer1.md` ([repo](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_layer2_requires_layer1.md)) |
 | `ODTIS-0002` | `ODTIS-1.7.0` | <span class="odtis-kw odtis-kw--must-not">MUST NOT</span> | Federation profile MUST NOT be claimed without Trust Network profile for the same operator scope | [section 1](../../spec/01-scope-conformance/SPEC.md) | `test_federation_requires_trust_network.md` ([repo](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_federation_requires_trust_network.md)) |
-| `ODTIS-0003` | `ODTIS-1.7.1` | <span class="odtis-kw odtis-kw--must">MUST</span> | Conformance claims MUST list every profile and Extended sub-module satisfied | [section 1](../../spec/01-scope-conformance/SPEC.md) | `test_profile_declaration_complete.md` ([repo](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_profile_declaration_complete.md)) |
+| `ODTIS-0003` | `ODTIS-1.7.1` | <span class="odtis-kw odtis-kw--must">MUST</span> | Conformance claims MUST list every profile, Extended sub-module, and Reliance Extension sub-module satisfied | [section 1](../../spec/01-scope-conformance/SPEC.md) | `test_profile_declaration_complete.md` ([repo](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_profile_declaration_complete.md)) |
 | `ODTIS-0004` | `ODTIS-1.7.2` | <span class="odtis-kw odtis-kw--must-not">MUST NOT</span> | An implementation MUST NOT claim a profile unless all profiles in its depends_on chain are also claimed and satisfied | [section 1](../../spec/01-scope-conformance/SPEC.md) | `test_profile_dependency_chain.md` ([repo](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_profile_dependency_chain.md)) |
 | `ODTIS-0005` | `ODTIS-1.7.5` | <span class="odtis-kw odtis-kw--must">MUST</span> | Conformance claims MUST name the ODTIS spec version against which requirements and tests were evaluated | [section 1](../../spec/01-scope-conformance/SPEC.md) | `test_version_binding.md` ([repo](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_version_binding.md)) |
 | `ODTIS-0006` | `ODTIS-1.6.5` | <span class="odtis-kw odtis-kw--must-not">MUST NOT</span> | Extended sub-modules MUST NOT weaken Core Identity, Trust Network, or Federation requirements | [section 1](../../spec/01-scope-conformance/SPEC.md) | `test_extended_no_weakening.md` ([repo](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_extended_no_weakening.md)) |
@@ -148,7 +148,7 @@ Full index: [Requirements index](/site/REQUIREMENTS-INDEX.md).
 |--------|-------|
 | Requirements in profile | 10 |
 | Linked tests | 10 |
-| Implemented (smoke) | 1 |
+| Implemented (smoke) | 10 |
 | Manifest | [Conformance manifest](/conformance/profiles/reference-architecture/manifest.yaml) |
 
 Regenerate manifests: `python3 scripts/build-conformance-manifest.py`

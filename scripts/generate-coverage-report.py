@@ -32,6 +32,7 @@ PROFILE_LABELS = {
     "federation": "Federation",
     "operator": "Operator",
     "extended": "Extended",
+    "reliance-extensions": "Reliance Extensions",
 }
 PROFILE_ORDER = list(PROFILE_LABELS.keys())
 

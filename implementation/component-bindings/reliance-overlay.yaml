@@ -1,0 +1,53 @@
+# Normative binding: Reliance Extensions overlay (VenID reference implementation)
+# Informative — Capa B policy layer on top of Core Identity surfaces
+
+component_id: reliance-overlay
+ri_map_surface: reliance-overlay
+repository: ven-identity-core
+module_path: docs/operator + api/verification-api + services/verification-engine
+profile: reliance-extensions
+backlog_epic: P5-E01
+status: partial
+
+summary: >
+  Operator policy and audit-field overlay for Reliance Extensions (Capa B).
+  Maps R-Base schema fields to verification-api responses, RP registry, and audit exports
+  without weakening Core Identity MUSTs (ODTIS-0707).
+
+implementation_notes: >
+  Pilot declares R-Base, R-Agent-Authority, R-Crypto-Agility, and R-Document-Capture
+  in venid-reliance-pilot conformance statement. Runtime enforcement is partial:
+  policy documentation and audit metadata hooks; dedicated microservices deferred per gaps.
+
+smoke_script: conformance/run-reliance-checks.sh
+
+pilot_modules:
+  - R-Base
+  - R-Agent-Authority
+  - R-Crypto-Agility
+  - R-Document-Capture
+
+odtis_ids:
+  - ODTIS-0701
+  - ODTIS-0702
+  - ODTIS-0703
+  - ODTIS-0704
+  - ODTIS-0705
+  - ODTIS-0706
+  - ODTIS-0707
+  - ODTIS-0708
+  - ODTIS-0710
+  - ODTIS-0711
+  - ODTIS-0712
+  - ODTIS-0713
+  - ODTIS-0715
+  - ODTIS-0716
+  - ODTIS-0717
+  - ODTIS-0723
+  - ODTIS-0724
+  - ODTIS-0725
+
+evidence:
+  - implementation/statements/venid-reliance-pilot/conformance-statement.yaml
+  - implementation/statements/venid-reliance-pilot/l2-report.md
+  - registry/reliance-profiles.yaml

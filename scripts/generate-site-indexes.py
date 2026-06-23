@@ -71,6 +71,7 @@ SECTION_META: dict[str, tuple[str, str, str]] = {
     "08-security": ("8", "Security", "spec/08-security/SPEC.md"),
     "09-audit-events": ("9", "Audit and events", "spec/09-audit-events/SPEC.md"),
     "10-deployment-profiles": ("10", "Deployment", "spec/10-deployment-profiles/SPEC.md"),
+    "11-reliance-profiles": ("11", "Reliance Extensions", "spec/11-reliance-profiles/SPEC.md"),
 }
 
 
@@ -177,7 +178,7 @@ def generate_domains_page(version: str, requirements: list[dict]) -> str:
 
     lines = [
         *hub_hero(
-            "ODTIS domain map (ODTIS-0000 - ODTIS-0006)",
+            "ODTIS domain map (ODTIS-0000 - ODTIS-0007)",
             "Structural domains group normative requirements (`ODTIS-MNNN`). "
             f"Registry: [`registry/domains.yaml`](../registry/domains.yaml) @ `{version}`.",
             f'<strong>Requirements:</strong> [Requirements index](REQUIREMENTS-INDEX.md) | '

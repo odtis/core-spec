@@ -43,8 +43,8 @@ You do **not** need VenID product code to implement ODTIS. This guide maps how t
 
 ```mermaid
 flowchart TB
- ODTIS[ODTIS spec sections 1-10]
- ANN[Annexes A-D]
+ ODTIS[ODTIS spec sections 1-11]
+ ANN[Annexes A-E]
  REG[registry/]
  PROF[Adoptable profiles]
  B2[Book 2 Reference Architecture]
@@ -61,11 +61,11 @@ flowchart TB
 
 | Layer | Location | Role for adopters |
 |-------|----------|-------------------|
-| **Normative** | [Specification sections](/spec/INDEX/) sections 1-10 | MUST/SHOULD/MAY - conformance source of truth |
+| **Normative** | [Specification sections](/spec/INDEX/) sections 1-11 | MUST/SHOULD/MAY - conformance source of truth |
 | **Profiles** | [Conformance profiles](/spec/profiles/) | What to implement per product class |
-| **Registry** | [Registry](/registry/) | 149 requirement IDs, events, terminology |
+| **Registry** | [Registry](/registry/) | 204 requirement IDs, events, terminology |
 | **Annex A** | [Annex A OpenAPI registry](/annexes/A-openapi-registry/) | **Frozen** OpenAPI @ `0.9.0-draft` |
-| **Annexes B-D** | [Annexes](/annexes/) | Threats, standards mapping, extended catalog |
+| **Annexes B-E** | [Annexes](/annexes/) | Threats, standards mapping, extended + reliance catalogs |
 | **Book 2** | [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org) (Vol. II, informative) | Informative architecture (must not contradict ODTIS MUST) |
 | **Book 3** | External implementation guide (informative) | Deployment patterns (non-normative) |
 | **Reference impl** | [Reference implementations](/implementation/) | VenID `ven-*` map - **informative only** |

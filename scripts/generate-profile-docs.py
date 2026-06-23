@@ -33,6 +33,7 @@ PROFILE_FILES: dict[str, str] = {
     "federation": "federation-profile.md",
     "operator": "operator-profile.md",
     "extended": "extended-profile.md",
+    "reliance-extensions": "reliance-extensions-profile.md",
 }
 
 SECTION_META: dict[str, tuple[str, str, str]] = {
@@ -46,6 +47,7 @@ SECTION_META: dict[str, tuple[str, str, str]] = {
     "08-security": ("8", "Security", "spec/08-security/SPEC.md"),
     "09-audit-events": ("9", "Audit and events", "spec/09-audit-events/SPEC.md"),
     "10-deployment-profiles": ("10", "Deployment", "spec/10-deployment-profiles/SPEC.md"),
+    "11-reliance-profiles": ("11", "Reliance Extensions", "spec/11-reliance-profiles/SPEC.md"),
 }
 
 
@@ -483,7 +485,8 @@ def generate_profile_block(
         sections = ", ".join(f"`{s}`" for s in profile["mandatory_sections"])
         lines.append(f"| Mandatory sections | {sections} |")
     if profile.get("annex"):
-        lines.append(f"| Annex | [`{profile['annex']}`](../../annexes/D-extended-profiles/README.md) |")
+        annex_slug = profile["annex"]
+        lines.append(f"| Annex | [`{annex_slug}`](../../annexes/{annex_slug}/README.md) |")
     if profile.get("sub_modules"):
         lines.append(f"| Sub-modules | {', '.join(f'`{m}`' for m in profile['sub_modules'])} |")
 

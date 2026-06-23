@@ -1,40 +1,46 @@
-# ODTIS conformance statement - generated
-odtis_version: 0.9.0-draft
-profiles:
-- reference-architecture
-extended_modules: []
-level: L1
-operator: FinnectOS VenID Lab
-scope:
-  environment: laboratory
-  jurisdiction: VE
-  deployment_phase: 1
-requirements:
-- ODTIS-0001
-- ODTIS-0002
-- ODTIS-0003
-- ODTIS-0004
-- ODTIS-0005
-- ODTIS-0006
-- ODTIS-0007
-- ODTIS-0008
-- ODTIS-0009
-- ODTIS-0010
-tests:
-  suite_version: 0.9.0-draft
-  status: partial
-  summary: L1 structural validators; 10 profile test stubs linked; min req stub coverage
-    100.0%
-  pending_test_ids:
-  - ODTIS-0001
-  - ODTIS-0002
-  - ODTIS-0003
-  - ODTIS-0004
-  - ODTIS-0005
-  - ODTIS-0006
-  - ODTIS-0007
-  - ODTIS-0008
-  - ODTIS-0009
-  - ODTIS-0010
-date: '2026-06-15'
-contact: conformance@odtis.org
+{
+  "odtis_version": "0.9.0-draft",
+  "profiles": [
+    "reference-architecture"
+  ],
+  "extended_modules": [],
+  "reliance_extensions": [],
+  "level": "L1",
+  "operator": "FinnectOS VenID Lab",
+  "scope": {
+    "environment": "laboratory",
+    "jurisdiction": "VE",
+    "deployment_phase": 1
+  },
+  "requirements": [
+    "ODTIS-0001",
+    "ODTIS-0002",
+    "ODTIS-0003",
+    "ODTIS-0004",
+    "ODTIS-0005",
+    "ODTIS-0006",
+    "ODTIS-0007",
+    "ODTIS-0008",
+    "ODTIS-0009",
+    "ODTIS-0010"
+  ],
+  "tests": {
+    "suite_version": "0.9.0-draft",
+    "status": "partial",
+    "summary": "L1 conformance package (reference-architecture); 10 linked tests; min stub coverage 100.0%; see l2-report.md for automated results",
+    "pending_test_ids": [
+      "ODTIS-0001",
+      "ODTIS-0002",
+      "ODTIS-0003",
+      "ODTIS-0004",
+      "ODTIS-0005",
+      "ODTIS-0006",
+      "ODTIS-0007",
+      "ODTIS-0008",
+      "ODTIS-0009",
+      "ODTIS-0010"
+    ]
+  },
+  "date": "2026-06-23",
+  "contact": "conformance@odtis.org"
+}

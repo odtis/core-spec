@@ -1,6 +1,6 @@
 ---
 title: ODTIS specification index
-description: Normative index for ODTIS sections 1-10, adoptable profiles, annexes, and machine-readable registry artifacts.
+description: Normative index for ODTIS sections 1-11, adoptable profiles, annexes, and machine-readable registry artifacts.
 ---
 
 # ODTIS - Normative index
@@ -31,10 +31,10 @@ Vendor-neutral normative specification for digital trust infrastructure: profile
 
 | Item | Value |
 |------|-------|
-| **Normative sections** | 10 (sections 1-10) |
-| **Registry requirements** | 149 ODTIS IDs |
-| **Conformance profiles** | 6 (Reference Architecture + 5 functional) |
-| **Test procedures** | 159 stubs | 85 with smoke evidence |
+| **Normative sections** | 11 (sections 1-11) |
+| **Registry requirements** | 204 ODTIS IDs |
+| **Conformance profiles** | 7 (Reference Architecture + 6 functional) |
+| **Test procedures** | 214 stubs | 103 with smoke evidence |
 | **Annex A OpenAPI** | Frozen @ `0.9.0-draft` |
 
 ---
@@ -45,10 +45,10 @@ Vendor-neutral normative specification for digital trust infrastructure: profile
 |------------|------------|---------|
 | **New implementer** | [Getting started](../site/GETTING-STARTED.md) | Profiles + L1 in 15 minutes |
 | **Picking a profile** | [Adoptable profiles](#adoptable-profiles) below | Profile doc + dependencies |
-| **Reading normative prose** | [Normative sections](#normative-sections) below | Sections 1-10 |
+| **Reading normative prose** | [Normative sections](#normative-sections) below | Sections 1-11 |
 | **Binding APIs** | [Annexes](#annexes) below | Annex A OpenAPI (frozen) |
 | **Verifying a claim** | [Conformance overview](../conformance/README.md) | L1/L2/L3 path |
-| **Browsing all IDs** | [Requirements index](../site/REQUIREMENTS-INDEX.md) | 149 requirements |
+| **Browsing all IDs** | [Requirements index](../site/REQUIREMENTS-INDEX.md) | 204 requirements |
 
 ---
 
@@ -113,6 +113,16 @@ Platform governance duties.
 Optional modules (E-Wallet, E-Webhook, ...).
 
 [Profile doc](profiles/extended-profile.md){ .md-button }
+
+</div>
+
+<div class="odtis-profile-card" markdown="1">
+
+### Reliance Extensions
+
+Capa B governance overlays (Annex E).
+
+[Profile doc](profiles/reliance-extensions-profile.md){ .md-button }
 
 </div>
 
@@ -276,6 +286,21 @@ Keywords, profiles, conformance levels.
 
 </div>
 
+<div class="odtis-section-card" markdown="1">
+
+<span class="odtis-section-card__num">11</span>
+
+### Reliance Extensions (Capa B)
+
+<div class="odtis-section-card__meta" markdown="1">
+<span>55 IDs</span>
+<span>ODTIS-0701..0772</span>
+</div>
+
+[Read section](11-reliance-profiles/SPEC.md){ .md-button }
+
+</div>
+
 </div>
 
 Section review matrix: [Section review matrix](../governance/SECTION-REVIEW.md) | Requirements: [Requirements index](../site/REQUIREMENTS-INDEX.md)
@@ -321,6 +346,16 @@ Standards mapping and LoA matrix.
 Extended profile modules.
 
 [Annex D](../annexes/D-extended-profiles/README.md){ .md-button }
+
+</div>
+
+<div class="odtis-annex-card" markdown="1">
+
+### Annex E - Reliance
+
+Reliance Extension sub-modules (Capa B).
+
+[Annex E](../annexes/E-reliance-profiles/README.md){ .md-button }
 
 </div>
 

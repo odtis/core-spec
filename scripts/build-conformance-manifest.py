@@ -126,6 +126,7 @@ def main() -> None:
         {"id": "validate-threats", "script": "scripts/validate-threats.py", "type": "automated"},
         {"id": "validate-standards-mapping", "script": "scripts/validate-standards-mapping.py", "type": "automated"},
         {"id": "validate-extended-annex", "script": "scripts/validate-extended-annex.py", "type": "automated"},
+        {"id": "validate-reliance-annex", "script": "scripts/validate-reliance-annex.py", "type": "automated"},
         {
             "id": "registry-test-links",
             "script": "scripts/run-conformance.py",

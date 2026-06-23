@@ -310,13 +310,38 @@ Extended sub-modules MUST NOT weaken Core Identity, Trust Network, or Federation
 
 **Deployment phasing (informative).** E-Wallet commonly activates in deployment Phase 2+; E-Registry in Phase 3+. Exact phasing is operator policy documented under 10.
 
+### 1.6.6 Reliance Extensions
+
+**ID:** `reliance-extensions`
+
+**Purpose.** Optional **Capa B** governance overlays: who may rely on a trust signal, for what purpose, with what assurance metadata, audit evidence, recourse, and revocation/step-up. Reliance Extensions operate on top of Core Identity and MUST NOT weaken Core, Trust Network, Federation, or Operator requirements (`ODTIS-0707`).
+
+**Depends on:** Core Identity (`core-identity`).
+
+**Normative annex:** Annex E.
+
+**Mandatory section:** 11.
+
+**Sub-modules** (declared in `reliance_extensions`; R-Base is always required when the profile is claimed):
+
+| Sub-module ID | Description | Min phase |
+|---------------|-------------|-----------|
+| `R-Base` | Base reliance schema (relying party, purpose, assurance, audit, recourse) | 1 |
+| `R-Agent-Authority` | AI agent mandate and delegation | 2 |
+| `R-Crypto-Agility` | PQC / crypto-agility acceptance | 2 |
+| `R-Document-Capture` | Document capture and injection reliance | 2 |
+| `R-VC-Maturity-Gate` | External VC standard maturity gate | 1 |
+| *(see Annex E)* | 12 additional sector overlays | 2-4 |
+
+Phase matrix: [Annex E activation](/annexes/E-reliance-profiles/activation.yaml).
+
 ---
 
 ## 1.7 Profile composition rules
 
 Implementations MUST obey the following composition rules:
 
-1. **Declaration.** A conformance claim MUST list every profile and Extended sub-module satisfied.
+1. **Declaration.** A conformance claim MUST list every profile, Extended sub-module, and Reliance Extension sub-module satisfied.
 2. **Dependencies.** An implementation MUST NOT claim a profile unless all profiles listed in its `depends_on` chain are also claimed and satisfied.
 3. **Cumulative capability.** Trust Network adds requirements to Core Identity; Federation adds requirements to Trust Network. Operator adds requirements to Core Identity independently of Layer 2.
 4. **Minimal claim.** An implementation MAY claim only Core Identity. It MUST NOT imply Trust Network, Federation, Operator, or Extended conformance without explicit declaration.
@@ -342,7 +367,8 @@ reference-architecture
  ├── trust-network
  │ └── federation
  ├── operator
- └── extended (sub-modules declared separately)
+ ├── extended (sub-modules declared separately)
+ └── reliance-extensions (Capa B sub-modules in reliance_extensions)
 ```
 
 ---
@@ -372,6 +398,7 @@ An entity claiming ODTIS conformance MUST publish a **conformance statement** co
 | `odtis_version` | ODTIS spec version tested (e.g., `0.9.0-draft`) |
 | `profiles` | List of profile IDs (1.6) |
 | `extended_modules` | List of Extended sub-module IDs, if any |
+| `reliance_extensions` | List of Reliance Extension sub-module IDs, if any (`ODTIS-0708`; include `R-Base` when profile claimed) |
 | `level` | L1, L2, or L3 |
 | `operator` | Legal entity responsible for the deployment |
 | `scope` | Environment (sandbox, staging, production) and jurisdiction bindings |
@@ -513,7 +540,7 @@ Adopters pursue regulatory certification through applicable authorities independ
 
 The **canonical language** of ODTIS is **English**.
 
-All normative prose in sections 1-10, published annex README text, registry requirement strings, OpenAPI human-readable fields (`summary`, `description`), conformance test procedures, and governance documents in this repository MUST be authored in English.
+All normative prose in sections 1-11, published annex README text, registry requirement strings, OpenAPI human-readable fields (`summary`, `description`), conformance test procedures, and governance documents in this repository MUST be authored in English.
 
 Informative translations (for example, Book 1 Spanish edition or national implementation playbooks) MAY exist outside this repository. They MUST NOT be cited as alternate normative sources. Implementations MUST map jurisdiction-specific legal terms in **policy binding statements** separate from ODTIS conformance claims (see 1.2.2).
 
@@ -566,7 +593,7 @@ Machine-readable ODTIS requirements: [Requirements registry](/registry/requireme
 | P18 | Academic alignment bridge |
 | Book 2 | Reference architecture (informative) |
 | Book 3 | Implementation guide (non-normative) |
-| Annex C | Standards mapping (149/149 IDs) |
+| Annex C | Standards mapping (204/204 IDs) |
 | NIST SP 800-63-3 | LoA mapping |
 | X-Road documentation | Trust network informative model |
 

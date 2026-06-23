@@ -55,12 +55,13 @@ Phases are **ordinal**: an operator MUST NOT skip phase-appropriate controls whe
 
 **Conformance statements MUST** declare:
 
-1. **deployment phase** (1, 2, 3, or 4) of the production environment being evaluated; and
-2. **active Extended sub-modules** (E-Wallet, E-Registry, E-Inclusion, E-Webhook, E-Signature, E-KYB) actually activated in that environment.
+1. **deployment phase** (1, 2, 3, or 4) of the production environment being evaluated;
+2. **active Extended sub-modules** (E-Wallet, E-Registry, E-Inclusion, E-Webhook, E-Signature, E-KYB) actually activated in that environment; and
+3. **active Reliance Extension sub-modules** (Annex E; e.g. R-Base, R-Agent-Authority) actually activated when the `reliance-extensions` profile is claimed.
 
-Declaration MUST match observable production configuration, not roadmap intent alone.
+Declaration MUST match observable production configuration, not roadmap intent alone. When Reliance Extensions are claimed, `reliance_extensions` MUST include **R-Base** and every additional active sub-module (`ODTIS-0708`).
 
-**Trace (informative):** P01 Figure 7, P10
+**Trace (informative):** P01 Figure 7, P10, Annex E
 **Conformance test:** Compare conformance statement to production config and feature flags; mismatches fail review.
 
 ---
@@ -101,6 +102,9 @@ Both forms MUST contain the minimum fields in ODTIS-0008 and MUST reference the 
 | Federation | MUST NOT (production) | MUST NOT unless agreement | MAY | MAY when agreements active |
 | Operator | MAY (minimal L1) | SHOULD (L2) | SHOULD (L2-L3) | SHOULD (L3) |
 | Extended | MUST NOT in prod (10.1.2) | Optional declared modules | E-Registry typical | Full optional set |
+| Reliance Extensions | R-Base, R-VC-Maturity-Gate MAY (phase 1) | Tier 1 modules MAY (phase 2+) | Tier 2 modules MAY (phase 3+) | Tier 3 modules MAY (phase 4+) |
+
+Reliance Extension phase gates: [Annex E activation](/annexes/E-reliance-profiles/activation.yaml). Claiming `reliance-extensions` without listing active sub-modules in `reliance_extensions` fails `ODTIS-0708`.
 
 Federation profile (6) MUST NOT be claimed in production until Phase 3+ unless operator documents early bilateral pilot under Phase 2 with explicit scope limitation in conformance statement.
 
@@ -178,7 +182,7 @@ Lab deployments at **L1** MAY run at Phase 1 profile without production SLA clai
 
 | ID | Keyword | Summary |
 |----|---------|---------|
-| ODTIS-0532 | MUST | Conformance statements MUST declare deployment phase and active Extende… |
+| ODTIS-0532 | MUST | Conformance statements MUST declare deployment phase, active Extended s… |
 | ODTIS-0533 | MUST NOT | Phase 1 implementations MUST NOT claim Extended sub-modules not activat… |
 | ODTIS-0534 | MUST | Operator MUST publish conformance statements in both human-readable and… |
 

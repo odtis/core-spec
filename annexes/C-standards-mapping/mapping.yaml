@@ -8,6 +8,56 @@ standards_catalog: standards.yaml
 loa_matrix: loa-matrix.yaml
 
 requirement_coverage:
+  ODTIS-0001:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0002:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0003:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0004:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0005:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0006:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0007:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0008:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0009:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0010:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
   ODTIS-0101:
     - standard_id: STD-NIST-800-63-3
       clause: "IAL proofing levels"
@@ -31,9 +81,9 @@ requirement_coverage:
       clause: "IAL2/IAL3 biometric proofing"
       reference: "NIST SP 800-63A"
       coverage: partial
-  ODTIS-0344:
+  ODTIS-0104:
     - standard_id: STD-NIST-800-63-3
-      clause: "IAL3 registry-verified identity"
+      clause: "IAL3 / registry proofing"
       reference: "NIST SP 800-63A"
       coverage: partial
     - standard_id: STD-EIDAS
@@ -41,8 +91,8 @@ requirement_coverage:
       reference: "eIDAS high assurance"
       coverage: informative
     - standard_id: STD-ODTIS-PLATFORM
-      clause: "E-Registry Extended sub-module"
-      reference: "P11, Annex D"
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
       coverage: platform
   ODTIS-0105:
     - standard_id: STD-NIST-800-63-3
@@ -72,6 +122,184 @@ requirement_coverage:
       clause: "Claims on denied release"
       reference: "OIDC / verification API"
       coverage: partial
+  ODTIS-0201:
+    - standard_id: STD-XROAD
+      clause: "Security server as sole entry"
+      reference: "X-Road architecture"
+      coverage: partial
+  ODTIS-0202:
+    - standard_id: STD-XROAD
+      clause: "Client and server proxy roles"
+      reference: "X-Road SS"
+      coverage: partial
+  ODTIS-0203:
+    - standard_id: STD-XROAD
+      clause: "Peer security server addressing"
+      reference: "X-Road federation"
+      coverage: partial
+  ODTIS-0204:
+    - standard_id: STD-TLS
+      clause: "Mutual TLS authentication"
+      reference: "RFC 8446"
+      coverage: full
+    - standard_id: STD-XROAD
+      clause: "Partner certificate authentication"
+      reference: "X-Road 4"
+      coverage: partial
+  ODTIS-0205:
+    - standard_id: STD-XROAD
+      clause: "Member identification at gateway"
+      reference: "X-Road SS receiver"
+      coverage: partial
+    - standard_id: STD-NIST-800-207
+      clause: "Never trust, always verify"
+      reference: "NIST SP 800-207"
+      coverage: informative
+  ODTIS-0206:
+    - standard_id: STD-XROAD
+      clause: "Message replay protection"
+      reference: "X-Road message headers"
+      coverage: partial
+  ODTIS-0207:
+    - standard_id: STD-XROAD
+      clause: "Message-level signatures"
+      reference: "X-Road / XML-DSig pattern"
+      coverage: partial
+    - standard_id: STD-PKI-RFC5280
+      clause: "Signature verification"
+      reference: "RFC 5280"
+      coverage: partial
+  ODTIS-0208:
+    - standard_id: STD-XROAD
+      clause: "Service description / WSDL catalog"
+      reference: "X-Road service registry"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "VenID service catalog"
+      reference: "P04, P05"
+      coverage: platform
+  ODTIS-0209:
+    - standard_id: STD-XROAD
+      clause: "Access rights / ACL grants"
+      reference: "X-Road access rights"
+      coverage: partial
+  ODTIS-0210:
+    - standard_id: STD-XROAD
+      clause: "Grant precedence over static permissions"
+      reference: "X-Road governance"
+      coverage: partial
+  ODTIS-0211:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "Grant lifecycle audit"
+      reference: "P10, DS-07"
+      coverage: platform
+  ODTIS-0212:
+    - standard_id: STD-XROAD
+      clause: "Global configuration / routing"
+      reference: "X-Road conf"
+      coverage: partial
+  ODTIS-0213:
+    - standard_id: STD-XROAD
+      clause: "Configuration cache refresh"
+      reference: "X-Road SS cache"
+      coverage: partial
+  ODTIS-0214:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "Service autodiscovery"
+      reference: "P05"
+      coverage: platform
+  ODTIS-0215:
+    - standard_id: STD-PKI-RFC5280
+      clause: "CA hierarchy for partner certs"
+      reference: "RFC 5280"
+      coverage: partial
+    - standard_id: STD-EIDAS
+      clause: "Trust service PKI (informative)"
+      reference: "eIDAS TSP"
+      coverage: informative
+  ODTIS-0216:
+    - standard_id: STD-PKI-RFC5280
+      clause: "CRL / OCSP validation"
+      reference: "RFC 5280"
+      coverage: partial
+  ODTIS-0217:
+    - standard_id: STD-PKI-RFC5280
+      clause: "Trusted timestamping"
+      reference: "RFC 3161 pattern"
+      coverage: partial
+    - standard_id: STD-EIDAS
+      clause: "Qualified timestamps (informative)"
+      reference: "eIDAS TSP"
+      coverage: informative
+  ODTIS-0218:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "PKI ceremony documentation"
+      reference: "P08, P10"
+      coverage: platform
+  ODTIS-0219:
+    - standard_id: STD-XROAD
+      clause: "Exchange audit logs"
+      reference: "X-Road log architecture"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "Regulator export correlation"
+      reference: "P10"
+      coverage: platform
+  ODTIS-0220:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "Gateway SLA targets"
+      reference: "RNF-07, P10"
+      coverage: platform
+  ODTIS-0221:
+    - standard_id: STD-NIST-800-207
+      clause: "Zero trust alignment"
+      reference: "NIST SP 800-207"
+      coverage: informative
+  ODTIS-0222:
+    - standard_id: STD-XROAD
+      clause: "Grant creation audit"
+      reference: "X-Road access rights"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0223:
+    - standard_id: STD-XROAD
+      clause: "Grant revocation"
+      reference: "X-Road access rights"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0224:
+    - standard_id: STD-XROAD
+      clause: "Grant scope binding"
+      reference: "X-Road ACL"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0225:
+    - standard_id: STD-XROAD
+      clause: "Grant expiry"
+      reference: "X-Road access rights"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0226:
+    - standard_id: STD-XROAD
+      clause: "Grant audit correlation"
+      reference: "X-Road logs"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
   ODTIS-0301:
     - standard_id: STD-OIDC-DISC
       clause: "Provider Metadata and JWKS"
@@ -267,139 +495,6 @@ requirement_coverage:
       clause: "Security audit events"
       reference: "DS-07"
       coverage: platform
-  ODTIS-0201:
-    - standard_id: STD-XROAD
-      clause: "Security server as sole entry"
-      reference: "X-Road architecture"
-      coverage: partial
-  ODTIS-0202:
-    - standard_id: STD-XROAD
-      clause: "Client and server proxy roles"
-      reference: "X-Road SS"
-      coverage: partial
-  ODTIS-0203:
-    - standard_id: STD-XROAD
-      clause: "Peer security server addressing"
-      reference: "X-Road federation"
-      coverage: partial
-  ODTIS-0204:
-    - standard_id: STD-TLS
-      clause: "Mutual TLS authentication"
-      reference: "RFC 8446"
-      coverage: full
-    - standard_id: STD-XROAD
-      clause: "Partner certificate authentication"
-      reference: "X-Road 4"
-      coverage: partial
-  ODTIS-0205:
-    - standard_id: STD-XROAD
-      clause: "Member identification at gateway"
-      reference: "X-Road SS receiver"
-      coverage: partial
-    - standard_id: STD-NIST-800-207
-      clause: "Never trust, always verify"
-      reference: "NIST SP 800-207"
-      coverage: informative
-  ODTIS-0206:
-    - standard_id: STD-XROAD
-      clause: "Message replay protection"
-      reference: "X-Road message headers"
-      coverage: partial
-  ODTIS-0207:
-    - standard_id: STD-XROAD
-      clause: "Message-level signatures"
-      reference: "X-Road / XML-DSig pattern"
-      coverage: partial
-    - standard_id: STD-PKI-RFC5280
-      clause: "Signature verification"
-      reference: "RFC 5280"
-      coverage: partial
-  ODTIS-0208:
-    - standard_id: STD-XROAD
-      clause: "Service description / WSDL catalog"
-      reference: "X-Road service registry"
-      coverage: partial
-    - standard_id: STD-ODTIS-PLATFORM
-      clause: "VenID service catalog"
-      reference: "P04, P05"
-      coverage: platform
-  ODTIS-0209:
-    - standard_id: STD-XROAD
-      clause: "Access rights / ACL grants"
-      reference: "X-Road access rights"
-      coverage: partial
-  ODTIS-0210:
-    - standard_id: STD-XROAD
-      clause: "Grant precedence over static permissions"
-      reference: "X-Road governance"
-      coverage: partial
-  ODTIS-0211:
-    - standard_id: STD-ODTIS-PLATFORM
-      clause: "Grant lifecycle audit"
-      reference: "P10, DS-07"
-      coverage: platform
-  ODTIS-0212:
-    - standard_id: STD-XROAD
-      clause: "Global configuration / routing"
-      reference: "X-Road conf"
-      coverage: partial
-  ODTIS-0213:
-    - standard_id: STD-XROAD
-      clause: "Configuration cache refresh"
-      reference: "X-Road SS cache"
-      coverage: partial
-  ODTIS-0214:
-    - standard_id: STD-ODTIS-PLATFORM
-      clause: "Service autodiscovery"
-      reference: "P05"
-      coverage: platform
-  ODTIS-0215:
-    - standard_id: STD-PKI-RFC5280
-      clause: "CA hierarchy for partner certs"
-      reference: "RFC 5280"
-      coverage: partial
-    - standard_id: STD-EIDAS
-      clause: "Trust service PKI (informative)"
-      reference: "eIDAS TSP"
-      coverage: informative
-  ODTIS-0216:
-    - standard_id: STD-PKI-RFC5280
-      clause: "CRL / OCSP validation"
-      reference: "RFC 5280"
-      coverage: partial
-  ODTIS-0217:
-    - standard_id: STD-PKI-RFC5280
-      clause: "Trusted timestamping"
-      reference: "RFC 3161 pattern"
-      coverage: partial
-    - standard_id: STD-EIDAS
-      clause: "Qualified timestamps (informative)"
-      reference: "eIDAS TSP"
-      coverage: informative
-  ODTIS-0218:
-    - standard_id: STD-ODTIS-PLATFORM
-      clause: "PKI ceremony documentation"
-      reference: "P08, P10"
-      coverage: platform
-  ODTIS-0219:
-    - standard_id: STD-XROAD
-      clause: "Exchange audit logs"
-      reference: "X-Road log architecture"
-      coverage: partial
-    - standard_id: STD-ODTIS-PLATFORM
-      clause: "Regulator export correlation"
-      reference: "P10"
-      coverage: platform
-  ODTIS-0220:
-    - standard_id: STD-ODTIS-PLATFORM
-      clause: "Gateway SLA targets"
-      reference: "RNF-07, P10"
-      coverage: platform
-  ODTIS-0221:
-    - standard_id: STD-NIST-800-207
-      clause: "Zero trust alignment"
-      reference: "NIST SP 800-207"
-      coverage: informative
   ODTIS-0328:
     - standard_id: STD-OIDC-CORE
       clause: "Consent before attribute release"
@@ -476,41 +571,183 @@ requirement_coverage:
       clause: "Client deactivation"
       reference: "RFC 6749 client lifecycle"
       coverage: partial
-  ODTIS-0345:
+  ODTIS-0340:
+    - standard_id: STD-OID4VCI
+      clause: "Credential issuance"
+      reference: "OID4VCI"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0341:
     - standard_id: STD-OID4VP
-      clause: "Holder-signed presentations"
+      clause: "Verifiable presentations"
       reference: "OID4VP"
       coverage: partial
-    - standard_id: STD-EUDI-ARF
-      clause: "Wallet presentation flow"
-      reference: "EUDI ARF"
-      coverage: informative
-  ODTIS-0346:
-    - standard_id: STD-OID4VCI
-      clause: "Issuer trust validation"
-      reference: "OID4VCI / trust lists"
-      coverage: partial
-    - standard_id: STD-EUDI-ARF
-      clause: "Trust list / PID Provider"
-      reference: "EUDI ARF"
-      coverage: informative
-  ODTIS-0347:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0342:
     - standard_id: STD-SD-JWT
-      clause: "Selective disclosure credentials"
+      clause: "Selective disclosure"
       reference: "SD-JWT VC"
       coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0343:
     - standard_id: STD-EUDI-ARF
-      clause: "Data minimization in wallet"
+      clause: "Wallet roles (informative)"
       reference: "EUDI ARF"
       coverage: informative
-  ODTIS-0348:
-    - standard_id: STD-EUDI-ARF
-      clause: "Dual path OIDC + wallet"
-      reference: "EUDI ARF roles"
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0344:
+    - standard_id: STD-NIST-800-63-3
+      clause: "IAL3 registry-verified identity"
+      reference: "NIST SP 800-63A"
+      coverage: partial
+    - standard_id: STD-EIDAS
+      clause: "National eID level (informative)"
+      reference: "eIDAS high assurance"
       coverage: informative
     - standard_id: STD-ODTIS-PLATFORM
-      clause: "Shared LoA state"
-      reference: "P03 5"
+      clause: "E-Registry Extended sub-module"
+      reference: "P11, Annex D"
+      coverage: platform
+  ODTIS-0349:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-EIDAS
+      clause: "Registry authority boundary"
+      reference: "eIDAS TSP"
+      coverage: informative
+  ODTIS-0350:
+    - standard_id: STD-NIST-800-63-3
+      clause: "National LoA after registry"
+      reference: "NIST SP 800-63A"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0351:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+  ODTIS-0352:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0353:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-XROAD
+      clause: "Verification audit"
+      reference: "Exchange audit"
+      coverage: partial
+  ODTIS-0354:
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0355:
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0356:
+    - standard_id: STD-NIST-800-63-3
+      clause: "LoA proofing parity"
+      reference: "NIST SP 800-63A"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0357:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0358:
+    - standard_id: STD-OWASP
+      clause: "Webhook registration"
+      reference: "OWASP API Security"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0359:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0360:
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0361:
+    - standard_id: STD-EIDAS
+      clause: "Advanced signature (informative)"
+      reference: "eIDAS qualified signature"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0362:
+    - standard_id: STD-PKI-RFC5280
+      clause: "Signature PKI keys"
+      reference: "RFC 5280"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0363:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0364:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0365:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
       coverage: platform
   ODTIS-0401:
     - standard_id: STD-XROAD
@@ -545,6 +782,24 @@ requirement_coverage:
     - standard_id: STD-ODTIS-PLATFORM
       clause: "Regulator federation export"
       reference: "Annex A S8"
+      coverage: platform
+  ODTIS-0407:
+    - standard_id: STD-XROAD
+      clause: "Federated verification routing"
+      reference: "X-Road federation"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0408:
+    - standard_id: STD-XROAD
+      clause: "Federation audit export"
+      reference: "X-Road logs"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
       coverage: platform
   ODTIS-0501:
     - standard_id: STD-ODTIS-PLATFORM
@@ -743,11 +998,733 @@ requirement_coverage:
       coverage: platform
   ODTIS-0532:
     - standard_id: STD-ODTIS-PLATFORM
-      clause: "Conformance statement profiles"
-      reference: "P18 3.3"
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "Reliance Extensions declaration"
+      reference: "Annex E, section 10"
       coverage: platform
   ODTIS-0533:
     - standard_id: STD-ODTIS-PLATFORM
       clause: "Phase honesty for Extended claims"
       reference: "P10, P17"
+      coverage: platform
+  ODTIS-0534:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0535:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-NIST-800-207
+      clause: "Fail-closed verification"
+      reference: "NIST SP 800-207"
+      coverage: partial
+  ODTIS-0536:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0701:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-OIDC-CORE
+      clause: "Relying party identification"
+      reference: "OIDC client registration"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Assurance metadata"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+  ODTIS-0702:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-OIDC-CORE
+      clause: "Relying party identification"
+      reference: "OIDC client registration"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Assurance metadata"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+  ODTIS-0703:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-OIDC-CORE
+      clause: "Relying party identification"
+      reference: "OIDC client registration"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Assurance metadata"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+  ODTIS-0704:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-OIDC-CORE
+      clause: "Relying party identification"
+      reference: "OIDC client registration"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Assurance metadata"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+  ODTIS-0705:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-OIDC-CORE
+      clause: "Relying party identification"
+      reference: "OIDC client registration"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Assurance metadata"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+  ODTIS-0706:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-OIDC-CORE
+      clause: "Relying party identification"
+      reference: "OIDC client registration"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Assurance metadata"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+  ODTIS-0707:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-OIDC-CORE
+      clause: "Relying party identification"
+      reference: "OIDC client registration"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Assurance metadata"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+  ODTIS-0708:
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-OIDC-CORE
+      clause: "Relying party identification"
+      reference: "OIDC client registration"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Assurance metadata"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+  ODTIS-0710:
+    - standard_id: STD-OAUTH2
+      clause: "Delegated authority"
+      reference: "RFC 8693 token exchange pattern"
+      coverage: partial
+    - standard_id: STD-IETF-AIP
+      clause: "Agent identity (informative)"
+      reference: "IETF AIP did:aip"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0711:
+    - standard_id: STD-OAUTH2
+      clause: "Delegated authority"
+      reference: "RFC 8693 token exchange pattern"
+      coverage: partial
+    - standard_id: STD-IETF-AIP
+      clause: "Agent identity (informative)"
+      reference: "IETF AIP did:aip"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0712:
+    - standard_id: STD-OAUTH2
+      clause: "Delegated authority"
+      reference: "RFC 8693 token exchange pattern"
+      coverage: partial
+    - standard_id: STD-IETF-AIP
+      clause: "Agent identity (informative)"
+      reference: "IETF AIP did:aip"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0713:
+    - standard_id: STD-OAUTH2
+      clause: "Delegated authority"
+      reference: "RFC 8693 token exchange pattern"
+      coverage: partial
+    - standard_id: STD-IETF-AIP
+      clause: "Agent identity (informative)"
+      reference: "IETF AIP did:aip"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0715:
+    - standard_id: STD-NIST-PQC
+      clause: "Post-quantum algorithms"
+      reference: "FIPS 203/204/205"
+      coverage: partial
+    - standard_id: STD-PKI-RFC5280
+      clause: "Certificate agility"
+      reference: "RFC 5280"
+      coverage: partial
+    - standard_id: STD-EIDAS
+      clause: "Crypto agility (informative)"
+      reference: "eIDAS 2.0"
+      coverage: informative
+  ODTIS-0716:
+    - standard_id: STD-NIST-PQC
+      clause: "Post-quantum algorithms"
+      reference: "FIPS 203/204/205"
+      coverage: partial
+    - standard_id: STD-PKI-RFC5280
+      clause: "Certificate agility"
+      reference: "RFC 5280"
+      coverage: partial
+    - standard_id: STD-EIDAS
+      clause: "Crypto agility (informative)"
+      reference: "eIDAS 2.0"
+      coverage: informative
+  ODTIS-0717:
+    - standard_id: STD-NIST-PQC
+      clause: "Post-quantum algorithms"
+      reference: "FIPS 203/204/205"
+      coverage: partial
+    - standard_id: STD-PKI-RFC5280
+      clause: "Certificate agility"
+      reference: "RFC 5280"
+      coverage: partial
+    - standard_id: STD-EIDAS
+      clause: "Crypto agility (informative)"
+      reference: "eIDAS 2.0"
+      coverage: informative
+  ODTIS-0719:
+    - standard_id: STD-WEBAUTHN
+      clause: "Passkey revocation"
+      reference: "WebAuthn"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Credential lifecycle"
+      reference: "NIST SP 800-63B"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0720:
+    - standard_id: STD-WEBAUTHN
+      clause: "Passkey revocation"
+      reference: "WebAuthn"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Credential lifecycle"
+      reference: "NIST SP 800-63B"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0721:
+    - standard_id: STD-WEBAUTHN
+      clause: "Passkey revocation"
+      reference: "WebAuthn"
+      coverage: partial
+    - standard_id: STD-NIST-800-63-3
+      clause: "Credential lifecycle"
+      reference: "NIST SP 800-63B"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0723:
+    - standard_id: STD-ISO-30107
+      clause: "PAD / injection detection"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-FINCEN
+      clause: "Document fraud alerts (informative)"
+      reference: "FinCEN FIN-2024"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0724:
+    - standard_id: STD-ISO-30107
+      clause: "PAD / injection detection"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-FINCEN
+      clause: "Document fraud alerts (informative)"
+      reference: "FinCEN FIN-2024"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0725:
+    - standard_id: STD-ISO-30107
+      clause: "PAD / injection detection"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-FINCEN
+      clause: "Document fraud alerts (informative)"
+      reference: "FinCEN FIN-2024"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0727:
+    - standard_id: STD-ISO-30107
+      clause: "Liveness detection"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0728:
+    - standard_id: STD-ISO-30107
+      clause: "Liveness detection"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0729:
+    - standard_id: STD-ISO-30107
+      clause: "Liveness detection"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0731:
+    - standard_id: STD-SD-JWT
+      clause: "Selective disclosure"
+      reference: "RFC 9901 SD-JWT"
+      coverage: partial
+    - standard_id: STD-IETF-SCITT
+      clause: "Audience-bound audit (informative)"
+      reference: "IETF SCITT AAC"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0732:
+    - standard_id: STD-SD-JWT
+      clause: "Selective disclosure"
+      reference: "RFC 9901 SD-JWT"
+      coverage: partial
+    - standard_id: STD-IETF-SCITT
+      clause: "Audience-bound audit (informative)"
+      reference: "IETF SCITT AAC"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0733:
+    - standard_id: STD-SD-JWT
+      clause: "Selective disclosure"
+      reference: "RFC 9901 SD-JWT"
+      coverage: partial
+    - standard_id: STD-IETF-SCITT
+      clause: "Audience-bound audit (informative)"
+      reference: "IETF SCITT AAC"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0735:
+    - standard_id: STD-W3C-VC
+      clause: "VC maturity gate"
+      reference: "W3C VC Data Integrity"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0736:
+    - standard_id: STD-W3C-VC
+      clause: "VC maturity gate"
+      reference: "W3C VC Data Integrity"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0737:
+    - standard_id: STD-W3C-VC
+      clause: "VC maturity gate"
+      reference: "W3C VC Data Integrity"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0739:
+    - standard_id: STD-EIDAS
+      clause: "Multi-eID acceptance"
+      reference: "eIDAS 2.0 LoA High"
+      coverage: informative
+    - standard_id: STD-NIST-800-63-4
+      clause: "Assurance mapping"
+      reference: "NIST SP 800-63-4"
+      coverage: partial
+    - standard_id: STD-EUDI-ARF
+      clause: "Public-sector wallet (informative)"
+      reference: "EUDI ARF"
+      coverage: informative
+  ODTIS-0740:
+    - standard_id: STD-EIDAS
+      clause: "Multi-eID acceptance"
+      reference: "eIDAS 2.0 LoA High"
+      coverage: informative
+    - standard_id: STD-NIST-800-63-4
+      clause: "Assurance mapping"
+      reference: "NIST SP 800-63-4"
+      coverage: partial
+    - standard_id: STD-EUDI-ARF
+      clause: "Public-sector wallet (informative)"
+      reference: "EUDI ARF"
+      coverage: informative
+  ODTIS-0741:
+    - standard_id: STD-EIDAS
+      clause: "Multi-eID acceptance"
+      reference: "eIDAS 2.0 LoA High"
+      coverage: informative
+    - standard_id: STD-NIST-800-63-4
+      clause: "Assurance mapping"
+      reference: "NIST SP 800-63-4"
+      coverage: partial
+    - standard_id: STD-EUDI-ARF
+      clause: "Public-sector wallet (informative)"
+      reference: "EUDI ARF"
+      coverage: informative
+  ODTIS-0743:
+    - standard_id: STD-NIST-800-63-3
+      clause: "Portable assurance"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+    - standard_id: STD-ISO-30107
+      clause: "PAD/IAD portability"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0744:
+    - standard_id: STD-NIST-800-63-3
+      clause: "Portable assurance"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+    - standard_id: STD-ISO-30107
+      clause: "PAD/IAD portability"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0745:
+    - standard_id: STD-NIST-800-63-3
+      clause: "Portable assurance"
+      reference: "NIST SP 800-63-3"
+      coverage: partial
+    - standard_id: STD-ISO-30107
+      clause: "PAD/IAD portability"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0747:
+    - standard_id: STD-PSD3
+      clause: "Fraud / APP reimbursement (informative)"
+      reference: "PSD3/PSR"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0748:
+    - standard_id: STD-PSD3
+      clause: "Fraud / APP reimbursement (informative)"
+      reference: "PSD3/PSR"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0749:
+    - standard_id: STD-PSD3
+      clause: "Fraud / APP reimbursement (informative)"
+      reference: "PSD3/PSR"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0751:
+    - standard_id: STD-FINCEN
+      clause: "CIP / BSA reliance"
+      reference: "FinCEN CIP"
+      coverage: informative
+    - standard_id: STD-GENIUS
+      clause: "Stablecoin CIP (informative)"
+      reference: "GENIUS Act"
+      coverage: informative
+    - standard_id: STD-NIST-800-63-4
+      clause: "Identity proofing"
+      reference: "NIST SP 800-63-4"
+      coverage: partial
+  ODTIS-0752:
+    - standard_id: STD-FINCEN
+      clause: "CIP / BSA reliance"
+      reference: "FinCEN CIP"
+      coverage: informative
+    - standard_id: STD-GENIUS
+      clause: "Stablecoin CIP (informative)"
+      reference: "GENIUS Act"
+      coverage: informative
+    - standard_id: STD-NIST-800-63-4
+      clause: "Identity proofing"
+      reference: "NIST SP 800-63-4"
+      coverage: partial
+  ODTIS-0753:
+    - standard_id: STD-FINCEN
+      clause: "CIP / BSA reliance"
+      reference: "FinCEN CIP"
+      coverage: informative
+    - standard_id: STD-GENIUS
+      clause: "Stablecoin CIP (informative)"
+      reference: "GENIUS Act"
+      coverage: informative
+    - standard_id: STD-NIST-800-63-4
+      clause: "Identity proofing"
+      reference: "NIST SP 800-63-4"
+      coverage: partial
+  ODTIS-0755:
+    - standard_id: STD-ICAO-DTC
+      clause: "Digital travel credential"
+      reference: "ICAO DTC/PKD"
+      coverage: informative
+    - standard_id: STD-IATA-ONEID
+      clause: "One ID journey"
+      reference: "IATA One ID"
+      coverage: informative
+    - standard_id: STD-OID4VP
+      clause: "Cross-border presentation"
+      reference: "OID4VP"
+      coverage: partial
+  ODTIS-0756:
+    - standard_id: STD-ICAO-DTC
+      clause: "Digital travel credential"
+      reference: "ICAO DTC/PKD"
+      coverage: informative
+    - standard_id: STD-IATA-ONEID
+      clause: "One ID journey"
+      reference: "IATA One ID"
+      coverage: informative
+    - standard_id: STD-OID4VP
+      clause: "Cross-border presentation"
+      reference: "OID4VP"
+      coverage: partial
+  ODTIS-0757:
+    - standard_id: STD-ICAO-DTC
+      clause: "Digital travel credential"
+      reference: "ICAO DTC/PKD"
+      coverage: informative
+    - standard_id: STD-IATA-ONEID
+      clause: "One ID journey"
+      reference: "IATA One ID"
+      coverage: informative
+    - standard_id: STD-OID4VP
+      clause: "Cross-border presentation"
+      reference: "OID4VP"
+      coverage: partial
+  ODTIS-0759:
+    - standard_id: STD-EU-CRA
+      clause: "Software supply chain"
+      reference: "EU CRA 2024/2847"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0760:
+    - standard_id: STD-EU-CRA
+      clause: "Software supply chain"
+      reference: "EU CRA 2024/2847"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0761:
+    - standard_id: STD-EU-CRA
+      clause: "Software supply chain"
+      reference: "EU CRA 2024/2847"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0763:
+    - standard_id: STD-ISO27001
+      clause: "DPI blast-radius controls"
+      reference: "ISO 27001"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0764:
+    - standard_id: STD-ISO27001
+      clause: "DPI blast-radius controls"
+      reference: "ISO 27001"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0765:
+    - standard_id: STD-ISO27001
+      clause: "DPI blast-radius controls"
+      reference: "ISO 27001"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0767:
+    - standard_id: STD-W3C-VC
+      clause: "Cross-chain credential interop"
+      reference: "W3C VC/VP"
+      coverage: partial
+    - standard_id: STD-OID4VP
+      clause: "Presentation interop"
+      reference: "OID4VP"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0768:
+    - standard_id: STD-W3C-VC
+      clause: "Cross-chain credential interop"
+      reference: "W3C VC/VP"
+      coverage: partial
+    - standard_id: STD-OID4VP
+      clause: "Presentation interop"
+      reference: "OID4VP"
+      coverage: partial
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0771:
+    - standard_id: STD-ISO-30107
+      clause: "Biometric reliance"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
+      coverage: platform
+  ODTIS-0772:
+    - standard_id: STD-ISO-30107
+      clause: "Biometric reliance"
+      reference: "ISO/IEC 30107"
+      coverage: partial
+    - standard_id: STD-GDPR
+      clause: "Privacy governance (informative)"
+      reference: "GDPR Art. 5-22"
+      coverage: informative
+    - standard_id: STD-ODTIS-PLATFORM
+      clause: "ODTIS platform rule"
+      reference: "P18 / Annex E"
       coverage: platform

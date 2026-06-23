@@ -48,14 +48,19 @@ def load_statement_meta(path: Path) -> tuple[int | None, list[str]]:
 def report_title(statement: Path) -> str:
     phase, profiles = load_statement_meta(statement)
     label = f"Phase {phase}" if phase else "L2"
+    if "reliance-extensions" in profiles:
+        return f"ODTIS L2 test report - {label} Reliance Extensions pilot"
     if "trust-network" in profiles:
-        return f"ODTIS L2 test report  -  {label} Core Identity + Trust Network"
+        return f"ODTIS L2 test report - {label} Core Identity + Trust Network"
     if "core-identity" in profiles:
-        return f"ODTIS L2 test report  -  {label} Core Identity"
-    return f"ODTIS L2 test report  -  {label}"
+        return f"ODTIS L2 test report - {label} Core Identity"
+    return f"ODTIS L2 test report - {label}"
 
 
 def regenerate_hint(statement: Path) -> str:
+    _, profiles = load_statement_meta(statement)
+    if "reliance-extensions" in profiles:
+        return "./conformance/run-reliance-package.sh"
     phase, _ = load_statement_meta(statement)
     if phase == 2:
         return "./conformance/run-phase2-package.sh"

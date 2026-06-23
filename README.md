@@ -9,7 +9,7 @@ Vendor-neutral open specification for digital identity, institutional trust exch
 
 **Live site:** [odtis.org](https://odtis.org) · **Version:** [`0.9.0-draft`](VERSION) · **License:** [CC BY 4.0](LICENSE) · **Copyright:** FinnectOS, Inc.
 
-ODTIS defines normative MUST/SHOULD/MAY requirements, six adoptable conformance profiles, machine-readable annexes (OpenAPI, events, registry), and an L1/L2/L3 verification model. Implementations may be open source or proprietary; conformance is proven by tests and published statements, not by using any single vendor stack.
+ODTIS defines normative MUST/SHOULD/MAY requirements, **seven** adoptable conformance profiles, machine-readable annexes (OpenAPI, events, registry), and an L1/L2/L3 verification model. Implementations may be open source or proprietary; conformance is proven by tests and published statements, not by using any single vendor stack.
 
 [VenID](https://github.com/odtis/core-impl) is the first reference implementation (separate repository). You do **not** need VenID code to implement ODTIS.
 
@@ -34,10 +34,10 @@ Authoritative specification text is **English only** ([Language policy](governan
 | Item | State |
 |------|--------|
 | **Lifecycle** | Review draft ([Spec stages](governance/SPEC-STAGES.md)) - not ODTIS `1.0.0` |
-| **Normative sections 1-10** | Review draft complete |
+| **Normative sections 1-11** | Review draft complete |
 | **Annex A OpenAPI** | Frozen @ `0.9.0-draft` |
-| **Registry** | 149 ODTIS requirement IDs |
-| **Conformance suite** | 159 test procedures (85 with smoke evidence) |
+| **Registry** | 204 ODTIS requirement IDs |
+| **Conformance suite** | 214 test procedures (see [Project status](https://odtis.org/site/STATUS/)) |
 | **Public site** | [odtis.org](https://odtis.org) |
 | **Steward** | FinnectOS, Inc. (interim; [Foundation charter](governance/FOUNDATION-CHARTER.md) draft) |
 
@@ -70,9 +70,9 @@ workspace/
 See [Repository map](STRUCTURE.md).
 
 ```
-├── spec/            # Sections 1-10 + adoptable profiles
+├── spec/            # Sections 1-11 + adoptable profiles
 ├── registry/        # Requirement IDs, terminology, events, profiles
-├── annexes/         # A (OpenAPI, frozen) - D
+├── annexes/         # A (OpenAPI, frozen) - E
 ├── conformance/     # L1/L2/L3 tests and certification guides
 ├── governance/      # IPR, stages, review, maintainers
 ├── publication/     # Citation, Zenodo packaging

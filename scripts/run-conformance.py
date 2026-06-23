@@ -14,6 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "registry/requirements.json"
 MANIFEST = ROOT / "conformance/manifest.yaml"
 
+VENV_PYTHON = ROOT / ".venv-site" / "bin" / "python"
+PYTHON = str(VENV_PYTHON) if VENV_PYTHON.is_file() else sys.executable
+
 VALIDATORS = [
     "scripts/validate-registry.py",
     "scripts/validate-section-completeness.py",
@@ -22,13 +25,14 @@ VALIDATORS = [
     "scripts/validate-threats.py",
     "scripts/validate-standards-mapping.py",
     "scripts/validate-extended-annex.py",
+    "scripts/validate-reliance-annex.py",
     "scripts/validate-conformance-statement.py",
     "scripts/validate-ri-map.py",
 ]
 
 
 def run_script(rel_path: str, extra: list[str] | None = None) -> tuple[bool, str]:
-    cmd = [sys.executable, str(ROOT / rel_path)] + (extra or [])
+    cmd = [PYTHON, str(ROOT / rel_path)] + (extra or [])
     proc = subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT)
     out = (proc.stdout or "") + (proc.stderr or "")
     return proc.returncode == 0, out.strip()

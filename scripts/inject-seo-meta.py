@@ -14,7 +14,7 @@ SEO: dict[str, tuple[str, str]] = {
     "index.md": (
         "Open Digital Trust Infrastructure Specification",
         "ODTIS: vendor-neutral open standard for digital identity, trust networks, and institutional exchange. "
-        "149 normative requirements, 6 conformance profiles, frozen OpenAPI Annex A, L1/L2/L3 verification.",
+        "204 normative requirements, 7 conformance profiles, frozen OpenAPI Annex A, L1/L2/L3 verification.",
     ),
     "ADOPTION.md": (
         "ODTIS adoption guide",
@@ -26,7 +26,7 @@ SEO: dict[str, tuple[str, str]] = {
     ),
     "spec/INDEX.md": (
         "ODTIS specification index",
-        "Normative index for ODTIS sections 1-10, adoptable profiles, annexes, and machine-readable registry artifacts.",
+        "Normative index for ODTIS sections 1-11, adoptable profiles, annexes, and machine-readable registry artifacts.",
     ),
     "conformance/README.md": (
         "ODTIS conformance overview",

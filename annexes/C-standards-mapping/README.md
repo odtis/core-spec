@@ -23,7 +23,7 @@ Annex C maps each ODTIS requirement to **external standards and frameworks** wit
 | `informative` | Design alignment or disclosure aid only |
 | `platform` | VenID operator/deployment rule without direct external clause |
 
-ODTIS normative text remains in 1-10. This annex supports cross-border adopters, auditors, and EUDI program architects.
+ODTIS normative text remains in sections 1-11. This annex supports cross-border adopters, auditors, and EUDI program architects.
 
 **Disclaimer:** ODTIS does **not** assert eIDAS qualified status, NIST certification, or ISO 27001 conformity through this mapping alone.
 
@@ -36,7 +36,7 @@ C-standards-mapping/
 ├── README.md
 ├── standards.yaml <- Catalog of ~20 external standards
 ├── loa-matrix.yaml <- NIST IAL/AAL/FAL + eIDAS-inspired crosswalk
-└── mapping.yaml <- 149/149 ODTIS IDs -> standard clauses
+└── mapping.yaml <- 204/204 ODTIS IDs -> standard clauses
 ```
 
 ---
@@ -72,7 +72,7 @@ Operator documentation **MUST** publish NIST mapping per **ODTIS-0105**.
 
 ## Requirement coverage
 
-[Standards mapping](mapping.yaml) lists all **149** registry requirements. Example:
+[Standards mapping](mapping.yaml) lists all **204** registry requirements. Example:
 
 ```yaml
 ODTIS-0302:
@@ -129,14 +129,14 @@ Checks: all registry IDs mapped, valid `standard_id`, valid coverage enum.
 
 - [x] Standards catalog (`standards.yaml`)
 - [x] LoA / eIDAS crosswalk (`loa-matrix.yaml`)
-- [x] 149/149 requirement mappings (`mapping.yaml`)
+- [x] 204/204 requirement mappings (`mapping.yaml`)
 - [x] Generate + validate scripts
 - [ ] Sync detailed rows with P02 comparative paper
 - [ ] Periodic review when eIDAS 2.0 / OID4VC specs evolve
 
 **Phase 3.2 review (C).**
 
-- [x] 149/149 registry IDs mapped and validated
+- [x] 204/204 registry IDs mapped and validated
 - [x] LoA / eIDAS crosswalk in `loa-matrix.yaml`
 - [ ] External review cycle 1 ([Section review matrix](/governance/SECTION-REVIEW/))
 

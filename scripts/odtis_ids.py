@@ -82,6 +82,14 @@ DOMAINS: list[dict] = [
         "spec_paths": [],
         "status": "reserved",
     },
+    {
+        "id": "ODTIS-0007",
+        "title": "Reliance Extensions",
+        "summary": "Optional Capa B governance overlays (reliance/assurance/resilience profiles); catalogued in Annex E.",
+        "sections": ["11-reliance-profiles"],
+        "spec_paths": ["spec/11-reliance-profiles/SPEC.md"],
+        "status": "normative",
+    },
 ]
 
 SECTION_TO_DOMAIN: dict[str, str] = {}
@@ -114,7 +122,7 @@ def build_requirement_id_map(requirements: list[dict]) -> dict[str, str]:
 
     mapping: dict[str, str] = {}
     for domain_id, reqs in by_domain.items():
-        if domain_id == "ODTIS-0006":
+        if domain_id in ("ODTIS-0006", "ODTIS-0007"):
             continue
         ordered = sorted(reqs, key=lambda r: legacy_sort_key(r["id"]))
         for idx, req in enumerate(ordered, start=1):

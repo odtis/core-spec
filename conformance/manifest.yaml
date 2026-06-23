@@ -24,6 +24,9 @@ lab_tests:
   - id: validate-extended-annex
     script: scripts/validate-extended-annex.py
     type: automated
+  - id: validate-reliance-annex
+    script: scripts/validate-reliance-annex.py
+    type: automated
   - id: registry-test-links
     script: scripts/run-conformance.py
     args: ['--check-links']
@@ -763,4 +766,231 @@ profiles:
       - path: conformance/tests/operator/test_odtis_0531.md
         requirements: [ODTIS-0531]
         status: pending
+        type: manual
+  reliance-extensions:
+    requirement_count: 55
+    test_count: 55
+    covered_requirements: 55
+    coverage_pct: 100.0
+    missing_total: 0
+    tests:
+      - path: conformance/tests/reliance-extensions/test_odtis_0701.md
+        requirements: [ODTIS-0701, ODTIS-0707]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0702.md
+        requirements: [ODTIS-0702, ODTIS-0707]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0703.md
+        requirements: [ODTIS-0703, ODTIS-0707]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0704.md
+        requirements: [ODTIS-0704, ODTIS-0707]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0705.md
+        requirements: [ODTIS-0705, ODTIS-0707]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0706.md
+        requirements: [ODTIS-0706, ODTIS-0707]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0707.md
+        requirements: [ODTIS-0707]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0708.md
+        requirements: [ODTIS-0707, ODTIS-0708]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0710.md
+        requirements: [ODTIS-0707, ODTIS-0710]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0711.md
+        requirements: [ODTIS-0707, ODTIS-0711]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0712.md
+        requirements: [ODTIS-0707, ODTIS-0712]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0713.md
+        requirements: [ODTIS-0707, ODTIS-0713]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0715.md
+        requirements: [ODTIS-0707, ODTIS-0715]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0716.md
+        requirements: [ODTIS-0707, ODTIS-0716]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0717.md
+        requirements: [ODTIS-0707, ODTIS-0717]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0719.md
+        requirements: [ODTIS-0707, ODTIS-0719]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0720.md
+        requirements: [ODTIS-0707, ODTIS-0720]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0721.md
+        requirements: [ODTIS-0707, ODTIS-0721]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0723.md
+        requirements: [ODTIS-0707, ODTIS-0723]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0724.md
+        requirements: [ODTIS-0707, ODTIS-0724]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0725.md
+        requirements: [ODTIS-0707, ODTIS-0725]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0727.md
+        requirements: [ODTIS-0707, ODTIS-0727]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0728.md
+        requirements: [ODTIS-0707, ODTIS-0728]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0729.md
+        requirements: [ODTIS-0707, ODTIS-0729]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0731.md
+        requirements: [ODTIS-0707, ODTIS-0731]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0732.md
+        requirements: [ODTIS-0707, ODTIS-0732]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0733.md
+        requirements: [ODTIS-0707, ODTIS-0733]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0735.md
+        requirements: [ODTIS-0707, ODTIS-0735]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0736.md
+        requirements: [ODTIS-0707, ODTIS-0736]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0737.md
+        requirements: [ODTIS-0707, ODTIS-0737]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0739.md
+        requirements: [ODTIS-0707, ODTIS-0739]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0740.md
+        requirements: [ODTIS-0707, ODTIS-0740]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0741.md
+        requirements: [ODTIS-0707, ODTIS-0741]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0743.md
+        requirements: [ODTIS-0707, ODTIS-0743]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0744.md
+        requirements: [ODTIS-0707, ODTIS-0744]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0745.md
+        requirements: [ODTIS-0707, ODTIS-0745]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0747.md
+        requirements: [ODTIS-0707, ODTIS-0747]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0748.md
+        requirements: [ODTIS-0707, ODTIS-0748]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0749.md
+        requirements: [ODTIS-0707, ODTIS-0749]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0751.md
+        requirements: [ODTIS-0707, ODTIS-0751]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0752.md
+        requirements: [ODTIS-0707, ODTIS-0752]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0753.md
+        requirements: [ODTIS-0707, ODTIS-0753]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0755.md
+        requirements: [ODTIS-0707, ODTIS-0755]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0756.md
+        requirements: [ODTIS-0707, ODTIS-0756]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0757.md
+        requirements: [ODTIS-0707, ODTIS-0757]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0759.md
+        requirements: [ODTIS-0707, ODTIS-0759]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0760.md
+        requirements: [ODTIS-0707, ODTIS-0760]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0761.md
+        requirements: [ODTIS-0707, ODTIS-0761]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0763.md
+        requirements: [ODTIS-0707, ODTIS-0763]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0764.md
+        requirements: [ODTIS-0707, ODTIS-0764]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0765.md
+        requirements: [ODTIS-0707, ODTIS-0765]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0767.md
+        requirements: [ODTIS-0707, ODTIS-0767]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0768.md
+        requirements: [ODTIS-0707, ODTIS-0768]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0771.md
+        requirements: [ODTIS-0707, ODTIS-0771]
+        status: implemented
+        type: manual
+      - path: conformance/tests/reliance-extensions/test_odtis_0772.md
+        requirements: [ODTIS-0707, ODTIS-0772]
+        status: implemented
         type: manual

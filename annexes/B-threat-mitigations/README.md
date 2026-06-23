@@ -28,7 +28,7 @@ Normative language remains in 8 and cross-referenced sections. Annex B does not 
 
 | File | Description |
 |------|-------------|
-| [Threat mitigations catalog](threats.yaml) | 18-row P07 matrix + STRIDE + ODTIS requirement cross-refs |
+| [Threat mitigations catalog](threats.yaml) | 18-row P07 matrix + 6 reliance rows + STRIDE + ODTIS requirement cross-refs |
 | [Project hub](README.md) | This document |
 
 ---
@@ -46,8 +46,11 @@ Seven **threat classes** (derived from P07 4-7 and Figure 5):
 | TC-WALLET | Wallet and VC abuse | 7 |
 | TC-PRIV | Privacy and data abuse | 4.7 |
 | TC-INFRA | Platform intrusion and data breach | Table 1 rows 12-13, P06 |
+| TC-RELIANCE | Reliance and trust-signal abuse (Capa B) | Annex E, section 11 |
 
-Each threat row uses ID **`T-P07-{NNN}`** aligned with P07 Table 1 row number.
+Each P07 threat row uses ID **`T-P07-{NNN}`** aligned with P07 Table 1 row number.
+
+**Reliance extension (informative):** six additional rows **`T-REL-{NNN}`** under `reliance_threats` in `threats.yaml` map DTI editorial risks to ODTIS-07xx controls without adding P07 table rows.
 
 ---
 

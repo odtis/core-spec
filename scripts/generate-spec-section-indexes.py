@@ -25,6 +25,7 @@ SECTION_INDEX: dict[str, tuple[str, str, bool]] = {
     "08-security": ("spec/08-security/SPEC.md", "8.7", False),
     "09-audit-events": ("spec/09-audit-events/SPEC.md", "9.9", False),
     "10-deployment-profiles": ("spec/10-deployment-profiles/SPEC.md", "10.7", False),
+    "11-reliance-profiles": ("spec/11-reliance-profiles/SPEC.md", "11.5", False),
 }
 
 LEGACY_SUBSECTION: dict[str, str] = {

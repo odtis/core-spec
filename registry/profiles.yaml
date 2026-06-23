@@ -139,6 +139,44 @@ profiles:
     description: >
       Optional modules: wallet, webhooks, assisted onboarding, KYB, national registry.
 
+  - id: reliance-extensions
+    title: Reliance Extensions
+    status: normative
+    depends_on:
+      - reference-architecture
+      - core-identity
+    mandatory_sections:
+      - "11-reliance-profiles"
+    requirement_prefixes:
+      - "ODTIS-07"
+    domains:
+      - ODTIS-0007
+    annex: "E-reliance-profiles"
+    sub_modules:
+      - R-Base
+      - R-Agent-Authority
+      - R-Crypto-Agility
+      - R-Lifecycle-Revocation
+      - R-Document-Capture
+      - R-Liveness
+      - R-Disclosure-Assurance
+      - R-Assurance-Portability
+      - R-VC-Maturity-Gate
+      - R-Public-eID
+      - R-Fraud-Orchestration
+      - R-Stablecoin-CIP
+      - R-Travel
+      - R-CRA-Resilience
+      - R-DPI-Resilience
+      - R-Sovereign-Chain-Interop
+      - R-LE-Biometric
+    conformance_tests: conformance/profiles/reliance-extensions/
+    description: >
+      Optional Capa B governance overlays. Each sub-module specializes the R-Base
+      reliance schema (relying party, purpose binding, assurance metadata, audit
+      reference, recourse, revocation/step-up) for a specific reliance context and
+      MUST NOT weaken Core, Trust Network, Federation, or Operator requirements.
+
 levels:
   - id: L1
     label: Laboratory

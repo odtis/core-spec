@@ -3,7 +3,7 @@ title: Open Digital Trust Infrastructure Specification
 hide:
  - navigation
  - toc
-description: "ODTIS: vendor-neutral open standard for digital identity, trust networks, and institutional exchange. 149 normative requirements, 6 conformance profiles, frozen OpenAPI Annex A, L1/L2/L3 verification."
+description: "ODTIS: vendor-neutral open standard for digital identity, trust networks, and institutional exchange. 204 normative requirements, 7 conformance profiles, frozen OpenAPI Annex A, L1/L2/L3 verification."
 ---
 
 <div class="odtis-home odtis-landing" markdown="1">
@@ -58,7 +58,7 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 <span class="odtis-landing-pillar__icon">:material-clipboard-check-outline:</span>
 <div class="odtis-landing-pillar__body" markdown="1">
 <strong>Conformance</strong>
-<span class="odtis-landing-pillar__desc">6 profiles, Annex A, L1/L2/L3</span>
+<span class="odtis-landing-pillar__desc">7 profiles, Annex A-E, L1/L2/L3</span>
 </div>
 </div>
 
@@ -69,23 +69,23 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 <div class="odtis-landing-trust" markdown="1">
 
 <div class="odtis-stat" markdown="1">
-<strong>149</strong>
+<strong>204</strong>
 <span>Requirement IDs</span>
 </div>
 <div class="odtis-stat" markdown="1">
-<strong>6</strong>
+<strong>7</strong>
 <span>Profiles</span>
 </div>
 <div class="odtis-stat" markdown="1">
-<strong>159</strong>
+<strong>214</strong>
 <span>Test procedures</span>
 </div>
 <div class="odtis-stat odtis-stat--meter" markdown="1">
 <!-- GENERATED:coverage-hero:START -->
-<strong>136</strong>
+<strong>200</strong>
 <span>Smoke-evidenced</span>
-<div class="odtis-meter" role="presentation"><div class="odtis-meter__fill" style="width:86%"></div></div>
-<small class="odtis-stat__hint">85.5% of 159 procedures</small>
+<div class="odtis-meter" role="presentation"><div class="odtis-meter__fill" style="width:94%"></div></div>
+<small class="odtis-stat__hint">93.5% of 214 procedures</small>
 <!-- GENERATED:coverage-hero:END -->
 </div>
 <div class="odtis-stat" markdown="1">
@@ -93,7 +93,7 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 <span>Normative sections</span>
 </div>
 <div class="odtis-stat" markdown="1">
-<strong>7</strong>
+<strong>8</strong>
 <span>Domains</span>
 </div>
 

@@ -29,6 +29,10 @@ p07_sections: ["4.7"]
 - id: TC-INFRA
 name: Platform intrusion and data breach
 p07_sections: ["5 row 12-13", "P06"]
+- id: TC-RELIANCE
+name: Reliance and trust-signal abuse (Capa B)
+p07_sections: ["Annex E", "section 11"]
+note: "Editorial DTI feed; informative extension to P07 matrix"
 
 threats:
 - id: T-P07-001
@@ -221,7 +225,7 @@ stride:
 priority: critical
 profiles: [trust-network, extended]
 odtis_requirements:
-- ODTIS-0346
+- ODTIS-0340
 - ODTIS-0205
 - ODTIS-0212
 - ODTIS-0517
@@ -276,7 +280,7 @@ odtis_requirements:
 - ODTIS-0330
 - ODTIS-0522
 - ODTIS-0323
-- ODTIS-0345
+- ODTIS-0341
 odtis_sections:
 - 03-identity-services
 - 05-consent-privacy
@@ -299,8 +303,8 @@ priority: critical
 profiles: [extended, trust-network]
 odtis_requirements:
 - ODTIS-0524
-- ODTIS-0345
-- ODTIS-0346
+- ODTIS-0341
+- ODTIS-0340
 odtis_sections:
 - 05-consent-privacy
 - 08-security
@@ -428,7 +432,7 @@ odtis_requirements:
 - ODTIS-0205
 - ODTIS-0212
 - ODTIS-0517
-- ODTIS-0346
+- ODTIS-0340
 odtis_sections:
 - 04-trust-network
 - 05-consent-privacy
@@ -450,7 +454,7 @@ priority: high
 profiles: [core-identity, extended]
 odtis_requirements:
 - ODTIS-0336
-- ODTIS-0347
+- ODTIS-0342
 - ODTIS-0331
 - ODTIS-0317
 - ODTIS-0107
@@ -496,3 +500,131 @@ ODTIS-0522: [T-P07-002, T-P07-007, T-P07-010, T-P07-012, T-P07-014]
 ODTIS-0523: [T-P07-001, T-P07-005]
 ODTIS-0524: [T-P07-011, T-P07-014]
 ODTIS-0525: [T-P07-001, T-P07-004, T-P07-006, T-P07-014]
+
+# Informative Capa B extension (DTI editorial / Annex E) — not additional P07 rows
+reliance_threats:
+source: "Annex E reliance-profiles; DTI problem series"
+methodology: STRIDE
+threat_class: TC-RELIANCE
+threats:
+- id: T-REL-001
+risk: False assurance from liveness-only signals
+scenario: RP treats liveness pass as identity proof without assurance metadata
+control: R-Liveness reliance schema; purpose binding; step-up triggers
+components:
+- verification-engine
+- risk-engine
+stride:
+- Spoofing
+- Elevation of privilege
+priority: high
+profiles: [reliance-extensions]
+odtis_requirements:
+- ODTIS-0727
+- ODTIS-0728
+- ODTIS-0729
+- ODTIS-0703
+odtis_sections:
+- 11-reliance-profiles
+
+- id: T-REL-002
+risk: Agent privilege escalation
+scenario: Compromised agent reuses or broadens delegated mandate beyond scope
+control: Signed mandate chain; revocation freshness; human anchor for high-risk actions
+components:
+- IdP
+- agent-gateway
+- audit
+stride:
+- Spoofing
+- Elevation of privilege
+priority: critical
+profiles: [reliance-extensions]
+odtis_requirements:
+- ODTIS-0710
+- ODTIS-0711
+- ODTIS-0712
+- ODTIS-0713
+odtis_sections:
+- 11-reliance-profiles
+
+- id: T-REL-003
+risk: Deepfake document capture
+scenario: Injection or synthetic document bypasses proofing without PAD disclosure
+control: PAD/IAD provider disclosure; fraud alert correlation; fail-closed on unknown capture class
+components:
+- verification-engine
+- document-capture
+stride:
+- Spoofing
+- Tampering
+priority: critical
+profiles: [reliance-extensions]
+odtis_requirements:
+- ODTIS-0723
+- ODTIS-0724
+- ODTIS-0725
+- ODTIS-0704
+odtis_sections:
+- 11-reliance-profiles
+
+- id: T-REL-004
+risk: Cryptographic downgrade / HNDL
+scenario: Long-lived credentials remain on deprecated algorithms after harvest
+control: Published algorithm set; hybrid PQC profile; rotation and deprecation triggers
+components:
+- trust-authority
+- signature-service
+- IdP
+stride:
+- Information disclosure
+- Tampering
+priority: high
+profiles: [reliance-extensions]
+odtis_requirements:
+- ODTIS-0715
+- ODTIS-0716
+- ODTIS-0717
+odtis_sections:
+- 11-reliance-profiles
+
+- id: T-REL-005
+risk: Cross-purpose reliance / audience mismatch
+scenario: Trust signal reused outside declared purpose or wrong RP audience
+control: Purpose binding; audience-bound audit; SD-JWT selective disclosure where applicable
+components:
+- consent-service
+- verification-api
+- audit
+stride:
+- Information disclosure
+- Repudiation
+priority: high
+profiles: [reliance-extensions]
+odtis_requirements:
+- ODTIS-0702
+- ODTIS-0731
+- ODTIS-0732
+- ODTIS-0733
+odtis_sections:
+- 11-reliance-profiles
+- 05-consent-privacy
+
+- id: T-REL-006
+risk: Capa B weakens base profile
+scenario: Reliance overlay relaxes Core Identity, Trust Network, or Operator MUSTs
+control: ODTIS-0707 no-weakening; conformance statement lists active modules only
+components:
+- conformance-pipeline
+- operator-governance
+stride:
+- Elevation of privilege
+priority: critical
+profiles: [reliance-extensions]
+odtis_requirements:
+- ODTIS-0707
+- ODTIS-0708
+- ODTIS-0532
+odtis_sections:
+- 11-reliance-profiles
+- 10-deployment-profiles

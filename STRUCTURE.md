@@ -14,9 +14,9 @@ This document is the **navigation hub** for the ODTIS tree. Normative MUST/SHOUL
 ```mermaid
 flowchart TB
 subgraph normative [Normative]
-SPEC[spec/ sections 1-10]
+SPEC[spec/ sections 1-11]
 REG[registry/]
-ANNA[annexes/ A-D]
+ANNA[annexes/ A-E]
 PROF[spec/profiles/]
 end
 subgraph verify [Verification]
@@ -44,10 +44,10 @@ IETF --> SPEC
 
 | Layer | Directory | Role |
 |-------|-----------|------|
-| **1. Normative prose** | [Specification sections](/spec/INDEX/) | Sections 1-10 (MUST/SHOULD/MAY) |
-| **1b. Adoptable profiles** | [Conformance profiles](/spec/profiles/) | Core Identity, Trust Network, ... |
-| **2. Machine-readable** | [Registry](/registry/) | 149 requirement IDs, profiles, events |
-| **3. Annexes** | [Annexes](/annexes/) | OpenAPI (A), threats (B), standards (C), extended (D) |
+| **1. Normative prose** | [Specification sections](/spec/INDEX/) | Sections 1-11 (MUST/SHOULD/MAY) |
+| **1b. Adoptable profiles** | [Conformance profiles](/spec/profiles/) | Core Identity, Trust Network, Reliance Extensions, ... |
+| **2. Machine-readable** | [Registry](/registry/) | 204 requirement IDs, profiles, events |
+| **3. Annexes** | [Annexes](/annexes/) | OpenAPI (A), threats (B), standards (C), extended (D), reliance (E) |
 | **4. Conformance** | [Conformance](/conformance/) | L1/L2 tests, certification program |
 | **5. Traceability** | [Traceability artifacts](https://github.com/odtis/core-spec/tree/main/traceability) | RF ↔ ODTIS automation |
 | **6. Publication** | [Publication](/publication/HOW-TO-CITE/) | Citation, Zenodo releases |

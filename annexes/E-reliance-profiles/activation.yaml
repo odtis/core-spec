@@ -1,0 +1,40 @@
+# ODTIS Annex E - Reliance Extension activation matrix
+spec_version: "0.9.0-draft"
+
+module_phase_minimum:
+  R-Base: 1
+  R-Agent-Authority: 2
+  R-Crypto-Agility: 2
+  R-Lifecycle-Revocation: 2
+  R-Document-Capture: 2
+  R-Liveness: 2
+  R-Disclosure-Assurance: 2
+  R-Assurance-Portability: 2
+  R-VC-Maturity-Gate: 1
+  R-Public-eID: 2
+  R-Fraud-Orchestration: 3
+  R-Stablecoin-CIP: 3
+  R-Travel: 3
+  R-CRA-Resilience: 3
+  R-DPI-Resilience: 3
+  R-Sovereign-Chain-Interop: 4
+  R-LE-Biometric: 4
+
+tier_status:
+  R-Base: tier0/normative
+  R-Agent-Authority: tier1/normative
+  R-Crypto-Agility: tier1/normative
+  R-Lifecycle-Revocation: tier1/normative
+  R-Document-Capture: tier1/normative
+  R-Liveness: tier1/normative
+  R-Disclosure-Assurance: tier1/normative
+  R-Assurance-Portability: tier1/normative
+  R-VC-Maturity-Gate: tier1/normative
+  R-Public-eID: tier1/normative
+  R-Fraud-Orchestration: tier2/normative
+  R-Stablecoin-CIP: tier2/normative
+  R-Travel: tier2/normative
+  R-CRA-Resilience: tier2/normative
+  R-DPI-Resilience: tier2/normative
+  R-Sovereign-Chain-Interop: tier3/normative
+  R-LE-Biometric: tier3/normative

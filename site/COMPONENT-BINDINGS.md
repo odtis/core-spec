@@ -41,6 +41,7 @@ RI map: [RI surface map](/implementation/RI-MAP.yaml).
 | `ci-docker-images` | operator | `P2-E08` | 0 | [Binding YAML](/implementation/component-bindings/ci-docker-images.yaml) |
 | `operator-sla-partner` | operator | `P3-E03` | 3 | [Binding YAML](/implementation/component-bindings/operator-sla-partner.yaml) |
 | `partner-node-kit` | operator | `P3-E03` | 1 | [Binding YAML](/implementation/component-bindings/partner-node-kit.yaml) |
+| `reliance-overlay` | reliance-extensions | `P5-E01` | 18 | [Binding YAML](/implementation/component-bindings/reliance-overlay.yaml) |
 | `exchange-client-sdk` | trust-network | `P2-E04` | 1 | [Binding YAML](/implementation/component-bindings/exchange-client-sdk.yaml) |
 | `exchange-gateway` | trust-network | `P2-E01` | 14 | [Binding YAML](/implementation/component-bindings/exchange-gateway.yaml) |
 | `portal-trust` | trust-network | `P2-E03` | 2 | [Binding YAML](/implementation/component-bindings/portal-trust.yaml) |
@@ -610,6 +611,59 @@ RI map: [RI surface map](/implementation/RI-MAP.yaml).
 - [Lab Notes](https://github.com/odtis/core-spec/blob/main/implementation/evidence/partner-node-kit/lab-notes.md)
 
 **Smoke:** `conformance/run-partner-node-kit-checks.sh`
+
+---
+
+## Profile: reliance-extensions
+
+## `reliance-overlay`
+
+| Field | Value |
+|-------|-------|
+| Repository | `ven-identity-core` |
+| Module path | `docs/operator + api/verification-api + services/verification-engine` |
+| RI-MAP surface | `reliance-overlay` |
+| ODTIS profile | `reliance-extensions` |
+| Backlog epic | `P5-E01` |
+| Status | partial |
+| Binding file | [Component binding YAML](/implementation/component-bindings/reliance-overlay.yaml) |
+
+>
+
+### Normative requirements
+
+| ID | Keyword | Section | Test |
+|----|---------|---------|------|
+| `ODTIS-0701` | MUST | 11 reliance profiles | [ODTIS-0701 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0701.md) |
+| `ODTIS-0702` | MUST | 11 reliance profiles | [ODTIS-0702 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0702.md) |
+| `ODTIS-0703` | MUST | 11 reliance profiles | [ODTIS-0703 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0703.md) |
+| `ODTIS-0704` | MUST | 11 reliance profiles | [ODTIS-0704 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0704.md) |
+| `ODTIS-0705` | MUST | 11 reliance profiles | [ODTIS-0705 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0705.md) |
+| `ODTIS-0706` | MUST | 11 reliance profiles | [ODTIS-0706 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0706.md) |
+| `ODTIS-0707` | MUST NOT | 11 reliance profiles | [ODTIS-0707 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0707.md) |
+| `ODTIS-0708` | MUST | 11 reliance profiles | [ODTIS-0708 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0708.md) |
+| `ODTIS-0710` | MUST | 11 reliance profiles | [ODTIS-0710 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0710.md) |
+| `ODTIS-0711` | MUST | 11 reliance profiles | [ODTIS-0711 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0711.md) |
+| `ODTIS-0712` | MUST | 11 reliance profiles | [ODTIS-0712 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0712.md) |
+| `ODTIS-0713` | SHOULD | 11 reliance profiles | [ODTIS-0713 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0713.md) |
+| `ODTIS-0715` | MUST | 11 reliance profiles | [ODTIS-0715 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0715.md) |
+| `ODTIS-0716` | MUST | 11 reliance profiles | [ODTIS-0716 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0716.md) |
+| `ODTIS-0717` | SHOULD | 11 reliance profiles | [ODTIS-0717 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0717.md) |
+| `ODTIS-0723` | MUST | 11 reliance profiles | [ODTIS-0723 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0723.md) |
+| `ODTIS-0724` | MUST | 11 reliance profiles | [ODTIS-0724 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0724.md) |
+| `ODTIS-0725` | SHOULD | 11 reliance profiles | [ODTIS-0725 test](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0725.md) |
+
+### Implementation notes
+
+>
+
+### Evidence
+
+- [Conformance statement template](/implementation/statements/venid-reliance-pilot/conformance-statement.yaml)
+- [L2 Report](https://github.com/odtis/core-spec/blob/main/implementation/statements/venid-reliance-pilot/l2-report.md)
+- [Reliance Profiles (YAML)](/registry/reliance-profiles.yaml)
+
+**Smoke:** `conformance/run-reliance-checks.sh`
 
 ---
 

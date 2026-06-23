@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PROFILES_YAML = ROOT / "registry/profiles.yaml"
 REQUIREMENTS_JSON = ROOT / "registry/requirements.json"
 EXTENDED_REQS = ROOT / "annexes/D-extended-profiles/extended-requirements.yaml"
+RELIANCE_SUBMODULES = ROOT / "annexes/E-reliance-profiles/sub-modules.yaml"
+RELIANCE_ACTIVATION = ROOT / "annexes/E-reliance-profiles/activation.yaml"
 
 
 def parse_profiles_yaml(path: Path | None = None) -> list[dict]:
@@ -145,6 +147,61 @@ def parse_extended_annex(path: Path | None = None) -> tuple[list[str], list[str]
                 draft_ids.append(raw.split(":", 1)[1].strip())
 
     return sorted(set(registry_ids)), sorted(set(draft_ids))
+
+
+def parse_reliance_submodule_ids(path: Path | None = None) -> set[str]:
+    text = (path or RELIANCE_SUBMODULES).read_text(encoding="utf-8")
+    if "sub_modules:" not in text:
+        return set()
+    body = text.split("sub_modules:", 1)[1].split("composition_rules:", 1)[0]
+    return set(re.findall(r"^- id: (R-[A-Za-z0-9-]+)\s*$", body, re.M))
+
+
+def parse_reliance_module_requirements(path: Path | None = None) -> dict[str, list[str]]:
+    text = (path or RELIANCE_SUBMODULES).read_text(encoding="utf-8")
+    if "sub_modules:" not in text:
+        return {}
+    body = text.split("sub_modules:", 1)[1].split("composition_rules:", 1)[0]
+    modules: dict[str, list[str]] = {}
+    current: str | None = None
+    for line in body.splitlines():
+        m_id = re.match(r"^- id: (R-[A-Za-z0-9-]+)\s*$", line)
+        if m_id:
+            current = m_id.group(1)
+            modules[current] = []
+            continue
+        m_reqs = re.match(r"^\s+requirements: \[(.+)\]\s*$", line)
+        if m_reqs and current:
+            modules[current] = [r.strip() for r in m_reqs.group(1).split(",")]
+    return modules
+
+
+def parse_reliance_phase_minimum(path: Path | None = None) -> dict[str, int]:
+    text = (path or RELIANCE_ACTIVATION).read_text(encoding="utf-8")
+    phases: dict[str, int] = {}
+    in_block = False
+    for line in text.splitlines():
+        if line.strip() == "module_phase_minimum:":
+            in_block = True
+            continue
+        if in_block and line.strip().startswith("tier_status:"):
+            break
+        if in_block:
+            m = re.match(r"^\s+(R-[\w-]+):\s*(\d+)\s*$", line)
+            if m:
+                phases[m.group(1)] = int(m.group(2))
+    return phases
+
+
+def reliance_requirement_ids(declared_modules: list[str]) -> list[str]:
+    """Resolve ODTIS-07xx IDs for declared Reliance Extension sub-modules (always includes R-Base)."""
+    mod_reqs = parse_reliance_module_requirements()
+    ids: set[str] = set(mod_reqs.get("R-Base", []))
+    for mod in declared_modules:
+        if mod == "R-Base":
+            continue
+        ids.update(mod_reqs.get(mod, []))
+    return sorted(ids)
 
 
 def profile_requirement_ids(profile: dict, requirements: list[dict] | None = None) -> list[str]:

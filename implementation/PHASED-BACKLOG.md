@@ -12,11 +12,11 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 | Metric | Count |
 |--------|-------|
-| Epics | 39 |
-| ODTIS IDs referenced | 154 (of 149 total) |
+| Epics | 43 |
+| ODTIS IDs referenced | 170 (of 149 total) |
 | Status DONE | 10 |
-| Status PARTIAL | 29 |
-| Status TODO | 0 |
+| Status PARTIAL | 30 |
+| Status TODO | 3 |
 
 ## Execution order
 
@@ -25,6 +25,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 3. P2 before declaring Trust Network in production (ODTIS-0532)
 4. P3 Operator + E-Registry before National LoA in production
 5. P4 Federation + Extended only when agreements/modules active
+6. P5 Reliance Extensions pilot before Capa B production claims beyond declared modules
 
 ## Phase map (ODTIS vs Book 1)
 
@@ -965,6 +966,104 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 
 - [Test Phase Declaration](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
 - [Test Extended No Weakening](https://github.com/odtis/core-spec/blob/main/conformance/tests/reference-architecture/test_extended_no_weakening.md)
+
+---
+
+## P5 - Reliance Extensions (Capa B) (ODTIS phase 2)
+
+**Goal:** Claimable Reliance pilot with RI-MAP, Annex B crosswalk, and L2 smoke.  
+**Book 1 gate:** Core Identity + Trust Network L2; reliance_extensions declared with R-Base.  
+**Profiles:** reliance-extensions
+
+### P5-E01 - Reliance pilot overlay and statement [PARTIAL]
+
+| Field | Value |
+|-------|-------|
+| Component | `reliance-overlay + conformance package` |
+| Repo | `odtis/core-spec + ven-identity-core` |
+| ODTIS IDs | `ODTIS-0701`, `ODTIS-0707`, `ODTIS-0708`, `ODTIS-0532`, `ODTIS-0536` |
+| Conformance | 5 test(s) |
+
+**Work items:**
+
+- [ ] RI-MAP reliance-overlay surface and component binding
+- [ ] venid-reliance-pilot statement + l2-report via run-reliance-package.sh
+
+**Tests (sample):**
+
+- [Test Implementation Traceability Map](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_implementation_traceability_map.md)
+- [Test Phase Declaration](https://github.com/odtis/core-spec/blob/main/conformance/tests/operator/test_phase_declaration.md)
+- [Test Odtis 0701](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0701.md)
+- [Test Odtis 0707](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0707.md)
+- [Test Odtis 0708](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0708.md)
+
+---
+
+### P5-E02 - Agent authority runtime [TODO]
+
+| Field | Value |
+|-------|-------|
+| Component | `agent-mandate gateway` |
+| Repo | `ven-identity-core (TBD)` |
+| ODTIS IDs | `ODTIS-0710`, `ODTIS-0711`, `ODTIS-0712`, `ODTIS-0713` |
+| Conformance | 4 test(s) |
+
+**Work items:**
+
+- [ ] Signed mandate verification and revocation freshness window
+- [ ] Human-anchor step-up for high-risk agent actions
+
+**Tests (sample):**
+
+- [Test Odtis 0710](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0710.md)
+- [Test Odtis 0711](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0711.md)
+- [Test Odtis 0712](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0712.md)
+- [Test Odtis 0713](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0713.md)
+
+---
+
+### P5-E03 - Document capture PAD overlay [TODO]
+
+| Field | Value |
+|-------|-------|
+| Component | `verification-engine capture adapter` |
+| Repo | `ven-identity-core` |
+| ODTIS IDs | `ODTIS-0723`, `ODTIS-0724`, `ODTIS-0725` |
+| Conformance | 3 test(s) |
+
+**Work items:**
+
+- [ ] PAD/IAD provider disclosure on capture reliance decisions
+- [ ] Fail-closed on unknown injection class
+
+**Tests (sample):**
+
+- [Test Odtis 0723](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0723.md)
+- [Test Odtis 0724](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0724.md)
+- [Test Odtis 0725](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0725.md)
+
+---
+
+### P5-E04 - Remaining Reliance sub-modules [TODO]
+
+| Field | Value |
+|-------|-------|
+| Component | `Capa B module overlays` |
+| Repo | `ven-identity-core` |
+| ODTIS IDs | `ODTIS-0719`, `ODTIS-0727`, `ODTIS-0731`, `ODTIS-0747` |
+| Conformance | 4 test(s) |
+
+**Work items:**
+
+- [ ] Tier 1 modules beyond pilot (Lifecycle, Liveness, Disclosure, VC-Gate, Public-eID, Portability)
+- [ ] Tier 2/3 modules per Annex E phase gates
+
+**Tests (sample):**
+
+- [Test Odtis 0719](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0719.md)
+- [Test Odtis 0727](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0727.md)
+- [Test Odtis 0731](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0731.md)
+- [Test Odtis 0747](https://github.com/odtis/core-spec/blob/main/conformance/tests/reliance-extensions/test_odtis_0747.md)
 
 ---
 

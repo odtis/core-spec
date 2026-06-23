@@ -1,7 +1,7 @@
 {
   "spec_version": "0.9.0-draft",
   "source": "P18 standards-alignment paper (informative; https://digitaltrustinfrastructure.org - see publication/HOW-TO-CITE.md)",
-  "requirement_count": 149,
+  "requirement_count": 204,
   "requirements": [
     {
       "id": "ODTIS-0001",
@@ -29,7 +29,7 @@
       "id": "ODTIS-0003",
       "section": "01-scope-conformance",
       "keyword": "MUST",
-      "text": "Conformance claims MUST list every profile and Extended sub-module satisfied",
+      "text": "Conformance claims MUST list every profile, Extended sub-module, and Reliance Extension sub-module satisfied",
       "trace_informative": "P18 1.7.1",
       "status": "normative",
       "conformance_test": "conformance/tests/reference-architecture/test_profile_declaration_complete.md",
@@ -1591,7 +1591,7 @@
       "id": "ODTIS-0532",
       "section": "10-deployment-profiles",
       "keyword": "MUST",
-      "text": "Conformance statements MUST declare deployment phase and active Extended sub-modules",
+      "text": "Conformance statements MUST declare deployment phase, active Extended sub-modules (if any), and active Reliance Extension sub-modules (if any)",
       "trace_informative": "P01 Figure 7, P10",
       "status": "normative",
       "conformance_test": "conformance/tests/operator/test_phase_declaration.md",
@@ -1641,6 +1641,556 @@
       "domain": "ODTIS-0005",
       "legacy_id": "ODTIS-7.6.1",
       "conformance_test": "conformance/tests/operator/test_implementation_traceability_map.md"
+    },
+    {
+      "id": "ODTIS-0701",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A reliance decision under any Reliance Extension MUST identify the relying party and its registered role before a trust signal is acted upon.",
+      "trace_informative": "DTI feed (Capa A/B thesis) (manuelmerida.io DTI feed); Capa B; sub-module R-Base",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0701.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0702",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Each reliance decision MUST bind a declared purpose to every attribute or verdict consumed; use outside the declared purpose MUST be refused.",
+      "trace_informative": "DTI feed (Capa A/B thesis) (manuelmerida.io DTI feed); Capa B; sub-module R-Base",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0702.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0703",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Each reliance decision MUST carry assurance metadata (assurance level and method) sufficient for the relying party risk tier.",
+      "trace_informative": "DTI feed (Capa A/B thesis) (manuelmerida.io DTI feed); Capa B; sub-module R-Base",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0703.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0704",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Each reliance decision MUST emit a tamper-evident audit evidence reference that a supervisor can reconstruct after the fact.",
+      "trace_informative": "DTI feed (Capa A/B thesis) (manuelmerida.io DTI feed); Capa B; sub-module R-Base",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0704.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0705",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Each Reliance Extension MUST define a recourse path for contested, failed, or wrongful decisions.",
+      "trace_informative": "DTI feed (Capa A/B thesis) (manuelmerida.io DTI feed); Capa B; sub-module R-Base",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0705.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0706",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Each Reliance Extension MUST define revocation and step-up triggers where the underlying trust signal can change state.",
+      "trace_informative": "DTI feed (Capa A/B thesis) (manuelmerida.io DTI feed); Capa B; sub-module R-Base",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0706.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0707",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST NOT",
+      "text": "A Reliance Extension MUST NOT weaken or relax any Core Identity, Trust Network, Federation, or Operator requirement.",
+      "trace_informative": "DTI feed (Capa A/B thesis) (manuelmerida.io DTI feed); Capa B; sub-module R-Base",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0707.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0708",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A conformance statement claiming Reliance Extensions MUST list each active sub-module and its deployment phase.",
+      "trace_informative": "DTI feed (Capa A/B thesis) (manuelmerida.io DTI feed); Capa B; sub-module R-Base",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0708.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0710",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "An agent reliance decision MUST resolve a verifiable agent identifier bound to a named principal and an accountable human or organizational sponsor.",
+      "trace_informative": "agentic-ai-odtis-alignment; estonia-ai-id (manuelmerida.io DTI feed); Capa B; sub-module R-Agent-Authority",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0710.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0711",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Delegated agent authority MUST be expressed as a signed mandate with allowed actions, prohibited actions, and value/time/session limits; each delegation hop MUST narrow scope and MUST NOT escalate privilege.",
+      "trace_informative": "agentic-ai-odtis-alignment; estonia-ai-id (manuelmerida.io DTI feed); Capa B; sub-module R-Agent-Authority",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0711.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0712",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A relying party MUST verify agent mandate revocation status within a declared freshness window before honoring a high-risk action, and MUST fail closed when status cannot be confirmed.",
+      "trace_informative": "agentic-ai-odtis-alignment; estonia-ai-id (manuelmerida.io DTI feed); Capa B; sub-module R-Agent-Authority",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0712.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0713",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "High-risk agent actions such as financial disbursement, identity changes, or regulatory filings SHOULD require an explicit human-anchor reference and step-up in the delegation chain.",
+      "trace_informative": "agentic-ai-odtis-alignment; estonia-ai-id (manuelmerida.io DTI feed); Capa B; sub-module R-Agent-Authority",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0713.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0715",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A long-lived credential profile MUST publish its algorithm set, hybrid status, and a documented rotation policy and deprecation trigger.",
+      "trace_informative": "digital-id-quantum-resilience (manuelmerida.io DTI feed); Capa B; sub-module R-Crypto-Agility",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0715.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0716",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Relying-party acceptance criteria MUST be declared for classical, hybrid, and post-quantum assertion paths, with audit evidence retained per accepted path.",
+      "trace_informative": "digital-id-quantum-resilience (manuelmerida.io DTI feed); Capa B; sub-module R-Crypto-Agility",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0716.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0717",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "Issuers SHOULD maintain a cryptographic bill of materials (CBOM) and classify harvest-now-decrypt-later exposure by credential validity and data sensitivity.",
+      "trace_informative": "digital-id-quantum-resilience (manuelmerida.io DTI feed); Capa B; sub-module R-Crypto-Agility",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0717.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0719",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "An identity lifecycle program MUST record both claimed and observed revocation SLA across every credential system that must fire on offboarding.",
+      "trace_informative": "identity-week-fido-hid (manuelmerida.io DTI feed); Capa B; sub-module R-Lifecycle-Revocation",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0719.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0720",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Revocation evidence MUST unify physical and digital credential status into a reconstructable audit reference per lifecycle event.",
+      "trace_informative": "identity-week-fido-hid (manuelmerida.io DTI feed); Capa B; sub-module R-Lifecycle-Revocation",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0720.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0721",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "Operators SHOULD scan for orphan credentials and active sessions at defined intervals after a subject exit.",
+      "trace_informative": "identity-week-fido-hid (manuelmerida.io DTI feed); Capa B; sub-module R-Lifecycle-Revocation",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0721.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0723",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A document verification reliance decision MUST declare capture mode (live SDK, upload, or hybrid) and the injection-detection and document-forensics tiers in scope.",
+      "trace_informative": "shufti-deepfake (manuelmerida.io DTI feed); Capa B; sub-module R-Document-Capture",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0723.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0724",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Reusable document verification outcomes MUST carry capture-channel integrity and device/session risk evidence; upload-only paths MUST be policy-gated by risk tier.",
+      "trace_informative": "shufti-deepfake (manuelmerida.io DTI feed); Capa B; sub-module R-Document-Capture",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0724.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0725",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "Verification providers SHOULD disclose lab-versus-production validation metrics and define a fraud recourse and SAR escalation path.",
+      "trace_informative": "shufti-deepfake (manuelmerida.io DTI feed); Capa B; sub-module R-Document-Capture",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0725.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0727",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A liveness reliance decision MUST declare the liveness provider, challenge type, identity-linkage class, and retention policy.",
+      "trace_informative": "google-liveness-captcha (manuelmerida.io DTI feed); Capa B; sub-module R-Liveness",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0727.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0728",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST NOT",
+      "text": "A human-presence (liveness) verdict MUST NOT be reused outside its declared purpose, and MUST NOT be treated as identity proof or statutory age proof without explicit authorization.",
+      "trace_informative": "google-liveness-captcha (manuelmerida.io DTI feed); Capa B; sub-module R-Liveness",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0728.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0729",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Liveness reliance MUST provide an accessible non-camera fallback of equivalent outcome and a recourse path for false rejection.",
+      "trace_informative": "google-liveness-captcha (manuelmerida.io DTI feed); Capa B; sub-module R-Liveness",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0729.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0731",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Audience-bound audit disclosure MUST define per-relying-party-role disclosure sets bound to purpose, with prohibited fields enumerated per tier.",
+      "trace_informative": "selective-disclosure-scitt (manuelmerida.io DTI feed); Capa B; sub-module R-Disclosure-Assurance",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0731.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0732",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A verifier MUST be able to reconstruct a disclosed verdict offline from the registered evidence and the authorized disclosure set alone.",
+      "trace_informative": "selective-disclosure-scitt (manuelmerida.io DTI feed); Capa B; sub-module R-Disclosure-Assurance",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0732.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0733",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A demand for fields outside the authorized disclosure set MUST be refused and MUST trigger a documented recourse path.",
+      "trace_informative": "selective-disclosure-scitt (manuelmerida.io DTI feed); Capa B; sub-module R-Disclosure-Assurance",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0733.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0735",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Adoption of an external credential standard MUST be gated by a declared maturity level; First Public Working Draft components MUST NOT be claimed for production national mandates.",
+      "trace_informative": "w3c-vc-lifecycle-barcodes (manuelmerida.io DTI feed); Capa B; sub-module R-VC-Maturity-Gate",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0735.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0736",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Each gated standard component MUST declare the Capa B controls (relying-party authentication, audit logging, rate limits, version pinning) required before production reliance.",
+      "trace_informative": "w3c-vc-lifecycle-barcodes (manuelmerida.io DTI feed); Capa B; sub-module R-VC-Maturity-Gate",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0736.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0737",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "Ecosystems SHOULD run conformance labs and publish internal profiles before promoting a draft standard beyond pilot.",
+      "trace_informative": "w3c-vc-lifecycle-barcodes (manuelmerida.io DTI feed); Capa B; sub-module R-VC-Maturity-Gate",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0737.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0739",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A relying party accepting multiple eIDs MUST publish an acceptance matrix mapping each issuer and assurance level to service tier and purpose.",
+      "trace_informative": "sweden-state-eid (manuelmerida.io DTI feed); Capa B; sub-module R-Public-eID",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0739.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0740",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Authentication success MUST be distinguished from authorization or eligibility, and cross-border acceptance MUST declare an assurance mapping.",
+      "trace_informative": "sweden-state-eid (manuelmerida.io DTI feed); Capa B; sub-module R-Public-eID",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0740.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0741",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "Wrongful-rejection recourse and trust-event logging SHOULD be defined before multi-eID operation at scale.",
+      "trace_informative": "sweden-state-eid (manuelmerida.io DTI feed); Capa B; sub-module R-Public-eID",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0741.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0743",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A reusable verification outcome MUST carry portable assurance metadata: proofing level and method, PAD and IAD coverage, and capture-channel integrity.",
+      "trace_informative": "ai-kyc-pipeline-integrity (manuelmerida.io DTI feed); Capa B; sub-module R-Assurance-Portability",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0743.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0744",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A relying party MUST evaluate step-up requirements against its own risk tier before reusing assurance, rather than inheriting a prior yes/no decision.",
+      "trace_informative": "ai-kyc-pipeline-integrity (manuelmerida.io DTI feed); Capa B; sub-module R-Assurance-Portability",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0744.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0745",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "Only assurance that is actually portable SHOULD be reused; non-portable assurance SHOULD trigger re-verification.",
+      "trace_informative": "ai-kyc-pipeline-integrity (manuelmerida.io DTI feed); Capa B; sub-module R-Assurance-Portability",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0745.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0747",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A fraud decision (block, step-up, hold, or refund) MUST be reconstructable as a trust-event chain linking KYC evidence, fraud signal, and where applicable the Verification of Payee result.",
+      "trace_informative": "finextra-fraud-psd3 (manuelmerida.io DTI feed); Capa B; sub-module R-Fraud-Orchestration",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0747.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0748",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Each fraud decision MUST record a liability owner and the legal basis for any cross-institution fraud-signal sharing.",
+      "trace_informative": "finextra-fraud-psd3 (manuelmerida.io DTI feed); Capa B; sub-module R-Fraud-Orchestration",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0748.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0749",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "A recourse path SHOULD be defined for wrongful blocks as well as for fraud victims.",
+      "trace_informative": "finextra-fraud-psd3 (manuelmerida.io DTI feed); Capa B; sub-module R-Fraud-Orchestration",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0749.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0751",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A CIP reliance decision MUST record the verifying institution, proofing method, assurance level, and reliance type (direct verification versus institutional reliance).",
+      "trace_informative": "us-stablecoin-genius (manuelmerida.io DTI feed); Capa B; sub-module R-Stablecoin-CIP",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0751.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0752",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Institutional reliance MUST reference an annual AML/CFT and CIP certification and MUST bind the decision to account-opening purpose.",
+      "trace_informative": "us-stablecoin-genius (manuelmerida.io DTI feed); Capa B; sub-module R-Stablecoin-CIP",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0752.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0753",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "A protocol-agnostic credential presentation envelope and an identity-error recourse path SHOULD be supported.",
+      "trace_informative": "us-stablecoin-genius (manuelmerida.io DTI feed); Capa B; sub-module R-Stablecoin-CIP",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0753.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0755",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A cross-border travel reliance decision MUST declare, per touchpoint, the relying party, purpose code, and allowed attribute set with an assurance-level mapping.",
+      "trace_informative": "wttc-biometria-travel (manuelmerida.io DTI feed); Capa B; sub-module R-Travel",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0755.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0756",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Attribute reuse across touchpoints MUST be bounded by a declared reuse policy (one-time, session-bound, or journey-bound).",
+      "trace_informative": "wttc-biometria-travel (manuelmerida.io DTI feed); Capa B; sub-module R-Travel",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0756.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0757",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "A recourse endpoint and cross-border recognition scope SHOULD be published per touchpoint.",
+      "trace_informative": "wttc-biometria-travel (manuelmerida.io DTI feed); Capa B; sub-module R-Travel",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0757.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0759",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A software-supply-chain trust profile MUST attest manufacturer versus steward role and maintain SBOM provenance per release.",
+      "trace_informative": "cra-readiness-reality (manuelmerida.io DTI feed); Capa B; sub-module R-CRA-Resilience",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0759.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0760",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Active-exploit and severe-incident events MUST be recorded as a trust-event chain with corrective-measure and regulator-filing references and timestamps.",
+      "trace_informative": "cra-readiness-reality (manuelmerida.io DTI feed); Capa B; sub-module R-CRA-Resilience",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0760.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0761",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "Post-market monitoring, a vulnerability-disclosure policy, and a component revocation path SHOULD be documented.",
+      "trace_informative": "cra-readiness-reality (manuelmerida.io DTI feed); Capa B; sub-module R-CRA-Resilience",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0761.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0763",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A shared-infrastructure (DPI) trust profile MUST publish participant and relying-party authorization scoped per component, with blast-radius mapping of co-dependent services.",
+      "trace_informative": "dpi-attack-surface-blast-radius (manuelmerida.io DTI feed); Capa B; sub-module R-DPI-Resilience",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0763.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0764",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A Trust Resilience Evidence Pack covering authorization, purpose, assurance, audit, revocation/step-up, recourse, and reporting MUST be maintained from pilot day one.",
+      "trace_informative": "dpi-attack-surface-blast-radius (manuelmerida.io DTI feed); Capa B; sub-module R-DPI-Resilience",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0764.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0765",
+      "section": "11-reliance-profiles",
+      "keyword": "SHOULD",
+      "text": "Security and incident metrics SHOULD be reported transparently to partners, regulators, and the public.",
+      "trace_informative": "dpi-attack-surface-blast-radius (manuelmerida.io DTI feed); Capa B; sub-module R-DPI-Resilience",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0765.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0767",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "Reliance on a sovereign or external identity-chain credential MUST document the chain operator accountability and issuer liability and revocation before mutual recognition.",
+      "trace_informative": "china-identity-chain (manuelmerida.io DTI feed); Capa B; sub-module R-Sovereign-Chain-Interop",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0767.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0768",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST NOT",
+      "text": "Technical interoperability with an external identity chain MUST NOT be treated as institutional trust transfer; cross-jurisdiction acceptance MUST declare assurance mapping, purpose binding, and a recourse path.",
+      "trace_informative": "china-identity-chain (manuelmerida.io DTI feed); Capa B; sub-module R-Sovereign-Chain-Interop",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0768.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0771",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "A law-enforcement biometric reliance decision MUST record purpose, the alert-list authorizer, retention policy, and deployment class (overt or covert).",
+      "trace_informative": "wa-police-lfr (manuelmerida.io DTI feed); Capa B; sub-module R-LE-Biometric",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0771.md",
+      "domain": "ODTIS-0007"
+    },
+    {
+      "id": "ODTIS-0772",
+      "section": "11-reliance-profiles",
+      "keyword": "MUST",
+      "text": "False-match mitigation and a citizen recourse path MUST be defined before operational use.",
+      "trace_informative": "wa-police-lfr (manuelmerida.io DTI feed); Capa B; sub-module R-LE-Biometric",
+      "status": "normative",
+      "conformance_test": "conformance/tests/reliance-extensions/test_odtis_0772.md",
+      "domain": "ODTIS-0007"
     }
   ],
   "id_format": "ODTIS-XXXX"

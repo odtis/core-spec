@@ -301,3 +301,72 @@ gaps:
   backlog_epic: P4-E07
   evidence: implementation/RI-MAP.yaml
   note: Fraud dashboard remains informative/deferred outside ODTIS MUST scope
+
+# --- Reliance Extensions (Capa B pilot) ---
+- id: GAP-REL-RUNTIME
+  implementation: ven-identity-core
+  surface: reliance-overlay
+  odtis_id: ODTIS-0704
+  summary: Reliance audit evidence fields not yet emitted on every verification response
+  priority: L2
+  status: in_progress
+  backlog_epic: P5-E01
+  conformance_test: conformance/tests/reliance-extensions/test_odtis_0704.md
+  binding_doc: implementation/component-bindings/reliance-overlay.yaml
+  note: Policy overlay documented; runtime audit_evidence_reference hook pending in verification-api
+
+- id: GAP-REL-0710
+  implementation: ven-identity-core
+  surface: reliance-overlay
+  odtis_id: ODTIS-0710
+  summary: Agent identifier and mandate chain not enforced in live authorization path
+  priority: L2
+  status: deferred
+  backlog_epic: P5-E02
+  conformance_test: conformance/tests/reliance-extensions/test_odtis_0710.md
+  note: Operator policy + Annex E alignment; dedicated agent-mandate service deferred
+
+- id: GAP-REL-0723
+  implementation: ven-identity-core
+  surface: reliance-overlay
+  odtis_id: ODTIS-0723
+  summary: Document capture PAD/IAD reliance signals not wired to verification-engine
+  priority: L2
+  status: deferred
+  backlog_epic: P5-E03
+  conformance_test: conformance/tests/reliance-extensions/test_odtis_0723.md
+  note: Pilot covers policy smoke; ISO 30107 PAD integration deferred
+
+- id: GAP-REL-TIER1-REST
+  implementation: ven-identity-core
+  surface: reliance-overlay
+  odtis_id: null
+  summary: Tier 1 modules outside pilot (Lifecycle, Liveness, Disclosure, VC-Gate, Public-eID, Portability)
+  priority: L2
+  status: deferred
+  backlog_epic: P5-E04
+  odtis_range: ODTIS-0719..0745
+  note: Declarable in conformance statement; runtime overlays not started
+
+- id: GAP-REL-TIER2
+  implementation: ven-identity-core
+  surface: reliance-overlay
+  odtis_id: null
+  summary: Tier 2/3 Reliance modules (Fraud, Stablecoin, Travel, CRA, DPI, Sovereign, LE-Biometric)
+  priority: L3
+  status: deferred
+  backlog_epic: P5-E04
+  odtis_range: ODTIS-0747..0772
+  note: Phase 3-4 gates per Annex E activation.yaml
+
+- id: GAP-OP-RELIANCE-STMT
+  implementation: odtis
+  surface: reliance-conformance
+  odtis_id: ODTIS-0532
+  summary: Reliance Extensions pilot L2 statement package
+  priority: certification
+  status: closed
+  closed_at: "2026-06-23"
+  backlog_epic: P5-E01
+  evidence: implementation/statements/venid-reliance-pilot/l2-report.md
+  note: run-reliance-package.sh PASS; static L2 smoke + pilot statement published

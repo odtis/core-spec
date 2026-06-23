@@ -1,0 +1,61 @@
+# ODTIS Reliance Profile base schema (R-Base) - machine-readable field catalog
+# Normative requirements: ODTIS-0701..0708 (section 11, Annex E)
+# Sub-module specialization: annexes/E-reliance-profiles/sub-modules.yaml
+
+spec_version: "0.9.0-draft"
+profile_id: reliance-extensions
+domain: ODTIS-0007
+status: normative
+
+base_schema:
+  id: R-Base
+  title: Reliance Profile base schema
+  requirement_ids:
+    - ODTIS-0701
+    - ODTIS-0702
+    - ODTIS-0703
+    - ODTIS-0704
+    - ODTIS-0705
+    - ODTIS-0706
+    - ODTIS-0707
+    - ODTIS-0708
+  fields:
+    - id: relying_party
+      type: string
+      required: true
+      maps_to: ODTIS-0701
+      description: Registered relying party identifier and role
+    - id: purpose_binding
+      type: object
+      required: true
+      maps_to: ODTIS-0702
+      description: Declared purpose code bound to every attribute or verdict consumed
+    - id: assurance_level
+      type: string
+      required: true
+      maps_to: ODTIS-0703
+    - id: assurance_method
+      type: string
+      required: true
+      maps_to: ODTIS-0703
+    - id: audit_evidence_reference
+      type: string
+      required: true
+      maps_to: ODTIS-0704
+    - id: recourse_path
+      type: uri
+      required: true
+      maps_to: ODTIS-0705
+    - id: revocation_triggers
+      type: array
+      required: true
+      maps_to: ODTIS-0706
+    - id: step_up_triggers
+      type: array
+      required: false
+      maps_to: ODTIS-0706
+
+declaration:
+  conformance_statement_field: reliance_extensions
+  min_base_module: R-Base
+  annex: E-reliance-profiles

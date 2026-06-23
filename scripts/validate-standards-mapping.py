@@ -14,7 +14,7 @@ MAPPING = ANNEX / "mapping.yaml"
 STANDARDS = ANNEX / "standards.yaml"
 LOA = ANNEX / "loa-matrix.yaml"
 REQ_FILE = ROOT / "registry/requirements.json"
-ID_PATTERN = re.compile(r"^ODTIS-\d+\.\d+\.\d+$")
+ID_PATTERN = re.compile(r"^ODTIS-\d{4}$")
 COVERAGE = {"full", "partial", "informative", "platform"}
 
 
@@ -31,7 +31,7 @@ def parse_requirement_coverage(text: str) -> dict[str, list[dict]]:
     entry: dict | None = None
 
     for line in section.splitlines():
-        m_req = re.match(r"^  (ODTIS-\d+\.\d+\.\d+):\s*$", line)
+        m_req = re.match(r"^  (ODTIS-\d{4}):\s*$", line)
         if m_req:
             current = m_req.group(1)
             coverage[current] = []

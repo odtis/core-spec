@@ -50,6 +50,11 @@ PROFILE_META: dict[str, dict[str, str]] = {
         "prefixes": "Annex D (`ODTIS-0340`-`0365`, `0531`)",
         "sections": "5.6-5.7, Annex D",
     },
+    "reliance-extensions": {
+        "depends_on": "`reference-architecture`, `core-identity`",
+        "prefixes": "Annex E (`ODTIS-0701`-`0772`)",
+        "sections": "11, Annex E",
+    },
 }
 
 
@@ -217,6 +222,7 @@ PROFILE_IDS = {
     "federation",
     "operator",
     "extended",
+    "reliance-extensions",
 }
 
 

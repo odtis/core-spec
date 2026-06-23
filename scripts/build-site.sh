@@ -18,6 +18,7 @@ python3 "$ROOT/scripts/normalize-ascii-punctuation.py" --check
 python3 "$ROOT/scripts/sync-site-release-meta.py"
 python3 "$ROOT/scripts/expand-product-requirements.py"
 python3 "$ROOT/scripts/generate-phased-backlog.py"
+python3 "$ROOT/scripts/generate-reliance-spec-prose.py"
 python3 "$ROOT/scripts/generate-site-indexes.py"
 python3 "$ROOT/scripts/generate-spec-section-indexes.py"
 python3 "$ROOT/scripts/build-conformance-manifest.py"

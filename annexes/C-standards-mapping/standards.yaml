@@ -136,6 +136,81 @@ uri: null
 domain: platform
 note: "Internal reference architecture; no external standard equivalent"
 
+- id: STD-NIST-800-63-4
+title: "Digital Identity Guidelines (draft alignment)"
+reference: "NIST SP 800-63-4"
+uri: "https://pages.nist.gov/800-63-4/"
+domain: assurance
+note: "Informative alignment for Reliance Public-eID and Stablecoin-CIP"
+
+- id: STD-NIST-PQC
+title: "Post-quantum cryptography standards"
+reference: "NIST FIPS 203 / 204 / 205"
+uri: "https://csrc.nist.gov/projects/post-quantum-cryptography"
+domain: cryptography
+
+- id: STD-IETF-AIP
+title: "Agent Identity Protocol (informative)"
+reference: "IETF AIP did:aip"
+uri: "https://datatracker.ietf.org/doc/draft-klrc-aiagent-id/"
+domain: agents
+note: "Design alignment for R-Agent-Authority; no IETF RFC claim"
+
+- id: STD-IETF-SCITT
+title: "Supply Chain Integrity, Transparency and Trust (informative)"
+reference: "IETF SCITT AAC selective disclosure"
+uri: "https://datatracker.ietf.org/wg/scitt/about/"
+domain: audit
+
+- id: STD-ISO-30107
+title: "Biometric presentation attack detection"
+reference: "ISO/IEC 30107"
+uri: "https://www.iso.org/standard/67370.html"
+domain: biometrics
+
+- id: STD-W3C-VC
+title: "Verifiable Credentials Data Model"
+reference: "W3C VC Data Integrity 1.1"
+uri: "https://www.w3.org/TR/vc-data-integrity/"
+domain: wallet
+
+- id: STD-ICAO-DTC
+title: "Digital Travel Credential (informative)"
+reference: "ICAO DTC / PKD"
+uri: "https://www.icao.int/Security/FAL/PKD/Pages/default.aspx"
+domain: travel
+
+- id: STD-IATA-ONEID
+title: "IATA One ID (informative)"
+reference: "IATA One ID program"
+uri: "https://www.iata.org/en/programs/passenger/one-id/"
+domain: travel
+
+- id: STD-EU-CRA
+title: "Cyber Resilience Act (informative)"
+reference: "EU CRA 2024/2847"
+uri: "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act"
+domain: security
+
+- id: STD-PSD3
+title: "Payment Services Directive (informative)"
+reference: "PSD3 / PSR fraud reimbursement"
+uri: "https://finance.ec.europa.eu/publications/payment-services-directive_en"
+domain: payments
+
+- id: STD-GENIUS
+title: "GENIUS Act stablecoin framework (informative)"
+reference: "US GENIUS Act (draft alignment)"
+uri: null
+domain: payments
+note: "Informative CIP alignment for R-Stablecoin-CIP"
+
+- id: STD-FINCEN
+title: "FinCEN CIP / BSA guidance (informative)"
+reference: "FinCEN Customer Identification Program"
+uri: "https://www.fincen.gov/"
+domain: compliance
+
 coverage_levels:
 full: "ODTIS requirement implements the cited standard construct without material gaps"
 partial: "ODTIS subset or operator policy completes the standard requirement"

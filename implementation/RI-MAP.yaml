@@ -34,6 +34,12 @@ conformance_statements:
     role: target_packaging_not_production
     claims_matrix: implementation/evidence/published-service-scope/claims-vs-runtime-2026.yaml
     l2_report: implementation/statements/venid-phase4-full/l2-report.md
+  reliance_pilot:
+    path: implementation/statements/venid-reliance-pilot/conformance-statement.yaml
+    profiles: [reference-architecture, core-identity, trust-network, reliance-extensions]
+    level: L2
+    l2_report: implementation/statements/venid-reliance-pilot/l2-report.md
+    reliance_modules: [R-Base, R-Agent-Authority, R-Crypto-Agility, R-Document-Capture]
   staging: null
   production: null
 
@@ -47,6 +53,7 @@ implementations:
   profiles_claimed:
   - reference-architecture
   - core-identity
+  - reliance-extensions
   odtis_sections:
   - "01-scope-conformance"
   - "02-terminology-loa"
@@ -381,6 +388,33 @@ implementations:
     binding_doc: implementation/component-bindings/ewebhook-delivery.yaml
     notes: WebhookDeliveryService; ewebhook-check.sh; staging overlay + live HMAC/retry (#14)
 
+  - id: reliance-overlay
+    module: docs/operator + api/verification-api + services/verification-engine
+    backlog_epic: P5-E01
+    status: partial
+    odtis_ids:
+    - ODTIS-0701
+    - ODTIS-0702
+    - ODTIS-0703
+    - ODTIS-0704
+    - ODTIS-0705
+    - ODTIS-0706
+    - ODTIS-0707
+    - ODTIS-0708
+    - ODTIS-0710
+    - ODTIS-0711
+    - ODTIS-0712
+    - ODTIS-0713
+    - ODTIS-0715
+    - ODTIS-0716
+    - ODTIS-0717
+    - ODTIS-0723
+    - ODTIS-0724
+    - ODTIS-0725
+    binding_doc: implementation/component-bindings/reliance-overlay.yaml
+    l2_check: l2-reliance-overlay
+    notes: Capa B policy overlay on verification-api audit fields and operator RELIANCE-OVERLAY.md; pilot modules R-Base + Agent + Crypto + Document-Capture
+
   conformance:
     level_target: L3
     last_report: implementation/statements/venid-phase4-full/l2-report.md
@@ -663,6 +697,16 @@ implementations:
     - ODTIS-0007
     - ODTIS-0009
 
+  - id: reliance-conformance
+    module: scripts/validate-reliance-annex.py + conformance/run-reliance-checks.sh
+    backlog_epic: P5-E01
+    status: partial
+    odtis_ids:
+    - ODTIS-0707
+    - ODTIS-0708
+    - ODTIS-0532
+    notes: Annex E validator; reliance pilot statement package; static L2 overlay checks
+
   conformance:
     level_target: L1
     last_report: null
@@ -690,12 +734,21 @@ unmapped_product_backlog:
     target_repo: ven-identity-core
     status: partial
 
+  reliance_extensions:
+    phase: P5
+    backlog_epics: [P5-E01, P5-E02, P5-E03, P5-E04]
+    odtis_range: ODTIS-0701..0772
+    target_repos: [ven-identity-core, odtis/core-spec]
+    status: partial
+    pilot_statement: implementation/statements/venid-reliance-pilot/conformance-statement.yaml
+    pilot_modules: [R-Base, R-Agent-Authority, R-Crypto-Agility, R-Document-Capture]
+
 second_implementation:
   status: pending
   notes: Keycloak-as-ODTIS-Core or external operator pilot
 
 coverage_summary:
-  ven_identity_core_surfaces: 19
+  ven_identity_core_surfaces: 20
   ven_trust_network_surfaces: 11
-  odtis_spec_surfaces: 3
-  tracked_gaps: 4
+  odtis_spec_surfaces: 4
+  tracked_gaps: 8

@@ -1,0 +1,135 @@
+# ODTIS Annex E - Reliance Extension sub-modules (Capa B governance overlays)
+# Source: manuelmerida.io DTI editorial feed (The DTI problem series)
+
+spec_version: "0.9.0-draft"
+profile_id: reliance-extensions
+depends_on: [core-identity]
+normative_annex: true
+status: normative-v0.9
+
+sub_modules:
+- id: R-Base
+  title: Reliance Profile base schema
+  tier: 0
+  min_deployment_phase: 1
+  status: normative
+  anchors: [ODTIS consent/grant 0224-0226,0328-0336, ODTIS audit 0219,0528, ODTIS fail-closed 0535]
+  requirements: [ODTIS-0701, ODTIS-0702, ODTIS-0703, ODTIS-0704, ODTIS-0705, ODTIS-0706, ODTIS-0707, ODTIS-0708]
+- id: R-Agent-Authority
+  title: Agent authority reliance (Capa B for AI agents)
+  tier: 1
+  min_deployment_phase: 2
+  status: normative
+  anchors: [IETF AIP did:aip, IETF AAE, draft-klrc-aiagent-auth-02, OAuth 2.0 RFC 8693, WIMSE/SPIFFE, SCITT AAC, IMDA MGF, NIST CAISI]
+  requirements: [ODTIS-0710, ODTIS-0711, ODTIS-0712, ODTIS-0713]
+- id: R-Crypto-Agility
+  title: Crypto-agility assurance (PQC / HNDL)
+  tier: 1
+  min_deployment_phase: 2
+  status: normative
+  anchors: [NIST FIPS 203/204/205, NIST SP 800-73/800-78 PIV PQC, ETSI ESI, eIDAS 2.0, NIS2]
+  requirements: [ODTIS-0715, ODTIS-0716, ODTIS-0717]
+- id: R-Lifecycle-Revocation
+  title: Identity lifecycle revocation (workforce/passkeys)
+  tier: 1
+  min_deployment_phase: 2
+  status: normative
+  anchors: [FIDO2/passkeys, NIST 800-63, SPIFFE, PAM/IGA]
+  requirements: [ODTIS-0719, ODTIS-0720, ODTIS-0721]
+- id: R-Document-Capture
+  title: Document capture reliance (deepfake/injection)
+  tier: 1
+  min_deployment_phase: 2
+  status: normative
+  anchors: [FinCEN FIN-2024-Alert004, ISO 30107 PAD, IAD]
+  requirements: [ODTIS-0723, ODTIS-0724, ODTIS-0725]
+- id: R-Liveness
+  title: Liveness reliance (presence != trust)
+  tier: 1
+  min_deployment_phase: 2
+  status: normative
+  anchors: [ISO 30107, GDPR Art.13/14, Web Bot Auth, SPIFFE, MCP/A2A]
+  requirements: [ODTIS-0727, ODTIS-0728, ODTIS-0729]
+- id: R-Disclosure-Assurance
+  title: Disclosure assurance (audience-bound audit)
+  tier: 1
+  min_deployment_phase: 2
+  status: normative
+  anchors: [draft-mih-scitt-aac-sel-disc-00, RFC 9901 SD-JWT, RFC 8785 JCS]
+  requirements: [ODTIS-0731, ODTIS-0732, ODTIS-0733]
+- id: R-Assurance-Portability
+  title: Assurance portability (reusable KYC)
+  tier: 1
+  min_deployment_phase: 2
+  status: normative
+  anchors: [FinCEN, iProov threat intel, ISO 30107 PAD/IAD]
+  requirements: [ODTIS-0743, ODTIS-0744, ODTIS-0745]
+- id: R-VC-Maturity-Gate
+  title: VC standards maturity gate
+  tier: 1
+  min_deployment_phase: 1
+  status: normative
+  anchors: [W3C VC Data Integrity 1.1, EdDSA/ECDSA cryptosuites 1.1, VCALM 1.0, VC Barcodes 1.0]
+  requirements: [ODTIS-0735, ODTIS-0736, ODTIS-0737]
+- id: R-Public-eID
+  title: Public-sector eID reliance (multi-eID coexistence)
+  tier: 1
+  min_deployment_phase: 2
+  status: normative
+  anchors: [eIDAS 2.0 LoA High, EUDI ARF, NIST SP 800-63-4]
+  requirements: [ODTIS-0739, ODTIS-0740, ODTIS-0741]
+- id: R-Fraud-Orchestration
+  title: Fraud event orchestration (PSD3/PSR)
+  tier: 2
+  min_deployment_phase: 3
+  status: normative
+  anchors: [PSD3/PSR, Verification of Payee, APP fraud reimbursement, GDPR]
+  requirements: [ODTIS-0747, ODTIS-0748, ODTIS-0749]
+- id: R-Stablecoin-CIP
+  title: Stablecoin CIP reliance (GENIUS Act)
+  tier: 2
+  min_deployment_phase: 3
+  status: normative
+  anchors: [GENIUS Act, FinCEN CIP/BSA, FR 2026-12460, NIST 800-63-4, W3C VC]
+  requirements: [ODTIS-0751, ODTIS-0752, ODTIS-0753]
+- id: R-Travel
+  title: Cross-border travel reliance (ICAO/IATA)
+  tier: 2
+  min_deployment_phase: 3
+  status: normative
+  anchors: [ICAO DTC/PKD, IATA One ID, ISO 18013, OpenID4VP]
+  requirements: [ODTIS-0755, ODTIS-0756, ODTIS-0757]
+- id: R-CRA-Resilience
+  title: CRA trust-resilience (software supply chain)
+  tier: 2
+  min_deployment_phase: 3
+  status: normative
+  anchors: [EU CRA 2024/2847 Art.13/14, ENISA SRP, OSPS Baseline, SPDX/CycloneDX]
+  requirements: [ODTIS-0759, ODTIS-0760, ODTIS-0761]
+- id: R-DPI-Resilience
+  title: DPI trust resilience (blast-radius control)
+  tier: 2
+  min_deployment_phase: 3
+  status: normative
+  anchors: [Universal DPI Safeguards, World Bank/Alan Turing, WAVE, ISO 27001]
+  requirements: [ODTIS-0763, ODTIS-0764, ODTIS-0765]
+- id: R-Sovereign-Chain-Interop
+  title: Sovereign identity-chain interop (reference)
+  tier: 3
+  min_deployment_phase: 4
+  status: normative
+  anchors: [W3C VC/VP, OpenID4VP, ToIP, mutual recognition]
+  requirements: [ODTIS-0767, ODTIS-0768]
+- id: R-LE-Biometric
+  title: Law-enforcement biometric reliance (sensitive)
+  tier: 3
+  min_deployment_phase: 4
+  status: normative
+  anchors: [ISO 30107, WA PRIS Act 2024, PIA frameworks]
+  requirements: [ODTIS-0771, ODTIS-0772]
+
+composition_rules:
+- Reliance Extensions MUST NOT weaken Core, Trust Network, Federation, or Operator requirements (ODTIS-0707)
+- Every reliance sub-module specializes the R-Base schema (ODTIS-0701..0708)
+- Conformance statements MUST list active reliance sub-modules and deployment phase (ODTIS-0708)
+- Tier 2/3 sub-modules are preview; tier 1 are draft toward ODTIS 1.x
