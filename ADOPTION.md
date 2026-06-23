@@ -124,6 +124,34 @@ Execute manual procedures in [Conformance test procedures](/conformance/tests/) 
 
 ---
 
+## Product sandbox (odtis-devkit)
+
+You do **not** need to build the full VenID reference stack before exploring ODTIS. **[odtis-devkit](https://github.com/odtis/odtis-devkit)** is a one-command Docker sandbox: Keycloak with the ODTIS realm, verification-api, exchange-gateway, trust-registry, an orientation portal, and a pre-run L2 self-test via [odtis-tools](https://github.com/odtis/odtis-tools).
+
+**Target:** time-to-first-green-test **under 15 minutes** on a laptop with Docker Desktop (~8 GB RAM).
+
+```bash
+git clone https://github.com/odtis/odtis-devkit.git && cd odtis-devkit
+cp .env.example .env
+docker compose --profile devkit --profile core-identity --profile trust-network up -d
+./scripts/wait-healthy.sh
+./scripts/self-test.sh
+open http://localhost:8080
+```
+
+| Resource | Link |
+|----------|------|
+| Repository | [github.com/odtis/odtis-devkit](https://github.com/odtis/odtis-devkit) |
+| Quickstart | [docs/QUICKSTART-15MIN.md](https://github.com/odtis/odtis-devkit/blob/main/docs/QUICKSTART-15MIN.md) |
+| Profile (phase 2) | [profiles/core-identity-trust.yaml](https://github.com/odtis/odtis-devkit/blob/main/profiles/core-identity-trust.yaml) |
+| Troubleshooting | [docs/TROUBLESHOOTING.md](https://github.com/odtis/odtis-devkit/blob/main/docs/TROUBLESHOOTING.md) |
+
+DevKit is **informative lab infrastructure** — not a production deployment template. Use it to validate OIDC/PKCE/JWKS behavior and Trust Network smokes before wiring your own IdP. Conformance claims still follow [self-certification](/conformance/certification/self-cert-guide/) and your own staging evidence.
+
+**Current release:** `1.0.0-devkit` (Tier 0 GA).
+
+---
+
 ## 5. Certification and conformance claims
 
 | Level | Who runs it | What it proves today | Public claim |

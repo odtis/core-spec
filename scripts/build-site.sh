@@ -35,6 +35,11 @@ python3 "$ROOT/scripts/fix-deep-relative-links.py"
 python3 "$ROOT/scripts/inject-seo-meta.py"
 python3 "$ROOT/scripts/generate-faq-schema.py"
 
+REGISTRY_API="${REGISTRY_API_URL:-https://api.registry.odtis.org}"
+if [[ -x "$ROOT/../odtis-registry-api/scripts/generate-static-products-json.sh" ]]; then
+  REGISTRY_API_URL="$REGISTRY_API" "$ROOT/../odtis-registry-api/scripts/generate-static-products-json.sh"
+fi
+
 "$VENV/bin/mkdocs" build -f site/mkdocs.yml --strict
 python3 "$ROOT/scripts/copy-site-artifacts.py"
 python3 "$ROOT/scripts/check-site-links.py"
