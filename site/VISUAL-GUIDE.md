@@ -62,7 +62,7 @@ flowchart TB
 | **Vendor / greenfield** | [Getting started](GETTING-STARTED.md) → [Profile comparison](PROFILES.md) | `./conformance/run.sh` (L1) |
 | **RP / app team** | [OIDF positioning](../governance/liaison/OIDF-POSITIONING.md) + [verification-api OpenAPI](../annexes/A-openapi-registry/verification-api.openapi.yaml) | Sandbox OIDC against your IdP |
 | **Partner backend** | [Trust Network spec](../spec/04-trust-network/SPEC.md) section 4.4 | mTLS smoke via `exchange-client` (RI) |
-| **Operator / regulator** | [Operator profile](../spec/profiles/operator-profile.md) + [Section 10](../spec/10-deployment-profiles/SPEC.md) | L2 statement + [self-cert guide](../conformance/certification/self-cert-guide.md) |
+| **Operator / regulator** | [Operator profile](/spec/profiles/operator-profile.md) + [Section 10](../spec/10-deployment-profiles/SPEC.md) | L2 statement + [self-cert guide](../conformance/certification/self-cert-guide.md) |
 | **Contributor** | [Component bindings](COMPONENT-BINDINGS.md) | Pick a component YAML + linked test |
 
 ---
@@ -281,7 +281,7 @@ Partners **never** call `citizen-api` or microservices directly  - only `exchang
 
 ## Logical surfaces → reference code
 
-Informative mapping only. Your stack may use different names; bind via [component-bindings YAML](../implementation/component-bindings/).
+Informative mapping only. Your stack may use different names; bind via [component-bindings YAML](../implementation/component-bindings/README.md).
 
 ```mermaid
 flowchart LR
@@ -310,7 +310,7 @@ flowchart LR
   style repos fill:#e0f2f1,stroke:#00695c
 ```
 
-Full matrix with ODTIS IDs per component: [Component bindings](COMPONENT-BINDINGS.md) · Machine-readable: [RI-MAP.yaml](../implementation/RI-MAP.yaml)
+Full matrix with ODTIS IDs per component: [Component bindings](COMPONENT-BINDINGS.md) · Machine-readable: [RI surface map](../implementation/RI-MAP.yaml)
 
 ---
 
@@ -359,7 +359,7 @@ flowchart TB
 | **3** | + Operator | PKI ceremonies, regulator export | Platform operator |
 | **4** | + Extended | Wallet, webhooks, KYB, inclusion | Sector pilots |
 
-Details: [Profile comparison](PROFILES.md) · Declare in [conformance-statement.yaml](../conformance/templates/conformance-statement.yaml)
+Details: [Profile comparison](PROFILES.md) · Declare in [Conformance statement template](../conformance/templates/conformance-statement.yaml)
 
 ---
 
