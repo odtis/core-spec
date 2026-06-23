@@ -2,7 +2,19 @@
 # Submit via PR with conformance-statement.yaml evidence
 
 spec_version: "0.9.0-draft"
-products: []
+products:
+  - id: venid-sandbox
+    name: VenID RI Sandbox
+    vendor: VenID
+    odtis_version: "0.9.0-draft"
+    profiles: [core-identity, trust-network]
+    level: L2
+    environment: sandbox
+    country: VE
+    sector: government
+    statement_url: https://odtis.org/implementation/statements/venid-sandbox/
+    verified_date: 2026-06-23
+    badge_url: https://api.registry.odtis.org/v1/badges/L2/core-identity.svg
 
 # Example entry:
 #  - name: Example IdP

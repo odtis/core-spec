@@ -141,12 +141,12 @@ open http://localhost:8080
 
 | Resource | Link |
 |----------|------|
-| Repository | [github.com/odtis/odtis-devkit](https://github.com/odtis/odtis-devkit) |
-| Quickstart | [docs/QUICKSTART-15MIN.md](https://github.com/odtis/odtis-devkit/blob/main/docs/QUICKSTART-15MIN.md) |
-| Profile (phase 2) | [profiles/core-identity-trust.yaml](https://github.com/odtis/odtis-devkit/blob/main/profiles/core-identity-trust.yaml) |
-| Troubleshooting | [docs/TROUBLESHOOTING.md](https://github.com/odtis/odtis-devkit/blob/main/docs/TROUBLESHOOTING.md) |
+| Repository | [Odtis Devkit](https://github.com/odtis/odtis-devkit) |
+| Quickstart | [Quickstart 15Min](https://github.com/odtis/odtis-devkit/blob/main/docs/QUICKSTART-15MIN.md) |
+| Profile (phase 2) | [Core Identity Trust (YAML)](https://github.com/odtis/odtis-devkit/blob/main/profiles/core-identity-trust.yaml) |
+| Troubleshooting | [Troubleshooting](https://github.com/odtis/odtis-devkit/blob/main/docs/TROUBLESHOOTING.md) |
 
-DevKit is **informative lab infrastructure** — not a production deployment template. Use it to validate OIDC/PKCE/JWKS behavior and Trust Network smokes before wiring your own IdP. Conformance claims still follow [self-certification](/conformance/certification/self-cert-guide/) and your own staging evidence.
+DevKit is **informative lab infrastructure**  -  not a production deployment template. Use it to validate OIDC/PKCE/JWKS behavior and Trust Network smokes before wiring your own IdP. Conformance claims still follow [self-certification](/conformance/certification/self-cert-guide/) and your own staging evidence.
 
 **Current release:** `1.0.0-devkit` (Tier 0 GA).
 

@@ -1,6 +1,6 @@
 ---
 title: Certified ODTIS products
-description: Public registry of ODTIS self-certified and L3 certified products — live from the conformance registry API with offline fallback.
+description: Public registry of ODTIS self-certified and L3 certified products - live from the conformance registry API with offline fallback.
 ---
 
 # Certified ODTIS products
@@ -10,15 +10,15 @@ description: Public registry of ODTIS self-certified and L3 certified products �
 Public list of implementations that published an ODTIS conformance statement and opted into the registry.
 
 <p class="odtis-hub-meta" markdown="1">
-<strong>API:</strong> <a href="https://api.registry.odtis.org/v1/products">GET /v1/products</a> |
-<strong>List your product:</strong> <a href="../conformance/certification/self-cert-guide.md">Self-certification guide</a> |
+<strong>API:</strong> <a href="https://api.registry.odtis.org/v1/products">Products</a> |
+<strong>List your product:</strong> <a href="/conformance/certification/self-cert-guide/">Self-certification guide</a> |
 <strong>Badges:</strong> <a href="https://github.com/odtis/odtis-registry-api/blob/main/docs/BADGE-EMBED.md">Embed guide</a>
 </p>
 
 </div>
 
 !!! info "Staging L2 vs L3 certified"
-    **L2 self-certified** entries (sandbox or staging) reflect honest self-assessment with published evidence — they are **not** the same as **L3 certified** products that completed the [Certification program](../governance/CERTIFICATION.md) with an independent auditor.
+    **L2 self-certified** entries (sandbox or staging) reflect honest self-assessment with published evidence - they are **not** the same as **L3 certified** products that completed the [Certification program](../governance/CERTIFICATION.md) with an independent auditor.
 
     Label embeds and marketing copy accordingly: use L2 badges and say “self-certified (staging)” until an L3 audit is complete.
 
@@ -157,8 +157,8 @@ Public list of implementations that published an ODTIS conformance statement and
 
   function renderRow(product) {
     var lvl = levelLabel(product.level);
-    var env = product.environment || "—";
-    var profiles = Array.isArray(product.profiles) ? product.profiles.join(", ") : "—";
+    var env = product.environment || "-";
+    var profiles = Array.isArray(product.profiles) ? product.profiles.join(", ") : "-";
     var nameCell = product.statement_url
       ? '<a href="' + esc(product.statement_url) + '">' + esc(product.name) + "</a>"
       : esc(product.name);
@@ -170,8 +170,8 @@ Public list of implementations that published an ODTIS conformance statement and
       '<td><span class="odtis-level ' + lvl.cls + '">' + esc(lvl.text) + "</span></td>" +
       '<td><span class="odtis-env ' + envClass(product.environment) + '">' + esc(env) + "</span></td>" +
       "<td>" + esc(profiles) + "</td>" +
-      "<td>" + esc(product.country || "—") + "</td>" +
-      "<td>" + esc(product.verified_date || "—") + "</td>" +
+      "<td>" + esc(product.country || "-") + "</td>" +
+      "<td>" + esc(product.verified_date || "-") + "</td>" +
       '<td><a href="' + esc(bUrl) + '" title="ODTIS badge"><img src="' + esc(bUrl) + '" alt="ODTIS ' + esc(product.level) + ' badge" width="160" height="40" loading="lazy" /></a></td>' +
       "</tr>"
     );
@@ -197,7 +197,7 @@ Public list of implementations that published an ODTIS conformance statement and
     var tbody = document.getElementById("odtis-products-body");
     if (!tbody) return;
     if (!list.length) {
-      tbody.innerHTML = '<tr class="odtis-products-empty"><td colspan="8">No products listed yet. See the <a href="../conformance/certification/self-cert-guide.md">self-certification guide</a>.</td></tr>';
+      tbody.innerHTML = '<tr class="odtis-products-empty"><td colspan="8">No products listed yet. See the <a href="/conformance/certification/self-cert-guide/">self-certification guide</a>.</td></tr>';
       return;
     }
     tbody.innerHTML = sortProducts(list).map(renderRow).join("");
@@ -306,8 +306,8 @@ Public list of implementations that published an ODTIS conformance statement and
 
 ## Submit your product
 
-1. Complete [L1 and L2 self-assessment](../conformance/certification/self-cert-guide.md) with published evidence.
-2. Open a PR to [`certified-products.yaml`](../conformance/certification/certified-products.yaml) — see [submission workflow](https://github.com/odtis/odtis-registry-api/blob/main/docs/SUBMISSION-WORKFLOW.md).
+1. Complete [L1 and L2 self-assessment](/conformance/certification/self-cert-guide/) with published evidence.
+2. Open a PR to [Certified Products (YAML)](../conformance/certification/certified-products.yaml) - see [submission workflow](https://github.com/odtis/odtis-registry-api/blob/main/docs/SUBMISSION-WORKFLOW.md).
 3. After merge, your entry appears here and at `GET /v1/products`.
 
 For L3 production certification, see the [Certification program](../governance/CERTIFICATION.md) and [L3 audit checklist](../conformance/certification/L3-AUDIT-CHECKLIST.md).
