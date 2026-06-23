@@ -46,7 +46,7 @@ METRIC_DOC_PATHS = [
     ROOT / "conformance/FAQ.md",
     ROOT / "PLAN-PHASES.md",
     ROOT / "governance/review/sandbox-001-l2-report-template.md",
-    ROOT / "implementation/reports/ODTIS-CONSISTENCY-AUDIT-2026.md",
+    ROOT / "implementation/DOCUMENTATION-ROADMAP.md",
 ]
 
 STATUS_LINE = re.compile(r"^\*\*Status:\*\*\s*(.+)\s*$", re.M)
@@ -102,24 +102,61 @@ def replace_generated_block(text: str, start: str, end: str, block: str) -> str:
     return text
 
 
-def sync_public_metric_strings(total: int, implemented: int, impl_pct: float) -> int:
+def sync_public_metric_strings(
+    total: int, implemented: int, impl_pct: float, req_count: int
+) -> int:
     """Keep human-authored docs aligned with generated conformance counts."""
     updated = 0
     patterns = [
         (re.compile(r"\*\*81\*\* have smoke"), f"**{implemented}** have smoke"),
+        (re.compile(r"\*\*85\*\* have smoke"), f"**{implemented}** have smoke"),
         (re.compile(r"\*\*81 implemented\*\*"), f"**{implemented} implemented**"),
         (re.compile(r"\(81 with smoke evidence\)"), f"({implemented} with smoke evidence)"),
+        (re.compile(r"\(85 with smoke evidence\)"), f"({implemented} with smoke evidence)"),
         (re.compile(r"\(81 implemented\)"), f"({implemented} implemented)"),
+        (re.compile(r"\(85 implemented\)"), f"({implemented} implemented)"),
         (re.compile(r"\*\*81\*\* with smoke evidence"), f"**{implemented}** with smoke evidence"),
+        (re.compile(r"\*\*85\*\* with smoke evidence"), f"**{implemented}** with smoke evidence"),
         (re.compile(r"\*\*81\*\* \|"), f"**{implemented}** |"),
+        (re.compile(r"\*\*85\*\* \|"), f"**{implemented}** |"),
         (re.compile(r"width:51%"), f"width:{round(impl_pct)}%"),
         (re.compile(r"51% of 159 procedures"), f"{impl_pct:g}% of {total} procedures"),
+        (re.compile(r"\d+% of 159 procedures"), f"{impl_pct:g}% of {total} procedures"),
         (re.compile(r"<strong>81</strong>"), f"<strong>{implemented}</strong>"),
+        (re.compile(r"<strong>85</strong>"), f"<strong>{implemented}</strong>"),
         (re.compile(r"only 81 \"implemented\""), f'only {implemented} "implemented"'),
+        (re.compile(r"only 85 \"implemented\""), f'only {implemented} "implemented"'),
         (re.compile(r"\*\*51%\*\* \(81/159"), f"**{impl_pct:g}%** ({implemented}/{total}"),
         (re.compile(r"\| 81 with smoke evidence \|"), f"| {implemented} with smoke evidence |"),
+        (re.compile(r"\| 85 with smoke evidence \|"), f"| {implemented} with smoke evidence |"),
         (re.compile(r"; 81 with smoke evidence"), f"; {implemented} with smoke evidence"),
+        (re.compile(r"; 85 with smoke evidence"), f"; {implemented} with smoke evidence"),
         (re.compile(r"\(81/159 implemented markers"), f"({implemented}/{total} implemented markers"),
+        (re.compile(r"\(85/159 implemented markers"), f"({implemented}/{total} implemented markers"),
+        (re.compile(r"\*\*149 registry IDs\*\*"), f"**{req_count} registry IDs**"),
+        (re.compile(r"\(149 IDs\)"), f"({req_count} IDs)"),
+        (re.compile(r"\*\*149\*\* normative requirement"), f"**{req_count}** normative requirement"),
+        (re.compile(r"149 requirement IDs"), f"{req_count} requirement IDs"),
+        (re.compile(r"149 reqs\)"), f"{req_count} reqs)"),
+        (re.compile(r"\*\*159\*\* procedures"), f"**{total}** procedures"),
+        (re.compile(r"159 test procedures"), f"{total} test procedures"),
+        (re.compile(r"L1/L2/L3 levels, 159 test procedures"), f"L1/L2/L3 levels, {total} test procedures"),
+        (re.compile(r"\*\*159\*\* conformance procedures"), f"**{total}** conformance procedures"),
+        (re.compile(r"159 conformance procedures"), f"{total} conformance procedures"),
+        (re.compile(r"Test procedures:\*\* 159"), f"Test procedures:** {total}"),
+        (re.compile(r"registry count \(149\)"), f"registry count ({req_count})"),
+        (re.compile(r"159 procedures"), f"{total} procedures"),
+        (re.compile(r"\| \*\*159\*\* \|"), f"| **{total}** |"),
+        (re.compile(r"\| \*\*85\*\* \|"), f"| **{implemented}** |"),
+        (re.compile(r"\| \*\*149\*\* \|"), f"| **{req_count}** |"),
+        (re.compile(r"six ODTIS conformance profiles"), "seven ODTIS conformance profiles"),
+        (re.compile(r"Compare six profiles"), "Compare seven profiles"),
+        (re.compile(r"six profile packs"), "seven profile packs"),
+        (re.compile(r"six profiles"), "seven profiles"),
+        (re.compile(r"Sections \*\*1-10\*\*"), "Sections **1-11**"),
+        (re.compile(r"sections 1-10"), "sections 1-11"),
+        (re.compile(r"Sections 1-10"), "Sections 1-11"),
+        (re.compile(r"Ten normative sections"), "Eleven normative sections"),
     ]
     for path in METRIC_DOC_PATHS:
         if not path.is_file():
@@ -135,7 +172,9 @@ def sync_public_metric_strings(total: int, implemented: int, impl_pct: float) ->
     return updated
 
 
-def build_conformance_suite_block(by_profile: dict[str, dict], total: int, implemented: int) -> str:
+def build_conformance_suite_block(
+    by_profile: dict[str, dict], total: int, implemented: int, req_count: int
+) -> str:
     lines = [
         CONFORMANCE_SUITE_START,
         "",
@@ -151,7 +190,7 @@ def build_conformance_suite_block(by_profile: dict[str, dict], total: int, imple
         )
     lines.extend(
         [
-            f"| **Total** | **{total}** | **{implemented}** | **149** |",
+            f"| **Total** | **{total}** | **{implemented}** | **{req_count}** |",
             "",
             CONFORMANCE_SUITE_END,
             "",
@@ -332,7 +371,9 @@ def main() -> int:
             f"All {req_count} requirement IDs",
             text,
         )
-        suite_block = build_conformance_suite_block(by_profile, len(tests), len(implemented))
+        suite_block = build_conformance_suite_block(
+            by_profile, len(tests), len(implemented), req_count
+        )
         text = replace_generated_block(text, CONFORMANCE_SUITE_START, CONFORMANCE_SUITE_END, suite_block)
         STATUS_MD.write_text(text, encoding="utf-8")
 
@@ -355,7 +396,7 @@ def main() -> int:
             )
         INDEX_MD.write_text(text, encoding="utf-8")
 
-    sync_public_metric_strings(len(tests), len(implemented), impl_pct)
+    sync_public_metric_strings(len(tests), len(implemented), impl_pct, req_count)
 
     print(f"Wrote {COVERAGE_OUT.relative_to(ROOT)}")
     print(f"Updated {STATUS_MD.relative_to(ROOT)}")

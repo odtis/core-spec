@@ -12,7 +12,7 @@ Aligned with OpenID Foundation draft -> Implementer's Draft -> Final, adapted fo
 | Stage | VERSION pattern | Meaning | Citation disclaimer |
 |-------|-----------------|--------|---------------------|
 | **Scaffold** | `0.1.0-draft` | Structure, registry extract | Not for implementation claims |
-| **Working draft** | `0.5.x-draft` | Sections 1-10 prose in progress | Experimental |
+| **Working draft** | `0.5.x-draft` | Sections 1-11 prose in progress | Experimental |
 | **Review draft** | `0.9.x-draft` | Feature-complete for external review | Working draft - cite version + DOI |
 | **Stabilized draft** | `0.9.x` (no suffix) | Review closed; errata only | Pre-standard |
 | **Standard** | `1.0.0` | Frozen after pilot validation (Phase 4) | Normative standard |

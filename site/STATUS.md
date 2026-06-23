@@ -53,6 +53,7 @@ Live snapshot for adopters and reviewers.
 | **Operator** | Medium | PKI, audit, deployment phases |
 | **Federation** | Low | 6 normative IDs; FB-002 accepted |
 | **Extended** | Draft | Annex D; IDs not fully merged in main registry |
+| **Reliance Extensions** | Normative | Section 11 + Annex E; 55/55 tests implemented |
 | **IETF extraction** | Early | Working drafts in [IETF working drafts overview](../ietf/README.md) |
 
 Profile comparison: [Profile comparison](PROFILES.md).
@@ -72,9 +73,13 @@ Profile comparison: [Profile comparison](PROFILES.md).
 | Operator | 30 | 27 | 36 |
 | Extended | 23 | 21 | 25 |
 | Reliance Extensions | 55 | 55 | 55 |
-| **Total** | **214** | **200** | **149** |
+| **Total** | **214** | **200** | **204** |
 
 <!-- GENERATED:conformance-suite:END -->
+
+
+
+
 
 
 

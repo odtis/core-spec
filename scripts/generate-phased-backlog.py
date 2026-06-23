@@ -634,7 +634,7 @@ def epic_test_paths(epic: dict, reqs: dict) -> list[str]:
     return sorted(paths)
 
 
-def build_yaml_payload(version: str, reqs: dict) -> dict:
+def build_yaml_payload(version: str, reqs: dict, registry_total: int) -> dict:
     phases_out = []
     totals = {"epics": 0, "odtis_ids": 0, "done": 0, "partial": 0, "todo": 0}
     for phase in PHASES:
@@ -658,6 +658,7 @@ def build_yaml_payload(version: str, reqs: dict) -> dict:
                 }
             )
         phases_out.append({**phase, "epics": epic_rows})
+    totals["registry_total"] = registry_total
     return {
         "spec_version": version,
         "generated": str(date.today()),
@@ -704,7 +705,7 @@ def build_markdown(payload: dict) -> str:
         "| Metric | Count |",
         "|--------|-------|",
         f"| Epics | {s['epics']} |",
-        f"| ODTIS IDs referenced | {s['odtis_ids']} (of 149 total) |",
+        f"| ODTIS IDs referenced | {s['odtis_ids']} (of {s['registry_total']} total) |",
         f"| Status DONE | {s['done']} |",
         f"| Status PARTIAL | {s['partial']} |",
         f"| Status TODO | {s['todo']} |",
@@ -799,8 +800,9 @@ def main() -> int:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     version = registry.get("spec_version", "0.9.0-draft")
     reqs = {r["id"]: r for r in load_requirements()}
+    registry_total = len(reqs)
 
-    payload = build_yaml_payload(version, reqs)
+    payload = build_yaml_payload(version, reqs, registry_total)
     yaml_text = "# VenID phased backlog - generated\n"
     try:
         import yaml  # type: ignore

@@ -42,8 +42,8 @@ The sidebar uses **five top tabs** (Material theme). Order follows the adoption 
 | Tab | Audience | Sidebar order (summary) |
 |-----|----------|-------------------------|
 | **Home** | Everyone | Landing only |
-| **Specification** | Implementers, auditors | Index -> **Profiles** -> **Normative sections 1-10** -> **Reference indexes** |
-| **Annexes** | Implementers | Overview -> Annex A-D (OpenAPI, threats, standards, Extended) |
+| **Specification** | Implementers, auditors | Index -> **Profiles** -> **Normative sections 1-11** -> **Reference indexes** |
+| **Annexes** | Implementers | Overview -> Annex A-E (OpenAPI, threats, standards, Extended, Reliance) |
 | **Conformance** | Test labs, operators | Overview -> Getting started -> FAQ -> **L1/L2** -> **L3** |
 | **Project** | Adopters, contributors | Overview -> **About** -> **Adoption** -> **Legal** -> **Citation** -> RI -> IETF -> Governance |
 

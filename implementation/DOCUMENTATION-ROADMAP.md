@@ -34,10 +34,10 @@ Phased plan to **complete, complement, and finalize** documentation on the ODTIS
 |------|--------|----------|
 | Batch-update `implemented` from smoke scripts | done | `scripts/sync-test-status-from-smokes.py` |
 | Smoke-to-test map | done | `conformance/smoke-test-map.yaml` |
-| Regenerate `traceability/coverage-report.yaml` (149 reqs) | done | `scripts/generate-coverage-report.py` |
+| Regenerate `traceability/coverage-report.yaml` (204 reqs) | done | `scripts/generate-coverage-report.py` |
 | Update `site/STATUS.md` implementation % | done | generated metrics block |
 
-**Exit:** Coverage report matches registry count (149); STATUS page shows implemented/pending split from smoke evidence.
+**Exit:** Coverage report matches registry count (204); STATUS page shows implemented/pending split from smoke evidence.
 
 Regenerate after smoke runs:
 

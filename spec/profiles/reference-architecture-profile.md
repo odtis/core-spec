@@ -22,7 +22,7 @@ This profile is **not** Book 2 C4 diagrams (informative). It normatively binds h
 
 | Layer | Name | Primary profiles |
 |-------|------|------------------|
-| **Layer 1** | Identity product | Core Identity, Extended (sub-modules) |
+| **Layer 1** | Identity product | Core Identity, Extended and Reliance Extensions (sub-modules) |
 | **Layer 2** | Trust network | Trust Network, Federation |
 
 Layer 1 MAY deploy without Layer 2. Layer 2 MUST NOT be claimed without Layer 1 for the same operator scope (`ODTIS-0001`).
@@ -41,6 +41,7 @@ flowchart LR
  FED[federation]
  OP[operator]
  EXT[extended]
+ REL[reliance-extensions]
 
  RA --> CI
  CI --> TN --> FED
@@ -48,9 +49,11 @@ flowchart LR
  CI --> OP
  RA --> EXT
  CI --> EXT
+ RA --> REL
+ CI --> REL
 ```
 
-Every functional profile **depends on** `reference-architecture`. An implementation MUST NOT claim Core Identity, Trust Network, Federation, Operator, or Extended without also satisfying this profile.
+Every functional profile **depends on** `reference-architecture`. An implementation MUST NOT claim Core Identity, Trust Network, Federation, Operator, Extended, or Reliance Extensions without also satisfying this profile.
 
 ---
 
@@ -79,6 +82,7 @@ Every functional profile **depends on** `reference-architecture`. An implementat
 | Federation | Cross-instance Layer 2; `ODTIS-0002` |
 | Operator | Cross-cutting duties; requires RA + Core Identity |
 | Extended | Optional modules; `ODTIS-0006` anti-weakening rule |
+| Reliance Extensions | Capa B overlays; `ODTIS-0007` domain; section 11 |
 
 ---
 

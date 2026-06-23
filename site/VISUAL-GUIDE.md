@@ -161,6 +161,7 @@ flowchart LR
  FED[Federation<br/>section 6]
  OP[Operator<br/>sections 7-10]
  EXT[Extended<br/>Annex D]
+ REL[Reliance Extensions<br/>section 11 / Annex E]
 
  RA --> CI
  CI --> TN --> FED
@@ -168,12 +169,15 @@ flowchart LR
  CI --> OP
  RA --> EXT
  CI --> EXT
+ RA --> REL
+ CI --> REL
 ```
 
 | Phase (typical) | Add profile | What you gain |
 |-----------------|-------------|---------------|
 | 1 | Core Identity | OIDC, verification API, consent |
 | 2 | + Trust Network | mTLS gateway, catalog, grants |
+| 2+ | + Reliance Extensions | Capa B reliance schema + declared sub-modules |
 | 2+ | + Federation | Bilateral cross-operator trust |
 | 3 | + Operator | PKI, regulator export, deployment phases |
 | 4 | + Extended | Wallet, webhooks, KYB, inclusion |
@@ -214,10 +218,11 @@ flowchart LR
 ## Normative domains (requirement counts)
 
 ```mermaid
-%%{init: {'themeVariables': { 'pie1': '#3949ab', 'pie2': '#5c6bc0', 'pie3': '#7986cb', 'pie4': '#9fa8da', 'pie5': '#283593', 'pie6': '#c5cae9'}}}%%
+%%{init: {'themeVariables': { 'pie1': '#3949ab', 'pie2': '#5c6bc0', 'pie3': '#7986cb', 'pie4': '#9fa8da', 'pie5': '#283593', 'pie6': '#c5cae9', 'pie7': '#1a237e'}}}%%
 pie showData
- title 149 requirement IDs by domain
+ title 204 requirement IDs by domain
  "Identity Assurance (61)" : 61
+ "Reliance Extensions (55)" : 55
  "Governance (36)" : 36
  "Trust Registry (26)" : 26
  "Reference Arch (10)" : 10

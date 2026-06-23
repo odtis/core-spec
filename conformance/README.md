@@ -1,6 +1,6 @@
 ---
 title: ODTIS conformance overview
-description: Conformance levels L1, L2, and L3; six profiles; test procedures; self-certification and L3 certification program.
+description: Conformance levels L1, L2, and L3; seven profiles; test procedures; self-certification and L3 certification program.
 ---
 
 # ODTIS conformance
@@ -131,7 +131,8 @@ Regenerate: `python3 scripts/build-conformance-manifest.py` | sync status: `pyth
 | Federation | 8 | 8 | 8 | [Profile](/spec/profiles/federation-profile/) |
 | Operator | 30 | 25 | 36 | [Profile](/spec/profiles/operator-profile/) |
 | Extended | 23 | 20 | 25 | [Profile](/spec/profiles/extended-profile/) |
-| **Total** | **159** | **85** | **149** | [Compare profiles](../site/PROFILES.md) |
+| Reliance Extensions | 55 | 55 | 55 | [Profile](/spec/profiles/reliance-extensions-profile/) |
+| **Total** | **214** | **200** | **204** | [Compare profiles](../site/PROFILES.md) |
 
 !!! tip "Stub coverage vs execution"
     Every registry MUST has a linked test **procedure**. `implemented` means smoke or L2 evidence exists in this repo. Pending procedures do **not** waive MUST requirements - mark `tests.status: partial` in your statement until you execute and record them.

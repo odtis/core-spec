@@ -13,7 +13,7 @@ Scoped protocol pieces may become Internet-Drafts while ODTIS retains profile bi
 </div>
 
 !!! note "Normative boundary"
-    ODTIS sections 1-10 remain authoritative for profiles and conformance. IETF drafts extract wire formats only.
+    ODTIS sections 1-11 remain authoritative for profiles and conformance. IETF drafts extract wire formats only.
 
 ---
 

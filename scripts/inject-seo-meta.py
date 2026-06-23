@@ -30,7 +30,7 @@ SEO: dict[str, tuple[str, str]] = {
     ),
     "conformance/README.md": (
         "ODTIS conformance overview",
-        "Conformance levels L1, L2, and L3; six profiles; test procedures; self-certification and L3 certification program.",
+        "Conformance levels L1, L2, and L3; seven profiles; test procedures; self-certification and L3 certification program.",
     ),
     "site/GETTING-STARTED.md": (
         "Getting started with ODTIS",

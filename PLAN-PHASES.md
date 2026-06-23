@@ -13,14 +13,15 @@ Aligned with [PLAN-PHASES](PLAN-PHASES.md) (Phase 3-4) and the [traceability cov
 
 | ID | Task | Status |
 |----|------|--------|
-| 3.1.1-3.1.10 | Sections 1-10 normative prose | ✅ review draft @ 0.9.0-draft |
-| 3.1.11 | Annex A OpenAPI | ✅ frozen 0.9.0-draft |
-| 3.1.12 | Annex B Threats | ✅ |
-| 3.1.13 | Annex C Standards | ✅ |
-| 3.1.14 | Annex D Extended | ✅ draft |
-| 3.1.15 | Conformance suite | ✅ L1+L2; 159 procedures (85 implemented) |
-| 3.1.16 | odtis.org site | ✅ build + local deploy to EC2 |
-| 3.1.17 | TRACEABILITY-MATRIX sync | ✅ 30/30 RF |
+| 3.1.1-3.1.11 | Sections 1-11 normative prose | ✅ review draft @ 0.9.0-draft |
+| 3.1.12 | Annex A OpenAPI | ✅ frozen 0.9.0-draft |
+| 3.1.13 | Annex B Threats | ✅ |
+| 3.1.14 | Annex C Standards | ✅ |
+| 3.1.15 | Annex D Extended | ✅ draft |
+| 3.1.16 | Annex E Reliance Extensions | ✅ normative catalog |
+| 3.1.17 | Conformance suite | ✅ L1+L2; 214 procedures (200 implemented) |
+| 3.1.18 | odtis.org site | ✅ build + local deploy to EC2 |
+| 3.1.19 | TRACEABILITY-MATRIX sync | ✅ 30/30 RF |
 | 3.2.1 | Book 2 ↔ ODTIS cross-review | ✅ |
 | 3.2.2 | Annex A freeze | ✅ 0.9.0-draft + checksums |
 | 3.2.3 | Sandbox RI alignment | ✅ map in `conformance/sandbox/` |
@@ -38,7 +39,7 @@ Phase 3.0 scaffold: ✅ (2026-06-12)
 |----|------|--------|--------|
 | 3.0.1 | Create `odtis/` repo | ✅ | Full structure |
 | 3.0.2 | Registry 103 IDs from P18 | ✅ | `registry/requirements.json` (+105) |
-| 3.0.3 | Stubs sections 1-10 + Annex A-D | ✅ | `spec/`, `annexes/` |
+| 3.0.3 | Stubs sections 1-11 + Annex A-E | ✅ | `spec/`, `annexes/` |
 | 3.0.4 | Draft conformance profiles | ✅ | `registry/profiles.yaml`, `conformance/` |
 | 3.0.5 | Governance and versioning | ✅ | `governance/` |
 | 3.0.6 | RF traceability stub | ✅ | `traceability/` |

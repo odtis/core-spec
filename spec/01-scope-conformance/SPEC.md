@@ -86,6 +86,7 @@ The following capabilities fall within ODTIS normative scope when a profile is d
 | Security requirements | 8 | Zero trust practice (NIST SP 800-207) |
 | Audit and events | 9 | Tamper-evident audit trails |
 | Deployment profiles | 10 | Phased rollout, HA, observability |
+| Reliance Extensions (Capa B) | 11 | Relying-party governance overlays |
 | Extended capabilities | Annex D | OID4VC wallet, webhooks, inclusion |
 
 Informative mappings to eIDAS-inspired trust services, sector schemes, and national IdP programs appear in Annex C. Those mappings do not, by themselves, confer regulatory certification.
@@ -121,7 +122,7 @@ Layer 1 MAY be implemented without Layer 2. Layer 2 MUST NOT be claimed without 
 
 | Content type | Location | Role |
 |--------------|----------|------|
-| **Normative** | ODTIS 1-10 | MUST/SHOULD/MAY requirements |
+| **Normative** | ODTIS 1-11 | MUST/SHOULD/MAY requirements |
 | **Normative** | ODTIS requirement IDs (`ODTIS-x.x.x`) | Stable identifiers in [Requirements registry](/registry/requirements.json) |
 | **Normative** | Conformance tests | [Conformance](/conformance/) procedures linked from registry |
 | **Informative** | VenID papers P01-P18 | Design rationale and evidence |
@@ -130,7 +131,7 @@ Layer 1 MAY be implemented without Layer 2. Layer 2 MUST NOT be claimed without 
 | **Informative** | Annex A (schema-only notes) | OpenAPI bundles are normative for API surface; prose in Annex A is informative unless cross-referenced by 3 MUST |
 | **Non-normative** | Book 3 | Implementation, migration, and jurisdiction playbooks |
 
-**Golden rule:** Every ODTIS MUST in 2-10 MUST have:
+**Golden rule:** Every ODTIS MUST in sections 2-11 MUST have:
 
 1. at least one informative trace reference (paper section, RF/RNF ID, or design-system artifact); and
 2. a conformance test definition, which MAY be marked `pending` until the test suite matures.
@@ -167,6 +168,7 @@ Requirements apply **only** to the profile(s) and sub-modules an implementation 
 | 8 | Security requirements | `ODTIS-8.x` |
 | 9 | Audit and events | `ODTIS-9.x` |
 | 10 | Deployment profiles | `ODTIS-10.x` |
+| 11 | Reliance Extensions | `ODTIS-07xx` |
 
 Annexes:
 
@@ -176,6 +178,7 @@ Annexes:
 | B | Threat mitigations (informative mapping) |
 | C | Standards mapping (informative) |
 | D | Extended profiles and sub-modules |
+| E | Reliance Extensions (Capa B catalog) |
 
 The machine-readable index of all requirement IDs is [Requirements registry](/registry/requirements.json). Section coverage counts appear in [Section Coverage (YAML)](../../traceability/section-coverage.yaml).
 
@@ -183,7 +186,7 @@ The machine-readable index of all requirement IDs is [Requirements registry](/re
 
 ## 1.6 Conformance profiles
 
-ODTIS defines **six** conformance profiles. An implementation **declares** which profiles it satisfies. Profile definitions in [Profile definitions](/registry/profiles.yaml) are authoritative for automation; this section states normative intent.
+ODTIS defines **seven** conformance profiles. An implementation **declares** which profiles it satisfies. Profile definitions in [Profile definitions](/registry/profiles.yaml) are authoritative for automation; this section states normative intent.
 
 Every ODTIS claim MUST include the **Reference Architecture** profile (`reference-architecture`, domain `ODTIS-0000`).
 

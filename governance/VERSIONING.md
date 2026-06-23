@@ -22,7 +22,7 @@ Pre-1.0 versions use suffix `-draft` (e.g. `0.9.0-draft`). Requirement IDs (`ODT
 | Stage | VERSION example | Meaning |
 |-------|-----------------|---------|
 | Scaffold | `0.1.0-draft` | Structure only; P18 extract |
-| Working draft | `0.5.x-draft` | 1-10 prose in progress |
+| Working draft | `0.5.x-draft` | 1-11 prose in progress |
 | Review draft | `0.9.x-draft` | Feature-complete for external review |
 | Standard | `1.0.0` | Frozen after pilot metrics (Phase 4) |
 

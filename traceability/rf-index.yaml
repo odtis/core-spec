@@ -41,6 +41,7 @@ entries:
   - ODTIS-0103
   - ODTIS-0107
   - ODTIS-0311
+  - ODTIS-0356
   status: mapped
   sources: ['registry']
 - rf: RF-07
@@ -104,6 +105,7 @@ entries:
   odtis_ids:
   - ODTIS-0328
   - ODTIS-0329
+  - ODTIS-0354
   status: mapped
   sources: ['registry']
 - rf: RF-16
@@ -147,6 +149,7 @@ entries:
   - ODTIS-0102
   - ODTIS-0108
   - ODTIS-0316
+  - ODTIS-0358
   status: mapped
   sources: ['registry']
 - rf: RF-23
@@ -170,9 +173,9 @@ entries:
   sources: ['registry']
 - rf: RF-26
   odtis_ids:
-  - ODTIS-0327
   - ODTIS-0211
   - ODTIS-0219
+  - ODTIS-0327
   - ODTIS-0526
   - ODTIS-0528
   status: mapped
@@ -269,6 +272,7 @@ entries:
   odtis_ids:
   - ODTIS-0324
   - ODTIS-0332
+  - ODTIS-0357
   status: mapped
   sources: ['registry']
 - rf: RNF-25
@@ -277,8 +281,16 @@ entries:
   - ODTIS-0514
   status: mapped
   sources: ['registry']
+- rf: RF-EXT1
+  odtis_ids:
+  - ODTIS-0361
+  - ODTIS-0363
+  status: mapped
+  sources: ['registry']
 - rf: RF-EXT5
   odtis_ids:
-  - ODTIS-0344
+  - ODTIS-0104
+  - ODTIS-0349
+  - ODTIS-0365
   status: mapped
   sources: ['registry']

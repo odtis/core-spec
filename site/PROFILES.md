@@ -28,6 +28,7 @@ flowchart LR
  FED[Federation]
  OP[Operator]
  EXT[Extended]
+ REL[Reliance Extensions]
 
  RA --> CI
  CI --> TN --> FED
@@ -35,6 +36,8 @@ flowchart LR
  CI --> OP
  RA --> EXT
  CI --> EXT
+ RA --> REL
+ CI --> REL
 ```
 
 ---
@@ -49,6 +52,7 @@ flowchart LR
 | **Federation** | ODTIS-0004 | 6 | trust-network | Medium (8 IDs) | [federation](/spec/profiles/federation-profile/) |
 | **Operator** | ODTIS-0005 | 7-10 | reference-architecture, core-identity | Medium | [operator](/spec/profiles/operator-profile/) |
 | **Extended** | ODTIS-0003 | Annex D | reference-architecture, core-identity | Draft | [extended](/spec/profiles/extended-profile/) |
+| **Reliance Extensions** | ODTIS-0007 | 11 | reference-architecture, core-identity | Normative (Capa B) | [reliance-extensions](/spec/profiles/reliance-extensions-profile/) |
 
 ---
 
@@ -62,6 +66,7 @@ flowchart LR
 | Federation | Bilateral agreements - **not** OpenID Federation |
 | Operator | PKI, audit, deployment phases |
 | Extended | OID4VP, webhooks, sector modules (Annex D) |
+| Reliance Extensions | Capa B reliance schema, Annex E sub-modules (agent, crypto, capture, ...) |
 
 See [OIDF positioning](../governance/liaison/OIDF-POSITIONING.md).
 
@@ -176,6 +181,9 @@ Totals (unique test files): **214** procedures, **200** with smoke `implemented`
 
 
 
+
+
+
 Regenerate: `python3 scripts/build-conformance-manifest.py`
 
 ---
@@ -187,6 +195,7 @@ Regenerate: `python3 scripts/build-conformance-manifest.py`
 - **National operator** - Reference Architecture + Core Identity + Trust Network + Operator
 - **Cross-border exchange** - add Federation when bilateral agreements are active (FB-002 accepted)
 - **Wallet / webhook module** - Extended sub-modules on Core Identity
+- **Capa B reliance overlays** - Reliance Extensions sub-modules on Core Identity (see [Annex E](/annexes/E-reliance-profiles/))
 
 [Getting started](GETTING-STARTED.md) | [Adoption guide](../ADOPTION.md)
 

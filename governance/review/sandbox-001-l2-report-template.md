@@ -35,7 +35,7 @@ Report JSON schema: `conformance/l2/run_l2.py --output conformance/reports/l2-re
 
 - Live sandbox `--target` not yet exercised in CI (requires operator URL + DNS).
 - `end_session_endpoint` check is informational until logout enabled on sandbox IdP.
-- Manual profile stubs (159 procedures; 85 with smoke evidence in this repo) pending full operator execution.
+- Manual profile stubs (214 procedures; 200 with smoke evidence in this repo) pending full operator execution.
 
 ## Request
 

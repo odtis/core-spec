@@ -80,7 +80,7 @@ Declare one or more profiles in your [Conformance statement template](/conforman
 
 Full comparison table, dependency graph, and coverage metrics: **[Profile comparison](/site/PROFILES/)**.
 
-**Typical path:** Reference Architecture (required) -> Core Identity -> Trust Network -> Operator; add Federation for bilateral operator trust; add Extended sub-modules from Annex D when needed.
+**Typical path:** Reference Architecture (required) -> Core Identity -> Trust Network -> Operator; add Federation for bilateral operator trust; add **Reliance Extensions** for Capa B reliance overlays (section 11 / Annex E); add Extended sub-modules from Annex D when needed.
 
 **External bindings:** Core Identity uses OIDC/OAuth/PKCE per [OIDF positioning](/governance/liaison/OIDF-POSITIONING/). ODTIS Federation is **not** OpenID Federation.
 

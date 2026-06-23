@@ -22,4 +22,6 @@ sections:
   count: 6
 - section: 10-deployment-profiles
   count: 3
-total: 149
+- section: 11-reliance-profiles
+  count: 55
+total: 204

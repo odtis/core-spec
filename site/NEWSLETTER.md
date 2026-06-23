@@ -28,7 +28,7 @@ Updates on **spec releases**, **publications**, **media**, **review cycles**, an
 
 ### [June 2026 - Review draft 0.9.0-draft](news/2026-06.md)
 
-**Highlights:** External review cycle 1 open | Visual architecture guide | 149 requirement IDs | P01 & Book 1 on Zenodo | Annex A frozen.
+**Highlights:** External review cycle 1 open | Visual architecture guide | 204 requirement IDs | P01 & Book 1 on Zenodo | Annex A frozen.
 
 [Read full issue ->](news/2026-06.md){ .md-button .md-button--primary }
 

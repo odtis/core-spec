@@ -388,7 +388,7 @@ Reliance Extension sub-modules (Capa B).
 
 | Goal | Document |
 |------|----------|
-| Domain map (ODTIS-0000..0006) | [Domain map](../site/DOMAINS.md) |
+| Domain map (ODTIS-0000..0007) | [Domain map](../site/DOMAINS.md) |
 | Glossary | [Glossary](../site/GLOSSARY.md) |
 | Section review matrix | [Section review matrix](../governance/SECTION-REVIEW.md) |
 | Build plan / phases | [Build plan](../PLAN-PHASES.md) |

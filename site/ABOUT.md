@@ -60,6 +60,7 @@ ODTIS addresses that pattern with a **two-layer model**:
 | **Layer 2 - Trust Network** | N-to-N institutional integration hell | mTLS exchange gateway, service catalog, explicit grants, fail-closed access, signed audit |
 | **Operator governance** | Who runs PKI, phases, and accountability | Deployment phases, regulator export, bilateral federation semantics |
 | **Extended (optional)** | Wallets, KYB, inclusion, webhooks | Annex D modules declared per implementation |
+| **Reliance Extensions (Capa B)** | Relying-party governance overlays | Section 11 + Annex E sub-modules (agent, capture, disclosure, ...) |
 
 **Who benefits:**
 
@@ -85,6 +86,7 @@ At a high level, a conforming stack lets you:
 - **Audit every sensitive path** - consent, verification, exchange - with correlation IDs suitable for operator and regulator review.
 - **Federate bilaterally** between operators without transitive trust assumptions.
 - **Declare optional modules** (wallet credentials, webhooks, KYB, inclusion) when Annex D applies.
+- **Declare Capa B reliance overlays** (agent authority, document capture, disclosure assurance, etc.) when Reliance Extensions applies.
 
 Deeper request-path diagrams: [Visual architecture guide](VISUAL-GUIDE.md). Adoption paths: [Adoption guide](../ADOPTION.md).
 
@@ -137,6 +139,11 @@ flowchart TB
  KYB[KYB, webhooks, inclusion]
  end
 
+ subgraph rel [Reliance Extensions - section 11 - Capa B optional]
+ AGENT[Agent authority / fraud orchestration]
+ CAP[Document capture / liveness]
+ end
+
  CIT --> GW
  RP --> GW
  PART --> XGW
@@ -166,6 +173,8 @@ flowchart TB
  XGW --- BILAT --- OPB
  L1 -. optional .-> WAL
  L1 -. optional .-> KYB
+ RP -. optional Capa B .-> AGENT
+ RP -. optional Capa B .-> CAP
 ```
 
 **Scale properties:**

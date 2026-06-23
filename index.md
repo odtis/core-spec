@@ -193,7 +193,7 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 <div class="odtis-path-card" markdown="1">
 <span class="odtis-path-card__role">:material-domain:</span>
 ### Independent vendor
-<p class="odtis-path-card__desc" markdown="1">Compare six profiles, download registries and manifests, and plan adoption without reference implementation code.</p>
+<p class="odtis-path-card__desc" markdown="1">Compare seven profiles, download registries and manifests, and plan adoption without reference implementation code.</p>
 [Adoption guide](/ADOPTION/){ .md-button }
 </div>
 
@@ -407,7 +407,7 @@ flowchart TB
 <div class="odtis-card odtis-card--spec" markdown="1">
 <span class="odtis-card__icon">:material-book-open-page-variant-outline:</span>
 ### Specification
-<p class="odtis-card__desc">Ten normative sections, six profile packs, and the requirements registry with stable ODTIS-MNNN IDs.</p>
+<p class="odtis-card__desc">Eleven normative sections, seven profile packs, and the requirements registry with stable ODTIS-MNNN IDs.</p>
 [Specification index](/spec/INDEX/){ .md-button }
 </div>
 
@@ -421,7 +421,7 @@ flowchart TB
 <div class="odtis-card odtis-card--conf" markdown="1">
 <span class="odtis-card__icon">:material-shield-check-outline:</span>
 ### Conformance
-<p class="odtis-card__desc">L1/L2/L3 levels, 159 test procedures, and smoke evidence for independent verification.</p>
+<p class="odtis-card__desc">L1/L2/L3 levels, 214 test procedures, and smoke evidence for independent verification.</p>
 [Conformance overview](/conformance/){ .md-button }
 </div>
 

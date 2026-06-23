@@ -76,7 +76,7 @@ Process, policies, external liaison, and review for the open specification.
 | [Feedback channels](FEEDBACK.md) | External feedback channels |
 | [External review cycle 1](REVIEW-CYCLE-1.md) | Active review period |
 | [Review close checklist](REVIEW-CYCLE-1-CLOSE.md) | Maintainer close checklist |
-| [Section review matrix](SECTION-REVIEW.md) | Sections 1-10 completeness |
+| [Section review matrix](SECTION-REVIEW.md) | Sections 1-11 completeness |
 | [Annex review matrix](ANNEX-REVIEW.md) | Annexes A-D matrix |
 | [Review Log (YAML)](REVIEW-LOG.yaml) | Decisions log |
 | [RFC template](RFC-TEMPLATE.md) | Normative change proposals |

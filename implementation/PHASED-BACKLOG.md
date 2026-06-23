@@ -13,7 +13,7 @@ Machine-readable: [Phased Backlog (YAML)](phased-backlog.yaml) (regenerate with 
 | Metric | Count |
 |--------|-------|
 | Epics | 43 |
-| ODTIS IDs referenced | 170 (of 149 total) |
+| ODTIS IDs referenced | 170 (of 204 total) |
 | Status DONE | 10 |
 | Status PARTIAL | 30 |
 | Status TODO | 3 |

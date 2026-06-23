@@ -127,7 +127,7 @@ Optional public listing (when program is operational): PR to [Certified Products
 |-----------|-------------------|
 | Automated checks against your `--target` | Third-party audit |
 | You published a machine-readable statement | **ODTIS Certified** trademark use |
-| Structural link to 159 test procedures | Every manual stub executed (unless you mark `pass`) |
+| Structural link to 214 test procedures | Every manual stub executed (unless you mark `pass`) |
 
 **L3** requires independent attestation: [Auditor guide](auditor-guide.md) | [Certification program](/governance/CERTIFICATION/).
 

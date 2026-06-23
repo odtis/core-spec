@@ -118,9 +118,9 @@ ODTIS allows centralized operator-led identity (typical government IdP) **and** 
 
 ### Which ODTIS profile should I implement first?
 
-**Core Identity** for citizen IdP, verification API, consent, and citizen portal. Add **Trust Network** when you operate an exchange gateway between institutions. Add **Operator** for platform duties (SLA, PKI stewardship, regulator API). Add **Federation** only for cross-operator bilateral trust. **Extended** sub-modules are Phase 4 scope. Compare: [Profile comparison](/site/PROFILES/) | path: [Getting started](/site/GETTING-STARTED/).
+**Core Identity** for citizen IdP, verification API, consent, and citizen portal. Add **Trust Network** when you operate an exchange gateway between institutions. Add **Reliance Extensions** when you need Capa B reliance governance overlays (agent authority, capture, disclosure assurance, etc.). Add **Operator** for platform duties (SLA, PKI stewardship, regulator API). Add **Federation** only for cross-operator bilateral trust. **Extended** sub-modules are Phase 4 scope. Compare: [Profile comparison](/site/PROFILES/) | path: [Getting started](/site/GETTING-STARTED/).
 
-### What are the six ODTIS conformance profiles?
+### What are the seven ODTIS conformance profiles?
 
 | Profile | Purpose |
 |---------|---------|
@@ -130,10 +130,11 @@ ODTIS allows centralized operator-led identity (typical government IdP) **and** 
 | **Federation** | Bilateral operator federation (section 6) |
 | **Operator** | Governance, SLA, PKI, regulator surfaces (section 7) |
 | **Extended** | Optional Annex D modules (E-Wallet, E-KYB, ...) |
+| **Reliance Extensions** | Capa B reliance overlays (section 11, Annex E sub-modules) |
 
 Normative profile docs: [Profiles](/spec/profiles/).
 
-### Do I need all ten specification sections?
+### Do I need all eleven specification sections?
 
 Only sections **mandatory for your declared profile(s)** in [Profile definitions](/registry/profiles.yaml). **Section 1** (scope and conformance) applies to everyone. Section 8 (security) and section 9 (audit events) apply broadly when your profile includes those surfaces.
 
@@ -148,7 +149,7 @@ Phases gate which profiles and Extended modules you may **claim** in a conforman
 | Phase | Typical conformance scope |
 |-------|---------------------------|
 | 1 | Core Identity (L1/L2 pilot) |
-| 2 | + Trust Network, Federation |
+| 2 | + Trust Network, Federation, Reliance Extensions (pilot) |
 | 3 | + Operator |
 | 4 | + Extended (Annex D sub-modules) |
 
@@ -166,11 +167,11 @@ Depends on starting point. A team with OIDC experience often reaches **L2 Core I
 
 ### Where is the normative ODTIS text?
 
-Sections **1-10** under [Index](/spec/INDEX/) with RFC 2119 keywords (MUST/SHOULD/MAY). Start at [Section 1 - Scope and conformance](/spec/01-scope-conformance/SPEC/).
+Sections **1-11** under [Index](/spec/INDEX/) with RFC 2119 keywords (MUST/SHOULD/MAY). Start at [Section 1 - Scope and conformance](/spec/01-scope-conformance/SPEC/).
 
 ### What are ODTIS requirement IDs (ODTIS-MNNN)?
 
-**149 registry IDs** (e.g. `ODTIS-0301`) in [Requirements registry](/registry/requirements.json), each linked to a spec section and conformance test stub. Browse: [Requirements index](/site/REQUIREMENTS-INDEX/).
+**204 registry IDs** (e.g. `ODTIS-0301`) in [Requirements registry](/registry/requirements.json), each linked to a spec section and conformance test stub. Browse: [Requirements index](/site/REQUIREMENTS-INDEX/).
 
 ### What are the ODTIS annexes?
 
@@ -257,7 +258,7 @@ MkDocs excludes large machine-readable files from HTML rendering. They are copie
 
 ### Where is the ODTIS requirements registry?
 
-[Requirements registry](/registry/requirements.json) (149 IDs), [Profile definitions](/registry/profiles.yaml), [Audit event catalog](/registry/events.yaml). Human index: [Requirements index](/site/REQUIREMENTS-INDEX/) | [Glossary](/site/GLOSSARY/).
+[Requirements registry](/registry/requirements.json) (204 IDs), [Profile definitions](/registry/profiles.yaml), [Audit event catalog](/registry/events.yaml). Human index: [Requirements index](/site/REQUIREMENTS-INDEX/) | [Glossary](/site/GLOSSARY/).
 
 ### How do I cite ODTIS in a paper or procurement document?
 
@@ -299,7 +300,7 @@ YAML + human-readable markdown declaring `odtis_version`, `profiles`, `level`, `
 
 ### How many ODTIS test procedures exist?
 
-**159** procedures linked to registry MUSTs; **85** have smoke/L2 evidence in the reference lab ([Status](/site/STATUS/)). Pending stubs still obligate implementers to execute against their system before claiming `tests.status: pass`.
+**214** procedures linked to registry MUSTs; **200** have smoke/L2 evidence in the reference lab ([Status](/site/STATUS/)). Pending stubs still obligate implementers to execute against their system before claiming `tests.status: pass`.
 
 ### Where are conformance test procedures documented?
 
@@ -387,7 +388,7 @@ Paper 18 (*Standards alignment with ODTIS*) is an **informative** academic bridg
 
 ### Can I implement from Book 3 alone?
 
-**No** for conformance claims. Authority: ODTIS sections 1-10, annexes, declared profile, and tests.
+**No** for conformance claims. Authority: ODTIS sections 1-11, annexes, declared profile, and tests.
 
 ---
 

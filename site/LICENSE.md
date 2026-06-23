@@ -23,7 +23,7 @@ How ODTIS normative text, annexes, and conformance materials may be used, cited,
 Open Digital Trust Infrastructure Specification (ODTIS)  
 Copyright (c) 2026 FinnectOS, Inc.
 
-Content in this repository (`core-spec`: sections 1-10, registry, annexes, conformance tests, governance docs for the spec) is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+Content in this repository (`core-spec`: sections 1-11, registry, annexes, conformance tests, governance docs for the spec) is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
 You are free to:
 

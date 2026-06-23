@@ -203,7 +203,7 @@ Lab deployments at **L1** MAY run at Phase 1 profile without production SLA clai
 - [x] Phased model aligned with P01/P10/P18 Table 9.4
 - [x] Conformance declaration requirements (10.1.x)
 - [x] HA/observability/demo informative guidance
-- [x] **1-10 normative prose complete** (review draft @ 0.9.0-draft)
+- [x] **1-11 normative prose complete** (review draft @ 0.9.0-draft)
 
 
 **Phase 3.2 review checklist (10).**

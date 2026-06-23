@@ -94,7 +94,8 @@ See [Repository map](STRUCTURE.md).
 | Federation | 6 | 8 | 8 | 8 |
 | Operator | 7-10 | 30 | 25 | 36 |
 | Extended | Annex D | 23 | 20 | 25 |
-| **Total** | | **159** | **85** | **149** |
+| Reliance Extensions | 11 | 55 | 55 | 55 |
+| **Total** | | **214** | **200** | **204** |
 
 Details: [Profile definitions](registry/profiles.yaml) · [Profile comparison](https://odtis.org/site/PROFILES/)
 

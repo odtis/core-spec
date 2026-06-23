@@ -2,7 +2,7 @@
 
 **Status:** Phase 3.2.1 complete - no unresolved MUST contradictions (Jun 2026) 
 **ODTIS version:** `0.9.0-draft` 
-**Scope:** MUST/SHOULD alignment between Book 2 (Vol. II) and ODTIS sections 1-10
+**Scope:** MUST/SHOULD alignment between Book 2 (Vol. II) and ODTIS sections 1-11
 
 **Project hub:** [Project hub](../project/README.md) | **Sections:** [Section review matrix](SECTION-REVIEW.md)
 
