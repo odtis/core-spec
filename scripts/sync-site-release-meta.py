@@ -84,6 +84,7 @@ def sync_mkdocs(version: str, meta: dict[str, str]) -> bool:
         f'  copyright: Copyright &copy; {year} '
         f'<a href="/site/LICENSE/">FinnectOS, Inc.</a> &middot; '
         f'ODTIS {version} &middot; '
+        f'<a href="https://digitaltrustinfrastructure.org">DTI</a> research &middot; '
         f'<a href="https://github.com/odtis/core-impl">VenID</a> RI &middot; '
         f'<a href="/site/LICENSE/">CC BY 4.0</a>'
     )

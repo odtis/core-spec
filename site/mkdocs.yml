@@ -83,12 +83,13 @@ theme:
     - toc.follow
     - content.code.copy
     - content.tabs.link
-  copyright: Copyright &copy; 2026 <a href="/site/LICENSE/">FinnectOS, Inc.</a> &middot; ODTIS 0.9.0-draft &middot; <a href="https://github.com/odtis/core-impl">VenID</a> RI &middot; <a href="/site/LICENSE/">CC BY 4.0</a>
+  copyright: Copyright &copy; 2026 <a href="/site/LICENSE/">FinnectOS, Inc.</a> &middot; ODTIS 0.9.0-draft &middot; <a href="https://digitaltrustinfrastructure.org">DTI</a> research &middot; <a href="https://github.com/odtis/core-impl">VenID</a> RI &middot; <a href="/site/LICENSE/">CC BY 4.0</a>
 
 extra_css:
   - site/stylesheets/extra.css
   - site/stylesheets/gitbook-theme.css
   - site/stylesheets/mobile.css
+  - site/stylesheets/landing-dti.css
 
 extra_javascript:
   - site/javascripts/extra.js
@@ -240,8 +241,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
-  odtis_build_time: "2026-06-23T14:16:24Z"
-  odtis_build_sha: "1d22016"
+  odtis_build_time: "2026-06-29T12:09:35Z"
+  odtis_build_sha: "1782734974"
   odtis_version: "0.9.0-draft"
   generator: false
   seo:
@@ -257,6 +258,8 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/odtis/core-spec
   odtis_footer_links:
+    - name: DTI Research
+      url: https://digitaltrustinfrastructure.org
     - name: About
       url: site/ABOUT/
     - name: Status

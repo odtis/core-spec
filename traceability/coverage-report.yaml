@@ -1,7 +1,7 @@
 # Traceability coverage report (generated)
 spec_version: "0.9.0-draft"
 generated: true
-as_of: 2026-06-23
+as_of: 2026-06-29
 targets:
   phase_3_1_exit_pct: 60
   phase_4_exit_pct: 100

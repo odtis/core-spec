@@ -6,37 +6,63 @@ hide:
 description: "ODTIS: vendor-neutral open standard for digital identity, trust networks, and institutional exchange. 204 normative requirements, 7 conformance profiles, frozen OpenAPI Annex A, L1/L2/L3 verification."
 ---
 
-<div class="odtis-home odtis-landing" markdown="1">
+<div class="odtis-home odtis-landing odtis-landing--dti" markdown="1">
 
-<div class="odtis-landing-hero" markdown="1">
+<div class="odtis-dti-band odtis-dti-band--hero" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-hero" markdown="1">
 
 <div class="odtis-landing-hero__main" markdown="1">
 
-# Open specification for digital trust infrastructure
+<p class="odtis-dti-pill" markdown="1">
+Part of <a href="https://digitaltrustinfrastructure.org" target="_blank" rel="noopener">Digital Trust Infrastructure</a>
+</p>
+
+# ODTIS: <span class="odtis-dti-accent">normative standard for digital trust infrastructure</span>
 
 <p class="odtis-landing-hero__lead">
-Adopt, implement, and certify interoperable identity and institutional exchange:
-<strong>vendor-neutral</strong>, <strong>machine-readable</strong>, and <strong>testable at L1 / L2 / L3</strong>.
+<strong>ODTIS</strong> is the vendor-neutral, machine-readable specification layer of
+<a href="https://digitaltrustinfrastructure.org" target="_blank" rel="noopener">Digital Trust Infrastructure</a>:
+normative MUST/SHOULD/MAY for Layer&nbsp;1 identity, Layer&nbsp;2 trust networks, and
+<strong>L1 / L2 / L3</strong> conformance  -  independent of any product.
 </p>
 
 <div class="odtis-landing-hero__cta" markdown="1">
 [Read the specification](/spec/INDEX/){ .md-button .md-button--primary .odtis-landing-cta--primary }
 [Getting started (15 min)](/site/GETTING-STARTED/){ .md-button .odtis-landing-cta--secondary }
+[DTI research hub ↗](https://digitaltrustinfrastructure.org){ .md-button .odtis-dti-btn--ghost target=_blank rel=noopener }
 </div>
 
 <p class="odtis-landing-hero__links" markdown="1">
 [Vision & mission](/site/ABOUT/) |
 [Visual guide](/site/VISUAL-GUIDE/) |
-[Collaborate](/site/COLLABORATE/) |
-[Newsletter](/site/NEWSLETTER/) |
 [Adoption guide](/ADOPTION/) |
-[Conformance overview](/conformance/) |
-[Downloads and artifacts](/site/DOWNLOADS/)
+[Conformance](/conformance/) |
+[Downloads](/site/DOWNLOADS/)
 </p>
 
 </div>
 
 <div class="odtis-landing-pillars" markdown="1">
+
+<p class="odtis-dti-stack-label">The open stack</p>
+
+<div class="odtis-dti-eco-row">
+<a class="odtis-dti-eco-chip" href="https://digitaltrustinfrastructure.org" target="_blank" rel="noopener">
+<span class="odtis-dti-eco-chip__tag">Foundation</span>
+<span class="odtis-dti-eco-chip__name">Digital Trust Infrastructure</span>
+</a>
+<a class="odtis-dti-eco-chip odtis-dti-eco-chip--current" href="/">
+<span class="odtis-dti-eco-chip__tag">Specification</span>
+<span class="odtis-dti-eco-chip__name">ODTIS</span>
+</a>
+<a class="odtis-dti-eco-chip" href="https://github.com/odtis/core-impl" target="_blank" rel="noopener">
+<span class="odtis-dti-eco-chip__tag">Reference impl.</span>
+<span class="odtis-dti-eco-chip__name">VenID</span>
+</a>
+</div>
+
+<p class="odtis-dti-stack-label">Normative layers</p>
 
 <div class="odtis-landing-pillar" markdown="1">
 <span class="odtis-landing-pillar__icon">:material-account-key-outline:</span>
@@ -66,7 +92,11 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 
 </div>
 
-<div class="odtis-landing-trust" markdown="1">
+</div>
+
+<div class="odtis-dti-band odtis-dti-band--light" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-trust" markdown="1">
 
 <div class="odtis-stat" markdown="1">
 <strong>204</strong>
@@ -99,12 +129,55 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 
 </div>
 
-<div class="odtis-landing-section odtis-landing-section--panel" markdown="1">
+</div>
+
+<div class="odtis-dti-band odtis-dti-band--muted" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-section" markdown="1">
+
+<div class="odtis-landing-section__head odtis-landing-section__head--center" markdown="1">
+<span class="odtis-section-head__eyebrow">Where ODTIS sits</span>
+## Part of the DTI ecosystem
+<p class="odtis-section-head__lead">ODTIS operationalizes the <a href="https://digitaltrustinfrastructure.org" target="_blank" rel="noopener">Digital Trust Infrastructure</a> vision into testable normative requirements. Research and adoption narrative live on DTI; conformance contracts live here.</p>
+</div>
+
+<div class="odtis-dti-stack">
+
+<div class="odtis-dti-stack-card">
+<span class="odtis-dti-stack-card__layer">Foundation</span>
+<div class="odtis-dti-stack-card__title">Digital Trust Infrastructure</div>
+<p>Books, papers (P01-P18), knowledge hub, country adoption, and community for the global DTI movement.</p>
+<a class="odtis-dti-stack-card__cta" href="https://digitaltrustinfrastructure.org" target="_blank" rel="noopener">Explore DTI research ↗</a>
+</div>
+
+<div class="odtis-dti-stack-card odtis-dti-stack-card--current">
+<span class="odtis-dti-stack-card__layer">Specification · you are here</span>
+<div class="odtis-dti-stack-card__title">ODTIS</div>
+<p>Normative MUST/SHOULD/MAY, frozen Annex A OpenAPI, 204 requirement IDs, and L1/L2/L3 verification procedures.</p>
+<a class="odtis-dti-stack-card__cta" href="/spec/INDEX/">Read the specification →</a>
+</div>
+
+<div class="odtis-dti-stack-card">
+<span class="odtis-dti-stack-card__layer">Reference implementation</span>
+<div class="odtis-dti-stack-card__title">VenID</div>
+<p>Informative reference stack - one conforming implementation. Independent vendors may implement ODTIS without VenID code.</p>
+<a class="odtis-dti-stack-card__cta" href="https://github.com/odtis/core-impl" target="_blank" rel="noopener">View core-impl ↗</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="odtis-dti-band odtis-dti-band--light" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-section odtis-landing-section--panel" markdown="1">
 
 <div class="odtis-landing-section__head odtis-landing-section__head--center" markdown="1">
 <span class="odtis-section-head__eyebrow">About the project</span>
 ## Vision & mission
-<p class="odtis-section-head__lead">A vendor-neutral open standard for verified identity and governed institutional exchange - testable, not self-asserted.</p>
+<p class="odtis-section-head__lead">A vendor-neutral open standard for verified identity and governed institutional exchange  -  testable, not self-asserted. Grounded in <a href="https://digitaltrustinfrastructure.org" target="_blank" rel="noopener">DTI research</a>; normative here.</p>
 </div>
 
 <div class="odtis-landing-vm" markdown="1">
@@ -112,12 +185,12 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 <div class="odtis-landing-vm-card" markdown="1">
 <span class="odtis-landing-vm-card__icon">:material-telescope:</span>
 ### Vision
-<p class="odtis-landing-vm-card__lead">Verified digital identity and governed institutional exchange across borders, vendors, and sectors - without locking citizens, governments, or businesses into a single proprietary stack.</p>
+<p class="odtis-landing-vm-card__lead">Verified digital identity and governed institutional exchange across borders, vendors, and sectors  -  without locking citizens, governments, or businesses into a single proprietary stack.</p>
 <ul class="odtis-landing-vm-list">
-<li><strong>Interoperable</strong> - shared conformance profiles and exchange semantics</li>
-<li><strong>Accountable</strong> - PKI, consent, audit, and regulator-visible governance</li>
-<li><strong>Adoptable</strong> - national law stays in adopter policy bindings</li>
-<li><strong>Verifiable</strong> - L1 / L2 / L3 evidence, not marketing labels</li>
+<li><strong>Interoperable</strong>  -  shared conformance profiles and exchange semantics</li>
+<li><strong>Accountable</strong>  -  PKI, consent, audit, and regulator-visible governance</li>
+<li><strong>Adoptable</strong>  -  national law stays in adopter policy bindings</li>
+<li><strong>Verifiable</strong>  -  L1 / L2 / L3 evidence, not marketing labels</li>
 </ul>
 </div>
 
@@ -142,7 +215,11 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 
 </div>
 
-<div class="odtis-landing-section" markdown="1">
+</div>
+
+<div class="odtis-dti-band odtis-dti-band--muted" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-section" markdown="1">
 
 <div class="odtis-landing-section__head odtis-landing-section__head--center" markdown="1">
 <span class="odtis-section-head__eyebrow">Why ODTIS</span>
@@ -174,7 +251,11 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 
 </div>
 
-<div class="odtis-landing-section odtis-landing-section--panel" markdown="1">
+</div>
+
+<div class="odtis-dti-band odtis-dti-band--light" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-section odtis-landing-section--panel" markdown="1">
 
 <div class="odtis-landing-section__head" markdown="1">
 <span class="odtis-section-head__eyebrow">Start here</span>
@@ -186,7 +267,7 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 <div class="odtis-path-card" markdown="1">
 <span class="odtis-path-card__role">:material-briefcase-outline:</span>
 ### Policy / executive
-<p class="odtis-path-card__desc" markdown="1">Vision, two-layer model, and what ODTIS enables for governments and ecosystems - without implementation depth.</p>
+<p class="odtis-path-card__desc" markdown="1">Vision, two-layer model, and what ODTIS enables for governments and ecosystems  -  without implementation depth.</p>
 [About the project](/site/ABOUT/){ .md-button }
 </div>
 
@@ -221,7 +302,7 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 <div class="odtis-path-card" markdown="1">
 <span class="odtis-path-card__role">:material-comment-eye-outline:</span>
 ### External reviewer
-<p class="odtis-path-card__desc" markdown="1">Review cycle 1 is open until 2026-06-26 - submit clarifications, RFCs, and L2 sandbox reports.</p>
+<p class="odtis-path-card__desc" markdown="1">Review cycle 1 is open until 2026-06-26  -  submit clarifications, RFCs, and L2 sandbox reports.</p>
 [External review cycle 1](/governance/REVIEW-CYCLE-1/){ .md-button }
 </div>
 
@@ -249,7 +330,7 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 <div class="odtis-path-card" markdown="1">
 <span class="odtis-path-card__role">:material-school-outline:</span>
 ### Researcher
-<p class="odtis-path-card__desc" markdown="1">Cite ODTIS formally and trace requirement IDs back to the P18 evidence base.</p>
+<p class="odtis-path-card__desc" markdown="1">Cite ODTIS formally and trace requirement IDs to the P18 evidence base on [digitaltrustinfrastructure.org](https://digitaltrustinfrastructure.org).</p>
 [How to cite](/publication/HOW-TO-CITE/){ .md-button }
 </div>
 
@@ -257,7 +338,11 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 
 </div>
 
-<div class="odtis-landing-section" markdown="1">
+</div>
+
+<div class="odtis-dti-band odtis-dti-band--muted" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-section" markdown="1">
 
 <div class="odtis-landing-section__head odtis-landing-section__head--center" markdown="1">
 <span class="odtis-section-head__eyebrow">How it works</span>
@@ -294,12 +379,16 @@ Adopt, implement, and certify interoperable identity and institutional exchange:
 
 </div>
 
-<div class="odtis-landing-section odtis-landing-section--panel" markdown="1">
+</div>
+
+<div class="odtis-dti-band odtis-dti-band--light" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-section odtis-landing-section--panel" markdown="1">
 
 <div class="odtis-landing-section__head" markdown="1">
 <span class="odtis-section-head__eyebrow">Architecture</span>
 ## Two-layer model
-<p class="odtis-section-head__lead">Stop re-verifying people in every app, and stop wiring institutions one-by-one. ODTIS separates <strong>who someone is</strong> from <strong>who may exchange what</strong> - with standards underneath both.</p>
+<p class="odtis-section-head__lead">Stop re-verifying people in every app, and stop wiring institutions one-by-one. ODTIS separates <strong>who someone is</strong> from <strong>who may exchange what</strong>  -  with standards underneath both.</p>
 </div>
 
 <div class="odtis-home-split" markdown="1">
@@ -387,7 +476,11 @@ flowchart TB
 
 </div>
 
-<div class="odtis-landing-section odtis-landing-section--panel" markdown="1">
+</div>
+
+<div class="odtis-dti-band odtis-dti-band--muted" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-section odtis-landing-section--panel" markdown="1">
 
 <div class="odtis-landing-section__head" markdown="1">
 <span class="odtis-section-head__eyebrow">Documentation</span>
@@ -429,15 +522,22 @@ flowchart TB
 
 </div>
 
-<div class="odtis-landing-cta" markdown="1">
+</div>
+
+<div class="odtis-dti-band odtis-dti-band--cta" markdown="1">
+
+<div class="odtis-dti-container odtis-landing-cta" markdown="1">
 
 ## Ready to adopt ODTIS?
 
-<p class="odtis-landing-cta__lead">Pick a profile, bind Annex A, run L1, then publish your conformance claim.</p>
+<p class="odtis-landing-cta__lead">Pick a profile, bind Annex A, run L1, then publish your conformance claim. New to the ecosystem? Start at <a href="https://digitaltrustinfrastructure.org" target="_blank" rel="noopener">Digital Trust Infrastructure</a>.</p>
 
 <div class="odtis-landing-cta__actions" markdown="1">
 [Adoption guide](/ADOPTION/){ .md-button .md-button--primary }
 [Conformance overview](/conformance/){ .md-button }
+[DTI research hub ↗](https://digitaltrustinfrastructure.org){ .md-button .odtis-dti-btn--ghost target=_blank rel=noopener }
+</div>
+
 </div>
 
 </div>

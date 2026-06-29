@@ -1,4 +1,4 @@
-as_of: 2026-06-23T14:16:24Z
+as_of: 2026-06-29T12:09:35Z
 generator: scripts/sync-test-status-from-smokes.py
 smokes:
   - script: ../core-impl/ven-identity-core/scripts/citizen-portal-check.sh
@@ -21,7 +21,7 @@ smokes:
     tests: [conformance/tests/core-identity/test_account_recovery.md, conformance/tests/core-identity/test_odtis_0306.md, conformance/tests/core-identity/test_odtis_0310.md, conformance/tests/core-identity/test_odtis_0311.md, conformance/tests/core-identity/test_odtis_0312.md, conformance/tests/core-identity/test_odtis_0313.md, conformance/tests/core-identity/test_odtis_0314.md]
   - script: ../core-impl/ven-identity-core/scripts/loa-policy-check.sh
     ok: true
-    tests: [conformance/tests/core-identity/test_annex_c_nist_loa_mapping.md, conformance/tests/core-identity/test_high_biometric_gate.md, conformance/tests/core-identity/test_loa_claim.md, conformance/tests/core-identity/test_odtis_0101.md, conformance/tests/core-identity/test_odtis_0105.md, conformance/tests/core-identity/test_odtis_0107.md, conformance/tests/core-identity/test_odtis_0306.md, conformance/tests/core-identity/test_verification_loa_on_denial.md]
+    tests: [conformance/tests/core-identity/test_high_biometric_gate.md, conformance/tests/core-identity/test_loa_claim.md, conformance/tests/core-identity/test_odtis_0101.md, conformance/tests/core-identity/test_odtis_0105.md, conformance/tests/core-identity/test_odtis_0107.md, conformance/tests/core-identity/test_odtis_0306.md, conformance/tests/core-identity/test_verification_loa_on_denial.md]
   - script: ../core-impl/ven-identity-core/scripts/oidc-conformance-check.sh
     ok: true
     tests: [conformance/tests/core-identity/test_consent_gated_claims.md, conformance/tests/core-identity/test_odtis_0301.md, conformance/tests/core-identity/test_odtis_0303.md, conformance/tests/core-identity/test_odtis_0304.md, conformance/tests/core-identity/test_pkce_required.md, conformance/tests/core-identity/test_redirect_uri_validation.md, conformance/tests/core-identity/test_rp_initiated_logout.md]
@@ -39,7 +39,7 @@ smokes:
     tests: [conformance/tests/core-identity/test_odtis_0316.md, conformance/tests/core-identity/test_verification_client_auth.md, conformance/tests/core-identity/test_verification_consent_scope.md, conformance/tests/operator/test_fail_closed_denial_paths.md]
   - script: ../core-impl/ven-identity-core/scripts/verification-engine-check.sh
     ok: true
-    tests: [conformance/tests/core-identity/test_annex_b_liveness_mapping.md, conformance/tests/core-identity/test_liveness_high_loa.md, conformance/tests/core-identity/test_odtis_0311.md, conformance/tests/core-identity/test_odtis_0312.md, conformance/tests/core-identity/test_odtis_0313.md, conformance/tests/core-identity/test_odtis_0314.md]
+    tests: [conformance/tests/core-identity/test_liveness_high_loa.md, conformance/tests/core-identity/test_odtis_0311.md, conformance/tests/core-identity/test_odtis_0312.md, conformance/tests/core-identity/test_odtis_0313.md, conformance/tests/core-identity/test_odtis_0314.md]
   - script: conformance/run-admin-api-checks.sh
     ok: true
     tests: [conformance/tests/core-identity/test_odtis_0319.md, conformance/tests/core-identity/test_odtis_0320.md, conformance/tests/core-identity/test_odtis_0321.md, conformance/tests/core-identity/test_odtis_0337.md, conformance/tests/core-identity/test_odtis_0338.md, conformance/tests/core-identity/test_rp_suspension.md, conformance/tests/operator/test_fraud_metrics.md, conformance/tests/operator/test_odtis_0513.md, conformance/tests/operator/test_operator_subject_admin.md]

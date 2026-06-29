@@ -1,0 +1,690 @@
+/* ODTIS home landing — visual alignment with digitaltrustinfrastructure.org
+   Scoped to .odtis-landing--dti only; other pages unchanged. */
+
+.odtis-landing--dti {
+  --dti-deep: oklch(22% 0.06 256);
+  --dti-deep-fg: oklch(98% 0.005 247);
+  --dti-deep-muted: oklch(98% 0.005 247 / 0.72);
+  --dti-teal: oklch(68% 0.11 195);
+  --dti-teal-bright: oklch(85% 0.1 195);
+  --dti-teal-soft: oklch(92% 0.06 220);
+  --dti-teal-fg: oklch(18% 0.04 220);
+  --dti-ink: oklch(18% 0.03 256);
+  --dti-muted: oklch(48% 0.02 256);
+  --dti-surface: oklch(98.5% 0.004 247);
+  --dti-surface-strong: oklch(96.5% 0.006 247);
+  --dti-border: oklch(88% 0.01 256);
+  --dti-card-dark: oklch(28% 0.05 256);
+  --dti-section-gap: clamp(2.5rem, 5vw, 4rem);
+  --odtis-landing-gap: 0;
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  color: var(--dti-ink);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Section bands — full width of the landing column (no 100vw bleed; that clips under overflow-x) */
+
+.odtis-landing--dti .odtis-dti-band {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.odtis-landing--dti .odtis-dti-container {
+  box-sizing: border-box;
+  width: min(var(--odtis-layout-max, 86rem), 100%);
+  max-width: min(var(--odtis-layout-max, 86rem), 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: max(var(--odtis-layout-gutter, 1.5rem), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--odtis-layout-gutter, 1.5rem), env(safe-area-inset-right, 0px));
+}
+
+.odtis-landing--dti .odtis-dti-band--hero {
+  position: relative;
+  overflow: visible;
+  color: var(--dti-deep-fg);
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, oklch(32% 0.08 252 / 0.55), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, oklch(28% 0.06 195 / 0.35), transparent 55%),
+    linear-gradient(165deg, oklch(18% 0.05 256) 0%, var(--dti-deep) 45%, oklch(20% 0.055 260) 100%);
+}
+
+.odtis-landing--dti .odtis-dti-band--hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(oklch(98% 0.005 247 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(98% 0.005 247 / 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.odtis-landing--dti .odtis-dti-band--hero > .odtis-dti-container {
+  position: relative;
+  z-index: 1;
+}
+
+.odtis-landing--dti .odtis-dti-band--light {
+  background: #fff;
+  color: var(--dti-ink);
+}
+
+.odtis-landing--dti .odtis-dti-band--muted {
+  background: var(--dti-surface);
+  color: var(--dti-ink);
+}
+
+.odtis-landing--dti .odtis-dti-band--cta {
+  background:
+    radial-gradient(ellipse 70% 80% at 50% 120%, oklch(32% 0.08 252 / 0.4), transparent 55%),
+    linear-gradient(165deg, oklch(18% 0.05 256) 0%, var(--dti-deep) 100%);
+  color: var(--dti-deep-fg);
+}
+
+[data-md-color-scheme="slate"] .odtis-landing--dti .odtis-dti-band--light,
+[data-md-color-scheme="slate"] .odtis-landing--dti .odtis-dti-band--muted {
+  background: #fff;
+  color: var(--dti-ink);
+}
+
+/* Hero layout */
+
+.odtis-landing--dti .odtis-landing-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.odtis-landing--dti .odtis-dti-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 1.25rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid oklch(98% 0.005 247 / 0.15);
+  border-radius: 999px;
+  background: oklch(98% 0.005 247 / 0.05);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: oklch(98% 0.005 247 / 0.82);
+}
+
+.odtis-landing--dti .odtis-dti-pill a {
+  color: var(--dti-teal-bright);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.odtis-landing--dti .odtis-dti-pill a:hover {
+  text-decoration: underline;
+}
+
+.odtis-landing--dti .odtis-landing-hero h1 {
+  max-width: none !important;
+  margin: 0 0 1.25rem;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: var(--dti-deep-fg);
+  overflow: visible;
+}
+
+.odtis-landing--dti .odtis-dti-accent {
+  background: linear-gradient(90deg, var(--dti-teal-bright), var(--dti-teal-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.odtis-landing--dti .odtis-landing-hero__lead {
+  max-width: 36rem;
+  margin: 0 0 1.5rem;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.65;
+  color: var(--dti-deep-muted);
+}
+
+.odtis-landing--dti .odtis-landing-hero__lead a {
+  color: var(--dti-teal-bright);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.odtis-landing--dti .odtis-landing-hero__lead a:hover {
+  text-decoration: underline;
+}
+
+.odtis-landing--dti .odtis-landing-hero__cta {
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.odtis-landing--dti .odtis-landing-hero__cta .md-button--primary,
+.odtis-landing--dti .odtis-dti-btn--primary {
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--dti-teal-bright), var(--dti-teal));
+  color: var(--dti-teal-fg) !important;
+  font-weight: 600;
+  box-shadow: 0 1px 2px oklch(0% 0 0 / 0.2);
+}
+
+.odtis-landing--dti .odtis-landing-hero__cta .md-button--primary:hover,
+.odtis-landing--dti .odtis-dti-btn--primary:hover {
+  filter: brightness(1.06);
+}
+
+.odtis-landing--dti .odtis-landing-hero__cta .odtis-landing-cta--secondary,
+.odtis-landing--dti .odtis-dti-btn--ghost {
+  border: 1px solid oklch(98% 0.005 247 / 0.28) !important;
+  border-radius: 0.5rem;
+  background: transparent !important;
+  color: var(--dti-deep-fg) !important;
+}
+
+.odtis-landing--dti .odtis-landing-hero__cta .odtis-landing-cta--secondary:hover,
+.odtis-landing--dti .odtis-dti-btn--ghost:hover {
+  background: oklch(98% 0.005 247 / 0.08) !important;
+}
+
+.odtis-landing--dti .odtis-landing-hero__links {
+  font-size: 0.8125rem;
+  color: oklch(98% 0.005 247 / 0.55);
+}
+
+.odtis-landing--dti .odtis-landing-hero__links a {
+  color: oklch(98% 0.005 247 / 0.78);
+  font-weight: 500;
+}
+
+.odtis-landing--dti .odtis-landing-hero__links a:hover {
+  color: var(--dti-teal-bright);
+}
+
+/* Ecosystem cards (hero right column) */
+
+.odtis-landing--dti .odtis-landing-pillars {
+  gap: 0.85rem;
+}
+
+.odtis-landing--dti .odtis-dti-stack-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: oklch(98% 0.005 247 / 0.55);
+}
+
+.odtis-landing--dti .odtis-landing-pillar {
+  padding: 0.95rem 1rem;
+  border: 1px solid oklch(98% 0.005 247 / 0.12);
+  border-radius: 0.75rem;
+  background: oklch(28% 0.05 256 / 0.65);
+  backdrop-filter: blur(6px);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.odtis-landing--dti .odtis-landing-pillar:hover {
+  border-color: oklch(98% 0.005 247 / 0.22);
+  background: oklch(30% 0.055 256 / 0.75);
+}
+
+.odtis-landing--dti .odtis-landing-pillar__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background: oklch(98% 0.005 247 / 0.08);
+  color: var(--dti-teal-bright);
+  font-size: 1.1rem;
+}
+
+.odtis-landing--dti .odtis-landing-pillar strong {
+  color: var(--dti-deep-fg);
+  font-size: 0.875rem;
+}
+
+.odtis-landing--dti .odtis-landing-pillar__desc {
+  color: oklch(98% 0.005 247 / 0.62);
+  font-size: 0.78rem;
+}
+
+.odtis-landing--dti .odtis-dti-eco-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+
+.odtis-landing--dti .odtis-dti-eco-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid oklch(98% 0.005 247 / 0.1);
+  border-radius: 0.65rem;
+  background: oklch(24% 0.045 256 / 0.8);
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.odtis-landing--dti .odtis-dti-eco-chip:hover {
+  border-color: var(--dti-teal-bright);
+}
+
+.odtis-landing--dti .odtis-dti-eco-chip__tag {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: oklch(98% 0.005 247 / 0.45);
+}
+
+.odtis-landing--dti .odtis-dti-eco-chip__name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--dti-deep-fg);
+}
+
+.odtis-landing--dti .odtis-dti-eco-chip--current {
+  border-color: oklch(68% 0.11 195 / 0.45);
+  background: oklch(30% 0.06 195 / 0.25);
+}
+
+/* Stats strip */
+
+.odtis-landing--dti .odtis-landing-trust {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1.15rem;
+  padding-bottom: 1.15rem;
+  border: none;
+  border-top: 1px solid oklch(98% 0.005 247 / 0.1);
+  border-bottom: 1px solid var(--dti-border);
+  border-radius: 0;
+  background: #fff;
+}
+
+.odtis-landing--dti .odtis-landing-trust .odtis-stat {
+  border-right: 1px solid var(--dti-border);
+  background: transparent;
+}
+
+.odtis-landing--dti .odtis-landing-trust .odtis-stat strong {
+  color: var(--dti-ink);
+  font-size: 1.5rem;
+}
+
+.odtis-landing--dti .odtis-landing-trust .odtis-stat span {
+  color: var(--dti-muted);
+}
+
+/* Section shells */
+
+.odtis-landing--dti .odtis-landing-section {
+  gap: 1.35rem;
+  padding-top: var(--dti-section-gap);
+  padding-bottom: var(--dti-section-gap);
+}
+
+.odtis-landing--dti .odtis-landing-section--panel {
+  padding-top: var(--dti-section-gap);
+  padding-bottom: var(--dti-section-gap);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.odtis-landing--dti .odtis-section-head__eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--odtis-primary);
+}
+
+.odtis-landing--dti .odtis-landing-section__head h2 {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--dti-ink) !important;
+  border: none !important;
+}
+
+.odtis-landing--dti .odtis-landing-section--panel .odtis-landing-section__head h2 {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.odtis-landing--dti .odtis-section-head__lead {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--dti-muted);
+}
+
+.odtis-landing--dti .odtis-section-head__lead a {
+  color: var(--odtis-primary);
+  font-weight: 600;
+}
+
+/* Ecosystem stack band */
+
+.odtis-landing--dti .odtis-dti-stack {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.odtis-landing--dti .odtis-dti-stack-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.35rem 1.25rem;
+  border: 1px solid var(--dti-border);
+  border-radius: 0.85rem;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.odtis-landing--dti .odtis-dti-stack-card:hover {
+  border-color: oklch(68% 0.11 195 / 0.45);
+  box-shadow: 0 8px 24px oklch(22% 0.06 256 / 0.06);
+}
+
+.odtis-landing--dti .odtis-dti-stack-card--current {
+  border-color: oklch(46% 0.14 252 / 0.35);
+  background: linear-gradient(180deg, oklch(98% 0.02 252) 0%, #fff 100%);
+}
+
+.odtis-landing--dti .odtis-dti-stack-card__layer {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--odtis-primary);
+}
+
+.odtis-landing--dti .odtis-dti-stack-card h3,
+.odtis-landing--dti .odtis-dti-stack-card__title {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+  color: var(--dti-ink);
+  line-height: 1.25;
+}
+
+.odtis-landing--dti .odtis-dti-stack-card p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--dti-muted);
+}
+
+.odtis-landing--dti a.odtis-dti-stack-card__cta {
+  display: inline-block;
+  margin-top: auto;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--odtis-primary);
+  text-decoration: none;
+}
+
+.odtis-landing--dti a.odtis-dti-stack-card__cta:hover {
+  text-decoration: underline;
+}
+
+/* MkDocs wraps block HTML in <p>; undo layout breakage on landing cards */
+.odtis-landing--dti .odtis-dti-eco-row > p,
+.odtis-landing--dti .odtis-dti-stack > p,
+.odtis-landing--dti .odtis-landing-pillar > p,
+.odtis-landing--dti .odtis-landing-vm-card > p:has(.odtis-landing-vm-card__icon),
+.odtis-landing--dti .odtis-path-card > p:has(.odtis-path-card__role),
+.odtis-landing--dti .odtis-card > p:has(.odtis-card__icon),
+.odtis-landing--dti .odtis-landing-feature > p:has(.odtis-landing-feature__icon) {
+  display: contents;
+  margin: 0;
+}
+
+.odtis-landing--dti .odtis-landing-section__head > p:has(.odtis-section-head__eyebrow) {
+  margin: 0 0 0.35rem;
+}
+
+.odtis-landing--dti .headerlink {
+  display: none !important;
+}
+
+.odtis-landing--dti .odtis-landing-hero__main,
+.odtis-landing--dti .odtis-landing-pillars {
+  min-width: 0;
+}
+
+.md-main__inner:has(.odtis-landing--dti),
+.md-content:has(.odtis-landing--dti),
+.md-content__inner:has(.odtis-landing--dti) {
+  overflow-x: visible;
+  max-width: none;
+}
+
+/* Feature / VM cards on light bands */
+
+.odtis-landing--dti .odtis-landing-feature,
+.odtis-landing--dti .odtis-landing-vm-card,
+.odtis-landing--dti .odtis-path-card,
+.odtis-landing--dti .odtis-step,
+.odtis-landing--dti .odtis-card {
+  border: 1px solid var(--dti-border);
+  border-radius: 0.85rem;
+  background: #fff;
+  box-shadow: none;
+}
+
+.odtis-landing--dti .odtis-landing-section--panel .odtis-path-card,
+.odtis-landing--dti .odtis-landing-section--panel .odtis-landing-phase,
+.odtis-landing--dti .odtis-landing-section--panel .odtis-home-split__visual {
+  background: var(--dti-surface);
+}
+
+.odtis-landing--dti .odtis-landing-feature:hover,
+.odtis-landing--dti .odtis-path-card:hover,
+.odtis-landing--dti .odtis-card:hover {
+  border-color: oklch(46% 0.14 252 / 0.35);
+  box-shadow: 0 8px 24px oklch(22% 0.06 256 / 0.06);
+  transform: none;
+}
+
+.odtis-landing--dti .odtis-landing-feature__icon,
+.odtis-landing--dti .odtis-landing-vm-card__icon,
+.odtis-landing--dti .odtis-card__icon,
+.odtis-landing--dti .odtis-path-card__role {
+  background: var(--odtis-accent-soft);
+  color: var(--odtis-primary);
+}
+
+.odtis-landing--dti .odtis-landing-feature h3,
+.odtis-landing--dti .odtis-landing-vm-card h3,
+.odtis-landing--dti .odtis-path-card h3,
+.odtis-landing--dti .odtis-card h3 {
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--dti-ink);
+}
+
+.odtis-landing--dti .odtis-landing-feature__desc,
+.odtis-landing--dti .odtis-landing-vm-card__lead,
+.odtis-landing--dti .odtis-landing-vm-list,
+.odtis-landing--dti .odtis-path-card__desc,
+.odtis-landing--dti .odtis-card__desc {
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--dti-muted);
+}
+
+.odtis-landing--dti .odtis-home-links {
+  font-size: 0.875rem;
+  color: var(--dti-muted);
+}
+
+.odtis-landing--dti .odtis-home-links a {
+  color: var(--odtis-primary);
+  font-weight: 600;
+}
+
+/* Final CTA band */
+
+.odtis-landing--dti .odtis-landing-cta {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.odtis-landing--dti .odtis-landing-cta h2 {
+  margin: 0 0 0.75rem !important;
+  padding: 0 !important;
+  border: none !important;
+  font-family: Inter, system-ui, sans-serif !important;
+  font-size: clamp(1.5rem, 3vw, 2rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--dti-deep-fg) !important;
+}
+
+.odtis-landing--dti .odtis-landing-cta h2::after {
+  display: none !important;
+}
+
+.odtis-landing--dti .odtis-landing-cta__lead {
+  max-width: 36rem;
+  margin: 0 auto 1.35rem;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--dti-deep-muted);
+}
+
+.odtis-landing--dti .odtis-landing-cta__lead a {
+  color: var(--dti-teal-bright);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.odtis-landing--dti .odtis-landing-cta__lead a:hover {
+  text-decoration: underline;
+}
+
+.odtis-landing--dti .odtis-landing-cta__actions {
+  justify-content: center;
+}
+
+.odtis-landing--dti .odtis-landing-cta .md-button--primary {
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--dti-teal-bright), var(--dti-teal));
+  color: var(--dti-teal-fg) !important;
+}
+
+.odtis-landing--dti .odtis-landing-cta .md-button:not(.md-button--primary) {
+  border: 1px solid oklch(98% 0.005 247 / 0.28) !important;
+  border-radius: 0.5rem;
+  background: transparent !important;
+  color: var(--dti-deep-fg) !important;
+}
+
+.odtis-landing--dti .odtis-landing-cta .md-button:not(.md-button--primary):hover {
+  background: oklch(98% 0.005 247 / 0.08) !important;
+}
+
+/* Light-band primary buttons */
+
+.odtis-landing--dti .odtis-dti-band--light .md-button--primary,
+.odtis-landing--dti .odtis-dti-band--muted .md-button--primary {
+  border-radius: 0.5rem;
+  background: var(--odtis-primary);
+  color: #fff !important;
+}
+
+.odtis-landing--dti .odtis-dti-band--light .md-button:not(.md-button--primary),
+.odtis-landing--dti .odtis-dti-band--muted .md-button:not(.md-button--primary) {
+  border-radius: 0.5rem;
+  border-color: var(--dti-border) !important;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 1100px) {
+  .odtis-landing--dti .odtis-landing-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .odtis-landing--dti .odtis-dti-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .odtis-landing--dti .odtis-landing-trust {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .odtis-landing--dti .odtis-landing-trust .odtis-stat:nth-child(3n) {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .odtis-landing--dti .odtis-dti-eco-row {
+    grid-template-columns: 1fr;
+  }
+
+  .odtis-landing--dti .odtis-landing-trust {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .odtis-landing--dti .odtis-landing-trust .odtis-stat:nth-child(2n) {
+    border-right: none;
+  }
+
+  .odtis-landing--dti .odtis-landing-hero {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Re-apply after component rules (hero/trust/section shorthands must not zero inline padding) */
+.odtis-landing--dti .odtis-dti-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: max(var(--odtis-layout-gutter, 1.5rem), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--odtis-layout-gutter, 1.5rem), env(safe-area-inset-right, 0px));
+}

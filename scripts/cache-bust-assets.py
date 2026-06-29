@@ -13,6 +13,7 @@ ASSETS = (
     "extra.css",
     "gitbook-theme.css",
     "mobile.css",
+    "landing-dti.css",
     "extra.js",
 )
 
